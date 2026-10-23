@@ -1,0 +1,12 @@
+{
+  "expectedRevision": "rev-856340ab",
+  "verify": true,
+  "save": true,
+  "operations": [
+    {"op":"setProperty","target":"uuid:c0y6F5f+pAvI805TdmxIjx","component":"cc.Node","property":"active","value":false},
+    {"op":"setProperty","target":"uuid:c9DMICJLFO5IeO07EPon7U","component":"cc.Node","property":"active","value":false},
+    {"op":"upsertNode","key":"uuid:8bJL3uYPNCsrFh4pLZ6ALh","name":"GoldenHorseGame","parent":"uuid:dfvNlNW9NINYzCdBJ2knmO","uiMode":"on"},
+    {"op":"setProperty","target":"uuid:8bJL3uYPNCsrFh4pLZ6ALh","component":"cc.Node","property":"position","value":{"$type":"Vec3","x":0,"y":0,"z":0}},
+    {"op":"setProperty","target":"uuid:8bJL3uYPNCsrFh4pLZ6ALh","component":"cc.Node","property":"layer","value":33554432}
+  ]
+}

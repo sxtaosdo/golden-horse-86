@@ -1,0 +1,130 @@
+{
+  "viewport": {
+    "width": 960,
+    "height": 760
+  },
+  "steps": [
+    {
+      "type": "wait_ready"
+    },
+    {
+      "action": "click",
+      "y": 560,
+      "type": "pointer",
+      "x": 112
+    },
+    {
+      "action": "click",
+      "y": 560,
+      "type": "pointer",
+      "x": 296
+    },
+    {
+      "action": "click",
+      "y": 560,
+      "type": "pointer",
+      "x": 480
+    },
+    {
+      "action": "click",
+      "y": 560,
+      "type": "pointer",
+      "x": 664
+    },
+    {
+      "action": "click",
+      "y": 560,
+      "type": "pointer",
+      "x": 848
+    },
+    {
+      "action": "click",
+      "y": 620,
+      "type": "pointer",
+      "x": 112
+    },
+    {
+      "action": "click",
+      "y": 620,
+      "type": "pointer",
+      "x": 296
+    },
+    {
+      "action": "click",
+      "y": 620,
+      "type": "pointer",
+      "x": 480
+    },
+    {
+      "action": "click",
+      "y": 620,
+      "type": "pointer",
+      "x": 664
+    },
+    {
+      "action": "click",
+      "y": 620,
+      "type": "pointer",
+      "x": 848
+    },
+    {
+      "action": "click",
+      "y": 680,
+      "type": "pointer",
+      "x": 112
+    },
+    {
+      "action": "click",
+      "y": 680,
+      "type": "pointer",
+      "x": 296
+    },
+    {
+      "action": "click",
+      "y": 680,
+      "type": "pointer",
+      "x": 480
+    },
+    {
+      "action": "click",
+      "y": 680,
+      "type": "pointer",
+      "x": 664
+    },
+    {
+      "action": "click",
+      "y": 680,
+      "type": "pointer",
+      "x": 848
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "totalStake": 15,
+        "credits": 485
+      }
+    },
+    {
+      "action": "press",
+      "key": "Enter",
+      "type": "keyboard"
+    },
+    {
+      "timeoutMs": 30000,
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "result",
+        "historyLength": 1
+      }
+    },
+    {
+      "label": "winning-payout",
+      "type": "screenshot"
+    },
+    {
+      "type": "get_state",
+      "required": true
+    }
+  ],
+  "pageState": "fresh"
+}

@@ -1,0 +1,116 @@
+{
+  "package_version": 2,
+  "version": "0.3.138",
+  "name": "creator-ai-bridge",
+  "title": "Creator AI Bridge",
+  "description": "Local Creator 3.8.8 P0-P2 bridge, Prefab tools and developer panel",
+  "author": "cocos-mcp",
+  "editor": "3.8.8",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "sync:test": "node scripts/sync-test.mjs"
+  },
+  "main": "./dist/main.js",
+  "panels": {
+    "default": {
+      "title": "Creator AI Bridge",
+      "type": "dockable",
+      "main": "./dist/panel.js",
+      "icon": "./static/icon.svg",
+      "flags": {
+        "resizable": true,
+        "save": true
+      },
+      "size": {
+        "min-width": 420,
+        "min-height": 480,
+        "width": 520,
+        "height": 760
+      }
+    }
+  },
+  "contributions": {
+    "messages": {
+      "scene:ready": {
+        "methods": [
+          "invalidateNodeTree"
+        ]
+      },
+      "scene:close": {
+        "methods": [
+          "sceneDocumentClosed"
+        ]
+      },
+      "scene:save": {
+        "methods": [
+          "invalidateNodeTree"
+        ]
+      },
+      "scene:change-node": {
+        "methods": [
+          "invalidateNodeTree"
+        ]
+      },
+      "scene:add-node": {
+        "methods": [
+          "invalidateNodeTree"
+        ]
+      },
+      "scene:remove-node": {
+        "methods": [
+          "invalidateNodeTree"
+        ]
+      },
+      "open-panel": {
+        "methods": [
+          "openPanel"
+        ]
+      },
+      "panel-state": {
+        "methods": [
+          "panelState"
+        ]
+      },
+      "panel-call": {
+        "methods": [
+          "panelCall"
+        ]
+      },
+      "codex-integration-status": {
+        "methods": [
+          "codexIntegrationStatus"
+        ]
+      },
+      "codex-integration-install": {
+        "methods": [
+          "codexIntegrationInstall"
+        ]
+      },
+      "open-companion": {
+        "methods": [
+          "openCompanion"
+        ]
+      },
+      "set-capability-profile": {
+        "methods": [
+          "setCapabilityProfile"
+        ]
+      },
+      "diagnostic-snapshot": {
+        "methods": [
+          "diagnosticSnapshot"
+        ]
+      }
+    },
+    "menu": [
+      {
+        "path": "i18n:menu.extension",
+        "label": "Creator AI Bridge",
+        "message": "open-panel"
+      }
+    ],
+    "scene": {
+      "script": "./dist/scene.js"
+    }
+  }
+}

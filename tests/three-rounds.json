@@ -1,0 +1,208 @@
+{
+  "viewport": {
+    "height": 760,
+    "width": 960
+  },
+  "steps": [
+    {
+      "type": "wait_ready"
+    },
+    {
+      "type": "api",
+      "call": "testStartRecording"
+    },
+    {
+      "x": 112,
+      "action": "click",
+      "type": "pointer",
+      "y": 560
+    },
+    {
+      "expect": {
+        "totalStake": 1,
+        "credits": 499
+      },
+      "type": "wait_for_state"
+    },
+    {
+      "key": "c",
+      "action": "press",
+      "type": "keyboard"
+    },
+    {
+      "expect": {
+        "totalStake": 0,
+        "credits": 500
+      },
+      "type": "wait_for_state"
+    },
+    {
+      "x": 112,
+      "action": "click",
+      "type": "pointer",
+      "y": 560
+    },
+    {
+      "key": "Enter",
+      "action": "press",
+      "type": "keyboard"
+    },
+    {
+      "expect": {
+        "phase": "racing"
+      },
+      "type": "wait_for_state"
+    },
+    {
+      "call": "testBet",
+      "args": [
+        "1-2",
+        1
+      ],
+      "type": "api"
+    },
+    {
+      "expect": {
+        "totalStake": 1
+      },
+      "type": "wait_for_state"
+    },
+    {
+      "timeoutMs": 15000,
+      "type": "wait_for_state",
+      "expect": {
+        "section": "right-bend"
+      }
+    },
+    {
+      "label": "first-bend",
+      "type": "screenshot"
+    },
+    {
+      "timeoutMs": 15000,
+      "type": "wait_for_state",
+      "expect": {
+        "section": "backstraight"
+      }
+    },
+    {
+      "label": "opposite-straight",
+      "type": "screenshot"
+    },
+    {
+      "timeoutMs": 15000,
+      "type": "wait_for_state",
+      "expect": {
+        "section": "left-bend"
+      }
+    },
+    {
+      "label": "second-bend",
+      "type": "screenshot"
+    },
+    {
+      "timeoutMs": 30000,
+      "type": "wait_for_state",
+      "expect": {
+        "historyLength": 1,
+        "phase": "result"
+      }
+    },
+    {
+      "label": "round-one-result",
+      "type": "screenshot"
+    },
+    {
+      "key": "Enter",
+      "action": "press",
+      "type": "keyboard"
+    },
+    {
+      "expect": {
+        "totalStake": 0,
+        "phase": "betting",
+        "round": 2
+      },
+      "type": "wait_for_state"
+    },
+    {
+      "x": 299,
+      "action": "click",
+      "type": "pointer",
+      "y": 560
+    },
+    {
+      "expect": {
+        "totalStake": 1
+      },
+      "type": "wait_for_state"
+    },
+    {
+      "key": "Enter",
+      "action": "press",
+      "type": "keyboard"
+    },
+    {
+      "timeoutMs": 30000,
+      "type": "wait_for_state",
+      "expect": {
+        "historyLength": 2,
+        "phase": "result"
+      }
+    },
+    {
+      "label": "round-2-result",
+      "type": "screenshot"
+    },
+    {
+      "key": "Enter",
+      "action": "press",
+      "type": "keyboard"
+    },
+    {
+      "expect": {
+        "totalStake": 0,
+        "phase": "betting",
+        "round": 3
+      },
+      "type": "wait_for_state"
+    },
+    {
+      "x": 299,
+      "action": "click",
+      "type": "pointer",
+      "y": 560
+    },
+    {
+      "expect": {
+        "totalStake": 1
+      },
+      "type": "wait_for_state"
+    },
+    {
+      "key": "Enter",
+      "action": "press",
+      "type": "keyboard"
+    },
+    {
+      "timeoutMs": 30000,
+      "type": "wait_for_state",
+      "expect": {
+        "historyLength": 3,
+        "phase": "result"
+      }
+    },
+    {
+      "label": "round-3-result",
+      "type": "screenshot"
+    },
+    {
+      "type": "api",
+      "call": "testStopRecording"
+    },
+    {
+      "required": true,
+      "type": "get_state"
+    }
+  ]
+}

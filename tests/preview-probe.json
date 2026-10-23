@@ -1,0 +1,8 @@
+{
+  "viewport":{"width":960,"height":760},
+  "steps":[
+    {"type":"wait_ready"},
+    {"type":"get_state","required":true},
+    {"type":"screenshot","label":"loaded-2d"}
+  ]
+}

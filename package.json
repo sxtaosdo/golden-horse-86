@@ -1,0 +1,19 @@
+{
+  "name": "golden-horse-86-recreation",
+  "version": "0.3.0",
+  "private": true,
+  "description": "Cocos Creator 3.8.8 / TypeScript arcade racing reconstruction (original assets, virtual points)",
+  "creator": {
+    "version": "3.8.8"
+  },
+  "scripts": {
+    "build:preview": "node tools/build_preview.cjs",
+    "test:core": "tsc assets/scripts/RaceModel.ts assets/scripts/TrackVisual.ts --outDir .test --target ES2020 --module commonjs --strict --skipLibCheck && node tests/RaceModel.test.cjs && node tests/TrackVisual.test.cjs",
+    "test:preview": "node tests/preview_smoke.test.cjs",
+    "test": "npm run test:core && npm run test:preview"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  },
+  "uuid": "a8b92709-ce46-4bb5-97dc-1f1e6b95ddf1"
+}
