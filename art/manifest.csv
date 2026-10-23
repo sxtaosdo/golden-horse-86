@@ -3,3 +3,6 @@ art/reference/race/original-betting.png,comparison-reference,"Sohu 86 gameplay r
 art/reference/race/original-result.png,comparison-reference,"Sohu 86 gameplay recording, viewed 2026-10-23",false
 art/reference/race/original-single-bend.png,comparison-reference,"Sohu 86 gameplay recording, viewed 2026-10-23",false
 art/work/gameplay/r01/generated/horse-01-side-v01.png,review-sample-unapproved,built-in image_gen; references and full prompt in art/work/gameplay/r01/prompt.md,false
+art/work/gameplay/r03/generated/starting-gate-states-v01.png,rejected-five-stall-process,built-in image_gen; retained edit input; see r03/README.md,false
+art/work/gameplay/r03/generated/starting-gate-states-v02.png,rejected-five-stall-process,built-in image_gen edit; actual prompt in r03/repair-prompt.md,false
+art/work/gameplay/r03/generated/starting-stall-module-v03.png,review-sample-unapproved,built-in image_gen; actual prompt in r03/module-prompt.md; frame and door alignment pending,false

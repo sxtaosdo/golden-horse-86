@@ -1,0 +1,40 @@
+{
+  "tool": "built-in image_gen",
+  "date": "2026-10-23",
+  "reference": "tests/evidence/web-mobile/build-next-round.png",
+  "referenceSha256": "8b47a074aeef5f701deeb77cf81a2fe38387d71c42397701dec42e58a0fb2a77",
+  "designPrompt": "prompt.md",
+  "exactRepairPrompt": "repair-prompt.md",
+  "exactModulePrompt": "module-prompt.md",
+  "selectedCandidate": "generated/starting-stall-module-v03.png",
+  "approval": "pending",
+  "files": [
+    {
+      "path": "art/work/gameplay/r03/generated/starting-gate-states-v01.png",
+      "width": 1536,
+      "height": 1024,
+      "pngColorType": 6,
+      "sha256": "2322795fb1feac43c2aa9615fe0f58456ade04b4a4fbb5a01b6afc32cfcf6bd2",
+      "runtime": false,
+      "review": "rejected-five-stalls"
+    },
+    {
+      "path": "art/work/gameplay/r03/generated/starting-gate-states-v02.png",
+      "width": 1536,
+      "height": 1024,
+      "pngColorType": 6,
+      "sha256": "4aaab0119f57bbbdfa22022c4b188e4bd25a82ec380c530bea36c745cb36d536",
+      "runtime": false,
+      "review": "rejected-five-stalls"
+    },
+    {
+      "path": "art/work/gameplay/r03/generated/starting-stall-module-v03.png",
+      "width": 2172,
+      "height": 724,
+      "pngColorType": 6,
+      "sha256": "2f7e887019cad64f342c246bd1975cd9d17a45a4c0d722fed84f735d5a0433e9",
+      "runtime": false,
+      "review": "pending"
+    }
+  ]
+}

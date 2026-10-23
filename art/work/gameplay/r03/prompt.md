@@ -1,0 +1,16 @@
+# 六格现代起跑闸箱 · r03样稿提示词
+
+方法：内置image_gen；用途：本产品资源候选，不直接接入Runtime。
+输入图角色：tests/evidence/web-mobile/build-next-round.png只作产品像素风格、色板与马向右起跑视角参考；不是编辑目标，不复制UI、马匹或背景。
+
+```text
+Use case: stylized-concept
+Asset type: transparent 2D pixel-art game prop spritesheet, one coherent six-stall horse-racing starting-gate design in two mechanical states.
+Primary request: Create an original, physically understandable modern flat-racing starting-stalls unit, adapted to the existing arcade pixel-art horse game. Use the supplied screenshot ONLY for the game's crisp sprite shading, dark outlines, green/ochre palette and elevated side-view direction. Do not recreate the screenshot.
+Layout: a transparent 1536x1024 canvas with two equal nonoverlapping columns, generous clear margins: LEFT is the complete gate with every front door CLOSED; RIGHT is the exact same complete gate with every front door OPEN. Both units have the same size, projection, frame geometry and ground baseline. No captions, arrows or decorative panels.
+Geometry: EXACTLY SIX individual narrow horse stalls, SIX parallel channels, no horses inside. All horses would enter from screen LEFT/rear and run out toward screen RIGHT/front. The six channels are arranged in depth, from upper/far lane to lower/near lane in the image, matching six horses racing rightward on a horizontal track. The gate bank therefore spans across the screen vertically/diagonally, not along the racing direction. Elevated near-side orthographic 2D view, modest top visibility, no vanishing-point perspective, no 45-degree isometric camera.
+Construction: sturdy dark forest-green tubular steel frame, muted brass/ochre overhead header beams, individual padded partitions, visible door hinges, sensible outer support legs and two outer transport-wheel assemblies. The structure is supported on the ground. Horse channels have transparent open ground, not solid floors. No floor crossbar or continuous fence across the hoof path, no ramp, no hurdle, no vehicle.
+Mechanism: each of the six exits has TWO SHORT PADDED FRONT DOOR LEAVES hinged on opposite side uprights. In CLOSED state the two leaves meet across the horse's chest path with clearance beneath. In OPEN state the SAME paired leaves pivot sideways forward approximately 90 degrees, aligned along the sides of each channel, leaving all SIX forward paths fully unobstructed. Upper frame, posts, partitions and wheels stay identical between states. Do not lift the entire structure or turn it into a rising boom gate.
+Style: detailed but legible 1990s arcade pixel sprite, compact pixel clusters, restrained two-to-four-tone metal shading, fine black-green contour, no painterly blur, no glossy 3D rendering, no gradient backdrop. Subtle maintained/worn station equipment, not wreckage or high-tech holograms. Blank small ochre number plaques for separate in-engine digits; NO generated numbers or lettering.
+Constraints: isolated prop only; true alpha transparency including every stall opening and between metal bars; no baked grass/dirt rectangle, no background, no UI, no horses, no jockeys, no people, no logos, no watermark, no cast shadow outside the prop's footprint. Keep all parts fully inside the canvas. This is a production-review candidate, prioritize six-channel clarity and correct right-facing opening over decorative complexity.
+```
