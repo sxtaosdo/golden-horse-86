@@ -147,7 +147,7 @@ export class RaceModel {
       for (let i = 0; i < 6; i++) {
         if(this.raceElapsed>=finalStart){
           // One shared scene timeline up to the home straight; actual finish times then separate the field.
-          this.progress[i]=Math.min(1.12,COURSE_BREAKS[4]+(1-COURSE_BREAKS[4])*
+          this.progress[i]=Math.min(1.3,COURSE_BREAKS[4]+(1-COURSE_BREAKS[4])*
             (this.raceElapsed-finalStart)/(this.finishTimes[i]-finalStart));
         }else{
           const fraction=this.courseFraction;
@@ -161,6 +161,13 @@ export class RaceModel {
       if (this.raceElapsed >= Math.max(...this.finishTimes)+.65) this.resolve();
     } else {
       this.resultElapsed += dt;
+      // Keep the physical run-out moving through the same world after paying once.
+      if(this.resultElapsed<6){
+        this.raceElapsed+=dt;
+        const finalStart=(this.raceSeconds-2)*COURSE_BREAKS[4];
+        for(let i=0;i<6;i++)this.progress[i]=Math.min(1.3,COURSE_BREAKS[4]+(1-COURSE_BREAKS[4])*
+          (this.raceElapsed-finalStart)/(this.finishTimes[i]-finalStart));
+      }
     }
   }
   private resolve(): void {

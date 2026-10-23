@@ -39,21 +39,27 @@ function draw(){
  box(0,72,960,340,'#aa8051','#a9b29a');
  const section=game.phase==='racing'?trackSection(game.courseFraction):
                  (game.phase==='result'?'finish':'straight');
- image(section==='straight'?'track':section,0,74,960,334);
- if(game.phase==='racing'){box(7,80,120,28,'#080f18','#4d8a91');txt(trackSectionName(section),67,94,14,'#e9f4b6','center');}
- // Track visualizer is independent of payout and shares TrackVisual.ts with Creator.
- for(let i=5;i>=0;i--){
-   const p=game.phase==='racing'?game.progress[i]:game.phase==='result'?1:0;
-   const pose=horsePose(i,p,animationTime);
-   if(game.phase==='result')pose.x=780-(game.lastResult?.order.indexOf(i+1)??0)*32;
-   const key='h'+(i+1)+'_'+(game.phase==='racing'?Math.floor(animationTime*9)%4:0);
-   const w=128*pose.scale,h=79*pose.scale;
-   // During the hairpins, transform the actual 4-frame horse sprite.
-   ctx.save();ctx.translate(pose.x,pose.y);ctx.rotate(pose.angle*Math.PI/180);
-   ctx.scale(pose.flipX?-1:1,1);
-   if(!image(key,-w/2,-h/2,w,h))txt('#'+(i+1),0,0,25);
-   ctx.restore();
+ const camera=courseCamera(game.courseFraction);
+ ctx.save();ctx.beginPath();ctx.rect(0,74,960,334);ctx.clip();ctx.translate(480-camera.x,241-camera.y);
+ ctx.fillStyle='#107334';ctx.fillRect(-1000,-2000,5000,4000);
+ function outline(lane){
+  ctx.beginPath();const begin=bendPoint(lane,0,'right-bend');ctx.moveTo(begin.x,begin.y);
+  for(const side of ['right-bend','left-bend']){
+   const first=bendPoint(lane,0,side);ctx.lineTo(first.x,first.y);
+   for(let k=1;k<=64;k++){const point=bendPoint(lane,k/64,side);ctx.lineTo(point.x,point.y);}
+  }ctx.closePath();
  }
+ outline(5.5);ctx.fillStyle='#b08952';ctx.fill();ctx.strokeStyle='#efe7d0';ctx.lineWidth=5;ctx.stroke();
+ outline(-.5);ctx.fillStyle='#107334';ctx.fill();ctx.stroke();
+ for(let k=0;k<11;k++)for(let c=0;c<2;c++){ctx.fillStyle=(k+c)%2?'#f5f4e8':'#14151e';ctx.fillRect(COURSE_FINISH_X+c*10,661+k*10,10,10);}
+ for(let i=0;i<6;i++){
+  const progress=game.phase==='betting'?0:game.progress[i],pose=horsePose(i,progress,game.raceElapsed);
+  const key='h'+(i+1)+'_'+(game.phase==='betting'?0:Math.floor(game.raceElapsed*9)%4);
+  const w=134*pose.scale,h=84*pose.scale;
+  ctx.save();ctx.translate(pose.x,pose.y);ctx.scale(pose.flipX?-1:1,1);
+  if(!image(key,-w/2,-h,w,h))txt('#'+(i+1),0,-15,25);ctx.restore();
+ }ctx.restore();
+ if(game.phase==='racing'){box(7,80,120,28,'#080f18','#4d8a91');txt(trackSectionName(section),67,94,14,'#e9f4b6','center');}
  if(game.phase==='result'&&game.lastResult){
   box(341,158,278,98,'#0a0b25','#ffe04a',4);
   txt(game.lastResult.pair,480,201,48,'#fa4141','center');

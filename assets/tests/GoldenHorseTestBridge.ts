@@ -13,6 +13,10 @@ export class GoldenHorseTestBridge {
   private backgroundMismatches=0;
   private settlementJump=0;
   private resultDrift=0;
+  private worldChanges=0;
+  private initialWorld='';
+  private previousCamera:{x:number;y:number}|null=null;
+  private maxCameraStep=0;
   constructor(private readonly model:RaceModel,private readonly observe:()=>Record<string,unknown>){
     (window as Window & {__COCOS_GAME_TEST__?:GoldenHorseTestBridge}).__COCOS_GAME_TEST__=this;
   }
@@ -23,7 +27,8 @@ export class GoldenHorseTestBridge {
       result:this.model.lastResult?JSON.parse(JSON.stringify(this.model.lastResult)) as unknown:null,
       historyLength:this.model.history.length,
       metrics:{finishCount:this.crossings.length,visibleOrder:[...this.crossings],
-        backgroundMismatches:this.backgroundMismatches,settlementJump:this.settlementJump,resultDrift:this.resultDrift},
+        backgroundMismatches:this.backgroundMismatches,settlementJump:this.settlementJump,resultDrift:this.resultDrift,
+        worldChanges:this.worldChanges,maxCameraStep:this.maxCameraStep},
       progress:[...this.model.progress]};
   }
   /** Observe the rendered nodes after each real engine frame; never drives the simulation. */
@@ -31,13 +36,22 @@ export class GoldenHorseTestBridge {
     if(this.trackedRound!==this.model.round){
       this.trackedRound=this.model.round;this.crossings.length=0;this.backgroundMismatches=0;
       this.settlementJump=0;this.resultDrift=0;this.previousPositions=[];this.previousPhase='betting';
+      this.worldChanges=0;this.initialWorld='';this.previousCamera=null;this.maxCameraStep=0;
     }
     const observation=this.observe();
     const positions=observation.horsePositions as Array<{x:number;y:number}>;
+    const world=String(observation.worldId);
+    if(!this.initialWorld)this.initialWorld=world;
+    if(world!==this.initialWorld)this.worldChanges++;
+    const camera=observation.camera as {x:number;y:number};
+    if(this.previousCamera&&this.model.phase!=='betting')this.maxCameraStep=Math.max(this.maxCameraStep,
+      Math.hypot(camera.x-this.previousCamera.x,camera.y-this.previousCamera.y));
+    this.previousCamera={...camera};
     for(let i=0;i<positions.length;i++){
       if(this.model.phase==='racing'){
         if(trackSection(this.model.progress[i])!==observation.section)this.backgroundMismatches++;
-        if(positions[i].x>=790&&!this.crossings.includes(i+1)&&observation.section==='finish')this.crossings.push(i+1);
+        if(positions[i].x+Number(observation.horseNoseOffset)>=Number(observation.finishWorldX)
+          &&!this.crossings.includes(i+1)&&observation.section==='finish')this.crossings.push(i+1);
       }
       const previous=this.previousPositions[i];
       if(previous&&this.model.phase==='result'){

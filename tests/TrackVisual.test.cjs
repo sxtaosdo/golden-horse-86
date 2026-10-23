@@ -11,7 +11,7 @@ for(let i=0;i<6;i++){
     const pose=horsePose(i,k/100,13.5);
     for(const prop of ['x','y','scale','angle'])assert.ok(Number.isFinite(pose[prop]),`${prop} horse ${i}`);
     assert.ok(pose.scale>=.6 && pose.scale<=1);
-    assert.ok(pose.x>-130&&pose.x<1000&&pose.y>60&&pose.y<410);
+    assert.ok(pose.x>0&&pose.x<2100&&pose.y>150&&pose.y<850,'world coordinates must stay on the continuous course');
   }
   for(const at of COURSE_BREAKS.slice(1,-1)){
     const p1=horsePose(i,at-1e-6,0),p2=horsePose(i,at+1e-6,0);

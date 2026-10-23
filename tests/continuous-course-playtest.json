@@ -1,0 +1,272 @@
+{
+  "steps": [
+    {
+      "type": "wait_ready"
+    },
+    {
+      "call": "testStartRecording",
+      "type": "api"
+    },
+    {
+      "type": "pointer",
+      "x": 112,
+      "y": 560,
+      "action": "click"
+    },
+    {
+      "type": "pointer",
+      "x": 296,
+      "y": 560,
+      "action": "click"
+    },
+    {
+      "type": "pointer",
+      "x": 480,
+      "y": 560,
+      "action": "click"
+    },
+    {
+      "type": "pointer",
+      "x": 664,
+      "y": 560,
+      "action": "click"
+    },
+    {
+      "type": "pointer",
+      "x": 848,
+      "y": 560,
+      "action": "click"
+    },
+    {
+      "type": "pointer",
+      "x": 112,
+      "y": 620,
+      "action": "click"
+    },
+    {
+      "type": "pointer",
+      "x": 296,
+      "y": 620,
+      "action": "click"
+    },
+    {
+      "type": "pointer",
+      "x": 480,
+      "y": 620,
+      "action": "click"
+    },
+    {
+      "type": "pointer",
+      "x": 664,
+      "y": 620,
+      "action": "click"
+    },
+    {
+      "type": "pointer",
+      "x": 848,
+      "y": 620,
+      "action": "click"
+    },
+    {
+      "action": "click",
+      "x": 112,
+      "type": "pointer",
+      "y": 680
+    },
+    {
+      "action": "click",
+      "x": 296,
+      "type": "pointer",
+      "y": 680
+    },
+    {
+      "action": "click",
+      "x": 480,
+      "type": "pointer",
+      "y": 680
+    },
+    {
+      "action": "click",
+      "x": 664,
+      "type": "pointer",
+      "y": 680
+    },
+    {
+      "action": "click",
+      "x": 848,
+      "type": "pointer",
+      "y": 680
+    },
+    {
+      "type": "keyboard",
+      "key": "Enter",
+      "action": "press"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "section": "right-bend"
+      },
+      "timeoutMs": 15000
+    },
+    {
+      "durationMs": 1100,
+      "type": "wait"
+    },
+    {
+      "label": "fixed-right-turn-midpoint",
+      "type": "screenshot"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "section": "backstraight"
+      },
+      "timeoutMs": 15000
+    },
+    {
+      "label": "fixed-backstraight",
+      "type": "screenshot"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "section": "left-bend"
+      },
+      "timeoutMs": 15000
+    },
+    {
+      "durationMs": 1100,
+      "type": "wait"
+    },
+    {
+      "label": "fixed-left-turn-midpoint",
+      "type": "screenshot"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "metrics": {
+          "finishCount": 1
+        }
+      },
+      "timeoutMs": 20000
+    },
+    {
+      "label": "fixed-first-finish",
+      "type": "screenshot"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "result",
+        "startButton": "下一场",
+        "resultPanel": true,
+        "metrics": {
+          "finishCount": 6,
+          "backgroundMismatches": 0
+        }
+      },
+      "timeoutMs": 20000
+    },
+    {
+      "durationMs": 500,
+      "type": "wait"
+    },
+    {
+      "label": "fixed-result-panel",
+      "type": "screenshot"
+    },
+    {
+      "required": true,
+      "type": "get_state"
+    },
+    {
+      "type": "wait",
+      "durationMs": 6000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "finishers-clear-viewport"
+    },
+    {
+      "type": "pointer",
+      "x": 900,
+      "y": 735,
+      "action": "click"
+    },
+    {
+      "expect": {
+        "phase": "betting",
+        "uiResult": "BET 0   WIN 0",
+        "round": 2,
+        "result": null,
+        "resultPanel": false
+      },
+      "type": "wait_for_state"
+    },
+    {
+      "label": "fixed-next-round-cleared",
+      "type": "screenshot"
+    },
+    {
+      "type": "pointer",
+      "x": 112,
+      "y": 560,
+      "action": "click"
+    },
+    {
+      "type": "keyboard",
+      "key": "Enter",
+      "action": "press"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "result",
+        "round": 2,
+        "metrics": {
+          "finishCount": 6,
+          "backgroundMismatches": 0
+        }
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "durationMs": 500,
+      "type": "wait"
+    },
+    {
+      "required": true,
+      "type": "get_state"
+    },
+    {
+      "type": "wait",
+      "durationMs": 6000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "finishers-clear-viewport"
+    },
+    {
+      "label": "fixed-second-result",
+      "type": "screenshot"
+    },
+    {
+      "call": "testStopRecording",
+      "type": "api"
+    }
+  ],
+  "viewport": {
+    "width": 960,
+    "height": 760
+  }
+}

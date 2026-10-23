@@ -11,6 +11,7 @@ const canvasHandlers={},windowHandlers={};
 let raf=null, text=[];
 const context2d={
   fillRect(){},strokeRect(){},clearRect(){},drawImage(){},save(){},restore(){},translate(){},rotate(){},scale(){},
+  beginPath(){},rect(){},clip(){},moveTo(){},lineTo(){},closePath(){},fill(){},stroke(){},
   fillText(s){text.push(String(s))},
 };
 const canvas={getContext(){return context2d;}, style:{},

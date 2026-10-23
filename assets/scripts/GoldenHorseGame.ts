@@ -5,7 +5,7 @@ import { PREVIEW } from 'cc/env';
 import { GoldenHorseTestBridge } from '../tests/GoldenHorseTestBridge';
 import { RaceModel } from './RaceModel';
 import { RaceTrackView, HorseTurnView } from './RaceTrackView';
-import { horsePose, trackSection, trackSectionName, TrackSection } from './TrackVisual';
+import { horsePose, trackSection, trackSectionName, TrackSection, COURSE_FINISH_X, HORSE_NOSE_X } from './TrackVisual';
 const { ccclass } = _decorator;
 const HEX = (v: string) => new Color().fromHEX(v);
 
@@ -25,12 +25,10 @@ export class GoldenHorseGame extends Component {
   private gallopTimer = 0;
   private lastPhase = 'betting';
   private heldF8 = false;
-  private trackSprite!: Sprite;
-  private readonly sceneFrames:Partial<Record<TrackSection,SpriteFrame>>={};
   private activeSection:TrackSection='straight';
   private textSection!:Label;
   private finishLabel!:Label;
-  private pendingAssets = 36;
+  private pendingAssets = 31;
   private readonly loadErrors: string[] = [];
   private testBridge: GoldenHorseTestBridge | null = null;
   private courseView!:RaceTrackView;
@@ -49,25 +47,10 @@ export class GoldenHorseGame extends Component {
     this.textRace=this.makeLabel(header,'Race','第 1 场',-369,-18,18,'#31d6ff');
     this.textTimer=this.makeLabel(header,'Time','TIME 30',350,-18,20,'#f95148');
     this.makeRect('TrackBorder',0,109,960,338,'#ae8953','#7a4b43');
-    const backdrop=new Node('RaceTrack');backdrop.layer=Layers.Enum.UI_2D;backdrop.parent=this.node;
-    backdrop.setPosition(0,109,0);backdrop.addComponent(UITransform).setContentSize(960,334);
-    this.trackSprite=backdrop.addComponent(Sprite);
-    this.trackSprite.sizeMode=Sprite.SizeMode.CUSTOM;
     this.courseView=new RaceTrackView(this.node);
-    const scenePaths:Record<TrackSection,string>={
-      'straight':'art/race_track', 'right-bend':'art/track_curve_right',
-      'backstraight':'art/track_backstraight', 'left-bend':'art/track_curve_left',
-      'finish':'art/track_finish'
-    };
-    for(const [section,path] of Object.entries(scenePaths) as Array<[TrackSection,string]>){
-      this.loadFrame(path,(err,frame)=>{
-        if(!err&&frame){this.sceneFrames[section]=frame;
-          if(this.activeSection===section)this.trackSprite.spriteFrame=frame;}
-      });
-    }
     this.textSection=this.makeLabel(this.node,'CourseSection','',-363,245,16,'#d0edb0');
     this.finishLabel=this.makeLabel(this.node,'FinishLine','',386,227,16,'#fffbce');
-    const racers=new Node('Racers');racers.layer=Layers.Enum.UI_2D;racers.parent=this.node;
+    const racers=new Node('Racers');racers.layer=Layers.Enum.UI_2D;racers.parent=this.courseView.world;
     racers.addComponent(UITransform).setContentSize(960,720);
     for(let i=0;i<6;i++){
       const n=new Node(`Horse_${i+1}`);n.layer=Layers.Enum.UI_2D;n.parent=racers;
@@ -107,9 +90,9 @@ export class GoldenHorseGame extends Component {
     this.makeButton('Clear',312,-335,105,36,'清空',()=>{this.game.clearBets();this.sound('cancel');});
     this.startText=this.makeButton('Start',424,-335,100,36,'开始',()=>this.beginRace(), '#246531');
     this.textMessage=this.makeLabel(this.node,'Message','',-80,-74,16,'#fff3be');
-    this.resultPanel=this.makeRect('ResultPanel',-45,118,510,184,'#10152e','#f9cc25');
+    this.resultPanel=this.makeRect('ResultPanel',0,-210,680,198,'#10152e','#f9cc25');
     this.resultText=this.makeLabel(this.resultPanel,'ResultSummary','',0,0,22,'#fff3be');
-    this.resultText.node.getComponent(UITransform)!.setContentSize(494,170);
+    this.resultText.node.getComponent(UITransform)!.setContentSize(654,180);
     this.resultPanel.active=false;
     this.audio=this.node.addComponent(AudioSource);
     for (const name of ['bet','cancel','start','win','finish','error','gallop']) {
@@ -125,15 +108,18 @@ export class GoldenHorseGame extends Component {
       ready:this.pendingAssets===0 && this.loadErrors.length===0,
       pendingAssets:this.pendingAssets,loadErrors:[...this.loadErrors],
       section:this.activeSection,horseFrames:this.frames.flat().filter(Boolean).length,
-      backgrounds:Object.keys(this.sceneFrames).length,sounds:Object.keys(this.sounds).length,
+      backgrounds:1,sounds:Object.keys(this.sounds).length,
+      worldId:this.courseView.world.uuid,worldPaintBuilds:this.courseView.paintBuilds,camera:{...this.courseView.camera},
+      finishWorldX:COURSE_FINISH_X,horseNoseOffset:HORSE_NOSE_X,
       uiCredits:this.textCredits.string,uiResult:this.textResult.string,
       resultPanel:this.resultPanel.active,startButton:this.startText.string,
-      horsePositions:this.horseNodes.map(node=>({x:node.position.x+480,y:360-node.position.y})),
+      horsePositions:this.horseNodes.map(node=>({x:node.position.x,y:-node.position.y})),
+      screenHorsePositions:this.horseNodes.map(node=>this.courseView.project({x:node.position.x,y:-node.position.y})),
     }));
   }
   onDestroy():void{
     this.testBridge?.dispose();
-    for(const frame of [...this.frames.flat(),...Object.values(this.sceneFrames)])frame?.destroy();
+    for(const frame of this.frames.flat())frame?.destroy();
     input.off(Input.EventType.KEY_DOWN,this.keyDown,this);
     input.off(Input.EventType.KEY_UP,this.keyUp,this);
   }
@@ -209,21 +195,19 @@ export class GoldenHorseGame extends Component {
       ?trackSection(this.game.courseFraction):this.game.phase==='result'?'finish':'straight';
     if(this.activeSection!==section){
       this.activeSection=section;
-      const frame=this.sceneFrames[section];if(frame)this.trackSprite.spriteFrame=frame;
-      this.courseView.setSection(section);
     }
     this.textSection.string=this.game.phase==='racing'?trackSectionName(section):'';
-    this.finishLabel.string=section==='finish'?'终点 ►':'';
+    this.finishLabel.string='';
+    this.courseView.follow(this.game.courseFraction);
     for(let i=0;i<6;i++) {
       const progress=this.game.phase==='betting'?0:this.game.progress[i];
       const pose=horsePose(i,progress,this.game.raceElapsed);
-      // Race view is in 960x720 top-left coordinates; Cocos UI uses centre origin.
-      this.horseNodes[i].setPosition(pose.x-480,360-pose.y,0);
+      this.horseNodes[i].setPosition(pose.x,-pose.y,0);
       this.horseNodes[i].setScale(pose.flipX?-pose.scale:pose.scale,pose.scale,1);
       this.horseNodes[i].angle=-pose.angle;
       this.horseSprites[i].color=new Color(255,255,255,Math.round(255*pose.sideOpacity));
       this.turnViews[i].render(pose,this.game.raceElapsed);
-      const frame=this.game.phase==='racing'?Math.floor(this.frameCounter*9)%4:0;
+      const frame=this.game.phase!=='betting'?Math.floor(this.game.raceElapsed*9)%4:0;
       if(this.frames[i][frame])this.horseSprites[i].spriteFrame=this.frames[i][frame]!;
     }
     [...this.horseNodes].sort((a,b)=>b.position.y-a.position.y).forEach((node,index)=>node.setSiblingIndex(index));
@@ -241,7 +225,7 @@ export class GoldenHorseGame extends Component {
     if(result)this.resultText.string=`比赛结束   冠军 ${result.first}  亚军 ${result.second}\n`+
       `完整名次：${result.order.join(' → ')}\n组合 ${result.pair}   本局押分 ${result.stake}   返分 +${result.payout}\n按 Enter 或点击「下一场」继续`;
     this.textMessage.string=this.loadErrors.length?`资源加载失败：${this.loadErrors[0]}`:
-      this.pendingAssets>0?`正在加载资源 ${36-this.pendingAssets}/36`:this.game.message;
+      this.pendingAssets>0?`正在加载资源 ${31-this.pendingAssets}/31`:this.game.message;
     this.textHistory.string=this.game.history.slice(0,5).map(v=>`${v.first}-${v.second}`).join('  ');
     for (const row of this.grid){
       const c=this.game.getCell(row.key)!;
