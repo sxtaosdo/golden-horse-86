@@ -5,4 +5,6 @@ art/reference/race/original-single-bend.png,comparison-reference,"Sohu 86 gamepl
 art/work/gameplay/r01/generated/horse-01-side-v01.png,review-sample-unapproved,built-in image_gen; references and full prompt in art/work/gameplay/r01/prompt.md,false
 art/work/gameplay/r03/generated/starting-gate-states-v01.png,rejected-five-stall-process,built-in image_gen; retained edit input; see r03/README.md,false
 art/work/gameplay/r03/generated/starting-gate-states-v02.png,rejected-five-stall-process,built-in image_gen edit; actual prompt in r03/repair-prompt.md,false
-art/work/gameplay/r03/generated/starting-stall-module-v03.png,review-sample-unapproved,built-in image_gen; actual prompt in r03/module-prompt.md; frame and door alignment pending,false
+art/work/gameplay/r03/generated/starting-stall-module-v03.png,rejected-perspective,built-in image_gen; Owner rejected perspective 2026-10-24; retained for r04 correction,false
+art/work/gameplay/r04/generated/starting-stall-oblique-v01.png,rejected-oblique-process,built-in image_gen; long rails still slanted; see r04/prompt-v01.md,false
+art/work/gameplay/r04/generated/starting-stall-side-v02.png,review-sample-unapproved,built-in image_gen; strict side view; exact prompt in r04/prompt-v02.md,false

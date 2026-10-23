@@ -1,6 +1,6 @@
 # r03 · 现代起跑闸箱资源样稿
 
-日期：2026-10-23。状态：单格模块外观样稿已生成，待Owner评审；不进入Runtime，不晋级共享Canon。
+日期：2026-10-23。状态：未采用；2026-10-24 Owner指出图片透视关系有问题。保留过程与来源，不进入Runtime，不晋级共享Canon；修订转入[r04](../r04/README.md)。
 
 本轮依据Owner“看一下现代赛马……能不能出相关资源”的请求，核对现代平地赛马的起跑设施。沿用本产品此前已接受的2D像素方向；不是为P0001创建新的共享美术规范。
 
@@ -31,7 +31,7 @@
 |---|---|---|
 | generated/starting-gate-states-v01.png | exec-303c5de6-0c66-422d-a44b-d0056c3d1abf.png | 整组只有五格，未采用；保留为v02编辑输入 |
 | generated/starting-gate-states-v02.png | exec-db2fd9f4-d5b4-4a6c-8fbb-4dcfb90bd32c.png | 修订后仍只有五格，未采用；停止重复整组生成 |
-| [generated/starting-stall-module-v03.png](generated/starting-stall-module-v03.png) | exec-825e2795-79c1-4ac0-9eb7-49c040cc33e6.png | 一个模块的闭门／开门外观候选，待Owner确认 |
+| [generated/starting-stall-module-v03.png](generated/starting-stall-module-v03.png) | exec-825e2795-79c1-4ac0-9eb7-49c040cc33e6.png | 2026-10-24 Owner否定透视关系，未采用 |
 
 v03可见一对关闭前门、一对打开前门、接地支脚、顶部横梁和软垫隔板，马脚通路下方没有连续横杆；PNG带真实alpha。两态的隔板长度、局部支柱和透视仍有生成差异，不能直接切成两张整体Sprite替换后称为无漂移动画。后续接入应先选定固定框架，拆分门扇、统一铰链和脚点，再沿六个档位布置；还需实际核对向右跑出的马匹与门扇遮挡。本轮不声称六格成品、无缝动画或运行验收。
 
@@ -39,4 +39,4 @@ v03原图为2172×724、32位RGBA；角落及顶部中点alpha为0。全部PNG�
 
 OCR使用Delegation Mode并显式加载父仓共享规则：total_files=24，reviewed_files=11（8个文本/JSON/CSV及3张人工查看的PNG），skipped_files=13（范围外原有5个meta/服务配置和8张图片），全工作区coverage_rate=45.83%，本轮范围覆盖100%。CSV与二进制在工具默认过滤外由宿主检查；逐项清单/规则输出在本机临时目录horse-starting-gate-r03-review。未发现本轮阻断问题，生成缺陷均按上述未采用或待对齐状态记录。本轮为小范围资源任务，由主会话直接处理，子代理未调用。
 
-上版游戏代码仍为已确认的0.3.0.8实现，本轮只新增美术候选与来源说明；不重复运行覆盖路径未变化的Creator构建。资源仍待Owner外观确认，当前运行素材不变。
+上版游戏代码仍为已确认的0.3.0.8实现，r03只新增美术候选与来源说明；未重复运行覆盖路径未变化的Creator构建。2026-10-24资源已因透视问题被Owner否定，后续候选以r04为准，当前运行素材不变。
