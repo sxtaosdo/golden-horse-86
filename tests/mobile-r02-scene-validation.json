@@ -1,0 +1,541 @@
+{
+  "schemaVersion": "cocos-tool-result-v1",
+  "operationId": "428a8a81-b48e-4917-89f9-838da962e9ed",
+  "projectId": "9d8a0041f7873b81",
+  "tool": "scene_validate",
+  "status": "PASSED",
+  "data": {
+    "ok": false,
+    "sceneUrl": "GoldenHorseGame",
+    "revision": "rev-5ecf0e6e",
+    "issues": [
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Title",
+        "nodePath": "Canvas/GoldenHorseGame/Root/RaceHost/Hud/Title"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Timer",
+        "nodePath": "Canvas/GoldenHorseGame/Root/RaceHost/Hud/Timer"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "ResultHeading",
+        "nodePath": "Canvas/GoldenHorseGame/Root/RaceHost/Result/ResultHeading"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "ResultText",
+        "nodePath": "Canvas/GoldenHorseGame/Root/RaceHost/Result/ResultText"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "ResultOdds",
+        "nodePath": "Canvas/GoldenHorseGame/Root/RaceHost/Result/ResultOdds"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "HistoryHeading",
+        "nodePath": "Canvas/GoldenHorseGame/Root/RaceHost/HistoryPanel/HistoryHeading"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "HistoryText",
+        "nodePath": "Canvas/GoldenHorseGame/Root/RaceHost/HistoryPanel/HistoryText"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "OddsHeader",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/OddsHeader"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet0Pair",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet0/Bet0Pair"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet0Odds",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet0/Bet0Odds"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet0Stake",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet0/Bet0Stake"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet1Pair",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet1/Bet1Pair"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet1Odds",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet1/Bet1Odds"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet1Stake",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet1/Bet1Stake"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet2Pair",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet2/Bet2Pair"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet2Odds",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet2/Bet2Odds"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet2Stake",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet2/Bet2Stake"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet3Pair",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet3/Bet3Pair"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet3Odds",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet3/Bet3Odds"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet3Stake",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet3/Bet3Stake"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet4Pair",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet4/Bet4Pair"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet4Odds",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet4/Bet4Odds"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet4Stake",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet4/Bet4Stake"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet5Pair",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet5/Bet5Pair"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet5Odds",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet5/Bet5Odds"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet5Stake",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet5/Bet5Stake"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet6Pair",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet6/Bet6Pair"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet6Odds",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet6/Bet6Odds"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet6Stake",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet6/Bet6Stake"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet7Pair",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet7/Bet7Pair"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet7Odds",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet7/Bet7Odds"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet7Stake",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet7/Bet7Stake"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet8Pair",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet8/Bet8Pair"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet8Odds",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet8/Bet8Odds"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet8Stake",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet8/Bet8Stake"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet9Pair",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet9/Bet9Pair"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet9Odds",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet9/Bet9Odds"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet9Stake",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet9/Bet9Stake"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet10Pair",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet10/Bet10Pair"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet10Odds",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet10/Bet10Odds"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet10Stake",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet10/Bet10Stake"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet11Pair",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet11/Bet11Pair"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet11Odds",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet11/Bet11Odds"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet11Stake",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet11/Bet11Stake"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet12Pair",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet12/Bet12Pair"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet12Odds",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet12/Bet12Odds"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet12Stake",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet12/Bet12Stake"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet13Pair",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet13/Bet13Pair"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet13Odds",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet13/Bet13Odds"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet13Stake",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet13/Bet13Stake"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet14Pair",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet14/Bet14Pair"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet14Odds",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet14/Bet14Odds"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Bet14Stake",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Bet14/Bet14Stake"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Credits",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Credits"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Message",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Message"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "Legend",
+        "nodePath": "Canvas/GoldenHorseGame/Root/BetPanel/Legend"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "UndoButtonText",
+        "nodePath": "Canvas/GoldenHorseGame/Root/Footer/Undo/UndoButtonText"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "ClearButtonText",
+        "nodePath": "Canvas/GoldenHorseGame/Root/Footer/Clear/ClearButtonText"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "HistoryButtonText",
+        "nodePath": "Canvas/GoldenHorseGame/Root/Footer/History/HistoryButtonText"
+      },
+      {
+        "code": "EMPTY_REFERENCE",
+        "severity": "warning",
+        "message": "cc.Label.font is empty",
+        "nodeKey": "StartButtonText",
+        "nodePath": "Canvas/GoldenHorseGame/Root/Footer/Start/StartButtonText"
+      },
+      {
+        "code": "CONSOLE_ERROR",
+        "severity": "error",
+        "message": "2026-10-23 21:39:08 - warn: [Scene] 'Camera.prototype.color' is deprecated, please use 'Camera.prototype.clearColor' instead. Error: [Scene] 'Camera.prototype.color' is deprecated, please use 'Camera.prototype.clearColor' instead. "
+      },
+      {
+        "code": "CONSOLE_ERROR",
+        "severity": "error",
+        "message": "2026-10-23 21:39:08 - warn: [Scene] 'Canvas.prototype.color' is deprecated, please use 'Canvas.prototype.cameraComponent.clearColor' instead. Error: [Scene] 'Canvas.prototype.color' is deprecated, please use 'Canvas.prototype.cameraComponent.clearColor' instead. "
+      },
+      {
+        "code": "CONSOLE_ERROR",
+        "severity": "error",
+        "message": "2026-10-23 21:39:08 - warn: [Scene] 'Camera.prototype.color' is deprecated, please use 'Camera.prototype.clearColor' instead. Error: [Scene] 'Camera.prototype.color' is deprecated, please use 'Camera.prototype.clearColor' instead. "
+      },
+      {
+        "code": "CONSOLE_ERROR",
+        "severity": "error",
+        "message": "2026-10-23 21:39:08 - warn: [Scene] 'Camera.prototype.color' is deprecated, please use 'Camera.prototype.clearColor' instead. Error: [Scene] 'Camera.prototype.color' is deprecated, please use 'Camera.prototype.clearColor' instead. "
+      },
+      {
+        "code": "CONSOLE_ERROR",
+        "severity": "error",
+        "message": "2026-10-23 21:39:08 - warn: [Scene] 'Canvas.prototype.color' is deprecated, please use 'Canvas.prototype.cameraComponent.clearColor' instead. Error: [Scene] 'Canvas.prototype.color' is deprecated, please use 'Canvas.prototype.cameraComponent.clearColor' instead. "
+      },
+      {
+        "code": "CONSOLE_ERROR",
+        "severity": "error",
+        "message": "2026-10-23 21:39:08 - warn: [Scene] 'Camera.prototype.color' is deprecated, please use 'Camera.prototype.clearColor' instead. Error: [Scene] 'Camera.prototype.color' is deprecated, please use 'Camera.prototype.clearColor' instead. "
+      },
+      {
+        "code": "CONSOLE_ERROR",
+        "severity": "error",
+        "message": "2026-10-23 21:39:31 - warn: [Scene] 'Camera.prototype.color' is deprecated, please use 'Camera.prototype.clearColor' instead. Error: [Scene] 'Camera.prototype.color' is deprecated, please use 'Camera.prototype.clearColor' instead. "
+      },
+      {
+        "code": "CONSOLE_ERROR",
+        "severity": "error",
+        "message": "2026-10-23 21:39:31 - warn: [Scene] 'Canvas.prototype.color' is deprecated, please use 'Canvas.prototype.cameraComponent.clearColor' instead. Error: [Scene] 'Canvas.prototype.color' is deprecated, please use 'Canvas.prototype.cameraComponent.clearColor' instead. "
+      },
+      {
+        "code": "CONSOLE_ERROR",
+        "severity": "error",
+        "message": "2026-10-23 21:39:31 - warn: [Scene] 'Camera.prototype.color' is deprecated, please use 'Camera.prototype.clearColor' instead. Error: [Scene] 'Camera.prototype.color' is deprecated, please use 'Camera.prototype.clearColor' instead. "
+      },
+      {
+        "code": "CONSOLE_ERROR",
+        "severity": "error",
+        "message": "2026-10-23 21:39:31 - warn: [Scene] 'Camera.prototype.color' is deprecated, please use 'Camera.prototype.clearColor' instead. Error: [Scene] 'Camera.prototype.color' is deprecated, please use 'Camera.prototype.clearColor' instead. "
+      },
+      {
+        "code": "CONSOLE_ERROR",
+        "severity": "error",
+        "message": "2026-10-23 21:39:31 - warn: [Scene] 'Canvas.prototype.color' is deprecated, please use 'Canvas.prototype.cameraComponent.clearColor' instead. Error: [Scene] 'Canvas.prototype.color' is deprecated, please use 'Canvas.prototype.cameraComponent.clearColor' instead. "
+      },
+      {
+        "code": "CONSOLE_ERROR",
+        "severity": "error",
+        "message": "2026-10-23 21:39:31 - warn: [Scene] 'Camera.prototype.color' is deprecated, please use 'Camera.prototype.clearColor' instead. Error: [Scene] 'Camera.prototype.color' is deprecated, please use 'Camera.prototype.clearColor' instead. "
+      },
+      {
+        "code": "CONSOLE_ERROR",
+        "severity": "error",
+        "message": "2026-10-23 21:39:31 - warn: [Scene] 'Camera.prototype.color' is deprecated, please use 'Camera.prototype.clearColor' instead. Error: [Scene] 'Camera.prototype.color' is deprecated, please use 'Camera.prototype.clearColor' instead. "
+      },
+      {
+        "code": "CONSOLE_ERROR",
+        "severity": "error",
+        "message": "2026-10-23 21:39:31 - warn: [Scene] 'Canvas.prototype.color' is deprecated, please use 'Canvas.prototype.cameraComponent.clearColor' instead. Error: [Scene] 'Canvas.prototype.color' is deprecated, please use 'Canvas.prototype.cameraComponent.clearColor' instead. "
+      },
+      {
+        "code": "CONSOLE_ERROR",
+        "severity": "error",
+        "message": "2026-10-23 21:39:31 - warn: [Scene] 'Camera.prototype.color' is deprecated, please use 'Camera.prototype.clearColor' instead. Error: [Scene] 'Camera.prototype.color' is deprecated, please use 'Camera.prototype.clearColor' instead. "
+      },
+      {
+        "code": "CONSOLE_ERROR",
+        "severity": "error",
+        "message": "2026-10-23 21:39:31 - warn: [Scene] 'Canvas.prototype.color' is deprecated, please use 'Canvas.prototype.cameraComponent.clearColor' instead. Error: [Scene] 'Canvas.prototype.color' is deprecated, please use 'Canvas.prototype.cameraComponent.clearColor' instead. "
+      },
+      {
+        "code": "CONSOLE_ERROR",
+        "severity": "error",
+        "message": "2026-10-23 21:39:31 - warn: [Scene] 'Canvas.prototype.color' is deprecated, please use 'Canvas.prototype.cameraComponent.clearColor' instead. Error: [Scene] 'Canvas.prototype.color' is deprecated, please use 'Canvas.prototype.cameraComponent.clearColor' instead. "
+      },
+      {
+        "code": "CONSOLE_ERROR",
+        "severity": "error",
+        "message": "2026-10-23 21:39:53 - warn: [Scene] 'Canvas.prototype.color' is deprecated, please use 'Canvas.prototype.cameraComponent.clearColor' instead. Error: [Scene] 'Canvas.prototype.color' is deprecated, please use 'Canvas.prototype.cameraComponent.clearColor' instead. "
+      },
+      {
+        "code": "CONSOLE_ERROR",
+        "severity": "error",
+        "message": "2026-10-23 21:39:53 - warn: [Scene] 'Canvas.prototype.color' is deprecated, please use 'Canvas.prototype.cameraComponent.clearColor' instead. Error: [Scene] 'Canvas.prototype.color' is deprecated, please use 'Canvas.prototype.cameraComponent.clearColor' instead. "
+      },
+      {
+        "code": "CONSOLE_ERROR",
+        "severity": "error",
+        "message": "2026-10-23 21:39:53 - warn: [Scene] 'Canvas.prototype.color' is deprecated, please use 'Canvas.prototype.cameraComponent.clearColor' instead. Error: [Scene] 'Canvas.prototype.color' is deprecated, please use 'Canvas.prototype.cameraComponent.clearColor' instead. "
+      }
+    ],
+    "checks": {
+      "reopenable": true,
+      "componentsIntact": true,
+      "referencesValid": true,
+      "consoleBlockingErrors": true
+    }
+  },
+  "evidence": []
+}

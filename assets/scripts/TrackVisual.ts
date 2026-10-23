@@ -57,8 +57,10 @@ export function horsePose(index:number,progress:number,seconds=0):HorsePose{
   const pose:HorsePose={...coursePoint(index,progress),scale:HORSE_SCALE,angle:0,flipX:progress>=FINAL_STRAIGHT_START,sideOpacity:1,turn:null};
   if(trackSection(progress)==='right-bend'){
     const theta=curveAngle((progress-COURSE_BREAKS[1])/(FINAL_STRAIGHT_START-COURSE_BREAKS[1]));
+    pose.angle=theta;
     pose.turn='front';pose.flipX=theta>=Math.PI/2;pose.sideOpacity=Math.pow(Math.abs(Math.cos(theta)),6);
   }
+  if(progress>=FINAL_STRAIGHT_START)pose.angle=Math.PI;
   if(progress>0)pose.y+=Math.sin(seconds*20+index*1.4)*1.2;
   return pose;
 }

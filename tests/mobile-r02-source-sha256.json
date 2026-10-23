@@ -1,0 +1,269 @@
+{
+  "baseCommit": "316d81de29839aa7fa6a608ef5825d25758c94d4",
+  "files": [
+    {
+      "path": "assets/GoldenHorseGame.scene",
+      "sha256": "175eb15eaca8d4d162f726fdaca0857ea3fe126ca570d9bcfb48b66a876f81ea"
+    },
+    {
+      "path": "assets/GoldenHorseGame.scene.meta",
+      "sha256": "8ab5a2b822216627e66ee8cc988527e3d4d0ce1b7146c1fd345dc8dcb7c47379"
+    },
+    {
+      "path": "assets/resources/race.meta",
+      "sha256": "0512c4f9947ea89d56c06403200fabf669880699c9794186077aac811e9a241c"
+    },
+    {
+      "path": "assets/resources/race/ground.png",
+      "sha256": "987223d1ecd9f6e909ceebd6d41d8b6a3cc4604503c772bd143d5230b34df599"
+    },
+    {
+      "path": "assets/resources/race/ground.png.meta",
+      "sha256": "aa7490fa05e6857b867f760fc910aeae511ac0d5129fc3e30d685ef37d0eb7e2"
+    },
+    {
+      "path": "assets/resources/race/h01-diagonal-r02.png",
+      "sha256": "0b69696268599160553dd853ac925927c7206ea6f2088e154b3b1ceded98fa65"
+    },
+    {
+      "path": "assets/resources/race/h01-diagonal-r02.png.meta",
+      "sha256": "030858c7d98f1f95b3c90f1a43b5164097c21738fb7a604bcbeaad3779b82838"
+    },
+    {
+      "path": "assets/resources/race/h01-front-r02.png",
+      "sha256": "c2fbd8c8f3367f810d7e5c87999277125effc2b0ea92c47d96e5328a42e933f8"
+    },
+    {
+      "path": "assets/resources/race/h01-front-r02.png.meta",
+      "sha256": "02fd866cd09e8bb31e8d2f4a03053aec90f0193fbb1259dd24cd0818dceca6dd"
+    },
+    {
+      "path": "assets/resources/race/h01-side-r02.png",
+      "sha256": "d258a8d408ac6f29ea0ac13a8eb7e1716d0122dd68f8138f1ea227aa4880c34b"
+    },
+    {
+      "path": "assets/resources/race/h01-side-r02.png.meta",
+      "sha256": "4aa29919bdb09b8235b94fce645a715226d599125d03e0d32ee277fe521a35ce"
+    },
+    {
+      "path": "assets/resources/race/h02-diagonal.png",
+      "sha256": "b38fd290269127c0b5d8417c3385df4430f57bae320675f3139e12702d760fb4"
+    },
+    {
+      "path": "assets/resources/race/h02-diagonal.png.meta",
+      "sha256": "4f18fe7458b8ed1c90a1170add72344697b2ef456f134c3a11ea1385faee32b4"
+    },
+    {
+      "path": "assets/resources/race/h02-front.png",
+      "sha256": "0160a77dc23024655d114455fb923c31aaa4c52f6a034b93b14cb6c319919b3d"
+    },
+    {
+      "path": "assets/resources/race/h02-front.png.meta",
+      "sha256": "4665326def44cbb3021bba3ca54485c0ebbe29d0aab117fe261c6ae23f3ff99b"
+    },
+    {
+      "path": "assets/resources/race/h02-side.png",
+      "sha256": "f840f139c70c42e4224661efad4ff44580ae249491239fa5ce8acd555eb8127d"
+    },
+    {
+      "path": "assets/resources/race/h02-side.png.meta",
+      "sha256": "94f949686ba0e31e5ca96784be5ffb14054182350fad82bb7ada927047db5f97"
+    },
+    {
+      "path": "assets/resources/race/h03-diagonal.png",
+      "sha256": "aa6ebd45f591b144d4ed34f81f6afd3343f2dcc274d851d2dc6f0a9a7d530299"
+    },
+    {
+      "path": "assets/resources/race/h03-diagonal.png.meta",
+      "sha256": "958ba68b3856097b192440857ca28e0b6e47e3d3ffbf56c86ca59bb7e9a72cab"
+    },
+    {
+      "path": "assets/resources/race/h03-front.png",
+      "sha256": "5589e78fc7ad64353f07aa672b86808455db9b8c8d2def2b5a833992428fae81"
+    },
+    {
+      "path": "assets/resources/race/h03-front.png.meta",
+      "sha256": "2c3eaecd42d044ea69294ed0fa6cc798a4451e99d6c237e780335be4302b23f7"
+    },
+    {
+      "path": "assets/resources/race/h03-side.png",
+      "sha256": "99063ca102fc6c79544a4e6dc3aedd9591fe0c9200e4653cca0afc46810ada6e"
+    },
+    {
+      "path": "assets/resources/race/h03-side.png.meta",
+      "sha256": "7a96bd4e49b3da9570ed7e33581fede77c850c57ef2e52e55abcce9927d8693f"
+    },
+    {
+      "path": "assets/resources/race/h04-diagonal.png",
+      "sha256": "684b473ad7e3af68aac741b1f8ed743a2a7e9020fa6f9e40aefe5621c294a612"
+    },
+    {
+      "path": "assets/resources/race/h04-diagonal.png.meta",
+      "sha256": "4cbf28941b1432229418f4465c872a51074d5ab67e3c66be37aad3e915cb5f5f"
+    },
+    {
+      "path": "assets/resources/race/h04-front.png",
+      "sha256": "a8f91238034b4c122ee328a59c1afc9bfa3f22bba9347604ae7151ea07fc930b"
+    },
+    {
+      "path": "assets/resources/race/h04-front.png.meta",
+      "sha256": "4abf84a5615233ffff52e7701b6a0c5e8f1c1484bcf2ddb208011d43eeb21490"
+    },
+    {
+      "path": "assets/resources/race/h04-side.png",
+      "sha256": "7a1b7a9e3aa2e13ed255580189bbfa293fa9052af3541790846be91a6d374cc7"
+    },
+    {
+      "path": "assets/resources/race/h04-side.png.meta",
+      "sha256": "75fd869a4ee075bd655969e3b2ab8fb7d43eede37b1171e904fb47c8480748b5"
+    },
+    {
+      "path": "assets/resources/race/h05-diagonal.png",
+      "sha256": "c05a3b66504ea9919c5bd46070e79677e4ac5b2bce3ef37afc33a3d266126140"
+    },
+    {
+      "path": "assets/resources/race/h05-diagonal.png.meta",
+      "sha256": "0574988c36f1dbf7a08302e921f5608f1bcba039c83dafe0db21f1724e250f87"
+    },
+    {
+      "path": "assets/resources/race/h05-front.png",
+      "sha256": "41c2ff9f20262af8019b36e5392f4eee839fce37a80124c35bdc517774296285"
+    },
+    {
+      "path": "assets/resources/race/h05-front.png.meta",
+      "sha256": "c7546904cf1148e6f53a93f68cb33fae46cab181d034eb4817648fac1af8c861"
+    },
+    {
+      "path": "assets/resources/race/h05-side.png",
+      "sha256": "0fd26d55476345789fe25db361afe35823115e611dd95b2f26399c1f850aff9a"
+    },
+    {
+      "path": "assets/resources/race/h05-side.png.meta",
+      "sha256": "423d685618016c36239062615d1301bd0ce6fc6c896689b372846afb524f53cc"
+    },
+    {
+      "path": "assets/resources/race/h06-diagonal.png",
+      "sha256": "c4e6d9bf9ce9ba4f906632f0bb5a6d3e4c14fc068c0b8d099c5b2b755a5b0a6e"
+    },
+    {
+      "path": "assets/resources/race/h06-diagonal.png.meta",
+      "sha256": "f28b0cc11563436f43d5f932a50fce591928466a08e9b72a0861800a4cbf0d8e"
+    },
+    {
+      "path": "assets/resources/race/h06-front.png",
+      "sha256": "702b480d8be7be1fddb6fae49b93d178ed0a0a8379d7afbae75893850a343941"
+    },
+    {
+      "path": "assets/resources/race/h06-front.png.meta",
+      "sha256": "8ab07f180daf51d9d3f5f7a89548504007e765846c48841a7f1e96051e62b49c"
+    },
+    {
+      "path": "assets/resources/race/h06-side.png",
+      "sha256": "886274c0ab3b1a03d150e26d28d43e336f41463f41acd017507becdadc1efc7a"
+    },
+    {
+      "path": "assets/resources/race/h06-side.png.meta",
+      "sha256": "8924f9905d2de8522c16b6455d1c7cfe7c3578973cd6d0d517cca32a4b8b6c3b"
+    },
+    {
+      "path": "assets/resources/race/manifest.json",
+      "sha256": "47fab57a56d7c967dbd991d38cf13e12bbddc5d032f26feb73c4bc5c25cd2517"
+    },
+    {
+      "path": "assets/resources/race/manifest.json.meta",
+      "sha256": "a690414dca3bb2568e38f2bc490fe5a30ab0ad4afa0cae239234da6bcf0fe42e"
+    },
+    {
+      "path": "assets/resources/race/scenery.png",
+      "sha256": "80f7ab59c61ac1f09c511b9a75b5b91a463aa14d473492a9040b72bbae6a0bcc"
+    },
+    {
+      "path": "assets/resources/race/scenery.png.meta",
+      "sha256": "d75cb2a68e7384f27ed1dfed5a08e9f1cbfd8f1dd439f23acaeed1b7f2e762ce"
+    },
+    {
+      "path": "assets/resources/race/ui-white.png",
+      "sha256": "6495b222482252a13b22f7c87b9bb677a6a4f80a4e472a6aa1abe5a83720a3f0"
+    },
+    {
+      "path": "assets/resources/race/ui-white.png.meta",
+      "sha256": "9bf3c6a86ae8f017311a79ccc0cbf4f1c0619f337f3eaebe4abbce12e55e8c24"
+    },
+    {
+      "path": "assets/scripts/GoldenHorseGame.ts",
+      "sha256": "d8e2d796dea99093e83114760321f9b73a6dfdbb6ea63344352e44543baf88ad"
+    },
+    {
+      "path": "assets/scripts/GoldenHorseGame.ts.meta",
+      "sha256": "548f355546e68f984ac3c76c100bed12b43026eb8113eac5d02bf4e33d80303c"
+    },
+    {
+      "path": "assets/scripts/RaceModel.ts",
+      "sha256": "b81c4a38226952616cb9eb47f2bcdb25266cb999c6134e42e99f22b614948dfc"
+    },
+    {
+      "path": "assets/scripts/RaceModel.ts.meta",
+      "sha256": "538b96c713be11e5cca4a06b23d0933a634ab5e9356efe77e910805c8cdd10b3"
+    },
+    {
+      "path": "assets/scripts/RaceTrackView.ts",
+      "sha256": "881c4e17b11eb0e3516bde3a463296c68e68f076ce07c943b16acbc827b902fe"
+    },
+    {
+      "path": "assets/scripts/RaceTrackView.ts.meta",
+      "sha256": "dd8387fd1723b4b0ae56224e78f39d8e01736442f5aa395ae70729065d6937cf"
+    },
+    {
+      "path": "assets/scripts/TrackVisual.ts",
+      "sha256": "ac99f0091f1d5eb5fbb6f4e541e009f1afe18159f1217aa49bd9f1bff96ad22e"
+    },
+    {
+      "path": "assets/scripts/TrackVisual.ts.meta",
+      "sha256": "f2292dfc72c9dbba960d32e319c05e2c49e3e75587cbd704c7a8e6339a4ae300"
+    },
+    {
+      "path": "assets/scripts/presentation/HorseSpriteView.ts",
+      "sha256": "6e855e121819158507a0f55145b7dda640ad4e0fb9b205fbe54ab84f4e9748f0"
+    },
+    {
+      "path": "assets/scripts/presentation/HorseSpriteView.ts.meta",
+      "sha256": "c089e824137f9d55ffde377fa8d9d39160a370f2a73ea68d7e7048f418164464"
+    },
+    {
+      "path": "assets/scripts/presentation/MobileLayout.ts",
+      "sha256": "55c043db295ad18dbcc136dc0a2e667dbff07051ac794c9beac8bce5a3edfa38"
+    },
+    {
+      "path": "assets/scripts/presentation/MobileLayout.ts.meta",
+      "sha256": "bf83eeb147e90d5695f77a8490136f81c3ebbd1d1476d8badc6f2f223708ce00"
+    },
+    {
+      "path": "assets/scripts/presentation/RacePages.ts",
+      "sha256": "1da6e367b360cc1e52b2d3f3aa1bc497ba0f680cac09930a6e5ade4a38011f05"
+    },
+    {
+      "path": "assets/scripts/presentation/RacePages.ts.meta",
+      "sha256": "6df910c4a44791a42d8781e7e92ed84029c6901d13e5f8ad3ff0f3300cc9e36d"
+    },
+    {
+      "path": "assets/scripts/presentation/RaceVisualAssets.ts",
+      "sha256": "ff15655d31fece5d5a7e49d29acaf4f3e5c74189d0b0d57c1a371f2b449c450a"
+    },
+    {
+      "path": "assets/scripts/presentation/RaceVisualAssets.ts.meta",
+      "sha256": "df179da1378f659f6898ec8fae783c0b7ed1548e602d6af2e51bf6e1d0b75ef6"
+    },
+    {
+      "path": "assets/tests/GoldenHorseTestBridge.ts",
+      "sha256": "9532ccfe5a2ff1919e6aa1a59b376e157b23570725b7c05d3205249b300d3f14"
+    },
+    {
+      "path": "assets/tests/GoldenHorseTestBridge.ts.meta",
+      "sha256": "580e29724b43fa7406a29fec09e55fe860bcba45e9b44a63390746773306ca28"
+    },
+    {
+      "path": "settings/v2/packages/project.json",
+      "sha256": "9682c5055fac3ddb2af328aba3276a424c02f271c6cfdf64f1377a8cc9ab65ed"
+    }
+  ]
+}

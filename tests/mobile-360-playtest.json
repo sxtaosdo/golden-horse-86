@@ -1,0 +1,291 @@
+{
+  "viewport": {
+    "width": 360,
+    "height": 640
+  },
+  "steps": [
+    {
+      "type": "wait",
+      "durationMs": 1500
+    },
+    {
+      "type": "ui",
+      "action": "click",
+      "target": "#view-select:visible, body:not(:has(#view-select:visible))"
+    },
+    {
+      "type": "ui",
+      "action": "click",
+      "target": "li[data-device=WebpageFullScreen]:visible, body:not(:has(li[data-device=WebpageFullScreen]:visible))"
+    },
+    {
+      "type": "wait_ready"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "revision": "mobile-r02-144-crisp-v1",
+        "raceViewport": {
+          "x": 0,
+          "width": 360
+        }
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 42,
+      "y": 372
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 42,
+      "y": 372
+    },
+    {
+      "type": "assert_state",
+      "expect": {
+        "totalStake": 2
+      }
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 50,
+      "y": 615
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 42,
+      "y": 372
+    },
+    {
+      "type": "assert_state",
+      "expect": {
+        "totalStake": 1,
+        "undoMode": true
+      }
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 50,
+      "y": 615
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 137,
+      "y": 615
+    },
+    {
+      "type": "assert_state",
+      "expect": {
+        "totalStake": 0
+      }
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 42,
+      "y": 372
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 111,
+      "y": 372
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 180,
+      "y": 372
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 249,
+      "y": 372
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 318,
+      "y": 372
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 42,
+      "y": 417
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 111,
+      "y": 417
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 180,
+      "y": 417
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 249,
+      "y": 417
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 42,
+      "y": 462
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 111,
+      "y": 462
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 180,
+      "y": 462
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 42,
+      "y": 507
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 111,
+      "y": 507
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 42,
+      "y": 552
+    },
+    {
+      "type": "assert_state",
+      "expect": {
+        "totalStake": 15
+      }
+    },
+    {
+      "type": "screenshot",
+      "label": "size-360-selected"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 310,
+      "y": 615
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "racing",
+        "bettingPageVisible": true
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 42,
+      "y": 372
+    },
+    {
+      "type": "assert_state",
+      "expect": {
+        "totalStake": 15
+      }
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "section": "right-bend"
+      },
+      "timeoutMs": 18000
+    },
+    {
+      "type": "wait",
+      "durationMs": 2700
+    },
+    {
+      "type": "screenshot",
+      "label": "size-360-bend"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "result"
+      },
+      "timeoutMs": 20000
+    },
+    {
+      "type": "screenshot",
+      "label": "size-360-result"
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "wait",
+      "durationMs": 6500
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 223,
+      "y": 615
+    },
+    {
+      "type": "screenshot",
+      "label": "size-360-history"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 223,
+      "y": 615
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 310,
+      "y": 615
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "betting",
+        "round": 2,
+        "totalStake": 0,
+        "result": null
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "type": "screenshot",
+      "label": "size-360-next"
+    }
+  ]
+}

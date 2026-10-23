@@ -10,11 +10,13 @@ function load(file,dependencies){
 }
 const framework=load('extensions/shidai3/assets/runtime/stateMachine.ts',{});
 const pages=load('assets/scripts/presentation/RacePages.ts',{});
-const cc={_decorator:{ccclass:()=>Type=>Type},Component:class {isValid=true;},input:{off(){}},Input:{EventType:{KEY_DOWN:1,KEY_UP:2}}};
+let finishLoad;const audioLoads=[];
+const cc={_decorator:{ccclass:()=>Type=>Type,property:()=>()=>{}},Component:class {isValid=true;},view:{off(){}},resources:{load(url,type,callback){audioLoads.push(callback);}},input:{off(){}},Input:{EventType:{KEY_DOWN:1,KEY_UP:2}}};
 const component=load('assets/scripts/GoldenHorseGame.ts',{
  cc,'cc/env':{PREVIEW:false},'db://shidai3/runtime/stateMachine':framework,
  '../tests/GoldenHorseTestBridge':{},'./RaceModel':require('../.test/RaceModel.js'),
- './RaceTrackView':{},'./TrackVisual':require('../.test/TrackVisual.js'),'./presentation/RacePages':pages
+ './RaceTrackView':{},'./TrackVisual':require('../.test/TrackVisual.js'),'./presentation/RacePages':pages,
+ './presentation/RaceVisualAssets':{RaceVisualAssets:class {load(){return new Promise(resolve=>{finishLoad=resolve;});}dispose(){}}},'./presentation/HorseSpriteView':{},'./presentation/MobileLayout':{}
 });
 (async()=>{
  const game=new component.GoldenHorseGame();let closed=false,writesAfterClose=0,exits=0,finishExit;
@@ -29,5 +31,11 @@ const component=load('assets/scripts/GoldenHorseGame.ts',{
  assert.equal(writesAfterClose,0,'destroyed component must not show a late page');
  assert.equal(exits,1,'destroy must wait for pending exit rather than exit it twice');
  assert.equal(game.StateMachine.current,null,'all page states must be released');
+ const loading=new component.GoldenHorseGame();let decorated=0;loading.courseView={decorate(){decorated++;}};loading.loadResources();
+ loading.onDestroy();finishLoad();audioLoads.forEach(callback=>callback(null,{}));await new Promise(resolve=>setImmediate(resolve));
+ assert.equal(decorated,0,'late artwork completion must not create nodes after destroy');assert.equal(loading.pendingAssets,8,'late callbacks must not write disposed loading state');
+ const mounted=new component.GoldenHorseGame();let clicks=0;const listeners=new Map([[mounted,()=>clicks++]]);
+ const externalNode={targetOff(owner){listeners.delete(owner);},emit(){for(const fn of listeners.values())fn();}};
+ mounted.buttons=[externalNode];mounted.betNodes=[externalNode];externalNode.emit();assert.equal(clicks,1);mounted.onDestroy();externalNode.emit();assert.equal(clicks,1,'persisted scene nodes must not invoke a destroyed component');
  console.log('RacePageLifecycle: repeated transition and destroy-during-exit passed against pinned framework.');
 })().catch(error=>{console.error(error);process.exitCode=1;});

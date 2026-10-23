@@ -1,0 +1,214 @@
+{
+  "date": "2026-10-23",
+  "projectId": "9d8a0041f7873b81",
+  "creatorVersion": "3.8.8",
+  "sessionId": "379ab6d4-7ed1-4f88-b5a2-6c5dddfb0dff",
+  "previewUrl": "http://192.168.31.100:7457",
+  "summary": [
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "rounds": 3,
+      "minimumTouchHeight": 48.88,
+      "results": [
+        {
+          "round": 1,
+          "credits": 493,
+          "result": {
+            "first": 5,
+            "second": 1,
+            "order": [
+              5,
+              1,
+              4,
+              6,
+              3,
+              2
+            ],
+            "pair": "1-5",
+            "payout": 8,
+            "stake": 15
+          },
+          "metrics": {
+            "finishCount": 6,
+            "visibleOrder": [
+              5,
+              1,
+              4,
+              6,
+              3,
+              2
+            ],
+            "backgroundMismatches": 0,
+            "settlementJump": 3.086411400712774,
+            "resultDrift": 3.3410491102808995,
+            "worldChanges": 0,
+            "maxCameraStep": 4.297357701584815
+          }
+        },
+        {
+          "round": 2,
+          "credits": 486,
+          "result": {
+            "first": 1,
+            "second": 5,
+            "order": [
+              1,
+              5,
+              2,
+              6,
+              3,
+              4
+            ],
+            "pair": "1-5",
+            "payout": 8,
+            "stake": 15
+          },
+          "metrics": {
+            "finishCount": 6,
+            "visibleOrder": [
+              1,
+              5,
+              2,
+              6,
+              3,
+              4
+            ],
+            "backgroundMismatches": 0,
+            "settlementJump": 3.1229983472193306,
+            "resultDrift": 3.3415730366929015,
+            "worldChanges": 0,
+            "maxCameraStep": 4.285483302654029
+          }
+        },
+        {
+          "round": 3,
+          "credits": 571,
+          "result": {
+            "first": 4,
+            "second": 5,
+            "order": [
+              4,
+              5,
+              2,
+              3,
+              6,
+              1
+            ],
+            "pair": "4-5",
+            "payout": 100,
+            "stake": 15
+          },
+          "metrics": {
+            "finishCount": 6,
+            "visibleOrder": [
+              4,
+              5,
+              2,
+              3,
+              6,
+              1
+            ],
+            "backgroundMismatches": 0,
+            "settlementJump": 3.0484065636019166,
+            "resultDrift": 3.321342627439665,
+            "worldChanges": 0,
+            "maxCameraStep": 4.415847525304571
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 360,
+        "height": 640
+      },
+      "rounds": 1,
+      "minimumTouchHeight": 45.12,
+      "results": [
+        {
+          "round": 1,
+          "credits": 493,
+          "result": {
+            "first": 1,
+            "second": 5,
+            "order": [
+              1,
+              5,
+              2,
+              6,
+              4,
+              3
+            ],
+            "pair": "1-5",
+            "payout": 8,
+            "stake": 15
+          },
+          "metrics": {
+            "finishCount": 6,
+            "visibleOrder": [
+              1,
+              5,
+              2,
+              6,
+              4,
+              3
+            ],
+            "backgroundMismatches": 0,
+            "settlementJump": 3.2320329108309727,
+            "resultDrift": 3.3531044741079605,
+            "worldChanges": 0,
+            "maxCameraStep": 4.3839904570083945
+          }
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 430,
+        "height": 932
+      },
+      "rounds": 1,
+      "minimumTouchHeight": 53.89333333333334,
+      "results": [
+        {
+          "round": 1,
+          "credits": 495,
+          "result": {
+            "first": 1,
+            "second": 6,
+            "order": [
+              1,
+              6,
+              4,
+              3,
+              2,
+              5
+            ],
+            "pair": "1-6",
+            "payout": 10,
+            "stake": 15
+          },
+          "metrics": {
+            "finishCount": 6,
+            "visibleOrder": [
+              1,
+              6,
+              4,
+              3,
+              2,
+              5
+            ],
+            "backgroundMismatches": 0,
+            "settlementJump": 3.249735326522062,
+            "resultDrift": 4.168889051469476,
+            "worldChanges": 0,
+            "maxCameraStep": 4.43432654526282
+          }
+        }
+      ]
+    }
+  ]
+}

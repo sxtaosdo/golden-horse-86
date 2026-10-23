@@ -1,0 +1,1 @@
+{"viewport":{"width":390,"height":844},"steps":[{"type":"wait","durationMs":2500},{"type":"get_state","required":true},{"type":"screenshot","label":"mobile-diagnose"}]}

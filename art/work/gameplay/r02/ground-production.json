@@ -1,0 +1,6 @@
+{
+  "mode": "built-in image_gen",
+  "source": "C:\\Users\\33272\\.codex\\generated_images\\01a16734-c516-7660-a8b2-5027d183685e\\exec-23c493b2-c675-4014-802d-6bce38e51436.png",
+  "prompt": "Create one production game ground texture atlas, exactly 1536x1024 pixels with TWO equal vertical rectangular panels touching, no gutters. Left half x0..767: refined top-down ochre golden packed-dirt horse racing track, small muted copper pebbles, tiny scattered hoof scuffs, very subtle worn horizontal grain, relatively even matte warm tan color. Right half x768..1535: refined top-down emerald green clipped grass field, short dense little pixel clusters, subtle dark and light grassy speckles, even green color. True hand-crafted high quality 1990s arcade pixel art with tiny crisp 2-4px clusters, rich yet restrained colors. Each half is a continuous tileable ground surface all the way to every border. NO horses, no people, no plants or shrubs, no roads or curves, NO railing, no UI, no shadows or perspective, no lettering. Strict orthographic top-down ground material texture only. Pixel-art surface texture detail supporting small detailed horse sprites. Opaque background.",
+  "transparent_background": false
+}

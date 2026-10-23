@@ -1,0 +1,13 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "pageState": "keep",
+  "steps": [
+    {
+      "type": "api",
+      "call": "testRecordingData"
+    }
+  ]
+}

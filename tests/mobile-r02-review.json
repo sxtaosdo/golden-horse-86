@@ -1,0 +1,1210 @@
+{
+  "mode": "OCR Delegation; host Codex read diff and context",
+  "snapshot": "2026-10-23",
+  "total_files": 179,
+  "reviewable_files": 81,
+  "reviewed_files": 76,
+  "skipped_files": 5,
+  "coverage_rate": 93.82716049382717,
+  "reviewed": [
+    {
+      "path": "CHANGELOG.md",
+      "status": "modified",
+      "insertions": 8,
+      "deletions": 0
+    },
+    {
+      "path": "README.md",
+      "status": "modified",
+      "insertions": 55,
+      "deletions": 51
+    },
+    {
+      "path": "art/README.md",
+      "status": "modified",
+      "insertions": 5,
+      "deletions": 3
+    },
+    {
+      "path": "art/work/gameplay/r01/README.md",
+      "status": "modified",
+      "insertions": 9,
+      "deletions": 3
+    },
+    {
+      "path": "assets/GoldenHorseGame.scene",
+      "status": "modified",
+      "insertions": 14725,
+      "deletions": 42
+    },
+    {
+      "path": "assets/scripts/GoldenHorseGame.ts",
+      "status": "modified",
+      "insertions": 123,
+      "deletions": 208
+    },
+    {
+      "path": "assets/scripts/RaceTrackView.ts",
+      "status": "modified",
+      "insertions": 44,
+      "deletions": 115
+    },
+    {
+      "path": "assets/scripts/TrackVisual.ts",
+      "status": "modified",
+      "insertions": 2,
+      "deletions": 0
+    },
+    {
+      "path": "assets/tests/GoldenHorseTestBridge.ts",
+      "status": "modified",
+      "insertions": 5,
+      "deletions": 0
+    },
+    {
+      "path": "docs/BACKGROUND.md",
+      "status": "modified",
+      "insertions": 9,
+      "deletions": 5
+    },
+    {
+      "path": "package.json",
+      "status": "modified",
+      "insertions": 1,
+      "deletions": 1
+    },
+    {
+      "path": "settings/v2/packages/project.json",
+      "status": "modified",
+      "insertions": 4,
+      "deletions": 4
+    },
+    {
+      "path": "tests/RacePageLifecycle.test.cjs",
+      "status": "modified",
+      "insertions": 10,
+      "deletions": 2
+    },
+    {
+      "path": "art/final/gameplay/r02/manifest.json",
+      "status": "added",
+      "insertions": 1399,
+      "deletions": 0
+    },
+    {
+      "path": "art/work/gameplay/r02/README.md",
+      "status": "added",
+      "insertions": 15,
+      "deletions": 0
+    },
+    {
+      "path": "art/work/gameplay/r02/ground-production.json",
+      "status": "added",
+      "insertions": 6,
+      "deletions": 0
+    },
+    {
+      "path": "art/work/gameplay/r02/production-complete.json",
+      "status": "added",
+      "insertions": 117,
+      "deletions": 0
+    },
+    {
+      "path": "art/work/gameplay/r02/production.json",
+      "status": "added",
+      "insertions": 56,
+      "deletions": 0
+    },
+    {
+      "path": "assets/resources/race.meta",
+      "status": "added",
+      "insertions": 9,
+      "deletions": 0
+    },
+    {
+      "path": "assets/resources/race/ground.png.meta",
+      "status": "added",
+      "insertions": 134,
+      "deletions": 0
+    },
+    {
+      "path": "assets/resources/race/h01-diagonal-r02.png.meta",
+      "status": "added",
+      "insertions": 134,
+      "deletions": 0
+    },
+    {
+      "path": "assets/resources/race/h01-front-r02.png.meta",
+      "status": "added",
+      "insertions": 134,
+      "deletions": 0
+    },
+    {
+      "path": "assets/resources/race/h01-side-r02.png.meta",
+      "status": "added",
+      "insertions": 134,
+      "deletions": 0
+    },
+    {
+      "path": "assets/resources/race/h02-diagonal.png.meta",
+      "status": "added",
+      "insertions": 134,
+      "deletions": 0
+    },
+    {
+      "path": "assets/resources/race/h02-front.png.meta",
+      "status": "added",
+      "insertions": 134,
+      "deletions": 0
+    },
+    {
+      "path": "assets/resources/race/h02-side.png.meta",
+      "status": "added",
+      "insertions": 134,
+      "deletions": 0
+    },
+    {
+      "path": "assets/resources/race/h03-diagonal.png.meta",
+      "status": "added",
+      "insertions": 134,
+      "deletions": 0
+    },
+    {
+      "path": "assets/resources/race/h03-front.png.meta",
+      "status": "added",
+      "insertions": 134,
+      "deletions": 0
+    },
+    {
+      "path": "assets/resources/race/h03-side.png.meta",
+      "status": "added",
+      "insertions": 134,
+      "deletions": 0
+    },
+    {
+      "path": "assets/resources/race/h04-diagonal.png.meta",
+      "status": "added",
+      "insertions": 134,
+      "deletions": 0
+    },
+    {
+      "path": "assets/resources/race/h04-front.png.meta",
+      "status": "added",
+      "insertions": 134,
+      "deletions": 0
+    },
+    {
+      "path": "assets/resources/race/h04-side.png.meta",
+      "status": "added",
+      "insertions": 134,
+      "deletions": 0
+    },
+    {
+      "path": "assets/resources/race/h05-diagonal.png.meta",
+      "status": "added",
+      "insertions": 134,
+      "deletions": 0
+    },
+    {
+      "path": "assets/resources/race/h05-front.png.meta",
+      "status": "added",
+      "insertions": 134,
+      "deletions": 0
+    },
+    {
+      "path": "assets/resources/race/h05-side.png.meta",
+      "status": "added",
+      "insertions": 134,
+      "deletions": 0
+    },
+    {
+      "path": "assets/resources/race/h06-diagonal.png.meta",
+      "status": "added",
+      "insertions": 134,
+      "deletions": 0
+    },
+    {
+      "path": "assets/resources/race/h06-front.png.meta",
+      "status": "added",
+      "insertions": 134,
+      "deletions": 0
+    },
+    {
+      "path": "assets/resources/race/h06-side.png.meta",
+      "status": "added",
+      "insertions": 134,
+      "deletions": 0
+    },
+    {
+      "path": "assets/resources/race/manifest.json",
+      "status": "added",
+      "insertions": 1399,
+      "deletions": 0
+    },
+    {
+      "path": "assets/resources/race/manifest.json.meta",
+      "status": "added",
+      "insertions": 11,
+      "deletions": 0
+    },
+    {
+      "path": "assets/resources/race/scenery.png.meta",
+      "status": "added",
+      "insertions": 134,
+      "deletions": 0
+    },
+    {
+      "path": "assets/resources/race/ui-white.png.meta",
+      "status": "added",
+      "insertions": 134,
+      "deletions": 0
+    },
+    {
+      "path": "assets/scripts/presentation/HorseSpriteView.ts",
+      "status": "added",
+      "insertions": 24,
+      "deletions": 0
+    },
+    {
+      "path": "assets/scripts/presentation/HorseSpriteView.ts.meta",
+      "status": "added",
+      "insertions": 9,
+      "deletions": 0
+    },
+    {
+      "path": "assets/scripts/presentation/MobileLayout.ts",
+      "status": "added",
+      "insertions": 7,
+      "deletions": 0
+    },
+    {
+      "path": "assets/scripts/presentation/MobileLayout.ts.meta",
+      "status": "added",
+      "insertions": 9,
+      "deletions": 0
+    },
+    {
+      "path": "assets/scripts/presentation/RaceVisualAssets.ts",
+      "status": "added",
+      "insertions": 30,
+      "deletions": 0
+    },
+    {
+      "path": "assets/scripts/presentation/RaceVisualAssets.ts.meta",
+      "status": "added",
+      "insertions": 9,
+      "deletions": 0
+    },
+    {
+      "path": "tests/MOBILE_R02.md",
+      "status": "added",
+      "insertions": 45,
+      "deletions": 0
+    },
+    {
+      "path": "tests/MobileArtwork.test.cjs",
+      "status": "added",
+      "insertions": 21,
+      "deletions": 0
+    },
+    {
+      "path": "tests/helpers/png-inspect.cjs",
+      "status": "added",
+      "insertions": 5,
+      "deletions": 0
+    },
+    {
+      "path": "tests/mobile-360-playtest.json",
+      "status": "added",
+      "insertions": 291,
+      "deletions": 0
+    },
+    {
+      "path": "tests/mobile-360-probe.json",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0
+    },
+    {
+      "path": "tests/mobile-360-result.json",
+      "status": "added",
+      "insertions": 3936,
+      "deletions": 0
+    },
+    {
+      "path": "tests/mobile-430-playtest.json",
+      "status": "added",
+      "insertions": 291,
+      "deletions": 0
+    },
+    {
+      "path": "tests/mobile-430-probe.json",
+      "status": "added",
+      "insertions": 44,
+      "deletions": 0
+    },
+    {
+      "path": "tests/mobile-430-result.json",
+      "status": "added",
+      "insertions": 3936,
+      "deletions": 0
+    },
+    {
+      "path": "tests/mobile-course-playtest.json",
+      "status": "added",
+      "insertions": 318,
+      "deletions": 0
+    },
+    {
+      "path": "tests/mobile-diagnose.json",
+      "status": "added",
+      "insertions": 1,
+      "deletions": 0
+    },
+    {
+      "path": "tests/mobile-export-recording.json",
+      "status": "added",
+      "insertions": 13,
+      "deletions": 0
+    },
+    {
+      "path": "tests/mobile-probe.json",
+      "status": "added",
+      "insertions": 1,
+      "deletions": 0
+    },
+    {
+      "path": "tests/mobile-r02-scene-validation.json",
+      "status": "added",
+      "insertions": 541,
+      "deletions": 0
+    },
+    {
+      "path": "tests/mobile-r02-source-sha256.json",
+      "status": "added",
+      "insertions": 221,
+      "deletions": 0
+    },
+    {
+      "path": "tests/mobile-r02-summary.json",
+      "status": "added",
+      "insertions": 214,
+      "deletions": 0
+    },
+    {
+      "path": "tests/mobile-three-rounds-result.json",
+      "status": "added",
+      "insertions": 8669,
+      "deletions": 0
+    },
+    {
+      "path": "tests/mobile-three-rounds.json",
+      "status": "added",
+      "insertions": 672,
+      "deletions": 0
+    },
+    {
+      "path": "tools/build_mobile_ui.cjs",
+      "status": "added",
+      "insertions": 28,
+      "deletions": 0
+    },
+    {
+      "path": "tools/collect_mobile_evidence.cjs",
+      "status": "added",
+      "insertions": 25,
+      "deletions": 0
+    },
+    {
+      "path": "tools/export_mobile_video.cjs",
+      "status": "added",
+      "insertions": 7,
+      "deletions": 0
+    },
+    {
+      "path": "tools/finalize_mobile_scene.cjs",
+      "status": "added",
+      "insertions": 5,
+      "deletions": 0
+    },
+    {
+      "path": "tools/mobile_scene_mcp.cjs",
+      "status": "added",
+      "insertions": 13,
+      "deletions": 0
+    },
+    {
+      "path": "tools/prepare_mobile_final.cjs",
+      "status": "added",
+      "insertions": 15,
+      "deletions": 0
+    },
+    {
+      "path": "tools/prepare_mobile_playtest.cjs",
+      "status": "added",
+      "insertions": 6,
+      "deletions": 0
+    },
+    {
+      "path": "tools/prepare_mobile_sizes.cjs",
+      "status": "added",
+      "insertions": 7,
+      "deletions": 0
+    },
+    {
+      "path": "tools/prepare_race_assets.cjs",
+      "status": "added",
+      "insertions": 22,
+      "deletions": 0
+    },
+    {
+      "path": "tools/repair_white_import.cjs",
+      "status": "added",
+      "insertions": 4,
+      "deletions": 0
+    }
+  ],
+  "skipped": [
+    {
+      "path": "assets/.meta",
+      "status": "modified",
+      "insertions": 1,
+      "deletions": 1,
+      "reason": "existing unrelated metadata"
+    },
+    {
+      "path": "assets/resources/race/h01-diagonal.png.meta",
+      "status": "added",
+      "insertions": 134,
+      "deletions": 0,
+      "reason": "unused interrupted-import cache identity; canonical -r02 selected"
+    },
+    {
+      "path": "assets/resources/race/h01-front.png.meta",
+      "status": "added",
+      "insertions": 134,
+      "deletions": 0,
+      "reason": "unused interrupted-import cache identity; canonical -r02 selected"
+    },
+    {
+      "path": "assets/resources/race/h01-side.png.meta",
+      "status": "added",
+      "insertions": 134,
+      "deletions": 0,
+      "reason": "unused interrupted-import cache identity; canonical -r02 selected"
+    },
+    {
+      "path": "settings/v2/packages/cocos-service.json",
+      "status": "added",
+      "insertions": 23,
+      "deletions": 0,
+      "reason": "Creator generated service settings outside task"
+    }
+  ],
+  "binary_files": [
+    {
+      "path": "art/final/common/ui-white.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/final/gameplay/r02/ground.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/final/gameplay/r02/h01-diagonal-r02.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/final/gameplay/r02/h01-diagonal.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/final/gameplay/r02/h01-front-r02.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/final/gameplay/r02/h01-front.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/final/gameplay/r02/h01-side-r02.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/final/gameplay/r02/h01-side.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/final/gameplay/r02/h02-diagonal.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/final/gameplay/r02/h02-front.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/final/gameplay/r02/h02-side.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/final/gameplay/r02/h03-diagonal.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/final/gameplay/r02/h03-front.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/final/gameplay/r02/h03-side.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/final/gameplay/r02/h04-diagonal.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/final/gameplay/r02/h04-front.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/final/gameplay/r02/h04-side.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/final/gameplay/r02/h05-diagonal.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/final/gameplay/r02/h05-front.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/final/gameplay/r02/h05-side.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/final/gameplay/r02/h06-diagonal.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/final/gameplay/r02/h06-front.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/final/gameplay/r02/h06-side.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/final/gameplay/r02/scenery.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/work/gameplay/r02/generated/ground.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/work/gameplay/r02/generated/h01-diagonal.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/work/gameplay/r02/generated/h01-front.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/work/gameplay/r02/generated/h01-side.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/work/gameplay/r02/generated/h02-diagonal.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/work/gameplay/r02/generated/h02-front.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/work/gameplay/r02/generated/h02-side.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/work/gameplay/r02/generated/h03-diagonal.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/work/gameplay/r02/generated/h03-front.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/work/gameplay/r02/generated/h03-side.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/work/gameplay/r02/generated/h04-diagonal.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/work/gameplay/r02/generated/h04-front.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/work/gameplay/r02/generated/h04-side.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/work/gameplay/r02/generated/h05-diagonal.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/work/gameplay/r02/generated/h05-front.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/work/gameplay/r02/generated/h05-side.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/work/gameplay/r02/generated/h06-diagonal.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/work/gameplay/r02/generated/h06-front.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/work/gameplay/r02/generated/h06-side.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "art/work/gameplay/r02/generated/scenery.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "assets/resources/race/ground.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "assets/resources/race/h01-diagonal-r02.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "assets/resources/race/h01-diagonal.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "assets/resources/race/h01-front-r02.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "assets/resources/race/h01-front.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "assets/resources/race/h01-side-r02.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "assets/resources/race/h01-side.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "assets/resources/race/h02-diagonal.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "assets/resources/race/h02-front.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "assets/resources/race/h02-side.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "assets/resources/race/h03-diagonal.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "assets/resources/race/h03-front.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "assets/resources/race/h03-side.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "assets/resources/race/h04-diagonal.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "assets/resources/race/h04-front.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "assets/resources/race/h04-side.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "assets/resources/race/h05-diagonal.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "assets/resources/race/h05-front.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "assets/resources/race/h05-side.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "assets/resources/race/h06-diagonal.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "assets/resources/race/h06-front.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "assets/resources/race/h06-side.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "assets/resources/race/scenery.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "assets/resources/race/ui-white.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "tests/actual-mobile-r02-three-rounds.mp4",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "tests/actual-mobile-r02-three-rounds.webm",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "tests/evidence/continuous-course/video-backstraight-7s.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "tests/evidence/continuous-course/video-straight-1s.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "tests/evidence/mobile-r02/final-1-betting.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "tests/evidence/mobile-r02/final-1-diagonal.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "tests/evidence/mobile-r02/final-1-final-straight.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "tests/evidence/mobile-r02/final-1-front.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "tests/evidence/mobile-r02/final-1-result.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "tests/evidence/mobile-r02/final-1-runout.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "tests/evidence/mobile-r02/final-1-straight.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "tests/evidence/mobile-r02/final-1-turn-exit.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "tests/evidence/mobile-r02/final-2-front.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "tests/evidence/mobile-r02/final-2-result.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "tests/evidence/mobile-r02/final-2-runout.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "tests/evidence/mobile-r02/final-2-straight.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "tests/evidence/mobile-r02/final-3-front.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "tests/evidence/mobile-r02/final-3-result.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "tests/evidence/mobile-r02/final-3-runout.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "tests/evidence/mobile-r02/final-3-straight.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "tests/evidence/mobile-r02/size-360-bend.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "tests/evidence/mobile-r02/size-360-history.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "tests/evidence/mobile-r02/size-360-next.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "tests/evidence/mobile-r02/size-360-result.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "tests/evidence/mobile-r02/size-360-selected.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "tests/evidence/mobile-r02/size-430-bend.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "tests/evidence/mobile-r02/size-430-history.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "tests/evidence/mobile-r02/size-430-next.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "tests/evidence/mobile-r02/size-430-result.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    },
+    {
+      "path": "tests/evidence/mobile-r02/size-430-selected.png",
+      "status": "binary",
+      "insertions": 0,
+      "deletions": 0,
+      "exclude_reason": "binary"
+    }
+  ],
+  "findings": [
+    {
+      "severity": "P2",
+      "content": "portrait sprite clipping",
+      "status": "fixed and reviewer verified"
+    },
+    {
+      "severity": "P2",
+      "content": "lifecycle dependency fixture regression",
+      "status": "fixed and reviewer verified"
+    },
+    {
+      "severity": "P2",
+      "content": "static button listeners survive component destruction",
+      "status": "fixed and reviewer verified"
+    }
+  ],
+  "remaining_blockers": []
+}

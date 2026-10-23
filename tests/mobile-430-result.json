@@ -1,0 +1,3936 @@
+{
+  "schemaVersion": "cocos-tool-result-v1",
+  "operationId": "c45bad36-17f6-4f42-b4cf-39e392e57a9a",
+  "projectId": "9d8a0041f7873b81",
+  "tool": "playtest_run",
+  "status": "PASSED",
+  "data": {
+    "ok": true,
+    "previewUrl": "http://192.168.31.100:7457",
+    "finalUrl": "http://192.168.31.100:7457/",
+    "gameTestReady": true,
+    "steps": [
+      {
+        "index": 0,
+        "step": {
+          "type": "wait",
+          "durationMs": 1500
+        },
+        "ok": true,
+        "elapsedMs": 1513
+      },
+      {
+        "index": 1,
+        "step": {
+          "type": "ui",
+          "action": "click",
+          "target": "#view-select:visible, body:not(:has(#view-select:visible))"
+        },
+        "ok": true,
+        "elapsedMs": 61
+      },
+      {
+        "index": 2,
+        "step": {
+          "type": "ui",
+          "action": "click",
+          "target": "li[data-device=WebpageFullScreen]:visible, body:not(:has(li[data-device=WebpageFullScreen]:visible))"
+        },
+        "ok": true,
+        "elapsedMs": 41
+      },
+      {
+        "index": 3,
+        "step": {
+          "type": "wait_ready"
+        },
+        "ok": true,
+        "elapsedMs": 2
+      },
+      {
+        "index": 4,
+        "step": {
+          "type": "wait_for_state",
+          "expect": {
+            "revision": "mobile-r02-144-crisp-v1",
+            "raceViewport": {
+              "x": 0,
+              "width": 430
+            }
+          },
+          "timeoutMs": 30000
+        },
+        "ok": true,
+        "state": {
+          "revision": "mobile-r02-144-crisp-v1",
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "straight",
+          "uiMode": "betting",
+          "bettingPageVisible": true,
+          "raceViewportVisible": true,
+          "designResolution": {
+            "width": 750,
+            "height": 1334
+          },
+          "visibleHeight": 1625.581395348837,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 566.2133333333333
+          },
+          "touchTargets": [
+            {
+              "key": "1-6",
+              "x": 8.6,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-5",
+              "x": 91.16,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-4",
+              "x": 173.72,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-3",
+              "x": 256.28,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-2",
+              "x": 338.84000000000003,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-6",
+              "x": 8.6,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-5",
+              "x": 91.16,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-4",
+              "x": 173.72,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-3",
+              "x": 256.28,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "3-6",
+              "x": 8.6,
+              "y": 692.3466666666667,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "3-5",
+              "x": 91.16,
+              "y": 692.3466666666667,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "3-4",
+              "x": 173.72,
+              "y": 692.3466666666667,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "4-6",
+              "x": 8.6,
+              "y": 746.24,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "4-5",
+              "x": 91.16,
+              "y": 746.24,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "5-6",
+              "x": 8.6,
+              "y": 800.1333333333333,
+              "width": 82.56,
+              "height": 53.89333333333334
+            }
+          ],
+          "buttons": [
+            {
+              "name": "Undo",
+              "x": 10.32,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            },
+            {
+              "name": "Clear",
+              "x": 113.52000000000001,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            },
+            {
+              "name": "History",
+              "x": 216.72,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            },
+            {
+              "name": "Start",
+              "x": 319.92,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            }
+          ],
+          "undoMode": false,
+          "horseFrames": 144,
+          "backgrounds": 12,
+          "sounds": 7,
+          "worldId": "Node.420",
+          "worldPaintBuilds": 1,
+          "camera": {
+            "x": 400,
+            "y": 200
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "积分 500   押分 0",
+          "uiResult": "1 — 6",
+          "resultPanel": false,
+          "startButton": "开跑",
+          "horsePositions": [
+            {
+              "x": 400,
+              "y": 300
+            },
+            {
+              "x": 400,
+              "y": 260
+            },
+            {
+              "x": 400,
+              "y": 220
+            },
+            {
+              "x": 400,
+              "y": 180
+            },
+            {
+              "x": 400,
+              "y": 140
+            },
+            {
+              "x": 400,
+              "y": 100
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": 375,
+              "y": 616.9156976744185
+            },
+            {
+              "x": 375,
+              "y": 585.6656976744185
+            },
+            {
+              "x": 375,
+              "y": 554.4156976744185
+            },
+            {
+              "x": 375,
+              "y": 523.1656976744185
+            },
+            {
+              "x": 375,
+              "y": 491.91569767441854
+            },
+            {
+              "x": 375,
+              "y": 460.66569767441854
+            }
+          ],
+          "phase": "betting",
+          "round": 1,
+          "credits": 500,
+          "totalStake": 0,
+          "result": null,
+          "historyLength": 0,
+          "metrics": {
+            "finishCount": 0,
+            "visibleOrder": [],
+            "backgroundMismatches": 0,
+            "settlementJump": 0,
+            "resultDrift": 0,
+            "worldChanges": 0,
+            "maxCameraStep": 0
+          },
+          "progress": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "elapsedMs": 3
+      },
+      {
+        "index": 5,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 50,
+          "y": 612
+        },
+        "ok": true,
+        "elapsedMs": 44
+      },
+      {
+        "index": 6,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 50,
+          "y": 612
+        },
+        "ok": true,
+        "elapsedMs": 31
+      },
+      {
+        "index": 7,
+        "step": {
+          "type": "assert_state",
+          "expect": {
+            "totalStake": 2
+          }
+        },
+        "ok": true,
+        "state": {
+          "revision": "mobile-r02-144-crisp-v1",
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "straight",
+          "uiMode": "betting",
+          "bettingPageVisible": true,
+          "raceViewportVisible": true,
+          "designResolution": {
+            "width": 750,
+            "height": 1334
+          },
+          "visibleHeight": 1625.581395348837,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 566.2133333333333
+          },
+          "touchTargets": [
+            {
+              "key": "1-6",
+              "x": 8.6,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-5",
+              "x": 91.16,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-4",
+              "x": 173.72,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-3",
+              "x": 256.28,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-2",
+              "x": 338.84000000000003,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-6",
+              "x": 8.6,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-5",
+              "x": 91.16,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-4",
+              "x": 173.72,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-3",
+              "x": 256.28,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "3-6",
+              "x": 8.6,
+              "y": 692.3466666666667,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "3-5",
+              "x": 91.16,
+              "y": 692.3466666666667,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "3-4",
+              "x": 173.72,
+              "y": 692.3466666666667,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "4-6",
+              "x": 8.6,
+              "y": 746.24,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "4-5",
+              "x": 91.16,
+              "y": 746.24,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "5-6",
+              "x": 8.6,
+              "y": 800.1333333333333,
+              "width": 82.56,
+              "height": 53.89333333333334
+            }
+          ],
+          "buttons": [
+            {
+              "name": "Undo",
+              "x": 10.32,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            },
+            {
+              "name": "Clear",
+              "x": 113.52000000000001,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            },
+            {
+              "name": "History",
+              "x": 216.72,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            },
+            {
+              "name": "Start",
+              "x": 319.92,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            }
+          ],
+          "undoMode": false,
+          "horseFrames": 144,
+          "backgrounds": 12,
+          "sounds": 7,
+          "worldId": "Node.420",
+          "worldPaintBuilds": 1,
+          "camera": {
+            "x": 400,
+            "y": 200
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "积分 499   押分 1",
+          "uiResult": "1 — 6",
+          "resultPanel": false,
+          "startButton": "开跑",
+          "horsePositions": [
+            {
+              "x": 400,
+              "y": 300
+            },
+            {
+              "x": 400,
+              "y": 260
+            },
+            {
+              "x": 400,
+              "y": 220
+            },
+            {
+              "x": 400,
+              "y": 180
+            },
+            {
+              "x": 400,
+              "y": 140
+            },
+            {
+              "x": 400,
+              "y": 100
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": 375,
+              "y": 616.9156976744185
+            },
+            {
+              "x": 375,
+              "y": 585.6656976744185
+            },
+            {
+              "x": 375,
+              "y": 554.4156976744185
+            },
+            {
+              "x": 375,
+              "y": 523.1656976744185
+            },
+            {
+              "x": 375,
+              "y": 491.91569767441854
+            },
+            {
+              "x": 375,
+              "y": 460.66569767441854
+            }
+          ],
+          "phase": "betting",
+          "round": 1,
+          "credits": 498,
+          "totalStake": 2,
+          "result": null,
+          "historyLength": 0,
+          "metrics": {
+            "finishCount": 0,
+            "visibleOrder": [],
+            "backgroundMismatches": 0,
+            "settlementJump": 0,
+            "resultDrift": 0,
+            "worldChanges": 0,
+            "maxCameraStep": 0
+          },
+          "progress": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "elapsedMs": 4
+      },
+      {
+        "index": 8,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 60,
+          "y": 902
+        },
+        "ok": true,
+        "elapsedMs": 32
+      },
+      {
+        "index": 9,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 50,
+          "y": 612
+        },
+        "ok": true,
+        "elapsedMs": 37
+      },
+      {
+        "index": 10,
+        "step": {
+          "type": "assert_state",
+          "expect": {
+            "totalStake": 1,
+            "undoMode": true
+          }
+        },
+        "ok": true,
+        "state": {
+          "revision": "mobile-r02-144-crisp-v1",
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "straight",
+          "uiMode": "betting",
+          "bettingPageVisible": true,
+          "raceViewportVisible": true,
+          "designResolution": {
+            "width": 750,
+            "height": 1334
+          },
+          "visibleHeight": 1625.581395348837,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 566.2133333333333
+          },
+          "touchTargets": [
+            {
+              "key": "1-6",
+              "x": 8.6,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-5",
+              "x": 91.16,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-4",
+              "x": 173.72,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-3",
+              "x": 256.28,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-2",
+              "x": 338.84000000000003,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-6",
+              "x": 8.6,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-5",
+              "x": 91.16,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-4",
+              "x": 173.72,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-3",
+              "x": 256.28,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "3-6",
+              "x": 8.6,
+              "y": 692.3466666666667,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "3-5",
+              "x": 91.16,
+              "y": 692.3466666666667,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "3-4",
+              "x": 173.72,
+              "y": 692.3466666666667,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "4-6",
+              "x": 8.6,
+              "y": 746.24,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "4-5",
+              "x": 91.16,
+              "y": 746.24,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "5-6",
+              "x": 8.6,
+              "y": 800.1333333333333,
+              "width": 82.56,
+              "height": 53.89333333333334
+            }
+          ],
+          "buttons": [
+            {
+              "name": "Undo",
+              "x": 10.32,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            },
+            {
+              "name": "Clear",
+              "x": 113.52000000000001,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            },
+            {
+              "name": "History",
+              "x": 216.72,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            },
+            {
+              "name": "Start",
+              "x": 319.92,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            }
+          ],
+          "undoMode": true,
+          "horseFrames": 144,
+          "backgrounds": 12,
+          "sounds": 7,
+          "worldId": "Node.420",
+          "worldPaintBuilds": 1,
+          "camera": {
+            "x": 400,
+            "y": 200
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "积分 498   押分 2",
+          "uiResult": "1 — 6",
+          "resultPanel": false,
+          "startButton": "开跑",
+          "horsePositions": [
+            {
+              "x": 400,
+              "y": 300
+            },
+            {
+              "x": 400,
+              "y": 260
+            },
+            {
+              "x": 400,
+              "y": 220
+            },
+            {
+              "x": 400,
+              "y": 180
+            },
+            {
+              "x": 400,
+              "y": 140
+            },
+            {
+              "x": 400,
+              "y": 100
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": 375,
+              "y": 616.9156976744185
+            },
+            {
+              "x": 375,
+              "y": 585.6656976744185
+            },
+            {
+              "x": 375,
+              "y": 554.4156976744185
+            },
+            {
+              "x": 375,
+              "y": 523.1656976744185
+            },
+            {
+              "x": 375,
+              "y": 491.91569767441854
+            },
+            {
+              "x": 375,
+              "y": 460.66569767441854
+            }
+          ],
+          "phase": "betting",
+          "round": 1,
+          "credits": 499,
+          "totalStake": 1,
+          "result": null,
+          "historyLength": 0,
+          "metrics": {
+            "finishCount": 0,
+            "visibleOrder": [],
+            "backgroundMismatches": 0,
+            "settlementJump": 0,
+            "resultDrift": 0,
+            "worldChanges": 0,
+            "maxCameraStep": 0
+          },
+          "progress": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "elapsedMs": 3
+      },
+      {
+        "index": 11,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 60,
+          "y": 902
+        },
+        "ok": true,
+        "elapsedMs": 33
+      },
+      {
+        "index": 12,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 163,
+          "y": 902
+        },
+        "ok": true,
+        "elapsedMs": 35
+      },
+      {
+        "index": 13,
+        "step": {
+          "type": "assert_state",
+          "expect": {
+            "totalStake": 0
+          }
+        },
+        "ok": true,
+        "state": {
+          "revision": "mobile-r02-144-crisp-v1",
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "straight",
+          "uiMode": "betting",
+          "bettingPageVisible": true,
+          "raceViewportVisible": true,
+          "designResolution": {
+            "width": 750,
+            "height": 1334
+          },
+          "visibleHeight": 1625.581395348837,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 566.2133333333333
+          },
+          "touchTargets": [
+            {
+              "key": "1-6",
+              "x": 8.6,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-5",
+              "x": 91.16,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-4",
+              "x": 173.72,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-3",
+              "x": 256.28,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-2",
+              "x": 338.84000000000003,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-6",
+              "x": 8.6,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-5",
+              "x": 91.16,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-4",
+              "x": 173.72,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-3",
+              "x": 256.28,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "3-6",
+              "x": 8.6,
+              "y": 692.3466666666667,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "3-5",
+              "x": 91.16,
+              "y": 692.3466666666667,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "3-4",
+              "x": 173.72,
+              "y": 692.3466666666667,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "4-6",
+              "x": 8.6,
+              "y": 746.24,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "4-5",
+              "x": 91.16,
+              "y": 746.24,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "5-6",
+              "x": 8.6,
+              "y": 800.1333333333333,
+              "width": 82.56,
+              "height": 53.89333333333334
+            }
+          ],
+          "buttons": [
+            {
+              "name": "Undo",
+              "x": 10.32,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            },
+            {
+              "name": "Clear",
+              "x": 113.52000000000001,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            },
+            {
+              "name": "History",
+              "x": 216.72,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            },
+            {
+              "name": "Start",
+              "x": 319.92,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            }
+          ],
+          "undoMode": false,
+          "horseFrames": 144,
+          "backgrounds": 12,
+          "sounds": 7,
+          "worldId": "Node.420",
+          "worldPaintBuilds": 1,
+          "camera": {
+            "x": 400,
+            "y": 200
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "积分 499   押分 1",
+          "uiResult": "1 — 6",
+          "resultPanel": false,
+          "startButton": "开跑",
+          "horsePositions": [
+            {
+              "x": 400,
+              "y": 300
+            },
+            {
+              "x": 400,
+              "y": 260
+            },
+            {
+              "x": 400,
+              "y": 220
+            },
+            {
+              "x": 400,
+              "y": 180
+            },
+            {
+              "x": 400,
+              "y": 140
+            },
+            {
+              "x": 400,
+              "y": 100
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": 375,
+              "y": 616.9156976744185
+            },
+            {
+              "x": 375,
+              "y": 585.6656976744185
+            },
+            {
+              "x": 375,
+              "y": 554.4156976744185
+            },
+            {
+              "x": 375,
+              "y": 523.1656976744185
+            },
+            {
+              "x": 375,
+              "y": 491.91569767441854
+            },
+            {
+              "x": 375,
+              "y": 460.66569767441854
+            }
+          ],
+          "phase": "betting",
+          "round": 1,
+          "credits": 500,
+          "totalStake": 0,
+          "result": null,
+          "historyLength": 0,
+          "metrics": {
+            "finishCount": 0,
+            "visibleOrder": [],
+            "backgroundMismatches": 0,
+            "settlementJump": 0,
+            "resultDrift": 0,
+            "worldChanges": 0,
+            "maxCameraStep": 0
+          },
+          "progress": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "elapsedMs": 3
+      },
+      {
+        "index": 14,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 50,
+          "y": 612
+        },
+        "ok": true,
+        "elapsedMs": 33
+      },
+      {
+        "index": 15,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 132,
+          "y": 612
+        },
+        "ok": true,
+        "elapsedMs": 35
+      },
+      {
+        "index": 16,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 215,
+          "y": 612
+        },
+        "ok": true,
+        "elapsedMs": 35
+      },
+      {
+        "index": 17,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 298,
+          "y": 612
+        },
+        "ok": true,
+        "elapsedMs": 36
+      },
+      {
+        "index": 18,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 380,
+          "y": 612
+        },
+        "ok": true,
+        "elapsedMs": 37
+      },
+      {
+        "index": 19,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 50,
+          "y": 665
+        },
+        "ok": true,
+        "elapsedMs": 35
+      },
+      {
+        "index": 20,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 132,
+          "y": 665
+        },
+        "ok": true,
+        "elapsedMs": 36
+      },
+      {
+        "index": 21,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 215,
+          "y": 665
+        },
+        "ok": true,
+        "elapsedMs": 35
+      },
+      {
+        "index": 22,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 298,
+          "y": 665
+        },
+        "ok": true,
+        "elapsedMs": 35
+      },
+      {
+        "index": 23,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 50,
+          "y": 719
+        },
+        "ok": true,
+        "elapsedMs": 36
+      },
+      {
+        "index": 24,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 132,
+          "y": 719
+        },
+        "ok": true,
+        "elapsedMs": 35
+      },
+      {
+        "index": 25,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 215,
+          "y": 719
+        },
+        "ok": true,
+        "elapsedMs": 37
+      },
+      {
+        "index": 26,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 50,
+          "y": 773
+        },
+        "ok": true,
+        "elapsedMs": 37
+      },
+      {
+        "index": 27,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 132,
+          "y": 773
+        },
+        "ok": true,
+        "elapsedMs": 34
+      },
+      {
+        "index": 28,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 50,
+          "y": 827
+        },
+        "ok": true,
+        "elapsedMs": 36
+      },
+      {
+        "index": 29,
+        "step": {
+          "type": "assert_state",
+          "expect": {
+            "totalStake": 15
+          }
+        },
+        "ok": true,
+        "state": {
+          "revision": "mobile-r02-144-crisp-v1",
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "straight",
+          "uiMode": "betting",
+          "bettingPageVisible": true,
+          "raceViewportVisible": true,
+          "designResolution": {
+            "width": 750,
+            "height": 1334
+          },
+          "visibleHeight": 1625.581395348837,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 566.2133333333333
+          },
+          "touchTargets": [
+            {
+              "key": "1-6",
+              "x": 8.6,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-5",
+              "x": 91.16,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-4",
+              "x": 173.72,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-3",
+              "x": 256.28,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-2",
+              "x": 338.84000000000003,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-6",
+              "x": 8.6,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-5",
+              "x": 91.16,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-4",
+              "x": 173.72,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-3",
+              "x": 256.28,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "3-6",
+              "x": 8.6,
+              "y": 692.3466666666667,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "3-5",
+              "x": 91.16,
+              "y": 692.3466666666667,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "3-4",
+              "x": 173.72,
+              "y": 692.3466666666667,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "4-6",
+              "x": 8.6,
+              "y": 746.24,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "4-5",
+              "x": 91.16,
+              "y": 746.24,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "5-6",
+              "x": 8.6,
+              "y": 800.1333333333333,
+              "width": 82.56,
+              "height": 53.89333333333334
+            }
+          ],
+          "buttons": [
+            {
+              "name": "Undo",
+              "x": 10.32,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            },
+            {
+              "name": "Clear",
+              "x": 113.52000000000001,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            },
+            {
+              "name": "History",
+              "x": 216.72,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            },
+            {
+              "name": "Start",
+              "x": 319.92,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            }
+          ],
+          "undoMode": false,
+          "horseFrames": 144,
+          "backgrounds": 12,
+          "sounds": 7,
+          "worldId": "Node.420",
+          "worldPaintBuilds": 1,
+          "camera": {
+            "x": 400,
+            "y": 200
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "积分 486   押分 14",
+          "uiResult": "1 — 6",
+          "resultPanel": false,
+          "startButton": "开跑",
+          "horsePositions": [
+            {
+              "x": 400,
+              "y": 300
+            },
+            {
+              "x": 400,
+              "y": 260
+            },
+            {
+              "x": 400,
+              "y": 220
+            },
+            {
+              "x": 400,
+              "y": 180
+            },
+            {
+              "x": 400,
+              "y": 140
+            },
+            {
+              "x": 400,
+              "y": 100
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": 375,
+              "y": 616.9156976744185
+            },
+            {
+              "x": 375,
+              "y": 585.6656976744185
+            },
+            {
+              "x": 375,
+              "y": 554.4156976744185
+            },
+            {
+              "x": 375,
+              "y": 523.1656976744185
+            },
+            {
+              "x": 375,
+              "y": 491.91569767441854
+            },
+            {
+              "x": 375,
+              "y": 460.66569767441854
+            }
+          ],
+          "phase": "betting",
+          "round": 1,
+          "credits": 485,
+          "totalStake": 15,
+          "result": null,
+          "historyLength": 0,
+          "metrics": {
+            "finishCount": 0,
+            "visibleOrder": [],
+            "backgroundMismatches": 0,
+            "settlementJump": 0,
+            "resultDrift": 0,
+            "worldChanges": 0,
+            "maxCameraStep": 0
+          },
+          "progress": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "elapsedMs": 3
+      },
+      {
+        "index": 30,
+        "step": {
+          "type": "screenshot",
+          "label": "size-430-selected"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "tests/evidence/mobile-r02/size-430-selected.png",
+          "width": 430,
+          "height": 932,
+          "source": "preview",
+          "capturedAt": "2026-10-23T14:17:58.382Z"
+        },
+        "elapsedMs": 55
+      },
+      {
+        "index": 31,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 370,
+          "y": 902
+        },
+        "ok": true,
+        "elapsedMs": 30
+      },
+      {
+        "index": 32,
+        "step": {
+          "type": "wait_for_state",
+          "expect": {
+            "phase": "racing",
+            "bettingPageVisible": true
+          },
+          "timeoutMs": 30000
+        },
+        "ok": true,
+        "state": {
+          "revision": "mobile-r02-144-crisp-v1",
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "straight",
+          "uiMode": "race",
+          "bettingPageVisible": true,
+          "raceViewportVisible": true,
+          "designResolution": {
+            "width": 750,
+            "height": 1334
+          },
+          "visibleHeight": 1625.581395348837,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 566.2133333333333
+          },
+          "touchTargets": [
+            {
+              "key": "1-6",
+              "x": 8.6,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-5",
+              "x": 91.16,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-4",
+              "x": 173.72,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-3",
+              "x": 256.28,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-2",
+              "x": 338.84000000000003,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-6",
+              "x": 8.6,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-5",
+              "x": 91.16,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-4",
+              "x": 173.72,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-3",
+              "x": 256.28,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "3-6",
+              "x": 8.6,
+              "y": 692.3466666666667,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "3-5",
+              "x": 91.16,
+              "y": 692.3466666666667,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "3-4",
+              "x": 173.72,
+              "y": 692.3466666666667,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "4-6",
+              "x": 8.6,
+              "y": 746.24,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "4-5",
+              "x": 91.16,
+              "y": 746.24,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "5-6",
+              "x": 8.6,
+              "y": 800.1333333333333,
+              "width": 82.56,
+              "height": 53.89333333333334
+            }
+          ],
+          "buttons": [
+            {
+              "name": "Undo",
+              "x": 10.32,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            },
+            {
+              "name": "Clear",
+              "x": 113.52000000000001,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            },
+            {
+              "name": "History",
+              "x": 216.72,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            },
+            {
+              "name": "Start",
+              "x": 319.92,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            }
+          ],
+          "undoMode": false,
+          "horseFrames": 144,
+          "backgrounds": 12,
+          "sounds": 7,
+          "worldId": "Node.420",
+          "worldPaintBuilds": 1,
+          "camera": {
+            "x": 400,
+            "y": 200
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "积分 485   押分 15",
+          "uiResult": "1 — 6",
+          "resultPanel": false,
+          "startButton": "开跑",
+          "horsePositions": [
+            {
+              "x": 400,
+              "y": 300
+            },
+            {
+              "x": 400,
+              "y": 260
+            },
+            {
+              "x": 400,
+              "y": 220
+            },
+            {
+              "x": 400,
+              "y": 180
+            },
+            {
+              "x": 400,
+              "y": 140
+            },
+            {
+              "x": 400,
+              "y": 100
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": 375,
+              "y": 616.9156976744185
+            },
+            {
+              "x": 375,
+              "y": 585.6656976744185
+            },
+            {
+              "x": 375,
+              "y": 554.4156976744185
+            },
+            {
+              "x": 375,
+              "y": 523.1656976744185
+            },
+            {
+              "x": 375,
+              "y": 491.91569767441854
+            },
+            {
+              "x": 375,
+              "y": 460.66569767441854
+            }
+          ],
+          "phase": "racing",
+          "round": 1,
+          "credits": 485,
+          "totalStake": 15,
+          "result": null,
+          "historyLength": 0,
+          "metrics": {
+            "finishCount": 0,
+            "visibleOrder": [],
+            "backgroundMismatches": 0,
+            "settlementJump": 0,
+            "resultDrift": 0,
+            "worldChanges": 0,
+            "maxCameraStep": 0
+          },
+          "progress": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "elapsedMs": 3
+      },
+      {
+        "index": 33,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 50,
+          "y": 612
+        },
+        "ok": true,
+        "elapsedMs": 33
+      },
+      {
+        "index": 34,
+        "step": {
+          "type": "assert_state",
+          "expect": {
+            "totalStake": 15
+          }
+        },
+        "ok": true,
+        "state": {
+          "revision": "mobile-r02-144-crisp-v1",
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "straight",
+          "uiMode": "race",
+          "bettingPageVisible": true,
+          "raceViewportVisible": true,
+          "designResolution": {
+            "width": 750,
+            "height": 1334
+          },
+          "visibleHeight": 1625.581395348837,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 566.2133333333333
+          },
+          "touchTargets": [
+            {
+              "key": "1-6",
+              "x": 8.6,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-5",
+              "x": 91.16,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-4",
+              "x": 173.72,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-3",
+              "x": 256.28,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-2",
+              "x": 338.84000000000003,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-6",
+              "x": 8.6,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-5",
+              "x": 91.16,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-4",
+              "x": 173.72,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-3",
+              "x": 256.28,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "3-6",
+              "x": 8.6,
+              "y": 692.3466666666667,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "3-5",
+              "x": 91.16,
+              "y": 692.3466666666667,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "3-4",
+              "x": 173.72,
+              "y": 692.3466666666667,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "4-6",
+              "x": 8.6,
+              "y": 746.24,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "4-5",
+              "x": 91.16,
+              "y": 746.24,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "5-6",
+              "x": 8.6,
+              "y": 800.1333333333333,
+              "width": 82.56,
+              "height": 53.89333333333334
+            }
+          ],
+          "buttons": [
+            {
+              "name": "Undo",
+              "x": 10.32,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            },
+            {
+              "name": "Clear",
+              "x": 113.52000000000001,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            },
+            {
+              "name": "History",
+              "x": 216.72,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            },
+            {
+              "name": "Start",
+              "x": 319.92,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            }
+          ],
+          "undoMode": false,
+          "horseFrames": 144,
+          "backgrounds": 12,
+          "sounds": 7,
+          "worldId": "Node.420",
+          "worldPaintBuilds": 1,
+          "camera": {
+            "x": 406.357089472295,
+            "y": 200
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "积分 485   押分 15",
+          "uiResult": "1 — 6",
+          "resultPanel": false,
+          "startButton": "比赛中",
+          "horsePositions": [
+            {
+              "x": 406.3573555819519,
+              "y": 300.7858343949311
+            },
+            {
+              "x": 406.3607201706076,
+              "y": 261.0272685907124
+            },
+            {
+              "x": 406.3623771851157,
+              "y": 219.56336941977798
+            },
+            {
+              "x": 406.3615473056614,
+              "y": 178.82430570484118
+            },
+            {
+              "x": 406.3586208375194,
+              "y": 140.0369717796775
+            },
+            {
+              "x": 406.35497414438413,
+              "y": 101.18826227067827
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": 375.00020789816944,
+              "y": 617.5296307954585
+            },
+            {
+              "x": 375.0028364830567,
+              "y": 586.4682512609127
+            },
+            {
+              "x": 375.0041310256412,
+              "y": 554.0745800336201
+            },
+            {
+              "x": 375.0034826823175,
+              "y": 522.2471865063258
+            },
+            {
+              "x": 375.0011963790816,
+              "y": 491.94458187729157
+            },
+            {
+              "x": 374.99834740006963,
+              "y": 461.5940275733859
+            }
+          ],
+          "phase": "racing",
+          "round": 1,
+          "credits": 485,
+          "totalStake": 15,
+          "result": null,
+          "historyLength": 0,
+          "metrics": {
+            "finishCount": 0,
+            "visibleOrder": [],
+            "backgroundMismatches": 0,
+            "settlementJump": 0,
+            "resultDrift": 0,
+            "worldChanges": 0,
+            "maxCameraStep": 3.205255196098392
+          },
+          "progress": [
+            0.0014875622672003573,
+            0.0014883495497527294,
+            0.001488737275785462,
+            0.0014885430916869744,
+            0.0014878583252729957,
+            0.0014870050328877906
+          ]
+        },
+        "elapsedMs": 5
+      },
+      {
+        "index": 35,
+        "step": {
+          "type": "wait_for_state",
+          "expect": {
+            "section": "right-bend"
+          },
+          "timeoutMs": 18000
+        },
+        "ok": true,
+        "state": {
+          "revision": "mobile-r02-144-crisp-v1",
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "right-bend",
+          "uiMode": "race",
+          "bettingPageVisible": true,
+          "raceViewportVisible": true,
+          "designResolution": {
+            "width": 750,
+            "height": 1334
+          },
+          "visibleHeight": 1625.581395348837,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 566.2133333333333
+          },
+          "touchTargets": [
+            {
+              "key": "1-6",
+              "x": 8.6,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-5",
+              "x": 91.16,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-4",
+              "x": 173.72,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-3",
+              "x": 256.28,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-2",
+              "x": 338.84000000000003,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-6",
+              "x": 8.6,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-5",
+              "x": 91.16,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-4",
+              "x": 173.72,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-3",
+              "x": 256.28,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "3-6",
+              "x": 8.6,
+              "y": 692.3466666666667,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "3-5",
+              "x": 91.16,
+              "y": 692.3466666666667,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "3-4",
+              "x": 173.72,
+              "y": 692.3466666666667,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "4-6",
+              "x": 8.6,
+              "y": 746.24,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "4-5",
+              "x": 91.16,
+              "y": 746.24,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "5-6",
+              "x": 8.6,
+              "y": 800.1333333333333,
+              "width": 82.56,
+              "height": 53.89333333333334
+            }
+          ],
+          "buttons": [
+            {
+              "name": "Undo",
+              "x": 10.32,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            },
+            {
+              "name": "Clear",
+              "x": 113.52000000000001,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            },
+            {
+              "name": "History",
+              "x": 216.72,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            },
+            {
+              "name": "Start",
+              "x": 319.92,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            }
+          ],
+          "undoMode": false,
+          "horseFrames": 144,
+          "backgrounds": 12,
+          "sounds": 7,
+          "worldId": "Node.420",
+          "worldPaintBuilds": 1,
+          "camera": {
+            "x": 2006.2425706809431,
+            "y": 200.0331393207544
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "积分 485   押分 15",
+          "uiResult": "1 — 6",
+          "resultPanel": false,
+          "startButton": "比赛中",
+          "horsePositions": [
+            {
+              "x": 2004.756723275043,
+              "y": 298.855241698396
+            },
+            {
+              "x": 2005.3567739557675,
+              "y": 259.55223356001693
+            },
+            {
+              "x": 2005.9549030695946,
+              "y": 221.0366420744915
+            },
+            {
+              "x": 2006.548653263623,
+              "y": 180.85162340486787
+            },
+            {
+              "x": 2007.1375631610804,
+              "y": 139.31163810273515
+            },
+            {
+              "x": 2007.7237739571913,
+              "y": 98.98041963412835
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": 373.8391817141405,
+              "y": 615.995465156951
+            },
+            {
+              "x": 374.30797130845656,
+              "y": 585.2899900488424
+            },
+            {
+              "x": 374.775259678634,
+              "y": 555.1996842007757
+            },
+            {
+              "x": 375.23912701771866,
+              "y": 523.8051383651322
+            },
+            {
+              "x": 375.69921287510726,
+              "y": 491.352024847841
+            },
+            {
+              "x": 376.15719005956885,
+              "y": 459.8432604192419
+            }
+          ],
+          "phase": "racing",
+          "round": 1,
+          "credits": 485,
+          "totalStake": 15,
+          "result": null,
+          "historyLength": 0,
+          "metrics": {
+            "finishCount": 0,
+            "visibleOrder": [],
+            "backgroundMismatches": 0,
+            "settlementJump": 0,
+            "resultDrift": 0,
+            "worldChanges": 0,
+            "maxCameraStep": 3.4723597957732864
+          },
+          "progress": [
+            0.37584598043117773,
+            0.3758474710986775,
+            0.37584819149955984,
+            0.37584780281803315,
+            0.37584648785709274,
+            0.37584486506341575
+          ]
+        },
+        "elapsedMs": 8996
+      },
+      {
+        "index": 36,
+        "step": {
+          "type": "wait",
+          "durationMs": 2700
+        },
+        "ok": true,
+        "elapsedMs": 2705
+      },
+      {
+        "index": 37,
+        "step": {
+          "type": "screenshot",
+          "label": "size-430-bend"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "tests/evidence/mobile-r02/size-430-bend.png",
+          "width": 430,
+          "height": 932,
+          "source": "preview",
+          "capturedAt": "2026-10-23T14:18:10.221Z"
+        },
+        "elapsedMs": 68
+      },
+      {
+        "index": 38,
+        "step": {
+          "type": "wait_for_state",
+          "expect": {
+            "phase": "result"
+          },
+          "timeoutMs": 20000
+        },
+        "ok": true,
+        "state": {
+          "revision": "mobile-r02-144-crisp-v1",
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "finish",
+          "uiMode": "race",
+          "bettingPageVisible": true,
+          "raceViewportVisible": true,
+          "designResolution": {
+            "width": 750,
+            "height": 1334
+          },
+          "visibleHeight": 1625.581395348837,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 566.2133333333333
+          },
+          "touchTargets": [
+            {
+              "key": "1-6",
+              "x": 8.6,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-5",
+              "x": 91.16,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-4",
+              "x": 173.72,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-3",
+              "x": 256.28,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-2",
+              "x": 338.84000000000003,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-6",
+              "x": 8.6,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-5",
+              "x": 91.16,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-4",
+              "x": 173.72,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-3",
+              "x": 256.28,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "3-6",
+              "x": 8.6,
+              "y": 692.3466666666667,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "3-5",
+              "x": 91.16,
+              "y": 692.3466666666667,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "3-4",
+              "x": 173.72,
+              "y": 692.3466666666667,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "4-6",
+              "x": 8.6,
+              "y": 746.24,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "4-5",
+              "x": 91.16,
+              "y": 746.24,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "5-6",
+              "x": 8.6,
+              "y": 800.1333333333333,
+              "width": 82.56,
+              "height": 53.89333333333334
+            }
+          ],
+          "buttons": [
+            {
+              "name": "Undo",
+              "x": 10.32,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            },
+            {
+              "name": "Clear",
+              "x": 113.52000000000001,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            },
+            {
+              "name": "History",
+              "x": 216.72,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            },
+            {
+              "name": "Start",
+              "x": 319.92,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            }
+          ],
+          "undoMode": false,
+          "horseFrames": 144,
+          "backgrounds": 12,
+          "sounds": 7,
+          "worldId": "Node.420",
+          "worldPaintBuilds": 1,
+          "camera": {
+            "x": 465.1388888888889,
+            "y": 800
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "积分 495   押分 15",
+          "uiResult": "1 — 6",
+          "resultPanel": true,
+          "startButton": "下一场",
+          "horsePositions": [
+            {
+              "x": 32.37601649553767,
+              "y": 700.8760920517755
+            },
+            {
+              "x": 307.3089461503166,
+              "y": 740.9570133261997
+            },
+            {
+              "x": 246.03942469838398,
+              "y": 779.4492295897678
+            },
+            {
+              "x": 180.16783788884663,
+              "y": 818.855760927758
+            },
+            {
+              "x": 364.4424032370066,
+              "y": 860.1618043184246
+            },
+            {
+              "x": 109.15544869461814,
+              "y": 901.1992419076652
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": 36.90400594269431,
+              "y": 461.35014458986814
+            },
+            {
+              "x": 251.6953572354904,
+              "y": 492.66336433551203
+            },
+            {
+              "x": 203.828543601168,
+              "y": 522.7354082914246
+            },
+            {
+              "x": 152.36636640621697,
+              "y": 553.5217608992294
+            },
+            {
+              "x": 296.33087058446694,
+              "y": 585.7921072981878
+            },
+            {
+              "x": 96.88793734822593,
+              "y": 617.8526054147819
+            }
+          ],
+          "phase": "result",
+          "round": 1,
+          "credits": 495,
+          "totalStake": 15,
+          "result": {
+            "first": 1,
+            "second": 6,
+            "order": [
+              1,
+              6,
+              4,
+              3,
+              2,
+              5
+            ],
+            "pair": "1-6",
+            "payout": 10,
+            "stake": 15
+          },
+          "historyLength": 1,
+          "metrics": {
+            "finishCount": 6,
+            "visibleOrder": [
+              1,
+              6,
+              4,
+              3,
+              2,
+              5
+            ],
+            "backgroundMismatches": 0,
+            "settlementJump": 3.249735326522062,
+            "resultDrift": 3.223773026358509,
+            "worldChanges": 0,
+            "maxCameraStep": 4.43432654526282
+          },
+          "progress": [
+            1.1012625000000305,
+            1.0369307433610957,
+            1.0512672433517625,
+            1.0666805839704094,
+            1.0235620440864868,
+            1.0832968246867496
+          ]
+        },
+        "elapsedMs": 14632
+      },
+      {
+        "index": 39,
+        "step": {
+          "type": "screenshot",
+          "label": "size-430-result"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "tests/evidence/mobile-r02/size-430-result.png",
+          "width": 430,
+          "height": 932,
+          "source": "preview",
+          "capturedAt": "2026-10-23T14:18:24.908Z"
+        },
+        "elapsedMs": 54
+      },
+      {
+        "index": 40,
+        "step": {
+          "type": "get_state",
+          "required": true
+        },
+        "ok": true,
+        "state": {
+          "revision": "mobile-r02-144-crisp-v1",
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "finish",
+          "uiMode": "race",
+          "bettingPageVisible": true,
+          "raceViewportVisible": true,
+          "designResolution": {
+            "width": 750,
+            "height": 1334
+          },
+          "visibleHeight": 1625.581395348837,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 566.2133333333333
+          },
+          "touchTargets": [
+            {
+              "key": "1-6",
+              "x": 8.6,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-5",
+              "x": 91.16,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-4",
+              "x": 173.72,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-3",
+              "x": 256.28,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-2",
+              "x": 338.84000000000003,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-6",
+              "x": 8.6,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-5",
+              "x": 91.16,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-4",
+              "x": 173.72,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-3",
+              "x": 256.28,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "3-6",
+              "x": 8.6,
+              "y": 692.3466666666667,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "3-5",
+              "x": 91.16,
+              "y": 692.3466666666667,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "3-4",
+              "x": 173.72,
+              "y": 692.3466666666667,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "4-6",
+              "x": 8.6,
+              "y": 746.24,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "4-5",
+              "x": 91.16,
+              "y": 746.24,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "5-6",
+              "x": 8.6,
+              "y": 800.1333333333333,
+              "width": 82.56,
+              "height": 53.89333333333334
+            }
+          ],
+          "buttons": [
+            {
+              "name": "Undo",
+              "x": 10.32,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            },
+            {
+              "name": "Clear",
+              "x": 113.52000000000001,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            },
+            {
+              "name": "History",
+              "x": 216.72,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            },
+            {
+              "name": "Start",
+              "x": 319.92,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            }
+          ],
+          "undoMode": false,
+          "horseFrames": 144,
+          "backgrounds": 12,
+          "sounds": 7,
+          "worldId": "Node.420",
+          "worldPaintBuilds": 1,
+          "camera": {
+            "x": 465.1388888888889,
+            "y": 800
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "积分 495   押分 15",
+          "uiResult": "1 — 6",
+          "resultPanel": true,
+          "startButton": "下一场",
+          "horsePositions": [
+            {
+              "x": 22.849285773800148,
+              "y": 701.1399709795071
+            },
+            {
+              "x": 299.11337016613015,
+              "y": 739.8244227179795
+            },
+            {
+              "x": 237.54719740418273,
+              "y": 778.8003442825265
+            },
+            {
+              "x": 171.35667726439056,
+              "y": 819.7677731724947
+            },
+            {
+              "x": 356.5234527998907,
+              "y": 861.1207138567219
+            },
+            {
+              "x": 100.00046429314398,
+              "y": 900.6131958919768
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": 29.461247566336908,
+              "y": 461.5563000021584
+            },
+            {
+              "x": 245.29256349784472,
+              "y": 491.77852792284
+            },
+            {
+              "x": 197.1939910275733,
+              "y": 522.2284666451424
+            },
+            {
+              "x": 145.48264716836064,
+              "y": 554.23427046543
+            },
+            {
+              "x": 290.1441905554702,
+              "y": 586.5412553749825
+            },
+            {
+              "x": 89.73560578457426,
+              "y": 617.3947569650254
+            }
+          ],
+          "phase": "result",
+          "round": 1,
+          "credits": 495,
+          "totalStake": 15,
+          "result": {
+            "first": 1,
+            "second": 6,
+            "order": [
+              1,
+              6,
+              4,
+              3,
+              2,
+              5
+            ],
+            "pair": "1-6",
+            "payout": 10,
+            "stake": 15
+          },
+          "historyLength": 1,
+          "metrics": {
+            "finishCount": 6,
+            "visibleOrder": [
+              1,
+              6,
+              4,
+              3,
+              2,
+              5
+            ],
+            "backgroundMismatches": 0,
+            "settlementJump": 3.249735326522062,
+            "resultDrift": 3.2244826067862555,
+            "worldChanges": 0,
+            "maxCameraStep": 4.43432654526282
+          },
+          "progress": [
+            1.1034916666666972,
+            1.038848432160297,
+            1.053254345807256,
+            1.0687423138683552,
+            1.0254150050722661,
+            1.085439006160931
+          ]
+        },
+        "elapsedMs": 5
+      },
+      {
+        "index": 41,
+        "step": {
+          "type": "wait",
+          "durationMs": 6500
+        },
+        "ok": true,
+        "elapsedMs": 6513
+      },
+      {
+        "index": 42,
+        "step": {
+          "type": "get_state",
+          "required": true
+        },
+        "ok": true,
+        "state": {
+          "revision": "mobile-r02-144-crisp-v1",
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "finish",
+          "uiMode": "race",
+          "bettingPageVisible": true,
+          "raceViewportVisible": true,
+          "designResolution": {
+            "width": 750,
+            "height": 1334
+          },
+          "visibleHeight": 1625.581395348837,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 566.2133333333333
+          },
+          "touchTargets": [
+            {
+              "key": "1-6",
+              "x": 8.6,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-5",
+              "x": 91.16,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-4",
+              "x": 173.72,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-3",
+              "x": 256.28,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-2",
+              "x": 338.84000000000003,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-6",
+              "x": 8.6,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-5",
+              "x": 91.16,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-4",
+              "x": 173.72,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-3",
+              "x": 256.28,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "3-6",
+              "x": 8.6,
+              "y": 692.3466666666667,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "3-5",
+              "x": 91.16,
+              "y": 692.3466666666667,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "3-4",
+              "x": 173.72,
+              "y": 692.3466666666667,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "4-6",
+              "x": 8.6,
+              "y": 746.24,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "4-5",
+              "x": 91.16,
+              "y": 746.24,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "5-6",
+              "x": 8.6,
+              "y": 800.1333333333333,
+              "width": 82.56,
+              "height": 53.89333333333334
+            }
+          ],
+          "buttons": [
+            {
+              "name": "Undo",
+              "x": 10.32,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            },
+            {
+              "name": "Clear",
+              "x": 113.52000000000001,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            },
+            {
+              "name": "History",
+              "x": 216.72,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            },
+            {
+              "name": "Start",
+              "x": 319.92,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            }
+          ],
+          "undoMode": false,
+          "horseFrames": 144,
+          "backgrounds": 12,
+          "sounds": 7,
+          "worldId": "Node.420",
+          "worldPaintBuilds": 1,
+          "camera": {
+            "x": 465.1388888888889,
+            "y": 800
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "积分 495   押分 15",
+          "uiResult": "1 — 6",
+          "resultPanel": true,
+          "startButton": "下一场",
+          "horsePositions": [
+            {
+              "x": -1029.898976411404,
+              "y": 700.8161326075584
+            },
+            {
+              "x": -606.53607317054,
+              "y": 741.0056469273576
+            },
+            {
+              "x": -700.8836019101468,
+              "y": 779.5257212624605
+            },
+            {
+              "x": -802.3177453857406,
+              "y": 818.8331294687265
+            },
+            {
+              "x": -518.5575749426976,
+              "y": 860.0776194368696
+            },
+            {
+              "x": -911.6680923706899,
+              "y": 901.19325603911
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": -792.9983322658538,
+              "y": 461.30330127407353
+            },
+            {
+              "x": -462.24606410892886,
+              "y": 492.70135933641666
+            },
+            {
+              "x": -535.9550709367467,
+              "y": 522.7951674107157
+            },
+            {
+              "x": -615.2004955270544,
+              "y": 553.5040800718612
+            },
+            {
+              "x": -393.5128623684269,
+              "y": 585.7263378594729
+            },
+            {
+              "x": -700.630454109046,
+              "y": 617.8479289549732
+            }
+          ],
+          "phase": "result",
+          "round": 1,
+          "credits": 495,
+          "totalStake": 15,
+          "result": {
+            "first": 1,
+            "second": 6,
+            "order": [
+              1,
+              6,
+              4,
+              3,
+              2,
+              5
+            ],
+            "pair": "1-6",
+            "payout": 10,
+            "stake": 15
+          },
+          "historyLength": 1,
+          "metrics": {
+            "finishCount": 6,
+            "visibleOrder": [
+              1,
+              6,
+              4,
+              3,
+              2,
+              5
+            ],
+            "backgroundMismatches": 0,
+            "settlementJump": 3.249735326522062,
+            "resultDrift": 4.168889051469476,
+            "worldChanges": 0,
+            "maxCameraStep": 4.43432654526282
+          },
+          "progress": [
+            1.3498250000000283,
+            1.2507620056346653,
+            1.272838452664792,
+            1.2965731018432094,
+            1.230175852697077,
+            1.322160069251777
+          ]
+        },
+        "elapsedMs": 5
+      },
+      {
+        "index": 43,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 267,
+          "y": 902
+        },
+        "ok": true,
+        "elapsedMs": 34
+      },
+      {
+        "index": 44,
+        "step": {
+          "type": "screenshot",
+          "label": "size-430-history"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "tests/evidence/mobile-r02/size-430-history.png",
+          "width": 430,
+          "height": 932,
+          "source": "preview",
+          "capturedAt": "2026-10-23T14:18:31.521Z"
+        },
+        "elapsedMs": 56
+      },
+      {
+        "index": 45,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 267,
+          "y": 902
+        },
+        "ok": true,
+        "elapsedMs": 32
+      },
+      {
+        "index": 46,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 370,
+          "y": 902
+        },
+        "ok": true,
+        "elapsedMs": 37
+      },
+      {
+        "index": 47,
+        "step": {
+          "type": "wait_for_state",
+          "expect": {
+            "phase": "betting",
+            "round": 2,
+            "totalStake": 0,
+            "result": null
+          },
+          "timeoutMs": 30000
+        },
+        "ok": true,
+        "state": {
+          "revision": "mobile-r02-144-crisp-v1",
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "straight",
+          "uiMode": "betting",
+          "bettingPageVisible": true,
+          "raceViewportVisible": true,
+          "designResolution": {
+            "width": 750,
+            "height": 1334
+          },
+          "visibleHeight": 1625.581395348837,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 430,
+            "height": 566.2133333333333
+          },
+          "touchTargets": [
+            {
+              "key": "1-6",
+              "x": 8.6,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-5",
+              "x": 91.16,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-4",
+              "x": 173.72,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-3",
+              "x": 256.28,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "1-2",
+              "x": 338.84000000000003,
+              "y": 584.56,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-6",
+              "x": 8.6,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-5",
+              "x": 91.16,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-4",
+              "x": 173.72,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "2-3",
+              "x": 256.28,
+              "y": 638.4533333333334,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "3-6",
+              "x": 8.6,
+              "y": 692.3466666666667,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "3-5",
+              "x": 91.16,
+              "y": 692.3466666666667,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "3-4",
+              "x": 173.72,
+              "y": 692.3466666666667,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "4-6",
+              "x": 8.6,
+              "y": 746.24,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "4-5",
+              "x": 91.16,
+              "y": 746.24,
+              "width": 82.56,
+              "height": 53.89333333333334
+            },
+            {
+              "key": "5-6",
+              "x": 8.6,
+              "y": 800.1333333333333,
+              "width": 82.56,
+              "height": 53.89333333333334
+            }
+          ],
+          "buttons": [
+            {
+              "name": "Undo",
+              "x": 10.32,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            },
+            {
+              "name": "Clear",
+              "x": 113.52000000000001,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            },
+            {
+              "name": "History",
+              "x": 216.72,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            },
+            {
+              "name": "Start",
+              "x": 319.92,
+              "y": 875.24,
+              "width": 99.76,
+              "height": 53.89333333333334
+            }
+          ],
+          "undoMode": false,
+          "horseFrames": 144,
+          "backgrounds": 12,
+          "sounds": 7,
+          "worldId": "Node.420",
+          "worldPaintBuilds": 1,
+          "camera": {
+            "x": 465.1388888888889,
+            "y": 800
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "积分 495   押分 15",
+          "uiResult": "1 — 6",
+          "resultPanel": false,
+          "startButton": "下一场",
+          "horsePositions": [
+            {
+              "x": -1029.898976411404,
+              "y": 700.8161326075584
+            },
+            {
+              "x": -606.53607317054,
+              "y": 741.0056469273576
+            },
+            {
+              "x": -700.8836019101468,
+              "y": 779.5257212624605
+            },
+            {
+              "x": -802.3177453857406,
+              "y": 818.8331294687265
+            },
+            {
+              "x": -518.5575749426976,
+              "y": 860.0776194368696
+            },
+            {
+              "x": -911.6680923706899,
+              "y": 901.19325603911
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": -792.9983322658538,
+              "y": 461.30330127407353
+            },
+            {
+              "x": -462.24606410892886,
+              "y": 492.70135933641666
+            },
+            {
+              "x": -535.9550709367467,
+              "y": 522.7951674107157
+            },
+            {
+              "x": -615.2004955270544,
+              "y": 553.5040800718612
+            },
+            {
+              "x": -393.5128623684269,
+              "y": 585.7263378594729
+            },
+            {
+              "x": -700.630454109046,
+              "y": 617.8479289549732
+            }
+          ],
+          "phase": "betting",
+          "round": 2,
+          "credits": 495,
+          "totalStake": 0,
+          "result": null,
+          "historyLength": 1,
+          "metrics": {
+            "finishCount": 6,
+            "visibleOrder": [
+              1,
+              6,
+              4,
+              3,
+              2,
+              5
+            ],
+            "backgroundMismatches": 0,
+            "settlementJump": 3.249735326522062,
+            "resultDrift": 4.168889051469476,
+            "worldChanges": 0,
+            "maxCameraStep": 4.43432654526282
+          },
+          "progress": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "elapsedMs": 3
+      },
+      {
+        "index": 48,
+        "step": {
+          "type": "screenshot",
+          "label": "size-430-next"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "tests/evidence/mobile-r02/size-430-next.png",
+          "width": 430,
+          "height": 932,
+          "source": "preview",
+          "capturedAt": "2026-10-23T14:18:31.660Z"
+        },
+        "elapsedMs": 67
+      }
+    ],
+    "consoleErrors": [],
+    "diagnostics": {
+      "consoleErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "pageErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "requestFailures": {
+        "count": 0,
+        "samples": []
+      },
+      "httpErrors": {
+        "count": 0,
+        "samples": []
+      }
+    },
+    "reportPath": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\playtests\\playtest-1792765111666.json",
+    "message": "Playtest passed (49 step(s))",
+    "session": {
+      "mode": "shared",
+      "reusedBrowser": true,
+      "reusedPage": true,
+      "pageReset": "reload"
+    },
+    "timing": {
+      "setupMs": 401,
+      "stepsMs": 35710,
+      "totalMs": 36117
+    },
+    "finalState": {
+      "revision": "mobile-r02-144-crisp-v1",
+      "ready": true,
+      "pendingAssets": 0,
+      "loadErrors": [],
+      "section": "straight",
+      "uiMode": "betting",
+      "bettingPageVisible": true,
+      "raceViewportVisible": true,
+      "designResolution": {
+        "width": 750,
+        "height": 1334
+      },
+      "visibleHeight": 1625.581395348837,
+      "raceViewport": {
+        "x": 0,
+        "y": 0,
+        "width": 430,
+        "height": 566.2133333333333
+      },
+      "touchTargets": [
+        {
+          "key": "1-6",
+          "x": 8.6,
+          "y": 584.56,
+          "width": 82.56,
+          "height": 53.89333333333334
+        },
+        {
+          "key": "1-5",
+          "x": 91.16,
+          "y": 584.56,
+          "width": 82.56,
+          "height": 53.89333333333334
+        },
+        {
+          "key": "1-4",
+          "x": 173.72,
+          "y": 584.56,
+          "width": 82.56,
+          "height": 53.89333333333334
+        },
+        {
+          "key": "1-3",
+          "x": 256.28,
+          "y": 584.56,
+          "width": 82.56,
+          "height": 53.89333333333334
+        },
+        {
+          "key": "1-2",
+          "x": 338.84000000000003,
+          "y": 584.56,
+          "width": 82.56,
+          "height": 53.89333333333334
+        },
+        {
+          "key": "2-6",
+          "x": 8.6,
+          "y": 638.4533333333334,
+          "width": 82.56,
+          "height": 53.89333333333334
+        },
+        {
+          "key": "2-5",
+          "x": 91.16,
+          "y": 638.4533333333334,
+          "width": 82.56,
+          "height": 53.89333333333334
+        },
+        {
+          "key": "2-4",
+          "x": 173.72,
+          "y": 638.4533333333334,
+          "width": 82.56,
+          "height": 53.89333333333334
+        },
+        {
+          "key": "2-3",
+          "x": 256.28,
+          "y": 638.4533333333334,
+          "width": 82.56,
+          "height": 53.89333333333334
+        },
+        {
+          "key": "3-6",
+          "x": 8.6,
+          "y": 692.3466666666667,
+          "width": 82.56,
+          "height": 53.89333333333334
+        },
+        {
+          "key": "3-5",
+          "x": 91.16,
+          "y": 692.3466666666667,
+          "width": 82.56,
+          "height": 53.89333333333334
+        },
+        {
+          "key": "3-4",
+          "x": 173.72,
+          "y": 692.3466666666667,
+          "width": 82.56,
+          "height": 53.89333333333334
+        },
+        {
+          "key": "4-6",
+          "x": 8.6,
+          "y": 746.24,
+          "width": 82.56,
+          "height": 53.89333333333334
+        },
+        {
+          "key": "4-5",
+          "x": 91.16,
+          "y": 746.24,
+          "width": 82.56,
+          "height": 53.89333333333334
+        },
+        {
+          "key": "5-6",
+          "x": 8.6,
+          "y": 800.1333333333333,
+          "width": 82.56,
+          "height": 53.89333333333334
+        }
+      ],
+      "buttons": [
+        {
+          "name": "Undo",
+          "x": 10.32,
+          "y": 875.24,
+          "width": 99.76,
+          "height": 53.89333333333334
+        },
+        {
+          "name": "Clear",
+          "x": 113.52000000000001,
+          "y": 875.24,
+          "width": 99.76,
+          "height": 53.89333333333334
+        },
+        {
+          "name": "History",
+          "x": 216.72,
+          "y": 875.24,
+          "width": 99.76,
+          "height": 53.89333333333334
+        },
+        {
+          "name": "Start",
+          "x": 319.92,
+          "y": 875.24,
+          "width": 99.76,
+          "height": 53.89333333333334
+        }
+      ],
+      "undoMode": false,
+      "horseFrames": 144,
+      "backgrounds": 12,
+      "sounds": 7,
+      "worldId": "Node.420",
+      "worldPaintBuilds": 1,
+      "camera": {
+        "x": 400,
+        "y": 200
+      },
+      "finishWorldX": 400,
+      "horseNoseOffset": 65.13888888888889,
+      "finishDirection": -1,
+      "uiCredits": "积分 495   押分 0",
+      "uiResult": "1 — 6",
+      "resultPanel": false,
+      "startButton": "开跑",
+      "horsePositions": [
+        {
+          "x": 400,
+          "y": 300
+        },
+        {
+          "x": 400,
+          "y": 260
+        },
+        {
+          "x": 400,
+          "y": 220
+        },
+        {
+          "x": 400,
+          "y": 180
+        },
+        {
+          "x": 400,
+          "y": 140
+        },
+        {
+          "x": 400,
+          "y": 100
+        }
+      ],
+      "screenHorsePositions": [
+        {
+          "x": 375,
+          "y": 616.9156976744185
+        },
+        {
+          "x": 375,
+          "y": 585.6656976744185
+        },
+        {
+          "x": 375,
+          "y": 554.4156976744185
+        },
+        {
+          "x": 375,
+          "y": 523.1656976744185
+        },
+        {
+          "x": 375,
+          "y": 491.91569767441854
+        },
+        {
+          "x": 375,
+          "y": 460.66569767441854
+        }
+      ],
+      "phase": "betting",
+      "round": 2,
+      "credits": 495,
+      "totalStake": 0,
+      "result": null,
+      "historyLength": 1,
+      "metrics": {
+        "finishCount": 0,
+        "visibleOrder": [],
+        "backgroundMismatches": 0,
+        "settlementJump": 0,
+        "resultDrift": 0,
+        "worldChanges": 0,
+        "maxCameraStep": 0
+      },
+      "progress": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "evidence": []
+}

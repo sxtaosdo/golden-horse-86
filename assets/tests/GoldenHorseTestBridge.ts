@@ -90,6 +90,11 @@ export class GoldenHorseTestBridge {
     this.recordingBase64=btoa(segments.join(''));return {bytes:bytes.length,silent:true};
   }
   testRecordingData():string{return this.recordingBase64;}
+  testRecordingChunk(offset:number):{data:string;next:number;total:number}{
+    if(!Number.isInteger(offset)||offset<0||offset>this.recordingBase64.length)throw new Error('Invalid recording offset');
+    const next=Math.min(offset+1000000,this.recordingBase64.length);
+    return {data:this.recordingBase64.slice(offset,next),next,total:this.recordingBase64.length};
+  }
   dispose():void{
     if(this.recorder?.state==='recording')this.recorder.stop();
     this.recorder?.stream.getTracks().forEach(track=>track.stop());
