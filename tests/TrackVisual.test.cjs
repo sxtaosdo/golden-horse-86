@@ -10,7 +10,7 @@ for(let i=0;i<6;i++){
   for(let k=0;k<101;k++){
     const pose=horsePose(i,k/100,13.5);
     for(const prop of ['x','y','scale','angle'])assert.ok(Number.isFinite(pose[prop]),`${prop} horse ${i}`);
-    assert.ok(pose.scale>=.7 && pose.scale<=1);
+    assert.ok(pose.scale>=.6 && pose.scale<=1);
     assert.ok(pose.x>-130&&pose.x<1000&&pose.y>60&&pose.y<410);
   }
   for(const at of COURSE_BREAKS.slice(1,-1)){

@@ -1,74 +1,63 @@
 /* AUTO-GENERATED: node tools/build_preview.cjs */
 (()=>{
 const COURSE_BREAKS = [0, .22, .38, .57, .73, 1];
-const SECTION_NAMES = ['straight', 'right-bend', 'backstraight', 'left-bend', 'finish'];
-const clamp = (x) => Math.max(0, Math.min(1, Number.isFinite(x) ? x : 0));
-const mix = (a, b, t) => a + (b - a) * t;
-const ease = (x) => { const t = clamp(x); return t * t * (3 - 2 * t); };
-const cubic = (a, b, c, d, t) => {
-    const n = 1 - t;
-    return n * n * n * a + 3 * n * n * t * b + 3 * n * t * t * c + t * t * t * d;
-};
-function trackSection(t) {
-    const v = clamp(t);
-    for (let i = 0; i < SECTION_NAMES.length - 1; i++)
-        if (v < COURSE_BREAKS[i + 1])
-            return SECTION_NAMES[i];
+const SECTIONS = ['straight', 'right-bend', 'backstraight', 'left-bend', 'finish'];
+const clamp = (value) => Math.max(0, Math.min(1, Number.isFinite(value) ? value : 0));
+function trackSection(progress) {
+    const value = clamp(progress);
+    for (let i = 0; i < 4; i++)
+        if (value < COURSE_BREAKS[i + 1])
+            return SECTIONS[i];
     return 'finish';
 }
 function trackSectionName(section) {
     return ({ straight: '起跑直道', 'right-bend': '第一弯道', backstraight: '对向直道', 'left-bend': '第二弯道', finish: '终点直道' })[section];
 }
-/**
- * A smooth continuous path with two real turning sections. Horse sprites swing
- * round each end, shrink in the distance, reverse on the far straight, and
- * regain scale on the home straight. This is visual geometry only, never used
- * to select a winner or to change payouts.
- */
+/** Fractional lanes -0.5 and 5.5 are the physical road boundaries used by the view. */
+function bendPoint(lane, fraction, side) {
+    const theta = clamp(fraction) * Math.PI, rx = 180 + 20 * lane, ry = 20 + 18 * lane;
+    const right = side === 'right-bend';
+    return { x: (right ? 560 : 300) + (right ? 1 : -1) * rx * Math.sin(theta),
+        y: 84 + 195 + (right ? 1 : -1) * ry * Math.cos(theta) };
+}
 function horsePose(horseIndex, progress, seconds = 0) {
     if (!Number.isInteger(horseIndex) || horseIndex < 0 || horseIndex > 5)
         throw Error('horseIndex must be 0..5');
-    const p = clamp(progress), lane = horseIndex;
-    const near = 122 + lane * 43, far = 125 + lane * 30;
-    const bob = Math.sin(seconds * 20 + lane * 1.4) * 2;
-    const [a, b, c, d, e, f] = COURSE_BREAKS;
-    let x = 70, y = near, scale = .92, angle = 0, flipX = false;
-    if (p < b) { // first straight, rightwards
-        const t = ease((p - a) / (b - a));
-        x = mix(70, 755 - lane * 3, t);
-        y = near;
-        scale = .92;
+    const p = Number.isFinite(progress) ? Math.max(0, Math.min(1.12, progress)) : 0;
+    const near = 84 + 215 + 18 * horseIndex, far = 84 + 175 - 18 * horseIndex;
+    const pose = { x: 90, y: near, scale: .65, angle: 0, flipX: false, sideOpacity: 1, turn: null };
+    if (p < .22) {
+        pose.x = 90 + 470 * (p / .22);
     }
-    else if (p < c) { // turn at right side: horses curve up and point left
-        const t = ease((p - b) / (c - b));
-        x = cubic(755, 895, 885, 750, t) - lane * 3;
-        y = cubic(near, near - 25, far + 8, far, t);
-        scale = mix(.92, .76, t);
-        angle = t < .5 ? mix(0, -33, t * 2) : mix(33, 0, (t - .5) * 2);
-        flipX = t >= .5;
+    else if (p < .38) {
+        const t = (p - .22) / .16;
+        Object.assign(pose, bendPoint(horseIndex, t, 'right-bend'));
+        pose.flipX = t >= .5;
+        pose.sideOpacity = Math.pow(Math.abs(Math.cos(Math.PI * t)), 4);
+        pose.turn = 'rear';
     }
-    else if (p < d) { // distant opposite straight, moving leftwards
-        const t = ease((p - c) / (d - c));
-        x = mix(750 - lane * 3, 190 + lane * 3, t);
-        y = far;
-        scale = .76;
-        flipX = true;
+    else if (p < .57) {
+        pose.x = 560 - 260 * ((p - .38) / .19);
+        pose.y = far;
+        pose.flipX = true;
     }
-    else if (p < e) { // return bend: horses swing toward viewer and right again
-        const t = ease((p - d) / (e - d));
-        x = cubic(190 + lane * 3, 30, 25, 160 + lane * 5, t);
-        y = cubic(far, far - 17, near - 10, near, t);
-        scale = mix(.76, .92, t);
-        angle = t < .5 ? mix(0, 32, t * 2) : mix(-32, 0, (t - .5) * 2);
-        flipX = t < .5;
+    else if (p < .73) {
+        const t = (p - .57) / .16;
+        Object.assign(pose, bendPoint(horseIndex, t, 'left-bend'));
+        pose.flipX = t < .5;
+        pose.sideOpacity = Math.pow(Math.abs(Math.cos(Math.PI * t)), 4);
+        pose.turn = 'front';
     }
-    else { // finishing straight, approaching goal
-        const t = ease((p - e) / (f - e));
-        x = mix(160 + lane * 5, 780, t);
-        y = near;
-        scale = .92;
+    else if (p <= 1) {
+        pose.x = 300 + 490 * ((p - .73) / .27);
     }
-    return { x, y: y + bob, scale, angle, flipX };
+    else {
+        pose.x = 790 + 500 * (p - 1);
+    }
+    // Never bob after a horse has crossed. The nose reaches the painted x=830 line at p=1.
+    if (p > 0 && p < 1)
+        pose.y += Math.sin(seconds * 20 + horseIndex * 1.4) * 1.2;
+    return pose;
 }
 /**
  * Illustrative odds only. These are not advertised as the 1986 machine's odds.
@@ -83,7 +72,7 @@ const DEMO_ODDS = {
 };
 class RaceModel {
     /** Visual timeline only; winner selection and payout remain unchanged. */
-    get courseFraction() { return Math.min(1, this.raceElapsed / (this.raceSeconds + 2.2)); }
+    get courseFraction() { return Math.min(1, this.raceElapsed / (this.raceSeconds - 2)); }
     constructor(random = Math.random, opts = {}) {
         this.cells = [];
         this.progress = [0, 0, 0, 0, 0, 0];
@@ -207,13 +196,25 @@ class RaceModel {
         }
         else if (this.phase === 'racing') {
             this.raceElapsed += dt;
+            const finalStart = (this.raceSeconds - 2) * COURSE_BREAKS[4];
             for (let i = 0; i < 6; i++) {
-                const ratio = this.raceElapsed / this.finishTimes[i];
-                const wobble = .023 * Math.sin(this.raceElapsed * 2.1 + i * 3.7)
-                    * Math.sin(Math.PI * Math.min(1, ratio));
-                this.progress[i] = Math.min(1, Math.max(0, ratio + wobble));
+                if (this.raceElapsed >= finalStart) {
+                    // One shared scene timeline up to the home straight; actual finish times then separate the field.
+                    this.progress[i] = Math.min(1.12, COURSE_BREAKS[4] + (1 - COURSE_BREAKS[4]) *
+                        (this.raceElapsed - finalStart) / (this.finishTimes[i] - finalStart));
+                }
+                else {
+                    const fraction = this.courseFraction;
+                    let section = 0;
+                    while (section < 3 && fraction >= COURSE_BREAKS[section + 1])
+                        section++;
+                    const start = COURSE_BREAKS[section], end = COURSE_BREAKS[section + 1];
+                    const local = (fraction - start) / (end - start);
+                    const offset = .008 * Math.sin(Math.PI * local) ** 2 * Math.sin(this.raceElapsed * 1.4 + i * .7);
+                    this.progress[i] = Math.max(start, Math.min(end - 1e-9, fraction + offset));
+                }
             }
-            if (this.raceElapsed >= Math.max(...this.finishTimes) + .15)
+            if (this.raceElapsed >= Math.max(...this.finishTimes) + .65)
                 this.resolve();
         }
         else {
@@ -236,10 +237,11 @@ class RaceModel {
             this.history.length = 20;
         this.phase = 'result';
         this.resultElapsed = 0;
-        this.progress.fill(1);
         this.message = `本场 ${pair}  得分 +${payout}   Enter 下一场`;
     }
     nextRound() {
+        if (this.phase !== 'result')
+            return;
         this.round++;
         this.phase = 'betting';
         this.countdown = this.bettingSeconds;
@@ -247,6 +249,7 @@ class RaceModel {
         this.resultElapsed = 0;
         this.progress.fill(0);
         this.cells.forEach(c => c.stake = 0);
+        this.lastResult = null;
         this.message = '下一场：请选择号码组合';
     }
 }

@@ -1,68 +1,43 @@
-/**
- * Visual course staging for the six-horse Golden Horse reconstruction.
- * Original ROM/scene timing unavailable: this five-part oval course is an
- * ORIGINAL, REPLACEABLE visual approximation, NOT verified 1986 machine data.
- * Independent of Cocos/DOM so the Creator and Web clients share geometry.
- */
+/** Shared 2D course geometry. Coordinates use the 960x720 canvas top-left; y is hoof contact. */
 export type TrackSection = 'straight' | 'right-bend' | 'backstraight' | 'left-bend' | 'finish';
 export interface HorsePose {
-  /** Pixel coordinates of the horse centre in the 960x720 reference canvas. */
-  x: number; y: number; scale: number; angle: number; flipX: boolean;
+  x:number; y:number; scale:number; angle:number; flipX:boolean;
+  sideOpacity:number; turn:'front'|'rear'|null;
 }
-export const COURSE_BREAKS = [0, .22, .38, .57, .73, 1] as const;
-const SECTION_NAMES: TrackSection[] = ['straight','right-bend','backstraight','left-bend','finish'];
-const clamp = (x: number) => Math.max(0, Math.min(1, Number.isFinite(x) ? x : 0));
-const mix = (a: number,b: number,t: number) => a+(b-a)*t;
-const ease = (x: number) => {const t=clamp(x);return t*t*(3-2*t);};
-const cubic = (a: number,b: number,c: number,d: number,t: number) => {
-  const n=1-t;return n*n*n*a+3*n*n*t*b+3*n*t*t*c+t*t*t*d;
-};
-export function trackSection(t: number): TrackSection {
-  const v=clamp(t);
-  for(let i=0;i<SECTION_NAMES.length-1;i++)if(v<COURSE_BREAKS[i+1])return SECTION_NAMES[i];
+export const COURSE_BREAKS = [0,.22,.38,.57,.73,1] as const;
+const SECTIONS:TrackSection[]=['straight','right-bend','backstraight','left-bend','finish'];
+const clamp=(value:number)=>Math.max(0,Math.min(1,Number.isFinite(value)?value:0));
+export function trackSection(progress:number):TrackSection {
+  const value=clamp(progress);
+  for(let i=0;i<4;i++)if(value<COURSE_BREAKS[i+1])return SECTIONS[i];
   return 'finish';
 }
 export function trackSectionName(section:TrackSection):string {
-  return ({straight:'起跑直道','right-bend':'第一弯道',backstraight:'对向直道', 'left-bend':'第二弯道',finish:'终点直道'})[section];
+  return ({straight:'起跑直道','right-bend':'第一弯道',backstraight:'对向直道','left-bend':'第二弯道',finish:'终点直道'})[section];
 }
-/**
- * A smooth continuous path with two real turning sections. Horse sprites swing
- * round each end, shrink in the distance, reverse on the far straight, and
- * regain scale on the home straight. This is visual geometry only, never used
- * to select a winner or to change payouts.
- */
-export function horsePose(horseIndex: number, progress: number, seconds=0): HorsePose {
+/** Fractional lanes -0.5 and 5.5 are the physical road boundaries used by the view. */
+export function bendPoint(lane:number,fraction:number,side:'right-bend'|'left-bend'):{x:number;y:number}{
+  const theta=clamp(fraction)*Math.PI,rx=180+20*lane,ry=20+18*lane;
+  const right=side==='right-bend';
+  return {x:(right?560:300)+(right?1:-1)*rx*Math.sin(theta),
+    y:84+195+(right?1:-1)*ry*Math.cos(theta)};
+}
+export function horsePose(horseIndex:number,progress:number,seconds=0):HorsePose {
   if(!Number.isInteger(horseIndex)||horseIndex<0||horseIndex>5)throw Error('horseIndex must be 0..5');
-  const p=clamp(progress), lane=horseIndex;
-  const near=122+lane*43,far=125+lane*30;
-  const bob=Math.sin(seconds*20+lane*1.4)*2;
-  const [a,b,c,d,e,f]=COURSE_BREAKS;
-  let x=70,y=near,scale=.92,angle=0,flipX=false;
-  if(p<b){ // first straight, rightwards
-    const t=ease((p-a)/(b-a));
-    x=mix(70,755-lane*3,t);y=near;scale=.92;
-  }else if(p<c){ // turn at right side: horses curve up and point left
-    const t=ease((p-b)/(c-b));
-    x=cubic(755,895,885,750,t)-lane*3;
-    y=cubic(near,near-25,far+8,far,t);
-    scale=mix(.92,.76,t);
-    angle=t<.5 ? mix(0,-33,t*2):mix(33,0,(t-.5)*2);
-    flipX=t>=.5;
-  }else if(p<d){ // distant opposite straight, moving leftwards
-    const t=ease((p-c)/(d-c));
-    x=mix(750-lane*3,190+lane*3,t);y=far;
-    scale=.76;flipX=true;
-  }else if(p<e){ // return bend: horses swing toward viewer and right again
-    const t=ease((p-d)/(e-d));
-    x=cubic(190+lane*3,30,25,160+lane*5,t);
-    y=cubic(far,far-17,near-10,near,t);
-    scale=mix(.76,.92,t);
-    angle=t<.5 ? mix(0,32,t*2):mix(-32,0,(t-.5)*2);
-    flipX=t<.5;
-  }else{ // finishing straight, approaching goal
-    const t=ease((p-e)/(f-e));
-    x=mix(160+lane*5,780,t);y=near;
-    scale=.92;
-  }
-  return {x,y:y+bob,scale,angle,flipX};
+  const p=Number.isFinite(progress)?Math.max(0,Math.min(1.12,progress)):0;
+  const near=84+215+18*horseIndex,far=84+175-18*horseIndex;
+  const pose:HorsePose={x:90,y:near,scale:.65,angle:0,flipX:false,sideOpacity:1,turn:null};
+  if(p<.22){pose.x=90+470*(p/.22);}
+  else if(p<.38){
+    const t=(p-.22)/.16;Object.assign(pose,bendPoint(horseIndex,t,'right-bend'));
+    pose.flipX=t>=.5;pose.sideOpacity=Math.pow(Math.abs(Math.cos(Math.PI*t)),4);pose.turn='rear';
+  }else if(p<.57){pose.x=560-260*((p-.38)/.19);pose.y=far;pose.flipX=true;}
+  else if(p<.73){
+    const t=(p-.57)/.16;Object.assign(pose,bendPoint(horseIndex,t,'left-bend'));
+    pose.flipX=t<.5;pose.sideOpacity=Math.pow(Math.abs(Math.cos(Math.PI*t)),4);pose.turn='front';
+  }else if(p<=1){pose.x=300+490*((p-.73)/.27);}
+  else {pose.x=790+500*(p-1);}
+  // Never bob after a horse has crossed. The nose reaches the painted x=830 line at p=1.
+  if(p>0&&p<1)pose.y+=Math.sin(seconds*20+horseIndex*1.4)*1.2;
+  return pose;
 }

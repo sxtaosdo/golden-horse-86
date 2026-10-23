@@ -9,6 +9,8 @@ let ts;try{ts=require('typescript');}catch{
 }
 let source=fs.readFileSync(path.join(root,'assets/scripts/TrackVisual.ts'),'utf8')+'\n'+fs.readFileSync(path.join(root,'assets/scripts/RaceModel.ts'),'utf8');
 source=source.replace(/^export /gm,'');
+// TrackVisual is concatenated above, so resolve this exact local dependency in the standalone build.
+source=source.replace(/^import \{ COURSE_BREAKS \} from '\.\/TrackVisual';\r?\n/gm,'');
 const compiled=ts.transpileModule(source,{compilerOptions:{target:ts.ScriptTarget.ES2020,module:ts.ModuleKind.None}}).outputText;
 const renderer=fs.readFileSync(path.join(root,'preview-web/renderer.js'),'utf8');
 fs.writeFileSync(path.join(root,'preview-web/game.js'),`/* AUTO-GENERATED: node tools/build_preview.cjs */\n(()=>{\n${compiled}\n${renderer}\n})();\n`);

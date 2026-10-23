@@ -4,6 +4,7 @@ import { _decorator, Component, Node, Label, Color, Graphics, UITransform,
 import { PREVIEW } from 'cc/env';
 import { GoldenHorseTestBridge } from '../tests/GoldenHorseTestBridge';
 import { RaceModel } from './RaceModel';
+import { RaceTrackView, HorseTurnView } from './RaceTrackView';
 import { horsePose, trackSection, trackSectionName, TrackSection } from './TrackVisual';
 const { ccclass } = _decorator;
 const HEX = (v: string) => new Color().fromHEX(v);
@@ -32,6 +33,11 @@ export class GoldenHorseGame extends Component {
   private pendingAssets = 36;
   private readonly loadErrors: string[] = [];
   private testBridge: GoldenHorseTestBridge | null = null;
+  private courseView!:RaceTrackView;
+  private readonly turnViews:HorseTurnView[]=[];
+  private resultPanel!:Node;
+  private resultText!:Label;
+  private startText!:Label;
 
   onLoad(): void {
     view.setDesignResolutionSize(960,720,ResolutionPolicy.SHOW_ALL);
@@ -47,6 +53,7 @@ export class GoldenHorseGame extends Component {
     backdrop.setPosition(0,109,0);backdrop.addComponent(UITransform).setContentSize(960,334);
     this.trackSprite=backdrop.addComponent(Sprite);
     this.trackSprite.sizeMode=Sprite.SizeMode.CUSTOM;
+    this.courseView=new RaceTrackView(this.node);
     const scenePaths:Record<TrackSection,string>={
       'straight':'art/race_track', 'right-bend':'art/track_curve_right',
       'backstraight':'art/track_backstraight', 'left-bend':'art/track_curve_left',
@@ -60,12 +67,18 @@ export class GoldenHorseGame extends Component {
     }
     this.textSection=this.makeLabel(this.node,'CourseSection','',-363,245,16,'#d0edb0');
     this.finishLabel=this.makeLabel(this.node,'FinishLine','',386,227,16,'#fffbce');
+    const racers=new Node('Racers');racers.layer=Layers.Enum.UI_2D;racers.parent=this.node;
+    racers.addComponent(UITransform).setContentSize(960,720);
     for(let i=0;i<6;i++){
-      const n=new Node(`Horse_${i+1}`);n.layer=Layers.Enum.UI_2D;n.parent=this.node;
+      const n=new Node(`Horse_${i+1}`);n.layer=Layers.Enum.UI_2D;n.parent=racers;
       n.getComponent(UITransform) ?? n.addComponent(UITransform);
       n.getComponent(UITransform)!.setContentSize(134,84);
-      const s=n.addComponent(Sprite);s.sizeMode=Sprite.SizeMode.CUSTOM;
+      n.getComponent(UITransform)!.setAnchorPoint(.5,0);
+      const side=new Node('SideFacing');side.parent=n;side.layer=Layers.Enum.UI_2D;
+      const sideTransform=side.addComponent(UITransform);sideTransform.setContentSize(134,84);sideTransform.setAnchorPoint(.5,0);
+      const s=side.addComponent(Sprite);s.sizeMode=Sprite.SizeMode.CUSTOM;
       this.horseNodes.push(n);this.horseSprites.push(s);
+      this.turnViews.push(new HorseTurnView(n,i));
       for(let f=0;f<4;f++){
         const ii=i,ff=f;
         this.loadFrame(`art/horse_${i+1}_${f}`,(err,asset)=>{
@@ -92,8 +105,12 @@ export class GoldenHorseGame extends Component {
     this.textResult=this.makeLabel(this.node,'Result','BET 0   WIN 0',-110,-335,17,'#e7d928');
     this.textHistory=this.makeLabel(this.node,'History','',75,262,14,'#eae854');
     this.makeButton('Clear',312,-335,105,36,'清空',()=>{this.game.clearBets();this.sound('cancel');});
-    this.makeButton('Start',424,-335,100,36,'开始',()=>this.beginRace(), '#246531');
+    this.startText=this.makeButton('Start',424,-335,100,36,'开始',()=>this.beginRace(), '#246531');
     this.textMessage=this.makeLabel(this.node,'Message','',-80,-74,16,'#fff3be');
+    this.resultPanel=this.makeRect('ResultPanel',-45,118,510,184,'#10152e','#f9cc25');
+    this.resultText=this.makeLabel(this.resultPanel,'ResultSummary','',0,0,22,'#fff3be');
+    this.resultText.node.getComponent(UITransform)!.setContentSize(494,170);
+    this.resultPanel.active=false;
     this.audio=this.node.addComponent(AudioSource);
     for (const name of ['bet','cancel','start','win','finish','error','gallop']) {
       resources.load(`audio/${name}`,AudioClip,(err,clip)=>{
@@ -110,6 +127,8 @@ export class GoldenHorseGame extends Component {
       section:this.activeSection,horseFrames:this.frames.flat().filter(Boolean).length,
       backgrounds:Object.keys(this.sceneFrames).length,sounds:Object.keys(this.sounds).length,
       uiCredits:this.textCredits.string,uiResult:this.textResult.string,
+      resultPanel:this.resultPanel.active,startButton:this.startText.string,
+      horsePositions:this.horseNodes.map(node=>({x:node.position.x+480,y:360-node.position.y})),
     }));
   }
   onDestroy():void{
@@ -147,10 +166,11 @@ export class GoldenHorseGame extends Component {
     if(index!==undefined) node.setSiblingIndex(index);
     resources.load(`${path}/spriteFrame`,SpriteFrame,(err,asset)=>{if(!err && asset)spr.spriteFrame=asset;});
   }
-  private makeButton(name:string,x:number,y:number,w:number,h:number,text:string,fn:()=>void,color='#284a75'):void{
+  private makeButton(name:string,x:number,y:number,w:number,h:number,text:string,fn:()=>void,color='#284a75'):Label{
     const node=this.makeRect(name,x,y,w,h,color,'#79b9ef');
-    this.makeLabel(node,name+'Label',text,0,0,19,'#ffffff');
+    const label=this.makeLabel(node,name+'Label',text,0,0,19,'#ffffff');
     node.on(Node.EventType.TOUCH_END,fn,this);
+    return label;
   }
   private bet(key:string,delta:number):void{
     if(this.pendingAssets>0 || this.loadErrors.length)return;
@@ -190,35 +210,43 @@ export class GoldenHorseGame extends Component {
     if(this.activeSection!==section){
       this.activeSection=section;
       const frame=this.sceneFrames[section];if(frame)this.trackSprite.spriteFrame=frame;
+      this.courseView.setSection(section);
     }
     this.textSection.string=this.game.phase==='racing'?trackSectionName(section):'';
     this.finishLabel.string=section==='finish'?'终点 ►':'';
     for(let i=0;i<6;i++) {
-      const progress=this.game.phase==='racing'?this.game.progress[i]:
-        this.game.phase==='result'?1:0;
-      const pose=horsePose(i,progress,this.frameCounter);
-      if(this.game.phase==='result')pose.x=780-(this.game.lastResult?.order.indexOf(i+1)??0)*32;
+      const progress=this.game.phase==='betting'?0:this.game.progress[i];
+      const pose=horsePose(i,progress,this.game.raceElapsed);
       // Race view is in 960x720 top-left coordinates; Cocos UI uses centre origin.
       this.horseNodes[i].setPosition(pose.x-480,360-pose.y,0);
       this.horseNodes[i].setScale(pose.flipX?-pose.scale:pose.scale,pose.scale,1);
       this.horseNodes[i].angle=-pose.angle;
+      this.horseSprites[i].color=new Color(255,255,255,Math.round(255*pose.sideOpacity));
+      this.turnViews[i].render(pose,this.game.raceElapsed);
       const frame=this.game.phase==='racing'?Math.floor(this.frameCounter*9)%4:0;
       if(this.frames[i][frame])this.horseSprites[i].spriteFrame=this.frames[i][frame]!;
     }
+    [...this.horseNodes].sort((a,b)=>b.position.y-a.position.y).forEach((node,index)=>node.setSiblingIndex(index));
     this.refresh();
+    this.testBridge?.sampleFrame();
   }
   private refresh():void{
     this.textCredits.string=`CREDIT ${this.game.credits}`;
     this.textTimer.string=this.game.phase==='betting'?`TIME ${Math.ceil(this.game.countdown)}`:this.game.phase==='racing'?'RACING':'RESULT';
     this.textRace.string=`第 ${this.game.round} 场`;
     this.textResult.string=`BET ${this.game.totalStake}   WIN ${this.game.lastResult?.payout ?? 0}`;
+    this.startText.string=this.game.phase==='result'?'下一场':this.game.phase==='racing'?'比赛中':'开始';
+    this.resultPanel.active=this.game.phase==='result';
+    const result=this.game.lastResult;
+    if(result)this.resultText.string=`比赛结束   冠军 ${result.first}  亚军 ${result.second}\n`+
+      `完整名次：${result.order.join(' → ')}\n组合 ${result.pair}   本局押分 ${result.stake}   返分 +${result.payout}\n按 Enter 或点击「下一场」继续`;
     this.textMessage.string=this.loadErrors.length?`资源加载失败：${this.loadErrors[0]}`:
       this.pendingAssets>0?`正在加载资源 ${36-this.pendingAssets}/36`:this.game.message;
     this.textHistory.string=this.game.history.slice(0,5).map(v=>`${v.first}-${v.second}`).join('  ');
     for (const row of this.grid){
       const c=this.game.getCell(row.key)!;
       row.label.string=`${c.key} ×${c.odds}\n押 ${c.stake}`;
-      row.label.color=HEX(c.stake?'#21ff72':'#ffe94e');
+      row.label.color=HEX(this.game.phase==='result'&&result?.pair===c.key?'#ffffff':c.stake?'#21ff72':'#ffe94e');
     }
   }
 }

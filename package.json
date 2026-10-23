@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build:preview": "node tools/build_preview.cjs",
-    "test:core": "tsc assets/scripts/RaceModel.ts assets/scripts/TrackVisual.ts --outDir .test --target ES2020 --module commonjs --strict --skipLibCheck && node tests/RaceModel.test.cjs && node tests/TrackVisual.test.cjs",
+    "test:core": "tsc assets/scripts/RaceModel.ts assets/scripts/TrackVisual.ts --outDir .test --target ES2020 --module commonjs --strict --skipLibCheck && node tests/RaceModel.test.cjs && node tests/TrackVisual.test.cjs && node tests/RacePresentation.test.cjs",
     "test:preview": "node tests/preview_smoke.test.cjs",
     "test": "npm run test:core && npm run test:preview"
   },

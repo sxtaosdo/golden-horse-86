@@ -2,6 +2,7 @@
  * Golden Horse 86 research prototype: game rules and odds can be revised when
  * an actual recording or ROM becomes available. NO monetary transactions.
  */
+import { COURSE_BREAKS } from './TrackVisual';
 export type Phase = 'betting' | 'racing' | 'result';
 export type PairMode = 'unordered' | 'ordered';
 export interface RaceOptions {
@@ -50,7 +51,7 @@ export class RaceModel {
   private readonly raceSeconds: number;
   private pendingOrder: number[] = [1,2,3,4,5,6];
   /** Visual timeline only; winner selection and payout remain unchanged. */
-  get courseFraction():number { return Math.min(1,this.raceElapsed/(this.raceSeconds+2.2)); }
+  get courseFraction():number { return Math.min(1,this.raceElapsed/(this.raceSeconds-2)); }
 
   constructor(random: () => number = Math.random, opts: RaceOptions = {}) {
     this.random = random;
@@ -142,13 +143,22 @@ export class RaceModel {
       }
     } else if (this.phase === 'racing') {
       this.raceElapsed += dt;
+      const finalStart=(this.raceSeconds-2)*COURSE_BREAKS[4];
       for (let i = 0; i < 6; i++) {
-        const ratio = this.raceElapsed / this.finishTimes[i];
-        const wobble = .023 * Math.sin(this.raceElapsed*2.1 + i*3.7)
-                          * Math.sin(Math.PI*Math.min(1,ratio));
-        this.progress[i] = Math.min(1,Math.max(0,ratio+wobble));
+        if(this.raceElapsed>=finalStart){
+          // One shared scene timeline up to the home straight; actual finish times then separate the field.
+          this.progress[i]=Math.min(1.12,COURSE_BREAKS[4]+(1-COURSE_BREAKS[4])*
+            (this.raceElapsed-finalStart)/(this.finishTimes[i]-finalStart));
+        }else{
+          const fraction=this.courseFraction;
+          let section=0;while(section<3&&fraction>=COURSE_BREAKS[section+1])section++;
+          const start=COURSE_BREAKS[section],end=COURSE_BREAKS[section+1];
+          const local=(fraction-start)/(end-start);
+          const offset=.008*Math.sin(Math.PI*local)**2*Math.sin(this.raceElapsed*1.4+i*.7);
+          this.progress[i]=Math.max(start,Math.min(end-1e-9,fraction+offset));
+        }
       }
-      if (this.raceElapsed >= Math.max(...this.finishTimes)+.15) this.resolve();
+      if (this.raceElapsed >= Math.max(...this.finishTimes)+.65) this.resolve();
     } else {
       this.resultElapsed += dt;
     }
@@ -168,10 +178,10 @@ export class RaceModel {
     if (this.history.length > 20) this.history.length=20;
     this.phase = 'result';
     this.resultElapsed = 0;
-    this.progress.fill(1);
     this.message = `本场 ${pair}  得分 +${payout}   Enter 下一场`;
   }
   nextRound(): void {
+    if(this.phase!=='result')return;
     this.round++;
     this.phase = 'betting';
     this.countdown = this.bettingSeconds;
@@ -179,6 +189,7 @@ export class RaceModel {
     this.resultElapsed = 0;
     this.progress.fill(0);
     this.cells.forEach(c => c.stake = 0);
+    this.lastResult=null;
     this.message = '下一场：请选择号码组合';
   }
 }

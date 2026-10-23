@@ -1,10 +1,18 @@
 import { RaceModel } from '../scripts/RaceModel';
+import { trackSection } from '../scripts/TrackVisual';
 
 /** Preview-only observations and commands. Never changes time, odds or results. */
 export class GoldenHorseTestBridge {
   private recorder:MediaRecorder|null=null;
   private recordingChunks:Blob[]=[];
   private recordingBase64='';
+  private trackedRound=0;
+  private previousPositions:Array<{x:number;y:number}>=[];
+  private previousPhase='betting';
+  private readonly crossings:number[]=[];
+  private backgroundMismatches=0;
+  private settlementJump=0;
+  private resultDrift=0;
   constructor(private readonly model:RaceModel,private readonly observe:()=>Record<string,unknown>){
     (window as Window & {__COCOS_GAME_TEST__?:GoldenHorseTestBridge}).__COCOS_GAME_TEST__=this;
   }
@@ -14,7 +22,31 @@ export class GoldenHorseTestBridge {
       credits:this.model.credits,totalStake:this.model.totalStake,
       result:this.model.lastResult?JSON.parse(JSON.stringify(this.model.lastResult)) as unknown:null,
       historyLength:this.model.history.length,
+      metrics:{finishCount:this.crossings.length,visibleOrder:[...this.crossings],
+        backgroundMismatches:this.backgroundMismatches,settlementJump:this.settlementJump,resultDrift:this.resultDrift},
       progress:[...this.model.progress]};
+  }
+  /** Observe the rendered nodes after each real engine frame; never drives the simulation. */
+  sampleFrame():void{
+    if(this.trackedRound!==this.model.round){
+      this.trackedRound=this.model.round;this.crossings.length=0;this.backgroundMismatches=0;
+      this.settlementJump=0;this.resultDrift=0;this.previousPositions=[];this.previousPhase='betting';
+    }
+    const observation=this.observe();
+    const positions=observation.horsePositions as Array<{x:number;y:number}>;
+    for(let i=0;i<positions.length;i++){
+      if(this.model.phase==='racing'){
+        if(trackSection(this.model.progress[i])!==observation.section)this.backgroundMismatches++;
+        if(positions[i].x>=790&&!this.crossings.includes(i+1)&&observation.section==='finish')this.crossings.push(i+1);
+      }
+      const previous=this.previousPositions[i];
+      if(previous&&this.model.phase==='result'){
+        const distance=Math.hypot(positions[i].x-previous.x,positions[i].y-previous.y);
+        if(this.previousPhase==='racing')this.settlementJump=Math.max(this.settlementJump,distance);
+        else this.resultDrift=Math.max(this.resultDrift,distance);
+      }
+    }
+    this.previousPositions=positions;this.previousPhase=this.model.phase;
   }
   testBet(key:string,amount:number):boolean{
     return this.isReady()&&this.model.placeBet(key,amount);
