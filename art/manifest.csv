@@ -2,3 +2,4 @@ path,role,source,runtime
 art/reference/race/original-betting.png,comparison-reference,"Sohu 86 gameplay recording, viewed 2026-10-23",false
 art/reference/race/original-result.png,comparison-reference,"Sohu 86 gameplay recording, viewed 2026-10-23",false
 art/reference/race/original-single-bend.png,comparison-reference,"Sohu 86 gameplay recording, viewed 2026-10-23",false
+art/work/gameplay/r01/generated/horse-01-side-v01.png,review-sample-unapproved,built-in image_gen; references and full prompt in art/work/gameplay/r01/prompt.md,false
