@@ -1,14 +1,24 @@
 import { JsonAsset, resources, Texture2D, SpriteFrame, Rect } from 'cc';
+import { RaceEventCatalog } from '../events/RaceEventCatalog';
+import { EquipmentCatalog } from './equipment/EquipmentCatalog';
 export interface FrameSpec {x:number;y:number;width:number;height:number;nose:number;}
 export interface HorseSheet {horse:number;view:string;name:string;scale:number;frames:FrameSpec[];}
 export interface PropSpec {name:string;x:number;y:number;width:number;height:number;}
 interface Manifest {version:string;horses:HorseSheet[];props:PropSpec[];}
 export class RaceVisualAssets {
  manifest!:Manifest;readonly frames=new Map<string,SpriteFrame[]>();readonly props=new Map<string,SpriteFrame>();readonly ground=new Map<string,SpriteFrame>();
+ catalog!:RaceEventCatalog;equipmentCatalog!:EquipmentCatalog;readonly equipment=new Map<string,SpriteFrame>();
  private owned:SpriteFrame[]=[];private disposed=false;
  async load():Promise<void>{
   const json=await new Promise<JsonAsset>((resolve,reject)=>resources.load('race/manifest',JsonAsset,(e,a)=>e?reject(e):resolve(a)));if(this.disposed)return;
   const data:unknown=json.json;if(!this.validManifest(data))throw Error('Invalid race artwork manifest');this.manifest=data;
+  const [events,equipment]=await Promise.all([this.json('race/events'),this.json('race/equipment-catalog')]);if(this.disposed)return;
+  this.catalog=RaceEventCatalog.parse(events);this.equipmentCatalog=EquipmentCatalog.parse(equipment);
+  await Promise.all(this.equipmentCatalog.items.map(async item=>{
+   const texture=await this.texture('race/equipment/'+item.id+'/texture');if(this.disposed)return;
+   if(texture.width!==item.sourceWidth||texture.height!==item.sourceHeight)throw Error('Equipment texture dimensions mismatch: '+item.id);
+   this.equipment.set(item.id,this.frame(texture,item.frame));
+  }));
   await Promise.all(this.manifest.horses.map(async sheet=>{const tex=await this.texture('race/'+sheet.name+'/texture');if(!this.disposed)this.frames.set(sheet.name,sheet.frames.map(f=>this.frame(tex,f)));}));
   const tex=await this.texture('race/scenery/texture');if(!this.disposed)for(const p of this.manifest.props)this.props.set(p.name,this.frame(tex,p));
   const ground=await this.texture('race/ground/texture');if(!this.disposed){this.ground.set('dirt',this.frame(ground,{x:2,y:2,width:764,height:1020}));this.ground.set('grass',this.frame(ground,{x:770,y:2,width:764,height:1020}));}
@@ -24,6 +34,7 @@ export class RaceVisualAssets {
   return keys.size===18&&['shrub','flowers','fence','gate','starter','distance','scoreboard','canopy','truck','crates','tree','spectators'].every(n=>names.has(n));
  }
  private texture(url:string):Promise<Texture2D>{return new Promise((resolve,reject)=>resources.load(url,Texture2D,(error,asset)=>error?reject(error):resolve(asset)));}
+ private json(url:string):Promise<unknown>{return new Promise((resolve,reject)=>resources.load(url,JsonAsset,(error,asset)=>error?reject(error):resolve(asset.json)));}
  private frame(texture:Texture2D,spec:{x:number;y:number;width:number;height:number}):SpriteFrame{texture.setFilters(Texture2D.Filter.NEAREST,Texture2D.Filter.NEAREST);const frame=new SpriteFrame();frame.texture=texture;frame.rect=new Rect(spec.x,spec.y,spec.width,spec.height);this.owned.push(frame);return frame;}
  sheet(horse:number,view:string):HorseSheet{return this.manifest.horses.find(s=>s.horse===horse&&s.view===view)!;}
  dispose():void{this.disposed=true;this.owned.forEach(f=>f.destroy());this.owned=[];}

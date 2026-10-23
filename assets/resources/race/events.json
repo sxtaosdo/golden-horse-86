@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "preparationSeconds": 3,
+  "resultDisplaySeconds": 5,
+  "tiers": [
+    {"id":"station","name":"驿站赛","minCredits":0,"equipment":["rail","distance","finish-post","toolbox"]},
+    {"id":"regional","name":"地区赛","minCredits":1000,"equipment":["rail","distance","finish-post","toolbox","camera","mirror","speaker","warning"]},
+    {"id":"championship","name":"冠军赛","minCredits":3000,"equipment":["rail","distance","finish-post","toolbox","camera","mirror","speaker","warning","screen","tractor","ambulance"]}
+  ]
+}

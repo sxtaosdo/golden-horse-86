@@ -1,0 +1,271 @@
+{
+  "viewport": {
+    "width": 360,
+    "height": 640
+  },
+  "steps": [
+    {
+      "type": "wait",
+      "durationMs": 1500
+    },
+    {
+      "type": "ui",
+      "action": "click",
+      "target": "#view-select:visible, body:not(:has(#view-select:visible))"
+    },
+    {
+      "type": "ui",
+      "action": "click",
+      "target": "li[data-device=WebpageFullScreen]:visible, body:not(:has(li[data-device=WebpageFullScreen]:visible))"
+    },
+    {
+      "type": "wait_ready"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "revision": "event-equipment-r05-v1",
+        "horseFrames": 144,
+        "equipment": {
+          "typeCount": 4
+        }
+      }
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "matrix-station-360"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 290,
+      "y": 454
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 180,
+      "y": 327
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "eventId": "regional",
+        "equipment": {
+          "typeCount": 8
+        }
+      },
+      "timeoutMs": 4000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "matrix-regional-360"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 290,
+      "y": 454
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 180,
+      "y": 390
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "eventId": "championship",
+        "equipment": {
+          "typeCount": 11,
+          "screenVisible": true
+        }
+      },
+      "timeoutMs": 4000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "matrix-championship-360"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 40,
+      "y": 375
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 310,
+      "y": 614
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "preparing"
+      },
+      "timeoutMs": 4000
+    },
+    {
+      "type": "screenshot",
+      "label": "matrix-preparing-360"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "racing"
+      },
+      "timeoutMs": 7000
+    },
+    {
+      "type": "wait",
+      "durationMs": 1000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "matrix-live-360"
+    }
+  ]
+}

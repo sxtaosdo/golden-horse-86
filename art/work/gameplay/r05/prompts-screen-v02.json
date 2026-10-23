@@ -1,0 +1,9 @@
+{
+  "tool": "image_gen.imagegen",
+  "reference": "art/work/gameplay/r05/generated/screen.png",
+  "transparent_background": true,
+  "prompt": "Edit this single pixel-art racecourse broadcast screen asset. Keep the same strict front orthographic elevation, dark forest-green metal and warm brass palette, sturdy two legs, hard readable pixel edges, and transparent background. CRITICAL GEOMETRY: the large plain matte-black display opening itself must be a conventional 16:9 rectangle (width 1072 versus height 603 proportional). The source opening is far too short vertically, nearly 3:1. Enlarge the display opening vertically until it is unmistakably 16:9. The display opening should occupy almost the entire frame, with narrow green/brass borders. Shorten the two legs to 10 percent of overall height. Keep entire frame with two feet visible, centered with thin transparent margins. No environment, no text, no logo, no image on the screen, no perspective, no tilt, no luminous aura. ONE independent isolated equipment sprite. This is for an existing 2D game: opening corners must be perfectly axis-aligned so a live game image can be placed directly inside it.",
+  "source": "C:/Users/33272/.codex/generated_images/01a16943-ca46-7a21-9fd6-fb8ef775f3b4/exec-dc01fe2f-1d20-4fc0-a216-a67301681c0e.png",
+  "saved": "art/work/gameplay/r05/generated/screen-v02.png",
+  "selection": "Opening enlarged, but source is approximately 2.29:1. Runtime fits the 16:9 live image with black side bars; no source-pixel edits or stretching. v01 retained as generated/screen.png."
+}

@@ -3,7 +3,8 @@
  * an actual recording or ROM becomes available. NO monetary transactions.
  */
 import { COURSE_BREAKS, FINAL_STRAIGHT_START } from './TrackVisual';
-export type Phase = 'betting' | 'racing' | 'result';
+import { RaceEventId, RaceEventRules, RaceEventTier } from './events/RaceEventCatalog';
+export type Phase = 'betting' | 'preparing' | 'racing' | 'result';
 export type PairMode = 'unordered' | 'ordered';
 export interface RaceOptions {
   pairMode?: PairMode;
@@ -11,10 +12,12 @@ export interface RaceOptions {
   initialCredits?: number;
   odds?: Record<string, number>;
   raceSeconds?: number;
+  events?: RaceEventRules;
 }
 export interface RaceResult {
   first: number; second: number; order: number[];
   pair: string; payout: number; stake: number;
+  round:number;eventId:RaceEventId;
 }
 export interface BetCell {
   first: number; second: number; key: string; odds: number; stake: number;
@@ -42,6 +45,9 @@ export class RaceModel {
   raceElapsed = 0;
   resultElapsed = 0;
   round = 1;
+  preparationRemaining=0;
+  private selectedEventId:RaceEventId='station';
+  private readonly events:RaceEventRules|undefined;
   message = '点击号码组合押分 / Enter 开跑';
   lastResult: RaceResult | null = null;
   history: RaceResult[] = [];
@@ -55,11 +61,13 @@ export class RaceModel {
 
   constructor(random: () => number = Math.random, opts: RaceOptions = {}) {
     this.random = random;
+    this.events=opts.events;
     this.pairMode = opts.pairMode ?? 'unordered';
     this.bettingSeconds = opts.bettingSeconds ?? 30;
     this.countdown = this.bettingSeconds;
     this.credits = opts.initialCredits ?? 500;
     this.raceSeconds = opts.raceSeconds ?? 26;
+    this.chooseHighestEvent();
     for (let a = 1; a <= 6; a++) {
       for (let b = this.pairMode === 'unordered' ? a + 1 : 1; b <= 6; b++) {
         if (a === b) continue;
@@ -75,6 +83,20 @@ export class RaceModel {
     return `${Math.min(a,b)}-${Math.max(a,b)}`;
   }
   get totalStake(): number { return this.cells.reduce((s,c) => s+c.stake,0); }
+  get eventId():RaceEventId{return this.selectedEventId;}
+  get eventTiers():readonly RaceEventTier[]{return this.events?.tiers??[];}
+  get eventName():string{return this.eventTiers.find(t=>t.id===this.selectedEventId)?.name??'';}
+  get eligibilityCredits():number{return this.credits+((this.phase==='betting'||this.phase==='preparing')?this.totalStake:0);}
+  canEnterEvent(id:RaceEventId):boolean{const tier=this.eventTiers.find(t=>t.id===id);return Boolean(tier&&this.eligibilityCredits>=tier.minCredits);}
+  selectEvent(id:RaceEventId):boolean{
+    if(this.phase!=='betting')return false;
+    if(!this.canEnterEvent(id)){this.message='参赛积分不足';return false;}
+    this.selectedEventId=id;this.message='已选择'+this.eventName;return true;
+  }
+  private chooseHighestEvent():void{
+    const tiers=this.events?.tiers;if(!tiers)return;
+    this.selectedEventId=tiers.filter(t=>this.credits>=t.minCredits).slice(-1)[0]?.id??'station';
+  }
   getCell(key: string): BetCell | undefined {
     if (this.pairMode === 'unordered') {
       const parts = key.split('-').map(Number);
@@ -111,12 +133,20 @@ export class RaceModel {
     if (this.phase !== 'betting') return;
     this.cells.forEach(c => c.stake = 0);
     this.credits = 0;
+    this.chooseHighestEvent();
     this.message = '模拟清分完成（不涉及真实交易）';
   }
   startRace(): boolean {
     if (this.phase === 'result') { this.nextRound(); return true; }
     if (this.phase !== 'betting') return false;
     if (!this.totalStake) { this.message = '请先选择号码组合押分'; return false; }
+    if(this.events&&!this.canEnterEvent(this.selectedEventId)){this.message='参赛积分不足，请切换赛事';return false;}
+    this.preparationRemaining=this.events?.preparationSeconds??0;
+    if(this.preparationRemaining>0){this.phase='preparing';this.message='准备起跑';}
+    else this.startRunning();
+    return true;
+  }
+  private startRunning():void{
     const order = [1,2,3,4,5,6];
     for (let i = order.length-1; i > 0; i--) {
       const rand = Math.min(0.999999, Math.max(0, this.random()));
@@ -129,7 +159,6 @@ export class RaceModel {
     this.raceElapsed = 0;
     this.phase = 'racing';
     this.message = '比赛进行中';
-    return true;
   }
   update(dt: number): void {
     if (!Number.isFinite(dt) || dt <= 0) return;
@@ -138,9 +167,12 @@ export class RaceModel {
     if (this.phase === 'betting') {
       this.countdown = Math.max(0,this.countdown-dt);
       if (this.countdown <= 0.00001) {
-        if (this.totalStake) this.startRace();
+        if (this.totalStake) {if(!this.startRace())this.countdown=this.bettingSeconds;}
         else this.countdown = this.bettingSeconds;
       }
+    } else if(this.phase==='preparing'){
+      this.preparationRemaining=Math.max(0,this.preparationRemaining-dt);
+      if(this.preparationRemaining<=.00001){this.preparationRemaining=0;this.startRunning();}
     } else if (this.phase === 'racing') {
       this.raceElapsed += dt;
       const finalStart=(this.raceSeconds-2)*FINAL_STRAIGHT_START;
@@ -179,7 +211,7 @@ export class RaceModel {
     const stake = this.totalStake;
     const payout = winCell ? winCell.stake * winCell.odds : 0;
     this.credits += payout;
-    const result = { first,second,order,pair,payout,stake };
+    const result = { first,second,order,pair,payout,stake,round:this.round,eventId:this.selectedEventId };
     this.lastResult = result;
     this.history.unshift(result);
     if (this.history.length > 20) this.history.length=20;
@@ -196,6 +228,8 @@ export class RaceModel {
     this.resultElapsed = 0;
     this.progress.fill(0);
     this.cells.forEach(c => c.stake = 0);
+    this.preparationRemaining=0;
+    this.chooseHighestEvent();
     this.lastResult=null;
     this.message = '下一场：请选择号码组合';
   }

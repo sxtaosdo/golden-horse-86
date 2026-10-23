@@ -1,0 +1,160 @@
+{
+  "viewport": {
+    "width": 360,
+    "height": 640
+  },
+  "steps": [
+    {
+      "type": "wait",
+      "durationMs": 1500
+    },
+    {
+      "type": "ui",
+      "action": "click",
+      "target": "#view-select:visible, body:not(:has(#view-select:visible))"
+    },
+    {
+      "type": "ui",
+      "action": "click",
+      "target": "li[data-device=WebpageFullScreen]:visible, body:not(:has(li[data-device=WebpageFullScreen]:visible))"
+    },
+    {
+      "type": "wait_ready"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "revision": "event-equipment-r05-v1",
+        "horseFrames": 144,
+        "equipment": {
+          "typeCount": 4
+        }
+      }
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "equipment-station-360"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 290,
+      "y": 454
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "eventPickerVisible": true
+      },
+      "timeoutMs": 3000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "equipment-picker-360"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 305,
+      "y": 212
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 40,
+      "y": 374
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "totalStake": 1
+      },
+      "timeoutMs": 3000
+    },
+    {
+      "type": "keyboard",
+      "key": "Enter",
+      "action": "press"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "preparing"
+      },
+      "timeoutMs": 3000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "equipment-preparing-360"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "racing"
+      },
+      "timeoutMs": 7000
+    },
+    {
+      "type": "wait",
+      "durationMs": 11000
+    },
+    {
+      "type": "screenshot",
+      "label": "equipment-bend-360"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "result"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "equipment-result-360"
+    },
+    {
+      "type": "wait",
+      "durationMs": 6200
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 310,
+      "y": 614
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "betting",
+        "round": 2,
+        "totalStake": 0,
+        "result": null,
+        "equipment": {
+          "typeCount": 4
+        }
+      },
+      "timeoutMs": 3000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    }
+  ]
+}

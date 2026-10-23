@@ -1,0 +1,109 @@
+{
+  "revision": "r05",
+  "status": "integrated-preview-verified",
+  "generator": "image_gen.imagegen",
+  "policy": "11 independent transparent originals, no pixel edits; SpriteFrame rect is runtime-only crop",
+  "assets": [
+    {
+      "id": "rail",
+      "file": "rail.png",
+      "runtime": "assets/resources/race/equipment/rail.png",
+      "source": "art/work/gameplay/r05/generated/rail.png",
+      "width": 1774,
+      "height": 887,
+      "sha256": "ef0601eb911d540fd1479e443e2857ee705cb10c86051609ad3d5793d85a3216"
+    },
+    {
+      "id": "distance",
+      "file": "distance.png",
+      "runtime": "assets/resources/race/equipment/distance.png",
+      "source": "art/work/gameplay/r05/generated/distance.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "b7377a209aaef8389af87255846c34c3aa5de9f0a9c8e0f1ad0061050df8fa93"
+    },
+    {
+      "id": "finish-post",
+      "file": "finish-post.png",
+      "runtime": "assets/resources/race/equipment/finish-post.png",
+      "source": "art/work/gameplay/r05/generated/finish-post.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "8222ae7c73b1692d09647a2f959978e5e4ffb6b22a5c186308c2d5ce03fa2c89"
+    },
+    {
+      "id": "toolbox",
+      "file": "toolbox.png",
+      "runtime": "assets/resources/race/equipment/toolbox.png",
+      "source": "art/work/gameplay/r05/generated/toolbox.png",
+      "width": 1668,
+      "height": 943,
+      "sha256": "35770fac303a7c8a8e6e28aa4125bf04d3a3f2b8ad8ad2bc782b09fb7cea9473"
+    },
+    {
+      "id": "camera",
+      "file": "camera.png",
+      "runtime": "assets/resources/race/equipment/camera.png",
+      "source": "art/work/gameplay/r05/generated/camera.png",
+      "width": 1230,
+      "height": 1278,
+      "sha256": "0c23f7d021d4065fd4801ef9f6464508c3ecf6eb6a073beacdb6d01355f25c69"
+    },
+    {
+      "id": "mirror",
+      "file": "mirror.png",
+      "runtime": "assets/resources/race/equipment/mirror.png",
+      "source": "art/work/gameplay/r05/generated/mirror.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "5484edb20bdf2fb1b57542ef52a9e3666456a1d94c606fd521ff16dc68300a59"
+    },
+    {
+      "id": "speaker",
+      "file": "speaker.png",
+      "runtime": "assets/resources/race/equipment/speaker.png",
+      "source": "art/work/gameplay/r05/generated/speaker.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "1a505a12d2c96213c35ec7b0b210b05627e4b167289f405a48f56066b5eaf3ad"
+    },
+    {
+      "id": "warning",
+      "file": "warning.png",
+      "runtime": "assets/resources/race/equipment/warning.png",
+      "source": "art/work/gameplay/r05/generated/warning.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "4e6368332ab546668853037d92bd14b475ea983b719327b21f7c022a45083444"
+    },
+    {
+      "id": "screen",
+      "file": "screen.png",
+      "runtime": "assets/resources/race/equipment/screen.png",
+      "source": "art/work/gameplay/r05/generated/screen-v02.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "e9d35130880ff5797defa9bb70b852319e292df0efcbc3d31d44f0f9da214604"
+    },
+    {
+      "id": "tractor",
+      "file": "tractor.png",
+      "runtime": "assets/resources/race/equipment/tractor.png",
+      "source": "art/work/gameplay/r05/generated/tractor.png",
+      "width": 1671,
+      "height": 941,
+      "sha256": "f63dc7aca2f4bb15711492fb32919ea13af9b7c1c8e32f99d4e83c864bf8b42a"
+    },
+    {
+      "id": "ambulance",
+      "file": "ambulance.png",
+      "runtime": "assets/resources/race/equipment/ambulance.png",
+      "source": "art/work/gameplay/r05/generated/ambulance.png",
+      "width": 1671,
+      "height": 941,
+      "sha256": "ecc398f90ad24782c7c7ed0d1f14842984638a689d90dd3b2ff9b31bd8822690"
+    }
+  ],
+  "screenNote": "v02 enlarged opening; runtime live image is 16:9 fitted with side bars, source is preserved without pixel editing",
+  "verification": "tests/EVENT_EQUIPMENT.md"
+}

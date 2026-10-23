@@ -1,0 +1,575 @@
+{
+  "schemaVersion": "cocos-tool-result-v1",
+  "operationId": "horse-equipment-build-smoke-20261024-v03-focused",
+  "projectId": "9d8a0041f7873b81",
+  "tool": "build_smoke",
+  "status": "PASSED",
+  "data": {
+    "schemaVersion": "build-smoke-v1",
+    "ok": true,
+    "target": "web-mobile-build",
+    "outputDir": "D:\\code\\shidai3\\P4000\\golden-horse-86\\build\\web-mobile",
+    "indexHash": "67d08b08cd642885d41d5e55142fdc0aceedda9d017578c9fab7363430d93661",
+    "packageHash": "d2c3635a1c69d415eecd6a93371cc7ffc0d67f97670795595bfba048f9c8935c",
+    "startedAt": "2026-10-23T21:52:51.107Z",
+    "finishedAt": "2026-10-23T21:53:39.318Z",
+    "playtest": {
+      "ok": true,
+      "previewUrl": "http://127.0.0.1:12679/",
+      "finalUrl": "http://127.0.0.1:12679/",
+      "gameTestReady": false,
+      "steps": [
+        {
+          "index": 0,
+          "step": {
+            "type": "wait",
+            "durationMs": 10000
+          },
+          "ok": true,
+          "elapsedMs": 10006
+        },
+        {
+          "index": 1,
+          "step": {
+            "type": "pointer",
+            "action": "click",
+            "x": 300,
+            "y": 100
+          },
+          "ok": true,
+          "elapsedMs": 4
+        },
+        {
+          "index": 2,
+          "step": {
+            "type": "wait",
+            "durationMs": 100
+          },
+          "ok": true,
+          "elapsedMs": 104
+        },
+        {
+          "index": 3,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 3
+        },
+        {
+          "index": 4,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 2
+        },
+        {
+          "index": 5,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 6,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 7,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 2
+        },
+        {
+          "index": 8,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 5
+        },
+        {
+          "index": 9,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 10,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 2
+        },
+        {
+          "index": 11,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 12,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 13,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 2
+        },
+        {
+          "index": 14,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 15,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 2
+        },
+        {
+          "index": 16,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 17,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 2
+        },
+        {
+          "index": 18,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 5
+        },
+        {
+          "index": 19,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 20,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 21,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 3
+        },
+        {
+          "index": 22,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 2
+        },
+        {
+          "index": 23,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 24,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 25,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 2
+        },
+        {
+          "index": 26,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 27,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 5
+        },
+        {
+          "index": 28,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 314,
+            "y": 643
+          },
+          "ok": true,
+          "elapsedMs": 36
+        },
+        {
+          "index": 29,
+          "step": {
+            "type": "screenshot",
+            "label": "build-equipment-picker"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-equipment-picker-1792792382100.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-23T21:53:02.101Z"
+          },
+          "elapsedMs": 91
+        },
+        {
+          "index": 30,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 195,
+            "y": 497
+          },
+          "ok": true,
+          "elapsedMs": 34
+        },
+        {
+          "index": 31,
+          "step": {
+            "type": "wait",
+            "durationMs": 150
+          },
+          "ok": true,
+          "elapsedMs": 162
+        },
+        {
+          "index": 32,
+          "step": {
+            "type": "screenshot",
+            "label": "build-equipment-betting"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-equipment-betting-1792792382359.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-23T21:53:02.360Z"
+          },
+          "elapsedMs": 63
+        },
+        {
+          "index": 33,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 45,
+            "y": 550
+          },
+          "ok": true,
+          "elapsedMs": 21
+        },
+        {
+          "index": 34,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 338,
+            "y": 817
+          },
+          "ok": true,
+          "elapsedMs": 37
+        },
+        {
+          "index": 35,
+          "step": {
+            "type": "wait",
+            "durationMs": 700
+          },
+          "ok": true,
+          "elapsedMs": 711
+        },
+        {
+          "index": 36,
+          "step": {
+            "type": "screenshot",
+            "label": "build-equipment-preparing"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-equipment-preparing-1792792383195.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-23T21:53:03.196Z"
+          },
+          "elapsedMs": 67
+        },
+        {
+          "index": 37,
+          "step": {
+            "type": "wait",
+            "durationMs": 3500
+          },
+          "ok": true,
+          "elapsedMs": 3513
+        },
+        {
+          "index": 38,
+          "step": {
+            "type": "screenshot",
+            "label": "build-equipment-live"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-equipment-live-1792792386765.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-23T21:53:06.765Z"
+          },
+          "elapsedMs": 56
+        },
+        {
+          "index": 39,
+          "step": {
+            "type": "wait",
+            "durationMs": 26000
+          },
+          "ok": true,
+          "elapsedMs": 26014
+        },
+        {
+          "index": 40,
+          "step": {
+            "type": "screenshot",
+            "label": "build-equipment-result"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-equipment-result-1792792412848.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-23T21:53:32.849Z"
+          },
+          "elapsedMs": 70
+        },
+        {
+          "index": 41,
+          "step": {
+            "type": "wait",
+            "durationMs": 5500
+          },
+          "ok": true,
+          "elapsedMs": 5515
+        },
+        {
+          "index": 42,
+          "step": {
+            "type": "screenshot",
+            "label": "build-equipment-runout"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-equipment-runout-1792792418429.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-23T21:53:38.430Z"
+          },
+          "elapsedMs": 66
+        },
+        {
+          "index": 43,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 338,
+            "y": 817
+          },
+          "ok": true,
+          "elapsedMs": 24
+        },
+        {
+          "index": 44,
+          "step": {
+            "type": "wait",
+            "durationMs": 500
+          },
+          "ok": true,
+          "elapsedMs": 501
+        },
+        {
+          "index": 45,
+          "step": {
+            "type": "screenshot",
+            "label": "build-equipment-next-round"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-equipment-next-round-1792792419011.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-23T21:53:39.011Z"
+          },
+          "elapsedMs": 56
+        },
+        {
+          "index": 46,
+          "step": {
+            "type": "runtime_snapshot",
+            "required": false
+          },
+          "ok": true,
+          "skipped": true,
+          "elapsedMs": 2
+        }
+      ],
+      "consoleErrors": [],
+      "diagnostics": {
+        "consoleErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "pageErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "requestFailures": {
+          "count": 0,
+          "samples": []
+        },
+        "httpErrors": {
+          "count": 0,
+          "samples": []
+        }
+      },
+      "reportPath": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\playtests\\playtest-1792792419014.json",
+      "message": "Playtest passed (47 step(s))",
+      "session": {
+        "mode": "isolated",
+        "reusedBrowser": false,
+        "reusedPage": false,
+        "pageReset": "none"
+      },
+      "timing": {
+        "setupMs": 702,
+        "stepsMs": 47202,
+        "totalMs": 47905
+      }
+    }
+  },
+  "evidence": []
+}

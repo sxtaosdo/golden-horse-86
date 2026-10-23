@@ -1,12 +1,13 @@
 import { Node, UITransform, Sprite, Layers, Color, Label } from 'cc';
 import { HorsePose, HORSE_NOSE_X, HORSE_SCALE } from '../TrackVisual';
 import { RaceVisualAssets } from './RaceVisualAssets';
+import { RACE_WORLD_LAYER } from './equipment/RaceLayers';
 export class HorseSpriteView {
  readonly node:Node;private sprites:Sprite[]=[];private badge:Label;
  constructor(parent:Node,private horse:number,private assets:RaceVisualAssets){
-  this.node=new Node('Horse_'+horse);this.node.layer=Layers.Enum.UI_2D;this.node.parent=parent;this.node.addComponent(UITransform);
-  const visual=new Node('AuthoredDirection');visual.layer=Layers.Enum.UI_2D;visual.parent=this.node;visual.addComponent(UITransform);const sprite=visual.addComponent(Sprite);sprite.sizeMode=Sprite.SizeMode.CUSTOM;this.sprites.push(sprite);
-  const n=new Node('ReadableNumber');n.layer=Layers.Enum.UI_2D;n.parent=this.node;n.addComponent(UITransform).setContentSize(40,30);n.setPosition(0,124);
+  this.node=new Node('Horse_'+horse);this.node.layer=RACE_WORLD_LAYER;this.node.parent=parent;this.node.addComponent(UITransform);
+  const visual=new Node('AuthoredDirection');visual.layer=RACE_WORLD_LAYER;visual.parent=this.node;visual.addComponent(UITransform);const sprite=visual.addComponent(Sprite);sprite.sizeMode=Sprite.SizeMode.CUSTOM;this.sprites.push(sprite);
+  const n=new Node('ReadableNumber');n.layer=RACE_WORLD_LAYER;n.parent=this.node;n.addComponent(UITransform).setContentSize(40,30);n.setPosition(0,124);
   this.badge=n.addComponent(Label);this.badge.string=String(horse);this.badge.fontSize=23;this.badge.lineHeight=26;this.badge.isBold=true;this.badge.color=new Color(255,231,105);this.badge.horizontalAlign=Label.HorizontalAlign.CENTER;
  }
  render(pose:HorsePose,time:number,running:boolean):void{

@@ -1,0 +1,310 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "steps": [
+    {
+      "type": "wait",
+      "durationMs": 1500
+    },
+    {
+      "type": "ui",
+      "action": "click",
+      "target": "#view-select:visible, body:not(:has(#view-select:visible))"
+    },
+    {
+      "type": "ui",
+      "action": "click",
+      "target": "li[data-device=WebpageFullScreen]:visible, body:not(:has(li[data-device=WebpageFullScreen]:visible))"
+    },
+    {
+      "type": "wait_ready"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "revision": "event-equipment-r05-v1",
+        "horseFrames": 144,
+        "equipment": {
+          "typeCount": 4
+        }
+      }
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 314,
+      "y": 643
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 195,
+      "y": 497
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "eventId": "championship",
+        "equipment": {
+          "typeCount": 11,
+          "screenMode": "betting"
+        }
+      },
+      "timeoutMs": 3000
+    },
+    {
+      "type": "screenshot",
+      "label": "equipment-v02-betting-390"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 45,
+      "y": 550
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 338,
+      "y": 817
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "preparing",
+        "equipment": {
+          "screenMode": "preparing"
+        }
+      },
+      "timeoutMs": 3000
+    },
+    {
+      "type": "screenshot",
+      "label": "equipment-v02-preparing-390"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "racing"
+      },
+      "timeoutMs": 7000
+    },
+    {
+      "type": "wait",
+      "durationMs": 1000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "equipment-v02-live-390"
+    },
+    {
+      "type": "wait",
+      "durationMs": 11000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "wait",
+      "durationMs": 1000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "result"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "equipment-v02-result-390"
+    },
+    {
+      "type": "wait",
+      "durationMs": 5200
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "equipment": {
+          "screenMode": "live"
+        }
+      },
+      "timeoutMs": 3000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "equipment-v02-runout-390"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 338,
+      "y": 817
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "betting",
+        "round": 2
+      },
+      "timeoutMs": 3000
+    },
+    {
+      "type": "wait",
+      "durationMs": 100
+    },
+    {
+      "type": "get_state",
+      "required": true
+    }
+  ]
+}

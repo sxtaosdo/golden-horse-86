@@ -1,0 +1,214 @@
+{
+  "viewport": {
+    "width": 430,
+    "height": 932
+  },
+  "steps": [
+    {
+      "type": "wait",
+      "durationMs": 1500
+    },
+    {
+      "type": "ui",
+      "action": "click",
+      "target": "#view-select:visible, body:not(:has(#view-select:visible))"
+    },
+    {
+      "type": "ui",
+      "action": "click",
+      "target": "li[data-device=WebpageFullScreen]:visible, body:not(:has(li[data-device=WebpageFullScreen]:visible))"
+    },
+    {
+      "type": "wait_ready"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "revision": "event-equipment-r05-v1",
+        "horseFrames": 144,
+        "equipment": {
+          "typeCount": 4
+        }
+      }
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 347,
+      "y": 710
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 215,
+      "y": 475
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "eventId": "regional",
+        "equipment": {
+          "typeCount": 8
+        }
+      },
+      "timeoutMs": 3000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "equipment-regional-430"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 50,
+      "y": 611
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "eligibilityCredits": 1000,
+        "credits": 999,
+        "totalStake": 1
+      },
+      "timeoutMs": 3000
+    },
+    {
+      "type": "wait",
+      "durationMs": 25000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "preparing"
+      },
+      "timeoutMs": 10000
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 50,
+      "y": 611
+    },
+    {
+      "type": "keyboard",
+      "key": "Space",
+      "action": "press"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "preparing",
+        "totalStake": 1,
+        "eventId": "regional"
+      },
+      "timeoutMs": 3000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "equipment-auto-preparing-430"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "racing"
+      },
+      "timeoutMs": 7000
+    },
+    {
+      "type": "wait",
+      "durationMs": 11000
+    },
+    {
+      "type": "screenshot",
+      "label": "equipment-regional-bend-430"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "result"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "equipment-regional-result-430"
+    },
+    {
+      "type": "wait",
+      "durationMs": 6200
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 370,
+      "y": 902
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "betting",
+        "round": 2,
+        "totalStake": 0,
+        "result": null
+      },
+      "timeoutMs": 3000
+    },
+    {
+      "type": "wait",
+      "durationMs": 100
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "equipment-next-round-430"
+    }
+  ]
+}

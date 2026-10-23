@@ -1,0 +1,1480 @@
+[
+  {
+    "report": "equipment-390",
+    "status": "PASSED",
+    "steps": 81,
+    "diagnostics": {
+      "consoleErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "pageErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "requestFailures": {
+        "count": 0,
+        "samples": []
+      },
+      "httpErrors": {
+        "count": 0,
+        "samples": []
+      }
+    },
+    "screenshots": [
+      "tests/evidence/event-equipment/equipment-station-390.png",
+      "tests/evidence/event-equipment/equipment-picker-locked-390.png",
+      "tests/evidence/event-equipment/equipment-regional-390.png",
+      "tests/evidence/event-equipment/equipment-championship-betting-390.png",
+      "tests/evidence/event-equipment/equipment-championship-preparing-390.png",
+      "tests/evidence/event-equipment/equipment-championship-live-390.png",
+      "tests/evidence/event-equipment/equipment-championship-bend-390.png",
+      "tests/evidence/event-equipment/equipment-championship-result-390.png",
+      "tests/evidence/event-equipment/equipment-championship-runout-390.png",
+      "tests/evidence/event-equipment/equipment-station-reset-390.png"
+    ],
+    "states": [
+      {
+        "phase": "betting",
+        "round": 1,
+        "eventId": "station",
+        "credits": 500,
+        "stake": 0,
+        "equipment": {
+          "tier": "station",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox"
+          ],
+          "typeCount": 4,
+          "screenMode": "off",
+          "screenVisible": false,
+          "broadcastAllocated": false,
+          "broadcastSamples": 0
+        },
+        "metrics": {
+          "finishCount": 0,
+          "visibleOrder": [],
+          "backgroundMismatches": 0,
+          "settlementJump": 0,
+          "resultDrift": 0,
+          "worldChanges": 0,
+          "maxCameraStep": 0
+        },
+        "worldId": "Node.678"
+      },
+      {
+        "phase": "betting",
+        "round": 1,
+        "eventId": "championship",
+        "credits": 3000,
+        "stake": 0,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance"
+          ],
+          "typeCount": 11,
+          "screenMode": "betting",
+          "screenVisible": true,
+          "broadcastAllocated": true,
+          "broadcastSamples": 0
+        },
+        "metrics": {
+          "finishCount": 0,
+          "visibleOrder": [],
+          "backgroundMismatches": 0,
+          "settlementJump": 0,
+          "resultDrift": 0,
+          "worldChanges": 0,
+          "maxCameraStep": 0
+        },
+        "worldId": "Node.678"
+      },
+      {
+        "phase": "preparing",
+        "round": 1,
+        "eventId": "championship",
+        "credits": 2999,
+        "stake": 1,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance"
+          ],
+          "typeCount": 11,
+          "screenMode": "preparing",
+          "screenVisible": true,
+          "broadcastAllocated": true,
+          "broadcastSamples": 4
+        },
+        "metrics": {
+          "finishCount": 0,
+          "visibleOrder": [],
+          "backgroundMismatches": 0,
+          "settlementJump": 0,
+          "resultDrift": 0,
+          "worldChanges": 0,
+          "maxCameraStep": 0
+        },
+        "worldId": "Node.678"
+      },
+      {
+        "phase": "racing",
+        "round": 1,
+        "eventId": "championship",
+        "credits": 2999,
+        "stake": 1,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance"
+          ],
+          "typeCount": 11,
+          "screenMode": "live",
+          "screenVisible": true,
+          "broadcastAllocated": true,
+          "broadcastSamples": 77
+        },
+        "metrics": {
+          "finishCount": 0,
+          "visibleOrder": [],
+          "backgroundMismatches": 0,
+          "settlementJump": 0,
+          "resultDrift": 0,
+          "worldChanges": 0,
+          "maxCameraStep": 3.312097036233695
+        },
+        "worldId": "Node.678"
+      },
+      {
+        "phase": "racing",
+        "round": 1,
+        "eventId": "championship",
+        "credits": 2999,
+        "stake": 1,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance"
+          ],
+          "typeCount": 11,
+          "screenMode": "live",
+          "screenVisible": false,
+          "broadcastAllocated": true,
+          "broadcastSamples": 125
+        },
+        "metrics": {
+          "finishCount": 0,
+          "visibleOrder": [],
+          "backgroundMismatches": 0,
+          "settlementJump": 0,
+          "resultDrift": 0,
+          "worldChanges": 0,
+          "maxCameraStep": 3.6504295288898447
+        },
+        "worldId": "Node.678"
+      },
+      {
+        "phase": "result",
+        "round": 1,
+        "eventId": "championship",
+        "credits": 2999,
+        "stake": 1,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance"
+          ],
+          "typeCount": 11,
+          "screenMode": "result",
+          "screenVisible": true,
+          "broadcastAllocated": true,
+          "broadcastSamples": 236
+        },
+        "metrics": {
+          "finishCount": 6,
+          "visibleOrder": [
+            4,
+            1,
+            2,
+            5,
+            6,
+            3
+          ],
+          "backgroundMismatches": 0,
+          "settlementJump": 3.224355310462275,
+          "resultDrift": 3.2058817386274394,
+          "worldChanges": 0,
+          "maxCameraStep": 4.3403013763031595
+        },
+        "worldId": "Node.678"
+      },
+      {
+        "phase": "result",
+        "round": 1,
+        "eventId": "championship",
+        "credits": 2999,
+        "stake": 1,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance"
+          ],
+          "typeCount": 11,
+          "screenMode": "live",
+          "screenVisible": true,
+          "broadcastAllocated": true,
+          "broadcastSamples": 303
+        },
+        "metrics": {
+          "finishCount": 6,
+          "visibleOrder": [
+            4,
+            1,
+            2,
+            5,
+            6,
+            3
+          ],
+          "backgroundMismatches": 0,
+          "settlementJump": 3.224355310462275,
+          "resultDrift": 3.3596494476115795,
+          "worldChanges": 0,
+          "maxCameraStep": 4.3403013763031595
+        },
+        "worldId": "Node.678"
+      },
+      {
+        "phase": "betting",
+        "round": 2,
+        "eventId": "regional",
+        "credits": 2999,
+        "stake": 0,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance"
+          ],
+          "typeCount": 11,
+          "screenMode": "live",
+          "screenVisible": true,
+          "broadcastAllocated": true,
+          "broadcastSamples": 305
+        },
+        "metrics": {
+          "finishCount": 6,
+          "visibleOrder": [
+            4,
+            1,
+            2,
+            5,
+            6,
+            3
+          ],
+          "backgroundMismatches": 0,
+          "settlementJump": 3.224355310462275,
+          "resultDrift": 3.3596494476115795,
+          "worldChanges": 0,
+          "maxCameraStep": 4.3403013763031595
+        },
+        "worldId": "Node.678"
+      },
+      {
+        "phase": "betting",
+        "round": 2,
+        "eventId": "station",
+        "credits": 2999,
+        "stake": 0,
+        "equipment": {
+          "tier": "station",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox"
+          ],
+          "typeCount": 4,
+          "screenMode": "off",
+          "screenVisible": false,
+          "broadcastAllocated": false,
+          "broadcastSamples": 0
+        },
+        "metrics": {
+          "finishCount": 0,
+          "visibleOrder": [],
+          "backgroundMismatches": 0,
+          "settlementJump": 0,
+          "resultDrift": 0,
+          "worldChanges": 0,
+          "maxCameraStep": 0
+        },
+        "worldId": "Node.678"
+      }
+    ]
+  },
+  {
+    "report": "equipment-360",
+    "status": "PASSED",
+    "steps": 28,
+    "diagnostics": {
+      "consoleErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "pageErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "requestFailures": {
+        "count": 0,
+        "samples": []
+      },
+      "httpErrors": {
+        "count": 0,
+        "samples": []
+      }
+    },
+    "screenshots": [
+      "tests/evidence/event-equipment/equipment-station-360.png",
+      "tests/evidence/event-equipment/equipment-picker-360.png",
+      "tests/evidence/event-equipment/equipment-preparing-360.png",
+      "tests/evidence/event-equipment/equipment-bend-360.png",
+      "tests/evidence/event-equipment/equipment-result-360.png"
+    ],
+    "states": [
+      {
+        "phase": "betting",
+        "round": 1,
+        "eventId": "station",
+        "credits": 500,
+        "stake": 0,
+        "equipment": {
+          "tier": "station",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox"
+          ],
+          "typeCount": 4,
+          "screenMode": "off",
+          "screenVisible": false,
+          "broadcastAllocated": false,
+          "broadcastSamples": 0
+        },
+        "metrics": {
+          "finishCount": 0,
+          "visibleOrder": [],
+          "backgroundMismatches": 0,
+          "settlementJump": 0,
+          "resultDrift": 0,
+          "worldChanges": 0,
+          "maxCameraStep": 0
+        },
+        "worldId": "Node.478"
+      },
+      {
+        "phase": "betting",
+        "round": 1,
+        "eventId": "station",
+        "credits": 500,
+        "stake": 0,
+        "equipment": {
+          "tier": "station",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox"
+          ],
+          "typeCount": 4,
+          "screenMode": "off",
+          "screenVisible": false,
+          "broadcastAllocated": false,
+          "broadcastSamples": 0
+        },
+        "metrics": {
+          "finishCount": 0,
+          "visibleOrder": [],
+          "backgroundMismatches": 0,
+          "settlementJump": 0,
+          "resultDrift": 0,
+          "worldChanges": 0,
+          "maxCameraStep": 0
+        },
+        "worldId": "Node.478"
+      },
+      {
+        "phase": "preparing",
+        "round": 1,
+        "eventId": "station",
+        "credits": 499,
+        "stake": 1,
+        "equipment": {
+          "tier": "station",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox"
+          ],
+          "typeCount": 4,
+          "screenMode": "off",
+          "screenVisible": false,
+          "broadcastAllocated": false,
+          "broadcastSamples": 0
+        },
+        "metrics": {
+          "finishCount": 0,
+          "visibleOrder": [],
+          "backgroundMismatches": 0,
+          "settlementJump": 0,
+          "resultDrift": 0,
+          "worldChanges": 0,
+          "maxCameraStep": 0
+        },
+        "worldId": "Node.478"
+      },
+      {
+        "phase": "result",
+        "round": 1,
+        "eventId": "station",
+        "credits": 499,
+        "stake": 1,
+        "equipment": {
+          "tier": "station",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox"
+          ],
+          "typeCount": 4,
+          "screenMode": "off",
+          "screenVisible": false,
+          "broadcastAllocated": false,
+          "broadcastSamples": 0
+        },
+        "metrics": {
+          "finishCount": 6,
+          "visibleOrder": [
+            4,
+            5,
+            3,
+            6,
+            1,
+            2
+          ],
+          "backgroundMismatches": 0,
+          "settlementJump": 3.2247106050504666,
+          "resultDrift": 3.1165894745597815,
+          "worldChanges": 0,
+          "maxCameraStep": 4.44909636461216
+        },
+        "worldId": "Node.478"
+      },
+      {
+        "phase": "betting",
+        "round": 2,
+        "eventId": "station",
+        "credits": 499,
+        "stake": 0,
+        "equipment": {
+          "tier": "station",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox"
+          ],
+          "typeCount": 4,
+          "screenMode": "off",
+          "screenVisible": false,
+          "broadcastAllocated": false,
+          "broadcastSamples": 0
+        },
+        "metrics": {
+          "finishCount": 6,
+          "visibleOrder": [
+            4,
+            5,
+            3,
+            6,
+            1,
+            2
+          ],
+          "backgroundMismatches": 0,
+          "settlementJump": 3.2247106050504666,
+          "resultDrift": 3.341653086093204,
+          "worldChanges": 0,
+          "maxCameraStep": 4.44909636461216
+        },
+        "worldId": "Node.478"
+      }
+    ]
+  },
+  {
+    "report": "equipment-430",
+    "status": "PASSED",
+    "steps": 38,
+    "diagnostics": {
+      "consoleErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "pageErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "requestFailures": {
+        "count": 0,
+        "samples": []
+      },
+      "httpErrors": {
+        "count": 0,
+        "samples": []
+      }
+    },
+    "screenshots": [
+      "tests/evidence/event-equipment/equipment-regional-430.png",
+      "tests/evidence/event-equipment/equipment-auto-preparing-430.png",
+      "tests/evidence/event-equipment/equipment-regional-bend-430.png",
+      "tests/evidence/event-equipment/equipment-regional-result-430.png",
+      "tests/evidence/event-equipment/equipment-next-round-430.png"
+    ],
+    "states": [
+      {
+        "phase": "betting",
+        "round": 1,
+        "eventId": "station",
+        "credits": 500,
+        "stake": 0,
+        "equipment": {
+          "tier": "station",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox"
+          ],
+          "typeCount": 4,
+          "screenMode": "off",
+          "screenVisible": false,
+          "broadcastAllocated": false,
+          "broadcastSamples": 0
+        },
+        "metrics": {
+          "finishCount": 0,
+          "visibleOrder": [],
+          "backgroundMismatches": 0,
+          "settlementJump": 0,
+          "resultDrift": 0,
+          "worldChanges": 0,
+          "maxCameraStep": 0
+        },
+        "worldId": "Node.923"
+      },
+      {
+        "phase": "betting",
+        "round": 1,
+        "eventId": "regional",
+        "credits": 1000,
+        "stake": 0,
+        "equipment": {
+          "tier": "regional",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning"
+          ],
+          "typeCount": 8,
+          "screenMode": "off",
+          "screenVisible": false,
+          "broadcastAllocated": false,
+          "broadcastSamples": 0
+        },
+        "metrics": {
+          "finishCount": 0,
+          "visibleOrder": [],
+          "backgroundMismatches": 0,
+          "settlementJump": 0,
+          "resultDrift": 0,
+          "worldChanges": 0,
+          "maxCameraStep": 0
+        },
+        "worldId": "Node.923"
+      },
+      {
+        "phase": "betting",
+        "round": 1,
+        "eventId": "regional",
+        "credits": 999,
+        "stake": 1,
+        "equipment": {
+          "tier": "regional",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning"
+          ],
+          "typeCount": 8,
+          "screenMode": "off",
+          "screenVisible": false,
+          "broadcastAllocated": false,
+          "broadcastSamples": 0
+        },
+        "metrics": {
+          "finishCount": 0,
+          "visibleOrder": [],
+          "backgroundMismatches": 0,
+          "settlementJump": 0,
+          "resultDrift": 0,
+          "worldChanges": 0,
+          "maxCameraStep": 0
+        },
+        "worldId": "Node.923"
+      },
+      {
+        "phase": "preparing",
+        "round": 1,
+        "eventId": "regional",
+        "credits": 999,
+        "stake": 1,
+        "equipment": {
+          "tier": "regional",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning"
+          ],
+          "typeCount": 8,
+          "screenMode": "off",
+          "screenVisible": false,
+          "broadcastAllocated": false,
+          "broadcastSamples": 0
+        },
+        "metrics": {
+          "finishCount": 0,
+          "visibleOrder": [],
+          "backgroundMismatches": 0,
+          "settlementJump": 0,
+          "resultDrift": 0,
+          "worldChanges": 0,
+          "maxCameraStep": 0
+        },
+        "worldId": "Node.923"
+      },
+      {
+        "phase": "result",
+        "round": 1,
+        "eventId": "regional",
+        "credits": 999,
+        "stake": 1,
+        "equipment": {
+          "tier": "regional",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning"
+          ],
+          "typeCount": 8,
+          "screenMode": "off",
+          "screenVisible": false,
+          "broadcastAllocated": false,
+          "broadcastSamples": 0
+        },
+        "metrics": {
+          "finishCount": 6,
+          "visibleOrder": [
+            3,
+            5,
+            2,
+            6,
+            4,
+            1
+          ],
+          "backgroundMismatches": 0,
+          "settlementJump": 3.0708211346845045,
+          "resultDrift": 3.228093013602199,
+          "worldChanges": 0,
+          "maxCameraStep": 4.341223647918241
+        },
+        "worldId": "Node.923"
+      },
+      {
+        "phase": "betting",
+        "round": 2,
+        "eventId": "station",
+        "credits": 999,
+        "stake": 0,
+        "equipment": {
+          "tier": "station",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox"
+          ],
+          "typeCount": 4,
+          "screenMode": "off",
+          "screenVisible": false,
+          "broadcastAllocated": false,
+          "broadcastSamples": 0
+        },
+        "metrics": {
+          "finishCount": 0,
+          "visibleOrder": [],
+          "backgroundMismatches": 0,
+          "settlementJump": 0,
+          "resultDrift": 0,
+          "worldChanges": 0,
+          "maxCameraStep": 0
+        },
+        "worldId": "Node.923"
+      }
+    ]
+  },
+  {
+    "report": "equipment-screen-v02",
+    "status": "PASSED",
+    "steps": 58,
+    "diagnostics": {
+      "consoleErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "pageErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "requestFailures": {
+        "count": 0,
+        "samples": []
+      },
+      "httpErrors": {
+        "count": 0,
+        "samples": []
+      }
+    },
+    "screenshots": [
+      "tests/evidence/event-equipment/equipment-v02-betting-390.png",
+      "tests/evidence/event-equipment/equipment-v02-preparing-390.png",
+      "tests/evidence/event-equipment/equipment-v02-live-390.png",
+      "tests/evidence/event-equipment/equipment-v02-result-390.png",
+      "tests/evidence/event-equipment/equipment-v02-runout-390.png"
+    ],
+    "states": [
+      {
+        "phase": "betting",
+        "round": 1,
+        "eventId": "station",
+        "credits": 500,
+        "stake": 0,
+        "equipment": {
+          "tier": "station",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox"
+          ],
+          "typeCount": 4,
+          "screenMode": "off",
+          "screenVisible": false,
+          "broadcastAllocated": false,
+          "broadcastSamples": 0
+        },
+        "metrics": {
+          "finishCount": 0,
+          "visibleOrder": [],
+          "backgroundMismatches": 0,
+          "settlementJump": 0,
+          "resultDrift": 0,
+          "worldChanges": 0,
+          "maxCameraStep": 0
+        },
+        "worldId": "Node.444"
+      },
+      {
+        "phase": "racing",
+        "round": 1,
+        "eventId": "championship",
+        "credits": 2999,
+        "stake": 1,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance"
+          ],
+          "typeCount": 11,
+          "screenMode": "live",
+          "screenVisible": true,
+          "broadcastAllocated": true,
+          "broadcastSamples": 61
+        },
+        "metrics": {
+          "finishCount": 0,
+          "visibleOrder": [],
+          "backgroundMismatches": 0,
+          "settlementJump": 0,
+          "resultDrift": 0,
+          "worldChanges": 0,
+          "maxCameraStep": 3.3299040091473557
+        },
+        "worldId": "Node.444"
+      },
+      {
+        "phase": "racing",
+        "round": 1,
+        "eventId": "championship",
+        "credits": 2999,
+        "stake": 1,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance"
+          ],
+          "typeCount": 11,
+          "screenMode": "live",
+          "screenVisible": false,
+          "broadcastAllocated": true,
+          "broadcastSamples": 126
+        },
+        "metrics": {
+          "finishCount": 0,
+          "visibleOrder": [],
+          "backgroundMismatches": 0,
+          "settlementJump": 0,
+          "resultDrift": 0,
+          "worldChanges": 0,
+          "maxCameraStep": 3.3655179556383246
+        },
+        "worldId": "Node.444"
+      },
+      {
+        "phase": "racing",
+        "round": 1,
+        "eventId": "championship",
+        "credits": 2999,
+        "stake": 1,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance"
+          ],
+          "typeCount": 11,
+          "screenMode": "live",
+          "screenVisible": false,
+          "broadcastAllocated": true,
+          "broadcastSamples": 126
+        },
+        "metrics": {
+          "finishCount": 0,
+          "visibleOrder": [],
+          "backgroundMismatches": 0,
+          "settlementJump": 0,
+          "resultDrift": 0,
+          "worldChanges": 0,
+          "maxCameraStep": 3.3655179556383246
+        },
+        "worldId": "Node.444"
+      },
+      {
+        "phase": "result",
+        "round": 1,
+        "eventId": "championship",
+        "credits": 2999,
+        "stake": 1,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance"
+          ],
+          "typeCount": 11,
+          "screenMode": "result",
+          "screenVisible": true,
+          "broadcastAllocated": true,
+          "broadcastSamples": 237
+        },
+        "metrics": {
+          "finishCount": 6,
+          "visibleOrder": [
+            6,
+            5,
+            1,
+            4,
+            2,
+            3
+          ],
+          "backgroundMismatches": 0,
+          "settlementJump": 3.2195121591531013,
+          "resultDrift": 3.2100731971956464,
+          "worldChanges": 0,
+          "maxCameraStep": 6.052651176759758
+        },
+        "worldId": "Node.444"
+      },
+      {
+        "phase": "result",
+        "round": 1,
+        "eventId": "championship",
+        "credits": 2999,
+        "stake": 1,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance"
+          ],
+          "typeCount": 11,
+          "screenMode": "live",
+          "screenVisible": true,
+          "broadcastAllocated": true,
+          "broadcastSamples": 242
+        },
+        "metrics": {
+          "finishCount": 6,
+          "visibleOrder": [
+            6,
+            5,
+            1,
+            4,
+            2,
+            3
+          ],
+          "backgroundMismatches": 0,
+          "settlementJump": 3.2195121591531013,
+          "resultDrift": 4.836077760811301,
+          "worldChanges": 0,
+          "maxCameraStep": 6.052651176759758
+        },
+        "worldId": "Node.444"
+      },
+      {
+        "phase": "betting",
+        "round": 2,
+        "eventId": "regional",
+        "credits": 2999,
+        "stake": 0,
+        "equipment": {
+          "tier": "regional",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning"
+          ],
+          "typeCount": 8,
+          "screenMode": "off",
+          "screenVisible": false,
+          "broadcastAllocated": false,
+          "broadcastSamples": 0
+        },
+        "metrics": {
+          "finishCount": 0,
+          "visibleOrder": [],
+          "backgroundMismatches": 0,
+          "settlementJump": 0,
+          "resultDrift": 0,
+          "worldChanges": 0,
+          "maxCameraStep": 0
+        },
+        "worldId": "Node.444"
+      }
+    ]
+  },
+  {
+    "report": "equipment-matrix-360",
+    "status": "PASSED",
+    "steps": 50,
+    "diagnostics": {
+      "consoleErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "pageErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "requestFailures": {
+        "count": 0,
+        "samples": []
+      },
+      "httpErrors": {
+        "count": 0,
+        "samples": []
+      }
+    },
+    "screenshots": [
+      "tests/evidence/event-equipment/matrix-station-360.png",
+      "tests/evidence/event-equipment/matrix-regional-360.png",
+      "tests/evidence/event-equipment/matrix-championship-360.png",
+      "tests/evidence/event-equipment/matrix-preparing-360.png",
+      "tests/evidence/event-equipment/matrix-live-360.png"
+    ],
+    "states": [
+      {
+        "phase": "betting",
+        "round": 1,
+        "eventId": "station",
+        "credits": 500,
+        "stake": 0,
+        "equipment": {
+          "tier": "station",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox"
+          ],
+          "typeCount": 4,
+          "screenMode": "off",
+          "screenVisible": false,
+          "broadcastAllocated": false,
+          "broadcastSamples": 0
+        },
+        "metrics": {
+          "finishCount": 0,
+          "visibleOrder": [],
+          "backgroundMismatches": 0,
+          "settlementJump": 0,
+          "resultDrift": 0,
+          "worldChanges": 0,
+          "maxCameraStep": 0
+        },
+        "worldId": "Node.389"
+      },
+      {
+        "phase": "betting",
+        "round": 1,
+        "eventId": "regional",
+        "credits": 3000,
+        "stake": 0,
+        "equipment": {
+          "tier": "regional",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning"
+          ],
+          "typeCount": 8,
+          "screenMode": "off",
+          "screenVisible": false,
+          "broadcastAllocated": false,
+          "broadcastSamples": 0
+        },
+        "metrics": {
+          "finishCount": 0,
+          "visibleOrder": [],
+          "backgroundMismatches": 0,
+          "settlementJump": 0,
+          "resultDrift": 0,
+          "worldChanges": 0,
+          "maxCameraStep": 0
+        },
+        "worldId": "Node.389"
+      },
+      {
+        "phase": "betting",
+        "round": 1,
+        "eventId": "championship",
+        "credits": 3000,
+        "stake": 0,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance"
+          ],
+          "typeCount": 11,
+          "screenMode": "betting",
+          "screenVisible": true,
+          "broadcastAllocated": true,
+          "broadcastSamples": 0
+        },
+        "metrics": {
+          "finishCount": 0,
+          "visibleOrder": [],
+          "backgroundMismatches": 0,
+          "settlementJump": 0,
+          "resultDrift": 0,
+          "worldChanges": 0,
+          "maxCameraStep": 0
+        },
+        "worldId": "Node.389"
+      },
+      {
+        "phase": "racing",
+        "round": 1,
+        "eventId": "championship",
+        "credits": 2999,
+        "stake": 1,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance"
+          ],
+          "typeCount": 11,
+          "screenMode": "live",
+          "screenVisible": true,
+          "broadcastAllocated": true,
+          "broadcastSamples": 62
+        },
+        "metrics": {
+          "finishCount": 0,
+          "visibleOrder": [],
+          "backgroundMismatches": 0,
+          "settlementJump": 0,
+          "resultDrift": 0,
+          "worldChanges": 0,
+          "maxCameraStep": 3.312097035570332
+        },
+        "worldId": "Node.389"
+      }
+    ]
+  },
+  {
+    "report": "equipment-matrix-430",
+    "status": "PASSED",
+    "steps": 50,
+    "diagnostics": {
+      "consoleErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "pageErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "requestFailures": {
+        "count": 0,
+        "samples": []
+      },
+      "httpErrors": {
+        "count": 0,
+        "samples": []
+      }
+    },
+    "screenshots": [
+      "tests/evidence/event-equipment/matrix-station-430.png",
+      "tests/evidence/event-equipment/matrix-regional-430.png",
+      "tests/evidence/event-equipment/matrix-championship-430.png",
+      "tests/evidence/event-equipment/matrix-preparing-430.png",
+      "tests/evidence/event-equipment/matrix-live-430.png"
+    ],
+    "states": [
+      {
+        "phase": "betting",
+        "round": 1,
+        "eventId": "station",
+        "credits": 500,
+        "stake": 0,
+        "equipment": {
+          "tier": "station",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox"
+          ],
+          "typeCount": 4,
+          "screenMode": "off",
+          "screenVisible": false,
+          "broadcastAllocated": false,
+          "broadcastSamples": 0
+        },
+        "metrics": {
+          "finishCount": 0,
+          "visibleOrder": [],
+          "backgroundMismatches": 0,
+          "settlementJump": 0,
+          "resultDrift": 0,
+          "worldChanges": 0,
+          "maxCameraStep": 0
+        },
+        "worldId": "Node.246"
+      },
+      {
+        "phase": "betting",
+        "round": 1,
+        "eventId": "regional",
+        "credits": 3000,
+        "stake": 0,
+        "equipment": {
+          "tier": "regional",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning"
+          ],
+          "typeCount": 8,
+          "screenMode": "off",
+          "screenVisible": false,
+          "broadcastAllocated": false,
+          "broadcastSamples": 0
+        },
+        "metrics": {
+          "finishCount": 0,
+          "visibleOrder": [],
+          "backgroundMismatches": 0,
+          "settlementJump": 0,
+          "resultDrift": 0,
+          "worldChanges": 0,
+          "maxCameraStep": 0
+        },
+        "worldId": "Node.246"
+      },
+      {
+        "phase": "betting",
+        "round": 1,
+        "eventId": "championship",
+        "credits": 3000,
+        "stake": 0,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance"
+          ],
+          "typeCount": 11,
+          "screenMode": "betting",
+          "screenVisible": true,
+          "broadcastAllocated": true,
+          "broadcastSamples": 0
+        },
+        "metrics": {
+          "finishCount": 0,
+          "visibleOrder": [],
+          "backgroundMismatches": 0,
+          "settlementJump": 0,
+          "resultDrift": 0,
+          "worldChanges": 0,
+          "maxCameraStep": 0
+        },
+        "worldId": "Node.246"
+      },
+      {
+        "phase": "racing",
+        "round": 1,
+        "eventId": "championship",
+        "credits": 2999,
+        "stake": 1,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance"
+          ],
+          "typeCount": 11,
+          "screenMode": "live",
+          "screenVisible": true,
+          "broadcastAllocated": true,
+          "broadcastSamples": 61
+        },
+        "metrics": {
+          "finishCount": 0,
+          "visibleOrder": [],
+          "backgroundMismatches": 0,
+          "settlementJump": 0,
+          "resultDrift": 0,
+          "worldChanges": 0,
+          "maxCameraStep": 3.2408691432524392
+        },
+        "worldId": "Node.246"
+      }
+    ]
+  }
+]

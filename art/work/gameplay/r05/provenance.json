@@ -1,0 +1,62 @@
+{
+  "generator": "image_gen.imagegen",
+  "date": "2026-10-24",
+  "reference": "tests/evidence/web-mobile/build-straight.png",
+  "records": [
+    {
+      "id": "screen",
+      "source": "C:\\Users\\33272\\.codex\\generated_images\\01a16943-ca46-7a21-9fd6-fb8ef775f3b4\\exec-f9e75238-ff73-42ab-964c-4f1fe5ff9886.png",
+      "path": "D:/code/shidai3/P4000/golden-horse-86/art/work/gameplay/r05/generated/screen.png"
+    },
+    {
+      "id": "finish-post",
+      "source": "C:\\Users\\33272\\.codex\\generated_images\\01a16943-ca46-7a21-9fd6-fb8ef775f3b4\\exec-ea540c50-738d-41c3-a619-055f4b83cebf.png",
+      "path": "D:/code/shidai3/P4000/golden-horse-86/art/work/gameplay/r05/generated/finish-post.png"
+    },
+    {
+      "id": "rail",
+      "source": "C:\\Users\\33272\\.codex\\generated_images\\01a16943-ca46-7a21-9fd6-fb8ef775f3b4\\exec-cc1133b4-d65b-457e-91de-fe3f0e86f4a0.png",
+      "path": "D:/code/shidai3/P4000/golden-horse-86/art/work/gameplay/r05/generated/rail.png"
+    },
+    {
+      "id": "distance",
+      "source": "C:\\Users\\33272\\.codex\\generated_images\\01a16943-ca46-7a21-9fd6-fb8ef775f3b4\\exec-3d78c24b-6c1b-4713-833b-d44f97d831e9.png",
+      "path": "D:/code/shidai3/P4000/golden-horse-86/art/work/gameplay/r05/generated/distance.png"
+    },
+    {
+      "id": "toolbox",
+      "source": "C:\\Users\\33272\\.codex\\generated_images\\01a16943-ca46-7a21-9fd6-fb8ef775f3b4\\exec-c06c543a-4286-4390-8072-001edc057bb9.png",
+      "path": "D:/code/shidai3/P4000/golden-horse-86/art/work/gameplay/r05/generated/toolbox.png"
+    },
+    {
+      "id": "camera",
+      "source": "C:\\Users\\33272\\.codex\\generated_images\\01a16943-ca46-7a21-9fd6-fb8ef775f3b4\\exec-2bfa7f6f-a812-4c68-a59c-4629ead7492a.png",
+      "path": "D:/code/shidai3/P4000/golden-horse-86/art/work/gameplay/r05/generated/camera.png"
+    },
+    {
+      "id": "mirror",
+      "source": "C:\\Users\\33272\\.codex\\generated_images\\01a16943-ca46-7a21-9fd6-fb8ef775f3b4\\exec-6f41d8e6-1653-41f8-8c96-bb0b0873a0b3.png",
+      "path": "D:/code/shidai3/P4000/golden-horse-86/art/work/gameplay/r05/generated/mirror.png"
+    },
+    {
+      "id": "speaker",
+      "source": "C:\\Users\\33272\\.codex\\generated_images\\01a16943-ca46-7a21-9fd6-fb8ef775f3b4\\exec-c1744427-acd6-413b-b121-90c996074ea3.png",
+      "path": "D:/code/shidai3/P4000/golden-horse-86/art/work/gameplay/r05/generated/speaker.png"
+    },
+    {
+      "id": "warning",
+      "source": "C:\\Users\\33272\\.codex\\generated_images\\01a16943-ca46-7a21-9fd6-fb8ef775f3b4\\exec-262e988e-ed77-4143-937f-248fa2cb9245.png",
+      "path": "D:/code/shidai3/P4000/golden-horse-86/art/work/gameplay/r05/generated/warning.png"
+    },
+    {
+      "id": "tractor",
+      "source": "C:\\Users\\33272\\.codex\\generated_images\\01a16943-ca46-7a21-9fd6-fb8ef775f3b4\\exec-78290123-f8ac-475a-b7aa-c9d968dc4b6c.png",
+      "path": "D:/code/shidai3/P4000/golden-horse-86/art/work/gameplay/r05/generated/tractor.png"
+    },
+    {
+      "id": "ambulance",
+      "source": "C:\\Users\\33272\\.codex\\generated_images\\01a16943-ca46-7a21-9fd6-fb8ef775f3b4\\exec-ed039be3-fa44-411b-aa25-b74bee917034.png",
+      "path": "D:/code/shidai3/P4000/golden-horse-86/art/work/gameplay/r05/generated/ambulance.png"
+    }
+  ]
+}
