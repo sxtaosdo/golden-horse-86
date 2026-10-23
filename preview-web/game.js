@@ -1,25 +1,27 @@
 /* AUTO-GENERATED: node tools/build_preview.cjs */
 (()=>{
-const COURSE_FINISH_X = 1000;
-const HORSE_NOSE_X = 40;
-const LEFT = 400, RIGHT = 1600, CENTRE_Y = 500, START_X = COURSE_FINISH_X - HORSE_NOSE_X, FINISH_FOOT = START_X;
+const COURSE_FINISH_X = 400;
+const HORSE_SCALE = 1.05;
+const HORSE_SPRITE_WIDTH = 134;
+// Source PNG is 216px wide; its rightmost opaque muzzle is x208. Include node scale.
+const HORSE_NOSE_X = (208 / 216 - .5) * HORSE_SPRITE_WIDTH * HORSE_SCALE;
+const RACE_VIEWPORT = { width: 960, height: 660, centreX: 480, centreY: 330 };
+const RIGHT = 2000, CENTRE_Y = 500, START_X = 400, FINISH_FOOT = COURSE_FINISH_X + HORSE_NOSE_X;
 const ARC_SAMPLES = 128;
-// Reference-lane arc lengths keep the tracking view at a continuous speed through joins.
 const ARC_TABLE = (() => {
     const table = [0];
-    let previous = { x: 0, y: 215 };
+    let previous = { x: 0, y: 300 };
     for (let i = 1; i <= ARC_SAMPLES; i++) {
-        const theta = i / ARC_SAMPLES * Math.PI, point = { x: 305 * Math.sin(theta), y: 215 * Math.cos(theta) };
+        const theta = i / ARC_SAMPLES * Math.PI, point = { x: 420 * Math.sin(theta), y: 300 * Math.cos(theta) };
         table.push(table[i - 1] + Math.hypot(point.x - previous.x, point.y - previous.y));
         previous = point;
     }
     return table;
 })();
 const ARC_LENGTH = ARC_TABLE[ARC_SAMPLES];
-const LENGTH = (RIGHT - START_X) + 2 * ARC_LENGTH + (RIGHT - LEFT) + (FINISH_FOOT - LEFT);
-const COURSE_BREAKS = [0, (RIGHT - START_X) / LENGTH, (RIGHT - START_X + ARC_LENGTH) / LENGTH,
-    (RIGHT - START_X + ARC_LENGTH + RIGHT - LEFT) / LENGTH, (RIGHT - START_X + 2 * ARC_LENGTH + RIGHT - LEFT) / LENGTH, 1];
-const SECTIONS = ['straight', 'right-bend', 'backstraight', 'left-bend', 'finish'];
+const LENGTH = RIGHT - START_X + ARC_LENGTH + RIGHT - FINISH_FOOT;
+const COURSE_BREAKS = [0, (RIGHT - START_X) / LENGTH, (RIGHT - START_X + ARC_LENGTH) / LENGTH, 1];
+const FINAL_STRAIGHT_START = COURSE_BREAKS[2];
 const clamp = (v) => Math.max(0, Math.min(1, Number.isFinite(v) ? v : 0));
 function curveAngle(fraction) {
     const distance = clamp(fraction) * ARC_LENGTH;
@@ -31,81 +33,49 @@ function curveAngle(fraction) {
         else
             high = middle;
     }
-    const weight = (distance - ARC_TABLE[low]) / (ARC_TABLE[high] - ARC_TABLE[low]);
-    return (low + weight) / ARC_SAMPLES * Math.PI;
+    return (low + (distance - ARC_TABLE[low]) / (ARC_TABLE[high] - ARC_TABLE[low])) / ARC_SAMPLES * Math.PI;
 }
 function trackSection(progress) {
-    for (let i = 0; i < 4; i++)
-        if (clamp(progress) < COURSE_BREAKS[i + 1])
-            return SECTIONS[i];
-    return 'finish';
+    if (clamp(progress) < COURSE_BREAKS[1])
+        return 'straight';
+    return clamp(progress) < FINAL_STRAIGHT_START ? 'right-bend' : 'finish';
 }
 function trackSectionName(section) {
-    return ({ straight: '起跑直道', 'right-bend': '第一弯道', backstraight: '对向直道', 'left-bend': '第二弯道', finish: '终点直道' })[section];
+    return ({ straight: '起跑直道', 'right-bend': '弯道', finish: '终点直道' })[section];
 }
-function bendPoint(lane, fraction, side) {
-    const theta = curveAngle(fraction), right = side === 'right-bend';
-    return { x: (right ? RIGHT : LEFT) + (right ? 1 : -1) * (260 + 18 * lane) * Math.sin(theta),
-        y: CENTRE_Y + (right ? 1 : -1) * (170 + 18 * lane) * Math.cos(theta) };
+function bendPoint(lane, fraction, _side = 'right-bend') {
+    const theta = curveAngle(fraction);
+    return { x: RIGHT + (320 + 40 * lane) * Math.sin(theta), y: CENTRE_Y - (200 + 40 * lane) * Math.cos(theta) };
 }
 function coursePoint(lane, progress) {
     const p = Number.isFinite(progress) ? Math.max(0, progress) : 0;
-    const [a, b, c, d, e] = COURSE_BREAKS, near = CENTRE_Y + 170 + 18 * lane, far = CENTRE_Y - 170 - 18 * lane;
-    if (p < b)
-        return { x: START_X + (RIGHT - START_X) * (p - a) / (b - a), y: near };
-    if (p < c)
-        return bendPoint(lane, (p - b) / (c - b), 'right-bend');
-    if (p < d)
-        return { x: RIGHT - (RIGHT - LEFT) * (p - c) / (d - c), y: far };
-    if (p < e)
-        return bendPoint(lane, (p - d) / (e - d), 'left-bend');
-    if (p <= 1)
-        return { x: LEFT + (FINISH_FOOT - LEFT) * (p - e) / (1 - e), y: near };
-    const runout = (p - 1) * LENGTH;
-    if (runout < RIGHT - FINISH_FOOT)
-        return { x: FINISH_FOOT + runout, y: near };
-    return bendPoint(lane, (runout - (RIGHT - FINISH_FOOT)) / ARC_LENGTH, 'right-bend');
+    if (p < COURSE_BREAKS[1])
+        return { x: START_X + (RIGHT - START_X) * p / COURSE_BREAKS[1], y: CENTRE_Y - 200 - 40 * lane };
+    if (p < FINAL_STRAIGHT_START)
+        return bendPoint(lane, (p - COURSE_BREAKS[1]) / (FINAL_STRAIGHT_START - COURSE_BREAKS[1]));
+    return { x: RIGHT - (RIGHT - FINISH_FOOT) * (p - FINAL_STRAIGHT_START) / (1 - FINAL_STRAIGHT_START), y: CENTRE_Y + 200 + 40 * lane };
 }
 function courseCamera(progress) {
-    let fraction = clamp(progress);
-    // Arrive at the finish view without an instantaneous camera stop.
-    if (fraction > .9) {
-        const t = (fraction - .9) / .1;
-        fraction = .9 + .1 * (t + t * t - t * t * t);
+    let p = clamp(progress);
+    if (p > .9) {
+        const t = (p - .9) / .1;
+        p = .9 + .1 * (t + t * t - t * t * t);
     }
-    return coursePoint(2.5, fraction);
+    return coursePoint(2.5, p);
 }
 function projectPoint(point, camera) {
-    return { x: 480 + point.x - camera.x, y: 251 + point.y - camera.y };
+    return { x: RACE_VIEWPORT.centreX + point.x - camera.x, y: RACE_VIEWPORT.centreY + point.y - camera.y };
 }
 function horsePose(index, progress, seconds = 0) {
     if (!Number.isInteger(index) || index < 0 || index > 5)
         throw Error('horseIndex must be 0..5');
-    const pose = { ...coursePoint(index, progress), scale: .65, angle: 0, flipX: false, sideOpacity: 1, turn: null };
-    const section = trackSection(progress);
-    let turnFraction = null;
-    if (section === 'right-bend') {
-        turnFraction = (progress - COURSE_BREAKS[1]) / (COURSE_BREAKS[2] - COURSE_BREAKS[1]);
-        pose.turn = 'rear';
-    }
-    if (section === 'left-bend') {
-        turnFraction = (progress - COURSE_BREAKS[3]) / (COURSE_BREAKS[4] - COURSE_BREAKS[3]);
+    const pose = { ...coursePoint(index, progress), scale: HORSE_SCALE, angle: 0, flipX: progress >= FINAL_STRAIGHT_START, sideOpacity: 1, turn: null };
+    if (trackSection(progress) === 'right-bend') {
+        const theta = curveAngle((progress - COURSE_BREAKS[1]) / (FINAL_STRAIGHT_START - COURSE_BREAKS[1]));
         pose.turn = 'front';
+        pose.flipX = theta >= Math.PI / 2;
+        pose.sideOpacity = Math.pow(Math.abs(Math.cos(theta)), 6);
     }
-    if (progress > 1) {
-        const distance = (progress - 1) * LENGTH - (RIGHT - FINISH_FOOT);
-        if (distance > 0) {
-            turnFraction = clamp(distance / ARC_LENGTH);
-            pose.turn = 'rear';
-        }
-    }
-    if (turnFraction !== null) {
-        const theta = curveAngle(turnFraction);
-        pose.flipX = pose.turn === 'rear' ? theta >= Math.PI / 2 : theta < Math.PI / 2;
-        pose.sideOpacity = Math.pow(Math.abs(Math.cos(theta)), 4);
-    }
-    else
-        pose.flipX = section === 'backstraight';
     if (progress > 0)
         pose.y += Math.sin(seconds * 20 + index * 1.4) * 1.2;
     return pose;
@@ -141,7 +111,7 @@ class RaceModel {
         this.bettingSeconds = opts.bettingSeconds ?? 30;
         this.countdown = this.bettingSeconds;
         this.credits = opts.initialCredits ?? 500;
-        this.raceSeconds = opts.raceSeconds ?? 16;
+        this.raceSeconds = opts.raceSeconds ?? 26;
         for (let a = 1; a <= 6; a++) {
             for (let b = this.pairMode === 'unordered' ? a + 1 : 1; b <= 6; b++) {
                 if (a === b)
@@ -224,7 +194,7 @@ class RaceModel {
             [order[i], order[j]] = [order[j], order[i]];
         }
         this.pendingOrder = order;
-        order.forEach((horse, rank) => { this.finishTimes[horse - 1] = this.raceSeconds - 2.0 + rank * 0.8; });
+        order.forEach((horse, rank) => { this.finishTimes[horse - 1] = this.raceSeconds - 2.0 + rank * 0.35; });
         this.progress.fill(0);
         this.raceElapsed = 0;
         this.phase = 'racing';
@@ -247,17 +217,17 @@ class RaceModel {
         }
         else if (this.phase === 'racing') {
             this.raceElapsed += dt;
-            const finalStart = (this.raceSeconds - 2) * COURSE_BREAKS[4];
+            const finalStart = (this.raceSeconds - 2) * FINAL_STRAIGHT_START;
             for (let i = 0; i < 6; i++) {
                 if (this.raceElapsed >= finalStart) {
                     // One shared scene timeline up to the home straight; actual finish times then separate the field.
-                    this.progress[i] = Math.min(1.3, COURSE_BREAKS[4] + (1 - COURSE_BREAKS[4]) *
+                    this.progress[i] = Math.min(1.5, FINAL_STRAIGHT_START + (1 - FINAL_STRAIGHT_START) *
                         (this.raceElapsed - finalStart) / (this.finishTimes[i] - finalStart));
                 }
                 else {
                     const fraction = this.courseFraction;
                     let section = 0;
-                    while (section < 3 && fraction >= COURSE_BREAKS[section + 1])
+                    while (section < COURSE_BREAKS.length - 2 && fraction >= COURSE_BREAKS[section + 1])
                         section++;
                     const start = COURSE_BREAKS[section], end = COURSE_BREAKS[section + 1];
                     const local = (fraction - start) / (end - start);
@@ -273,9 +243,9 @@ class RaceModel {
             // Keep the physical run-out moving through the same world after paying once.
             if (this.resultElapsed < 6) {
                 this.raceElapsed += dt;
-                const finalStart = (this.raceSeconds - 2) * COURSE_BREAKS[4];
+                const finalStart = (this.raceSeconds - 2) * FINAL_STRAIGHT_START;
                 for (let i = 0; i < 6; i++)
-                    this.progress[i] = Math.min(1.3, COURSE_BREAKS[4] + (1 - COURSE_BREAKS[4]) *
+                    this.progress[i] = Math.min(1.5, FINAL_STRAIGHT_START + (1 - FINAL_STRAIGHT_START) *
                         (this.raceElapsed - finalStart) / (this.finishTimes[i] - finalStart));
             }
         }
@@ -357,16 +327,14 @@ function draw(){
  const camera=courseCamera(game.courseFraction);
  ctx.save();ctx.beginPath();ctx.rect(0,74,960,334);ctx.clip();ctx.translate(480-camera.x,241-camera.y);
  ctx.fillStyle='#107334';ctx.fillRect(-1000,-2000,5000,4000);
- function outline(lane){
-  ctx.beginPath();const begin=bendPoint(lane,0,'right-bend');ctx.moveTo(begin.x,begin.y);
-  for(const side of ['right-bend','left-bend']){
-   const first=bendPoint(lane,0,side);ctx.lineTo(first.x,first.y);
-   for(let k=1;k<=64;k++){const point=bendPoint(lane,k/64,side);ctx.lineTo(point.x,point.y);}
-  }ctx.closePath();
- }
- outline(5.5);ctx.fillStyle='#b08952';ctx.fill();ctx.strokeStyle='#efe7d0';ctx.lineWidth=5;ctx.stroke();
- outline(-.5);ctx.fillStyle='#107334';ctx.fill();ctx.stroke();
- for(let k=0;k<11;k++)for(let c=0;c<2;c++){ctx.fillStyle=(k+c)%2?'#f5f4e8':'#14151e';ctx.fillRect(COURSE_FINISH_X+c*10,661+k*10,10,10);}
+ const outer=Array.from({length:65},(_,i)=>bendPoint(5.5,i/64));
+ const inner=Array.from({length:65},(_,i)=>bendPoint(-.5,1-i/64));
+ const road=[{x:-1800,y:outer[0].y},...outer,{x:-1800,y:outer[64].y},
+             {x:-1800,y:inner[0].y},...inner,{x:-1800,y:inner[64].y}];
+ ctx.beginPath();ctx.moveTo(road[0].x,road[0].y);
+ for(const point of road.slice(1))ctx.lineTo(point.x,point.y);
+ ctx.closePath();ctx.fillStyle='#b08952';ctx.fill();ctx.strokeStyle='#efe7d0';ctx.lineWidth=5;ctx.stroke();
+ for(let k=0;k<24;k++)for(let c=0;c<2;c++){ctx.fillStyle=(k+c)%2?'#f5f4e8':'#14151e';ctx.fillRect(COURSE_FINISH_X+c*10,680+k*10,10,10);}
  for(let i=0;i<6;i++){
   const progress=game.phase==='betting'?0:game.progress[i],pose=horsePose(i,progress,game.raceElapsed);
   const key='h'+(i+1)+'_'+(game.phase==='betting'?0:Math.floor(game.raceElapsed*9)%4);

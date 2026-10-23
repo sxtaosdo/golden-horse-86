@@ -12,14 +12,14 @@ for(const boundary of COURSE_BREAKS.slice(1)){
 for(let lane=0;lane<6;lane++){
   for(let sample=0;sample<=1000;sample++){
     const point=coursePoint(lane,sample/1000);
-    const dx=point.x<400?point.x-400:point.x>1600?point.x-1600:0;
+    const dx=point.x>2000?point.x-2000:0;
     const dy=point.y-500;
-    assert.ok(dx*dx/(359*359)+dy*dy/(269*269)<=1.001,'hoof must be inside outer rail');
-    assert.ok(dx*dx/(251*251)+dy*dy/(161*161)>=.999,'hoof must be outside inner rail');
+    assert.ok(dx*dx/(540*540)+dy*dy/(420*420)<=1.001,'hoof must be inside outer rail');
+    assert.ok(dx*dx/(300*300)+dy*dy/(180*180)>=.999,'hoof must be outside inner rail');
     const screen=projectPoint(point,courseCamera(sample/1000));
-    assert.ok(screen.x>70&&screen.x<890&&screen.y>130&&screen.y<370,'tracking viewport must retain all six horses');
+    assert.ok(screen.x>70&&screen.x<890&&screen.y>110&&screen.y<550,'tracking viewport must retain all six horses');
   }
-  for(const [begin,end] of [[COURSE_BREAKS[1],COURSE_BREAKS[2]],[COURSE_BREAKS[3],COURSE_BREAKS[4]]]){
+  for(const [begin,end] of [[COURSE_BREAKS[1],COURSE_BREAKS[2]]]){
     const middle=(begin+end)/2,before=horsePose(lane,middle-1e-6,0),after=horsePose(lane,middle+1e-6,0);
     assert.ok(before.sideOpacity<1e-12&&after.sideOpacity<1e-12,'side sprite must be hidden at the direction swap');
     assert.equal(before.turn,after.turn);
@@ -28,11 +28,11 @@ for(let lane=0;lane<6;lane++){
 for(const random of [()=>.01,()=>.3,()=>.99]){
   const model=new RaceModel(random);model.placeBet('3-4',10);model.startRace();
   const crossed=[];let previous=model.progress.slice();
-  for(let frame=0;frame<1600&&model.phase==='racing';frame++){
+  for(let frame=0;frame<2400&&model.phase==='racing';frame++){
     model.update(1/60);
     for(let horse=0;horse<6;horse++){
       const pose=horsePose(horse,model.progress[horse],model.raceElapsed);
-      if(previous[horse]<1&&pose.x+HORSE_NOSE_X>=COURSE_FINISH_X&&model.progress[horse]>=1)crossed.push(horse+1);
+      if(previous[horse]<1&&pose.x-HORSE_NOSE_X<=COURSE_FINISH_X&&model.progress[horse]>=1)crossed.push(horse+1);
       assert.ok(model.progress[horse]>=previous[horse]-1e-8,'forward progress');
     }
     previous=model.progress.slice();
@@ -45,7 +45,7 @@ for(const random of [()=>.01,()=>.3,()=>.99]){
   const camera=courseCamera(model.courseFraction);
   for(let horse=0;horse<6;horse++){
     const screen=projectPoint(horsePose(horse,model.progress[horse],model.raceElapsed),camera);
-    assert.ok(screen.x>1005||screen.x< -45||screen.y<84||screen.y>473,'finishers must clear the race viewport including their side-sprite bounds');
+    assert.ok(screen.x>1035||screen.x< -75||screen.y<0||screen.y>760,'finishers must clear the race viewport including their side-sprite bounds');
   }
   model.startRace();assert.equal(model.lastResult,null);assert.equal(model.totalStake,0);
 }

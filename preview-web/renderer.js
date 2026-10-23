@@ -42,16 +42,14 @@ function draw(){
  const camera=courseCamera(game.courseFraction);
  ctx.save();ctx.beginPath();ctx.rect(0,74,960,334);ctx.clip();ctx.translate(480-camera.x,241-camera.y);
  ctx.fillStyle='#107334';ctx.fillRect(-1000,-2000,5000,4000);
- function outline(lane){
-  ctx.beginPath();const begin=bendPoint(lane,0,'right-bend');ctx.moveTo(begin.x,begin.y);
-  for(const side of ['right-bend','left-bend']){
-   const first=bendPoint(lane,0,side);ctx.lineTo(first.x,first.y);
-   for(let k=1;k<=64;k++){const point=bendPoint(lane,k/64,side);ctx.lineTo(point.x,point.y);}
-  }ctx.closePath();
- }
- outline(5.5);ctx.fillStyle='#b08952';ctx.fill();ctx.strokeStyle='#efe7d0';ctx.lineWidth=5;ctx.stroke();
- outline(-.5);ctx.fillStyle='#107334';ctx.fill();ctx.stroke();
- for(let k=0;k<11;k++)for(let c=0;c<2;c++){ctx.fillStyle=(k+c)%2?'#f5f4e8':'#14151e';ctx.fillRect(COURSE_FINISH_X+c*10,661+k*10,10,10);}
+ const outer=Array.from({length:65},(_,i)=>bendPoint(5.5,i/64));
+ const inner=Array.from({length:65},(_,i)=>bendPoint(-.5,1-i/64));
+ const road=[{x:-1800,y:outer[0].y},...outer,{x:-1800,y:outer[64].y},
+             {x:-1800,y:inner[0].y},...inner,{x:-1800,y:inner[64].y}];
+ ctx.beginPath();ctx.moveTo(road[0].x,road[0].y);
+ for(const point of road.slice(1))ctx.lineTo(point.x,point.y);
+ ctx.closePath();ctx.fillStyle='#b08952';ctx.fill();ctx.strokeStyle='#efe7d0';ctx.lineWidth=5;ctx.stroke();
+ for(let k=0;k<24;k++)for(let c=0;c<2;c++){ctx.fillStyle=(k+c)%2?'#f5f4e8':'#14151e';ctx.fillRect(COURSE_FINISH_X+c*10,680+k*10,10,10);}
  for(let i=0;i<6;i++){
   const progress=game.phase==='betting'?0:game.progress[i],pose=horsePose(i,progress,game.raceElapsed);
   const key='h'+(i+1)+'_'+(game.phase==='betting'?0:Math.floor(game.raceElapsed*9)%4);

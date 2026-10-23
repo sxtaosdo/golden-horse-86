@@ -1,0 +1,290 @@
+{
+  "viewport": {
+    "width": 960,
+    "height": 760
+  },
+  "steps": [
+    {
+      "type": "wait_ready"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "horseNoseOffset": 65.13888888888889
+      }
+    },
+    {
+      "type": "api",
+      "call": "testStartRecording"
+    },
+    {
+      "type": "screenshot",
+      "label": "single-bet-page"
+    },
+    {
+      "type": "pointer",
+      "x": 124,
+      "y": 306,
+      "action": "click"
+    },
+    {
+      "type": "pointer",
+      "x": 238,
+      "y": 306,
+      "action": "click"
+    },
+    {
+      "type": "pointer",
+      "x": 351,
+      "y": 306,
+      "action": "click"
+    },
+    {
+      "type": "pointer",
+      "x": 464,
+      "y": 306,
+      "action": "click"
+    },
+    {
+      "type": "pointer",
+      "x": 578,
+      "y": 306,
+      "action": "click"
+    },
+    {
+      "type": "pointer",
+      "x": 124,
+      "y": 369,
+      "action": "click"
+    },
+    {
+      "type": "pointer",
+      "x": 238,
+      "y": 369,
+      "action": "click"
+    },
+    {
+      "type": "pointer",
+      "x": 351,
+      "y": 369,
+      "action": "click"
+    },
+    {
+      "type": "pointer",
+      "x": 464,
+      "y": 369,
+      "action": "click"
+    },
+    {
+      "type": "pointer",
+      "x": 124,
+      "y": 432,
+      "action": "click"
+    },
+    {
+      "type": "pointer",
+      "x": 238,
+      "y": 432,
+      "action": "click"
+    },
+    {
+      "type": "pointer",
+      "x": 351,
+      "y": 432,
+      "action": "click"
+    },
+    {
+      "type": "pointer",
+      "x": 124,
+      "y": 495,
+      "action": "click"
+    },
+    {
+      "type": "pointer",
+      "x": 238,
+      "y": 495,
+      "action": "click"
+    },
+    {
+      "type": "pointer",
+      "x": 124,
+      "y": 558,
+      "action": "click"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "totalStake": 15,
+        "uiMode": "betting",
+        "bettingPageVisible": true,
+        "raceViewportVisible": false
+      }
+    },
+    {
+      "type": "screenshot",
+      "label": "single-bet-selected"
+    },
+    {
+      "type": "pointer",
+      "x": 826,
+      "y": 660,
+      "action": "click"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "racing",
+        "uiMode": "race",
+        "bettingPageVisible": false,
+        "raceViewportVisible": true
+      }
+    },
+    {
+      "type": "wait",
+      "durationMs": 700
+    },
+    {
+      "type": "screenshot",
+      "label": "single-start-gates"
+    },
+    {
+      "type": "wait",
+      "durationMs": 2500
+    },
+    {
+      "type": "screenshot",
+      "label": "single-outbound-straight"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "section": "right-bend"
+      },
+      "timeoutMs": 18000
+    },
+    {
+      "type": "wait",
+      "durationMs": 3000
+    },
+    {
+      "type": "screenshot",
+      "label": "single-bend-front"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "section": "finish"
+      },
+      "timeoutMs": 15000
+    },
+    {
+      "type": "wait",
+      "durationMs": 1600
+    },
+    {
+      "type": "screenshot",
+      "label": "single-leftward-straight"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "result",
+        "metrics": {
+          "finishCount": 6
+        }
+      },
+      "timeoutMs": 20000
+    },
+    {
+      "type": "screenshot",
+      "label": "single-finish-combination"
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "wait",
+      "durationMs": 6000
+    },
+    {
+      "type": "screenshot",
+      "label": "single-finish-runout"
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "pointer",
+      "x": 826,
+      "y": 660,
+      "action": "click"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "betting",
+        "round": 2,
+        "uiMode": "betting",
+        "result": null,
+        "totalStake": 0,
+        "resultPanel": false
+      }
+    },
+    {
+      "type": "screenshot",
+      "label": "single-next-round-history"
+    },
+    {
+      "type": "pointer",
+      "x": 124,
+      "y": 306,
+      "action": "click"
+    },
+    {
+      "type": "keyboard",
+      "key": "Enter",
+      "action": "press"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "racing",
+        "uiMode": "race",
+        "bettingPageVisible": false
+      }
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "result",
+        "round": 2,
+        "metrics": {
+          "finishCount": 6
+        }
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "type": "screenshot",
+      "label": "single-second-result"
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "wait",
+      "durationMs": 6000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "api",
+      "call": "testStopRecording"
+    }
+  ]
+}

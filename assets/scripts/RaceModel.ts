@@ -2,7 +2,7 @@
  * Golden Horse 86 research prototype: game rules and odds can be revised when
  * an actual recording or ROM becomes available. NO monetary transactions.
  */
-import { COURSE_BREAKS } from './TrackVisual';
+import { COURSE_BREAKS, FINAL_STRAIGHT_START } from './TrackVisual';
 export type Phase = 'betting' | 'racing' | 'result';
 export type PairMode = 'unordered' | 'ordered';
 export interface RaceOptions {
@@ -59,7 +59,7 @@ export class RaceModel {
     this.bettingSeconds = opts.bettingSeconds ?? 30;
     this.countdown = this.bettingSeconds;
     this.credits = opts.initialCredits ?? 500;
-    this.raceSeconds = opts.raceSeconds ?? 16;
+    this.raceSeconds = opts.raceSeconds ?? 26;
     for (let a = 1; a <= 6; a++) {
       for (let b = this.pairMode === 'unordered' ? a + 1 : 1; b <= 6; b++) {
         if (a === b) continue;
@@ -124,7 +124,7 @@ export class RaceModel {
       [order[i],order[j]] = [order[j],order[i]];
     }
     this.pendingOrder = order;
-    order.forEach((horse,rank) => { this.finishTimes[horse-1] = this.raceSeconds - 2.0 + rank*0.8; });
+    order.forEach((horse,rank) => { this.finishTimes[horse-1] = this.raceSeconds - 2.0 + rank*0.35; });
     this.progress.fill(0);
     this.raceElapsed = 0;
     this.phase = 'racing';
@@ -143,15 +143,15 @@ export class RaceModel {
       }
     } else if (this.phase === 'racing') {
       this.raceElapsed += dt;
-      const finalStart=(this.raceSeconds-2)*COURSE_BREAKS[4];
+      const finalStart=(this.raceSeconds-2)*FINAL_STRAIGHT_START;
       for (let i = 0; i < 6; i++) {
         if(this.raceElapsed>=finalStart){
           // One shared scene timeline up to the home straight; actual finish times then separate the field.
-          this.progress[i]=Math.min(1.3,COURSE_BREAKS[4]+(1-COURSE_BREAKS[4])*
+          this.progress[i]=Math.min(1.5,FINAL_STRAIGHT_START+(1-FINAL_STRAIGHT_START)*
             (this.raceElapsed-finalStart)/(this.finishTimes[i]-finalStart));
         }else{
           const fraction=this.courseFraction;
-          let section=0;while(section<3&&fraction>=COURSE_BREAKS[section+1])section++;
+          let section=0;while(section<COURSE_BREAKS.length-2&&fraction>=COURSE_BREAKS[section+1])section++;
           const start=COURSE_BREAKS[section],end=COURSE_BREAKS[section+1];
           const local=(fraction-start)/(end-start);
           const offset=.008*Math.sin(Math.PI*local)**2*Math.sin(this.raceElapsed*1.4+i*.7);
@@ -164,8 +164,8 @@ export class RaceModel {
       // Keep the physical run-out moving through the same world after paying once.
       if(this.resultElapsed<6){
         this.raceElapsed+=dt;
-        const finalStart=(this.raceSeconds-2)*COURSE_BREAKS[4];
-        for(let i=0;i<6;i++)this.progress[i]=Math.min(1.3,COURSE_BREAKS[4]+(1-COURSE_BREAKS[4])*
+        const finalStart=(this.raceSeconds-2)*FINAL_STRAIGHT_START;
+        for(let i=0;i<6;i++)this.progress[i]=Math.min(1.5,FINAL_STRAIGHT_START+(1-FINAL_STRAIGHT_START)*
           (this.raceElapsed-finalStart)/(this.finishTimes[i]-finalStart));
       }
     }

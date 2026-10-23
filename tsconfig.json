@@ -1,1 +1,14 @@
-{"extends":"./temp/tsconfig.cocos.json","compilerOptions":{"strict":true,"experimentalDecorators":true,"lib":["ES2020","DOM"]}}
+{
+  "extends": "./temp/tsconfig.cocos.json",
+  "compilerOptions": {
+    "strict": true,
+    "experimentalDecorators": true,
+    "lib": [
+      "ES2020",
+      "DOM"
+    ]
+  },
+  "include": [
+    "assets/**/*.ts"
+  ]
+}

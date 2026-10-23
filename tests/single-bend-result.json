@@ -1,0 +1,2308 @@
+{
+  "schemaVersion": "cocos-tool-result-v1",
+  "operationId": "fe445488-4323-46c3-baee-71800c5cd5f9",
+  "projectId": "9d8a0041f7873b81",
+  "tool": "playtest_run",
+  "status": "PASSED",
+  "data": {
+    "ok": true,
+    "previewUrl": "http://192.168.31.100:7456",
+    "finalUrl": "http://192.168.31.100:7456/",
+    "gameTestReady": true,
+    "steps": [
+      {
+        "index": 0,
+        "step": {
+          "type": "wait_ready"
+        },
+        "ok": true,
+        "elapsedMs": 830
+      },
+      {
+        "index": 1,
+        "step": {
+          "type": "wait_for_state",
+          "expect": {
+            "horseNoseOffset": 65.13888888888889
+          }
+        },
+        "ok": true,
+        "state": {
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "straight",
+          "uiMode": "betting",
+          "bettingPageVisible": true,
+          "raceViewportVisible": false,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 960,
+            "height": 660
+          },
+          "horseFrames": 24,
+          "backgrounds": 1,
+          "sounds": 7,
+          "worldId": "Node.127",
+          "worldPaintBuilds": 1,
+          "camera": {
+            "x": 400,
+            "y": 200
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "COINS 500",
+          "uiResult": "WIN 0",
+          "resultPanel": false,
+          "startButton": "开跑",
+          "horsePositions": [
+            {
+              "x": 400,
+              "y": 300
+            },
+            {
+              "x": 400,
+              "y": 260
+            },
+            {
+              "x": 400,
+              "y": 220
+            },
+            {
+              "x": 400,
+              "y": 180
+            },
+            {
+              "x": 400,
+              "y": 140
+            },
+            {
+              "x": 400,
+              "y": 100
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": 480,
+              "y": 430
+            },
+            {
+              "x": 480,
+              "y": 390
+            },
+            {
+              "x": 480,
+              "y": 350
+            },
+            {
+              "x": 480,
+              "y": 310
+            },
+            {
+              "x": 480,
+              "y": 270
+            },
+            {
+              "x": 480,
+              "y": 230
+            }
+          ],
+          "phase": "betting",
+          "round": 1,
+          "credits": 500,
+          "totalStake": 0,
+          "result": null,
+          "historyLength": 0,
+          "metrics": {
+            "finishCount": 0,
+            "visibleOrder": [],
+            "backgroundMismatches": 0,
+            "settlementJump": 0,
+            "resultDrift": 0,
+            "worldChanges": 0,
+            "maxCameraStep": 0
+          },
+          "progress": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "elapsedMs": 3
+      },
+      {
+        "index": 2,
+        "step": {
+          "type": "api",
+          "call": "testStartRecording"
+        },
+        "ok": true,
+        "state": true,
+        "elapsedMs": 1
+      },
+      {
+        "index": 3,
+        "step": {
+          "type": "screenshot",
+          "label": "single-bet-page"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\single-bet-page-1792756170825.png",
+          "width": 960,
+          "height": 760,
+          "source": "preview",
+          "capturedAt": "2026-10-23T11:49:30.826Z"
+        },
+        "elapsedMs": 49
+      },
+      {
+        "index": 4,
+        "step": {
+          "type": "pointer",
+          "action": "click",
+          "x": 124,
+          "y": 306
+        },
+        "ok": true,
+        "elapsedMs": 5
+      },
+      {
+        "index": 5,
+        "step": {
+          "type": "pointer",
+          "action": "click",
+          "x": 238,
+          "y": 306
+        },
+        "ok": true,
+        "elapsedMs": 6
+      },
+      {
+        "index": 6,
+        "step": {
+          "type": "pointer",
+          "action": "click",
+          "x": 351,
+          "y": 306
+        },
+        "ok": true,
+        "elapsedMs": 1
+      },
+      {
+        "index": 7,
+        "step": {
+          "type": "pointer",
+          "action": "click",
+          "x": 464,
+          "y": 306
+        },
+        "ok": true,
+        "elapsedMs": 1
+      },
+      {
+        "index": 8,
+        "step": {
+          "type": "pointer",
+          "action": "click",
+          "x": 578,
+          "y": 306
+        },
+        "ok": true,
+        "elapsedMs": 1
+      },
+      {
+        "index": 9,
+        "step": {
+          "type": "pointer",
+          "action": "click",
+          "x": 124,
+          "y": 369
+        },
+        "ok": true,
+        "elapsedMs": 1
+      },
+      {
+        "index": 10,
+        "step": {
+          "type": "pointer",
+          "action": "click",
+          "x": 238,
+          "y": 369
+        },
+        "ok": true,
+        "elapsedMs": 1
+      },
+      {
+        "index": 11,
+        "step": {
+          "type": "pointer",
+          "action": "click",
+          "x": 351,
+          "y": 369
+        },
+        "ok": true,
+        "elapsedMs": 1
+      },
+      {
+        "index": 12,
+        "step": {
+          "type": "pointer",
+          "action": "click",
+          "x": 464,
+          "y": 369
+        },
+        "ok": true,
+        "elapsedMs": 0
+      },
+      {
+        "index": 13,
+        "step": {
+          "type": "pointer",
+          "action": "click",
+          "x": 124,
+          "y": 432
+        },
+        "ok": true,
+        "elapsedMs": 1
+      },
+      {
+        "index": 14,
+        "step": {
+          "type": "pointer",
+          "action": "click",
+          "x": 238,
+          "y": 432
+        },
+        "ok": true,
+        "elapsedMs": 1
+      },
+      {
+        "index": 15,
+        "step": {
+          "type": "pointer",
+          "action": "click",
+          "x": 351,
+          "y": 432
+        },
+        "ok": true,
+        "elapsedMs": 9
+      },
+      {
+        "index": 16,
+        "step": {
+          "type": "pointer",
+          "action": "click",
+          "x": 124,
+          "y": 495
+        },
+        "ok": true,
+        "elapsedMs": 1
+      },
+      {
+        "index": 17,
+        "step": {
+          "type": "pointer",
+          "action": "click",
+          "x": 238,
+          "y": 495
+        },
+        "ok": true,
+        "elapsedMs": 1
+      },
+      {
+        "index": 18,
+        "step": {
+          "type": "pointer",
+          "action": "click",
+          "x": 124,
+          "y": 558
+        },
+        "ok": true,
+        "elapsedMs": 1
+      },
+      {
+        "index": 19,
+        "step": {
+          "type": "wait_for_state",
+          "expect": {
+            "totalStake": 15,
+            "uiMode": "betting",
+            "bettingPageVisible": true,
+            "raceViewportVisible": false
+          }
+        },
+        "ok": true,
+        "state": {
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "straight",
+          "uiMode": "betting",
+          "bettingPageVisible": true,
+          "raceViewportVisible": false,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 960,
+            "height": 660
+          },
+          "horseFrames": 24,
+          "backgrounds": 1,
+          "sounds": 7,
+          "worldId": "Node.127",
+          "worldPaintBuilds": 1,
+          "camera": {
+            "x": 400,
+            "y": 200
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "COINS 485",
+          "uiResult": "WIN 0",
+          "resultPanel": false,
+          "startButton": "开跑",
+          "horsePositions": [
+            {
+              "x": 400,
+              "y": 300
+            },
+            {
+              "x": 400,
+              "y": 260
+            },
+            {
+              "x": 400,
+              "y": 220
+            },
+            {
+              "x": 400,
+              "y": 180
+            },
+            {
+              "x": 400,
+              "y": 140
+            },
+            {
+              "x": 400,
+              "y": 100
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": 480,
+              "y": 430
+            },
+            {
+              "x": 480,
+              "y": 390
+            },
+            {
+              "x": 480,
+              "y": 350
+            },
+            {
+              "x": 480,
+              "y": 310
+            },
+            {
+              "x": 480,
+              "y": 270
+            },
+            {
+              "x": 480,
+              "y": 230
+            }
+          ],
+          "phase": "betting",
+          "round": 1,
+          "credits": 485,
+          "totalStake": 15,
+          "result": null,
+          "historyLength": 0,
+          "metrics": {
+            "finishCount": 0,
+            "visibleOrder": [],
+            "backgroundMismatches": 0,
+            "settlementJump": 0,
+            "resultDrift": 0,
+            "worldChanges": 0,
+            "maxCameraStep": 0
+          },
+          "progress": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "elapsedMs": 2
+      },
+      {
+        "index": 20,
+        "step": {
+          "type": "screenshot",
+          "label": "single-bet-selected"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\single-bet-selected-1792756170898.png",
+          "width": 960,
+          "height": 760,
+          "source": "preview",
+          "capturedAt": "2026-10-23T11:49:30.899Z"
+        },
+        "elapsedMs": 40
+      },
+      {
+        "index": 21,
+        "step": {
+          "type": "pointer",
+          "action": "click",
+          "x": 826,
+          "y": 660
+        },
+        "ok": true,
+        "elapsedMs": 6
+      },
+      {
+        "index": 22,
+        "step": {
+          "type": "wait_for_state",
+          "expect": {
+            "phase": "racing",
+            "uiMode": "race",
+            "bettingPageVisible": false,
+            "raceViewportVisible": true
+          }
+        },
+        "ok": true,
+        "state": {
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "straight",
+          "uiMode": "race",
+          "bettingPageVisible": false,
+          "raceViewportVisible": true,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 960,
+            "height": 660
+          },
+          "horseFrames": 24,
+          "backgrounds": 1,
+          "sounds": 7,
+          "worldId": "Node.127",
+          "worldPaintBuilds": 1,
+          "camera": {
+            "x": 400,
+            "y": 200
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "COINS 485",
+          "uiResult": "WIN 0",
+          "resultPanel": false,
+          "startButton": "开跑",
+          "horsePositions": [
+            {
+              "x": 400,
+              "y": 300
+            },
+            {
+              "x": 400,
+              "y": 260
+            },
+            {
+              "x": 400,
+              "y": 220
+            },
+            {
+              "x": 400,
+              "y": 180
+            },
+            {
+              "x": 400,
+              "y": 140
+            },
+            {
+              "x": 400,
+              "y": 100
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": 480,
+              "y": 430
+            },
+            {
+              "x": 480,
+              "y": 390
+            },
+            {
+              "x": 480,
+              "y": 350
+            },
+            {
+              "x": 480,
+              "y": 310
+            },
+            {
+              "x": 480,
+              "y": 270
+            },
+            {
+              "x": 480,
+              "y": 230
+            }
+          ],
+          "phase": "racing",
+          "round": 1,
+          "credits": 485,
+          "totalStake": 15,
+          "result": null,
+          "historyLength": 0,
+          "metrics": {
+            "finishCount": 0,
+            "visibleOrder": [],
+            "backgroundMismatches": 0,
+            "settlementJump": 0,
+            "resultDrift": 0,
+            "worldChanges": 0,
+            "maxCameraStep": 0
+          },
+          "progress": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "elapsedMs": 2
+      },
+      {
+        "index": 23,
+        "step": {
+          "type": "wait",
+          "durationMs": 700
+        },
+        "ok": true,
+        "elapsedMs": 705
+      },
+      {
+        "index": 24,
+        "step": {
+          "type": "screenshot",
+          "label": "single-start-gates"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\single-start-gates-1792756171670.png",
+          "width": 960,
+          "height": 760,
+          "source": "preview",
+          "capturedAt": "2026-10-23T11:49:31.671Z"
+        },
+        "elapsedMs": 59
+      },
+      {
+        "index": 25,
+        "step": {
+          "type": "wait",
+          "durationMs": 2500
+        },
+        "ok": true,
+        "elapsedMs": 2503
+      },
+      {
+        "index": 26,
+        "step": {
+          "type": "screenshot",
+          "label": "single-outbound-straight"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\single-outbound-straight-1792756174234.png",
+          "width": 960,
+          "height": 760,
+          "source": "preview",
+          "capturedAt": "2026-10-23T11:49:34.235Z"
+        },
+        "elapsedMs": 60
+      },
+      {
+        "index": 27,
+        "step": {
+          "type": "wait_for_state",
+          "expect": {
+            "section": "right-bend"
+          },
+          "timeoutMs": 18000
+        },
+        "ok": true,
+        "state": {
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "right-bend",
+          "uiMode": "race",
+          "bettingPageVisible": false,
+          "raceViewportVisible": true,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 960,
+            "height": 660
+          },
+          "horseFrames": 24,
+          "backgrounds": 1,
+          "sounds": 7,
+          "worldId": "Node.127",
+          "worldPaintBuilds": 1,
+          "camera": {
+            "x": 2004.53313713949,
+            "y": 200.01747443097167
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "COINS 485",
+          "uiResult": "WIN 0",
+          "resultPanel": false,
+          "startButton": "开跑",
+          "horsePositions": [
+            {
+              "x": 2003.4540166867762,
+              "y": 298.9196834550343
+            },
+            {
+              "x": 2003.8886648989387,
+              "y": 259.33804240897774
+            },
+            {
+              "x": 2004.322326904993,
+              "y": 220.8785333346808
+            },
+            {
+              "x": 2004.7536921544988,
+              "y": 180.98772229263426
+            },
+            {
+              "x": 2005.182492693311,
+              "y": 139.48820992114798
+            },
+            {
+              "x": 2005.6098353043708,
+              "y": 98.87312339543674
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": 478.9208795472864,
+              "y": 428.9022090240627
+            },
+            {
+              "x": 479.3555277594487,
+              "y": 389.3205679780061
+            },
+            {
+              "x": 479.7891897655031,
+              "y": 350.86105890370914
+            },
+            {
+              "x": 480.2205550150088,
+              "y": 310.9702478616626
+            },
+            {
+              "x": 480.6493555538209,
+              "y": 269.4707354901763
+            },
+            {
+              "x": 481.0766981648808,
+              "y": 228.85564896446505
+            }
+          ],
+          "phase": "racing",
+          "round": 1,
+          "credits": 485,
+          "totalStake": 15,
+          "result": null,
+          "historyLength": 0,
+          "metrics": {
+            "finishCount": 0,
+            "visibleOrder": [],
+            "backgroundMismatches": 0,
+            "settlementJump": 0,
+            "resultDrift": 0,
+            "worldChanges": 0,
+            "maxCameraStep": 3.50797374292722
+          },
+          "progress": [
+            0.3754458941151089,
+            0.3754466847233582,
+            0.3754470749096342,
+            0.3754468811632345,
+            0.3754461946061183,
+            0.37544533813682496
+          ]
+        },
+        "elapsedMs": 5689
+      },
+      {
+        "index": 28,
+        "step": {
+          "type": "wait",
+          "durationMs": 3000
+        },
+        "ok": true,
+        "elapsedMs": 3011
+      },
+      {
+        "index": 29,
+        "step": {
+          "type": "screenshot",
+          "label": "single-bend-front"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\single-bend-front-1792756182999.png",
+          "width": 960,
+          "height": 760,
+          "source": "preview",
+          "capturedAt": "2026-10-23T11:49:43.000Z"
+        },
+        "elapsedMs": 65
+      },
+      {
+        "index": 30,
+        "step": {
+          "type": "wait_for_state",
+          "expect": {
+            "section": "finish"
+          },
+          "timeoutMs": 15000
+        },
+        "ok": true,
+        "state": {
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "finish",
+          "uiMode": "race",
+          "bettingPageVisible": false,
+          "raceViewportVisible": true,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 960,
+            "height": 660
+          },
+          "horseFrames": 24,
+          "backgrounds": 1,
+          "sounds": 7,
+          "worldId": "Node.127",
+          "worldPaintBuilds": 1,
+          "camera": {
+            "x": 1997.3399074904735,
+            "y": 800
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "COINS 485",
+          "uiResult": "WIN 0",
+          "resultPanel": false,
+          "startButton": "开跑",
+          "horsePositions": [
+            {
+              "x": 1997.3399074904742,
+              "y": 700.0406961328849
+            },
+            {
+              "x": 1997.6287657461594,
+              "y": 741.1887764535127
+            },
+            {
+              "x": 1997.4437080103855,
+              "y": 780.3634097418163
+            },
+            {
+              "x": 1997.788838442445,
+              "y": 818.9347589775247
+            },
+            {
+              "x": 1997.5397118841759,
+              "y": 859.2744783120031
+            },
+            {
+              "x": 1997.7115979318023,
+              "y": 900.8186113256334
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": 480.0000000000007,
+              "y": 230.04069613288493
+            },
+            {
+              "x": 480.2888582556859,
+              "y": 271.1887764535127
+            },
+            {
+              "x": 480.10380051991183,
+              "y": 310.3634097418162
+            },
+            {
+              "x": 480.44893095197153,
+              "y": 348.9347589775248
+            },
+            {
+              "x": 480.19980439370215,
+              "y": 389.2744783120031
+            },
+            {
+              "x": 480.37169044132884,
+              "y": 430.81861132563336
+            }
+          ],
+          "phase": "racing",
+          "round": 1,
+          "credits": 485,
+          "totalStake": 15,
+          "result": null,
+          "historyLength": 0,
+          "metrics": {
+            "finishCount": 0,
+            "visibleOrder": [],
+            "backgroundMismatches": 0,
+            "settlementJump": 0,
+            "resultDrift": 0,
+            "worldChanges": 0,
+            "maxCameraStep": 3.644370465599442
+          },
+          "progress": [
+            0.6414791666666706,
+            0.6414115765128421,
+            0.6414548783073448,
+            0.6413741209859435,
+            0.6414324142909288,
+            0.6413921945493379
+          ]
+        },
+        "elapsedMs": 3307
+      },
+      {
+        "index": 31,
+        "step": {
+          "type": "wait",
+          "durationMs": 1600
+        },
+        "ok": true,
+        "elapsedMs": 1613
+      },
+      {
+        "index": 32,
+        "step": {
+          "type": "screenshot",
+          "label": "single-leftward-straight"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\single-leftward-straight-1792756187980.png",
+          "width": 960,
+          "height": 760,
+          "source": "preview",
+          "capturedAt": "2026-10-23T11:49:47.980Z"
+        },
+        "elapsedMs": 60
+      },
+      {
+        "index": 33,
+        "step": {
+          "type": "wait_for_state",
+          "expect": {
+            "phase": "result",
+            "metrics": {
+              "finishCount": 6
+            }
+          },
+          "timeoutMs": 20000
+        },
+        "ok": true,
+        "state": {
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "finish",
+          "uiMode": "race",
+          "bettingPageVisible": false,
+          "raceViewportVisible": true,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 960,
+            "height": 660
+          },
+          "horseFrames": 24,
+          "backgrounds": 1,
+          "sounds": 7,
+          "worldId": "Node.127",
+          "worldPaintBuilds": 1,
+          "camera": {
+            "x": 465.1388888888889,
+            "y": 800
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "COINS 489",
+          "uiResult": "WIN 4",
+          "resultPanel": true,
+          "startButton": "下一场",
+          "horsePositions": [
+            {
+              "x": 32.3938234684756,
+              "y": 700.8744502242376
+            },
+            {
+              "x": 246.0552980200962,
+              "y": 740.9584593414161
+            },
+            {
+              "x": 109.17256081463552,
+              "y": 779.4513629674555
+            },
+            {
+              "x": 364.457205013214,
+              "y": 818.8550401207622
+            },
+            {
+              "x": 180.1843073476125,
+              "y": 860.1594259137257
+            },
+            {
+              "x": 307.3242649836102,
+              "y": 901.1991542133583
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": 47.25493457958669,
+              "y": 230.87445022423753
+            },
+            {
+              "x": 260.9164091312073,
+              "y": 270.9584593414161
+            },
+            {
+              "x": 124.0336719257466,
+              "y": 309.45136296745545
+            },
+            {
+              "x": 379.31831612432507,
+              "y": 348.85504012076217
+            },
+            {
+              "x": 195.0454184587236,
+              "y": 390.1594259137257
+            },
+            {
+              "x": 322.1853760947213,
+              "y": 431.19915421335827
+            }
+          ],
+          "phase": "result",
+          "round": 1,
+          "credits": 489,
+          "totalStake": 15,
+          "result": {
+            "first": 1,
+            "second": 3,
+            "order": [
+              1,
+              3,
+              5,
+              2,
+              6,
+              4
+            ],
+            "pair": "1-3",
+            "payout": 4,
+            "stake": 15
+          },
+          "historyLength": 1,
+          "metrics": {
+            "finishCount": 6,
+            "visibleOrder": [
+              1,
+              3,
+              5,
+              2,
+              6,
+              4
+            ],
+            "backgroundMismatches": 0,
+            "settlementJump": 3.141998253887746,
+            "resultDrift": 3.241763225122557,
+            "worldChanges": 0,
+            "maxCameraStep": 4.321051498253382
+          },
+          "progress": [
+            1.1012583333334511,
+            1.0512635291416432,
+            1.0832928206093118,
+            1.0235585806080814,
+            1.0666767302697464,
+            1.0369271588961257
+          ]
+        },
+        "elapsedMs": 9362
+      },
+      {
+        "index": 34,
+        "step": {
+          "type": "screenshot",
+          "label": "single-finish-combination"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\single-finish-combination-1792756197381.png",
+          "width": 960,
+          "height": 760,
+          "source": "preview",
+          "capturedAt": "2026-10-23T11:49:57.382Z"
+        },
+        "elapsedMs": 40
+      },
+      {
+        "index": 35,
+        "step": {
+          "type": "get_state",
+          "required": true
+        },
+        "ok": true,
+        "state": {
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "finish",
+          "uiMode": "race",
+          "bettingPageVisible": false,
+          "raceViewportVisible": true,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 960,
+            "height": 660
+          },
+          "horseFrames": 24,
+          "backgrounds": 1,
+          "sounds": 7,
+          "worldId": "Node.127",
+          "worldPaintBuilds": 1,
+          "camera": {
+            "x": 465.1388888888889,
+            "y": 800
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "COINS 489",
+          "uiResult": "WIN 4",
+          "resultPanel": true,
+          "startButton": "下一场",
+          "horsePositions": [
+            {
+              "x": 22.938320639719905,
+              "y": 701.1436618005562
+            },
+            {
+              "x": 237.6265640138397,
+              "y": 739.8363021565078
+            },
+            {
+              "x": 100.0860248944125,
+              "y": 778.8006916899293
+            },
+            {
+              "x": 356.5974616819494,
+              "y": 819.7560118296539
+            },
+            {
+              "x": 171.43902455935563,
+              "y": 861.1163683656404
+            },
+            {
+              "x": 299.1899643336569,
+              "y": 900.6234800534104
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": 37.79943175083099,
+              "y": 231.14366180055617
+            },
+            {
+              "x": 252.48767512495078,
+              "y": 269.8363021565078
+            },
+            {
+              "x": 114.94713600552359,
+              "y": 308.8006916899294
+            },
+            {
+              "x": 371.4585727930605,
+              "y": 349.75601182965374
+            },
+            {
+              "x": 186.30013567046672,
+              "y": 391.1163683656405
+            },
+            {
+              "x": 314.051075444768,
+              "y": 430.6234800534103
+            }
+          ],
+          "phase": "result",
+          "round": 1,
+          "credits": 489,
+          "totalStake": 15,
+          "result": {
+            "first": 1,
+            "second": 3,
+            "order": [
+              1,
+              3,
+              5,
+              2,
+              6,
+              4
+            ],
+            "pair": "1-3",
+            "payout": 4,
+            "stake": 15
+          },
+          "historyLength": 1,
+          "metrics": {
+            "finishCount": 6,
+            "visibleOrder": [
+              1,
+              3,
+              5,
+              2,
+              6,
+              4
+            ],
+            "backgroundMismatches": 0,
+            "settlementJump": 3.141998253887746,
+            "resultDrift": 3.241763225122557,
+            "worldChanges": 0,
+            "maxCameraStep": 4.321051498253382
+          },
+          "progress": [
+            1.1034708333335133,
+            1.0532357747564034,
+            1.0854189857734655,
+            1.02539768768,
+            1.0687230453647742,
+            1.0388305098351995
+          ]
+        },
+        "elapsedMs": 3
+      },
+      {
+        "index": 36,
+        "step": {
+          "type": "wait",
+          "durationMs": 6000
+        },
+        "ok": true,
+        "elapsedMs": 6009
+      },
+      {
+        "index": 37,
+        "step": {
+          "type": "screenshot",
+          "label": "single-finish-runout"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\single-finish-runout-1792756203443.png",
+          "width": 960,
+          "height": 760,
+          "source": "preview",
+          "capturedAt": "2026-10-23T11:50:03.444Z"
+        },
+        "elapsedMs": 50
+      },
+      {
+        "index": 38,
+        "step": {
+          "type": "get_state",
+          "required": true
+        },
+        "ok": true,
+        "state": {
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "finish",
+          "uiMode": "race",
+          "bettingPageVisible": false,
+          "raceViewportVisible": true,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 960,
+            "height": 660
+          },
+          "horseFrames": 24,
+          "backgrounds": 1,
+          "sounds": 7,
+          "worldId": "Node.127",
+          "worldPaintBuilds": 1,
+          "camera": {
+            "x": 465.1388888888889,
+            "y": 800
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "COINS 489",
+          "uiResult": "WIN 4",
+          "resultPanel": true,
+          "startButton": "下一场",
+          "horsePositions": [
+            {
+              "x": -1030.89616691642,
+              "y": 700.9093432398082
+            },
+            {
+              "x": -701.7725079442903,
+              "y": 740.9261693062151
+            },
+            {
+              "x": -912.6263711113602,
+              "y": 779.4054934618304
+            },
+            {
+              "x": -519.3864744273405,
+              "y": 818.8717375383285
+            },
+            {
+              "x": -803.2400350955604,
+              "y": 860.2109714440659
+            },
+            {
+              "x": -607.3939278526213,
+              "y": 901.1999788888344
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": -1016.035055805309,
+              "y": 230.9093432398081
+            },
+            {
+              "x": -686.9113968331792,
+              "y": 270.9261693062151
+            },
+            {
+              "x": -897.7652600002491,
+              "y": 309.40549346183025
+            },
+            {
+              "x": -504.52536331622946,
+              "y": 348.8717375383285
+            },
+            {
+              "x": -788.3789239844493,
+              "y": 390.21097144406576
+            },
+            {
+              "x": -592.5328167415103,
+              "y": 431.19997888883427
+            }
+          ],
+          "phase": "result",
+          "round": 1,
+          "credits": 489,
+          "totalStake": 15,
+          "result": {
+            "first": 1,
+            "second": 3,
+            "order": [
+              1,
+              3,
+              5,
+              2,
+              6,
+              4
+            ],
+            "pair": "1-3",
+            "payout": 4,
+            "stake": 15
+          },
+          "historyLength": 1,
+          "metrics": {
+            "finishCount": 6,
+            "visibleOrder": [
+              1,
+              3,
+              5,
+              2,
+              6,
+              4
+            ],
+            "backgroundMismatches": 0,
+            "settlementJump": 3.141998253887746,
+            "resultDrift": 4.924724289059124,
+            "worldChanges": 0,
+            "maxCameraStep": 4.321051498253382
+          },
+          "progress": [
+            1.3500583333332594,
+            1.273046448435743,
+            1.3223842975929017,
+            1.230369807491765,
+            1.296788909084769,
+            1.2509627356771107
+          ]
+        },
+        "elapsedMs": 4
+      },
+      {
+        "index": 39,
+        "step": {
+          "type": "pointer",
+          "action": "click",
+          "x": 826,
+          "y": 660
+        },
+        "ok": true,
+        "elapsedMs": 4
+      },
+      {
+        "index": 40,
+        "step": {
+          "type": "wait_for_state",
+          "expect": {
+            "phase": "betting",
+            "round": 2,
+            "uiMode": "betting",
+            "result": null,
+            "totalStake": 0,
+            "resultPanel": false
+          }
+        },
+        "ok": true,
+        "state": {
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "straight",
+          "uiMode": "betting",
+          "bettingPageVisible": true,
+          "raceViewportVisible": false,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 960,
+            "height": 660
+          },
+          "horseFrames": 24,
+          "backgrounds": 1,
+          "sounds": 7,
+          "worldId": "Node.127",
+          "worldPaintBuilds": 1,
+          "camera": {
+            "x": 465.1388888888889,
+            "y": 800
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "COINS 489",
+          "uiResult": "WIN 0",
+          "resultPanel": false,
+          "startButton": "开跑",
+          "horsePositions": [
+            {
+              "x": -1030.89616691642,
+              "y": 700.9093432398082
+            },
+            {
+              "x": -701.7725079442903,
+              "y": 740.9261693062151
+            },
+            {
+              "x": -912.6263711113602,
+              "y": 779.4054934618304
+            },
+            {
+              "x": -519.3864744273405,
+              "y": 818.8717375383285
+            },
+            {
+              "x": -803.2400350955604,
+              "y": 860.2109714440659
+            },
+            {
+              "x": -607.3939278526213,
+              "y": 901.1999788888344
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": -1016.035055805309,
+              "y": 230.9093432398081
+            },
+            {
+              "x": -686.9113968331792,
+              "y": 270.9261693062151
+            },
+            {
+              "x": -897.7652600002491,
+              "y": 309.40549346183025
+            },
+            {
+              "x": -504.52536331622946,
+              "y": 348.8717375383285
+            },
+            {
+              "x": -788.3789239844493,
+              "y": 390.21097144406576
+            },
+            {
+              "x": -592.5328167415103,
+              "y": 431.19997888883427
+            }
+          ],
+          "phase": "betting",
+          "round": 2,
+          "credits": 489,
+          "totalStake": 0,
+          "result": null,
+          "historyLength": 1,
+          "metrics": {
+            "finishCount": 6,
+            "visibleOrder": [
+              1,
+              3,
+              5,
+              2,
+              6,
+              4
+            ],
+            "backgroundMismatches": 0,
+            "settlementJump": 3.141998253887746,
+            "resultDrift": 4.924724289059124,
+            "worldChanges": 0,
+            "maxCameraStep": 4.321051498253382
+          },
+          "progress": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "elapsedMs": 1
+      },
+      {
+        "index": 41,
+        "step": {
+          "type": "screenshot",
+          "label": "single-next-round-history"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\single-next-round-history-1792756203502.png",
+          "width": 960,
+          "height": 760,
+          "source": "preview",
+          "capturedAt": "2026-10-23T11:50:03.502Z"
+        },
+        "elapsedMs": 49
+      },
+      {
+        "index": 42,
+        "step": {
+          "type": "pointer",
+          "action": "click",
+          "x": 124,
+          "y": 306
+        },
+        "ok": true,
+        "elapsedMs": 2
+      },
+      {
+        "index": 43,
+        "step": {
+          "type": "keyboard",
+          "action": "press",
+          "key": "Enter"
+        },
+        "ok": true,
+        "elapsedMs": 4
+      },
+      {
+        "index": 44,
+        "step": {
+          "type": "wait_for_state",
+          "expect": {
+            "phase": "racing",
+            "uiMode": "race",
+            "bettingPageVisible": false
+          }
+        },
+        "ok": true,
+        "state": {
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "straight",
+          "uiMode": "race",
+          "bettingPageVisible": false,
+          "raceViewportVisible": true,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 960,
+            "height": 660
+          },
+          "horseFrames": 24,
+          "backgrounds": 1,
+          "sounds": 7,
+          "worldId": "Node.127",
+          "worldPaintBuilds": 1,
+          "camera": {
+            "x": 400,
+            "y": 200
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "COINS 488",
+          "uiResult": "WIN 0",
+          "resultPanel": false,
+          "startButton": "开跑",
+          "horsePositions": [
+            {
+              "x": 400,
+              "y": 300
+            },
+            {
+              "x": 400,
+              "y": 260
+            },
+            {
+              "x": 400,
+              "y": 220
+            },
+            {
+              "x": 400,
+              "y": 180
+            },
+            {
+              "x": 400,
+              "y": 140
+            },
+            {
+              "x": 400,
+              "y": 100
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": 480,
+              "y": 430
+            },
+            {
+              "x": 480,
+              "y": 390
+            },
+            {
+              "x": 480,
+              "y": 350
+            },
+            {
+              "x": 480,
+              "y": 310
+            },
+            {
+              "x": 480,
+              "y": 270
+            },
+            {
+              "x": 480,
+              "y": 230
+            }
+          ],
+          "phase": "racing",
+          "round": 2,
+          "credits": 488,
+          "totalStake": 1,
+          "result": null,
+          "historyLength": 1,
+          "metrics": {
+            "finishCount": 0,
+            "visibleOrder": [],
+            "backgroundMismatches": 0,
+            "settlementJump": 0,
+            "resultDrift": 0,
+            "worldChanges": 0,
+            "maxCameraStep": 0
+          },
+          "progress": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "elapsedMs": 2
+      },
+      {
+        "index": 45,
+        "step": {
+          "type": "wait_for_state",
+          "expect": {
+            "phase": "result",
+            "round": 2,
+            "metrics": {
+              "finishCount": 6
+            }
+          },
+          "timeoutMs": 30000
+        },
+        "ok": true,
+        "state": {
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "finish",
+          "uiMode": "race",
+          "bettingPageVisible": false,
+          "raceViewportVisible": true,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 960,
+            "height": 660
+          },
+          "horseFrames": 24,
+          "backgrounds": 1,
+          "sounds": 7,
+          "worldId": "Node.127",
+          "worldPaintBuilds": 1,
+          "camera": {
+            "x": 465.1388888888889,
+            "y": 800
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "COINS 488",
+          "uiResult": "WIN 0",
+          "resultPanel": true,
+          "startButton": "下一场",
+          "horsePositions": [
+            {
+              "x": 32.62531412232556,
+              "y": 700.8527905754667
+            },
+            {
+              "x": 364.6496281086115,
+              "y": 740.976906576206
+            },
+            {
+              "x": 109.39501838029832,
+              "y": 779.4792934638098
+            },
+            {
+              "x": 246.26165120739665,
+              "y": 818.8460874193025
+            },
+            {
+              "x": 180.39841031679612,
+              "y": 860.1284520871947
+            },
+            {
+              "x": 307.5234098212966,
+              "y": 901.1975778492176
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": 47.48642523343665,
+              "y": 230.85279057546677
+            },
+            {
+              "x": 379.5107392197226,
+              "y": 270.97690657620615
+            },
+            {
+              "x": 124.25612949140941,
+              "y": 309.4792934638099
+            },
+            {
+              "x": 261.12276231850774,
+              "y": 348.8460874193024
+            },
+            {
+              "x": 195.2595214279072,
+              "y": 390.12845208719455
+            },
+            {
+              "x": 322.38452093240767,
+              "y": 431.1975778492176
+            }
+          ],
+          "phase": "result",
+          "round": 2,
+          "credits": 488,
+          "totalStake": 1,
+          "result": {
+            "first": 1,
+            "second": 3,
+            "order": [
+              1,
+              3,
+              5,
+              4,
+              6,
+              2
+            ],
+            "pair": "1-3",
+            "payout": 0,
+            "stake": 1
+          },
+          "historyLength": 2,
+          "metrics": {
+            "finishCount": 6,
+            "visibleOrder": [
+              1,
+              3,
+              5,
+              4,
+              6,
+              2
+            ],
+            "backgroundMismatches": 0,
+            "settlementJump": 3.232199875140001,
+            "resultDrift": 3.242472165563609,
+            "worldChanges": 0,
+            "maxCameraStep": 5.876301192847222
+          },
+          "progress": [
+            1.1012041666665977,
+            1.0235135553877108,
+            1.0832407676013485,
+            1.0512152444089131,
+            1.0666266321599038,
+            1.0368805608503768
+          ]
+        },
+        "elapsedMs": 26427
+      },
+      {
+        "index": 46,
+        "step": {
+          "type": "screenshot",
+          "label": "single-second-result"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\single-second-result-1792756229980.png",
+          "width": 960,
+          "height": 760,
+          "source": "preview",
+          "capturedAt": "2026-10-23T11:50:29.981Z"
+        },
+        "elapsedMs": 44
+      },
+      {
+        "index": 47,
+        "step": {
+          "type": "get_state",
+          "required": true
+        },
+        "ok": true,
+        "state": {
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "finish",
+          "uiMode": "race",
+          "bettingPageVisible": false,
+          "raceViewportVisible": true,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 960,
+            "height": 660
+          },
+          "horseFrames": 24,
+          "backgrounds": 1,
+          "sounds": 7,
+          "worldId": "Node.127",
+          "worldPaintBuilds": 1,
+          "camera": {
+            "x": 465.1388888888889,
+            "y": 800
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "COINS 488",
+          "uiResult": "WIN 0",
+          "resultPanel": true,
+          "startButton": "下一场",
+          "horsePositions": [
+            {
+              "x": 23.11639037416603,
+              "y": 701.1506999894351
+            },
+            {
+              "x": 356.74547944823416,
+              "y": 739.8601089532856
+            },
+            {
+              "x": 100.2571460994559,
+              "y": 778.8017462475102
+            },
+            {
+              "x": 237.78529723547695,
+              "y": 819.7325635131541
+            },
+            {
+              "x": 171.60371915169685,
+              "y": 861.1073429213369
+            },
+            {
+              "x": 299.3431526709528,
+              "y": 900.6438603119468
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": 37.977501485277116,
+              "y": 231.150699989435
+            },
+            {
+              "x": 371.60659055934525,
+              "y": 269.8601089532856
+            },
+            {
+              "x": 115.11825721056698,
+              "y": 308.8017462475102
+            },
+            {
+              "x": 252.64640834658803,
+              "y": 349.7325635131542
+            },
+            {
+              "x": 186.46483026280794,
+              "y": 391.107342921337
+            },
+            {
+              "x": 314.2042637820639,
+              "y": 430.6438603119468
+            }
+          ],
+          "phase": "result",
+          "round": 2,
+          "credits": 488,
+          "totalStake": 1,
+          "result": {
+            "first": 1,
+            "second": 3,
+            "order": [
+              1,
+              3,
+              5,
+              4,
+              6,
+              2
+            ],
+            "pair": "1-3",
+            "payout": 0,
+            "stake": 1
+          },
+          "historyLength": 2,
+          "metrics": {
+            "finishCount": 6,
+            "visibleOrder": [
+              1,
+              3,
+              5,
+              4,
+              6,
+              2
+            ],
+            "backgroundMismatches": 0,
+            "settlementJump": 3.232199875140001,
+            "resultDrift": 3.2604581735996607,
+            "worldChanges": 0,
+            "maxCameraStep": 5.876301192847222
+          },
+          "progress": [
+            1.1034291666665355,
+            1.0253630528949604,
+            1.0853789449979483,
+            1.0531986326541543,
+            1.0686845083570482,
+            1.0387946651844797
+          ]
+        },
+        "elapsedMs": 4
+      },
+      {
+        "index": 48,
+        "step": {
+          "type": "wait",
+          "durationMs": 6000
+        },
+        "ok": true,
+        "elapsedMs": 6014
+      },
+      {
+        "index": 49,
+        "step": {
+          "type": "get_state",
+          "required": true
+        },
+        "ok": true,
+        "state": {
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "finish",
+          "uiMode": "race",
+          "bettingPageVisible": false,
+          "raceViewportVisible": true,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 960,
+            "height": 660
+          },
+          "horseFrames": 24,
+          "backgrounds": 1,
+          "sounds": 7,
+          "worldId": "Node.127",
+          "worldPaintBuilds": 1,
+          "camera": {
+            "x": 465.1388888888889,
+            "y": 800
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "COINS 488",
+          "uiResult": "WIN 0",
+          "resultPanel": true,
+          "startButton": "下一场",
+          "horsePositions": [
+            {
+              "x": -1032.356338727173,
+              "y": 701.0249795338591
+            },
+            {
+              "x": -520.6002201011474,
+              "y": 740.7891658127153
+            },
+            {
+              "x": -914.0295649814684,
+              "y": 779.2432849830644
+            },
+            {
+              "x": -703.0741203512848,
+              "y": 818.9536008084482
+            },
+            {
+              "x": -804.5905307419307,
+              "y": 860.4010080550933
+            },
+            {
+              "x": -608.6500722083856,
+              "y": 901.1827155783601
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": -1017.4952276160618,
+              "y": 231.0249795338591
+            },
+            {
+              "x": -505.73910899003636,
+              "y": 270.7891658127153
+            },
+            {
+              "x": -899.1684538703573,
+              "y": 309.2432849830643
+            },
+            {
+              "x": -688.2130092401737,
+              "y": 348.9536008084483
+            },
+            {
+              "x": -789.7294196308196,
+              "y": 390.40100805509337
+            },
+            {
+              "x": -593.7889610972745,
+              "y": 431.1827155783601
+            }
+          ],
+          "phase": "result",
+          "round": 2,
+          "credits": 488,
+          "totalStake": 1,
+          "result": {
+            "first": 1,
+            "second": 3,
+            "order": [
+              1,
+              3,
+              5,
+              4,
+              6,
+              2
+            ],
+            "pair": "1-3",
+            "payout": 0,
+            "stake": 1
+          },
+          "historyLength": 2,
+          "metrics": {
+            "finishCount": 6,
+            "visibleOrder": [
+              1,
+              3,
+              5,
+              4,
+              6,
+              2
+            ],
+            "backgroundMismatches": 0,
+            "settlementJump": 3.232199875140001,
+            "resultDrift": 3.418585244065959,
+            "worldChanges": 0,
+            "maxCameraStep": 5.876301192847222
+          },
+          "progress": [
+            1.3503999999997383,
+            1.2306538127268125,
+            1.3227126319495115,
+            1.273351013671745,
+            1.297104912545589,
+            1.2512566618106584
+          ]
+        },
+        "elapsedMs": 3
+      },
+      {
+        "index": 50,
+        "step": {
+          "type": "api",
+          "call": "testStopRecording"
+        },
+        "ok": true,
+        "state": {
+          "bytes": 13879801,
+          "silent": true
+        },
+        "elapsedMs": 622
+      }
+    ],
+    "consoleErrors": [],
+    "diagnostics": {
+      "consoleErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "pageErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "requestFailures": {
+        "count": 0,
+        "samples": []
+      },
+      "httpErrors": {
+        "count": 0,
+        "samples": []
+      }
+    },
+    "reportPath": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\playtests\\playtest-1792756236630.json",
+    "message": "Playtest passed (51 step(s))",
+    "session": {
+      "mode": "shared",
+      "reusedBrowser": true,
+      "reusedPage": true,
+      "pageReset": "reload"
+    },
+    "timing": {
+      "setupMs": 94,
+      "stepsMs": 66681,
+      "totalMs": 66781
+    },
+    "finalState": {
+      "ready": true,
+      "pendingAssets": 0,
+      "loadErrors": [],
+      "section": "finish",
+      "uiMode": "race",
+      "bettingPageVisible": false,
+      "raceViewportVisible": true,
+      "raceViewport": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 660
+      },
+      "horseFrames": 24,
+      "backgrounds": 1,
+      "sounds": 7,
+      "worldId": "Node.127",
+      "worldPaintBuilds": 1,
+      "camera": {
+        "x": 465.1388888888889,
+        "y": 800
+      },
+      "finishWorldX": 400,
+      "horseNoseOffset": 65.13888888888889,
+      "finishDirection": -1,
+      "uiCredits": "COINS 488",
+      "uiResult": "WIN 0",
+      "resultPanel": true,
+      "startButton": "下一场",
+      "horsePositions": [
+        {
+          "x": -1032.356338727173,
+          "y": 701.0249795338591
+        },
+        {
+          "x": -520.6002201011474,
+          "y": 740.7891658127153
+        },
+        {
+          "x": -914.0295649814684,
+          "y": 779.2432849830644
+        },
+        {
+          "x": -703.0741203512848,
+          "y": 818.9536008084482
+        },
+        {
+          "x": -804.5905307419307,
+          "y": 860.4010080550933
+        },
+        {
+          "x": -608.6500722083856,
+          "y": 901.1827155783601
+        }
+      ],
+      "screenHorsePositions": [
+        {
+          "x": -1017.4952276160618,
+          "y": 231.0249795338591
+        },
+        {
+          "x": -505.73910899003636,
+          "y": 270.7891658127153
+        },
+        {
+          "x": -899.1684538703573,
+          "y": 309.2432849830643
+        },
+        {
+          "x": -688.2130092401737,
+          "y": 348.9536008084483
+        },
+        {
+          "x": -789.7294196308196,
+          "y": 390.40100805509337
+        },
+        {
+          "x": -593.7889610972745,
+          "y": 431.1827155783601
+        }
+      ],
+      "phase": "result",
+      "round": 2,
+      "credits": 488,
+      "totalStake": 1,
+      "result": {
+        "first": 1,
+        "second": 3,
+        "order": [
+          1,
+          3,
+          5,
+          4,
+          6,
+          2
+        ],
+        "pair": "1-3",
+        "payout": 0,
+        "stake": 1
+      },
+      "historyLength": 2,
+      "metrics": {
+        "finishCount": 6,
+        "visibleOrder": [
+          1,
+          3,
+          5,
+          4,
+          6,
+          2
+        ],
+        "backgroundMismatches": 0,
+        "settlementJump": 3.232199875140001,
+        "resultDrift": 3.418585244065959,
+        "worldChanges": 0,
+        "maxCameraStep": 5.876301192847222
+      },
+      "progress": [
+        1.3503999999997383,
+        1.2306538127268125,
+        1.3227126319495115,
+        1.273351013671745,
+        1.297104912545589,
+        1.2512566618106584
+      ]
+    }
+  },
+  "evidence": []
+}

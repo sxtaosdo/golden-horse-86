@@ -17,7 +17,7 @@ assert.equal(m.credits,490);
 assert.equal(m.startRace(),true);
 assert.equal(m.phase,'racing');
 assert.equal(m.placeBet('1-2',1),false,'should lock betting during race');
-tick(m,22);
+tick(m,30);
 assert.equal(m.phase,'result');
 assert.deepEqual(m.lastResult.order.slice(0,2),[4,3]);
 assert.equal(m.lastResult.pair,'3-4');

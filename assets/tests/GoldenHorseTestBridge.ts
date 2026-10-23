@@ -49,9 +49,12 @@ export class GoldenHorseTestBridge {
     this.previousCamera={...camera};
     for(let i=0;i<positions.length;i++){
       if(this.model.phase==='racing'){
-        if(trackSection(this.model.progress[i])!==observation.section)this.backgroundMismatches++;
-        if(positions[i].x+Number(observation.horseNoseOffset)>=Number(observation.finishWorldX)
-          &&!this.crossings.includes(i+1)&&observation.section==='finish')this.crossings.push(i+1);
+        // A continuous world can show horses on both sides of a segment join; no backdrop swap exists.
+        const nose=positions[i].x-Number(observation.horseNoseOffset);
+        const before=this.previousPositions[i];
+        if(before&&before.x-Number(observation.horseNoseOffset)>Number(observation.finishWorldX)
+          &&nose<=Number(observation.finishWorldX)&&!this.crossings.includes(i+1)
+          &&trackSection(this.model.progress[i])==='finish')this.crossings.push(i+1);
       }
       const previous=this.previousPositions[i];
       if(previous&&this.model.phase==='result'){
