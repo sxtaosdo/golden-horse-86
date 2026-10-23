@@ -1,0 +1,23 @@
+{
+  "name": "web-mobile",
+  "platform": "web-mobile",
+  "buildPath": "project://build",
+  "outputName": "web-mobile",
+  "debug": false,
+  "md5Cache": true,
+  "sourceMaps": false,
+  "replaceSplashScreen": false,
+  "experimentalEraseModules": false,
+  "startScene": "22896837-e9c5-4efa-bb65-a1b7c45c273b",
+  "scenes": [
+    { "url": "db://assets/GoldenHorseGame.scene", "uuid": "22896837-e9c5-4efa-bb65-a1b7c45c273b" }
+  ],
+  "excludedModules": [],
+  "packages": {
+    "web-mobile": {
+      "orientation": "portrait",
+      "embedWebDebugger": false,
+      "remoteServerAddress": ""
+    }
+  }
+}
