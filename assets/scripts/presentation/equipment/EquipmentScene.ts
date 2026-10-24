@@ -7,6 +7,7 @@ import { RACE_WORLD_LAYER } from './RaceLayers';
 import { RaceScreenState } from './RaceScreen';
 import { EquipmentAnimation, EquipmentFocus } from './EquipmentAnimation';
 import { MotionPart } from './EquipmentMotionCatalog';
+import { coursePoint } from '../../TrackVisual';
 
 /** Owns only presentation nodes. Changing tier never rebuilds the course or simulation. */
 export class EquipmentScene {
@@ -32,8 +33,16 @@ export class EquipmentScene {
   this.roots=[back,front];back.setSiblingIndex(this.course.horseLayer.getSiblingIndex());
   for(const key of this.assets.catalog.get(id).equipment){
    const spec=this.assets.equipmentCatalog.get(key),frame=this.assets.equipment.get(key)!;
-   for(const p of spec.positions){
-    const screen=key==='screen',n=this.node(spec.front?front:back,'Equipment-'+key,screen?Layers.Enum.UI_2D:RACE_WORLD_LAYER);
+   if(spec.mode==='gate'){
+    // Six near-side walls are shared boundaries; the outer far wall closes the seventh edge.
+    const far=spec.positions.reduce((a,p)=>p.y<a.y?p:a),rig=this.assets.motionCatalog.gate;
+    const n=this.node(this.course.horseLayer,'GateFarRail');n.setPosition(far.x,-coursePoint(5.5,0).y);n.addComponent(UITransform);
+    const sprite=n.addComponent(Sprite);sprite.sizeMode=Sprite.SizeMode.CUSTOM;
+    this.motionFrame(sprite,rig.base,0,far.width/rig.referenceWidth);this.roots.push(n);
+   }
+   for(const [row,p] of spec.positions.entries()){
+    const screen=key==='screen',gate=spec.mode==='gate',n=this.node(gate?this.course.horseLayer:spec.front?front:back,gate?'GateNearRail'+(row+1):'Equipment-'+key,screen?Layers.Enum.UI_2D:RACE_WORLD_LAYER);
+    if(gate)this.roots.push(n);
     const height=p.width*spec.frame.height/spec.frame.width;n.setPosition(p.x,-p.y);
     const transform=n.addComponent(UITransform);transform.setAnchorPoint(.5,0);transform.setContentSize(p.width,height);
     if(spec.mode==='tracking'||spec.mode==='signal'||spec.mode==='gate'){
@@ -85,7 +94,7 @@ export class EquipmentScene {
  }
  get observation():Record<string,unknown>{return {tier:this.tier,types:[...this.ids],typeCount:this.ids.length,staticTypes:this.ids.filter(id=>this.assets.equipmentCatalog.items.find(s=>s.id===id)!.mode==='static'),dynamicTypes:this.ids.filter(id=>this.assets.equipmentCatalog.items.find(s=>s.id===id)!.mode!=='static'),cameras:this.cameras.map(c=>({targetHorse:c.horse,renderedFrame:this.assets.motionFrames.get(c.part.resource)!.indexOf(c.head.spriteFrame!),...c.animation.observation,pivot:{...c.origin},basePosition:{x:c.head.node.parent!.position.x,y:-c.head.node.parent!.position.y}})),signals:this.signals.map(s=>({frame:s.frame,renderedFrame:this.assets.motionFrames.get(s.part.resource)!.indexOf(s.head.spriteFrame!),basePosition:{x:s.head.node.parent!.position.x,y:-s.head.node.parent!.position.y}})),gates:this.gates.map(g=>({frame:g.frame,renderedFrame:this.assets.motionFrames.get(g.part.resource)!.indexOf(g.head.spriteFrame!),basePosition:{x:g.head.node.parent!.position.x,y:-g.head.node.parent!.position.y}})),screenMode:this.screen?this.mode:'off',screenVisible:this.visible,broadcastAllocated:!!this.broadcast,broadcastSamples:this.broadcast?.sampleCount??0};}
  dispose():void{this.clear();this.tier=null;}
- private clear():void{this.broadcast?.dispose();this.broadcast=null;for(const root of this.roots)root.destroy();this.roots=[];this.cameras=[];this.signals=[];this.gates=[];this.screen=null;this.caption=null;this.captionBackground=null;this.video=null;this.mode='off';this.visible=false;this.ids=[];}
+ private clear():void{this.broadcast?.dispose();this.broadcast=null;for(const root of this.roots){root.active=false;root.destroy();}this.roots=[];this.cameras=[];this.signals=[];this.gates=[];this.screen=null;this.caption=null;this.captionBackground=null;this.video=null;this.mode='off';this.visible=false;this.ids=[];}
  private motionFrame(sprite:Sprite,part:MotionPart,index:number,scale:number):void{
   const frame=part.frames[index],size=sprite.node.getComponent(UITransform)!;
   size.setAnchorPoint(frame.anchor.x,frame.anchor.y);size.setContentSize(frame.width*scale,frame.height*scale);

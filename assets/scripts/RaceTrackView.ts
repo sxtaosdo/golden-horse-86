@@ -44,6 +44,8 @@ export class RaceTrackView {
  private tiles(parent:Node,frame:SpriteFrame,x:number,y:number,width:number,height:number):void{for(let dx=0;dx<width;dx+=256)for(let dy=0;dy<height;dy+=256)this.sprite(parent,'GroundTile',frame,x+dx+128,y+dy+256,256.5,256.5);}
  private rect(g:Graphics,x:number,y:number,w:number,h:number,color:string):void{g.fillColor=new Color().fromHEX(color);g.rect(x,-y,w,-h);g.fill();}
  private label(name:string,text:string,x:number,y:number,size:number,color:string):void{const n=this.node(this.world,name);n.setPosition(x,-y);n.addComponent(UITransform).setContentSize(180,34);const l=n.addComponent(Label);l.string=text;l.fontFamily='Arial';l.fontSize=size;l.lineHeight=size+2;l.horizontalAlign=Label.HorizontalAlign.CENTER;l.verticalAlign=Label.VerticalAlign.CENTER;l.color=new Color().fromHEX(color);}
+ /** Horses and the side walls between their stalls share one ground-depth order. */
+ sortDepth():void{[...this.horseLayer.children].sort((a,b)=>b.position.y-a.position.y).forEach((node,index)=>node.setSiblingIndex(index));}
  follow(progress:number):void{const p=courseCamera(progress);this.cameraPoint={x:p.x,y:p.y-this.yBias};this.world.setPosition(-this.cameraPoint.x*this.zoom,this.cameraPoint.y*this.zoom-45);}
  project(point:CoursePoint):CoursePoint{return{x:this.width/2+(point.x-this.cameraPoint.x)*this.zoom,y:this.height/2+45+(point.y-this.cameraPoint.y)*this.zoom};}
  get camera():Readonly<CoursePoint>{return this.cameraPoint;}

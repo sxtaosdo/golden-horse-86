@@ -1,0 +1,4433 @@
+[
+  {
+    "report": "gate-depth-360-result.json",
+    "steps": 67,
+    "diagnostics": {
+      "consoleErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "pageErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "requestFailures": {
+        "count": 0,
+        "samples": []
+      },
+      "httpErrors": {
+        "count": 0,
+        "samples": []
+      }
+    },
+    "result": {
+      "first": 1,
+      "second": 5,
+      "order": [
+        1,
+        5,
+        3,
+        4,
+        2,
+        6
+      ],
+      "pair": "1-5",
+      "payout": 0,
+      "stake": 1,
+      "round": 1,
+      "eventId": "championship"
+    },
+    "metrics": {
+      "finishCount": 6,
+      "visibleOrder": [
+        1,
+        5,
+        3,
+        4,
+        2,
+        6
+      ],
+      "backgroundMismatches": 0,
+      "settlementJump": 4.104880561795036,
+      "resultDrift": 4.199484091230887,
+      "worldChanges": 0,
+      "maxCameraStep": 5.4943655392939945,
+      "clippedFinishers": 0
+    },
+    "interleavedSamples": 5,
+    "sampledDepths": [
+      {
+        "phase": "betting",
+        "round": 1,
+        "elapsed": 0,
+        "depthOrder": [
+          {
+            "name": "Horse_6",
+            "y": 100,
+            "index": 0
+          },
+          {
+            "name": "Horse_5",
+            "y": 140,
+            "index": 1
+          },
+          {
+            "name": "Horse_4",
+            "y": 180,
+            "index": 2
+          },
+          {
+            "name": "Horse_3",
+            "y": 220,
+            "index": 3
+          },
+          {
+            "name": "Horse_2",
+            "y": 260,
+            "index": 4
+          },
+          {
+            "name": "Horse_1",
+            "y": 300,
+            "index": 5
+          }
+        ],
+        "gates": []
+      },
+      {
+        "phase": "betting",
+        "round": 1,
+        "elapsed": 0,
+        "depthOrder": [
+          {
+            "name": "Horse_6",
+            "y": 100,
+            "index": 0
+          },
+          {
+            "name": "Horse_5",
+            "y": 140,
+            "index": 1
+          },
+          {
+            "name": "Horse_4",
+            "y": 180,
+            "index": 2
+          },
+          {
+            "name": "Horse_3",
+            "y": 220,
+            "index": 3
+          },
+          {
+            "name": "Horse_2",
+            "y": 260,
+            "index": 4
+          },
+          {
+            "name": "Horse_1",
+            "y": 300,
+            "index": 5
+          }
+        ],
+        "gates": []
+      },
+      {
+        "phase": "preparing",
+        "round": 1,
+        "elapsed": 0,
+        "depthOrder": [
+          {
+            "name": "GateFarRail",
+            "y": 80,
+            "index": 0
+          },
+          {
+            "name": "Horse_6",
+            "y": 100,
+            "index": 1
+          },
+          {
+            "name": "GateNearRail6",
+            "y": 120,
+            "index": 2
+          },
+          {
+            "name": "Horse_5",
+            "y": 140,
+            "index": 3
+          },
+          {
+            "name": "GateNearRail5",
+            "y": 160,
+            "index": 4
+          },
+          {
+            "name": "Horse_4",
+            "y": 180,
+            "index": 5
+          },
+          {
+            "name": "GateNearRail4",
+            "y": 200,
+            "index": 6
+          },
+          {
+            "name": "Horse_3",
+            "y": 220,
+            "index": 7
+          },
+          {
+            "name": "GateNearRail3",
+            "y": 240,
+            "index": 8
+          },
+          {
+            "name": "Horse_2",
+            "y": 260,
+            "index": 9
+          },
+          {
+            "name": "GateNearRail2",
+            "y": 280,
+            "index": 10
+          },
+          {
+            "name": "Horse_1",
+            "y": 300,
+            "index": 11
+          },
+          {
+            "name": "GateNearRail1",
+            "y": 320,
+            "index": 12
+          }
+        ],
+        "gates": [
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 320
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 280
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 240
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 200
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 160
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 120
+            }
+          }
+        ]
+      },
+      {
+        "phase": "preparing",
+        "round": 1,
+        "elapsed": 0,
+        "depthOrder": [
+          {
+            "name": "GateFarRail",
+            "y": 80,
+            "index": 0
+          },
+          {
+            "name": "Horse_6",
+            "y": 100,
+            "index": 1
+          },
+          {
+            "name": "GateNearRail6",
+            "y": 120,
+            "index": 2
+          },
+          {
+            "name": "Horse_5",
+            "y": 140,
+            "index": 3
+          },
+          {
+            "name": "GateNearRail5",
+            "y": 160,
+            "index": 4
+          },
+          {
+            "name": "Horse_4",
+            "y": 180,
+            "index": 5
+          },
+          {
+            "name": "GateNearRail4",
+            "y": 200,
+            "index": 6
+          },
+          {
+            "name": "Horse_3",
+            "y": 220,
+            "index": 7
+          },
+          {
+            "name": "GateNearRail3",
+            "y": 240,
+            "index": 8
+          },
+          {
+            "name": "Horse_2",
+            "y": 260,
+            "index": 9
+          },
+          {
+            "name": "GateNearRail2",
+            "y": 280,
+            "index": 10
+          },
+          {
+            "name": "Horse_1",
+            "y": 300,
+            "index": 11
+          },
+          {
+            "name": "GateNearRail1",
+            "y": 320,
+            "index": 12
+          }
+        ],
+        "gates": [
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 320
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 280
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 240
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 200
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 160
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 120
+            }
+          }
+        ]
+      },
+      {
+        "phase": "racing",
+        "round": 1,
+        "elapsed": 0.40760000000149016,
+        "depthOrder": [
+          {
+            "name": "GateFarRail",
+            "y": 80,
+            "index": 0
+          },
+          {
+            "name": "Horse_6",
+            "y": 99.66258249504979,
+            "index": 1
+          },
+          {
+            "name": "GateNearRail6",
+            "y": 120,
+            "index": 2
+          },
+          {
+            "name": "Horse_5",
+            "y": 141.0772114997439,
+            "index": 3
+          },
+          {
+            "name": "GateNearRail5",
+            "y": 160,
+            "index": 4
+          },
+          {
+            "name": "Horse_4",
+            "y": 180.70476827904176,
+            "index": 5
+          },
+          {
+            "name": "GateNearRail4",
+            "y": 200,
+            "index": 6
+          },
+          {
+            "name": "Horse_3",
+            "y": 219.16303747825256,
+            "index": 7
+          },
+          {
+            "name": "GateNearRail3",
+            "y": 240,
+            "index": 8
+          },
+          {
+            "name": "Horse_2",
+            "y": 259.0102974775426,
+            "index": 9
+          },
+          {
+            "name": "GateNearRail2",
+            "y": 280,
+            "index": 10
+          },
+          {
+            "name": "Horse_1",
+            "y": 300.5009031547368,
+            "index": 11
+          },
+          {
+            "name": "GateNearRail1",
+            "y": 320,
+            "index": 12
+          }
+        ],
+        "gates": [
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 320
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 280
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 240
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 200
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 160
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 120
+            }
+          }
+        ]
+      },
+      {
+        "phase": "racing",
+        "round": 1,
+        "elapsed": 2.0762000000011183,
+        "depthOrder": [
+          {
+            "name": "GateFarRail",
+            "y": 80,
+            "index": 0
+          },
+          {
+            "name": "Horse_6",
+            "y": 101.18718365066631,
+            "index": 1
+          },
+          {
+            "name": "GateNearRail6",
+            "y": 120,
+            "index": 2
+          },
+          {
+            "name": "Horse_5",
+            "y": 140.0110306980422,
+            "index": 3
+          },
+          {
+            "name": "GateNearRail5",
+            "y": 160,
+            "index": 4
+          },
+          {
+            "name": "Horse_4",
+            "y": 178.80005745118612,
+            "index": 5
+          },
+          {
+            "name": "GateNearRail4",
+            "y": 200,
+            "index": 6
+          },
+          {
+            "name": "Horse_3",
+            "y": 219.7868133812844,
+            "index": 7
+          },
+          {
+            "name": "GateNearRail3",
+            "y": 240,
+            "index": 8
+          },
+          {
+            "name": "Horse_2",
+            "y": 261.0128086223544,
+            "index": 9
+          },
+          {
+            "name": "GateNearRail2",
+            "y": 280,
+            "index": 10
+          },
+          {
+            "name": "Horse_1",
+            "y": 301.0413545376284,
+            "index": 11
+          },
+          {
+            "name": "GateNearRail1",
+            "y": 320,
+            "index": 12
+          }
+        ],
+        "gates": [
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 320
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 280
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 240
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 200
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 160
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 120
+            }
+          }
+        ]
+      },
+      {
+        "phase": "racing",
+        "round": 1,
+        "elapsed": 11.149000000000004,
+        "depthOrder": [
+          {
+            "name": "GateFarRail",
+            "y": 80,
+            "index": 0
+          },
+          {
+            "name": "GateNearRail6",
+            "y": 120,
+            "index": 1
+          },
+          {
+            "name": "GateNearRail5",
+            "y": 160,
+            "index": 2
+          },
+          {
+            "name": "GateNearRail4",
+            "y": 200,
+            "index": 3
+          },
+          {
+            "name": "Horse_6",
+            "y": 200.4707185715787,
+            "index": 4
+          },
+          {
+            "name": "Horse_5",
+            "y": 219.80958090822222,
+            "index": 5
+          },
+          {
+            "name": "GateNearRail3",
+            "y": 240,
+            "index": 6
+          },
+          {
+            "name": "Horse_4",
+            "y": 245.6833805157917,
+            "index": 7
+          },
+          {
+            "name": "Horse_3",
+            "y": 278.396354370928,
+            "index": 8
+          },
+          {
+            "name": "GateNearRail2",
+            "y": 280,
+            "index": 9
+          },
+          {
+            "name": "Horse_2",
+            "y": 313.58961714144704,
+            "index": 10
+          },
+          {
+            "name": "GateNearRail1",
+            "y": 320,
+            "index": 11
+          },
+          {
+            "name": "Horse_1",
+            "y": 349.5976379913124,
+            "index": 12
+          }
+        ],
+        "gates": [
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 320
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 280
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 240
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 200
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 160
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 120
+            }
+          }
+        ]
+      },
+      {
+        "phase": "result",
+        "round": 1,
+        "elapsed": 26.464499999999994,
+        "depthOrder": [
+          {
+            "name": "GateFarRail",
+            "y": 80,
+            "index": 0
+          },
+          {
+            "name": "GateNearRail6",
+            "y": 120,
+            "index": 1
+          },
+          {
+            "name": "GateNearRail5",
+            "y": 160,
+            "index": 2
+          },
+          {
+            "name": "GateNearRail4",
+            "y": 200,
+            "index": 3
+          },
+          {
+            "name": "GateNearRail3",
+            "y": 240,
+            "index": 4
+          },
+          {
+            "name": "GateNearRail2",
+            "y": 280,
+            "index": 5
+          },
+          {
+            "name": "GateNearRail1",
+            "y": 320,
+            "index": 6
+          },
+          {
+            "name": "Horse_1",
+            "y": 700.0315726552635,
+            "index": 7
+          },
+          {
+            "name": "Horse_2",
+            "y": 739.1900172770212,
+            "index": 8
+          },
+          {
+            "name": "Horse_3",
+            "y": 781.1823163397517,
+            "index": 9
+          },
+          {
+            "name": "Horse_4",
+            "y": 820.6177073305201,
+            "index": 10
+          },
+          {
+            "name": "Horse_5",
+            "y": 858.8821252458047,
+            "index": 11
+          },
+          {
+            "name": "Horse_6",
+            "y": 898.8924728749844,
+            "index": 12
+          }
+        ],
+        "gates": [
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 320
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 280
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 240
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 200
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 160
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 120
+            }
+          }
+        ]
+      },
+      {
+        "phase": "result",
+        "round": 1,
+        "elapsed": 32.410200000001076,
+        "depthOrder": [
+          {
+            "name": "GateFarRail",
+            "y": 80,
+            "index": 0
+          },
+          {
+            "name": "GateNearRail6",
+            "y": 120,
+            "index": 1
+          },
+          {
+            "name": "GateNearRail5",
+            "y": 160,
+            "index": 2
+          },
+          {
+            "name": "GateNearRail4",
+            "y": 200,
+            "index": 3
+          },
+          {
+            "name": "GateNearRail3",
+            "y": 240,
+            "index": 4
+          },
+          {
+            "name": "GateNearRail2",
+            "y": 280,
+            "index": 5
+          },
+          {
+            "name": "GateNearRail1",
+            "y": 320,
+            "index": 6
+          },
+          {
+            "name": "Horse_1",
+            "y": 701.110758054689,
+            "index": 7
+          },
+          {
+            "name": "Horse_2",
+            "y": 740.4843140661209,
+            "index": 8
+          },
+          {
+            "name": "Horse_3",
+            "y": 780.2881801767478,
+            "index": 9
+          },
+          {
+            "name": "Horse_4",
+            "y": 819.3069983514184,
+            "index": 10
+          },
+          {
+            "name": "Horse_5",
+            "y": 859.9492569553522,
+            "index": 11
+          },
+          {
+            "name": "Horse_6",
+            "y": 899.1312218032789,
+            "index": 12
+          }
+        ],
+        "gates": [
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 320
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 280
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 240
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 200
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 160
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 120
+            }
+          }
+        ]
+      },
+      {
+        "phase": "betting",
+        "round": 2,
+        "elapsed": 0,
+        "depthOrder": [
+          {
+            "name": "GateFarRail",
+            "y": 80,
+            "index": 0
+          },
+          {
+            "name": "Horse_6",
+            "y": 100,
+            "index": 1
+          },
+          {
+            "name": "GateNearRail6",
+            "y": 120,
+            "index": 2
+          },
+          {
+            "name": "Horse_5",
+            "y": 140,
+            "index": 3
+          },
+          {
+            "name": "GateNearRail5",
+            "y": 160,
+            "index": 4
+          },
+          {
+            "name": "Horse_4",
+            "y": 180,
+            "index": 5
+          },
+          {
+            "name": "GateNearRail4",
+            "y": 200,
+            "index": 6
+          },
+          {
+            "name": "Horse_3",
+            "y": 220,
+            "index": 7
+          },
+          {
+            "name": "GateNearRail3",
+            "y": 240,
+            "index": 8
+          },
+          {
+            "name": "Horse_2",
+            "y": 260,
+            "index": 9
+          },
+          {
+            "name": "GateNearRail2",
+            "y": 280,
+            "index": 10
+          },
+          {
+            "name": "Horse_1",
+            "y": 300,
+            "index": 11
+          },
+          {
+            "name": "GateNearRail1",
+            "y": 320,
+            "index": 12
+          }
+        ],
+        "gates": [
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 320
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 280
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 240
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 200
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 160
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 120
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "report": "gate-depth-390-result.json",
+    "steps": 90,
+    "diagnostics": {
+      "consoleErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "pageErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "requestFailures": {
+        "count": 0,
+        "samples": []
+      },
+      "httpErrors": {
+        "count": 0,
+        "samples": []
+      }
+    },
+    "result": {
+      "first": 3,
+      "second": 1,
+      "order": [
+        3,
+        1,
+        6,
+        2,
+        5,
+        4
+      ],
+      "pair": "1-3",
+      "payout": 0,
+      "stake": 1,
+      "round": 1,
+      "eventId": "championship"
+    },
+    "metrics": {
+      "finishCount": 6,
+      "visibleOrder": [
+        3,
+        1,
+        6,
+        2,
+        5,
+        4
+      ],
+      "backgroundMismatches": 0,
+      "settlementJump": 4.199619138322094,
+      "resultDrift": 4.098996172182004,
+      "worldChanges": 0,
+      "maxCameraStep": 18.366315486004737,
+      "clippedFinishers": 0
+    },
+    "interleavedSamples": 14,
+    "sampledDepths": [
+      {
+        "phase": "betting",
+        "round": 1,
+        "elapsed": 0,
+        "depthOrder": [
+          {
+            "name": "Horse_6",
+            "y": 100,
+            "index": 0
+          },
+          {
+            "name": "Horse_5",
+            "y": 140,
+            "index": 1
+          },
+          {
+            "name": "Horse_4",
+            "y": 180,
+            "index": 2
+          },
+          {
+            "name": "Horse_3",
+            "y": 220,
+            "index": 3
+          },
+          {
+            "name": "Horse_2",
+            "y": 260,
+            "index": 4
+          },
+          {
+            "name": "Horse_1",
+            "y": 300,
+            "index": 5
+          }
+        ],
+        "gates": []
+      },
+      {
+        "phase": "betting",
+        "round": 1,
+        "elapsed": 0,
+        "depthOrder": [
+          {
+            "name": "GateFarRail",
+            "y": 80,
+            "index": 0
+          },
+          {
+            "name": "Horse_6",
+            "y": 100,
+            "index": 1
+          },
+          {
+            "name": "GateNearRail6",
+            "y": 120,
+            "index": 2
+          },
+          {
+            "name": "Horse_5",
+            "y": 140,
+            "index": 3
+          },
+          {
+            "name": "GateNearRail5",
+            "y": 160,
+            "index": 4
+          },
+          {
+            "name": "Horse_4",
+            "y": 180,
+            "index": 5
+          },
+          {
+            "name": "GateNearRail4",
+            "y": 200,
+            "index": 6
+          },
+          {
+            "name": "Horse_3",
+            "y": 220,
+            "index": 7
+          },
+          {
+            "name": "GateNearRail3",
+            "y": 240,
+            "index": 8
+          },
+          {
+            "name": "Horse_2",
+            "y": 260,
+            "index": 9
+          },
+          {
+            "name": "GateNearRail2",
+            "y": 280,
+            "index": 10
+          },
+          {
+            "name": "Horse_1",
+            "y": 300,
+            "index": 11
+          },
+          {
+            "name": "GateNearRail1",
+            "y": 320,
+            "index": 12
+          }
+        ],
+        "gates": [
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 320
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 280
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 240
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 200
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 160
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 120
+            }
+          }
+        ]
+      },
+      {
+        "phase": "preparing",
+        "round": 1,
+        "elapsed": 0,
+        "depthOrder": [
+          {
+            "name": "GateFarRail",
+            "y": 80,
+            "index": 0
+          },
+          {
+            "name": "Horse_6",
+            "y": 100,
+            "index": 1
+          },
+          {
+            "name": "GateNearRail6",
+            "y": 120,
+            "index": 2
+          },
+          {
+            "name": "Horse_5",
+            "y": 140,
+            "index": 3
+          },
+          {
+            "name": "GateNearRail5",
+            "y": 160,
+            "index": 4
+          },
+          {
+            "name": "Horse_4",
+            "y": 180,
+            "index": 5
+          },
+          {
+            "name": "GateNearRail4",
+            "y": 200,
+            "index": 6
+          },
+          {
+            "name": "Horse_3",
+            "y": 220,
+            "index": 7
+          },
+          {
+            "name": "GateNearRail3",
+            "y": 240,
+            "index": 8
+          },
+          {
+            "name": "Horse_2",
+            "y": 260,
+            "index": 9
+          },
+          {
+            "name": "GateNearRail2",
+            "y": 280,
+            "index": 10
+          },
+          {
+            "name": "Horse_1",
+            "y": 300,
+            "index": 11
+          },
+          {
+            "name": "GateNearRail1",
+            "y": 320,
+            "index": 12
+          }
+        ],
+        "gates": [
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 320
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 280
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 240
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 200
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 160
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 120
+            }
+          }
+        ]
+      },
+      {
+        "phase": "preparing",
+        "round": 1,
+        "elapsed": 0,
+        "depthOrder": [
+          {
+            "name": "GateFarRail",
+            "y": 80,
+            "index": 0
+          },
+          {
+            "name": "Horse_6",
+            "y": 100,
+            "index": 1
+          },
+          {
+            "name": "GateNearRail6",
+            "y": 120,
+            "index": 2
+          },
+          {
+            "name": "Horse_5",
+            "y": 140,
+            "index": 3
+          },
+          {
+            "name": "GateNearRail5",
+            "y": 160,
+            "index": 4
+          },
+          {
+            "name": "Horse_4",
+            "y": 180,
+            "index": 5
+          },
+          {
+            "name": "GateNearRail4",
+            "y": 200,
+            "index": 6
+          },
+          {
+            "name": "Horse_3",
+            "y": 220,
+            "index": 7
+          },
+          {
+            "name": "GateNearRail3",
+            "y": 240,
+            "index": 8
+          },
+          {
+            "name": "Horse_2",
+            "y": 260,
+            "index": 9
+          },
+          {
+            "name": "GateNearRail2",
+            "y": 280,
+            "index": 10
+          },
+          {
+            "name": "Horse_1",
+            "y": 300,
+            "index": 11
+          },
+          {
+            "name": "GateNearRail1",
+            "y": 320,
+            "index": 12
+          }
+        ],
+        "gates": [
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 320
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 280
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 240
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 200
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 160
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 120
+            }
+          }
+        ]
+      },
+      {
+        "phase": "preparing",
+        "round": 1,
+        "elapsed": 0,
+        "depthOrder": [
+          {
+            "name": "GateFarRail",
+            "y": 80,
+            "index": 0
+          },
+          {
+            "name": "Horse_6",
+            "y": 100,
+            "index": 1
+          },
+          {
+            "name": "GateNearRail6",
+            "y": 120,
+            "index": 2
+          },
+          {
+            "name": "Horse_5",
+            "y": 140,
+            "index": 3
+          },
+          {
+            "name": "GateNearRail5",
+            "y": 160,
+            "index": 4
+          },
+          {
+            "name": "Horse_4",
+            "y": 180,
+            "index": 5
+          },
+          {
+            "name": "GateNearRail4",
+            "y": 200,
+            "index": 6
+          },
+          {
+            "name": "Horse_3",
+            "y": 220,
+            "index": 7
+          },
+          {
+            "name": "GateNearRail3",
+            "y": 240,
+            "index": 8
+          },
+          {
+            "name": "Horse_2",
+            "y": 260,
+            "index": 9
+          },
+          {
+            "name": "GateNearRail2",
+            "y": 280,
+            "index": 10
+          },
+          {
+            "name": "Horse_1",
+            "y": 300,
+            "index": 11
+          },
+          {
+            "name": "GateNearRail1",
+            "y": 320,
+            "index": 12
+          }
+        ],
+        "gates": [
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 320
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 280
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 240
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 200
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 160
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 120
+            }
+          }
+        ]
+      },
+      {
+        "phase": "racing",
+        "round": 1,
+        "elapsed": 0.388,
+        "depthOrder": [
+          {
+            "name": "GateFarRail",
+            "y": 80,
+            "index": 0
+          },
+          {
+            "name": "Horse_6",
+            "y": 99.85046747009794,
+            "index": 1
+          },
+          {
+            "name": "GateNearRail6",
+            "y": 120,
+            "index": 2
+          },
+          {
+            "name": "Horse_5",
+            "y": 141.1477581395423,
+            "index": 3
+          },
+          {
+            "name": "GateNearRail5",
+            "y": 160,
+            "index": 4
+          },
+          {
+            "name": "Horse_4",
+            "y": 180.54073079242625,
+            "index": 5
+          },
+          {
+            "name": "GateNearRail4",
+            "y": 200,
+            "index": 6
+          },
+          {
+            "name": "Horse_3",
+            "y": 219.0364641708118,
+            "index": 7
+          },
+          {
+            "name": "GateNearRail3",
+            "y": 240,
+            "index": 8
+          },
+          {
+            "name": "Horse_2",
+            "y": 259.13136726225423,
+            "index": 9
+          },
+          {
+            "name": "GateNearRail2",
+            "y": 280,
+            "index": 10
+          },
+          {
+            "name": "Horse_1",
+            "y": 300.6685619008465,
+            "index": 11
+          },
+          {
+            "name": "GateNearRail1",
+            "y": 320,
+            "index": 12
+          }
+        ],
+        "gates": [
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 320
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 280
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 240
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 200
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 160
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 120
+            }
+          }
+        ]
+      },
+      {
+        "phase": "racing",
+        "round": 1,
+        "elapsed": 0.8153000000007451,
+        "depthOrder": [
+          {
+            "name": "GateFarRail",
+            "y": 80,
+            "index": 0
+          },
+          {
+            "name": "Horse_6",
+            "y": 101.07234100083015,
+            "index": 1
+          },
+          {
+            "name": "GateNearRail6",
+            "y": 120,
+            "index": 2
+          },
+          {
+            "name": "Horse_5",
+            "y": 139.65578412114755,
+            "index": 3
+          },
+          {
+            "name": "GateNearRail5",
+            "y": 160,
+            "index": 4
+          },
+          {
+            "name": "Horse_4",
+            "y": 178.80750890889993,
+            "index": 5
+          },
+          {
+            "name": "GateNearRail4",
+            "y": 200,
+            "index": 6
+          },
+          {
+            "name": "Horse_3",
+            "y": 219.91882194632095,
+            "index": 7
+          },
+          {
+            "name": "GateNearRail3",
+            "y": 240,
+            "index": 8
+          },
+          {
+            "name": "Horse_2",
+            "y": 261.16451392998715,
+            "index": 9
+          },
+          {
+            "name": "GateNearRail2",
+            "y": 280,
+            "index": 10
+          },
+          {
+            "name": "Horse_1",
+            "y": 300.48258792571,
+            "index": 11
+          },
+          {
+            "name": "GateNearRail1",
+            "y": 320,
+            "index": 12
+          }
+        ],
+        "gates": [
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 320
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 280
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 240
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 200
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 160
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 120
+            }
+          }
+        ]
+      },
+      {
+        "phase": "racing",
+        "round": 1,
+        "elapsed": 1.1874000000003722,
+        "depthOrder": [
+          {
+            "name": "GateFarRail",
+            "y": 80,
+            "index": 0
+          },
+          {
+            "name": "Horse_6",
+            "y": 99.33282401745572,
+            "index": 1
+          },
+          {
+            "name": "GateNearRail6",
+            "y": 120,
+            "index": 2
+          },
+          {
+            "name": "Horse_5",
+            "y": 138.90556465142558,
+            "index": 3
+          },
+          {
+            "name": "GateNearRail5",
+            "y": 160,
+            "index": 4
+          },
+          {
+            "name": "Horse_4",
+            "y": 180.2736163865476,
+            "index": 5
+          },
+          {
+            "name": "GateNearRail4",
+            "y": 200,
+            "index": 6
+          },
+          {
+            "name": "Horse_3",
+            "y": 221.1997066131042,
+            "index": 7
+          },
+          {
+            "name": "GateNearRail3",
+            "y": 240,
+            "index": 8
+          },
+          {
+            "name": "Horse_2",
+            "y": 260.2192246949496,
+            "index": 9
+          },
+          {
+            "name": "GateNearRail2",
+            "y": 280,
+            "index": 10
+          },
+          {
+            "name": "Horse_1",
+            "y": 298.881633782058,
+            "index": 11
+          },
+          {
+            "name": "GateNearRail1",
+            "y": 320,
+            "index": 12
+          }
+        ],
+        "gates": [
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 320
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 280
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 240
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 200
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 160
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 120
+            }
+          }
+        ]
+      },
+      {
+        "phase": "racing",
+        "round": 1,
+        "elapsed": 1.5394999999999996,
+        "depthOrder": [
+          {
+            "name": "GateFarRail",
+            "y": 80,
+            "index": 0
+          },
+          {
+            "name": "Horse_6",
+            "y": 98.81771202331336,
+            "index": 1
+          },
+          {
+            "name": "GateNearRail6",
+            "y": 120,
+            "index": 2
+          },
+          {
+            "name": "Horse_5",
+            "y": 140.06980665425473,
+            "index": 3
+          },
+          {
+            "name": "GateNearRail5",
+            "y": 160,
+            "index": 4
+          },
+          {
+            "name": "Horse_4",
+            "y": 181.19086180456603,
+            "index": 5
+          },
+          {
+            "name": "GateNearRail4",
+            "y": 200,
+            "index": 6
+          },
+          {
+            "name": "Horse_3",
+            "y": 220.4316244805071,
+            "index": 7
+          },
+          {
+            "name": "GateNearRail3",
+            "y": 240,
+            "index": 8
+          },
+          {
+            "name": "Horse_2",
+            "y": 259.0378337277064,
+            "index": 9
+          },
+          {
+            "name": "GateNearRail2",
+            "y": 280,
+            "index": 10
+          },
+          {
+            "name": "Horse_1",
+            "y": 299.0650317565302,
+            "index": 11
+          },
+          {
+            "name": "GateNearRail1",
+            "y": 320,
+            "index": 12
+          }
+        ],
+        "gates": [
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 320
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 280
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 240
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 200
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 160
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 120
+            }
+          }
+        ]
+      },
+      {
+        "phase": "racing",
+        "round": 1,
+        "elapsed": 1.893,
+        "depthOrder": [
+          {
+            "name": "GateFarRail",
+            "y": 80,
+            "index": 0
+          },
+          {
+            "name": "Horse_6",
+            "y": 98.87148059824925,
+            "index": 1
+          },
+          {
+            "name": "GateNearRail6",
+            "y": 120,
+            "index": 2
+          },
+          {
+            "name": "Horse_5",
+            "y": 140.43730509476092,
+            "index": 3
+          },
+          {
+            "name": "GateNearRail5",
+            "y": 160,
+            "index": 4
+          },
+          {
+            "name": "Horse_4",
+            "y": 181.15115527664858,
+            "index": 5
+          },
+          {
+            "name": "GateNearRail4",
+            "y": 200,
+            "index": 6
+          },
+          {
+            "name": "Horse_3",
+            "y": 219.94336989150264,
+            "index": 7
+          },
+          {
+            "name": "GateNearRail3",
+            "y": 240,
+            "index": 8
+          },
+          {
+            "name": "Horse_2",
+            "y": 258.8579838155156,
+            "index": 9
+          },
+          {
+            "name": "GateNearRail2",
+            "y": 280,
+            "index": 10
+          },
+          {
+            "name": "Horse_1",
+            "y": 299.2241357769825,
+            "index": 11
+          },
+          {
+            "name": "GateNearRail1",
+            "y": 320,
+            "index": 12
+          }
+        ],
+        "gates": [
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 320
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 280
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 240
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 200
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 160
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 120
+            }
+          }
+        ]
+      },
+      {
+        "phase": "racing",
+        "round": 1,
+        "elapsed": 2.2644999999999995,
+        "depthOrder": [
+          {
+            "name": "GateFarRail",
+            "y": 80,
+            "index": 0
+          },
+          {
+            "name": "Horse_6",
+            "y": 99.42122103244208,
+            "index": 1
+          },
+          {
+            "name": "GateNearRail6",
+            "y": 120,
+            "index": 2
+          },
+          {
+            "name": "Horse_5",
+            "y": 139.1379585919295,
+            "index": 3
+          },
+          {
+            "name": "GateNearRail5",
+            "y": 160,
+            "index": 4
+          },
+          {
+            "name": "Horse_4",
+            "y": 180.9712677672266,
+            "index": 5
+          },
+          {
+            "name": "GateNearRail4",
+            "y": 200,
+            "index": 6
+          },
+          {
+            "name": "Horse_3",
+            "y": 220.78060370645994,
+            "index": 7
+          },
+          {
+            "name": "GateNearRail3",
+            "y": 240,
+            "index": 8
+          },
+          {
+            "name": "Horse_2",
+            "y": 259.4403198376344,
+            "index": 9
+          },
+          {
+            "name": "GateNearRail2",
+            "y": 280,
+            "index": 10
+          },
+          {
+            "name": "Horse_1",
+            "y": 298.8050471831833,
+            "index": 11
+          },
+          {
+            "name": "GateNearRail1",
+            "y": 320,
+            "index": 12
+          }
+        ],
+        "gates": [
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 320
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 280
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 240
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 200
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 160
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 120
+            }
+          }
+        ]
+      },
+      {
+        "phase": "racing",
+        "round": 1,
+        "elapsed": 2.635200000001117,
+        "depthOrder": [
+          {
+            "name": "GateFarRail",
+            "y": 80,
+            "index": 0
+          },
+          {
+            "name": "Horse_6",
+            "y": 101.03956565091035,
+            "index": 1
+          },
+          {
+            "name": "GateNearRail6",
+            "y": 120,
+            "index": 2
+          },
+          {
+            "name": "Horse_5",
+            "y": 140.0684188321225,
+            "index": 3
+          },
+          {
+            "name": "GateNearRail5",
+            "y": 160,
+            "index": 4
+          },
+          {
+            "name": "Horse_4",
+            "y": 178.95515760484386,
+            "index": 5
+          },
+          {
+            "name": "GateNearRail4",
+            "y": 200,
+            "index": 6
+          },
+          {
+            "name": "Horse_3",
+            "y": 220.8948727146617,
+            "index": 7
+          },
+          {
+            "name": "GateNearRail3",
+            "y": 240,
+            "index": 8
+          },
+          {
+            "name": "Horse_2",
+            "y": 260.92473944699776,
+            "index": 9
+          },
+          {
+            "name": "GateNearRail2",
+            "y": 280,
+            "index": 10
+          },
+          {
+            "name": "Horse_1",
+            "y": 299.9366976979678,
+            "index": 11
+          },
+          {
+            "name": "GateNearRail1",
+            "y": 320,
+            "index": 12
+          }
+        ],
+        "gates": [
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 320
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 280
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 240
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 200
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 160
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 120
+            }
+          }
+        ]
+      },
+      {
+        "phase": "racing",
+        "round": 1,
+        "elapsed": 2.989700000001116,
+        "depthOrder": [
+          {
+            "name": "GateFarRail",
+            "y": 80,
+            "index": 0
+          },
+          {
+            "name": "Horse_6",
+            "y": 98.88156330147943,
+            "index": 1
+          },
+          {
+            "name": "GateNearRail6",
+            "y": 120,
+            "index": 2
+          },
+          {
+            "name": "Horse_5",
+            "y": 140.01873532799732,
+            "index": 3
+          },
+          {
+            "name": "GateNearRail5",
+            "y": 160,
+            "index": 4
+          },
+          {
+            "name": "Horse_4",
+            "y": 180.7456435233565,
+            "index": 5
+          },
+          {
+            "name": "GateNearRail4",
+            "y": 200,
+            "index": 6
+          },
+          {
+            "name": "Horse_3",
+            "y": 218.8278979930593,
+            "index": 7
+          },
+          {
+            "name": "GateNearRail3",
+            "y": 240,
+            "index": 8
+          },
+          {
+            "name": "Horse_2",
+            "y": 260.6846409188974,
+            "index": 9
+          },
+          {
+            "name": "GateNearRail2",
+            "y": 280,
+            "index": 10
+          },
+          {
+            "name": "Horse_1",
+            "y": 301.1660164856688,
+            "index": 11
+          },
+          {
+            "name": "GateNearRail1",
+            "y": 320,
+            "index": 12
+          }
+        ],
+        "gates": [
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 320
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 280
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 240
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 200
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 160
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 120
+            }
+          }
+        ]
+      },
+      {
+        "phase": "racing",
+        "round": 1,
+        "elapsed": 3.3451000000014877,
+        "depthOrder": [
+          {
+            "name": "GateFarRail",
+            "y": 80,
+            "index": 0
+          },
+          {
+            "name": "Horse_6",
+            "y": 101.10143351325657,
+            "index": 1
+          },
+          {
+            "name": "GateNearRail6",
+            "y": 120,
+            "index": 2
+          },
+          {
+            "name": "Horse_5",
+            "y": 140.6241004543451,
+            "index": 3
+          },
+          {
+            "name": "GateNearRail5",
+            "y": 160,
+            "index": 4
+          },
+          {
+            "name": "Horse_4",
+            "y": 178.8519288309961,
+            "index": 5
+          },
+          {
+            "name": "GateNearRail4",
+            "y": 200,
+            "index": 6
+          },
+          {
+            "name": "Horse_3",
+            "y": 221.1969541036036,
+            "index": 7
+          },
+          {
+            "name": "GateNearRail3",
+            "y": 240,
+            "index": 8
+          },
+          {
+            "name": "Horse_2",
+            "y": 258.8777261601896,
+            "index": 9
+          },
+          {
+            "name": "GateNearRail2",
+            "y": 280,
+            "index": 10
+          },
+          {
+            "name": "Horse_1",
+            "y": 299.9414719756034,
+            "index": 11
+          },
+          {
+            "name": "GateNearRail1",
+            "y": 320,
+            "index": 12
+          }
+        ],
+        "gates": [
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 320
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 280
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 240
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 200
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 160
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 120
+            }
+          }
+        ]
+      },
+      {
+        "phase": "racing",
+        "round": 1,
+        "elapsed": 8.984900000000367,
+        "depthOrder": [
+          {
+            "name": "GateFarRail",
+            "y": 80,
+            "index": 0
+          },
+          {
+            "name": "Horse_6",
+            "y": 100.49981254075728,
+            "index": 1
+          },
+          {
+            "name": "GateNearRail6",
+            "y": 120,
+            "index": 2
+          },
+          {
+            "name": "Horse_5",
+            "y": 141.1819607496857,
+            "index": 3
+          },
+          {
+            "name": "GateNearRail5",
+            "y": 160,
+            "index": 4
+          },
+          {
+            "name": "Horse_4",
+            "y": 180.07614009796004,
+            "index": 5
+          },
+          {
+            "name": "GateNearRail4",
+            "y": 200,
+            "index": 6
+          },
+          {
+            "name": "Horse_3",
+            "y": 218.83746086679082,
+            "index": 7
+          },
+          {
+            "name": "GateNearRail3",
+            "y": 240,
+            "index": 8
+          },
+          {
+            "name": "Horse_2",
+            "y": 259.555066090989,
+            "index": 9
+          },
+          {
+            "name": "GateNearRail2",
+            "y": 280,
+            "index": 10
+          },
+          {
+            "name": "Horse_1",
+            "y": 301.0693561523286,
+            "index": 11
+          },
+          {
+            "name": "GateNearRail1",
+            "y": 320,
+            "index": 12
+          }
+        ],
+        "gates": [
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 320
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 280
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 240
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 200
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 160
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 120
+            }
+          }
+        ]
+      },
+      {
+        "phase": "result",
+        "round": 1,
+        "elapsed": 26.431900000000415,
+        "depthOrder": [
+          {
+            "name": "GateFarRail",
+            "y": 80,
+            "index": 0
+          },
+          {
+            "name": "GateNearRail6",
+            "y": 120,
+            "index": 1
+          },
+          {
+            "name": "GateNearRail5",
+            "y": 160,
+            "index": 2
+          },
+          {
+            "name": "GateNearRail4",
+            "y": 200,
+            "index": 3
+          },
+          {
+            "name": "GateNearRail3",
+            "y": 240,
+            "index": 4
+          },
+          {
+            "name": "GateNearRail2",
+            "y": 280,
+            "index": 5
+          },
+          {
+            "name": "GateNearRail1",
+            "y": 320,
+            "index": 6
+          },
+          {
+            "name": "Horse_1",
+            "y": 698.8392883856831,
+            "index": 7
+          },
+          {
+            "name": "Horse_2",
+            "y": 738.9916438191656,
+            "index": 8
+          },
+          {
+            "name": "Horse_3",
+            "y": 781.0769531159709,
+            "index": 9
+          },
+          {
+            "name": "Horse_4",
+            "y": 820.7899437068805,
+            "index": 10
+          },
+          {
+            "name": "Horse_5",
+            "y": 860.5554521375841,
+            "index": 11
+          },
+          {
+            "name": "Horse_6",
+            "y": 898.9100404869262,
+            "index": 12
+          }
+        ],
+        "gates": [
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 320
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 280
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 240
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 200
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 160
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 120
+            }
+          }
+        ]
+      },
+      {
+        "phase": "result",
+        "round": 1,
+        "elapsed": 32.002300000000744,
+        "depthOrder": [
+          {
+            "name": "GateFarRail",
+            "y": 80,
+            "index": 0
+          },
+          {
+            "name": "GateNearRail6",
+            "y": 120,
+            "index": 1
+          },
+          {
+            "name": "GateNearRail5",
+            "y": 160,
+            "index": 2
+          },
+          {
+            "name": "GateNearRail4",
+            "y": 200,
+            "index": 3
+          },
+          {
+            "name": "GateNearRail3",
+            "y": 240,
+            "index": 4
+          },
+          {
+            "name": "GateNearRail2",
+            "y": 280,
+            "index": 5
+          },
+          {
+            "name": "GateNearRail1",
+            "y": 320,
+            "index": 6
+          },
+          {
+            "name": "Horse_1",
+            "y": 699.9135372452258,
+            "index": 7
+          },
+          {
+            "name": "Horse_2",
+            "y": 739.5454554654943,
+            "index": 8
+          },
+          {
+            "name": "Horse_3",
+            "y": 780.3227794439089,
+            "index": 9
+          },
+          {
+            "name": "Horse_4",
+            "y": 818.9671028093429,
+            "index": 10
+          },
+          {
+            "name": "Horse_5",
+            "y": 860.9437680379765,
+            "index": 11
+          },
+          {
+            "name": "Horse_6",
+            "y": 899.7064711042698,
+            "index": 12
+          }
+        ],
+        "gates": [
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 320
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 280
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 240
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 200
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 160
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 120
+            }
+          }
+        ]
+      },
+      {
+        "phase": "betting",
+        "round": 2,
+        "elapsed": 0,
+        "depthOrder": [
+          {
+            "name": "GateFarRail",
+            "y": 80,
+            "index": 0
+          },
+          {
+            "name": "Horse_6",
+            "y": 100,
+            "index": 1
+          },
+          {
+            "name": "GateNearRail6",
+            "y": 120,
+            "index": 2
+          },
+          {
+            "name": "Horse_5",
+            "y": 140,
+            "index": 3
+          },
+          {
+            "name": "GateNearRail5",
+            "y": 160,
+            "index": 4
+          },
+          {
+            "name": "Horse_4",
+            "y": 180,
+            "index": 5
+          },
+          {
+            "name": "GateNearRail4",
+            "y": 200,
+            "index": 6
+          },
+          {
+            "name": "Horse_3",
+            "y": 220,
+            "index": 7
+          },
+          {
+            "name": "GateNearRail3",
+            "y": 240,
+            "index": 8
+          },
+          {
+            "name": "Horse_2",
+            "y": 260,
+            "index": 9
+          },
+          {
+            "name": "GateNearRail2",
+            "y": 280,
+            "index": 10
+          },
+          {
+            "name": "Horse_1",
+            "y": 300,
+            "index": 11
+          },
+          {
+            "name": "GateNearRail1",
+            "y": 320,
+            "index": 12
+          }
+        ],
+        "gates": [
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 320
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 280
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 240
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 200
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 160
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 120
+            }
+          }
+        ]
+      },
+      {
+        "phase": "betting",
+        "round": 2,
+        "elapsed": 0,
+        "depthOrder": [
+          {
+            "name": "Horse_6",
+            "y": 100,
+            "index": 0
+          },
+          {
+            "name": "Horse_5",
+            "y": 140,
+            "index": 1
+          },
+          {
+            "name": "Horse_4",
+            "y": 180,
+            "index": 2
+          },
+          {
+            "name": "Horse_3",
+            "y": 220,
+            "index": 3
+          },
+          {
+            "name": "Horse_2",
+            "y": 260,
+            "index": 4
+          },
+          {
+            "name": "Horse_1",
+            "y": 300,
+            "index": 5
+          }
+        ],
+        "gates": []
+      }
+    ]
+  },
+  {
+    "report": "gate-depth-430-result.json",
+    "steps": 67,
+    "diagnostics": {
+      "consoleErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "pageErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "requestFailures": {
+        "count": 0,
+        "samples": []
+      },
+      "httpErrors": {
+        "count": 0,
+        "samples": []
+      }
+    },
+    "result": {
+      "first": 3,
+      "second": 4,
+      "order": [
+        3,
+        4,
+        6,
+        5,
+        1,
+        2
+      ],
+      "pair": "3-4",
+      "payout": 0,
+      "stake": 1,
+      "round": 1,
+      "eventId": "championship"
+    },
+    "metrics": {
+      "finishCount": 6,
+      "visibleOrder": [
+        3,
+        4,
+        6,
+        5,
+        1,
+        2
+      ],
+      "backgroundMismatches": 0,
+      "settlementJump": 4.081058936980259,
+      "resultDrift": 4.221070256545345,
+      "worldChanges": 0,
+      "maxCameraStep": 6.753585738678088,
+      "clippedFinishers": 0
+    },
+    "interleavedSamples": 5,
+    "sampledDepths": [
+      {
+        "phase": "betting",
+        "round": 1,
+        "elapsed": 0,
+        "depthOrder": [
+          {
+            "name": "Horse_6",
+            "y": 100,
+            "index": 0
+          },
+          {
+            "name": "Horse_5",
+            "y": 140,
+            "index": 1
+          },
+          {
+            "name": "Horse_4",
+            "y": 180,
+            "index": 2
+          },
+          {
+            "name": "Horse_3",
+            "y": 220,
+            "index": 3
+          },
+          {
+            "name": "Horse_2",
+            "y": 260,
+            "index": 4
+          },
+          {
+            "name": "Horse_1",
+            "y": 300,
+            "index": 5
+          }
+        ],
+        "gates": []
+      },
+      {
+        "phase": "betting",
+        "round": 1,
+        "elapsed": 0,
+        "depthOrder": [
+          {
+            "name": "Horse_6",
+            "y": 100,
+            "index": 0
+          },
+          {
+            "name": "Horse_5",
+            "y": 140,
+            "index": 1
+          },
+          {
+            "name": "Horse_4",
+            "y": 180,
+            "index": 2
+          },
+          {
+            "name": "Horse_3",
+            "y": 220,
+            "index": 3
+          },
+          {
+            "name": "Horse_2",
+            "y": 260,
+            "index": 4
+          },
+          {
+            "name": "Horse_1",
+            "y": 300,
+            "index": 5
+          }
+        ],
+        "gates": []
+      },
+      {
+        "phase": "preparing",
+        "round": 1,
+        "elapsed": 0,
+        "depthOrder": [
+          {
+            "name": "GateFarRail",
+            "y": 80,
+            "index": 0
+          },
+          {
+            "name": "Horse_6",
+            "y": 100,
+            "index": 1
+          },
+          {
+            "name": "GateNearRail6",
+            "y": 120,
+            "index": 2
+          },
+          {
+            "name": "Horse_5",
+            "y": 140,
+            "index": 3
+          },
+          {
+            "name": "GateNearRail5",
+            "y": 160,
+            "index": 4
+          },
+          {
+            "name": "Horse_4",
+            "y": 180,
+            "index": 5
+          },
+          {
+            "name": "GateNearRail4",
+            "y": 200,
+            "index": 6
+          },
+          {
+            "name": "Horse_3",
+            "y": 220,
+            "index": 7
+          },
+          {
+            "name": "GateNearRail3",
+            "y": 240,
+            "index": 8
+          },
+          {
+            "name": "Horse_2",
+            "y": 260,
+            "index": 9
+          },
+          {
+            "name": "GateNearRail2",
+            "y": 280,
+            "index": 10
+          },
+          {
+            "name": "Horse_1",
+            "y": 300,
+            "index": 11
+          },
+          {
+            "name": "GateNearRail1",
+            "y": 320,
+            "index": 12
+          }
+        ],
+        "gates": [
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 320
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 280
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 240
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 200
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 160
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 120
+            }
+          }
+        ]
+      },
+      {
+        "phase": "preparing",
+        "round": 1,
+        "elapsed": 0,
+        "depthOrder": [
+          {
+            "name": "GateFarRail",
+            "y": 80,
+            "index": 0
+          },
+          {
+            "name": "Horse_6",
+            "y": 100,
+            "index": 1
+          },
+          {
+            "name": "GateNearRail6",
+            "y": 120,
+            "index": 2
+          },
+          {
+            "name": "Horse_5",
+            "y": 140,
+            "index": 3
+          },
+          {
+            "name": "GateNearRail5",
+            "y": 160,
+            "index": 4
+          },
+          {
+            "name": "Horse_4",
+            "y": 180,
+            "index": 5
+          },
+          {
+            "name": "GateNearRail4",
+            "y": 200,
+            "index": 6
+          },
+          {
+            "name": "Horse_3",
+            "y": 220,
+            "index": 7
+          },
+          {
+            "name": "GateNearRail3",
+            "y": 240,
+            "index": 8
+          },
+          {
+            "name": "Horse_2",
+            "y": 260,
+            "index": 9
+          },
+          {
+            "name": "GateNearRail2",
+            "y": 280,
+            "index": 10
+          },
+          {
+            "name": "Horse_1",
+            "y": 300,
+            "index": 11
+          },
+          {
+            "name": "GateNearRail1",
+            "y": 320,
+            "index": 12
+          }
+        ],
+        "gates": [
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 320
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 280
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 240
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 200
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 160
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 120
+            }
+          }
+        ]
+      },
+      {
+        "phase": "racing",
+        "round": 1,
+        "elapsed": 0.44419999999925497,
+        "depthOrder": [
+          {
+            "name": "GateFarRail",
+            "y": 80,
+            "index": 0
+          },
+          {
+            "name": "Horse_6",
+            "y": 99.33066405608648,
+            "index": 1
+          },
+          {
+            "name": "GateNearRail6",
+            "y": 120,
+            "index": 2
+          },
+          {
+            "name": "Horse_5",
+            "y": 140.86715964532902,
+            "index": 3
+          },
+          {
+            "name": "GateNearRail5",
+            "y": 160,
+            "index": 4
+          },
+          {
+            "name": "Horse_4",
+            "y": 180.96540312171211,
+            "index": 5
+          },
+          {
+            "name": "GateNearRail4",
+            "y": 200,
+            "index": 6
+          },
+          {
+            "name": "Horse_3",
+            "y": 219.46237386868333,
+            "index": 7
+          },
+          {
+            "name": "GateNearRail3",
+            "y": 240,
+            "index": 8
+          },
+          {
+            "name": "Horse_2",
+            "y": 258.8513741430044,
+            "index": 9
+          },
+          {
+            "name": "GateNearRail2",
+            "y": 280,
+            "index": 10
+          },
+          {
+            "name": "Horse_1",
+            "y": 300.14764799296444,
+            "index": 11
+          },
+          {
+            "name": "GateNearRail1",
+            "y": 320,
+            "index": 12
+          }
+        ],
+        "gates": [
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 320
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 280
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 240
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 200
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 160
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 120
+            }
+          }
+        ]
+      },
+      {
+        "phase": "racing",
+        "round": 1,
+        "elapsed": 2.123599999999629,
+        "depthOrder": [
+          {
+            "name": "GateFarRail",
+            "y": 80,
+            "index": 0
+          },
+          {
+            "name": "Horse_6",
+            "y": 100.50305076214235,
+            "index": 1
+          },
+          {
+            "name": "GateNearRail6",
+            "y": 120,
+            "index": 2
+          },
+          {
+            "name": "Horse_5",
+            "y": 140.98944679395777,
+            "index": 3
+          },
+          {
+            "name": "GateNearRail5",
+            "y": 160,
+            "index": 4
+          },
+          {
+            "name": "Horse_4",
+            "y": 179.2689747493197,
+            "index": 5
+          },
+          {
+            "name": "GateNearRail4",
+            "y": 200,
+            "index": 6
+          },
+          {
+            "name": "Horse_3",
+            "y": 218.9400190722966,
+            "index": 7
+          },
+          {
+            "name": "GateNearRail3",
+            "y": 240,
+            "index": 8
+          },
+          {
+            "name": "Horse_2",
+            "y": 260.1177579261172,
+            "index": 9
+          },
+          {
+            "name": "GateNearRail2",
+            "y": 280,
+            "index": 10
+          },
+          {
+            "name": "Horse_1",
+            "y": 301.100117498966,
+            "index": 11
+          },
+          {
+            "name": "GateNearRail1",
+            "y": 320,
+            "index": 12
+          }
+        ],
+        "gates": [
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 320
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 280
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 240
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 200
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 160
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 120
+            }
+          }
+        ]
+      },
+      {
+        "phase": "racing",
+        "round": 1,
+        "elapsed": 11.220199999999263,
+        "depthOrder": [
+          {
+            "name": "GateFarRail",
+            "y": 80,
+            "index": 0
+          },
+          {
+            "name": "GateNearRail6",
+            "y": 120,
+            "index": 1
+          },
+          {
+            "name": "GateNearRail5",
+            "y": 160,
+            "index": 2
+          },
+          {
+            "name": "GateNearRail4",
+            "y": 200,
+            "index": 3
+          },
+          {
+            "name": "Horse_6",
+            "y": 210.74406502327267,
+            "index": 4
+          },
+          {
+            "name": "Horse_5",
+            "y": 231.02203705091603,
+            "index": 5
+          },
+          {
+            "name": "GateNearRail3",
+            "y": 240,
+            "index": 6
+          },
+          {
+            "name": "Horse_4",
+            "y": 252.0256186584772,
+            "index": 7
+          },
+          {
+            "name": "GateNearRail2",
+            "y": 280,
+            "index": 8
+          },
+          {
+            "name": "Horse_3",
+            "y": 282.48170295612834,
+            "index": 9
+          },
+          {
+            "name": "Horse_2",
+            "y": 317.5851833752964,
+            "index": 10
+          },
+          {
+            "name": "GateNearRail1",
+            "y": 320,
+            "index": 11
+          },
+          {
+            "name": "Horse_1",
+            "y": 353.5195269202493,
+            "index": 12
+          }
+        ],
+        "gates": [
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 320
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 280
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 240
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 200
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 160
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 120
+            }
+          }
+        ]
+      },
+      {
+        "phase": "result",
+        "round": 1,
+        "elapsed": 26.461599999999628,
+        "depthOrder": [
+          {
+            "name": "GateFarRail",
+            "y": 80,
+            "index": 0
+          },
+          {
+            "name": "GateNearRail6",
+            "y": 120,
+            "index": 1
+          },
+          {
+            "name": "GateNearRail5",
+            "y": 160,
+            "index": 2
+          },
+          {
+            "name": "GateNearRail4",
+            "y": 200,
+            "index": 3
+          },
+          {
+            "name": "GateNearRail3",
+            "y": 240,
+            "index": 4
+          },
+          {
+            "name": "GateNearRail2",
+            "y": 280,
+            "index": 5
+          },
+          {
+            "name": "GateNearRail1",
+            "y": 320,
+            "index": 6
+          },
+          {
+            "name": "Horse_1",
+            "y": 699.0383449278925,
+            "index": 7
+          },
+          {
+            "name": "Horse_2",
+            "y": 738.8281392032651,
+            "index": 8
+          },
+          {
+            "name": "Horse_3",
+            "y": 780.4521487027746,
+            "index": 9
+          },
+          {
+            "name": "Horse_4",
+            "y": 819.4545514414384,
+            "index": 10
+          },
+          {
+            "name": "Horse_5",
+            "y": 859.1490750399166,
+            "index": 11
+          },
+          {
+            "name": "Horse_6",
+            "y": 899.5199623158851,
+            "index": 12
+          }
+        ],
+        "gates": [
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 320
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 280
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 240
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 200
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 160
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 120
+            }
+          }
+        ]
+      },
+      {
+        "phase": "result",
+        "round": 1,
+        "elapsed": 32.40779999999882,
+        "depthOrder": [
+          {
+            "name": "GateFarRail",
+            "y": 80,
+            "index": 0
+          },
+          {
+            "name": "GateNearRail6",
+            "y": 120,
+            "index": 1
+          },
+          {
+            "name": "GateNearRail5",
+            "y": 160,
+            "index": 2
+          },
+          {
+            "name": "GateNearRail4",
+            "y": 200,
+            "index": 3
+          },
+          {
+            "name": "GateNearRail3",
+            "y": 240,
+            "index": 4
+          },
+          {
+            "name": "GateNearRail2",
+            "y": 280,
+            "index": 5
+          },
+          {
+            "name": "GateNearRail1",
+            "y": 320,
+            "index": 6
+          },
+          {
+            "name": "Horse_1",
+            "y": 698.9630813513974,
+            "index": 7
+          },
+          {
+            "name": "Horse_2",
+            "y": 739.7790613478501,
+            "index": 8
+          },
+          {
+            "name": "Horse_3",
+            "y": 779.1540972651109,
+            "index": 9
+          },
+          {
+            "name": "Horse_4",
+            "y": 818.802913493976,
+            "index": 10
+          },
+          {
+            "name": "Horse_5",
+            "y": 858.8883240387673,
+            "index": 11
+          },
+          {
+            "name": "Horse_6",
+            "y": 900.8241683404189,
+            "index": 12
+          }
+        ],
+        "gates": [
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 320
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 280
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 240
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 200
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 160
+            }
+          },
+          {
+            "frame": 3,
+            "renderedFrame": 3,
+            "basePosition": {
+              "x": 390,
+              "y": 120
+            }
+          }
+        ]
+      },
+      {
+        "phase": "betting",
+        "round": 2,
+        "elapsed": 0,
+        "depthOrder": [
+          {
+            "name": "GateFarRail",
+            "y": 80,
+            "index": 0
+          },
+          {
+            "name": "Horse_6",
+            "y": 100,
+            "index": 1
+          },
+          {
+            "name": "GateNearRail6",
+            "y": 120,
+            "index": 2
+          },
+          {
+            "name": "Horse_5",
+            "y": 140,
+            "index": 3
+          },
+          {
+            "name": "GateNearRail5",
+            "y": 160,
+            "index": 4
+          },
+          {
+            "name": "Horse_4",
+            "y": 180,
+            "index": 5
+          },
+          {
+            "name": "GateNearRail4",
+            "y": 200,
+            "index": 6
+          },
+          {
+            "name": "Horse_3",
+            "y": 220,
+            "index": 7
+          },
+          {
+            "name": "GateNearRail3",
+            "y": 240,
+            "index": 8
+          },
+          {
+            "name": "Horse_2",
+            "y": 260,
+            "index": 9
+          },
+          {
+            "name": "GateNearRail2",
+            "y": 280,
+            "index": 10
+          },
+          {
+            "name": "Horse_1",
+            "y": 300,
+            "index": 11
+          },
+          {
+            "name": "GateNearRail1",
+            "y": 320,
+            "index": 12
+          }
+        ],
+        "gates": [
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 320
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 280
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 240
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 200
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 160
+            }
+          },
+          {
+            "frame": 0,
+            "renderedFrame": 0,
+            "basePosition": {
+              "x": 390,
+              "y": 120
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

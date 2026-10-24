@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "cocos-tool-result-v1",
+  "operationId": "horse-gate-depth-web-20261024-r08-v2",
+  "projectId": "9d8a0041f7873b81",
+  "tool": "build_get_status",
+  "status": "PASSED",
+  "data": {
+    "state": "passed",
+    "platform": "web-mobile",
+    "operationId": "horse-gate-depth-web-20261024-r08-v2",
+    "startedAt": "2026-10-24T03:16:26.826Z",
+    "finishedAt": "2026-10-24T03:16:59.892Z",
+    "outputDir": "D:\\code\\shidai3\\P4000\\golden-horse-86\\build\\web-mobile",
+    "logPath": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\build.log",
+    "configPath": "D:\\code\\shidai3\\P4000\\golden-horse-86\\tests\\build-web-mobile.json",
+    "runnerExitCode": 36,
+    "builderFinished": true,
+    "artifactIdentity": {
+      "sourceRevision": "3fa7faaac9beab73f7b3d34d380725623470c88a",
+      "buildConfigHash": "c52b04686c48d9f866e5e0cc978baecbcea218d6d2ab706d724c8df2476d499b",
+      "packageHash": "da3edd59fb595e2e5328b92aed8a0d03052002d19e0556b624edc8fa33c99459",
+      "creatorVersion": "3.8.8"
+    }
+  },
+  "evidence": []
+}
