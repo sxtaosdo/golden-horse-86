@@ -21,6 +21,35 @@ const ARC_LENGTH=ARC_TABLE[ARC_SAMPLES];
 const LENGTH=RIGHT-START_X+ARC_LENGTH+RIGHT-FINISH_FOOT;
 export const COURSE_BREAKS=[0,(RIGHT-START_X)/LENGTH,(RIGHT-START_X+ARC_LENGTH)/LENGTH,1] as const;
 export const FINAL_STRAIGHT_START=COURSE_BREAKS[2];
+/** Authored time/distance fit to the observed launch, turn and second acceleration. */
+export class RacePace {
+ static readonly homeTime=.66;
+ // time, distance, d(distance)/d(normalised time); Hermite slopes keep speed continuous.
+ private static readonly knots:readonly (readonly [number,number,number])[]=[
+  [0,0,0],[.065,.025,.72],[.15,.123,1.4],[.29,.28,1.1],
+  [.4,COURSE_BREAKS[1],.95],[RacePace.homeTime,FINAL_STRAIGHT_START,.75],
+ ];
+ static progress(seconds:number,finishSeconds:number,referenceSeconds=finishSeconds):number{
+  const time=Math.max(0,Number.isFinite(seconds)?seconds:0),entry=referenceSeconds*this.homeTime;
+  if(time>=finishSeconds)return Math.min(1.5,1+(time-finishSeconds)*1.3/referenceSeconds);
+  if(time>=entry){
+   const duration=finishSeconds-entry;
+   return this.segment((time-entry)/duration,FINAL_STRAIGHT_START,1,.75*duration/referenceSeconds,1.3*duration/referenceSeconds);
+  }
+  const t=time/referenceSeconds;
+  for(let i=1;i<this.knots.length;i++){
+   const [end,p1,v1]=this.knots[i];if(t>end)continue;
+   const [start,p0,v0]=this.knots[i-1],duration=end-start;
+   return this.segment((t-start)/duration,p0,p1,v0*duration,v1*duration);
+  }
+  return FINAL_STRAIGHT_START;
+ }
+ private static segment(t:number,p0:number,p1:number,m0:number,m1:number):number{
+  const t2=t*t,t3=t2*t;
+  return (2*t3-3*t2+1)*p0+(t3-2*t2+t)*m0+(-2*t3+3*t2)*p1+(t3-t2)*m1;
+ }
+}
+
 const clamp=(v:number)=>Math.max(0,Math.min(1,Number.isFinite(v)?v:0));
 function curveAngle(fraction:number):number{
   const distance=clamp(fraction)*ARC_LENGTH;let low=0,high=ARC_SAMPLES;

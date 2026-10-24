@@ -31,7 +31,7 @@ for(const random of [()=>.01,()=>.3,()=>.99]){
   for(let frame=0;frame<2400&&model.phase==='racing';frame++){
     model.update(1/60);
     for(let horse=0;horse<6;horse++){
-      const pose=horsePose(horse,model.progress[horse],model.raceElapsed);
+      const pose=horsePose(horse,model.progress[horse],model.strideTime(horse));
       if(previous[horse]<1&&pose.x-HORSE_NOSE_X<=COURSE_FINISH_X&&model.progress[horse]>=1)crossed.push(horse+1);
       assert.ok(model.progress[horse]>=previous[horse]-1e-8,'forward progress');
     }
@@ -44,7 +44,7 @@ for(const random of [()=>.01,()=>.3,()=>.99]){
   assert.ok(model.progress.some((p,i)=>p>positions[i]),'result must not freeze the run-out');
   const camera=courseCamera(model.courseFraction);
   for(let horse=0;horse<6;horse++){
-    const screen=projectPoint(horsePose(horse,model.progress[horse],model.raceElapsed),camera);
+    const screen=projectPoint(horsePose(horse,model.progress[horse],model.strideTime(horse)),camera);
     assert.ok(screen.x>1035||screen.x< -75||screen.y<0||screen.y>760,'finishers must clear the race viewport including their side-sprite bounds');
   }
   model.startRace();assert.equal(model.lastResult,null);assert.equal(model.totalStake,0);

@@ -108,7 +108,7 @@ export class GoldenHorseGame extends Component implements RacePageContext {
   return{x:r.left+(local.x+v.width/2-ui.width/2)/v.width*r.width,y:r.top+(v.height/2-local.y-ui.height/2)/v.height*r.height,width:ui.width/v.width*r.width,height:ui.height/v.height*r.height};
  }
  private observe():Record<string,unknown>{return{
-  revision:'close-track-r06-v2',leaderHorse:this.game.leaderIndex+1,eventId:this.game.eventId,eventName:this.game.eventName,eligibilityCredits:this.game.eligibilityCredits,preparationRemaining:this.game.preparationRemaining,equipment:this.equipment?.observation,eventPickerVisible:this.eventPanel?.active,eventButton:this.eventButton?this.clientRect(this.eventButton):{},eventChoices:this.eventChoices.map(n=>this.clientRect(n)),eventClose:this.eventClose?this.clientRect(this.eventClose):{},ready:this.canInput(),pendingAssets:this.pendingAssets,loadErrors:[...this.loadErrors],section:trackSection(this.game.courseFraction),
+  revision:'race-pace-r07-v1',raceElapsed:this.game.raceElapsed,courseFraction:this.game.courseFraction,strideTimes:this.game.progress.map((_,i)=>this.game.strideTime(i)),leaderHorse:this.game.leaderIndex+1,eventId:this.game.eventId,eventName:this.game.eventName,eligibilityCredits:this.game.eligibilityCredits,preparationRemaining:this.game.preparationRemaining,equipment:this.equipment?.observation,eventPickerVisible:this.eventPanel?.active,eventButton:this.eventButton?this.clientRect(this.eventButton):{},eventChoices:this.eventChoices.map(n=>this.clientRect(n)),eventClose:this.eventClose?this.clientRect(this.eventClose):{},ready:this.canInput(),pendingAssets:this.pendingAssets,loadErrors:[...this.loadErrors],section:trackSection(this.game.courseFraction),
   uiMode:this.StateMachine.is(RacingPage)?'race':this.StateMachine.is(BettingPage)?'betting':'loading',bettingPageVisible:this.bettingPage?.active,raceViewportVisible:this.courseView.viewport.active,
   designResolution:{width:750,height:1334},visibleHeight:this.layoutHeight,raceViewport:this.clientRect(this.raceHost!),
   touchTargets:this.betNodes.map((node,i)=>({key:this.keys[i],...this.clientRect(node)})),buttons:this.buttons.map(node=>({name:node.name,...this.clientRect(node)})),undoMode:this.undo,
@@ -132,7 +132,9 @@ export class GoldenHorseGame extends Component implements RacePageContext {
   if(!this.game){this.refresh();return;}
   if(this.game.phase==='racing'){this.gallopTimer-=dt;if(this.gallopTimer<=0){this.sound('gallop');this.gallopTimer=1.7;}}else this.gallopTimer=0;
   if(this.lastPhase!==this.game.phase){if(this.game.phase==='racing')this.sound('start');if(this.game.phase==='result')this.sound(this.game.lastResult?.payout?'win':'finish');this.lastPhase=this.game.phase;}
-  this.courseView.follow(this.game.courseFraction);this.horses.forEach((h,i)=>h.render(horsePose(i,this.game.progress[i],this.game.raceElapsed),this.game.raceElapsed,this.game.phase==='racing'||this.game.phase==='result'));
+  this.courseView.follow(this.game.courseFraction);this.horses.forEach((h,i)=>{
+   const stride=this.game.strideTime(i);h.render(horsePose(i,this.game.progress[i],stride),stride,this.game.phase==='racing'||this.game.phase==='result');
+  });
   [...this.horses].sort((a,b)=>b.node.position.y-a.node.position.y).forEach(h=>h.node.setSiblingIndex(10000));
   this.equipment?.setTier(this.game.eventId);
   const leader=this.game.leaderIndex;

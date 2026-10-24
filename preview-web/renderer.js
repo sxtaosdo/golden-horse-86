@@ -51,8 +51,8 @@ function draw(){
  ctx.closePath();ctx.fillStyle='#b08952';ctx.fill();ctx.strokeStyle='#efe7d0';ctx.lineWidth=5;ctx.stroke();
  for(let k=0;k<24;k++)for(let c=0;c<2;c++){ctx.fillStyle=(k+c)%2?'#f5f4e8':'#14151e';ctx.fillRect(COURSE_FINISH_X+c*10,680+k*10,10,10);}
  for(let i=0;i<6;i++){
-  const progress=game.phase==='betting'?0:game.progress[i],pose=horsePose(i,progress,game.raceElapsed);
-  const key='h'+(i+1)+'_'+(game.phase==='betting'?0:Math.floor(game.raceElapsed*9)%4);
+  const progress=game.phase==='betting'?0:game.progress[i],pose=horsePose(i,progress,game.strideTime(i));
+  const key='h'+(i+1)+'_'+(game.phase==='betting'?0:Math.floor(game.strideTime(i)*9)%4);
   const w=134*pose.scale,h=84*pose.scale;
   ctx.save();ctx.translate(pose.x,pose.y);ctx.scale(pose.flipX?-1:1,1);
   if(!image(key,-w/2,-h,w,h))txt('#'+(i+1),0,-15,25);ctx.restore();

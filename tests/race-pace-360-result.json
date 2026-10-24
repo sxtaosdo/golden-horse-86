@@ -1,0 +1,6516 @@
+{
+  "schemaVersion": "cocos-tool-result-v1",
+  "operationId": "3b3cb0c0-d338-41f7-b65a-942ca31ef341",
+  "projectId": "9d8a0041f7873b81",
+  "tool": "playtest_run",
+  "status": "PASSED",
+  "data": {
+    "ok": true,
+    "previewUrl": "http://192.168.31.100:7456",
+    "finalUrl": "http://192.168.31.100:7456/",
+    "gameTestReady": true,
+    "steps": [
+      {
+        "index": 0,
+        "step": {
+          "type": "wait",
+          "durationMs": 1500
+        },
+        "ok": true,
+        "elapsedMs": 1504
+      },
+      {
+        "index": 1,
+        "step": {
+          "type": "ui",
+          "action": "click",
+          "target": "#view-select:visible, body:not(:has(#view-select:visible))"
+        },
+        "ok": true,
+        "elapsedMs": 168
+      },
+      {
+        "index": 2,
+        "step": {
+          "type": "ui",
+          "action": "click",
+          "target": "li[data-device=WebpageFullScreen]:visible, body:not(:has(li[data-device=WebpageFullScreen]:visible))"
+        },
+        "ok": true,
+        "elapsedMs": 87
+      },
+      {
+        "index": 3,
+        "step": {
+          "type": "wait_ready"
+        },
+        "ok": true,
+        "elapsedMs": 2
+      },
+      {
+        "index": 4,
+        "step": {
+          "type": "wait_for_state",
+          "expect": {
+            "revision": "race-pace-r07-v1",
+            "horseFrames": 144,
+            "equipment": {
+              "typeCount": 4
+            }
+          },
+          "timeoutMs": 5000
+        },
+        "ok": true,
+        "state": {
+          "revision": "race-pace-r07-v1",
+          "raceElapsed": 0,
+          "courseFraction": 0,
+          "strideTimes": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "leaderHorse": 1,
+          "eventId": "station",
+          "eventName": "驿站赛",
+          "eligibilityCredits": 500,
+          "preparationRemaining": 0,
+          "equipment": {
+            "tier": "station",
+            "types": [
+              "rail",
+              "distance",
+              "finish-post",
+              "toolbox"
+            ],
+            "typeCount": 4,
+            "staticTypes": [
+              "rail",
+              "distance",
+              "finish-post",
+              "toolbox"
+            ],
+            "dynamicTypes": [],
+            "cameras": [],
+            "signals": [],
+            "gates": [],
+            "screenMode": "off",
+            "screenVisible": false,
+            "broadcastAllocated": false,
+            "broadcastSamples": 0
+          },
+          "eventPickerVisible": false,
+          "eventButton": {
+            "x": 235.2,
+            "y": 431.68,
+            "width": 110.39999999999999,
+            "height": 45.12
+          },
+          "eventChoices": [
+            {
+              "x": 43.199999999999996,
+              "y": 237.92000000000002,
+              "width": 273.6,
+              "height": 53.75999999999999
+            },
+            {
+              "x": 43.199999999999996,
+              "y": 300.32,
+              "width": 273.6,
+              "height": 53.75999999999999
+            },
+            {
+              "x": 43.199999999999996,
+              "y": 362.71999999999997,
+              "width": 273.6,
+              "height": 53.75999999999999
+            }
+          ],
+          "eventClose": {
+            "x": 281.28,
+            "y": 189.44000000000003,
+            "width": 47.03999999999999,
+            "height": 45.12
+          },
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "straight",
+          "uiMode": "betting",
+          "bettingPageVisible": true,
+          "raceViewportVisible": true,
+          "designResolution": {
+            "width": 750,
+            "height": 1334
+          },
+          "visibleHeight": 1333.3333333333335,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 333.76000000000005
+          },
+          "touchTargets": [
+            {
+              "key": "1-6",
+              "x": 7.2,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-5",
+              "x": 76.32,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-4",
+              "x": 145.44,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-3",
+              "x": 214.56,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-2",
+              "x": 283.68,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-6",
+              "x": 7.2,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-5",
+              "x": 76.32,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-4",
+              "x": 145.44,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-3",
+              "x": 214.56,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-6",
+              "x": 7.2,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-5",
+              "x": 76.32,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-4",
+              "x": 145.44,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "4-6",
+              "x": 7.2,
+              "y": 484.48,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "4-5",
+              "x": 76.32,
+              "y": 484.48,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "5-6",
+              "x": 7.2,
+              "y": 529.6,
+              "width": 69.12,
+              "height": 45.12
+            }
+          ],
+          "buttons": [
+            {
+              "name": "Undo",
+              "x": 8.64,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "Clear",
+              "x": 95.04,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "History",
+              "x": 181.44,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "Start",
+              "x": 267.84,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            }
+          ],
+          "undoMode": false,
+          "horseFrames": 144,
+          "backgrounds": 12,
+          "sounds": 7,
+          "worldId": "Node.676",
+          "worldPaintBuilds": 1,
+          "raceScale": 1.5521367521367526,
+          "camera": {
+            "x": 400,
+            "y": 125
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "积分 500   押分 0",
+          "uiResult": "1 — 6",
+          "resultPanel": false,
+          "startButton": "开跑",
+          "horsePositions": [
+            {
+              "x": 400,
+              "y": 300
+            },
+            {
+              "x": 400,
+              "y": 260
+            },
+            {
+              "x": 400,
+              "y": 220
+            },
+            {
+              "x": 400,
+              "y": 180
+            },
+            {
+              "x": 400,
+              "y": 140
+            },
+            {
+              "x": 400,
+              "y": 100
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": 375,
+              "y": 664.2905982905984
+            },
+            {
+              "x": 375,
+              "y": 602.2051282051284
+            },
+            {
+              "x": 375,
+              "y": 540.1196581196582
+            },
+            {
+              "x": 375,
+              "y": 478.0341880341881
+            },
+            {
+              "x": 375,
+              "y": 415.948717948718
+            },
+            {
+              "x": 375,
+              "y": 353.8632478632479
+            }
+          ],
+          "phase": "betting",
+          "round": 1,
+          "credits": 500,
+          "totalStake": 0,
+          "result": null,
+          "historyLength": 0,
+          "metrics": {
+            "finishCount": 0,
+            "visibleOrder": [],
+            "backgroundMismatches": 0,
+            "settlementJump": 0,
+            "resultDrift": 0,
+            "worldChanges": 0,
+            "maxCameraStep": 0,
+            "clippedFinishers": 0
+          },
+          "progress": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "elapsedMs": 11
+      },
+      {
+        "index": 5,
+        "step": {
+          "type": "get_state",
+          "required": true
+        },
+        "ok": true,
+        "state": {
+          "revision": "race-pace-r07-v1",
+          "raceElapsed": 0,
+          "courseFraction": 0,
+          "strideTimes": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "leaderHorse": 1,
+          "eventId": "station",
+          "eventName": "驿站赛",
+          "eligibilityCredits": 500,
+          "preparationRemaining": 0,
+          "equipment": {
+            "tier": "station",
+            "types": [
+              "rail",
+              "distance",
+              "finish-post",
+              "toolbox"
+            ],
+            "typeCount": 4,
+            "staticTypes": [
+              "rail",
+              "distance",
+              "finish-post",
+              "toolbox"
+            ],
+            "dynamicTypes": [],
+            "cameras": [],
+            "signals": [],
+            "gates": [],
+            "screenMode": "off",
+            "screenVisible": false,
+            "broadcastAllocated": false,
+            "broadcastSamples": 0
+          },
+          "eventPickerVisible": false,
+          "eventButton": {
+            "x": 235.2,
+            "y": 431.68,
+            "width": 110.39999999999999,
+            "height": 45.12
+          },
+          "eventChoices": [
+            {
+              "x": 43.199999999999996,
+              "y": 237.92000000000002,
+              "width": 273.6,
+              "height": 53.75999999999999
+            },
+            {
+              "x": 43.199999999999996,
+              "y": 300.32,
+              "width": 273.6,
+              "height": 53.75999999999999
+            },
+            {
+              "x": 43.199999999999996,
+              "y": 362.71999999999997,
+              "width": 273.6,
+              "height": 53.75999999999999
+            }
+          ],
+          "eventClose": {
+            "x": 281.28,
+            "y": 189.44000000000003,
+            "width": 47.03999999999999,
+            "height": 45.12
+          },
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "straight",
+          "uiMode": "betting",
+          "bettingPageVisible": true,
+          "raceViewportVisible": true,
+          "designResolution": {
+            "width": 750,
+            "height": 1334
+          },
+          "visibleHeight": 1333.3333333333335,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 333.76000000000005
+          },
+          "touchTargets": [
+            {
+              "key": "1-6",
+              "x": 7.2,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-5",
+              "x": 76.32,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-4",
+              "x": 145.44,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-3",
+              "x": 214.56,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-2",
+              "x": 283.68,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-6",
+              "x": 7.2,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-5",
+              "x": 76.32,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-4",
+              "x": 145.44,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-3",
+              "x": 214.56,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-6",
+              "x": 7.2,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-5",
+              "x": 76.32,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-4",
+              "x": 145.44,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "4-6",
+              "x": 7.2,
+              "y": 484.48,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "4-5",
+              "x": 76.32,
+              "y": 484.48,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "5-6",
+              "x": 7.2,
+              "y": 529.6,
+              "width": 69.12,
+              "height": 45.12
+            }
+          ],
+          "buttons": [
+            {
+              "name": "Undo",
+              "x": 8.64,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "Clear",
+              "x": 95.04,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "History",
+              "x": 181.44,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "Start",
+              "x": 267.84,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            }
+          ],
+          "undoMode": false,
+          "horseFrames": 144,
+          "backgrounds": 12,
+          "sounds": 7,
+          "worldId": "Node.676",
+          "worldPaintBuilds": 1,
+          "raceScale": 1.5521367521367526,
+          "camera": {
+            "x": 400,
+            "y": 125
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "积分 500   押分 0",
+          "uiResult": "1 — 6",
+          "resultPanel": false,
+          "startButton": "开跑",
+          "horsePositions": [
+            {
+              "x": 400,
+              "y": 300
+            },
+            {
+              "x": 400,
+              "y": 260
+            },
+            {
+              "x": 400,
+              "y": 220
+            },
+            {
+              "x": 400,
+              "y": 180
+            },
+            {
+              "x": 400,
+              "y": 140
+            },
+            {
+              "x": 400,
+              "y": 100
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": 375,
+              "y": 664.2905982905984
+            },
+            {
+              "x": 375,
+              "y": 602.2051282051284
+            },
+            {
+              "x": 375,
+              "y": 540.1196581196582
+            },
+            {
+              "x": 375,
+              "y": 478.0341880341881
+            },
+            {
+              "x": 375,
+              "y": 415.948717948718
+            },
+            {
+              "x": 375,
+              "y": 353.8632478632479
+            }
+          ],
+          "phase": "betting",
+          "round": 1,
+          "credits": 500,
+          "totalStake": 0,
+          "result": null,
+          "historyLength": 0,
+          "metrics": {
+            "finishCount": 0,
+            "visibleOrder": [],
+            "backgroundMismatches": 0,
+            "settlementJump": 0,
+            "resultDrift": 0,
+            "worldChanges": 0,
+            "maxCameraStep": 0,
+            "clippedFinishers": 0
+          },
+          "progress": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "elapsedMs": 5
+      },
+      {
+        "index": 6,
+        "step": {
+          "type": "pointer",
+          "action": "click",
+          "x": 200,
+          "y": 100
+        },
+        "ok": true,
+        "elapsedMs": 1
+      },
+      {
+        "index": 7,
+        "step": {
+          "type": "keyboard",
+          "action": "press",
+          "key": "F8+F9"
+        },
+        "ok": true,
+        "elapsedMs": 2
+      },
+      {
+        "index": 8,
+        "step": {
+          "type": "keyboard",
+          "action": "press",
+          "key": "F8+F9"
+        },
+        "ok": true,
+        "elapsedMs": 6
+      },
+      {
+        "index": 9,
+        "step": {
+          "type": "keyboard",
+          "action": "press",
+          "key": "F8+F9"
+        },
+        "ok": true,
+        "elapsedMs": 2
+      },
+      {
+        "index": 10,
+        "step": {
+          "type": "keyboard",
+          "action": "press",
+          "key": "F8+F9"
+        },
+        "ok": true,
+        "elapsedMs": 1
+      },
+      {
+        "index": 11,
+        "step": {
+          "type": "keyboard",
+          "action": "press",
+          "key": "F8+F9"
+        },
+        "ok": true,
+        "elapsedMs": 2
+      },
+      {
+        "index": 12,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 290,
+          "y": 454
+        },
+        "ok": true,
+        "elapsedMs": 62
+      },
+      {
+        "index": 13,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 180,
+          "y": 327
+        },
+        "ok": true,
+        "elapsedMs": 67
+      },
+      {
+        "index": 14,
+        "step": {
+          "type": "wait_for_state",
+          "expect": {
+            "eventId": "regional"
+          },
+          "timeoutMs": 5000
+        },
+        "ok": true,
+        "state": {
+          "revision": "race-pace-r07-v1",
+          "raceElapsed": 0,
+          "courseFraction": 0,
+          "strideTimes": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "leaderHorse": 1,
+          "eventId": "regional",
+          "eventName": "地区赛",
+          "eligibilityCredits": 1000,
+          "preparationRemaining": 0,
+          "equipment": {
+            "tier": "station",
+            "types": [
+              "rail",
+              "distance",
+              "finish-post",
+              "toolbox"
+            ],
+            "typeCount": 4,
+            "staticTypes": [
+              "rail",
+              "distance",
+              "finish-post",
+              "toolbox"
+            ],
+            "dynamicTypes": [],
+            "cameras": [],
+            "signals": [],
+            "gates": [],
+            "screenMode": "off",
+            "screenVisible": false,
+            "broadcastAllocated": false,
+            "broadcastSamples": 0
+          },
+          "eventPickerVisible": false,
+          "eventButton": {
+            "x": 235.2,
+            "y": 431.68,
+            "width": 110.39999999999999,
+            "height": 45.12
+          },
+          "eventChoices": [
+            {
+              "x": 43.199999999999996,
+              "y": 237.92000000000002,
+              "width": 273.6,
+              "height": 53.75999999999999
+            },
+            {
+              "x": 43.199999999999996,
+              "y": 300.32,
+              "width": 273.6,
+              "height": 53.75999999999999
+            },
+            {
+              "x": 43.199999999999996,
+              "y": 362.71999999999997,
+              "width": 273.6,
+              "height": 53.75999999999999
+            }
+          ],
+          "eventClose": {
+            "x": 281.28,
+            "y": 189.44000000000003,
+            "width": 47.03999999999999,
+            "height": 45.12
+          },
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "straight",
+          "uiMode": "betting",
+          "bettingPageVisible": true,
+          "raceViewportVisible": true,
+          "designResolution": {
+            "width": 750,
+            "height": 1334
+          },
+          "visibleHeight": 1333.3333333333335,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 333.76000000000005
+          },
+          "touchTargets": [
+            {
+              "key": "1-6",
+              "x": 7.2,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-5",
+              "x": 76.32,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-4",
+              "x": 145.44,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-3",
+              "x": 214.56,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-2",
+              "x": 283.68,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-6",
+              "x": 7.2,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-5",
+              "x": 76.32,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-4",
+              "x": 145.44,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-3",
+              "x": 214.56,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-6",
+              "x": 7.2,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-5",
+              "x": 76.32,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-4",
+              "x": 145.44,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "4-6",
+              "x": 7.2,
+              "y": 484.48,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "4-5",
+              "x": 76.32,
+              "y": 484.48,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "5-6",
+              "x": 7.2,
+              "y": 529.6,
+              "width": 69.12,
+              "height": 45.12
+            }
+          ],
+          "buttons": [
+            {
+              "name": "Undo",
+              "x": 8.64,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "Clear",
+              "x": 95.04,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "History",
+              "x": 181.44,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "Start",
+              "x": 267.84,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            }
+          ],
+          "undoMode": false,
+          "horseFrames": 144,
+          "backgrounds": 12,
+          "sounds": 7,
+          "worldId": "Node.676",
+          "worldPaintBuilds": 1,
+          "raceScale": 1.5521367521367526,
+          "camera": {
+            "x": 400,
+            "y": 125
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "积分 1000   押分 0",
+          "uiResult": "1 — 6",
+          "resultPanel": false,
+          "startButton": "开跑",
+          "horsePositions": [
+            {
+              "x": 400,
+              "y": 300
+            },
+            {
+              "x": 400,
+              "y": 260
+            },
+            {
+              "x": 400,
+              "y": 220
+            },
+            {
+              "x": 400,
+              "y": 180
+            },
+            {
+              "x": 400,
+              "y": 140
+            },
+            {
+              "x": 400,
+              "y": 100
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": 375,
+              "y": 664.2905982905984
+            },
+            {
+              "x": 375,
+              "y": 602.2051282051284
+            },
+            {
+              "x": 375,
+              "y": 540.1196581196582
+            },
+            {
+              "x": 375,
+              "y": 478.0341880341881
+            },
+            {
+              "x": 375,
+              "y": 415.948717948718
+            },
+            {
+              "x": 375,
+              "y": 353.8632478632479
+            }
+          ],
+          "phase": "betting",
+          "round": 1,
+          "credits": 1000,
+          "totalStake": 0,
+          "result": null,
+          "historyLength": 0,
+          "metrics": {
+            "finishCount": 0,
+            "visibleOrder": [],
+            "backgroundMismatches": 0,
+            "settlementJump": 0,
+            "resultDrift": 0,
+            "worldChanges": 0,
+            "maxCameraStep": 0,
+            "clippedFinishers": 0
+          },
+          "progress": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "elapsedMs": 2
+      },
+      {
+        "index": 15,
+        "step": {
+          "type": "get_state",
+          "required": true
+        },
+        "ok": true,
+        "state": {
+          "revision": "race-pace-r07-v1",
+          "raceElapsed": 0,
+          "courseFraction": 0,
+          "strideTimes": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "leaderHorse": 1,
+          "eventId": "regional",
+          "eventName": "地区赛",
+          "eligibilityCredits": 1000,
+          "preparationRemaining": 0,
+          "equipment": {
+            "tier": "station",
+            "types": [
+              "rail",
+              "distance",
+              "finish-post",
+              "toolbox"
+            ],
+            "typeCount": 4,
+            "staticTypes": [
+              "rail",
+              "distance",
+              "finish-post",
+              "toolbox"
+            ],
+            "dynamicTypes": [],
+            "cameras": [],
+            "signals": [],
+            "gates": [],
+            "screenMode": "off",
+            "screenVisible": false,
+            "broadcastAllocated": false,
+            "broadcastSamples": 0
+          },
+          "eventPickerVisible": false,
+          "eventButton": {
+            "x": 235.2,
+            "y": 431.68,
+            "width": 110.39999999999999,
+            "height": 45.12
+          },
+          "eventChoices": [
+            {
+              "x": 43.199999999999996,
+              "y": 237.92000000000002,
+              "width": 273.6,
+              "height": 53.75999999999999
+            },
+            {
+              "x": 43.199999999999996,
+              "y": 300.32,
+              "width": 273.6,
+              "height": 53.75999999999999
+            },
+            {
+              "x": 43.199999999999996,
+              "y": 362.71999999999997,
+              "width": 273.6,
+              "height": 53.75999999999999
+            }
+          ],
+          "eventClose": {
+            "x": 281.28,
+            "y": 189.44000000000003,
+            "width": 47.03999999999999,
+            "height": 45.12
+          },
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "straight",
+          "uiMode": "betting",
+          "bettingPageVisible": true,
+          "raceViewportVisible": true,
+          "designResolution": {
+            "width": 750,
+            "height": 1334
+          },
+          "visibleHeight": 1333.3333333333335,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 333.76000000000005
+          },
+          "touchTargets": [
+            {
+              "key": "1-6",
+              "x": 7.2,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-5",
+              "x": 76.32,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-4",
+              "x": 145.44,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-3",
+              "x": 214.56,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-2",
+              "x": 283.68,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-6",
+              "x": 7.2,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-5",
+              "x": 76.32,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-4",
+              "x": 145.44,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-3",
+              "x": 214.56,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-6",
+              "x": 7.2,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-5",
+              "x": 76.32,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-4",
+              "x": 145.44,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "4-6",
+              "x": 7.2,
+              "y": 484.48,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "4-5",
+              "x": 76.32,
+              "y": 484.48,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "5-6",
+              "x": 7.2,
+              "y": 529.6,
+              "width": 69.12,
+              "height": 45.12
+            }
+          ],
+          "buttons": [
+            {
+              "name": "Undo",
+              "x": 8.64,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "Clear",
+              "x": 95.04,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "History",
+              "x": 181.44,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "Start",
+              "x": 267.84,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            }
+          ],
+          "undoMode": false,
+          "horseFrames": 144,
+          "backgrounds": 12,
+          "sounds": 7,
+          "worldId": "Node.676",
+          "worldPaintBuilds": 1,
+          "raceScale": 1.5521367521367526,
+          "camera": {
+            "x": 400,
+            "y": 125
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "积分 1000   押分 0",
+          "uiResult": "1 — 6",
+          "resultPanel": false,
+          "startButton": "开跑",
+          "horsePositions": [
+            {
+              "x": 400,
+              "y": 300
+            },
+            {
+              "x": 400,
+              "y": 260
+            },
+            {
+              "x": 400,
+              "y": 220
+            },
+            {
+              "x": 400,
+              "y": 180
+            },
+            {
+              "x": 400,
+              "y": 140
+            },
+            {
+              "x": 400,
+              "y": 100
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": 375,
+              "y": 664.2905982905984
+            },
+            {
+              "x": 375,
+              "y": 602.2051282051284
+            },
+            {
+              "x": 375,
+              "y": 540.1196581196582
+            },
+            {
+              "x": 375,
+              "y": 478.0341880341881
+            },
+            {
+              "x": 375,
+              "y": 415.948717948718
+            },
+            {
+              "x": 375,
+              "y": 353.8632478632479
+            }
+          ],
+          "phase": "betting",
+          "round": 1,
+          "credits": 1000,
+          "totalStake": 0,
+          "result": null,
+          "historyLength": 0,
+          "metrics": {
+            "finishCount": 0,
+            "visibleOrder": [],
+            "backgroundMismatches": 0,
+            "settlementJump": 0,
+            "resultDrift": 0,
+            "worldChanges": 0,
+            "maxCameraStep": 0,
+            "clippedFinishers": 0
+          },
+          "progress": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "elapsedMs": 5
+      },
+      {
+        "index": 16,
+        "step": {
+          "type": "screenshot",
+          "label": "pace-betting-360"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\pace-betting-360-1792809776965.png",
+          "width": 360,
+          "height": 640,
+          "source": "preview",
+          "capturedAt": "2026-10-24T02:42:56.966Z"
+        },
+        "elapsedMs": 63
+      },
+      {
+        "index": 17,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 40,
+          "y": 375
+        },
+        "ok": true,
+        "elapsedMs": 62
+      },
+      {
+        "index": 18,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 310,
+          "y": 614
+        },
+        "ok": true,
+        "elapsedMs": 68
+      },
+      {
+        "index": 19,
+        "step": {
+          "type": "wait_for_state",
+          "expect": {
+            "phase": "preparing"
+          },
+          "timeoutMs": 5000
+        },
+        "ok": true,
+        "state": {
+          "revision": "race-pace-r07-v1",
+          "raceElapsed": 0,
+          "courseFraction": 0,
+          "strideTimes": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "leaderHorse": 1,
+          "eventId": "regional",
+          "eventName": "地区赛",
+          "eligibilityCredits": 1000,
+          "preparationRemaining": 3,
+          "equipment": {
+            "tier": "regional",
+            "types": [
+              "rail",
+              "distance",
+              "finish-post",
+              "toolbox",
+              "camera",
+              "mirror",
+              "speaker",
+              "warning"
+            ],
+            "typeCount": 8,
+            "staticTypes": [
+              "rail",
+              "distance",
+              "finish-post",
+              "toolbox",
+              "mirror",
+              "speaker"
+            ],
+            "dynamicTypes": [
+              "camera",
+              "warning"
+            ],
+            "cameras": [
+              {
+                "targetHorse": 1,
+                "renderedFrame": 2,
+                "angle": 75.20323775494268,
+                "desiredAngle": 75.20323775494268,
+                "frame": 2,
+                "pivot": {
+                  "x": 330,
+                  "y": 565
+                },
+                "basePosition": {
+                  "x": 330,
+                  "y": 625
+                }
+              }
+            ],
+            "signals": [
+              {
+                "frame": 0,
+                "renderedFrame": 0,
+                "basePosition": {
+                  "x": 430,
+                  "y": 70
+                }
+              }
+            ],
+            "gates": [],
+            "screenMode": "off",
+            "screenVisible": false,
+            "broadcastAllocated": false,
+            "broadcastSamples": 0
+          },
+          "eventPickerVisible": false,
+          "eventButton": {
+            "x": 235.2,
+            "y": 431.68,
+            "width": 110.39999999999999,
+            "height": 45.12
+          },
+          "eventChoices": [
+            {
+              "x": 43.199999999999996,
+              "y": 237.92000000000002,
+              "width": 273.6,
+              "height": 53.75999999999999
+            },
+            {
+              "x": 43.199999999999996,
+              "y": 300.32,
+              "width": 273.6,
+              "height": 53.75999999999999
+            },
+            {
+              "x": 43.199999999999996,
+              "y": 362.71999999999997,
+              "width": 273.6,
+              "height": 53.75999999999999
+            }
+          ],
+          "eventClose": {
+            "x": 281.28,
+            "y": 189.44000000000003,
+            "width": 47.03999999999999,
+            "height": 45.12
+          },
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "straight",
+          "uiMode": "race",
+          "bettingPageVisible": true,
+          "raceViewportVisible": true,
+          "designResolution": {
+            "width": 750,
+            "height": 1334
+          },
+          "visibleHeight": 1333.3333333333335,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 333.76000000000005
+          },
+          "touchTargets": [
+            {
+              "key": "1-6",
+              "x": 7.2,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-5",
+              "x": 76.32,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-4",
+              "x": 145.44,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-3",
+              "x": 214.56,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-2",
+              "x": 283.68,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-6",
+              "x": 7.2,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-5",
+              "x": 76.32,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-4",
+              "x": 145.44,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-3",
+              "x": 214.56,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-6",
+              "x": 7.2,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-5",
+              "x": 76.32,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-4",
+              "x": 145.44,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "4-6",
+              "x": 7.2,
+              "y": 484.48,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "4-5",
+              "x": 76.32,
+              "y": 484.48,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "5-6",
+              "x": 7.2,
+              "y": 529.6,
+              "width": 69.12,
+              "height": 45.12
+            }
+          ],
+          "buttons": [
+            {
+              "name": "Undo",
+              "x": 8.64,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "Clear",
+              "x": 95.04,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "History",
+              "x": 181.44,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "Start",
+              "x": 267.84,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            }
+          ],
+          "undoMode": false,
+          "horseFrames": 144,
+          "backgrounds": 12,
+          "sounds": 7,
+          "worldId": "Node.676",
+          "worldPaintBuilds": 1,
+          "raceScale": 1.5521367521367526,
+          "camera": {
+            "x": 400,
+            "y": 125
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "积分 999   押分 1",
+          "uiResult": "1 — 6",
+          "resultPanel": false,
+          "startButton": "开跑",
+          "horsePositions": [
+            {
+              "x": 400,
+              "y": 300
+            },
+            {
+              "x": 400,
+              "y": 260
+            },
+            {
+              "x": 400,
+              "y": 220
+            },
+            {
+              "x": 400,
+              "y": 180
+            },
+            {
+              "x": 400,
+              "y": 140
+            },
+            {
+              "x": 400,
+              "y": 100
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": 375,
+              "y": 664.2905982905984
+            },
+            {
+              "x": 375,
+              "y": 602.2051282051284
+            },
+            {
+              "x": 375,
+              "y": 540.1196581196582
+            },
+            {
+              "x": 375,
+              "y": 478.0341880341881
+            },
+            {
+              "x": 375,
+              "y": 415.948717948718
+            },
+            {
+              "x": 375,
+              "y": 353.8632478632479
+            }
+          ],
+          "phase": "preparing",
+          "round": 1,
+          "credits": 999,
+          "totalStake": 1,
+          "result": null,
+          "historyLength": 0,
+          "metrics": {
+            "finishCount": 0,
+            "visibleOrder": [],
+            "backgroundMismatches": 0,
+            "settlementJump": 0,
+            "resultDrift": 0,
+            "worldChanges": 0,
+            "maxCameraStep": 0,
+            "clippedFinishers": 0
+          },
+          "progress": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "elapsedMs": 3
+      },
+      {
+        "index": 20,
+        "step": {
+          "type": "get_state",
+          "required": true
+        },
+        "ok": true,
+        "state": {
+          "revision": "race-pace-r07-v1",
+          "raceElapsed": 0,
+          "courseFraction": 0,
+          "strideTimes": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "leaderHorse": 1,
+          "eventId": "regional",
+          "eventName": "地区赛",
+          "eligibilityCredits": 1000,
+          "preparationRemaining": 3,
+          "equipment": {
+            "tier": "regional",
+            "types": [
+              "rail",
+              "distance",
+              "finish-post",
+              "toolbox",
+              "camera",
+              "mirror",
+              "speaker",
+              "warning"
+            ],
+            "typeCount": 8,
+            "staticTypes": [
+              "rail",
+              "distance",
+              "finish-post",
+              "toolbox",
+              "mirror",
+              "speaker"
+            ],
+            "dynamicTypes": [
+              "camera",
+              "warning"
+            ],
+            "cameras": [
+              {
+                "targetHorse": 1,
+                "renderedFrame": 2,
+                "angle": 75.20323775494268,
+                "desiredAngle": 75.20323775494268,
+                "frame": 2,
+                "pivot": {
+                  "x": 330,
+                  "y": 565
+                },
+                "basePosition": {
+                  "x": 330,
+                  "y": 625
+                }
+              }
+            ],
+            "signals": [
+              {
+                "frame": 0,
+                "renderedFrame": 0,
+                "basePosition": {
+                  "x": 430,
+                  "y": 70
+                }
+              }
+            ],
+            "gates": [],
+            "screenMode": "off",
+            "screenVisible": false,
+            "broadcastAllocated": false,
+            "broadcastSamples": 0
+          },
+          "eventPickerVisible": false,
+          "eventButton": {
+            "x": 235.2,
+            "y": 431.68,
+            "width": 110.39999999999999,
+            "height": 45.12
+          },
+          "eventChoices": [
+            {
+              "x": 43.199999999999996,
+              "y": 237.92000000000002,
+              "width": 273.6,
+              "height": 53.75999999999999
+            },
+            {
+              "x": 43.199999999999996,
+              "y": 300.32,
+              "width": 273.6,
+              "height": 53.75999999999999
+            },
+            {
+              "x": 43.199999999999996,
+              "y": 362.71999999999997,
+              "width": 273.6,
+              "height": 53.75999999999999
+            }
+          ],
+          "eventClose": {
+            "x": 281.28,
+            "y": 189.44000000000003,
+            "width": 47.03999999999999,
+            "height": 45.12
+          },
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "straight",
+          "uiMode": "race",
+          "bettingPageVisible": true,
+          "raceViewportVisible": true,
+          "designResolution": {
+            "width": 750,
+            "height": 1334
+          },
+          "visibleHeight": 1333.3333333333335,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 333.76000000000005
+          },
+          "touchTargets": [
+            {
+              "key": "1-6",
+              "x": 7.2,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-5",
+              "x": 76.32,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-4",
+              "x": 145.44,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-3",
+              "x": 214.56,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-2",
+              "x": 283.68,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-6",
+              "x": 7.2,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-5",
+              "x": 76.32,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-4",
+              "x": 145.44,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-3",
+              "x": 214.56,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-6",
+              "x": 7.2,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-5",
+              "x": 76.32,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-4",
+              "x": 145.44,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "4-6",
+              "x": 7.2,
+              "y": 484.48,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "4-5",
+              "x": 76.32,
+              "y": 484.48,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "5-6",
+              "x": 7.2,
+              "y": 529.6,
+              "width": 69.12,
+              "height": 45.12
+            }
+          ],
+          "buttons": [
+            {
+              "name": "Undo",
+              "x": 8.64,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "Clear",
+              "x": 95.04,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "History",
+              "x": 181.44,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "Start",
+              "x": 267.84,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            }
+          ],
+          "undoMode": false,
+          "horseFrames": 144,
+          "backgrounds": 12,
+          "sounds": 7,
+          "worldId": "Node.676",
+          "worldPaintBuilds": 1,
+          "raceScale": 1.5521367521367526,
+          "camera": {
+            "x": 400,
+            "y": 125
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "积分 999   押分 1",
+          "uiResult": "1 — 6",
+          "resultPanel": false,
+          "startButton": "开跑",
+          "horsePositions": [
+            {
+              "x": 400,
+              "y": 300
+            },
+            {
+              "x": 400,
+              "y": 260
+            },
+            {
+              "x": 400,
+              "y": 220
+            },
+            {
+              "x": 400,
+              "y": 180
+            },
+            {
+              "x": 400,
+              "y": 140
+            },
+            {
+              "x": 400,
+              "y": 100
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": 375,
+              "y": 664.2905982905984
+            },
+            {
+              "x": 375,
+              "y": 602.2051282051284
+            },
+            {
+              "x": 375,
+              "y": 540.1196581196582
+            },
+            {
+              "x": 375,
+              "y": 478.0341880341881
+            },
+            {
+              "x": 375,
+              "y": 415.948717948718
+            },
+            {
+              "x": 375,
+              "y": 353.8632478632479
+            }
+          ],
+          "phase": "preparing",
+          "round": 1,
+          "credits": 999,
+          "totalStake": 1,
+          "result": null,
+          "historyLength": 0,
+          "metrics": {
+            "finishCount": 0,
+            "visibleOrder": [],
+            "backgroundMismatches": 0,
+            "settlementJump": 0,
+            "resultDrift": 0,
+            "worldChanges": 0,
+            "maxCameraStep": 0,
+            "clippedFinishers": 0
+          },
+          "progress": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "elapsedMs": 6
+      },
+      {
+        "index": 21,
+        "step": {
+          "type": "wait",
+          "durationMs": 600
+        },
+        "ok": true,
+        "elapsedMs": 603
+      },
+      {
+        "index": 22,
+        "step": {
+          "type": "get_state",
+          "required": true
+        },
+        "ok": true,
+        "state": {
+          "revision": "race-pace-r07-v1",
+          "raceElapsed": 0,
+          "courseFraction": 0,
+          "strideTimes": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "leaderHorse": 1,
+          "eventId": "regional",
+          "eventName": "地区赛",
+          "eligibilityCredits": 1000,
+          "preparationRemaining": 2.3827999999998157,
+          "equipment": {
+            "tier": "regional",
+            "types": [
+              "rail",
+              "distance",
+              "finish-post",
+              "toolbox",
+              "camera",
+              "mirror",
+              "speaker",
+              "warning"
+            ],
+            "typeCount": 8,
+            "staticTypes": [
+              "rail",
+              "distance",
+              "finish-post",
+              "toolbox",
+              "mirror",
+              "speaker"
+            ],
+            "dynamicTypes": [
+              "camera",
+              "warning"
+            ],
+            "cameras": [
+              {
+                "targetHorse": 1,
+                "renderedFrame": 2,
+                "angle": 75.20323775494268,
+                "desiredAngle": 75.20323775494268,
+                "frame": 2,
+                "pivot": {
+                  "x": 330,
+                  "y": 565
+                },
+                "basePosition": {
+                  "x": 330,
+                  "y": 625
+                }
+              }
+            ],
+            "signals": [
+              {
+                "frame": 1,
+                "renderedFrame": 1,
+                "basePosition": {
+                  "x": 430,
+                  "y": 70
+                }
+              }
+            ],
+            "gates": [],
+            "screenMode": "off",
+            "screenVisible": false,
+            "broadcastAllocated": false,
+            "broadcastSamples": 0
+          },
+          "eventPickerVisible": false,
+          "eventButton": {
+            "x": 235.2,
+            "y": 431.68,
+            "width": 110.39999999999999,
+            "height": 45.12
+          },
+          "eventChoices": [
+            {
+              "x": 43.199999999999996,
+              "y": 237.92000000000002,
+              "width": 273.6,
+              "height": 53.75999999999999
+            },
+            {
+              "x": 43.199999999999996,
+              "y": 300.32,
+              "width": 273.6,
+              "height": 53.75999999999999
+            },
+            {
+              "x": 43.199999999999996,
+              "y": 362.71999999999997,
+              "width": 273.6,
+              "height": 53.75999999999999
+            }
+          ],
+          "eventClose": {
+            "x": 281.28,
+            "y": 189.44000000000003,
+            "width": 47.03999999999999,
+            "height": 45.12
+          },
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "straight",
+          "uiMode": "race",
+          "bettingPageVisible": true,
+          "raceViewportVisible": true,
+          "designResolution": {
+            "width": 750,
+            "height": 1334
+          },
+          "visibleHeight": 1333.3333333333335,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 333.76000000000005
+          },
+          "touchTargets": [
+            {
+              "key": "1-6",
+              "x": 7.2,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-5",
+              "x": 76.32,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-4",
+              "x": 145.44,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-3",
+              "x": 214.56,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-2",
+              "x": 283.68,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-6",
+              "x": 7.2,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-5",
+              "x": 76.32,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-4",
+              "x": 145.44,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-3",
+              "x": 214.56,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-6",
+              "x": 7.2,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-5",
+              "x": 76.32,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-4",
+              "x": 145.44,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "4-6",
+              "x": 7.2,
+              "y": 484.48,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "4-5",
+              "x": 76.32,
+              "y": 484.48,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "5-6",
+              "x": 7.2,
+              "y": 529.6,
+              "width": 69.12,
+              "height": 45.12
+            }
+          ],
+          "buttons": [
+            {
+              "name": "Undo",
+              "x": 8.64,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "Clear",
+              "x": 95.04,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "History",
+              "x": 181.44,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "Start",
+              "x": 267.84,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            }
+          ],
+          "undoMode": false,
+          "horseFrames": 144,
+          "backgrounds": 12,
+          "sounds": 7,
+          "worldId": "Node.676",
+          "worldPaintBuilds": 1,
+          "raceScale": 1.5521367521367526,
+          "camera": {
+            "x": 400,
+            "y": 125
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "积分 999   押分 1",
+          "uiResult": "1 — 6",
+          "resultPanel": false,
+          "startButton": "准备中",
+          "horsePositions": [
+            {
+              "x": 400,
+              "y": 300
+            },
+            {
+              "x": 400,
+              "y": 260
+            },
+            {
+              "x": 400,
+              "y": 220
+            },
+            {
+              "x": 400,
+              "y": 180
+            },
+            {
+              "x": 400,
+              "y": 140
+            },
+            {
+              "x": 400,
+              "y": 100
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": 375,
+              "y": 664.2905982905984
+            },
+            {
+              "x": 375,
+              "y": 602.2051282051284
+            },
+            {
+              "x": 375,
+              "y": 540.1196581196582
+            },
+            {
+              "x": 375,
+              "y": 478.0341880341881
+            },
+            {
+              "x": 375,
+              "y": 415.948717948718
+            },
+            {
+              "x": 375,
+              "y": 353.8632478632479
+            }
+          ],
+          "phase": "preparing",
+          "round": 1,
+          "credits": 999,
+          "totalStake": 1,
+          "result": null,
+          "historyLength": 0,
+          "metrics": {
+            "finishCount": 0,
+            "visibleOrder": [],
+            "backgroundMismatches": 0,
+            "settlementJump": 0,
+            "resultDrift": 0,
+            "worldChanges": 0,
+            "maxCameraStep": 0,
+            "clippedFinishers": 0
+          },
+          "progress": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "elapsedMs": 7
+      },
+      {
+        "index": 23,
+        "step": {
+          "type": "screenshot",
+          "label": "pace-preparing-360"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\pace-preparing-360-1792809777783.png",
+          "width": 360,
+          "height": 640,
+          "source": "preview",
+          "capturedAt": "2026-10-24T02:42:57.784Z"
+        },
+        "elapsedMs": 69
+      },
+      {
+        "index": 24,
+        "step": {
+          "type": "wait_for_state",
+          "expect": {
+            "phase": "racing"
+          },
+          "timeoutMs": 7000
+        },
+        "ok": true,
+        "state": {
+          "revision": "race-pace-r07-v1",
+          "raceElapsed": 0.04820000000018627,
+          "courseFraction": 0.000026826785458491837,
+          "strideTimes": [
+            0.012532882753359693,
+            0.012532888471662134,
+            0.01253289121128513,
+            0.012532889683741177,
+            0.012532884607458066,
+            0.012532878369891061
+          ],
+          "leaderHorse": 3,
+          "eventId": "regional",
+          "eventName": "地区赛",
+          "eligibilityCredits": 999,
+          "preparationRemaining": 0,
+          "equipment": {
+            "tier": "regional",
+            "types": [
+              "rail",
+              "distance",
+              "finish-post",
+              "toolbox",
+              "camera",
+              "mirror",
+              "speaker",
+              "warning"
+            ],
+            "typeCount": 8,
+            "staticTypes": [
+              "rail",
+              "distance",
+              "finish-post",
+              "toolbox",
+              "mirror",
+              "speaker"
+            ],
+            "dynamicTypes": [
+              "camera",
+              "warning"
+            ],
+            "cameras": [
+              {
+                "targetHorse": 3,
+                "renderedFrame": 2,
+                "angle": 78.5121830738359,
+                "desiredAngle": 78.5121830738359,
+                "frame": 2,
+                "pivot": {
+                  "x": 330,
+                  "y": 565
+                },
+                "basePosition": {
+                  "x": 330,
+                  "y": 625
+                }
+              }
+            ],
+            "signals": [
+              {
+                "frame": 1,
+                "renderedFrame": 1,
+                "basePosition": {
+                  "x": 430,
+                  "y": 70
+                }
+              }
+            ],
+            "gates": [],
+            "screenMode": "off",
+            "screenVisible": false,
+            "broadcastAllocated": false,
+            "broadcastSamples": 0
+          },
+          "eventPickerVisible": false,
+          "eventButton": {
+            "x": 235.2,
+            "y": 431.68,
+            "width": 110.39999999999999,
+            "height": 45.12
+          },
+          "eventChoices": [
+            {
+              "x": 43.199999999999996,
+              "y": 237.92000000000002,
+              "width": 273.6,
+              "height": 53.75999999999999
+            },
+            {
+              "x": 43.199999999999996,
+              "y": 300.32,
+              "width": 273.6,
+              "height": 53.75999999999999
+            },
+            {
+              "x": 43.199999999999996,
+              "y": 362.71999999999997,
+              "width": 273.6,
+              "height": 53.75999999999999
+            }
+          ],
+          "eventClose": {
+            "x": 281.28,
+            "y": 189.44000000000003,
+            "width": 47.03999999999999,
+            "height": 45.12
+          },
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "straight",
+          "uiMode": "race",
+          "bettingPageVisible": true,
+          "raceViewportVisible": true,
+          "designResolution": {
+            "width": 750,
+            "height": 1334
+          },
+          "visibleHeight": 1333.3333333333335,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 333.76000000000005
+          },
+          "touchTargets": [
+            {
+              "key": "1-6",
+              "x": 7.2,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-5",
+              "x": 76.32,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-4",
+              "x": 145.44,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-3",
+              "x": 214.56,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-2",
+              "x": 283.68,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-6",
+              "x": 7.2,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-5",
+              "x": 76.32,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-4",
+              "x": 145.44,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-3",
+              "x": 214.56,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-6",
+              "x": 7.2,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-5",
+              "x": 76.32,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-4",
+              "x": 145.44,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "4-6",
+              "x": 7.2,
+              "y": 484.48,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "4-5",
+              "x": 76.32,
+              "y": 484.48,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "5-6",
+              "x": 7.2,
+              "y": 529.6,
+              "width": 69.12,
+              "height": 45.12
+            }
+          ],
+          "buttons": [
+            {
+              "name": "Undo",
+              "x": 8.64,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "Clear",
+              "x": 95.04,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "History",
+              "x": 181.44,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "Start",
+              "x": 267.84,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            }
+          ],
+          "undoMode": false,
+          "horseFrames": 144,
+          "backgrounds": 12,
+          "sounds": 7,
+          "worldId": "Node.676",
+          "worldPaintBuilds": 1,
+          "raceScale": 1.5521367521367526,
+          "camera": {
+            "x": 400.11464892464727,
+            "y": 125
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "积分 999   押分 1",
+          "uiResult": "1 — 6",
+          "resultPanel": false,
+          "startButton": "比赛中",
+          "horsePositions": [
+            {
+              "x": 400.11464907067875,
+              "y": 300.297649339044
+            },
+            {
+              "x": 400.1146504283542,
+              "y": 261.196175323404
+            },
+            {
+              "x": 400.1146510788128,
+              "y": 220.10897146677974
+            },
+            {
+              "x": 400.11465071613367,
+              "y": 178.8408678290599
+            },
+            {
+              "x": 400.1146495108905,
+              "y": 139.49699961942252
+            },
+            {
+              "x": 400.114648029928,
+              "y": 100.98814497934889
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": 375.0000002266608,
+              "y": 664.7525907689778
+            },
+            {
+              "x": 375.0000023339588,
+              "y": 604.0617558865828
+            },
+            {
+              "x": 375.0000033435595,
+              "y": 540.2887967381813
+            },
+            {
+              "x": 375.00000278063186,
+              "y": 476.23505639108794
+            },
+            {
+              "x": 375.00000090992967,
+              "y": 415.167992571685
+            },
+            {
+              "x": 374.9999986112733,
+              "y": 355.39698400213473
+            }
+          ],
+          "phase": "racing",
+          "round": 1,
+          "credits": 999,
+          "totalStake": 1,
+          "result": null,
+          "historyLength": 0,
+          "metrics": {
+            "finishCount": 0,
+            "visibleOrder": [],
+            "backgroundMismatches": 0,
+            "settlementJump": 0,
+            "resultDrift": 0,
+            "worldChanges": 0,
+            "maxCameraStep": 0.0659333901742798,
+            "clippedFinishers": 0
+          },
+          "progress": [
+            0.00002682681962850695,
+            0.000026827137311975913,
+            0.000026827289513253454,
+            0.000026827204649700532,
+            0.00002682692263397212,
+            0.000026826576102471904
+          ]
+        },
+        "elapsedMs": 2373
+      },
+      {
+        "index": 25,
+        "step": {
+          "type": "wait",
+          "durationMs": 400
+        },
+        "ok": true,
+        "elapsedMs": 407
+      },
+      {
+        "index": 26,
+        "step": {
+          "type": "get_state",
+          "required": true
+        },
+        "ok": true,
+        "state": {
+          "revision": "race-pace-r07-v1",
+          "raceElapsed": 0.46520000000018624,
+          "courseFraction": 0.002422863126986516,
+          "strideTimes": [
+            0.15995663377320635,
+            0.15998414420784884,
+            0.1599775060022235,
+            0.15993984120816074,
+            0.15988886416683695,
+            0.15984855017732488
+          ],
+          "leaderHorse": 2,
+          "eventId": "regional",
+          "eventName": "地区赛",
+          "eligibilityCredits": 999,
+          "preparationRemaining": 0,
+          "equipment": {
+            "tier": "regional",
+            "types": [
+              "rail",
+              "distance",
+              "finish-post",
+              "toolbox",
+              "camera",
+              "mirror",
+              "speaker",
+              "warning"
+            ],
+            "typeCount": 8,
+            "staticTypes": [
+              "rail",
+              "distance",
+              "finish-post",
+              "toolbox",
+              "mirror",
+              "speaker"
+            ],
+            "dynamicTypes": [
+              "camera",
+              "warning"
+            ],
+            "cameras": [
+              {
+                "targetHorse": 2,
+                "renderedFrame": 2,
+                "angle": 75.23735780997447,
+                "desiredAngle": 75.23735780997441,
+                "frame": 2,
+                "pivot": {
+                  "x": 330,
+                  "y": 565
+                },
+                "basePosition": {
+                  "x": 330,
+                  "y": 625
+                }
+              }
+            ],
+            "signals": [
+              {
+                "frame": 1,
+                "renderedFrame": 1,
+                "basePosition": {
+                  "x": 430,
+                  "y": 70
+                }
+              }
+            ],
+            "gates": [],
+            "screenMode": "off",
+            "screenVisible": false,
+            "broadcastAllocated": false,
+            "broadcastSamples": 0
+          },
+          "eventPickerVisible": false,
+          "eventButton": {
+            "x": 235.2,
+            "y": 431.68,
+            "width": 110.39999999999999,
+            "height": 45.12
+          },
+          "eventChoices": [
+            {
+              "x": 43.199999999999996,
+              "y": 237.92000000000002,
+              "width": 273.6,
+              "height": 53.75999999999999
+            },
+            {
+              "x": 43.199999999999996,
+              "y": 300.32,
+              "width": 273.6,
+              "height": 53.75999999999999
+            },
+            {
+              "x": 43.199999999999996,
+              "y": 362.71999999999997,
+              "width": 273.6,
+              "height": 53.75999999999999
+            }
+          ],
+          "eventClose": {
+            "x": 281.28,
+            "y": 189.44000000000003,
+            "width": 47.03999999999999,
+            "height": 45.12
+          },
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "straight",
+          "uiMode": "race",
+          "bettingPageVisible": true,
+          "raceViewportVisible": true,
+          "designResolution": {
+            "width": 750,
+            "height": 1334
+          },
+          "visibleHeight": 1333.3333333333335,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 333.76000000000005
+          },
+          "touchTargets": [
+            {
+              "key": "1-6",
+              "x": 7.2,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-5",
+              "x": 76.32,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-4",
+              "x": 145.44,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-3",
+              "x": 214.56,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-2",
+              "x": 283.68,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-6",
+              "x": 7.2,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-5",
+              "x": 76.32,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-4",
+              "x": 145.44,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-3",
+              "x": 214.56,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-6",
+              "x": 7.2,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-5",
+              "x": 76.32,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-4",
+              "x": 145.44,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "4-6",
+              "x": 7.2,
+              "y": 484.48,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "4-5",
+              "x": 76.32,
+              "y": 484.48,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "5-6",
+              "x": 7.2,
+              "y": 529.6,
+              "width": 69.12,
+              "height": 45.12
+            }
+          ],
+          "buttons": [
+            {
+              "name": "Undo",
+              "x": 8.64,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "Clear",
+              "x": 95.04,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "History",
+              "x": 181.44,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "Start",
+              "x": 267.84,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            }
+          ],
+          "undoMode": false,
+          "horseFrames": 144,
+          "backgrounds": 12,
+          "sounds": 7,
+          "worldId": "Node.676",
+          "worldPaintBuilds": 1,
+          "raceScale": 1.5521367521367526,
+          "camera": {
+            "x": 410.35452616961174,
+            "y": 125
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "积分 999   押分 1",
+          "uiResult": "1 — 6",
+          "resultPanel": false,
+          "startButton": "比赛中",
+          "horsePositions": [
+            {
+              "x": 410.365233499673,
+              "y": 299.9309900687676
+            },
+            {
+              "x": 410.3717652006793,
+              "y": 258.80761353400766
+            },
+            {
+              "x": 410.3701891160072,
+              "y": 219.6641830824706
+            },
+            {
+              "x": 410.36124650290503,
+              "y": 181.07781575507022
+            },
+            {
+              "x": 410.3491432120469,
+              "y": 140.70406229177956
+            },
+            {
+              "x": 410.3395716102425,
+              "y": 99.16275043340143
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": 375.01661924050535,
+              "y": 664.1834854400702
+            },
+            {
+              "x": 375.0267573336912,
+              "y": 600.3543813485112
+            },
+            {
+              "x": 375.0243110347472,
+              "y": 539.5984243399716
+            },
+            {
+              "x": 375.01043087629114,
+              "y": 479.7071054796646
+            },
+            {
+              "x": 374.9916449137284,
+              "y": 417.0415189075827
+            },
+            {
+              "x": 374.976788478791,
+              "y": 352.5637220402197
+            }
+          ],
+          "phase": "racing",
+          "round": 1,
+          "credits": 999,
+          "totalStake": 1,
+          "result": null,
+          "historyLength": 0,
+          "metrics": {
+            "finishCount": 0,
+            "visibleOrder": [],
+            "backgroundMismatches": 0,
+            "settlementJump": 0,
+            "resultDrift": 0,
+            "worldChanges": 0,
+            "maxCameraStep": 0.7179798434617624,
+            "clippedFinishers": 0
+          },
+          "progress": [
+            0.0024253685429533206,
+            0.0024268969004334596,
+            0.002426528111232052,
+            0.0024244356226730103,
+            0.0024216035648216877,
+            0.002419363898737685
+          ]
+        },
+        "elapsedMs": 6
+      },
+      {
+        "index": 27,
+        "step": {
+          "type": "screenshot",
+          "label": "pace-open-360"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\pace-open-360-1792809780638.png",
+          "width": 360,
+          "height": 640,
+          "source": "preview",
+          "capturedAt": "2026-10-24T02:43:00.639Z"
+        },
+        "elapsedMs": 69
+      },
+      {
+        "index": 28,
+        "step": {
+          "type": "wait",
+          "durationMs": 1600
+        },
+        "ok": true,
+        "elapsedMs": 1606
+      },
+      {
+        "index": 29,
+        "step": {
+          "type": "get_state",
+          "required": true
+        },
+        "ok": true,
+        "state": {
+          "revision": "race-pace-r07-v1",
+          "raceElapsed": 2.1499000000003723,
+          "courseFraction": 0.04671323940777064,
+          "strideTimes": [
+            1.3817638957410194,
+            1.364175640754853,
+            1.3532365522114302,
+            1.3540914543806957,
+            1.3663382734142293,
+            1.3842171389587343
+          ],
+          "leaderHorse": 6,
+          "eventId": "regional",
+          "eventName": "地区赛",
+          "eligibilityCredits": 999,
+          "preparationRemaining": 0,
+          "equipment": {
+            "tier": "regional",
+            "types": [
+              "rail",
+              "distance",
+              "finish-post",
+              "toolbox",
+              "camera",
+              "mirror",
+              "speaker",
+              "warning"
+            ],
+            "typeCount": 8,
+            "staticTypes": [
+              "rail",
+              "distance",
+              "finish-post",
+              "toolbox",
+              "mirror",
+              "speaker"
+            ],
+            "dynamicTypes": [
+              "camera",
+              "warning"
+            ],
+            "cameras": [
+              {
+                "targetHorse": 6,
+                "renderedFrame": 1,
+                "angle": 54.33906906627186,
+                "desiredAngle": 59.76297735064867,
+                "frame": 1,
+                "pivot": {
+                  "x": 330,
+                  "y": 565
+                },
+                "basePosition": {
+                  "x": 330,
+                  "y": 625
+                }
+              }
+            ],
+            "signals": [
+              {
+                "frame": 1,
+                "renderedFrame": 1,
+                "basePosition": {
+                  "x": 430,
+                  "y": 70
+                }
+              }
+            ],
+            "gates": [],
+            "screenMode": "off",
+            "screenVisible": false,
+            "broadcastAllocated": false,
+            "broadcastSamples": 0
+          },
+          "eventPickerVisible": false,
+          "eventButton": {
+            "x": 235.2,
+            "y": 431.68,
+            "width": 110.39999999999999,
+            "height": 45.12
+          },
+          "eventChoices": [
+            {
+              "x": 43.199999999999996,
+              "y": 237.92000000000002,
+              "width": 273.6,
+              "height": 53.75999999999999
+            },
+            {
+              "x": 43.199999999999996,
+              "y": 300.32,
+              "width": 273.6,
+              "height": 53.75999999999999
+            },
+            {
+              "x": 43.199999999999996,
+              "y": 362.71999999999997,
+              "width": 273.6,
+              "height": 53.75999999999999
+            }
+          ],
+          "eventClose": {
+            "x": 281.28,
+            "y": 189.44000000000003,
+            "width": 47.03999999999999,
+            "height": 45.12
+          },
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "straight",
+          "uiMode": "race",
+          "bettingPageVisible": true,
+          "raceViewportVisible": true,
+          "designResolution": {
+            "width": 750,
+            "height": 1334
+          },
+          "visibleHeight": 1333.3333333333335,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 333.76000000000005
+          },
+          "touchTargets": [
+            {
+              "key": "1-6",
+              "x": 7.2,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-5",
+              "x": 76.32,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-4",
+              "x": 145.44,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-3",
+              "x": 214.56,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-2",
+              "x": 283.68,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-6",
+              "x": 7.2,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-5",
+              "x": 76.32,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-4",
+              "x": 145.44,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-3",
+              "x": 214.56,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-6",
+              "x": 7.2,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-5",
+              "x": 76.32,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-4",
+              "x": 145.44,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "4-6",
+              "x": 7.2,
+              "y": 484.48,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "4-5",
+              "x": 76.32,
+              "y": 484.48,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "5-6",
+              "x": 7.2,
+              "y": 529.6,
+              "width": 69.12,
+              "height": 45.12
+            }
+          ],
+          "buttons": [
+            {
+              "name": "Undo",
+              "x": 8.64,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "Clear",
+              "x": 95.04,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "History",
+              "x": 181.44,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "Start",
+              "x": 267.84,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            }
+          ],
+          "undoMode": false,
+          "horseFrames": 144,
+          "backgrounds": 12,
+          "sounds": 7,
+          "worldId": "Node.676",
+          "worldPaintBuilds": 1,
+          "raceScale": 1.5521367521367526,
+          "camera": {
+            "x": 599.6371377844616,
+            "y": 125
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "积分 999   押分 1",
+          "uiResult": "1 — 6",
+          "resultPanel": false,
+          "startButton": "比赛中",
+          "horsePositions": [
+            {
+              "x": 600.456397783837,
+              "y": 300.7157255650704
+            },
+            {
+              "x": 596.280483288673,
+              "y": 259.5225725889544
+            },
+            {
+              "x": 593.6832558520518,
+              "y": 218.80023050826247
+            },
+            {
+              "x": 593.8862321202143,
+              "y": 179.839564900064
+            },
+            {
+              "x": 596.7939491826521,
+              "y": 141.19784371259743
+            },
+            {
+              "x": 601.0388622705684,
+              "y": 99.84821933618295
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": 376.2716035545861,
+              "y": 665.4015022445881
+            },
+            {
+              "x": 369.79001319286147,
+              "y": 601.4640955739669
+            },
+            {
+              "x": 365.7587610348238,
+              "y": 538.25745179744
+            },
+            {
+              "x": 366.0738079604504,
+              "y": 477.78517081924474
+            },
+            {
+              "x": 370.58698247787515,
+              "y": 417.80793519835646
+            },
+            {
+              "x": 377.17566809125634,
+              "y": 353.62766351667375
+            }
+          ],
+          "phase": "racing",
+          "round": 1,
+          "credits": 999,
+          "totalStake": 1,
+          "result": null,
+          "historyLength": 0,
+          "metrics": {
+            "finishCount": 0,
+            "visibleOrder": [],
+            "backgroundMismatches": 0,
+            "settlementJump": 0,
+            "resultDrift": 0,
+            "worldChanges": 0,
+            "maxCameraStep": 3.0373103175044207,
+            "clippedFinishers": 0
+          },
+          "progress": [
+            0.04690493865227369,
+            0.04592781337526445,
+            0.04532008623396317,
+            0.04536758079892236,
+            0.04604795963411868,
+            0.047041229942146726
+          ]
+        },
+        "elapsedMs": 7
+      },
+      {
+        "index": 30,
+        "step": {
+          "type": "screenshot",
+          "label": "pace-camera-360"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\pace-camera-360-1792809782317.png",
+          "width": 360,
+          "height": 640,
+          "source": "preview",
+          "capturedAt": "2026-10-24T02:43:02.318Z"
+        },
+        "elapsedMs": 66
+      },
+      {
+        "index": 31,
+        "step": {
+          "type": "wait",
+          "durationMs": 9000
+        },
+        "ok": true,
+        "elapsedMs": 9015
+      },
+      {
+        "index": 32,
+        "step": {
+          "type": "get_state",
+          "required": true
+        },
+        "ok": true,
+        "state": {
+          "revision": "race-pace-r07-v1",
+          "raceElapsed": 11.223900000000397,
+          "courseFraction": 0.4445395286938858,
+          "strideTimes": [
+            10.807150608978414,
+            10.744468836671786,
+            10.71151932698718,
+            10.723798749179556,
+            10.775531899120576,
+            10.842387868040214
+          ],
+          "leaderHorse": 6,
+          "eventId": "regional",
+          "eventName": "地区赛",
+          "eligibilityCredits": 999,
+          "preparationRemaining": 0,
+          "equipment": {
+            "tier": "regional",
+            "types": [
+              "rail",
+              "distance",
+              "finish-post",
+              "toolbox",
+              "camera",
+              "mirror",
+              "speaker",
+              "warning"
+            ],
+            "typeCount": 8,
+            "staticTypes": [
+              "rail",
+              "distance",
+              "finish-post",
+              "toolbox",
+              "mirror",
+              "speaker"
+            ],
+            "dynamicTypes": [
+              "camera",
+              "warning"
+            ],
+            "cameras": [
+              {
+                "targetHorse": 6,
+                "renderedFrame": 0,
+                "angle": 9.854531366953665,
+                "desiredAngle": 9.854531366953609,
+                "frame": 0,
+                "pivot": {
+                  "x": 330,
+                  "y": 565
+                },
+                "basePosition": {
+                  "x": 330,
+                  "y": 625
+                }
+              }
+            ],
+            "signals": [
+              {
+                "frame": 1,
+                "renderedFrame": 1,
+                "basePosition": {
+                  "x": 430,
+                  "y": 70
+                }
+              }
+            ],
+            "gates": [],
+            "screenMode": "off",
+            "screenVisible": false,
+            "broadcastAllocated": false,
+            "broadcastSamples": 0
+          },
+          "eventPickerVisible": false,
+          "eventButton": {
+            "x": 235.2,
+            "y": 431.68,
+            "width": 110.39999999999999,
+            "height": 45.12
+          },
+          "eventChoices": [
+            {
+              "x": 43.199999999999996,
+              "y": 237.92000000000002,
+              "width": 273.6,
+              "height": 53.75999999999999
+            },
+            {
+              "x": 43.199999999999996,
+              "y": 300.32,
+              "width": 273.6,
+              "height": 53.75999999999999
+            },
+            {
+              "x": 43.199999999999996,
+              "y": 362.71999999999997,
+              "width": 273.6,
+              "height": 53.75999999999999
+            }
+          ],
+          "eventClose": {
+            "x": 281.28,
+            "y": 189.44000000000003,
+            "width": 47.03999999999999,
+            "height": 45.12
+          },
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "right-bend",
+          "uiMode": "race",
+          "bettingPageVisible": true,
+          "raceViewportVisible": true,
+          "designResolution": {
+            "width": 750,
+            "height": 1334
+          },
+          "visibleHeight": 1333.3333333333335,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 333.76000000000005
+          },
+          "touchTargets": [
+            {
+              "key": "1-6",
+              "x": 7.2,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-5",
+              "x": 76.32,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-4",
+              "x": 145.44,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-3",
+              "x": 214.56,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-2",
+              "x": 283.68,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-6",
+              "x": 7.2,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-5",
+              "x": 76.32,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-4",
+              "x": 145.44,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-3",
+              "x": 214.56,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-6",
+              "x": 7.2,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-5",
+              "x": 76.32,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-4",
+              "x": 145.44,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "4-6",
+              "x": 7.2,
+              "y": 484.48,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "4-5",
+              "x": 76.32,
+              "y": 484.48,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "5-6",
+              "x": 7.2,
+              "y": 529.6,
+              "width": 69.12,
+              "height": 45.12
+            }
+          ],
+          "buttons": [
+            {
+              "name": "Undo",
+              "x": 8.64,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "Clear",
+              "x": 95.04,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "History",
+              "x": 181.44,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "Start",
+              "x": 267.84,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            }
+          ],
+          "undoMode": false,
+          "horseFrames": 144,
+          "backgrounds": 12,
+          "sounds": 7,
+          "worldId": "Node.676",
+          "worldPaintBuilds": 1,
+          "raceScale": 1.5521367521367526,
+          "camera": {
+            "x": 2284.8300638496535,
+            "y": 204.52760049713197
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "积分 999   押分 1",
+          "uiResult": "1 — 6",
+          "resultPanel": false,
+          "startButton": "比赛中",
+          "horsePositions": [
+            {
+              "x": 2216.932340115307,
+              "y": 353.6756219333454
+            },
+            {
+              "x": 2233.268726178953,
+              "y": 317.7546099263443
+            },
+            {
+              "x": 2252.781844024046,
+              "y": 282.68941900282914
+            },
+            {
+              "x": 2280.6953084631873,
+              "y": 252.4403069955146
+            },
+            {
+              "x": 2318.1905968320516,
+              "y": 231.58228516116725
+            },
+            {
+              "x": 2361.1041302912254,
+              "y": 211.31992113856487
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": 269.61344760549287,
+              "y": 624.1647922462938
+            },
+            {
+              "x": 294.9697528119724,
+              "y": 568.4104693362818
+            },
+            {
+              "x": 325.2567801681173,
+              "y": 513.9844977832018
+            },
+            {
+              "x": 368.5822942035705,
+              "y": 467.0337393171478
+            },
+            {
+              "x": 426.7801093128504,
+              "y": 434.6592370511865
+            },
+            {
+              "x": 493.3877817588843,
+              "y": 403.2092771665318
+            }
+          ],
+          "phase": "racing",
+          "round": 1,
+          "credits": 999,
+          "totalStake": 1,
+          "result": null,
+          "historyLength": 0,
+          "metrics": {
+            "finishCount": 0,
+            "visibleOrder": [],
+            "backgroundMismatches": 0,
+            "settlementJump": 0,
+            "resultDrift": 0,
+            "worldChanges": 0,
+            "maxCameraStep": 4.176593468837268,
+            "clippedFinishers": 0
+          },
+          "progress": [
+            0.44450975605435084,
+            0.44102743537064926,
+            0.43919690705483777,
+            0.4398790971766365,
+            0.44275316106224877,
+            0.44646738155778415
+          ]
+        },
+        "elapsedMs": 5
+      },
+      {
+        "index": 33,
+        "step": {
+          "type": "screenshot",
+          "label": "pace-bend-360"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\pace-bend-360-1792809791405.png",
+          "width": 360,
+          "height": 640,
+          "source": "preview",
+          "capturedAt": "2026-10-24T02:43:11.405Z"
+        },
+        "elapsedMs": 67
+      },
+      {
+        "index": 34,
+        "step": {
+          "type": "wait_for_state",
+          "expect": {
+            "phase": "result"
+          },
+          "timeoutMs": 30000
+        },
+        "ok": true,
+        "state": {
+          "revision": "race-pace-r07-v1",
+          "raceElapsed": 26.436400000000006,
+          "courseFraction": 1,
+          "strideTimes": [
+            25.61959000000001,
+            25.27834000000001,
+            25.960840000000008,
+            26.643340000000006,
+            26.984590000000008,
+            26.30209000000001
+          ],
+          "leaderHorse": 5,
+          "eventId": "regional",
+          "eventName": "地区赛",
+          "eligibilityCredits": 999,
+          "preparationRemaining": 0,
+          "equipment": {
+            "tier": "regional",
+            "types": [
+              "rail",
+              "distance",
+              "finish-post",
+              "toolbox",
+              "camera",
+              "mirror",
+              "speaker",
+              "warning"
+            ],
+            "typeCount": 8,
+            "staticTypes": [
+              "rail",
+              "distance",
+              "finish-post",
+              "toolbox",
+              "mirror",
+              "speaker"
+            ],
+            "dynamicTypes": [
+              "camera",
+              "warning"
+            ],
+            "cameras": [
+              {
+                "targetHorse": 5,
+                "renderedFrame": 5,
+                "angle": 214.522614332648,
+                "desiredAngle": 214.52261433264798,
+                "frame": 5,
+                "pivot": {
+                  "x": 330,
+                  "y": 565
+                },
+                "basePosition": {
+                  "x": 330,
+                  "y": 625
+                }
+              }
+            ],
+            "signals": [
+              {
+                "frame": 0,
+                "renderedFrame": 0,
+                "basePosition": {
+                  "x": 430,
+                  "y": 70
+                }
+              }
+            ],
+            "gates": [],
+            "screenMode": "off",
+            "screenVisible": false,
+            "broadcastAllocated": false,
+            "broadcastSamples": 0
+          },
+          "eventPickerVisible": false,
+          "eventButton": {
+            "x": 235.2,
+            "y": 431.68,
+            "width": 110.39999999999999,
+            "height": 45.12
+          },
+          "eventChoices": [
+            {
+              "x": 43.199999999999996,
+              "y": 237.92000000000002,
+              "width": 273.6,
+              "height": 53.75999999999999
+            },
+            {
+              "x": 43.199999999999996,
+              "y": 300.32,
+              "width": 273.6,
+              "height": 53.75999999999999
+            },
+            {
+              "x": 43.199999999999996,
+              "y": 362.71999999999997,
+              "width": 273.6,
+              "height": 53.75999999999999
+            }
+          ],
+          "eventClose": {
+            "x": 281.28,
+            "y": 189.44000000000003,
+            "width": 47.03999999999999,
+            "height": 45.12
+          },
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "finish",
+          "uiMode": "race",
+          "bettingPageVisible": true,
+          "raceViewportVisible": true,
+          "designResolution": {
+            "width": 750,
+            "height": 1334
+          },
+          "visibleHeight": 1333.3333333333335,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 333.76000000000005
+          },
+          "touchTargets": [
+            {
+              "key": "1-6",
+              "x": 7.2,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-5",
+              "x": 76.32,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-4",
+              "x": 145.44,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-3",
+              "x": 214.56,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-2",
+              "x": 283.68,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-6",
+              "x": 7.2,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-5",
+              "x": 76.32,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-4",
+              "x": 145.44,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-3",
+              "x": 214.56,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-6",
+              "x": 7.2,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-5",
+              "x": 76.32,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-4",
+              "x": 145.44,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "4-6",
+              "x": 7.2,
+              "y": 484.48,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "4-5",
+              "x": 76.32,
+              "y": 484.48,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "5-6",
+              "x": 7.2,
+              "y": 529.6,
+              "width": 69.12,
+              "height": 45.12
+            }
+          ],
+          "buttons": [
+            {
+              "name": "Undo",
+              "x": 8.64,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "Clear",
+              "x": 95.04,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "History",
+              "x": 181.44,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "Start",
+              "x": 267.84,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            }
+          ],
+          "undoMode": false,
+          "horseFrames": 144,
+          "backgrounds": 12,
+          "sounds": 7,
+          "worldId": "Node.676",
+          "worldPaintBuilds": 1,
+          "raceScale": 1.5521367521367526,
+          "camera": {
+            "x": 465.1388888888889,
+            "y": 725
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "积分 999   押分 1",
+          "uiResult": "5 — 4",
+          "resultPanel": true,
+          "startButton": "下一场",
+          "horsePositions": [
+            {
+              "x": 225.22197606625787,
+              "y": 699.6314192586681
+            },
+            {
+              "x": 306.2437046343016,
+              "y": 738.894920156674
+            },
+            {
+              "x": 144.20024749821528,
+              "y": 780.5883449098059
+            },
+            {
+              "x": -17.843209637871496,
+              "y": 820.1740365590413
+            },
+            {
+              "x": -98.86493820591522,
+              "y": 858.8303742673709
+            },
+            {
+              "x": 63.17851893017155,
+              "y": 898.9718897646019
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": 2.616142148805011,
+              "y": 353.29116014849683
+            },
+            {
+              "x": 128.37294478091397,
+              "y": 414.23348290984615
+            },
+            {
+              "x": -123.14066048330216,
+              "y": 478.9473797916304
+            },
+            {
+              "x": -374.65426574751893,
+              "y": 540.3897866591616
+            },
+            {
+              "x": -500.41106837962786,
+              "y": 600.3897091192698
+            },
+            {
+              "x": -248.89746311541103,
+              "y": 662.6948306089892
+            }
+          ],
+          "phase": "result",
+          "round": 1,
+          "credits": 999,
+          "totalStake": 1,
+          "result": {
+            "first": 5,
+            "second": 4,
+            "order": [
+              5,
+              4,
+              6,
+              3,
+              1,
+              2
+            ],
+            "pair": "4-5",
+            "payout": 0,
+            "stake": 1,
+            "round": 1,
+            "eventId": "regional"
+          },
+          "historyLength": 1,
+          "metrics": {
+            "finishCount": 6,
+            "visibleOrder": [
+              5,
+              4,
+              6,
+              3,
+              1,
+              2
+            ],
+            "backgroundMismatches": 0,
+            "settlementJump": 3.8958371636169478,
+            "resultDrift": 3.919499300662855,
+            "worldChanges": 0,
+            "maxCameraStep": 5.1800798309070615,
+            "clippedFinishers": 0
+          },
+          "progress": [
+            1.0561383333333338,
+            1.0371800000000004,
+            1.075096666666667,
+            1.1130133333333336,
+            1.131971666666667,
+            1.0940550000000004
+          ]
+        },
+        "elapsedMs": 15135
+      },
+      {
+        "index": 35,
+        "step": {
+          "type": "get_state",
+          "required": true
+        },
+        "ok": true,
+        "state": {
+          "revision": "race-pace-r07-v1",
+          "raceElapsed": 26.436400000000006,
+          "courseFraction": 1,
+          "strideTimes": [
+            25.61959000000001,
+            25.27834000000001,
+            25.960840000000008,
+            26.643340000000006,
+            26.984590000000008,
+            26.30209000000001
+          ],
+          "leaderHorse": 5,
+          "eventId": "regional",
+          "eventName": "地区赛",
+          "eligibilityCredits": 999,
+          "preparationRemaining": 0,
+          "equipment": {
+            "tier": "regional",
+            "types": [
+              "rail",
+              "distance",
+              "finish-post",
+              "toolbox",
+              "camera",
+              "mirror",
+              "speaker",
+              "warning"
+            ],
+            "typeCount": 8,
+            "staticTypes": [
+              "rail",
+              "distance",
+              "finish-post",
+              "toolbox",
+              "mirror",
+              "speaker"
+            ],
+            "dynamicTypes": [
+              "camera",
+              "warning"
+            ],
+            "cameras": [
+              {
+                "targetHorse": 5,
+                "renderedFrame": 5,
+                "angle": 214.522614332648,
+                "desiredAngle": 214.52261433264798,
+                "frame": 5,
+                "pivot": {
+                  "x": 330,
+                  "y": 565
+                },
+                "basePosition": {
+                  "x": 330,
+                  "y": 625
+                }
+              }
+            ],
+            "signals": [
+              {
+                "frame": 0,
+                "renderedFrame": 0,
+                "basePosition": {
+                  "x": 430,
+                  "y": 70
+                }
+              }
+            ],
+            "gates": [],
+            "screenMode": "off",
+            "screenVisible": false,
+            "broadcastAllocated": false,
+            "broadcastSamples": 0
+          },
+          "eventPickerVisible": false,
+          "eventButton": {
+            "x": 235.2,
+            "y": 431.68,
+            "width": 110.39999999999999,
+            "height": 45.12
+          },
+          "eventChoices": [
+            {
+              "x": 43.199999999999996,
+              "y": 237.92000000000002,
+              "width": 273.6,
+              "height": 53.75999999999999
+            },
+            {
+              "x": 43.199999999999996,
+              "y": 300.32,
+              "width": 273.6,
+              "height": 53.75999999999999
+            },
+            {
+              "x": 43.199999999999996,
+              "y": 362.71999999999997,
+              "width": 273.6,
+              "height": 53.75999999999999
+            }
+          ],
+          "eventClose": {
+            "x": 281.28,
+            "y": 189.44000000000003,
+            "width": 47.03999999999999,
+            "height": 45.12
+          },
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "finish",
+          "uiMode": "race",
+          "bettingPageVisible": true,
+          "raceViewportVisible": true,
+          "designResolution": {
+            "width": 750,
+            "height": 1334
+          },
+          "visibleHeight": 1333.3333333333335,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 333.76000000000005
+          },
+          "touchTargets": [
+            {
+              "key": "1-6",
+              "x": 7.2,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-5",
+              "x": 76.32,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-4",
+              "x": 145.44,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-3",
+              "x": 214.56,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-2",
+              "x": 283.68,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-6",
+              "x": 7.2,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-5",
+              "x": 76.32,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-4",
+              "x": 145.44,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-3",
+              "x": 214.56,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-6",
+              "x": 7.2,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-5",
+              "x": 76.32,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-4",
+              "x": 145.44,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "4-6",
+              "x": 7.2,
+              "y": 484.48,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "4-5",
+              "x": 76.32,
+              "y": 484.48,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "5-6",
+              "x": 7.2,
+              "y": 529.6,
+              "width": 69.12,
+              "height": 45.12
+            }
+          ],
+          "buttons": [
+            {
+              "name": "Undo",
+              "x": 8.64,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "Clear",
+              "x": 95.04,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "History",
+              "x": 181.44,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "Start",
+              "x": 267.84,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            }
+          ],
+          "undoMode": false,
+          "horseFrames": 144,
+          "backgrounds": 12,
+          "sounds": 7,
+          "worldId": "Node.676",
+          "worldPaintBuilds": 1,
+          "raceScale": 1.5521367521367526,
+          "camera": {
+            "x": 465.1388888888889,
+            "y": 725
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "积分 999   押分 1",
+          "uiResult": "5 — 4",
+          "resultPanel": true,
+          "startButton": "下一场",
+          "horsePositions": [
+            {
+              "x": 225.22197606625787,
+              "y": 699.6314192586681
+            },
+            {
+              "x": 306.2437046343016,
+              "y": 738.894920156674
+            },
+            {
+              "x": 144.20024749821528,
+              "y": 780.5883449098059
+            },
+            {
+              "x": -17.843209637871496,
+              "y": 820.1740365590413
+            },
+            {
+              "x": -98.86493820591522,
+              "y": 858.8303742673709
+            },
+            {
+              "x": 63.17851893017155,
+              "y": 898.9718897646019
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": 2.616142148805011,
+              "y": 353.29116014849683
+            },
+            {
+              "x": 128.37294478091397,
+              "y": 414.23348290984615
+            },
+            {
+              "x": -123.14066048330216,
+              "y": 478.9473797916304
+            },
+            {
+              "x": -374.65426574751893,
+              "y": 540.3897866591616
+            },
+            {
+              "x": -500.41106837962786,
+              "y": 600.3897091192698
+            },
+            {
+              "x": -248.89746311541103,
+              "y": 662.6948306089892
+            }
+          ],
+          "phase": "result",
+          "round": 1,
+          "credits": 999,
+          "totalStake": 1,
+          "result": {
+            "first": 5,
+            "second": 4,
+            "order": [
+              5,
+              4,
+              6,
+              3,
+              1,
+              2
+            ],
+            "pair": "4-5",
+            "payout": 0,
+            "stake": 1,
+            "round": 1,
+            "eventId": "regional"
+          },
+          "historyLength": 1,
+          "metrics": {
+            "finishCount": 6,
+            "visibleOrder": [
+              5,
+              4,
+              6,
+              3,
+              1,
+              2
+            ],
+            "backgroundMismatches": 0,
+            "settlementJump": 3.8958371636169478,
+            "resultDrift": 3.919499300662855,
+            "worldChanges": 0,
+            "maxCameraStep": 5.1800798309070615,
+            "clippedFinishers": 0
+          },
+          "progress": [
+            1.0561383333333338,
+            1.0371800000000004,
+            1.075096666666667,
+            1.1130133333333336,
+            1.131971666666667,
+            1.0940550000000004
+          ]
+        },
+        "elapsedMs": 5
+      },
+      {
+        "index": 36,
+        "step": {
+          "type": "screenshot",
+          "label": "pace-result-360"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\pace-result-360-1792809806587.png",
+          "width": 360,
+          "height": 640,
+          "source": "preview",
+          "capturedAt": "2026-10-24T02:43:26.587Z"
+        },
+        "elapsedMs": 42
+      },
+      {
+        "index": 37,
+        "step": {
+          "type": "wait",
+          "durationMs": 6200
+        },
+        "ok": true,
+        "elapsedMs": 6206
+      },
+      {
+        "index": 38,
+        "step": {
+          "type": "get_state",
+          "required": true
+        },
+        "ok": true,
+        "state": {
+          "revision": "race-pace-r07-v1",
+          "raceElapsed": 32.3911999999996,
+          "courseFraction": 1,
+          "strideTimes": [
+            32.91421999999951,
+            32.57296999999951,
+            33.25546999999951,
+            33.93796999999951,
+            34.27921999999951,
+            33.59671999999951
+          ],
+          "leaderHorse": 5,
+          "eventId": "regional",
+          "eventName": "地区赛",
+          "eligibilityCredits": 999,
+          "preparationRemaining": 0,
+          "equipment": {
+            "tier": "regional",
+            "types": [
+              "rail",
+              "distance",
+              "finish-post",
+              "toolbox",
+              "camera",
+              "mirror",
+              "speaker",
+              "warning"
+            ],
+            "typeCount": 8,
+            "staticTypes": [
+              "rail",
+              "distance",
+              "finish-post",
+              "toolbox",
+              "mirror",
+              "speaker"
+            ],
+            "dynamicTypes": [
+              "camera",
+              "warning"
+            ],
+            "cameras": [
+              {
+                "targetHorse": 5,
+                "renderedFrame": 4,
+                "angle": 189.27022989140346,
+                "desiredAngle": 189.27022989140343,
+                "frame": 4,
+                "pivot": {
+                  "x": 330,
+                  "y": 565
+                },
+                "basePosition": {
+                  "x": 330,
+                  "y": 625
+                }
+              }
+            ],
+            "signals": [
+              {
+                "frame": 0,
+                "renderedFrame": 0,
+                "basePosition": {
+                  "x": 430,
+                  "y": 70
+                }
+              }
+            ],
+            "gates": [],
+            "screenMode": "off",
+            "screenVisible": false,
+            "broadcastAllocated": false,
+            "broadcastSamples": 0
+          },
+          "eventPickerVisible": false,
+          "eventButton": {
+            "x": 235.2,
+            "y": 431.68,
+            "width": 110.39999999999999,
+            "height": 45.12
+          },
+          "eventChoices": [
+            {
+              "x": 43.199999999999996,
+              "y": 237.92000000000002,
+              "width": 273.6,
+              "height": 53.75999999999999
+            },
+            {
+              "x": 43.199999999999996,
+              "y": 300.32,
+              "width": 273.6,
+              "height": 53.75999999999999
+            },
+            {
+              "x": 43.199999999999996,
+              "y": 362.71999999999997,
+              "width": 273.6,
+              "height": 53.75999999999999
+            }
+          ],
+          "eventClose": {
+            "x": 281.28,
+            "y": 189.44000000000003,
+            "width": 47.03999999999999,
+            "height": 45.12
+          },
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "finish",
+          "uiMode": "race",
+          "bettingPageVisible": true,
+          "raceViewportVisible": true,
+          "designResolution": {
+            "width": 750,
+            "height": 1334
+          },
+          "visibleHeight": 1333.3333333333335,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 333.76000000000005
+          },
+          "touchTargets": [
+            {
+              "key": "1-6",
+              "x": 7.2,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-5",
+              "x": 76.32,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-4",
+              "x": 145.44,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-3",
+              "x": 214.56,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-2",
+              "x": 283.68,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-6",
+              "x": 7.2,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-5",
+              "x": 76.32,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-4",
+              "x": 145.44,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-3",
+              "x": 214.56,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-6",
+              "x": 7.2,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-5",
+              "x": 76.32,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-4",
+              "x": 145.44,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "4-6",
+              "x": 7.2,
+              "y": 484.48,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "4-5",
+              "x": 76.32,
+              "y": 484.48,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "5-6",
+              "x": 7.2,
+              "y": 529.6,
+              "width": 69.12,
+              "height": 45.12
+            }
+          ],
+          "buttons": [
+            {
+              "name": "Undo",
+              "x": 8.64,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "Clear",
+              "x": 95.04,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "History",
+              "x": 181.44,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "Start",
+              "x": 267.84,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            }
+          ],
+          "undoMode": false,
+          "horseFrames": 144,
+          "backgrounds": 12,
+          "sounds": 7,
+          "worldId": "Node.676",
+          "worldPaintBuilds": 1,
+          "raceScale": 1.5521367521367526,
+          "camera": {
+            "x": 465.1388888888889,
+            "y": 725
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "积分 999   押分 1",
+          "uiResult": "5 — 4",
+          "resultPanel": true,
+          "startButton": "下一场",
+          "horsePositions": [
+            {
+              "x": -1153.258564725032,
+              "y": 698.808736133608
+            },
+            {
+              "x": -1072.2368361569884,
+              "y": 739.330501371368
+            },
+            {
+              "x": -1234.2802932930745,
+              "y": 781.1387191751533
+            },
+            {
+              "x": -1396.323750429161,
+              "y": 818.8674997959024
+            },
+            {
+              "x": -1477.3454789972047,
+              "y": 860.0408115806895
+            },
+            {
+              "x": -1315.3020218611182,
+              "y": 900.411913385113
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": -2136.9741673187023,
+              "y": 352.0142434347284
+            },
+            {
+              "x": -2011.217364686593,
+              "y": 414.9095645217131
+            },
+            {
+              "x": -2262.730969950809,
+              "y": 479.80163591630634
+            },
+            {
+              "x": -2514.244575215025,
+              "y": 538.361862931076
+            },
+            {
+              "x": -2640.0013778471343,
+              "y": 602.2684733594293
+            },
+            {
+              "x": -2388.487772582918,
+              "y": 664.9299441943294
+            }
+          ],
+          "phase": "result",
+          "round": 1,
+          "credits": 999,
+          "totalStake": 1,
+          "result": {
+            "first": 5,
+            "second": 4,
+            "order": [
+              5,
+              4,
+              6,
+              3,
+              1,
+              2
+            ],
+            "pair": "4-5",
+            "payout": 0,
+            "stake": 1,
+            "round": 1,
+            "eventId": "regional"
+          },
+          "historyLength": 1,
+          "metrics": {
+            "finishCount": 6,
+            "visibleOrder": [
+              5,
+              4,
+              6,
+              3,
+              1,
+              2
+            ],
+            "backgroundMismatches": 0,
+            "settlementJump": 3.8958371636169478,
+            "resultDrift": 6.741125660506573,
+            "worldChanges": 0,
+            "maxCameraStep": 5.1800798309070615,
+            "clippedFinishers": 0
+          },
+          "progress": [
+            1.3786899999999784,
+            1.359731666666645,
+            1.3976483333333116,
+            1.4355649999999782,
+            1.4545233333333116,
+            1.416606666666645
+          ]
+        },
+        "elapsedMs": 5
+      },
+      {
+        "index": 39,
+        "step": {
+          "type": "screenshot",
+          "label": "pace-runout-360"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\pace-runout-360-1792809812833.png",
+          "width": 360,
+          "height": 640,
+          "source": "preview",
+          "capturedAt": "2026-10-24T02:43:32.834Z"
+        },
+        "elapsedMs": 36
+      },
+      {
+        "index": 40,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 310,
+          "y": 614
+        },
+        "ok": true,
+        "elapsedMs": 23
+      },
+      {
+        "index": 41,
+        "step": {
+          "type": "wait_for_state",
+          "expect": {
+            "phase": "betting",
+            "round": 2
+          },
+          "timeoutMs": 5000
+        },
+        "ok": true,
+        "state": {
+          "revision": "race-pace-r07-v1",
+          "raceElapsed": 0,
+          "courseFraction": 0,
+          "strideTimes": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "leaderHorse": 1,
+          "eventId": "station",
+          "eventName": "驿站赛",
+          "eligibilityCredits": 999,
+          "preparationRemaining": 0,
+          "equipment": {
+            "tier": "regional",
+            "types": [
+              "rail",
+              "distance",
+              "finish-post",
+              "toolbox",
+              "camera",
+              "mirror",
+              "speaker",
+              "warning"
+            ],
+            "typeCount": 8,
+            "staticTypes": [
+              "rail",
+              "distance",
+              "finish-post",
+              "toolbox",
+              "mirror",
+              "speaker"
+            ],
+            "dynamicTypes": [
+              "camera",
+              "warning"
+            ],
+            "cameras": [
+              {
+                "targetHorse": 5,
+                "renderedFrame": 4,
+                "angle": 189.27022989140346,
+                "desiredAngle": 189.27022989140343,
+                "frame": 4,
+                "pivot": {
+                  "x": 330,
+                  "y": 565
+                },
+                "basePosition": {
+                  "x": 330,
+                  "y": 625
+                }
+              }
+            ],
+            "signals": [
+              {
+                "frame": 0,
+                "renderedFrame": 0,
+                "basePosition": {
+                  "x": 430,
+                  "y": 70
+                }
+              }
+            ],
+            "gates": [],
+            "screenMode": "off",
+            "screenVisible": false,
+            "broadcastAllocated": false,
+            "broadcastSamples": 0
+          },
+          "eventPickerVisible": false,
+          "eventButton": {
+            "x": 235.2,
+            "y": 431.68,
+            "width": 110.39999999999999,
+            "height": 45.12
+          },
+          "eventChoices": [
+            {
+              "x": 43.199999999999996,
+              "y": 237.92000000000002,
+              "width": 273.6,
+              "height": 53.75999999999999
+            },
+            {
+              "x": 43.199999999999996,
+              "y": 300.32,
+              "width": 273.6,
+              "height": 53.75999999999999
+            },
+            {
+              "x": 43.199999999999996,
+              "y": 362.71999999999997,
+              "width": 273.6,
+              "height": 53.75999999999999
+            }
+          ],
+          "eventClose": {
+            "x": 281.28,
+            "y": 189.44000000000003,
+            "width": 47.03999999999999,
+            "height": 45.12
+          },
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "straight",
+          "uiMode": "betting",
+          "bettingPageVisible": true,
+          "raceViewportVisible": true,
+          "designResolution": {
+            "width": 750,
+            "height": 1334
+          },
+          "visibleHeight": 1333.3333333333335,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 333.76000000000005
+          },
+          "touchTargets": [
+            {
+              "key": "1-6",
+              "x": 7.2,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-5",
+              "x": 76.32,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-4",
+              "x": 145.44,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-3",
+              "x": 214.56,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-2",
+              "x": 283.68,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-6",
+              "x": 7.2,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-5",
+              "x": 76.32,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-4",
+              "x": 145.44,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-3",
+              "x": 214.56,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-6",
+              "x": 7.2,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-5",
+              "x": 76.32,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-4",
+              "x": 145.44,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "4-6",
+              "x": 7.2,
+              "y": 484.48,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "4-5",
+              "x": 76.32,
+              "y": 484.48,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "5-6",
+              "x": 7.2,
+              "y": 529.6,
+              "width": 69.12,
+              "height": 45.12
+            }
+          ],
+          "buttons": [
+            {
+              "name": "Undo",
+              "x": 8.64,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "Clear",
+              "x": 95.04,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "History",
+              "x": 181.44,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "Start",
+              "x": 267.84,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            }
+          ],
+          "undoMode": false,
+          "horseFrames": 144,
+          "backgrounds": 12,
+          "sounds": 7,
+          "worldId": "Node.676",
+          "worldPaintBuilds": 1,
+          "raceScale": 1.5521367521367526,
+          "camera": {
+            "x": 465.1388888888889,
+            "y": 725
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "积分 999   押分 1",
+          "uiResult": "5 — 4",
+          "resultPanel": false,
+          "startButton": "下一场",
+          "horsePositions": [
+            {
+              "x": -1153.258564725032,
+              "y": 698.808736133608
+            },
+            {
+              "x": -1072.2368361569884,
+              "y": 739.330501371368
+            },
+            {
+              "x": -1234.2802932930745,
+              "y": 781.1387191751533
+            },
+            {
+              "x": -1396.323750429161,
+              "y": 818.8674997959024
+            },
+            {
+              "x": -1477.3454789972047,
+              "y": 860.0408115806895
+            },
+            {
+              "x": -1315.3020218611182,
+              "y": 900.411913385113
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": -2136.9741673187023,
+              "y": 352.0142434347284
+            },
+            {
+              "x": -2011.217364686593,
+              "y": 414.9095645217131
+            },
+            {
+              "x": -2262.730969950809,
+              "y": 479.80163591630634
+            },
+            {
+              "x": -2514.244575215025,
+              "y": 538.361862931076
+            },
+            {
+              "x": -2640.0013778471343,
+              "y": 602.2684733594293
+            },
+            {
+              "x": -2388.487772582918,
+              "y": 664.9299441943294
+            }
+          ],
+          "phase": "betting",
+          "round": 2,
+          "credits": 999,
+          "totalStake": 0,
+          "result": null,
+          "historyLength": 1,
+          "metrics": {
+            "finishCount": 6,
+            "visibleOrder": [
+              5,
+              4,
+              6,
+              3,
+              1,
+              2
+            ],
+            "backgroundMismatches": 0,
+            "settlementJump": 3.8958371636169478,
+            "resultDrift": 6.741125660506573,
+            "worldChanges": 0,
+            "maxCameraStep": 5.1800798309070615,
+            "clippedFinishers": 0
+          },
+          "progress": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "elapsedMs": 4
+      },
+      {
+        "index": 42,
+        "step": {
+          "type": "wait",
+          "durationMs": 100
+        },
+        "ok": true,
+        "elapsedMs": 103
+      },
+      {
+        "index": 43,
+        "step": {
+          "type": "get_state",
+          "required": true
+        },
+        "ok": true,
+        "state": {
+          "revision": "race-pace-r07-v1",
+          "raceElapsed": 0,
+          "courseFraction": 0,
+          "strideTimes": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "leaderHorse": 1,
+          "eventId": "station",
+          "eventName": "驿站赛",
+          "eligibilityCredits": 999,
+          "preparationRemaining": 0,
+          "equipment": {
+            "tier": "station",
+            "types": [
+              "rail",
+              "distance",
+              "finish-post",
+              "toolbox"
+            ],
+            "typeCount": 4,
+            "staticTypes": [
+              "rail",
+              "distance",
+              "finish-post",
+              "toolbox"
+            ],
+            "dynamicTypes": [],
+            "cameras": [],
+            "signals": [],
+            "gates": [],
+            "screenMode": "off",
+            "screenVisible": false,
+            "broadcastAllocated": false,
+            "broadcastSamples": 0
+          },
+          "eventPickerVisible": false,
+          "eventButton": {
+            "x": 235.2,
+            "y": 431.68,
+            "width": 110.39999999999999,
+            "height": 45.12
+          },
+          "eventChoices": [
+            {
+              "x": 43.199999999999996,
+              "y": 237.92000000000002,
+              "width": 273.6,
+              "height": 53.75999999999999
+            },
+            {
+              "x": 43.199999999999996,
+              "y": 300.32,
+              "width": 273.6,
+              "height": 53.75999999999999
+            },
+            {
+              "x": 43.199999999999996,
+              "y": 362.71999999999997,
+              "width": 273.6,
+              "height": 53.75999999999999
+            }
+          ],
+          "eventClose": {
+            "x": 281.28,
+            "y": 189.44000000000003,
+            "width": 47.03999999999999,
+            "height": 45.12
+          },
+          "ready": true,
+          "pendingAssets": 0,
+          "loadErrors": [],
+          "section": "straight",
+          "uiMode": "betting",
+          "bettingPageVisible": true,
+          "raceViewportVisible": true,
+          "designResolution": {
+            "width": 750,
+            "height": 1334
+          },
+          "visibleHeight": 1333.3333333333335,
+          "raceViewport": {
+            "x": 0,
+            "y": 0,
+            "width": 360,
+            "height": 333.76000000000005
+          },
+          "touchTargets": [
+            {
+              "key": "1-6",
+              "x": 7.2,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-5",
+              "x": 76.32,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-4",
+              "x": 145.44,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-3",
+              "x": 214.56,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "1-2",
+              "x": 283.68,
+              "y": 349.12000000000006,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-6",
+              "x": 7.2,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-5",
+              "x": 76.32,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-4",
+              "x": 145.44,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "2-3",
+              "x": 214.56,
+              "y": 394.24,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-6",
+              "x": 7.2,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-5",
+              "x": 76.32,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "3-4",
+              "x": 145.44,
+              "y": 439.36,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "4-6",
+              "x": 7.2,
+              "y": 484.48,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "4-5",
+              "x": 76.32,
+              "y": 484.48,
+              "width": 69.12,
+              "height": 45.12
+            },
+            {
+              "key": "5-6",
+              "x": 7.2,
+              "y": 529.6,
+              "width": 69.12,
+              "height": 45.12
+            }
+          ],
+          "buttons": [
+            {
+              "name": "Undo",
+              "x": 8.64,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "Clear",
+              "x": 95.04,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "History",
+              "x": 181.44,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            },
+            {
+              "name": "Start",
+              "x": 267.84,
+              "y": 592.48,
+              "width": 83.52000000000001,
+              "height": 45.12
+            }
+          ],
+          "undoMode": false,
+          "horseFrames": 144,
+          "backgrounds": 12,
+          "sounds": 7,
+          "worldId": "Node.676",
+          "worldPaintBuilds": 1,
+          "raceScale": 1.5521367521367526,
+          "camera": {
+            "x": 400,
+            "y": 125
+          },
+          "finishWorldX": 400,
+          "horseNoseOffset": 65.13888888888889,
+          "finishDirection": -1,
+          "uiCredits": "积分 999   押分 0",
+          "uiResult": "5 — 4",
+          "resultPanel": false,
+          "startButton": "开跑",
+          "horsePositions": [
+            {
+              "x": 400,
+              "y": 300
+            },
+            {
+              "x": 400,
+              "y": 260
+            },
+            {
+              "x": 400,
+              "y": 220
+            },
+            {
+              "x": 400,
+              "y": 180
+            },
+            {
+              "x": 400,
+              "y": 140
+            },
+            {
+              "x": 400,
+              "y": 100
+            }
+          ],
+          "screenHorsePositions": [
+            {
+              "x": 375,
+              "y": 664.2905982905984
+            },
+            {
+              "x": 375,
+              "y": 602.2051282051284
+            },
+            {
+              "x": 375,
+              "y": 540.1196581196582
+            },
+            {
+              "x": 375,
+              "y": 478.0341880341881
+            },
+            {
+              "x": 375,
+              "y": 415.948717948718
+            },
+            {
+              "x": 375,
+              "y": 353.8632478632479
+            }
+          ],
+          "phase": "betting",
+          "round": 2,
+          "credits": 999,
+          "totalStake": 0,
+          "result": null,
+          "historyLength": 1,
+          "metrics": {
+            "finishCount": 0,
+            "visibleOrder": [],
+            "backgroundMismatches": 0,
+            "settlementJump": 0,
+            "resultDrift": 0,
+            "worldChanges": 0,
+            "maxCameraStep": 0,
+            "clippedFinishers": 0
+          },
+          "progress": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "elapsedMs": 4
+      },
+      {
+        "index": 44,
+        "step": {
+          "type": "screenshot",
+          "label": "pace-next-360"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\pace-next-360-1792809813022.png",
+          "width": 360,
+          "height": 640,
+          "source": "preview",
+          "capturedAt": "2026-10-24T02:43:33.023Z"
+        },
+        "elapsedMs": 55
+      }
+    ],
+    "consoleErrors": [],
+    "diagnostics": {
+      "consoleErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "pageErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "requestFailures": {
+        "count": 0,
+        "samples": []
+      },
+      "httpErrors": {
+        "count": 0,
+        "samples": []
+      }
+    },
+    "reportPath": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\playtests\\playtest-1792809813029.json",
+    "message": "Playtest passed (45 step(s))",
+    "session": {
+      "mode": "shared",
+      "reusedBrowser": true,
+      "reusedPage": true,
+      "pageReset": "reload"
+    },
+    "timing": {
+      "setupMs": 425,
+      "stepsMs": 38047,
+      "totalMs": 38478
+    },
+    "finalState": {
+      "revision": "race-pace-r07-v1",
+      "raceElapsed": 0,
+      "courseFraction": 0,
+      "strideTimes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "leaderHorse": 1,
+      "eventId": "station",
+      "eventName": "驿站赛",
+      "eligibilityCredits": 999,
+      "preparationRemaining": 0,
+      "equipment": {
+        "tier": "station",
+        "types": [
+          "rail",
+          "distance",
+          "finish-post",
+          "toolbox"
+        ],
+        "typeCount": 4,
+        "staticTypes": [
+          "rail",
+          "distance",
+          "finish-post",
+          "toolbox"
+        ],
+        "dynamicTypes": [],
+        "cameras": [],
+        "signals": [],
+        "gates": [],
+        "screenMode": "off",
+        "screenVisible": false,
+        "broadcastAllocated": false,
+        "broadcastSamples": 0
+      },
+      "eventPickerVisible": false,
+      "eventButton": {
+        "x": 235.2,
+        "y": 431.68,
+        "width": 110.39999999999999,
+        "height": 45.12
+      },
+      "eventChoices": [
+        {
+          "x": 43.199999999999996,
+          "y": 237.92000000000002,
+          "width": 273.6,
+          "height": 53.75999999999999
+        },
+        {
+          "x": 43.199999999999996,
+          "y": 300.32,
+          "width": 273.6,
+          "height": 53.75999999999999
+        },
+        {
+          "x": 43.199999999999996,
+          "y": 362.71999999999997,
+          "width": 273.6,
+          "height": 53.75999999999999
+        }
+      ],
+      "eventClose": {
+        "x": 281.28,
+        "y": 189.44000000000003,
+        "width": 47.03999999999999,
+        "height": 45.12
+      },
+      "ready": true,
+      "pendingAssets": 0,
+      "loadErrors": [],
+      "section": "straight",
+      "uiMode": "betting",
+      "bettingPageVisible": true,
+      "raceViewportVisible": true,
+      "designResolution": {
+        "width": 750,
+        "height": 1334
+      },
+      "visibleHeight": 1333.3333333333335,
+      "raceViewport": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 333.76000000000005
+      },
+      "touchTargets": [
+        {
+          "key": "1-6",
+          "x": 7.2,
+          "y": 349.12000000000006,
+          "width": 69.12,
+          "height": 45.12
+        },
+        {
+          "key": "1-5",
+          "x": 76.32,
+          "y": 349.12000000000006,
+          "width": 69.12,
+          "height": 45.12
+        },
+        {
+          "key": "1-4",
+          "x": 145.44,
+          "y": 349.12000000000006,
+          "width": 69.12,
+          "height": 45.12
+        },
+        {
+          "key": "1-3",
+          "x": 214.56,
+          "y": 349.12000000000006,
+          "width": 69.12,
+          "height": 45.12
+        },
+        {
+          "key": "1-2",
+          "x": 283.68,
+          "y": 349.12000000000006,
+          "width": 69.12,
+          "height": 45.12
+        },
+        {
+          "key": "2-6",
+          "x": 7.2,
+          "y": 394.24,
+          "width": 69.12,
+          "height": 45.12
+        },
+        {
+          "key": "2-5",
+          "x": 76.32,
+          "y": 394.24,
+          "width": 69.12,
+          "height": 45.12
+        },
+        {
+          "key": "2-4",
+          "x": 145.44,
+          "y": 394.24,
+          "width": 69.12,
+          "height": 45.12
+        },
+        {
+          "key": "2-3",
+          "x": 214.56,
+          "y": 394.24,
+          "width": 69.12,
+          "height": 45.12
+        },
+        {
+          "key": "3-6",
+          "x": 7.2,
+          "y": 439.36,
+          "width": 69.12,
+          "height": 45.12
+        },
+        {
+          "key": "3-5",
+          "x": 76.32,
+          "y": 439.36,
+          "width": 69.12,
+          "height": 45.12
+        },
+        {
+          "key": "3-4",
+          "x": 145.44,
+          "y": 439.36,
+          "width": 69.12,
+          "height": 45.12
+        },
+        {
+          "key": "4-6",
+          "x": 7.2,
+          "y": 484.48,
+          "width": 69.12,
+          "height": 45.12
+        },
+        {
+          "key": "4-5",
+          "x": 76.32,
+          "y": 484.48,
+          "width": 69.12,
+          "height": 45.12
+        },
+        {
+          "key": "5-6",
+          "x": 7.2,
+          "y": 529.6,
+          "width": 69.12,
+          "height": 45.12
+        }
+      ],
+      "buttons": [
+        {
+          "name": "Undo",
+          "x": 8.64,
+          "y": 592.48,
+          "width": 83.52000000000001,
+          "height": 45.12
+        },
+        {
+          "name": "Clear",
+          "x": 95.04,
+          "y": 592.48,
+          "width": 83.52000000000001,
+          "height": 45.12
+        },
+        {
+          "name": "History",
+          "x": 181.44,
+          "y": 592.48,
+          "width": 83.52000000000001,
+          "height": 45.12
+        },
+        {
+          "name": "Start",
+          "x": 267.84,
+          "y": 592.48,
+          "width": 83.52000000000001,
+          "height": 45.12
+        }
+      ],
+      "undoMode": false,
+      "horseFrames": 144,
+      "backgrounds": 12,
+      "sounds": 7,
+      "worldId": "Node.676",
+      "worldPaintBuilds": 1,
+      "raceScale": 1.5521367521367526,
+      "camera": {
+        "x": 400,
+        "y": 125
+      },
+      "finishWorldX": 400,
+      "horseNoseOffset": 65.13888888888889,
+      "finishDirection": -1,
+      "uiCredits": "积分 999   押分 0",
+      "uiResult": "5 — 4",
+      "resultPanel": false,
+      "startButton": "开跑",
+      "horsePositions": [
+        {
+          "x": 400,
+          "y": 300
+        },
+        {
+          "x": 400,
+          "y": 260
+        },
+        {
+          "x": 400,
+          "y": 220
+        },
+        {
+          "x": 400,
+          "y": 180
+        },
+        {
+          "x": 400,
+          "y": 140
+        },
+        {
+          "x": 400,
+          "y": 100
+        }
+      ],
+      "screenHorsePositions": [
+        {
+          "x": 375,
+          "y": 664.2905982905984
+        },
+        {
+          "x": 375,
+          "y": 602.2051282051284
+        },
+        {
+          "x": 375,
+          "y": 540.1196581196582
+        },
+        {
+          "x": 375,
+          "y": 478.0341880341881
+        },
+        {
+          "x": 375,
+          "y": 415.948717948718
+        },
+        {
+          "x": 375,
+          "y": 353.8632478632479
+        }
+      ],
+      "phase": "betting",
+      "round": 2,
+      "credits": 999,
+      "totalStake": 0,
+      "result": null,
+      "historyLength": 1,
+      "metrics": {
+        "finishCount": 0,
+        "visibleOrder": [],
+        "backgroundMismatches": 0,
+        "settlementJump": 0,
+        "resultDrift": 0,
+        "worldChanges": 0,
+        "maxCameraStep": 0,
+        "clippedFinishers": 0
+      },
+      "progress": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "evidence": []
+}

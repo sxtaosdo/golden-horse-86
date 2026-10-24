@@ -1,0 +1,876 @@
+[
+  {
+    "report": "race-pace-360-result.json",
+    "steps": 45,
+    "diagnostics": {
+      "consoleErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "pageErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "requestFailures": {
+        "count": 0,
+        "samples": []
+      },
+      "httpErrors": {
+        "count": 0,
+        "samples": []
+      }
+    },
+    "result": {
+      "first": 5,
+      "second": 4,
+      "order": [
+        5,
+        4,
+        6,
+        3,
+        1,
+        2
+      ],
+      "pair": "4-5",
+      "payout": 0,
+      "stake": 1,
+      "round": 1,
+      "eventId": "regional"
+    },
+    "metrics": {
+      "finishCount": 6,
+      "visibleOrder": [
+        5,
+        4,
+        6,
+        3,
+        1,
+        2
+      ],
+      "backgroundMismatches": 0,
+      "settlementJump": 3.8958371636169478,
+      "resultDrift": 3.919499300662855,
+      "worldChanges": 0,
+      "maxCameraStep": 5.1800798309070615,
+      "clippedFinishers": 0
+    },
+    "sampledTimeline": [
+      {
+        "elapsed": 0,
+        "courseFraction": 0,
+        "phase": "betting",
+        "section": "straight",
+        "strideTimes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "elapsed": 0,
+        "courseFraction": 0,
+        "phase": "betting",
+        "section": "straight",
+        "strideTimes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "elapsed": 0,
+        "courseFraction": 0,
+        "phase": "preparing",
+        "section": "straight",
+        "strideTimes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "elapsed": 0,
+        "courseFraction": 0,
+        "phase": "preparing",
+        "section": "straight",
+        "strideTimes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "elapsed": 0.46520000000018624,
+        "courseFraction": 0.002422863126986516,
+        "phase": "racing",
+        "section": "straight",
+        "strideTimes": [
+          0.15995663377320635,
+          0.15998414420784884,
+          0.1599775060022235,
+          0.15993984120816074,
+          0.15988886416683695,
+          0.15984855017732488
+        ]
+      },
+      {
+        "elapsed": 2.1499000000003723,
+        "courseFraction": 0.04671323940777064,
+        "phase": "racing",
+        "section": "straight",
+        "strideTimes": [
+          1.3817638957410194,
+          1.364175640754853,
+          1.3532365522114302,
+          1.3540914543806957,
+          1.3663382734142293,
+          1.3842171389587343
+        ]
+      },
+      {
+        "elapsed": 11.223900000000397,
+        "courseFraction": 0.4445395286938858,
+        "phase": "racing",
+        "section": "right-bend",
+        "strideTimes": [
+          10.807150608978414,
+          10.744468836671786,
+          10.71151932698718,
+          10.723798749179556,
+          10.775531899120576,
+          10.842387868040214
+        ]
+      },
+      {
+        "elapsed": 26.436400000000006,
+        "courseFraction": 1,
+        "phase": "result",
+        "section": "finish",
+        "strideTimes": [
+          25.61959000000001,
+          25.27834000000001,
+          25.960840000000008,
+          26.643340000000006,
+          26.984590000000008,
+          26.30209000000001
+        ]
+      },
+      {
+        "elapsed": 32.3911999999996,
+        "courseFraction": 1,
+        "phase": "result",
+        "section": "finish",
+        "strideTimes": [
+          32.91421999999951,
+          32.57296999999951,
+          33.25546999999951,
+          33.93796999999951,
+          34.27921999999951,
+          33.59671999999951
+        ]
+      },
+      {
+        "elapsed": 0,
+        "courseFraction": 0,
+        "phase": "betting",
+        "section": "straight",
+        "strideTimes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "report": "race-pace-390-result.json",
+    "steps": 118,
+    "diagnostics": {
+      "consoleErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "pageErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "requestFailures": {
+        "count": 0,
+        "samples": []
+      },
+      "httpErrors": {
+        "count": 0,
+        "samples": []
+      }
+    },
+    "result": {
+      "first": 2,
+      "second": 4,
+      "order": [
+        2,
+        4,
+        5,
+        3,
+        6,
+        1
+      ],
+      "pair": "2-4",
+      "payout": 0,
+      "stake": 1,
+      "round": 1,
+      "eventId": "championship"
+    },
+    "metrics": {
+      "finishCount": 6,
+      "visibleOrder": [
+        2,
+        4,
+        5,
+        3,
+        6,
+        1
+      ],
+      "backgroundMismatches": 0,
+      "settlementJump": 3.919756242345304,
+      "resultDrift": 3.8731038493114065,
+      "worldChanges": 0,
+      "maxCameraStep": 4.9451029583326545,
+      "clippedFinishers": 0
+    },
+    "sampledTimeline": [
+      {
+        "elapsed": 0,
+        "courseFraction": 0,
+        "phase": "betting",
+        "section": "straight",
+        "strideTimes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "elapsed": 0,
+        "courseFraction": 0,
+        "phase": "betting",
+        "section": "straight",
+        "strideTimes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "elapsed": 0,
+        "courseFraction": 0,
+        "phase": "preparing",
+        "section": "straight",
+        "strideTimes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "elapsed": 0,
+        "courseFraction": 0,
+        "phase": "preparing",
+        "section": "straight",
+        "strideTimes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "elapsed": 0,
+        "courseFraction": 0,
+        "phase": "preparing",
+        "section": "straight",
+        "strideTimes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "elapsed": 1.0507999999998132,
+        "courseFraction": 0.011816998206209833,
+        "phase": "racing",
+        "section": "straight",
+        "strideTimes": [
+          0.4771613204215789,
+          0.47686162720920666,
+          0.47587731458986426,
+          0.4746713201687373,
+          0.47381084196626455,
+          0.47370057632641155
+        ]
+      },
+      {
+        "elapsed": 2.3022999999998133,
+        "courseFraction": 0.05347219915579804,
+        "phase": "racing",
+        "section": "straight",
+        "strideTimes": [
+          1.5353127351150522,
+          1.5142136244216704,
+          1.5043366962340383,
+          1.5103272242100594,
+          1.5293677694380294,
+          1.552503265980508
+        ]
+      },
+      {
+        "elapsed": 3.3862999999998116,
+        "courseFraction": 0.11060939202116896,
+        "phase": "racing",
+        "section": "straight",
+        "strideTimes": [
+          2.7222411301228764,
+          2.7514679446495536,
+          2.821177699499874,
+          2.898584807722766,
+          2.947283496801573,
+          2.944370012324524
+        ]
+      },
+      {
+        "elapsed": 4.403700000000185,
+        "courseFraction": 0.16608406200333173,
+        "phase": "racing",
+        "section": "straight",
+        "strideTimes": [
+          4.069904380341459,
+          4.186310544535637,
+          4.257626407569712,
+          4.250311004717661,
+          4.1678048842471265,
+          4.048911963809095
+        ]
+      },
+      {
+        "elapsed": 5.4880000000000075,
+        "courseFraction": 0.2158399689018468,
+        "phase": "racing",
+        "section": "straight",
+        "strideTimes": [
+          5.424446379828402,
+          5.4036886359644605,
+          5.313997109141268,
+          5.197555125892541,
+          5.109127170396332,
+          5.090302291847427
+        ]
+      },
+      {
+        "elapsed": 6.505500000000009,
+        "courseFraction": 0.25968346220482513,
+        "phase": "racing",
+        "section": "straight",
+        "strideTimes": [
+          6.338471459587788,
+          6.2553870624099845,
+          6.193603380909281,
+          6.182178245892117,
+          6.226485076879722,
+          6.305685678945292
+        ]
+      },
+      {
+        "elapsed": 7.522899999999454,
+        "courseFraction": 0.30327581528799585,
+        "phase": "racing",
+        "section": "straight",
+        "strideTimes": [
+          7.2888512259280285,
+          7.284436228009563,
+          7.3060077896560625,
+          7.3434204683602315,
+          7.379078496738268,
+          7.396211346871919
+        ]
+      },
+      {
+        "elapsed": 8.607000000000017,
+        "courseFraction": 0.3397518313344561,
+        "phase": "racing",
+        "section": "straight",
+        "strideTimes": [
+          8.259983311427767,
+          8.269978796727472,
+          8.278706389781405,
+          8.282061367203898,
+          8.278465830690186,
+          8.269610817244473
+        ]
+      },
+      {
+        "elapsed": 9.624500000000014,
+        "courseFraction": 0.3753566546978422,
+        "phase": "racing",
+        "section": "right-bend",
+        "strideTimes": [
+          9.162563396014312,
+          9.162568379951551,
+          9.162562266608004,
+          9.162547931184664,
+          9.162532115855122,
+          9.162522258815985
+        ]
+      },
+      {
+        "elapsed": 10.708700000000201,
+        "courseFraction": 0.4212467706582108,
+        "phase": "racing",
+        "section": "right-bend",
+        "strideTimes": [
+          10.29214815445818,
+          10.260399288580873,
+          10.228282439888421,
+          10.210902664160493,
+          10.216433941488416,
+          10.242274825716281
+        ]
+      },
+      {
+        "elapsed": 11.726200000000198,
+        "courseFraction": 0.46776886774396775,
+        "phase": "racing",
+        "section": "right-bend",
+        "strideTimes": [
+          11.258248828235304,
+          11.210160991480231,
+          11.228495185189997,
+          11.304628551583221,
+          11.402754378828503,
+          11.476722557114043
+        ]
+      },
+      {
+        "elapsed": 12.810399999999454,
+        "courseFraction": 0.5183050134091924,
+        "phase": "racing",
+        "section": "right-bend",
+        "strideTimes": [
+          12.391680953266675,
+          12.494294494315735,
+          12.61468396577706,
+          12.696228318085,
+          12.700575968183484,
+          12.625682148297285
+        ]
+      },
+      {
+        "elapsed": 13.827899999999454,
+        "courseFraction": 0.5641405496380095,
+        "phase": "racing",
+        "section": "right-bend",
+        "strideTimes": [
+          13.665755692445414,
+          13.71555204272591,
+          13.716413392936397,
+          13.667934636613918,
+          13.592916090358392,
+          13.52664014867092
+        ]
+      },
+      {
+        "elapsed": 14.89550000000001,
+        "courseFraction": 0.6079354725839647,
+        "phase": "racing",
+        "section": "right-bend",
+        "strideTimes": [
+          14.690111716807174,
+          14.677635231533465,
+          14.660022088325205,
+          14.64555602364619,
+          14.641040653753457,
+          14.648599627662161
+        ]
+      },
+      {
+        "elapsed": 15.913000000000018,
+        "courseFraction": 0.6431480028791723,
+        "phase": "racing",
+        "section": "finish",
+        "strideTimes": [
+          15.55465765257396,
+          15.554914051825106,
+          15.554737560481254,
+          15.554845781956024,
+          15.554787497974399,
+          15.554694640465142
+        ]
+      },
+      {
+        "elapsed": 17.014200000000177,
+        "courseFraction": 0.6800842498921298,
+        "phase": "racing",
+        "section": "finish",
+        "strideTimes": [
+          16.43339995946939,
+          16.495066498058378,
+          16.452867244533007,
+          16.478855819110425,
+          16.464907529416678,
+          16.44244456309487
+        ]
+      },
+      {
+        "elapsed": 18.014799999999784,
+        "courseFraction": 0.7173258595481592,
+        "phase": "racing",
+        "section": "finish",
+        "strideTimes": [
+          17.21857776102937,
+          17.415565471866813,
+          17.281597852422177,
+          17.364482506740273,
+          17.32015937738667,
+          17.247968316052802
+        ]
+      },
+      {
+        "elapsed": 19.098899999999386,
+        "courseFraction": 0.7613474959132109,
+        "phase": "racing",
+        "section": "finish",
+        "strideTimes": [
+          18.07207083494623,
+          18.478979926437646,
+          18.204427041032034,
+          18.37529006741943,
+          18.28434323743169,
+          18.134083925724703
+        ]
+      },
+      {
+        "elapsed": 20.116499999999903,
+        "courseFraction": 0.8058839237125502,
+        "phase": "racing",
+        "section": "finish",
+        "strideTimes": [
+          18.89158258201175,
+          19.53503562682588,
+          19.10470736552645,
+          19.374284386239847,
+          19.231539485336867,
+          18.99193324254576
+        ]
+      },
+      {
+        "elapsed": 21.18409999999949,
+        "courseFraction": 0.8556788746709144,
+        "phase": "racing",
+        "section": "finish",
+        "strideTimes": [
+          19.78721323823504,
+          20.69824474407633,
+          20.095793952015523,
+          20.47638223532271,
+          20.27618804296838,
+          19.933376842055456
+        ]
+      },
+      {
+        "elapsed": 22.20149999999982,
+        "courseFraction": 0.9058001244333239,
+        "phase": "racing",
+        "section": "finish",
+        "strideTimes": [
+          20.690497137676243,
+          21.854777239799787,
+          21.095027417735327,
+          21.57978566104557,
+          21.32678747059092,
+          20.883371529666686
+        ]
+      },
+      {
+        "elapsed": 23.218999999999795,
+        "courseFraction": 0.9582785136581563,
+        "phase": "racing",
+        "section": "finish",
+        "strideTimes": [
+          21.65767590468488,
+          23.05376324584676,
+          22.157921746001172,
+          22.736769007880493,
+          22.437645263596814,
+          21.898023031907442
+        ]
+      },
+      {
+        "elapsed": 26.42159999999932,
+        "courseFraction": 1,
+        "phase": "result",
+        "section": "finish",
+        "strideTimes": [
+          25.260209999999166,
+          26.966459999999167,
+          25.942709999999167,
+          26.625209999999164,
+          26.283959999999166,
+          25.601459999999168
+        ]
+      },
+      {
+        "elapsed": 32.393199999999666,
+        "courseFraction": 1,
+        "phase": "result",
+        "section": "finish",
+        "strideTimes": [
+          32.57541999999959,
+          34.28166999999959,
+          33.257919999999594,
+          33.94041999999959,
+          33.59916999999959,
+          32.91666999999959
+        ]
+      },
+      {
+        "elapsed": 0,
+        "courseFraction": 0,
+        "phase": "betting",
+        "section": "straight",
+        "strideTimes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ]
+  },
+  {
+    "report": "race-pace-430-result.json",
+    "steps": 67,
+    "diagnostics": {
+      "consoleErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "pageErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "requestFailures": {
+        "count": 0,
+        "samples": []
+      },
+      "httpErrors": {
+        "count": 0,
+        "samples": []
+      }
+    },
+    "result": {
+      "first": 3,
+      "second": 2,
+      "order": [
+        3,
+        2,
+        4,
+        1,
+        6,
+        5
+      ],
+      "pair": "2-3",
+      "payout": 0,
+      "stake": 1,
+      "round": 1,
+      "eventId": "championship"
+    },
+    "metrics": {
+      "finishCount": 6,
+      "visibleOrder": [
+        3,
+        2,
+        4,
+        1,
+        6,
+        5
+      ],
+      "backgroundMismatches": 0,
+      "settlementJump": 3.919771688792487,
+      "resultDrift": 0,
+      "worldChanges": 0,
+      "maxCameraStep": 5.2565645274489725,
+      "clippedFinishers": 0
+    },
+    "sampledTimeline": [
+      {
+        "elapsed": 0,
+        "courseFraction": 0,
+        "phase": "betting",
+        "section": "straight",
+        "strideTimes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "elapsed": 0,
+        "courseFraction": 0,
+        "phase": "betting",
+        "section": "straight",
+        "strideTimes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "elapsed": 0,
+        "courseFraction": 0,
+        "phase": "preparing",
+        "section": "straight",
+        "strideTimes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "elapsed": 0,
+        "courseFraction": 0,
+        "phase": "preparing",
+        "section": "straight",
+        "strideTimes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "elapsed": 0.4502000000001863,
+        "courseFraction": 0.0022716981876752746,
+        "phase": "racing",
+        "section": "straight",
+        "strideTimes": [
+          0.15347911276351783,
+          0.15350408570853982,
+          0.1534991849903024,
+          0.15346671549316848,
+          0.15342194812899004,
+          0.15338593768864955
+        ]
+      },
+      {
+        "elapsed": 2.1682000000001866,
+        "courseFraction": 0.04750269150908849,
+        "phase": "racing",
+        "section": "straight",
+        "strideTimes": [
+          1.3999705394614295,
+          1.3819239561986243,
+          1.3710141731446273,
+          1.3723722317397962,
+          1.3853594158065725,
+          1.403867649748002
+        ]
+      },
+      {
+        "elapsed": 11.259200000000195,
+        "courseFraction": 0.4461586412091493,
+        "phase": "racing",
+        "section": "right-bend",
+        "strideTimes": [
+          10.840116466391763,
+          10.77650652296241,
+          10.745418443559016,
+          10.761473437689634,
+          10.817120590748434,
+          10.886188177141108
+        ]
+      },
+      {
+        "elapsed": 26.40479999999946,
+        "courseFraction": 1,
+        "phase": "result",
+        "section": "finish",
+        "strideTimes": [
+          25.922129999999335,
+          26.60462999999934,
+          26.94587999999934,
+          26.263379999999337,
+          25.239629999999337,
+          25.58087999999934
+        ]
+      },
+      {
+        "elapsed": 32.392999999999404,
+        "courseFraction": 1,
+        "phase": "result",
+        "section": "finish",
+        "strideTimes": [
+          33.25767499999927,
+          33.94017499999927,
+          34.28142499999927,
+          33.59892499999927,
+          32.57517499999927,
+          32.91642499999927
+        ]
+      },
+      {
+        "elapsed": 0,
+        "courseFraction": 0,
+        "phase": "betting",
+        "section": "straight",
+        "strideTimes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ]
+  }
+]

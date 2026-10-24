@@ -22,6 +22,37 @@ const ARC_LENGTH = ARC_TABLE[ARC_SAMPLES];
 const LENGTH = RIGHT - START_X + ARC_LENGTH + RIGHT - FINISH_FOOT;
 const COURSE_BREAKS = [0, (RIGHT - START_X) / LENGTH, (RIGHT - START_X + ARC_LENGTH) / LENGTH, 1];
 const FINAL_STRAIGHT_START = COURSE_BREAKS[2];
+/** Authored time/distance fit to the observed launch, turn and second acceleration. */
+class RacePace {
+    static progress(seconds, finishSeconds, referenceSeconds = finishSeconds) {
+        const time = Math.max(0, Number.isFinite(seconds) ? seconds : 0), entry = referenceSeconds * this.homeTime;
+        if (time >= finishSeconds)
+            return Math.min(1.5, 1 + (time - finishSeconds) * 1.3 / referenceSeconds);
+        if (time >= entry) {
+            const duration = finishSeconds - entry;
+            return this.segment((time - entry) / duration, FINAL_STRAIGHT_START, 1, .75 * duration / referenceSeconds, 1.3 * duration / referenceSeconds);
+        }
+        const t = time / referenceSeconds;
+        for (let i = 1; i < this.knots.length; i++) {
+            const [end, p1, v1] = this.knots[i];
+            if (t > end)
+                continue;
+            const [start, p0, v0] = this.knots[i - 1], duration = end - start;
+            return this.segment((t - start) / duration, p0, p1, v0 * duration, v1 * duration);
+        }
+        return FINAL_STRAIGHT_START;
+    }
+    static segment(t, p0, p1, m0, m1) {
+        const t2 = t * t, t3 = t2 * t;
+        return (2 * t3 - 3 * t2 + 1) * p0 + (t3 - 2 * t2 + t) * m0 + (-2 * t3 + 3 * t2) * p1 + (t3 - t2) * m1;
+    }
+}
+RacePace.homeTime = .66;
+// time, distance, d(distance)/d(normalised time); Hermite slopes keep speed continuous.
+RacePace.knots = [
+    [0, 0, 0], [.065, .025, .72], [.15, .123, 1.4], [.29, .28, 1.1],
+    [.4, COURSE_BREAKS[1], .95], [RacePace.homeTime, FINAL_STRAIGHT_START, .75],
+];
 const clamp = (v) => Math.max(0, Math.min(1, Number.isFinite(v) ? v : 0));
 function curveAngle(fraction) {
     const distance = clamp(fraction) * ARC_LENGTH;
@@ -72,10 +103,13 @@ function horsePose(index, progress, seconds = 0) {
     const pose = { ...coursePoint(index, progress), scale: HORSE_SCALE, angle: 0, flipX: progress >= FINAL_STRAIGHT_START, sideOpacity: 1, turn: null };
     if (trackSection(progress) === 'right-bend') {
         const theta = curveAngle((progress - COURSE_BREAKS[1]) / (FINAL_STRAIGHT_START - COURSE_BREAKS[1]));
+        pose.angle = theta;
         pose.turn = 'front';
         pose.flipX = theta >= Math.PI / 2;
         pose.sideOpacity = Math.pow(Math.abs(Math.cos(theta)), 6);
     }
+    if (progress >= FINAL_STRAIGHT_START)
+        pose.angle = Math.PI;
     if (progress > 0)
         pose.y += Math.sin(seconds * 20 + index * 1.4) * 1.2;
     return pose;
@@ -93,7 +127,9 @@ const DEMO_ODDS = {
 };
 class RaceModel {
     /** Visual timeline only; winner selection and payout remain unchanged. */
-    get courseFraction() { return Math.min(1, this.raceElapsed / (this.raceSeconds - 2)); }
+    get courseFraction() { return Math.min(1, RacePace.progress(this.raceElapsed, this.raceSeconds - 2)); }
+    /** Continuous cadence follows distance as well as elapsed time; renderers own no pace state. */
+    strideTime(index) { return .25 * this.raceElapsed + .75 * this.progress[index] * (this.raceSeconds - 2); }
     constructor(random = Math.random, opts = {}) {
         this.cells = [];
         this.progress = [0, 0, 0, 0, 0, 0];
@@ -101,17 +137,21 @@ class RaceModel {
         this.raceElapsed = 0;
         this.resultElapsed = 0;
         this.round = 1;
+        this.preparationRemaining = 0;
+        this.selectedEventId = 'station';
         this.message = '点击号码组合押分 / Enter 开跑';
         this.lastResult = null;
         this.history = [];
         this.finishTimes = [18, 18, 18, 18, 18, 18];
         this.pendingOrder = [1, 2, 3, 4, 5, 6];
         this.random = random;
+        this.events = opts.events;
         this.pairMode = opts.pairMode ?? 'unordered';
         this.bettingSeconds = opts.bettingSeconds ?? 30;
         this.countdown = this.bettingSeconds;
         this.credits = opts.initialCredits ?? 500;
         this.raceSeconds = opts.raceSeconds ?? 26;
+        this.chooseHighestEvent();
         for (let a = 1; a <= 6; a++) {
             for (let b = this.pairMode === 'unordered' ? a + 1 : 1; b <= 6; b++) {
                 if (a === b)
@@ -127,6 +167,30 @@ class RaceModel {
         return `${Math.min(a, b)}-${Math.max(a, b)}`;
     }
     get totalStake() { return this.cells.reduce((s, c) => s + c.stake, 0); }
+    /** Current course leader; never reads the pre-drawn finishing order. Ties use horse number. */
+    get leaderIndex() { return this.progress.reduce((best, p, i) => p > this.progress[best] ? i : best, 0); }
+    get eventId() { return this.selectedEventId; }
+    get eventTiers() { return this.events?.tiers ?? []; }
+    get eventName() { return this.eventTiers.find(t => t.id === this.selectedEventId)?.name ?? ''; }
+    get eligibilityCredits() { return this.credits + ((this.phase === 'betting' || this.phase === 'preparing') ? this.totalStake : 0); }
+    canEnterEvent(id) { const tier = this.eventTiers.find(t => t.id === id); return Boolean(tier && this.eligibilityCredits >= tier.minCredits); }
+    selectEvent(id) {
+        if (this.phase !== 'betting')
+            return false;
+        if (!this.canEnterEvent(id)) {
+            this.message = '参赛积分不足';
+            return false;
+        }
+        this.selectedEventId = id;
+        this.message = '已选择' + this.eventName;
+        return true;
+    }
+    chooseHighestEvent() {
+        const tiers = this.events?.tiers;
+        if (!tiers)
+            return;
+        this.selectedEventId = tiers.filter(t => this.credits >= t.minCredits).slice(-1)[0]?.id ?? 'station';
+    }
     getCell(key) {
         if (this.pairMode === 'unordered') {
             const parts = key.split('-').map(Number);
@@ -174,6 +238,7 @@ class RaceModel {
             return;
         this.cells.forEach(c => c.stake = 0);
         this.credits = 0;
+        this.chooseHighestEvent();
         this.message = '模拟清分完成（不涉及真实交易）';
     }
     startRace() {
@@ -187,6 +252,20 @@ class RaceModel {
             this.message = '请先选择号码组合押分';
             return false;
         }
+        if (this.events && !this.canEnterEvent(this.selectedEventId)) {
+            this.message = '参赛积分不足，请切换赛事';
+            return false;
+        }
+        this.preparationRemaining = this.events?.preparationSeconds ?? 0;
+        if (this.preparationRemaining > 0) {
+            this.phase = 'preparing';
+            this.message = '准备起跑';
+        }
+        else
+            this.startRunning();
+        return true;
+    }
+    startRunning() {
         const order = [1, 2, 3, 4, 5, 6];
         for (let i = order.length - 1; i > 0; i--) {
             const rand = Math.min(0.999999, Math.max(0, this.random()));
@@ -199,7 +278,6 @@ class RaceModel {
         this.raceElapsed = 0;
         this.phase = 'racing';
         this.message = '比赛进行中';
-        return true;
     }
     update(dt) {
         if (!Number.isFinite(dt) || dt <= 0)
@@ -209,20 +287,28 @@ class RaceModel {
         if (this.phase === 'betting') {
             this.countdown = Math.max(0, this.countdown - dt);
             if (this.countdown <= 0.00001) {
-                if (this.totalStake)
-                    this.startRace();
+                if (this.totalStake) {
+                    if (!this.startRace())
+                        this.countdown = this.bettingSeconds;
+                }
                 else
                     this.countdown = this.bettingSeconds;
             }
         }
+        else if (this.phase === 'preparing') {
+            this.preparationRemaining = Math.max(0, this.preparationRemaining - dt);
+            if (this.preparationRemaining <= .00001) {
+                this.preparationRemaining = 0;
+                this.startRunning();
+            }
+        }
         else if (this.phase === 'racing') {
             this.raceElapsed += dt;
-            const finalStart = (this.raceSeconds - 2) * FINAL_STRAIGHT_START;
+            const finalStart = (this.raceSeconds - 2) * RacePace.homeTime;
             for (let i = 0; i < 6; i++) {
                 if (this.raceElapsed >= finalStart) {
                     // One shared scene timeline up to the home straight; actual finish times then separate the field.
-                    this.progress[i] = Math.min(1.5, FINAL_STRAIGHT_START + (1 - FINAL_STRAIGHT_START) *
-                        (this.raceElapsed - finalStart) / (this.finishTimes[i] - finalStart));
+                    this.progress[i] = RacePace.progress(this.raceElapsed, this.finishTimes[i], this.raceSeconds - 2);
                 }
                 else {
                     const fraction = this.courseFraction;
@@ -231,7 +317,7 @@ class RaceModel {
                         section++;
                     const start = COURSE_BREAKS[section], end = COURSE_BREAKS[section + 1];
                     const local = (fraction - start) / (end - start);
-                    const offset = .008 * Math.sin(Math.PI * local) ** 2 * Math.sin(this.raceElapsed * 1.4 + i * .7);
+                    const offset = .010 * Math.sin(Math.PI * local) ** 2 * Math.sin(this.raceElapsed * 1.4 + i * .7);
                     this.progress[i] = Math.max(start, Math.min(end - 1e-9, fraction + offset));
                 }
             }
@@ -243,10 +329,8 @@ class RaceModel {
             // Keep the physical run-out moving through the same world after paying once.
             if (this.resultElapsed < 6) {
                 this.raceElapsed += dt;
-                const finalStart = (this.raceSeconds - 2) * FINAL_STRAIGHT_START;
                 for (let i = 0; i < 6; i++)
-                    this.progress[i] = Math.min(1.5, FINAL_STRAIGHT_START + (1 - FINAL_STRAIGHT_START) *
-                        (this.raceElapsed - finalStart) / (this.finishTimes[i] - finalStart));
+                    this.progress[i] = RacePace.progress(this.raceElapsed, this.finishTimes[i], this.raceSeconds - 2);
             }
         }
     }
@@ -259,7 +343,7 @@ class RaceModel {
         const stake = this.totalStake;
         const payout = winCell ? winCell.stake * winCell.odds : 0;
         this.credits += payout;
-        const result = { first, second, order, pair, payout, stake };
+        const result = { first, second, order, pair, payout, stake, round: this.round, eventId: this.selectedEventId };
         this.lastResult = result;
         this.history.unshift(result);
         if (this.history.length > 20)
@@ -278,6 +362,8 @@ class RaceModel {
         this.resultElapsed = 0;
         this.progress.fill(0);
         this.cells.forEach(c => c.stake = 0);
+        this.preparationRemaining = 0;
+        this.chooseHighestEvent();
         this.lastResult = null;
         this.message = '下一场：请选择号码组合';
     }
@@ -336,8 +422,8 @@ function draw(){
  ctx.closePath();ctx.fillStyle='#b08952';ctx.fill();ctx.strokeStyle='#efe7d0';ctx.lineWidth=5;ctx.stroke();
  for(let k=0;k<24;k++)for(let c=0;c<2;c++){ctx.fillStyle=(k+c)%2?'#f5f4e8':'#14151e';ctx.fillRect(COURSE_FINISH_X+c*10,680+k*10,10,10);}
  for(let i=0;i<6;i++){
-  const progress=game.phase==='betting'?0:game.progress[i],pose=horsePose(i,progress,game.raceElapsed);
-  const key='h'+(i+1)+'_'+(game.phase==='betting'?0:Math.floor(game.raceElapsed*9)%4);
+  const progress=game.phase==='betting'?0:game.progress[i],pose=horsePose(i,progress,game.strideTime(i));
+  const key='h'+(i+1)+'_'+(game.phase==='betting'?0:Math.floor(game.strideTime(i)*9)%4);
   const w=134*pose.scale,h=84*pose.scale;
   ctx.save();ctx.translate(pose.x,pose.y);ctx.scale(pose.flipX?-1:1,1);
   if(!image(key,-w/2,-h,w,h))txt('#'+(i+1),0,-15,25);ctx.restore();

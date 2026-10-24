@@ -1,0 +1,43 @@
+{
+  "status": "observation-only",
+  "sourceUrl": "https://tv.sohu.com/v/dXMvMzM4OTE1NTY2LzM4NzUxMjEwOS5zaHRtbA==.html",
+  "observed": "2026-10-24",
+  "video": {
+    "durationSeconds": 283.157,
+    "width": 960,
+    "height": 540,
+    "fps": 30,
+    "sha256": "0e0335c7f95bcc351408f0d72e7f181347abb16466b5539673b1099dece4a838"
+  },
+  "contactSheets": [
+    {
+      "file": "r07-launch.png",
+      "startSeconds": 24,
+      "sampleFps": 4,
+      "seconds": 3
+    },
+    {
+      "file": "r07-exit.png",
+      "startSeconds": 38,
+      "sampleFps": 2,
+      "seconds": 5
+    },
+    {
+      "file": "r07-first-race.png",
+      "startSeconds": 20,
+      "sampleFps": 1,
+      "seconds": 32
+    },
+    {
+      "file": "r07-second-race.png",
+      "startSeconds": 69,
+      "sampleFps": 1,
+      "seconds": 30
+    }
+  ],
+  "notes": [
+    "Contact sheets are analysis-only timestamped source frames, never runtime assets.",
+    "Start acceleration and home-straight reacceleration are qualitative observations; subtitles, camera movement and perspective prevent exact world-speed inference.",
+    "24-second first finisher, 0.35-second separation and Hermite values remain authored product settings."
+  ]
+}

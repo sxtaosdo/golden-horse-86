@@ -16,9 +16,9 @@ for(const height of [1000,1334,1623,1750]){const layout=mobileLayout(height),fra
  const m=new RaceModel(()=>.3);m.placeBet('1-6',1);m.startRace();let previous=m.progress.slice(),crossings=0;
  for(let tick=0;tick<1800;tick++){
   m.update(1/60);if(m.phase!=='racing')break;const camera=courseCamera(m.courseFraction);camera.y-=framing.yBias;
-  m.progress.forEach((p,i)=>{const pose=horsePose(i,p,m.raceElapsed),x=375+(pose.x-camera.x)*zoom,y=layout.raceHeight/2+45+(pose.y-camera.y)*zoom;
+  m.progress.forEach((p,i)=>{const pose=horsePose(i,p,m.strideTime(i)),x=375+(pose.x-camera.x)*zoom,y=layout.raceHeight/2+45+(pose.y-camera.y)*zoom;
    assert.ok(y-150*zoom>=89,'horse and badge must clear HUD');assert.ok(y<=layout.raceHeight,'hooves must remain in race viewport');
-   const direction=Math.min(4,Math.round(pose.angle/(Math.PI/4))),name=['side','diagonal','front','diagonal','side'][direction],sheet=manifest.horses.find(s=>s.horse===i+1&&s.view===name),f=sheet.frames[Math.floor(m.raceElapsed*10)%8];
+   const direction=Math.min(4,Math.round(pose.angle/(Math.PI/4))),name=['side','diagonal','front','diagonal','side'][direction],sheet=manifest.horses.find(s=>s.horse===i+1&&s.view===name),f=sheet.frames[Math.floor(m.strideTime(i)*10)%8];
    const pivot=name==='side'?f.nose-HORSE_NOSE_X/HORSE_SCALE/sheet.scale:f.x+f.width*.5;
    const left=(direction>=3?f.x+f.width-pivot:pivot-f.x)*sheet.scale*HORSE_SCALE,right=(direction>=3?pivot-f.x:f.x+f.width-pivot)*sheet.scale*HORSE_SCALE;
    const crossed=previous[i]<1&&p>=1;if(crossed)crossings++;

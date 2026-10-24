@@ -8,3 +8,7 @@ art/work/gameplay/r03/generated/starting-gate-states-v02.png,rejected-five-stall
 art/work/gameplay/r03/generated/starting-stall-module-v03.png,rejected-perspective,built-in image_gen; Owner rejected perspective 2026-10-24; retained for r04 correction,false
 art/work/gameplay/r04/generated/starting-stall-oblique-v01.png,rejected-oblique-process,built-in image_gen; long rails still slanted; see r04/prompt-v01.md,false
 art/work/gameplay/r04/generated/starting-stall-side-v02.png,review-sample-unapproved,built-in image_gen; strict side view; exact prompt in r04/prompt-v02.md,false
+art/reference/race/r07-launch.png,timing-comparison-reference,"Sohu 86 gameplay sampled 2026-10-24; timestamps in r07-timing.json",false
+art/reference/race/r07-exit.png,timing-comparison-reference,"Sohu 86 gameplay sampled 2026-10-24; timestamps in r07-timing.json",false
+art/reference/race/r07-first-race.png,timing-comparison-reference,"Sohu 86 gameplay sampled 2026-10-24; timestamps in r07-timing.json",false
+art/reference/race/r07-second-race.png,timing-comparison-reference,"Sohu 86 gameplay sampled 2026-10-24; timestamps in r07-timing.json",false

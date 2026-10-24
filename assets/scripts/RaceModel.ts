@@ -2,7 +2,7 @@
  * Golden Horse 86 research prototype: game rules and odds can be revised when
  * an actual recording or ROM becomes available. NO monetary transactions.
  */
-import { COURSE_BREAKS, FINAL_STRAIGHT_START } from './TrackVisual';
+import { COURSE_BREAKS, FINAL_STRAIGHT_START, RacePace } from './TrackVisual';
 import { RaceEventId, RaceEventRules, RaceEventTier } from './events/RaceEventCatalog';
 export type Phase = 'betting' | 'preparing' | 'racing' | 'result';
 export type PairMode = 'unordered' | 'ordered';
@@ -57,7 +57,10 @@ export class RaceModel {
   private readonly raceSeconds: number;
   private pendingOrder: number[] = [1,2,3,4,5,6];
   /** Visual timeline only; winner selection and payout remain unchanged. */
-  get courseFraction():number { return Math.min(1,this.raceElapsed/(this.raceSeconds-2)); }
+  get courseFraction():number { return Math.min(1,RacePace.progress(this.raceElapsed,this.raceSeconds-2)); }
+
+  /** Continuous cadence follows distance as well as elapsed time; renderers own no pace state. */
+  strideTime(index:number):number{return .25*this.raceElapsed+.75*this.progress[index]*(this.raceSeconds-2);}
 
   constructor(random: () => number = Math.random, opts: RaceOptions = {}) {
     this.random = random;
@@ -177,18 +180,17 @@ export class RaceModel {
       if(this.preparationRemaining<=.00001){this.preparationRemaining=0;this.startRunning();}
     } else if (this.phase === 'racing') {
       this.raceElapsed += dt;
-      const finalStart=(this.raceSeconds-2)*FINAL_STRAIGHT_START;
+      const finalStart=(this.raceSeconds-2)*RacePace.homeTime;
       for (let i = 0; i < 6; i++) {
         if(this.raceElapsed>=finalStart){
           // One shared scene timeline up to the home straight; actual finish times then separate the field.
-          this.progress[i]=Math.min(1.5,FINAL_STRAIGHT_START+(1-FINAL_STRAIGHT_START)*
-            (this.raceElapsed-finalStart)/(this.finishTimes[i]-finalStart));
+          this.progress[i]=RacePace.progress(this.raceElapsed,this.finishTimes[i],this.raceSeconds-2);
         }else{
           const fraction=this.courseFraction;
           let section=0;while(section<COURSE_BREAKS.length-2&&fraction>=COURSE_BREAKS[section+1])section++;
           const start=COURSE_BREAKS[section],end=COURSE_BREAKS[section+1];
           const local=(fraction-start)/(end-start);
-          const offset=.008*Math.sin(Math.PI*local)**2*Math.sin(this.raceElapsed*1.4+i*.7);
+          const offset=.010*Math.sin(Math.PI*local)**2*Math.sin(this.raceElapsed*1.4+i*.7);
           this.progress[i]=Math.max(start,Math.min(end-1e-9,fraction+offset));
         }
       }
@@ -198,9 +200,7 @@ export class RaceModel {
       // Keep the physical run-out moving through the same world after paying once.
       if(this.resultElapsed<6){
         this.raceElapsed+=dt;
-        const finalStart=(this.raceSeconds-2)*FINAL_STRAIGHT_START;
-        for(let i=0;i<6;i++)this.progress[i]=Math.min(1.5,FINAL_STRAIGHT_START+(1-FINAL_STRAIGHT_START)*
-          (this.raceElapsed-finalStart)/(this.finishTimes[i]-finalStart));
+        for(let i=0;i<6;i++)this.progress[i]=RacePace.progress(this.raceElapsed,this.finishTimes[i],this.raceSeconds-2);
       }
     }
   }
