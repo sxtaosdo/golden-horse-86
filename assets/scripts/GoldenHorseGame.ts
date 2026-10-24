@@ -77,6 +77,7 @@ export class GoldenHorseGame extends Component implements RacePageContext {
  private archive:RaceArchive|null=null;private gameAudio:GameAudio|null=null;private dialog:SessionDialog='none';private background=false;private archiveInvalid=false;private retrying=false;
  private savedChangeId=-1;private checkpointSeconds=0;private queuedCues:PreRaceCue[]=[];private equipmentNeedsSync=true;
  private pagePending=false;private disposed=false;private pageTask:Promise<void>=Promise.resolve();
+ private historyPage=0;private historyDetail=-1;
  private heldF8=false;private lastPhase='betting';private gallopTimer=0;
  private undo=false;private layoutHeight=1334;
  private testBridge:GoldenHorseTestBridge|null=null;
@@ -181,7 +182,7 @@ export class GoldenHorseGame extends Component implements RacePageContext {
   this.preRace.update(0,this.game,this.activeReducedMotion);this.queuedCues.push(...this.preRace.cues);this.writeCheckpoint();
  }
  private openDialog(kind:SessionDialog):void{
-  this.dialog=kind;if(this.eventPanel)this.eventPanel.active=false;if(this.historyPanel)this.historyPanel.active=false;this.betHold.cancel();this.queuedCues=[];this.gameAudio?.stop();this.preAudio?.stop();this.refreshDialog();
+  this.dialog=kind;if(kind==='history'){this.historyPage=0;this.historyDetail=-1;}if(this.eventPanel)this.eventPanel.active=false;if(this.historyPanel)this.historyPanel.active=false;this.betHold.cancel();this.queuedCues=[];this.gameAudio?.stop();this.preAudio?.stop();this.refreshDialog();
  }
  private readonly onHidden=():void=>{this.background=true;this.betHold.cancel();this.queuedCues=[];this.gameAudio?.stop();this.preAudio?.stop();this.writeCheckpoint();};
  private readonly onShown=():void=>{if(!this.background||this.disposed)return;this.background=false;if(this.game&&!['busy','corrupt','save-error'].includes(this.dialog))this.openDialog('resume');};
@@ -189,7 +190,12 @@ export class GoldenHorseGame extends Component implements RacePageContext {
   if(!this.canInput()||this.background||this.retrying)return;this.preAudio?.unlock();
   if(this.dialog==='resume'||this.dialog==='save-error'){
    if(index===0){if(this.writeCheckpoint()){this.lastPhase=this.game.phase;this.dialog='none';}}else if(index===1&&this.dialog==='save-error'){this.archive?.useTemporary();this.dialog='none';this.lastPhase=this.game.phase;}
-  }else if(this.dialog==='history'){if(index===0)this.dialog='none';}
+  }else if(this.dialog==='history'){
+   if(this.historyDetail>=0){if(index===0)this.historyDetail=-1;}
+   else if(index<5&&this.game.history[this.historyPage*5+index])this.historyDetail=this.historyPage*5+index;
+   else if(index===6)this.historyPage=Math.max(0,this.historyPage-1);
+   else if(index===7)this.historyPage=Math.min(Math.max(0,Math.ceil(this.game.history.length/5)-1),this.historyPage+1);
+  }
   else if(this.dialog==='settings'){
    if(index<6){const key=(['master','effects','ambience'] as const)[Math.floor(index/2)];this.settings[key]=Math.max(0,Math.min(1,Math.round((this.settings[key]+(index%2?.1:-.1))*10)/10));}
    else if(index===6)this.settings.muted=!this.settings.muted;else if(index===7)this.settings.reducedMotion=!this.settings.reducedMotion;
@@ -211,9 +217,15 @@ export class GoldenHorseGame extends Component implements RacePageContext {
   else if(this.dialog==='busy'){title='已有游戏窗口打开';body='同一份存档只允许一个窗口运行。\n\n请返回原窗口，或关闭原窗口后重试。\n也可以临时游玩，临时进度不会写入存档。';actions=['重试','临时游玩'];}
   else if(this.dialog==='corrupt'){title='无法读取原存档';body='存档损坏或与当前比赛配置不兼容，原数据尚未覆盖。\n\n“备份并重置”会保留原档副本，重新以500分开始。\n也可选择不写入存档的临时模式。'+(this.archive?.lastError?'\n\n'+this.archive.lastError:'');actions=['备份并重置','临时游玩'];}
   else if(this.dialog==='save-error'){title='当前进度尚未保存';body='已暂停比赛，避免继续产生未保存的结果。\n\n请重试保存，或明确选择临时模式。\n临时模式关闭页面后会丢失本次进度。';actions=['重试并继续','临时游玩'];}
-  else if(this.dialog==='history'){title='最近五场';body=this.game.history.length?this.game.history.slice(0,5).map(r=>'第'+r.round+'场  '+r.first+' — '+r.second+'  ×'+r.odds+'\n押'+r.stake+'  返'+r.payout+'  净'+(r.net>=0?'+':'')+r.net).join('\n\n'):'暂无比赛记录';actions=['关闭'];}
+  else if(this.dialog==='history'){
+   const r=this.game.history[this.historyDetail],name=(id:string)=>this.artwork.catalog.tiers.find(t=>t.id===id)?.name??id;
+   title=r?'第 '+r.round+' 场明细':'最近20场 · '+(this.historyPage+1)+'/'+Math.max(1,Math.ceil(this.game.history.length/5));
+   if(r){const lines=r.bets.map(b=>b.key+' 押'+b.stake+' ×'+b.odds),pairs:string[]=[];for(let i=0;i<lines.length;i+=2)pairs.push(lines.slice(i,i+2).join('   /   '));body=name(r.eventId)+'\n名次 '+r.order.join(' → ')+'\n总押 '+r.stake+' · 返 '+r.payout+' · 净 '+(r.net>=0?'+':'')+r.net+'\n\n'+pairs.join('\n');actions=['返回记录'];}
+   else{const rows=this.game.history.slice(this.historyPage*5,this.historyPage*5+5);body=rows.length?rows.map(r=>'第'+r.round+'场 '+name(r.eventId)+' '+r.first+' — '+r.second+'\n押'+r.stake+' 返'+r.payout+' 净'+(r.net>=0?'+':'')+r.net).join('\n\n'):'暂无比赛记录';actions=Array(8).fill('');rows.forEach((r,i)=>actions[i]='第'+r.round+'场明细');if(this.historyPage>0)actions[6]='上一页';if((this.historyPage+1)*5<this.game.history.length)actions[7]='下一页';}
+  }
   else if(this.dialog==='settings'){title='声音与动态';body='总音量 '+Math.round(this.settings.master*100)+'%\n音效 '+Math.round(this.settings.effects*100)+'% · 环境 '+Math.round(this.settings.ambience*100)+'%\n\n静音：'+(this.settings.muted?'开':'关')+'\n减少动态：'+(this.settings.reducedMotion?'开':'关')+'（下场起生效）\n\n开启后保留跟赛，关闭镜头开合、弹跳、扬尘与环境微动。';actions=['总音量 −','总音量 +','音效 −','音效 +','环境 −','环境 +','静音 '+(this.settings.muted?'开':'关'),'减少动态 '+(this.settings.reducedMotion?'开':'关')];}
-  this.utilityTitle!.string=title;this.utilityBody!.string=body;this.utilityActions.forEach((n,i)=>{n.active=Boolean(actions[i]);n.setPosition(actions.length===1?0:i%2?160:-160,-100-Math.floor(i/2)*110);this.utilityActionLabels[i].string=actions[i]??'';});
+  const detail=this.dialog==='history'&&this.historyDetail>=0;this.utilityBody!.node.getComponent(UITransform)!.setContentSize(620,detail?700:400);this.utilityBody!.node.setPosition(0,detail?25:175);
+  this.utilityTitle!.string=title;this.utilityBody!.string=body;this.utilityActions.forEach((n,i)=>{n.active=Boolean(actions[i]);n.setPosition(actions.length===1?0:i%2?160:-160,detail?-430:-100-Math.floor(i/2)*110);this.utilityActionLabels[i].string=actions[i]??'';});
  }
  private clientRect(node:Node):Record<string,number>{
   const r=document.querySelector('canvas')?.getBoundingClientRect(),ui=node.getComponent(UITransform)!;
@@ -221,7 +233,7 @@ export class GoldenHorseGame extends Component implements RacePageContext {
   return{x:r.left+(local.x+v.width/2-ui.width/2)/v.width*r.width,y:r.top+(v.height/2-local.y-ui.height/2)/v.height*r.height,width:ui.width/v.width*r.width,height:ui.height/v.height*r.height};
  }
  private observe():Record<string,unknown>{return{
-  revision:'upgrade-settings-v1',menuButtons:this.menuButtons.map(n=>this.clientRect(n)),utilityClose:this.utilityClose?this.clientRect(this.utilityClose):{},utilityTitle:this.utilityTitle?.string,utilityBody:this.utilityBody?.string,paused:this.paused,dialog:this.dialog,background:this.background,archiveMode:this.archive?.mode,activeReducedMotion:this.activeReducedMotion,settings:{...this.settings},gameAudio:this.gameAudio?.observation,utilityActions:this.utilityActions.map(n=>({...this.clientRect(n),active:this.utilityPanel?.active===true&&n.active})),stakeUnit:this.stakeUnit,betHold:this.betHold.observation,quickButtons:this.quickButtons.map(n=>this.clientRect(n)),choreographySeed:this.game.choreographySeed,groundEffects:this.groundEffects?.observation,preRace:this.preRace.observation,preAudio:this.preAudio?.observation,horseVisuals:this.horses.map(h=>h.observation),raceElapsed:this.game.raceElapsed,courseFraction:this.game.courseFraction,strideTimes:this.game.progress.map((_,i)=>this.game.strideTime(i)),leaderHorse:this.game.leaderIndex+1,eventId:this.game.eventId,eventName:this.game.eventName,eligibilityCredits:this.game.eligibilityCredits,preparationRemaining:this.game.preparationRemaining,equipment:this.equipment?.observation,eventPickerVisible:this.eventPanel?.active,eventButton:this.eventButton?this.clientRect(this.eventButton):{},eventChoices:this.eventChoices.map(n=>this.clientRect(n)),eventClose:this.eventClose?this.clientRect(this.eventClose):{},ready:this.canInput(),pendingAssets:this.pendingAssets,loadErrors:[...this.loadErrors],section:trackSection(this.game.courseFraction),
+  revision:'upgrade-history-v1',historyPage:this.historyPage,historyDetail:this.historyDetail,menuButtons:this.menuButtons.map(n=>this.clientRect(n)),utilityClose:this.utilityClose?this.clientRect(this.utilityClose):{},utilityTitle:this.utilityTitle?.string,utilityBody:this.utilityBody?.string,paused:this.paused,dialog:this.dialog,background:this.background,archiveMode:this.archive?.mode,activeReducedMotion:this.activeReducedMotion,settings:{...this.settings},gameAudio:this.gameAudio?.observation,utilityActions:this.utilityActions.map(n=>({...this.clientRect(n),active:this.utilityPanel?.active===true&&n.active})),stakeUnit:this.stakeUnit,betHold:this.betHold.observation,quickButtons:this.quickButtons.map(n=>this.clientRect(n)),choreographySeed:this.game.choreographySeed,groundEffects:this.groundEffects?.observation,preRace:this.preRace.observation,preAudio:this.preAudio?.observation,horseVisuals:this.horses.map(h=>h.observation),raceElapsed:this.game.raceElapsed,courseFraction:this.game.courseFraction,strideTimes:this.game.progress.map((_,i)=>this.game.strideTime(i)),leaderHorse:this.game.leaderIndex+1,eventId:this.game.eventId,eventName:this.game.eventName,eligibilityCredits:this.game.eligibilityCredits,preparationRemaining:this.game.preparationRemaining,equipment:this.equipment?.observation,eventPickerVisible:this.eventPanel?.active,eventButton:this.eventButton?this.clientRect(this.eventButton):{},eventChoices:this.eventChoices.map(n=>this.clientRect(n)),eventClose:this.eventClose?this.clientRect(this.eventClose):{},ready:this.canInput(),pendingAssets:this.pendingAssets,loadErrors:[...this.loadErrors],section:trackSection(this.game.courseFraction),
   uiMode:this.StateMachine.is(RacingPage)?'race':this.StateMachine.is(BettingPage)?'betting':'loading',bettingPageVisible:this.bettingPage?.active,raceViewportVisible:this.courseView.viewport.active,
   designResolution:{width:750,height:1334},visibleHeight:this.layoutHeight,raceViewport:this.clientRect(this.raceHost!),
   touchTargets:this.betNodes.map((node,i)=>({key:this.keys[i],...this.clientRect(node)})),buttons:this.buttons.map(node=>({name:node.name,...this.clientRect(node)})),undoMode:this.undo,
@@ -281,8 +293,8 @@ export class GoldenHorseGame extends Component implements RacePageContext {
   this.oddsHeader!.string='前二组合倍率 / 每次'+this.stakeUnit+'分 · 长按连押';this.quickLabels[0].string='每次 '+this.stakeUnit+' 分\n切换档位';this.quickLabels[1].string='沿用上场\n整套替换';
   this.startText!.string=this.game.phase==='result'?'下一场':this.game.phase==='preparing'?'准备中':this.game.phase==='racing'?'比赛中':'开跑';this.undoText!.string=this.undo?'撤销：开':'撤销：关';
   this.resultPanel!.active=this.game.phase==='result';const result=this.game.lastResult;
-  if(result){this.resultText!.string=result.first+' — '+result.second;this.resultOdds!.string='倍率 '+(this.game.getCell(result.pair)?.odds??0)+'    返分 '+result.payout;}
-  this.textHistory!.string=this.game.history.length?this.game.history.slice(0,5).map((r,i)=>(i+1)+'    '+r.first+' — '+r.second+'    ×'+(this.game.getCell(r.pair)?.odds??0)).join('\n\n'):'暂无比赛记录';
+  if(result){this.resultText!.string=result.first+' — '+result.second;this.resultOdds!.string='倍率 '+result.odds+'    返分 '+result.payout;}
+  this.textHistory!.string=this.game.history.length?this.game.history.slice(0,5).map((r,i)=>(i+1)+'    '+r.first+' — '+r.second+'    ×'+r.odds).join('\n\n'):'暂无比赛记录';
   this.eventText!.string=this.game.eventName+'\n选择赛事';
   this.eventChoiceLabels.forEach((label,i)=>{const tier=this.artwork.catalog.tiers[i],eligible=this.game.canEnterEvent(tier.id);label.string=tier.name+'  ·  '+tier.equipment.length+' 类设备\n'+(this.game.eventId===tier.id?'当前赛事':eligible?'可参加 · 无费用':'需 '+tier.minCredits+' 积分');label.color=eligible?new Color(255,225,146):new Color(155,160,157);});
   this.keys.forEach((key,i)=>{const c=this.game.getCell(key)!;this.oddsLabels[i].string='×'+c.odds;this.stakeLabels[i].string=c.stake?'押 '+c.stake:'—';this.oddsLabels[i].color=this.game.phase==='betting'?new Color(255,224,92):new Color(193,185,143);this.stakeLabels[i].color=c.stake?new Color(255,109,96):new Color(156,164,145);this.betBorders[i].color=c.stake?new Color(235,99,81):new Color(147,121,67);});

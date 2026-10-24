@@ -69,3 +69,8 @@ Creator保存重开rev-46f25a2f。upgrade-session-pause-result.json原生47步�
 三音量默认100%、每档10%，静音即时；减少动态下场应用，跟赛保留、镜头开合/格子及号码弹跳/扬尘关闭。设置面板暂停全部时钟，保存每次操作。Settings.test实际组件验证音量边界、保存/恢复及下场时机；QuickInput/SessionLifecycle与strict --skipLibCheck通过。直接不跳引擎声明检查时报Creator引擎d.ts既有缺失，未修改引擎。
 
 Creator新增按钮及专用关闭，保存重开。reviewer /root/horse_build_review 依显式父OCR发现关闭100x70的小屏P2，经Creator改100x94；upgrade-settings三尺寸43步PASSED、诊断0，关闭高度45.12/48.88/53.893，360截图目视布局完整。正式构建及环境微动关闭留最终整合；听感未验。角色权限隔离未核验。
+
+
+## F4 历史明细
+
+默认最近5条、最多20条翻页，返回保留当前页；详情使用冻结receipt两列完整展示15组合押分/当场倍率、赛事、完整名次及账目。History.test实际组件22场覆盖上限、翻页、旧数据隔离及冻结。strict通过；Creator编译errors[]，upgrade-history-390-result.json原生33步通过，15组合全部押1，实际返4/净-11，截图目视完整无裁切、诊断0。初次返回触摸误用左侧坐标，改为实际居中按钮后通过，未改Runtime。reviewer /root/horse_build_review 显式父OCR审查无确定缺陷，权限隔离未核验；正式产物最终整合。
