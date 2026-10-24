@@ -13,6 +13,7 @@ import { HorseSpriteView } from './presentation/HorseSpriteView';
 import { mobileLayout, betPosition } from './presentation/MobileLayout';
 import { PreRacePresentation } from './presentation/PreRacePresentation';
 import { PreRaceAudio } from './presentation/PreRaceAudio';
+import { RaceGroundEffects } from './presentation/RaceGroundEffects';
 const { ccclass, property } = _decorator;
 @ccclass('GoldenHorseGame')
 export class GoldenHorseGame extends Component implements RacePageContext {
@@ -52,6 +53,7 @@ export class GoldenHorseGame extends Component implements RacePageContext {
  private loadErrors:string[]=[];
  private pendingAssets=9;
  private readonly preRace=new PreRacePresentation();private preAudio:PreRaceAudio|null=null;
+ private groundEffects:RaceGroundEffects|null=null;
  private pagePending=false;private disposed=false;private pageTask:Promise<void>=Promise.resolve();
  private audio!:AudioSource;private heldF8=false;private lastPhase='betting';private gallopTimer=0;
  private undo=false;private layoutHeight=1334;
@@ -101,7 +103,7 @@ export class GoldenHorseGame extends Component implements RacePageContext {
    this.game=new RaceModel(Math.random,{events:this.artwork.catalog.rules});
    this.courseView.decorate(this.artwork);
    for(let i=1;i<=6;i++)this.horses.push(new HorseSpriteView(this.courseView.horseLayer,i,this.artwork));
-   this.equipment=new EquipmentScene(this.courseView,this.raceHost!,this.artwork);this.equipment.setTier(this.game.eventId);
+   this.equipment=new EquipmentScene(this.courseView,this.raceHost!,this.artwork);this.equipment.setTier(this.game.eventId);this.groundEffects=new RaceGroundEffects(this.courseView.horseLayer);
    if(PREVIEW)this.testBridge=new GoldenHorseTestBridge(this.game,()=>this.observe());
   }).catch((error:unknown)=>{if(!this.disposed)this.loadErrors.push(String(error));}).finally(()=>{if(!this.disposed)this.pendingAssets--;});
   void (this.preAudio?.load()??Promise.resolve()).catch((error:unknown)=>{if(!this.disposed)this.preAudio?.warnings.push(String(error));}).finally(()=>{if(!this.disposed)this.pendingAssets--;});
@@ -113,7 +115,7 @@ export class GoldenHorseGame extends Component implements RacePageContext {
   return{x:r.left+(local.x+v.width/2-ui.width/2)/v.width*r.width,y:r.top+(v.height/2-local.y-ui.height/2)/v.height*r.height,width:ui.width/v.width*r.width,height:ui.height/v.height*r.height};
  }
  private observe():Record<string,unknown>{return{
-  revision:'upgrade-r10-v1',choreographySeed:this.game.choreographySeed,preRace:this.preRace.observation,preAudio:this.preAudio?.observation,horseVisuals:this.horses.map(h=>h.observation),raceElapsed:this.game.raceElapsed,courseFraction:this.game.courseFraction,strideTimes:this.game.progress.map((_,i)=>this.game.strideTime(i)),leaderHorse:this.game.leaderIndex+1,eventId:this.game.eventId,eventName:this.game.eventName,eligibilityCredits:this.game.eligibilityCredits,preparationRemaining:this.game.preparationRemaining,equipment:this.equipment?.observation,eventPickerVisible:this.eventPanel?.active,eventButton:this.eventButton?this.clientRect(this.eventButton):{},eventChoices:this.eventChoices.map(n=>this.clientRect(n)),eventClose:this.eventClose?this.clientRect(this.eventClose):{},ready:this.canInput(),pendingAssets:this.pendingAssets,loadErrors:[...this.loadErrors],section:trackSection(this.game.courseFraction),
+  revision:'upgrade-r10-v1',choreographySeed:this.game.choreographySeed,groundEffects:this.groundEffects?.observation,preRace:this.preRace.observation,preAudio:this.preAudio?.observation,horseVisuals:this.horses.map(h=>h.observation),raceElapsed:this.game.raceElapsed,courseFraction:this.game.courseFraction,strideTimes:this.game.progress.map((_,i)=>this.game.strideTime(i)),leaderHorse:this.game.leaderIndex+1,eventId:this.game.eventId,eventName:this.game.eventName,eligibilityCredits:this.game.eligibilityCredits,preparationRemaining:this.game.preparationRemaining,equipment:this.equipment?.observation,eventPickerVisible:this.eventPanel?.active,eventButton:this.eventButton?this.clientRect(this.eventButton):{},eventChoices:this.eventChoices.map(n=>this.clientRect(n)),eventClose:this.eventClose?this.clientRect(this.eventClose):{},ready:this.canInput(),pendingAssets:this.pendingAssets,loadErrors:[...this.loadErrors],section:trackSection(this.game.courseFraction),
   uiMode:this.StateMachine.is(RacingPage)?'race':this.StateMachine.is(BettingPage)?'betting':'loading',bettingPageVisible:this.bettingPage?.active,raceViewportVisible:this.courseView.viewport.active,
   designResolution:{width:750,height:1334},visibleHeight:this.layoutHeight,raceViewport:this.clientRect(this.raceHost!),
   touchTargets:this.betNodes.map((node,i)=>({key:this.keys[i],...this.clientRect(node)})),buttons:this.buttons.map(node=>({name:node.name,...this.clientRect(node)})),undoMode:this.undo,
@@ -146,7 +148,7 @@ export class GoldenHorseGame extends Component implements RacePageContext {
    const stride=this.game.strideTime(i);h.render(horsePose(i,this.game.progress[i],stride),stride,this.game.phase==='racing'||this.game.phase==='result',this.preRace.horse(i));
   });
   this.equipment?.setTier(this.game.eventId);
-  this.courseView.sortDepth();
+  this.groundEffects?.update(dt,this.game.round,this.game.phase,this.game.progress,this.game.progress.map((_,i)=>this.game.strideTime(i)));this.courseView.sortDepth();
   const leader=this.game.leaderIndex;
   this.equipment?.update(dt,raceScreen(this.game.phase,this.game.round,this.game.eventName,this.game.preparationRemaining,this.game.lastResult,this.game.resultElapsed,this.artwork.catalog.rules.resultDisplaySeconds),{round:this.game.round,phase:this.game.phase,preparationRemaining:this.game.preparationRemaining,raceElapsed:this.game.raceElapsed,horse:leader+1,point:coursePoint(leader,this.game.progress[leader]),scanPoint:this.preRace.scanPoint});
   this.refresh();this.betNodes.forEach((node,i)=>{const scale=this.preRace.cellScale(i);node.setScale(scale,scale,1);});this.testBridge?.sampleFrame();
@@ -165,7 +167,7 @@ export class GoldenHorseGame extends Component implements RacePageContext {
   this.keys.forEach((key,i)=>{const c=this.game.getCell(key)!;this.oddsLabels[i].string='×'+c.odds;this.stakeLabels[i].string=c.stake?'押 '+c.stake:'—';this.oddsLabels[i].color=this.game.phase==='betting'?new Color(255,224,92):new Color(193,185,143);});
  }
  onDestroy():void{
-  this.disposed=true;this.preRace.clearFeedback();for(const node of this.betNodes)if(node.isValid)node.setScale(1,1,1);this.preAudio?.dispose();this.equipment?.dispose();this.testBridge?.dispose();void this.pageTask.then(()=>this.StateMachine.releaseAllStates());this.artwork.dispose();
+  this.disposed=true;this.preRace.clearFeedback();for(const node of this.betNodes)if(node.isValid)node.setScale(1,1,1);this.preAudio?.dispose();this.groundEffects?.dispose();this.equipment?.dispose();this.testBridge?.dispose();void this.pageTask.then(()=>this.StateMachine.releaseAllStates());this.artwork.dispose();
   for(const node of [...this.betNodes,...this.buttons,...this.eventChoices,this.eventButton,this.eventClose,this.uiRoot])node?.targetOff(this);
   input.off(Input.EventType.KEY_DOWN,this.keyDown,this);input.off(Input.EventType.KEY_UP,this.keyUp,this);view.off('canvas-resize',this.relayout,this);view.off('design-resolution-changed',this.relayout,this);
  }

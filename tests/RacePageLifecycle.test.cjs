@@ -17,7 +17,7 @@ const component=load('assets/scripts/GoldenHorseGame.ts',{
  '../tests/GoldenHorseTestBridge':{},'./RaceModel':require('../.test/RaceModel.js'),
  './RaceTrackView':{},'./TrackVisual':require('../.test/TrackVisual.js'),'./presentation/RacePages':pages,
  './presentation/RaceVisualAssets':{RaceVisualAssets:class {load(){return new Promise((resolve,reject)=>{finishLoad=resolve;failLoad=reject;});}dispose(){}}},'./presentation/HorseSpriteView':{},'./presentation/MobileLayout':{},
- './presentation/PreRacePresentation':require('../.test/presentation/PreRacePresentation.js'),'./presentation/PreRaceAudio':{},
+ './presentation/PreRacePresentation':require('../.test/presentation/PreRacePresentation.js'),'./presentation/PreRaceAudio':{},'./presentation/RaceGroundEffects':{},
  './presentation/equipment/EquipmentScene':{},'./presentation/equipment/RaceScreen':{}
 });
 (async()=>{
