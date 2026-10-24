@@ -51,6 +51,24 @@ export class RacePace {
 }
 
 const clamp=(v:number)=>Math.max(0,Math.min(1,Number.isFinite(v)?v:0));
+/** Bounded lane rivalry. Progress is shared by horses, cameras and finish detection. */
+export class RaceChoreography {
+ static progress(horse:number,seconds:number,finishSeconds:number,referenceSeconds:number,seed:number):number{
+  const base=RacePace.progress(seconds,finishSeconds,referenceSeconds);
+  const limits=[0,COURSE_BREAKS[1],FINAL_STRAIGHT_START,.94];
+  if(base<=0||base>=limits[3])return base;
+  let section=0;while(base>=limits[section+1])section++;
+  const local=(base-limits[section])/(limits[section+1]-limits[section]);
+  if(local<=0||local>=1)return base;
+  const a=.65*this.weight(seed,horse,section,0),b=.35*this.weight(seed,horse,section,1);
+  const envelope=Math.sin(Math.PI*local)**2,angle=2*Math.PI*local;
+  return base+[.012,.006,.006][section]*envelope*(a*Math.cos(angle)+b*Math.sin(angle));
+ }
+ private static weight(seed:number,horse:number,section:number,axis:number):number{
+  let x=(seed^Math.imul(horse+1,0x9e3779b9)^Math.imul(section+1,0x85ebca6b)^Math.imul(axis+1,0xc2b2ae35))>>>0;
+  x=Math.imul(x^(x>>>16),0x7feb352d);x=Math.imul(x^(x>>>15),0x846ca68b);return ((x^(x>>>16))>>>0)/4294967295*2-1;
+ }
+}
 function curveAngle(fraction:number):number{
   const distance=clamp(fraction)*ARC_LENGTH;let low=0,high=ARC_SAMPLES;
   while(high-low>1){const middle=(low+high)>>1;if(ARC_TABLE[middle]<distance)low=middle;else high=middle;}

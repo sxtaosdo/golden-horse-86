@@ -54,6 +54,30 @@ RacePace.knots = [
     [.4, COURSE_BREAKS[1], .95], [RacePace.homeTime, FINAL_STRAIGHT_START, .75],
 ];
 const clamp = (v) => Math.max(0, Math.min(1, Number.isFinite(v) ? v : 0));
+/** Bounded lane rivalry. Progress is shared by horses, cameras and finish detection. */
+class RaceChoreography {
+    static progress(horse, seconds, finishSeconds, referenceSeconds, seed) {
+        const base = RacePace.progress(seconds, finishSeconds, referenceSeconds);
+        const limits = [0, COURSE_BREAKS[1], FINAL_STRAIGHT_START, .94];
+        if (base <= 0 || base >= limits[3])
+            return base;
+        let section = 0;
+        while (base >= limits[section + 1])
+            section++;
+        const local = (base - limits[section]) / (limits[section + 1] - limits[section]);
+        if (local <= 0 || local >= 1)
+            return base;
+        const a = .65 * this.weight(seed, horse, section, 0), b = .35 * this.weight(seed, horse, section, 1);
+        const envelope = Math.sin(Math.PI * local) ** 2, angle = 2 * Math.PI * local;
+        return base + [.012, .006, .006][section] * envelope * (a * Math.cos(angle) + b * Math.sin(angle));
+    }
+    static weight(seed, horse, section, axis) {
+        let x = (seed ^ Math.imul(horse + 1, 0x9e3779b9) ^ Math.imul(section + 1, 0x85ebca6b) ^ Math.imul(axis + 1, 0xc2b2ae35)) >>> 0;
+        x = Math.imul(x ^ (x >>> 16), 0x7feb352d);
+        x = Math.imul(x ^ (x >>> 15), 0x846ca68b);
+        return ((x ^ (x >>> 16)) >>> 0) / 4294967295 * 2 - 1;
+    }
+}
 function curveAngle(fraction) {
     const distance = clamp(fraction) * ARC_LENGTH;
     let low = 0, high = ARC_SAMPLES;
@@ -126,6 +150,7 @@ const DEMO_ODDS = {
     '5-6': 200,
 };
 class RaceModel {
+    get choreographySeed() { return this.visualSeed; }
     /** Visual timeline only; winner selection and payout remain unchanged. */
     get courseFraction() { return Math.min(1, RacePace.progress(this.raceElapsed, this.raceSeconds - 2)); }
     /** Continuous cadence follows distance as well as elapsed time; renderers own no pace state. */
@@ -143,8 +168,10 @@ class RaceModel {
         this.lastResult = null;
         this.history = [];
         this.finishTimes = [18, 18, 18, 18, 18, 18];
+        this.visualSeed = 0;
         this.pendingOrder = [1, 2, 3, 4, 5, 6];
         this.random = random;
+        this.presentationSeed = (opts.presentationSeed ?? Date.now()) >>> 0;
         this.events = opts.events;
         this.pairMode = opts.pairMode ?? 'unordered';
         this.bettingSeconds = opts.bettingSeconds ?? 30;
@@ -273,6 +300,7 @@ class RaceModel {
             [order[i], order[j]] = [order[j], order[i]];
         }
         this.pendingOrder = order;
+        this.visualSeed = (this.presentationSeed + Math.imul(this.round, 0x9e3779b9)) >>> 0;
         order.forEach((horse, rank) => { this.finishTimes[horse - 1] = this.raceSeconds - 2.0 + rank * 0.35; });
         this.progress.fill(0);
         this.raceElapsed = 0;
@@ -304,22 +332,8 @@ class RaceModel {
         }
         else if (this.phase === 'racing') {
             this.raceElapsed += dt;
-            const finalStart = (this.raceSeconds - 2) * RacePace.homeTime;
             for (let i = 0; i < 6; i++) {
-                if (this.raceElapsed >= finalStart) {
-                    // One shared scene timeline up to the home straight; actual finish times then separate the field.
-                    this.progress[i] = RacePace.progress(this.raceElapsed, this.finishTimes[i], this.raceSeconds - 2);
-                }
-                else {
-                    const fraction = this.courseFraction;
-                    let section = 0;
-                    while (section < COURSE_BREAKS.length - 2 && fraction >= COURSE_BREAKS[section + 1])
-                        section++;
-                    const start = COURSE_BREAKS[section], end = COURSE_BREAKS[section + 1];
-                    const local = (fraction - start) / (end - start);
-                    const offset = .010 * Math.sin(Math.PI * local) ** 2 * Math.sin(this.raceElapsed * 1.4 + i * .7);
-                    this.progress[i] = Math.max(start, Math.min(end - 1e-9, fraction + offset));
-                }
+                this.progress[i] = RaceChoreography.progress(i, this.raceElapsed, this.finishTimes[i], this.raceSeconds - 2, this.visualSeed);
             }
             if (this.raceElapsed >= Math.max(...this.finishTimes) + .65)
                 this.resolve();

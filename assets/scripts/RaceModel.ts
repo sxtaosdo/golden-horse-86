@@ -2,7 +2,7 @@
  * Golden Horse 86 research prototype: game rules and odds can be revised when
  * an actual recording or ROM becomes available. NO monetary transactions.
  */
-import { COURSE_BREAKS, FINAL_STRAIGHT_START, RacePace } from './TrackVisual';
+import { RaceChoreography, RacePace } from './TrackVisual';
 import { RaceEventId, RaceEventRules, RaceEventTier } from './events/RaceEventCatalog';
 export type Phase = 'betting' | 'preparing' | 'racing' | 'result';
 export type PairMode = 'unordered' | 'ordered';
@@ -13,6 +13,7 @@ export interface RaceOptions {
   odds?: Record<string, number>;
   raceSeconds?: number;
   events?: RaceEventRules;
+  presentationSeed?: number;
 }
 export interface RaceResult {
   first: number; second: number; order: number[];
@@ -55,6 +56,9 @@ export class RaceModel {
   private readonly random: () => number;
   private readonly finishTimes: number[] = [18,18,18,18,18,18];
   private readonly raceSeconds: number;
+  private readonly presentationSeed:number;
+  private visualSeed=0;
+  get choreographySeed():number{return this.visualSeed;}
   private pendingOrder: number[] = [1,2,3,4,5,6];
   /** Visual timeline only; winner selection and payout remain unchanged. */
   get courseFraction():number { return Math.min(1,RacePace.progress(this.raceElapsed,this.raceSeconds-2)); }
@@ -64,6 +68,7 @@ export class RaceModel {
 
   constructor(random: () => number = Math.random, opts: RaceOptions = {}) {
     this.random = random;
+    this.presentationSeed=(opts.presentationSeed??Date.now())>>>0;
     this.events=opts.events;
     this.pairMode = opts.pairMode ?? 'unordered';
     this.bettingSeconds = opts.bettingSeconds ?? 30;
@@ -159,6 +164,7 @@ export class RaceModel {
       [order[i],order[j]] = [order[j],order[i]];
     }
     this.pendingOrder = order;
+    this.visualSeed=(this.presentationSeed+Math.imul(this.round,0x9e3779b9))>>>0;
     order.forEach((horse,rank) => { this.finishTimes[horse-1] = this.raceSeconds - 2.0 + rank*0.35; });
     this.progress.fill(0);
     this.raceElapsed = 0;
@@ -180,19 +186,8 @@ export class RaceModel {
       if(this.preparationRemaining<=.00001){this.preparationRemaining=0;this.startRunning();}
     } else if (this.phase === 'racing') {
       this.raceElapsed += dt;
-      const finalStart=(this.raceSeconds-2)*RacePace.homeTime;
       for (let i = 0; i < 6; i++) {
-        if(this.raceElapsed>=finalStart){
-          // One shared scene timeline up to the home straight; actual finish times then separate the field.
-          this.progress[i]=RacePace.progress(this.raceElapsed,this.finishTimes[i],this.raceSeconds-2);
-        }else{
-          const fraction=this.courseFraction;
-          let section=0;while(section<COURSE_BREAKS.length-2&&fraction>=COURSE_BREAKS[section+1])section++;
-          const start=COURSE_BREAKS[section],end=COURSE_BREAKS[section+1];
-          const local=(fraction-start)/(end-start);
-          const offset=.010*Math.sin(Math.PI*local)**2*Math.sin(this.raceElapsed*1.4+i*.7);
-          this.progress[i]=Math.max(start,Math.min(end-1e-9,fraction+offset));
-        }
+        this.progress[i]=RaceChoreography.progress(i,this.raceElapsed,this.finishTimes[i],this.raceSeconds-2,this.visualSeed);
       }
       if (this.raceElapsed >= Math.max(...this.finishTimes)+.65) this.resolve();
     } else {
