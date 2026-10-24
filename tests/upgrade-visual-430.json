@@ -1,0 +1,425 @@
+{
+  "viewport": {
+    "width": 430,
+    "height": 932
+  },
+  "steps": [
+    {
+      "type": "wait",
+      "durationMs": 1500
+    },
+    {
+      "type": "ui",
+      "action": "click",
+      "target": "#view-select:visible, body:not(:has(#view-select:visible))"
+    },
+    {
+      "type": "ui",
+      "action": "click",
+      "target": "li[data-device=WebpageFullScreen]:visible, body:not(:has(li[data-device=WebpageFullScreen]:visible))"
+    },
+    {
+      "type": "wait_ready"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "revision": "upgrade-r10-v3",
+        "horseFrames": 144,
+        "equipment": {
+          "typeCount": 4
+        },
+        "turnFrames": 96
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "pointer",
+      "action": "click",
+      "x": 200,
+      "y": 100
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 347,
+      "y": 710
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 215,
+      "y": 549
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "eventId": "championship"
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "upgrade-visual-430-wide"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 50,
+      "y": 611
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 370,
+      "y": 902
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "racing"
+      },
+      "timeoutMs": 6000
+    },
+    {
+      "type": "wait",
+      "durationMs": 9300
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "wait",
+      "durationMs": 400
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "wait",
+      "durationMs": 400
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "upgrade-visual-430-turn2"
+    },
+    {
+      "type": "wait",
+      "durationMs": 400
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "wait",
+      "durationMs": 400
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "wait",
+      "durationMs": 400
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "upgrade-visual-430-turn5"
+    },
+    {
+      "type": "wait",
+      "durationMs": 400
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "wait",
+      "durationMs": 400
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "wait",
+      "durationMs": 400
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "upgrade-visual-430-turn8"
+    },
+    {
+      "type": "wait",
+      "durationMs": 400
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "wait",
+      "durationMs": 400
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "wait",
+      "durationMs": 400
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "upgrade-visual-430-turn11"
+    },
+    {
+      "type": "wait",
+      "durationMs": 400
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "wait",
+      "durationMs": 400
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "wait",
+      "durationMs": 400
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "upgrade-visual-430-turn14"
+    },
+    {
+      "type": "wait",
+      "durationMs": 400
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "wait",
+      "durationMs": 400
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "wait",
+      "durationMs": 400
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "result"
+      },
+      "timeoutMs": 18000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "upgrade-visual-430-result"
+    },
+    {
+      "type": "wait",
+      "durationMs": 6200
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 370,
+      "y": 902
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "betting",
+        "round": 2
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    }
+  ]
+}

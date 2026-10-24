@@ -1,0 +1,40 @@
+{
+  "source": "built-in image_gen",
+  "assets": [
+    {
+      "horse": 2,
+      "prompt": "Edit this exact 16-frame transparent sprite atlas to create horse 2's color identity. Change ONLY colors: rich orchid-magenta horse coat with violet shadows; jockey ivory-white jacket and helmet with magenta trim. Preserve charcoal mane/tail, yellow blank saddlecloth, brown leather tack, ivory trousers and dark boots. Preserve all SIXTEEN existing distinct poses, anatomy, pixel shading, the four-column/four-row layout, exact sprite positions, consistent foot pivots, and the two view directions: top two rows shallow22.5degree front-right, bottom two rows steep67.5degree front-right. Keep fully transparent empty background and gutters, no glow, no scenery, no shadows, no text or numbers. Entire horse and rider remain within each cell. Do not add, delete, crop or merge sprites. Production palette variant for an existing arcade game. Keep original image dimensions.",
+      "editTarget": "art/work/gameplay/r10/generated/h01-turn-r10.png",
+      "generated": "C:\\Users\\33272\\.codex\\generated_images\\01a16943-ca46-7a21-9fd6-fb8ef775f3b4\\exec-559ab84b-1a07-4dd8-9d3c-bb7f90a3a3f4.png",
+      "saved": "art/work/gameplay/r10/generated/h02-turn-r10.png"
+    },
+    {
+      "horse": 3,
+      "prompt": "Edit this exact 16-frame transparent sprite atlas to create horse 3's color identity. Change ONLY colors: vivid vermilion-red horse coat with crimson shadows; jockey golden-yellow jacket and helmet. Preserve charcoal mane/tail, yellow blank saddlecloth, brown leather tack, ivory trousers and dark boots. Preserve all SIXTEEN existing distinct poses, anatomy, pixel shading, the four-column/four-row layout, exact sprite positions, consistent foot pivots, and the two view directions: top two rows shallow22.5degree front-right, bottom two rows steep67.5degree front-right. Keep fully transparent empty background and gutters, no glow, no scenery, no shadows, no text or numbers. Entire horse and rider remain within each cell. Do not add, delete, crop or merge sprites. Production palette variant for an existing arcade game. Keep original image dimensions.",
+      "editTarget": "art/work/gameplay/r10/generated/h01-turn-r10.png",
+      "generated": "C:\\Users\\33272\\.codex\\generated_images\\01a16943-ca46-7a21-9fd6-fb8ef775f3b4\\exec-0869c991-9d48-411b-b116-acadf1ec1761.png",
+      "saved": "art/work/gameplay/r10/generated/h03-turn-r10.png"
+    },
+    {
+      "horse": 4,
+      "prompt": "Edit this exact 16-frame transparent sprite atlas to create horse 4's color identity. Change ONLY colors: saturated cobalt-blue horse coat with navy shadows; jockey bright orange jacket and helmet. Preserve charcoal mane/tail, yellow blank saddlecloth, brown leather tack, ivory trousers and dark boots. Preserve all SIXTEEN existing distinct poses, anatomy, pixel shading, the four-column/four-row layout, exact sprite positions, consistent foot pivots, and the two view directions: top two rows shallow22.5degree front-right, bottom two rows steep67.5degree front-right. Keep fully transparent empty background and gutters, no glow, no scenery, no shadows, no text or numbers. Entire horse and rider remain within each cell. Do not add, delete, crop or merge sprites. Production palette variant for an existing arcade game. Keep original image dimensions.",
+      "editTarget": "art/work/gameplay/r10/generated/h01-turn-r10.png",
+      "generated": "C:\\Users\\33272\\.codex\\generated_images\\01a16943-ca46-7a21-9fd6-fb8ef775f3b4\\exec-74129362-b267-4240-8dd5-bfb1f702d344.png",
+      "saved": "art/work/gameplay/r10/generated/h04-turn-r10.png"
+    },
+    {
+      "horse": 5,
+      "prompt": "Edit this exact 16-frame transparent sprite atlas to create horse 5's color identity. Change ONLY colors: warm golden-yellow horse coat with ochre shadows; jockey royal-blue jacket and helmet. Preserve charcoal mane/tail, yellow blank saddlecloth, brown leather tack, ivory trousers and dark boots. Preserve all SIXTEEN existing distinct poses, anatomy, pixel shading, the four-column/four-row layout, exact sprite positions, consistent foot pivots, and the two view directions: top two rows shallow22.5degree front-right, bottom two rows steep67.5degree front-right. Keep fully transparent empty background and gutters, no glow, no scenery, no shadows, no text or numbers. Entire horse and rider remain within each cell. Do not add, delete, crop or merge sprites. Production palette variant for an existing arcade game. Keep original image dimensions.",
+      "editTarget": "art/work/gameplay/r10/generated/h01-turn-r10.png",
+      "generated": "C:\\Users\\33272\\.codex\\generated_images\\01a16943-ca46-7a21-9fd6-fb8ef775f3b4\\exec-d79a5525-038c-4ad8-a984-3527600dd81b.png",
+      "saved": "art/work/gameplay/r10/generated/h05-turn-r10.png"
+    },
+    {
+      "horse": 6,
+      "prompt": "Edit this exact 16-frame transparent sprite atlas to create horse 6's color identity. Change ONLY colors: emerald-green horse coat with forest-green shadows; jockey golden-yellow jacket and helmet. Preserve charcoal mane/tail, yellow blank saddlecloth, brown leather tack, ivory trousers and dark boots. Preserve all SIXTEEN existing distinct poses, anatomy, pixel shading, the four-column/four-row layout, exact sprite positions, consistent foot pivots, and the two view directions: top two rows shallow22.5degree front-right, bottom two rows steep67.5degree front-right. Keep fully transparent empty background and gutters, no glow, no scenery, no shadows, no text or numbers. Entire horse and rider remain within each cell. Do not add, delete, crop or merge sprites. Production palette variant for an existing arcade game. Keep original image dimensions.",
+      "editTarget": "art/work/gameplay/r10/generated/h01-turn-r10.png",
+      "generated": "C:\\Users\\33272\\.codex\\generated_images\\01a16943-ca46-7a21-9fd6-fb8ef775f3b4\\exec-f9286f51-33d4-4cde-853d-75957961d1da.png",
+      "saved": "art/work/gameplay/r10/generated/h06-turn-r10.png"
+    }
+  ]
+}

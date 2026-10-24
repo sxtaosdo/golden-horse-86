@@ -1,0 +1,146 @@
+{
+  "note": "Frozen working-tree bytes used for stage-one build; no Runtime edits during build/Preview.",
+  "packageHash": "5a65fb9da328b716afd33e8a13e7df411fd847d7d966d9411c83bf1f3bfe9da1",
+  "files": [
+    {
+      "path": "assets/GoldenHorseGame.scene",
+      "sha256": "fe60c3bcefaf9d8fa4615589db08cb0dc6212f2b19041313d6deb04459bce73a"
+    },
+    {
+      "path": "assets/resources/race/equipment-catalog.json",
+      "sha256": "775a786ffba2610ba98db8d959fa5a6933b0e82e1cae36cd226969fc4e593588"
+    },
+    {
+      "path": "assets/resources/race/equipment-motion.json",
+      "sha256": "daba3ad736da83ec07f24e23f532446f016151021abaffde8ce8f10e0cad45db"
+    },
+    {
+      "path": "assets/resources/race/events.json",
+      "sha256": "073a58f1a89be7a3435dc2d124430d67c91bdec3762284e1ac85693d574ec7c4"
+    },
+    {
+      "path": "assets/resources/race/manifest.json",
+      "sha256": "47fab57a56d7c967dbd991d38cf13e12bbddc5d032f26feb73c4bc5c25cd2517"
+    },
+    {
+      "path": "assets/resources/race/pre-race-art.json",
+      "sha256": "bee7ed574a61a9b9da476e5435e211114e369e29c4aa293dd46edcef65f905b3"
+    },
+    {
+      "path": "assets/resources/race/turn/h01-turn-r10.png",
+      "sha256": "a99a455186ba23c64c7f4ed4013c18537b2c3ae05fe36146415ae6d7fb847f1d"
+    },
+    {
+      "path": "assets/resources/race/turn/h02-turn-r10.png",
+      "sha256": "0d042ecdf032964af81f6f80f976b1c09c29690ec2c1175e8d1bbb763605358a"
+    },
+    {
+      "path": "assets/resources/race/turn/h03-turn-r10.png",
+      "sha256": "e28fca4609e44498ecb3c4bdc52362930e642bb04a0c6acab17925a1a6571f14"
+    },
+    {
+      "path": "assets/resources/race/turn/h04-turn-r10.png",
+      "sha256": "0c4ba438e26c6449ed742d5f005e45a095d016596cc70b5890649e4a83410f61"
+    },
+    {
+      "path": "assets/resources/race/turn/h05-turn-r10.png",
+      "sha256": "19b522f8d1456464dab406c51e9aa1e0ec8c048c0f50b6c4e4197e9a38e8f3eb"
+    },
+    {
+      "path": "assets/resources/race/turn/h06-turn-r10.png",
+      "sha256": "53303aaa38bec83368731fe991eea43bf7744e2ee8a26798fb9e94dfe12df6a8"
+    },
+    {
+      "path": "assets/resources/race/turn-art.json",
+      "sha256": "ffa8b879c26c33cdea934437f566ee392eb0d632f9c2dbcd9bf7ce342e57e65c"
+    },
+    {
+      "path": "assets/scripts/events/RaceEventCatalog.ts",
+      "sha256": "e15466488daf2decfaf489b1421ff1ea28fcac1608a398b1bfcde9b763098662"
+    },
+    {
+      "path": "assets/scripts/GoldenHorseGame.ts",
+      "sha256": "fd66d287368e921084b16622a3cf6f84624ca482b0c98f1bf6ee9031da2acbe2"
+    },
+    {
+      "path": "assets/scripts/presentation/equipment/EquipmentAnimation.ts",
+      "sha256": "12b72dda3167914c0198b815a36485e569ce67094953ac7ba53ca073224d4c3f"
+    },
+    {
+      "path": "assets/scripts/presentation/equipment/EquipmentCatalog.ts",
+      "sha256": "f5d7de06c39d97493cf4deab4e29d87d7be9d48320f31a9d71c1befe44e095d4"
+    },
+    {
+      "path": "assets/scripts/presentation/equipment/EquipmentMotionCatalog.ts",
+      "sha256": "bea22ed629e0be012f8ba3dad76a20aea2f12e33491e1641f5c462800c628885"
+    },
+    {
+      "path": "assets/scripts/presentation/equipment/EquipmentScene.ts",
+      "sha256": "c2ed5a21d6bc29f7f5a8907e9f2aca85afd015bbdf4fa32c5713aa695deda1f4"
+    },
+    {
+      "path": "assets/scripts/presentation/equipment/RaceBroadcast.ts",
+      "sha256": "207708fb925a11e58ee8748e2efd8883348a4ae0c9062142f750754b642851b4"
+    },
+    {
+      "path": "assets/scripts/presentation/equipment/RaceLayers.ts",
+      "sha256": "e7d753d3300a62fc3cc06b80cdbd389995b51adee444f208b0bccc7b670a9bcd"
+    },
+    {
+      "path": "assets/scripts/presentation/equipment/RaceScreen.ts",
+      "sha256": "d678687625c7d4afc182d50e3acaffc63dd66cd23d542ff7186373efda263929"
+    },
+    {
+      "path": "assets/scripts/presentation/HorseSpriteView.ts",
+      "sha256": "b386d8a7aa3ec31f05ee877b94ccd71315f8fb2bd515f45a71c5d03f5fcb1b8e"
+    },
+    {
+      "path": "assets/scripts/presentation/MobileLayout.ts",
+      "sha256": "97c9dca4e0d17500f04e8fbdb25a0e05309bdf7023491f78665fac1e8fca1a54"
+    },
+    {
+      "path": "assets/scripts/presentation/PreRaceArtCatalog.ts",
+      "sha256": "fc8a6647cb10d15bec6b1c4873b3cba5926f56fe520a22389f3f36b5a4edb2d6"
+    },
+    {
+      "path": "assets/scripts/presentation/PreRaceAudio.ts",
+      "sha256": "f5da12b55d9dd019c7417ac1a92eabf164fe681b6124a7c66014522e022a78ba"
+    },
+    {
+      "path": "assets/scripts/presentation/PreRacePresentation.ts",
+      "sha256": "bc6bda09414ea3ad96ef5dc87592a7c0a9b8c4640418d46664d60bf2fbe35a62"
+    },
+    {
+      "path": "assets/scripts/presentation/RaceGroundEffects.ts",
+      "sha256": "d75f2e3c40d535bd8fe47f7be2114bb7632a6ead7e9507b9c495430017fe9d00"
+    },
+    {
+      "path": "assets/scripts/presentation/RacePages.ts",
+      "sha256": "1da6e367b360cc1e52b2d3f3aa1bc497ba0f680cac09930a6e5ade4a38011f05"
+    },
+    {
+      "path": "assets/scripts/presentation/RaceVisualAssets.ts",
+      "sha256": "567f4c9dcf54bfc7eb5fba24d198a565d7742adf6d6be8dcd687cb3c7b091e62"
+    },
+    {
+      "path": "assets/scripts/presentation/TurnArtCatalog.ts",
+      "sha256": "2a32ac9c4183a41a549f28cc38ea8dcc598c02fc6f2b615ba7ba36aa2992ac85"
+    },
+    {
+      "path": "assets/scripts/RaceModel.ts",
+      "sha256": "24dc419c0abc5ffeadeca7f883148edb170251a231352c9c86945eb456e69368"
+    },
+    {
+      "path": "assets/scripts/RaceTrackView.ts",
+      "sha256": "a1a15f378c06f58cd06f7493d3fef03e015c6b8b7510c595b15628d5449cf5bb"
+    },
+    {
+      "path": "assets/scripts/TrackVisual.ts",
+      "sha256": "e22d7138e6602e479942facbeefbc210434d294cb3ecd1447dc8d1ad814452ac"
+    },
+    {
+      "path": "assets/tests/GoldenHorseTestBridge.ts",
+      "sha256": "027a0fdac3ee2f947f77dbdbabf74e7e4c73f89bdefc646764d6ab3b20a17983"
+    }
+  ]
+}

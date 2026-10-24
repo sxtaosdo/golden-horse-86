@@ -24,3 +24,9 @@ art/final/gameplay/r09/countdown-r09.wav,pre-race-selected,"original procedural 
 art/final/gameplay/r09/broadcast-r09.wav,pre-race-selected,"original procedural PCM16; r09 audio-recipe.py",true
 art/final/gameplay/r09/latch-r09.wav,pre-race-selected,"original procedural PCM16; r09 audio-recipe.py",true
 art/final/gameplay/r09/hoof-r09.wav,pre-race-selected,"original procedural PCM16; r09 audio-recipe.py",true
+art/final/gameplay/r10/h01-turn-r10.png,turn-selected,"built-in image_gen; r10 production.json and palette-production.json",true
+art/final/gameplay/r10/h02-turn-r10.png,turn-selected,"built-in image_gen; r10 production.json and palette-production.json",true
+art/final/gameplay/r10/h03-turn-r10.png,turn-selected,"built-in image_gen; r10 production.json and palette-production.json",true
+art/final/gameplay/r10/h04-turn-r10.png,turn-selected,"built-in image_gen; r10 production.json and palette-production.json",true
+art/final/gameplay/r10/h05-turn-r10.png,turn-selected,"built-in image_gen; r10 production.json and palette-production.json",true
+art/final/gameplay/r10/h06-turn-r10.png,turn-selected,"built-in image_gen; r10 production.json and palette-production.json",true

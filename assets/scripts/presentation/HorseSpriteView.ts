@@ -3,7 +3,7 @@ import { HorsePose, HORSE_NOSE_X, HORSE_SCALE } from '../TrackVisual';
 import { RaceVisualAssets } from './RaceVisualAssets';
 import { RACE_WORLD_LAYER } from './equipment/RaceLayers';
 export class HorseSpriteView {
- readonly node:Node;private sprites:Sprite[]=[];private badge:Label;private shadow:Graphics;private shadowAngle=-1;private mode='running';private displayedFrame=0;
+ readonly node:Node;private sprites:Sprite[]=[];private badge:Label;private shadow:Graphics;private shadowAngle=-1;private mode='running';private displayedFrame=0;private direction=0;
  constructor(parent:Node,private horse:number,private assets:RaceVisualAssets){
   this.node=new Node('Horse_'+horse);this.node.layer=RACE_WORLD_LAYER;this.node.parent=parent;this.node.addComponent(UITransform);
   const ground=new Node('GroundShadow');ground.layer=RACE_WORLD_LAYER;ground.parent=this.node;ground.addComponent(UITransform);this.shadow=ground.addComponent(Graphics);
@@ -18,19 +18,23 @@ export class HorseSpriteView {
   const highlight=idle?.highlight??0;this.badge.color=highlight>0?new Color(255,255,240):new Color(255,231,105);this.badge.node.setScale(1+.08*highlight,1+.08*highlight,1);
   if(!running&&idle){
    const part=this.assets.preRaceCatalog.horses[this.horse-1],f=part.frames[idle.frame],sprite=this.sprites[0],size=sprite.node.getComponent(UITransform)!;
-   this.mode=idle.frame>=8?'ready':'idle';this.displayedFrame=idle.frame;sprite.spriteFrame=this.assets.preRaceFrames.get(part.resource)![idle.frame];sprite.color=new Color(255,255,255,255);
+   this.direction=0;this.mode=idle.frame>=8?'ready':'idle';this.displayedFrame=idle.frame;sprite.spriteFrame=this.assets.preRaceFrames.get(part.resource)![idle.frame];sprite.color=new Color(255,255,255,255);
    size.setContentSize(f.width,f.height);size.setAnchorPoint(f.anchor.x,f.anchor.y);sprite.node.setScale(1,1,1);return;
   }
   // Pixel-art directions switch at their halfway angle. Alpha mixing unrelated silhouettes creates ghost limbs.
-  const direction=Math.min(4,Math.round(pose.angle/(Math.PI/4)));
+  const direction=Math.min(8,Math.round(pose.angle/(Math.PI/8)));this.direction=direction;
   const views=['side','diagonal','front','diagonal','side'],frame=running?Math.floor(time*10)%8:0;
   this.mode='running';this.displayedFrame=frame;
-  [direction].forEach((v,i)=>{const s=this.sprites[i],sheet=this.assets.sheet(this.horse,views[v]),f=sheet.frames[frame],size=sheet.scale;
+  if(direction%2===1){
+   const horse=this.assets.turnCatalog.horses[this.horse-1],slot=direction===1||direction===7?0:1,f=horse.angles[slot].frames[frame],sprite=this.sprites[0],size=sprite.node.getComponent(UITransform)!;
+   sprite.spriteFrame=this.assets.turnFrames.get(horse.resource)![slot*8+frame];sprite.color=new Color(255,255,255,255);size.setContentSize(f.width,f.height);size.setAnchorPoint(f.anchor.x,f.anchor.y);sprite.node.setScale(direction>4?-1:1,1,1);return;
+  }
+  [direction/2].forEach((v,i)=>{const s=this.sprites[i],sheet=this.assets.sheet(this.horse,views[v]),f=sheet.frames[frame],size=sheet.scale;
    s.spriteFrame=this.assets.frames.get(sheet.name)![frame];s.color=new Color(255,255,255,255);
    const pivot=views[v]==='side'?f.nose-HORSE_NOSE_X/HORSE_SCALE/size:f.x+f.width*.5;
    s.node.getComponent(UITransform)!.setContentSize(f.width*size,f.height*size);s.node.getComponent(UITransform)!.setAnchorPoint((pivot-f.x)/f.width,0);
    s.node.setScale(v>=3?-1:1,1,1);
   });
  }
- get observation():Record<string,unknown>{return {mode:this.mode,frame:this.displayedFrame,highlight:this.badge.color.r===255&&this.badge.color.g===255};}
+ get observation():Record<string,unknown>{return {mode:this.mode,frame:this.displayedFrame,direction:this.direction,highlight:this.badge.color.r===255&&this.badge.color.g===255};}
 }

@@ -1,0 +1,16 @@
+{
+  "source": "built-in image_gen",
+  "assets": [
+    {
+      "horse": 1,
+      "prompt": "Production game sprite atlas, transparent background. Use the three reference images ONLY as identity/style/stride references. Same white racehorse #1 (no drawn numbers), black mane and tail, yellow saddle blanket, jockey red helmet and red jacket, white trousers, black boots, crisp hand shaded arcade pixel art matching references exactly. Create EXACTLY 16 separate complete horse+jockey sprites in a precisely regular 4 columns by 4 rows grid. Rows 1 and 2: eight sequential gallop poses, constant shallow 22.5 degree front-right view (halfway between strict right-facing side view and 45-degree front-right view). Rows 3 and 4: eight sequential gallop poses, constant 67.5 degree front-right view (halfway between 45-degree diagonal and directly front-facing toward viewer). Each two-row set matches the eight running phases in references. Only horse stride varies within a set; view direction constant. Each cell has exactly one whole horse and rider, same anatomical scale, ground/hoof pivot at same height within each cell. Clean 20% transparent padding all sides of each cell, large transparent gutters, no touching cell boundaries. Top two rows noticeably wider body profile than bottom two rows, whose nose points mostly toward viewer and slightly right. Transparent empty pixels everywhere outside sprites, no shadow, no background glow, no ground, no labels, no text or grid lines, no motion blur or translucent ghost limbs. Production 4x4 atlas, keep tail, ears and all hooves within each cell. Do not copy any black/red reference backgrounds.",
+      "references": [
+        "art/final/gameplay/r02/h01-side-r02.png",
+        "art/final/gameplay/r02/h01-diagonal-r02.png",
+        "art/final/gameplay/r02/h01-front-r02.png"
+      ],
+      "generated": "C:/Users/33272/.codex/generated_images/01a16943-ca46-7a21-9fd6-fb8ef775f3b4/exec-6b20af21-0eb4-49f8-914d-6ae2ccc962df.png",
+      "saved": "art/work/gameplay/r10/generated/h01-turn-r10.png"
+    }
+  ]
+}

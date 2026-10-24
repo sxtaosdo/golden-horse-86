@@ -1,0 +1,621 @@
+{
+  "schemaVersion": "cocos-tool-result-v1",
+  "operationId": "horse-upgrade-visual-build-smoke-20261024-r10",
+  "projectId": "9d8a0041f7873b81",
+  "tool": "build_smoke",
+  "status": "PASSED",
+  "data": {
+    "schemaVersion": "build-smoke-v1",
+    "ok": true,
+    "target": "web-mobile-build",
+    "outputDir": "D:\\code\\shidai3\\P4000\\golden-horse-86\\build\\web-mobile",
+    "indexHash": "d1b31de6ec47327a93c4f045efa1c1c15371641baf3a17b643d3083565f9d869",
+    "packageHash": "5a65fb9da328b716afd33e8a13e7df411fd847d7d966d9411c83bf1f3bfe9da1",
+    "startedAt": "2026-10-24T07:06:19.291Z",
+    "finishedAt": "2026-10-24T07:07:07.374Z",
+    "playtest": {
+      "ok": true,
+      "previewUrl": "http://127.0.0.1:8465/",
+      "finalUrl": "http://127.0.0.1:8465/",
+      "gameTestReady": false,
+      "steps": [
+        {
+          "index": 0,
+          "step": {
+            "type": "wait",
+            "durationMs": 10000
+          },
+          "ok": true,
+          "elapsedMs": 10007
+        },
+        {
+          "index": 1,
+          "step": {
+            "type": "pointer",
+            "action": "click",
+            "x": 300,
+            "y": 100
+          },
+          "ok": true,
+          "elapsedMs": 4
+        },
+        {
+          "index": 2,
+          "step": {
+            "type": "wait",
+            "durationMs": 100
+          },
+          "ok": true,
+          "elapsedMs": 106
+        },
+        {
+          "index": 3,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 2
+        },
+        {
+          "index": 4,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 5,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 6,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 7,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 8,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 9,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 10,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 11,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 4
+        },
+        {
+          "index": 12,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 2
+        },
+        {
+          "index": 13,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 14,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 15,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 16,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 17,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 18,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 19,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 20,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 21,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 22,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 0
+        },
+        {
+          "index": 23,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 24,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 5
+        },
+        {
+          "index": 25,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 26,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 27,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 28,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 29,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 30,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 314,
+            "y": 643
+          },
+          "ok": true,
+          "elapsedMs": 29
+        },
+        {
+          "index": 31,
+          "step": {
+            "type": "screenshot",
+            "label": "build-upgrade-visual-picker"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-upgrade-visual-picker-1792825590234.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T07:06:30.235Z"
+          },
+          "elapsedMs": 87
+        },
+        {
+          "index": 32,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 195,
+            "y": 497
+          },
+          "ok": true,
+          "elapsedMs": 29
+        },
+        {
+          "index": 33,
+          "step": {
+            "type": "wait",
+            "durationMs": 150
+          },
+          "ok": true,
+          "elapsedMs": 163
+        },
+        {
+          "index": 34,
+          "step": {
+            "type": "screenshot",
+            "label": "build-upgrade-visual-betting"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-upgrade-visual-betting-1792825590514.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T07:06:30.515Z"
+          },
+          "elapsedMs": 88
+        },
+        {
+          "index": 35,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 45,
+            "y": 550
+          },
+          "ok": true,
+          "elapsedMs": 32
+        },
+        {
+          "index": 36,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 338,
+            "y": 817
+          },
+          "ok": true,
+          "elapsedMs": 34
+        },
+        {
+          "index": 37,
+          "step": {
+            "type": "wait",
+            "durationMs": 700
+          },
+          "ok": true,
+          "elapsedMs": 707
+        },
+        {
+          "index": 38,
+          "step": {
+            "type": "screenshot",
+            "label": "build-upgrade-visual-preparing"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-upgrade-visual-preparing-1792825591356.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T07:06:31.357Z"
+          },
+          "elapsedMs": 68
+        },
+        {
+          "index": 39,
+          "step": {
+            "type": "wait",
+            "durationMs": 1500
+          },
+          "ok": true,
+          "elapsedMs": 1504
+        },
+        {
+          "index": 40,
+          "step": {
+            "type": "screenshot",
+            "label": "build-upgrade-visual-near-hold"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-upgrade-visual-near-hold-1792825592942.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T07:06:32.943Z"
+          },
+          "elapsedMs": 82
+        },
+        {
+          "index": 41,
+          "step": {
+            "type": "wait",
+            "durationMs": 1800
+          },
+          "ok": true,
+          "elapsedMs": 1807
+        },
+        {
+          "index": 42,
+          "step": {
+            "type": "screenshot",
+            "label": "build-upgrade-visual-live"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-upgrade-visual-live-1792825594839.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T07:06:34.840Z"
+          },
+          "elapsedMs": 90
+        },
+        {
+          "index": 43,
+          "step": {
+            "type": "wait",
+            "durationMs": 26000
+          },
+          "ok": true,
+          "elapsedMs": 26005
+        },
+        {
+          "index": 44,
+          "step": {
+            "type": "screenshot",
+            "label": "build-upgrade-visual-result"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-upgrade-visual-result-1792825620890.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T07:07:00.891Z"
+          },
+          "elapsedMs": 46
+        },
+        {
+          "index": 45,
+          "step": {
+            "type": "wait",
+            "durationMs": 5500
+          },
+          "ok": true,
+          "elapsedMs": 5513
+        },
+        {
+          "index": 46,
+          "step": {
+            "type": "screenshot",
+            "label": "build-upgrade-visual-runout"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-upgrade-visual-runout-1792825626465.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T07:07:06.466Z"
+          },
+          "elapsedMs": 62
+        },
+        {
+          "index": 47,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 338,
+            "y": 817
+          },
+          "ok": true,
+          "elapsedMs": 11
+        },
+        {
+          "index": 48,
+          "step": {
+            "type": "wait",
+            "durationMs": 500
+          },
+          "ok": true,
+          "elapsedMs": 507
+        },
+        {
+          "index": 49,
+          "step": {
+            "type": "screenshot",
+            "label": "build-upgrade-visual-next-round"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-upgrade-visual-next-round-1792825627034.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T07:07:07.034Z"
+          },
+          "elapsedMs": 50
+        },
+        {
+          "index": 50,
+          "step": {
+            "type": "runtime_snapshot",
+            "required": false
+          },
+          "ok": true,
+          "skipped": true,
+          "elapsedMs": 2
+        }
+      ],
+      "consoleErrors": [],
+      "diagnostics": {
+        "consoleErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "pageErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "requestFailures": {
+          "count": 0,
+          "samples": []
+        },
+        "httpErrors": {
+          "count": 0,
+          "samples": []
+        }
+      },
+      "reportPath": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\playtests\\playtest-1792825627037.json",
+      "message": "Playtest passed (51 step(s))",
+      "session": {
+        "mode": "isolated",
+        "reusedBrowser": false,
+        "reusedPage": false,
+        "pageReset": "none"
+      },
+      "timing": {
+        "setupMs": 673,
+        "stepsMs": 47069,
+        "totalMs": 47744
+      }
+    }
+  },
+  "evidence": []
+}

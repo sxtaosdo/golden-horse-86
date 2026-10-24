@@ -1,0 +1,49 @@
+{
+  "status": "integrated-local-runtime-verified",
+  "source": "built-in image_gen",
+  "assets": [
+    {
+      "horse": 1,
+      "source": "art/work/gameplay/r10/generated/h01-turn-r10.png",
+      "file": "h01-turn-r10.png",
+      "runtime": "assets/resources/race/turn/h01-turn-r10.png",
+      "sha256": "a99a455186ba23c64c7f4ed4013c18537b2c3ae05fe36146415ae6d7fb847f1d"
+    },
+    {
+      "horse": 2,
+      "source": "art/work/gameplay/r10/generated/h02-turn-r10.png",
+      "file": "h02-turn-r10.png",
+      "runtime": "assets/resources/race/turn/h02-turn-r10.png",
+      "sha256": "0d042ecdf032964af81f6f80f976b1c09c29690ec2c1175e8d1bbb763605358a"
+    },
+    {
+      "horse": 3,
+      "source": "art/work/gameplay/r10/generated/h03-turn-r10.png",
+      "file": "h03-turn-r10.png",
+      "runtime": "assets/resources/race/turn/h03-turn-r10.png",
+      "sha256": "e28fca4609e44498ecb3c4bdc52362930e642bb04a0c6acab17925a1a6571f14"
+    },
+    {
+      "horse": 4,
+      "source": "art/work/gameplay/r10/generated/h04-turn-r10.png",
+      "file": "h04-turn-r10.png",
+      "runtime": "assets/resources/race/turn/h04-turn-r10.png",
+      "sha256": "0c4ba438e26c6449ed742d5f005e45a095d016596cc70b5890649e4a83410f61"
+    },
+    {
+      "horse": 5,
+      "source": "art/work/gameplay/r10/generated/h05-turn-r10.png",
+      "file": "h05-turn-r10.png",
+      "runtime": "assets/resources/race/turn/h05-turn-r10.png",
+      "sha256": "19b522f8d1456464dab406c51e9aa1e0ec8c048c0f50b6c4e4197e9a38e8f3eb"
+    },
+    {
+      "horse": 6,
+      "source": "art/work/gameplay/r10/generated/h06-turn-r10.png",
+      "file": "h06-turn-r10.png",
+      "runtime": "assets/resources/race/turn/h06-turn-r10.png",
+      "sha256": "53303aaa38bec83368731fe991eea43bf7744e2ee8a26798fb9e94dfe12df6a8"
+    }
+  ],
+  "verification": "tests/UPGRADE.md"
+}
