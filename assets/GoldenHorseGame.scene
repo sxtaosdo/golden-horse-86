@@ -1294,9 +1294,9 @@
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 62,
-    "_fontSize": 62,
+    "_fontSize": 42,
     "_fontFamily": "Arial",
-    "_lineHeight": 64,
+    "_lineHeight": 46,
     "_overflow": 2,
     "_enableWrapText": true,
     "_font": null,
@@ -1354,7 +1354,7 @@
     "_lpos": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -64,
+      "y": -60,
       "z": 0
     },
     "_lrot": {
@@ -1393,7 +1393,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 570,
-      "height": 36
+      "height": 62
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1426,9 +1426,9 @@
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 25,
-    "_fontSize": 25,
+    "_fontSize": 24,
     "_fontFamily": "Arial",
-    "_lineHeight": 27,
+    "_lineHeight": 28,
     "_overflow": 2,
     "_enableWrapText": true,
     "_font": null,
@@ -14340,7 +14340,7 @@
     "_string": "帮助",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 25,
+    "_actualFontSize": 26,
     "_fontSize": 25,
     "_fontFamily": "Arial",
     "_lineHeight": 28,

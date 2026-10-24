@@ -5,6 +5,10 @@ const rgba=hex=>({r:parseInt(hex.slice(1,3),16),g:parseInt(hex.slice(3,5),16),b:
 const node=(name,w,h,x=0,y=0,children=[])=>({name,size:{width:w,height:h},position:{x,y},children});
 function text(name,string,w,h,x,y,size){labels.push([name,size]);return {...node(name,w,h,x,y),type:'label',label:{string,fontSize:size,color:rgba('#ffe192')}};}
 function box(name,w,h,x,y,color,children=[]){colors.push([name,color]);return {...node(name,w,h,x,y,children),type:'sprite',sprite:{spriteFrameUuid:white,sizeMode:'CUSTOM'}};}
+if(process.argv[2]==='finish'){
+ const ops=[{op:'upsertComponent',target:'name:ResultText',type:'cc.Label',properties:{fontSize:42,lineHeight:46}},{op:'upsertComponent',target:'name:ResultOdds',type:'cc.UITransform',properties:{contentSize:{$type:'Size',width:570,height:62}}},{op:'upsertComponent',target:'name:ResultOdds',type:'cc.Label',properties:{fontSize:24,lineHeight:28}},{op:'setProperty',target:'name:ResultOdds',component:'cc.Node',property:'position',value:{$type:'Vec3',x:0,y:-60,z:0}}];
+ const out=call('scene_apply_patch',{expectedRevision:call('scene_get_tree',{}).revision,operations:ops,verify:true,save:true});console.log('Saved full result',out.after?.revision);process.exit(0);
+}
 if(process.argv[2]==='help'){
  const ref=name=>({$type:'NodeReference',semanticKey:'name:'+name});
  call('ui_build_tree',{parent:{name:'BetPanel'},expectedRevision:call('scene_get_tree',{}).revision,verify:true,save:true,tree:box('HelpButton',144,94,288,-94,'#203137',[text('HelpButtonText','帮助',138,88,0,0,25)])});

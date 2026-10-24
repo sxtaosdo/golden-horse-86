@@ -88,3 +88,10 @@ Creator保存重开rev-5aeb6db5；upgrade-help-390-result.json21步PASSED、诊�
 resolve仅记录1/10场及首次地区/冠军，积分规则不变。临时提示不入档，restore静默；新旅程保留累计。旧v1缺字段仅从保留history推导已知下界，不虚构更早成绩。Milestones.test覆盖四目标、无奖金、恢复/迁移静默及重启保留；完整core、strict与网页重生成Smoke通过。
 
 Creator编译errors[]；upgrade-milestones-390-result.json17步PASSED、诊断0，首次完赛提示与累计菜单截图目视正确。reviewer /root/horse_build_review 显式父OCR无确定缺陷，权限隔离未核验。最终正式同包待V4/V6整合；声音听感未验。
+
+
+## V4 冠亚过线与完整结算
+
+finishers只推导progress>=1的马，按实际完成时刻排序；号码与HUD实际过线才强调，结算仍六马+0.65原时点。完整结算取receipt押/返/净/order。FinishEmphasis实际组件验证冠亚仍racing/余额未返，之后返80一次及restore不再付；RaceSnapshot/TurnArtwork/strict和网页Smoke通过。
+
+Creator保存重开rev-140fc6ca。第一次Preview引擎bare cc加载失败，经官方preview_reload恢复，不计通过；upgrade-finish-390-result.json最终32步PASSED、四类诊断0，冠亚两窄窗口均原生观察，押15返20净+5。六马2/5/1/6/4/3与结果一致，clippedFinishers0/worldChanges0，冠亚及完整结算截图已目视。reviewer /root/horse_build_review 父OCR无确定缺陷，权限隔离未核验；最终构建待V6。

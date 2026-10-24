@@ -280,6 +280,8 @@ class RaceModel {
     get totalStake() { return this.cells.reduce((s, c) => s + c.stake, 0); }
     /** Current course leader; never reads the pre-drawn finishing order. Ties use horse number. */
     get leaderIndex() { return this.progress.reduce((best, p, i) => p > this.progress[best] ? i : best, 0); }
+    /** Publish a place only after that horse physically reaches the finish. */
+    get finishers() { return this.phase === 'racing' || this.phase === 'result' ? this.progress.map((p, i) => ({ p, i })).filter(h => h.p >= 1).sort((a, b) => this.finishTimes[a.i] - this.finishTimes[b.i]).map(h => h.i + 1) : []; }
     get eventId() { return this.selectedEventId; }
     get eventTiers() { return this.events?.tiers ?? []; }
     get eventName() { return this.eventTiers.find(t => t.id === this.selectedEventId)?.name ?? ''; }
