@@ -31,3 +31,11 @@ RaceChoreography使用独立演出种子，按实际归一化进度计算有界�
 ## F0 不可变结算明细
 
 RaceResult新增bets/odds/net，冻结完整名次、明细数组/各条和结果本体；结算时复制标量，下一场cells不能污染旧记录。RaceReceipt.test验证总押7/返80/净73、不可修改及跨场变更不污染，strict通过。reviewer `/root/horse_build_review`经显式父OCR审查无确定缺陷，未运行Creator或写入；cwd/Git根产品仓，权限隔离未核验。本切片不新增UI，真实消费随F1/F4整合验证。
+
+## F1 快捷押分与整套沿用
+
+1/5/10分循环档位，长按400ms后每120ms重复；只有同指针可终止自身输入，出格/取消/清空/开跑/销毁清理。沿用读取F0不可变明细，余额加本场押分整套校验后替换，失败原样保留，重复调用幂等。面板显示锁押分，切撤销/开历史/赛事立即取消长按。模型message实际显示，避免余额不足仅播放声音却无文字。
+
+RepeatBets/BetHold/实际GoldenHorseGame接线QuickInput测试、全部npm test与strict通过。reviewer `/root/horse_build_review`经显式父OCR发现双指切撤销/面板不取消旧hold的P2，已修复并复审关闭；有效权限隔离未核验。QuickInput使用实际onLoad回调复现原路径，不模拟时间推进。Creator新增两控件及引用，移动右侧文字腾出位置，保存重开revision rev-6efc838e确认，RaceHost不动；scene/meta均由Creator生成。
+
+真实Preview revision upgrade-quick-v1，[390](upgrade-quick-390-result.json)、[360](upgrade-quick-360-result.json)、[430](upgrade-quick-430-result.json)55/30/30共115步通过，原生drag100步在三个尺寸均实际长按连押12分，再验证5/10档、撤销、切回1档。390完整局后沿用3分、重复仍3、新加后替换回3、清分后不足拒绝；四类诊断0。修复后的[19步面板回归](upgrade-quick-panels-result.json)确认历史下不能押、赛事选择仍能关闭并恢复押分。各初始probe另存，不混作整局证据。[三尺寸控件与已押](evidence/upgrade-quick/upgrade-quick-390-stakes.png)、[沿用](evidence/upgrade-quick/upgrade-quick-repeat.png)、[不足](evidence/upgrade-quick/upgrade-quick-insufficient.png)归档。正式功能阶段构建仍待存档/恢复/设置等整合，不复用阶段一产物证明本UI。

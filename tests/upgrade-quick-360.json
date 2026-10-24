@@ -1,0 +1,187 @@
+{
+  "viewport": {
+    "width": 360,
+    "height": 640
+  },
+  "steps": [
+    {
+      "type": "wait",
+      "durationMs": 1500
+    },
+    {
+      "type": "ui",
+      "action": "click",
+      "target": "#view-select:visible, body:not(:has(#view-select:visible))"
+    },
+    {
+      "type": "ui",
+      "action": "click",
+      "target": "li[data-device=WebpageFullScreen]:visible, body:not(:has(li[data-device=WebpageFullScreen]:visible))"
+    },
+    {
+      "type": "wait_ready"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "revision": "upgrade-quick-v1",
+        "horseFrames": 144,
+        "equipment": {
+          "typeCount": 4
+        },
+        "preRaceFrames": 66,
+        "preAudio": {
+          "loaded": 5
+        }
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "pointer",
+      "action": "drag",
+      "x": 42,
+      "y": 372,
+      "toX": 42,
+      "toY": 372,
+      "steps": 100
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 137,
+      "y": 615
+    },
+    {
+      "type": "assert_state",
+      "expect": {
+        "totalStake": 0
+      }
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 318,
+      "y": 417
+    },
+    {
+      "type": "assert_state",
+      "expect": {
+        "stakeUnit": 5
+      }
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 42,
+      "y": 372
+    },
+    {
+      "type": "assert_state",
+      "expect": {
+        "totalStake": 5
+      }
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 318,
+      "y": 417
+    },
+    {
+      "type": "assert_state",
+      "expect": {
+        "stakeUnit": 10
+      }
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 111,
+      "y": 372
+    },
+    {
+      "type": "assert_state",
+      "expect": {
+        "totalStake": 15
+      }
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 50,
+      "y": 615
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 111,
+      "y": 372
+    },
+    {
+      "type": "assert_state",
+      "expect": {
+        "totalStake": 5
+      }
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 50,
+      "y": 615
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 318,
+      "y": 417
+    },
+    {
+      "type": "assert_state",
+      "expect": {
+        "stakeUnit": 1
+      }
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 137,
+      "y": 615
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 42,
+      "y": 372
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 318,
+      "y": 372
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 42,
+      "y": 372
+    },
+    {
+      "type": "assert_state",
+      "expect": {
+        "totalStake": 3
+      }
+    },
+    {
+      "type": "screenshot",
+      "label": "upgrade-quick-360-stakes"
+    }
+  ]
+}

@@ -5,6 +5,18 @@ const rgba=hex=>({r:parseInt(hex.slice(1,3),16),g:parseInt(hex.slice(3,5),16),b:
 const node=(name,w,h,x=0,y=0,children=[])=>({name,size:{width:w,height:h},position:{x,y},children});
 function text(name,string,w,h,x,y,size){labels.push([name,size]);return {...node(name,w,h,x,y),type:'label',label:{string,fontSize:size,color:rgba('#ffe192')}};}
 function box(name,w,h,x,y,color,children=[]){colors.push([name,color]);return {...node(name,w,h,x,y,children),type:'sprite',sprite:{spriteFrameUuid:white,sizeMode:'CUSTOM'}};}
+if(process.argv[2]==='quick'){
+ const current=call('scene_get_tree',{}),has=(nodes,name)=>nodes.some(n=>n.name===name||has(n.children,name));if(has(current.roots,'StakeUnit'))throw Error('Quick controls already exist');
+ const quick=[box('StakeUnit',144,94,288,94,'#203137',[text('StakeUnitText','每次 1 分\n切换档位',138,88,0,0,23)]),box('RepeatBets',144,94,0,-94,'#203137',[text('RepeatBetsText','沿用上场\n整套替换',138,88,0,0,23)])];
+ call('ui_build_tree',{parent:{name:'BetPanel'},expectedRevision:current.revision,verify:true,save:true,tree:node('QuickControls',750,534,0,0,quick)});
+ const ref=name=>({$type:'NodeReference',semanticKey:'name:'+name}),label=name=>({$type:'ComponentReference',node:'name:'+name,type:'cc.Label'}),ops=[];
+ for(const [name,color] of colors)ops.push({op:'setProperty',target:'name:'+name,component:'cc.Sprite',property:'color',value:{$type:'Color',...rgba(color)}});
+ for(const [name,size] of labels)ops.push({op:'upsertComponent',target:'name:'+name,type:'cc.Label',properties:{horizontalAlign:1,verticalAlign:1,fontFamily:'Arial',lineHeight:size+3,overflow:2}});
+ for(const [name,x,y] of [['EventButton',230,0],['Credits',145,-164],['Message',145,-207],['Legend',145,-245]])ops.push({op:'setProperty',target:'name:'+name,component:'cc.Node',property:'position',value:{$type:'Vec3',x,y,z:0}});
+ for(const [name,height,fontSize] of [['Credits',40,26],['Message',32,21],['Legend',24,20]]){ops.push({op:'upsertComponent',target:'name:'+name,type:'cc.UITransform',properties:{contentSize:{$type:'Size',width:370,height}}});ops.push({op:'upsertComponent',target:'name:'+name,type:'cc.Label',properties:{fontSize,lineHeight:fontSize+2}});}
+ ops.push({op:'upsertComponent',target:'GoldenHorseGame',type:'GoldenHorseGame',properties:{quickButtons:[ref('StakeUnit'),ref('RepeatBets')],quickLabels:[label('StakeUnitText'),label('RepeatBetsText')],oddsHeader:label('OddsHeader')}});
+ const out=call('scene_apply_patch',{expectedRevision:call('scene_get_tree',{}).revision,operations:ops,verify:true,save:true});fs.writeFileSync(path.join(temp,'quick-ui-result.json'),JSON.stringify(out,null,2));console.log('Saved quick bet controls',out.revision);process.exit(0);
+}
 const snapshot=call('scene_get_tree',{});
 const find=(nodes,name)=>nodes.some(n=>n.name===name||find(n.children,name));
 if(find(snapshot.roots,'EventButton'))throw Error('Event UI already exists; edit the existing nodes instead of duplicating them');

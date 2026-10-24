@@ -51,7 +51,7 @@ export class RaceModel {
   preparationRemaining=0;
   private selectedEventId:RaceEventId='station';
   private readonly events:RaceEventRules|undefined;
-  message = '点击号码组合押分 / Enter 开跑';
+  message = '选择前二号码组合押分';
   lastResult: RaceResult | null = null;
   history: RaceResult[] = [];
 
@@ -139,6 +139,17 @@ export class RaceModel {
     this.credits += this.totalStake;
     this.cells.forEach(c => c.stake = 0);
     this.message = '本局押分已清空';
+  }
+  /** Replace as a single transaction. A failed rebet preserves every current cell. */
+  repeatLastBets():boolean{
+    if(this.phase!=='betting')return false;
+    const bets=this.history[0]?.bets;
+    if(!bets?.length){this.message='暂无上场押分';return false;}
+    const cost=bets.reduce((sum,b)=>sum+b.stake,0),available=this.credits+this.totalStake;
+    if(!Number.isSafeInteger(cost)||cost<=0||available<cost){this.message='积分不足，原押分保留';return false;}
+    const amounts=new Map(bets.map(b=>[b.key,b.stake]));
+    this.credits=available-cost;for(const cell of this.cells)cell.stake=amounts.get(cell.key)??0;
+    this.message='已沿用上场 '+cost+' 分';return true;
   }
   /** Simulation of the old clear-score key: no cash-out functionality. */
   clearCredits(): void {

@@ -164,7 +164,7 @@ class RaceModel {
         this.round = 1;
         this.preparationRemaining = 0;
         this.selectedEventId = 'station';
-        this.message = '点击号码组合押分 / Enter 开跑';
+        this.message = '选择前二号码组合押分';
         this.lastResult = null;
         this.history = [];
         this.finishTimes = [18, 18, 18, 18, 18, 18];
@@ -259,6 +259,27 @@ class RaceModel {
         this.cells.forEach(c => c.stake = 0);
         this.message = '本局押分已清空';
     }
+    /** Replace as a single transaction. A failed rebet preserves every current cell. */
+    repeatLastBets() {
+        if (this.phase !== 'betting')
+            return false;
+        const bets = this.history[0]?.bets;
+        if (!bets?.length) {
+            this.message = '暂无上场押分';
+            return false;
+        }
+        const cost = bets.reduce((sum, b) => sum + b.stake, 0), available = this.credits + this.totalStake;
+        if (!Number.isSafeInteger(cost) || cost <= 0 || available < cost) {
+            this.message = '积分不足，原押分保留';
+            return false;
+        }
+        const amounts = new Map(bets.map(b => [b.key, b.stake]));
+        this.credits = available - cost;
+        for (const cell of this.cells)
+            cell.stake = amounts.get(cell.key) ?? 0;
+        this.message = '已沿用上场 ' + cost + ' 分';
+        return true;
+    }
     /** Simulation of the old clear-score key: no cash-out functionality. */
     clearCredits() {
         if (this.phase !== 'betting')
@@ -349,7 +370,7 @@ class RaceModel {
         }
     }
     resolve() {
-        const order = this.pendingOrder.slice();
+        const order = Object.freeze(this.pendingOrder.slice());
         const first = order[0], second = order[1];
         const pair = this.pairMode === 'unordered'
             ? RaceModel.normalizedPair(first, second) : `${first}-${second}`;
@@ -357,7 +378,8 @@ class RaceModel {
         const stake = this.totalStake;
         const payout = winCell ? winCell.stake * winCell.odds : 0;
         this.credits += payout;
-        const result = { first, second, order, pair, payout, stake, round: this.round, eventId: this.selectedEventId };
+        const bets = Object.freeze(this.cells.filter(c => c.stake > 0).map(c => Object.freeze({ key: c.key, stake: c.stake, odds: c.odds })));
+        const result = Object.freeze({ first, second, order, pair, payout, stake, round: this.round, eventId: this.selectedEventId, bets, odds: winCell?.odds ?? 0, net: payout - stake });
         this.lastResult = result;
         this.history.unshift(result);
         if (this.history.length > 20)

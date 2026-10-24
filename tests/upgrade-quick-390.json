@@ -1,0 +1,330 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "steps": [
+    {
+      "type": "wait",
+      "durationMs": 1500
+    },
+    {
+      "type": "ui",
+      "action": "click",
+      "target": "#view-select:visible, body:not(:has(#view-select:visible))"
+    },
+    {
+      "type": "ui",
+      "action": "click",
+      "target": "li[data-device=WebpageFullScreen]:visible, body:not(:has(li[data-device=WebpageFullScreen]:visible))"
+    },
+    {
+      "type": "wait_ready"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "revision": "upgrade-quick-v1",
+        "horseFrames": 144,
+        "equipment": {
+          "typeCount": 4
+        },
+        "preRaceFrames": 66,
+        "preAudio": {
+          "loaded": 5
+        }
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "pointer",
+      "action": "drag",
+      "x": 45,
+      "y": 553,
+      "toX": 45,
+      "toY": 553,
+      "steps": 100
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 148,
+      "y": 817
+    },
+    {
+      "type": "assert_state",
+      "expect": {
+        "totalStake": 0
+      }
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 345,
+      "y": 602
+    },
+    {
+      "type": "assert_state",
+      "expect": {
+        "stakeUnit": 5
+      }
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 45,
+      "y": 553
+    },
+    {
+      "type": "assert_state",
+      "expect": {
+        "totalStake": 5
+      }
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 345,
+      "y": 602
+    },
+    {
+      "type": "assert_state",
+      "expect": {
+        "stakeUnit": 10
+      }
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 120,
+      "y": 553
+    },
+    {
+      "type": "assert_state",
+      "expect": {
+        "totalStake": 15
+      }
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 55,
+      "y": 817
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 120,
+      "y": 553
+    },
+    {
+      "type": "assert_state",
+      "expect": {
+        "totalStake": 5
+      }
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 55,
+      "y": 817
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 345,
+      "y": 602
+    },
+    {
+      "type": "assert_state",
+      "expect": {
+        "stakeUnit": 1
+      }
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 148,
+      "y": 817
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 45,
+      "y": 553
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 345,
+      "y": 553
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 45,
+      "y": 553
+    },
+    {
+      "type": "assert_state",
+      "expect": {
+        "totalStake": 3
+      }
+    },
+    {
+      "type": "screenshot",
+      "label": "upgrade-quick-390-stakes"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 335,
+      "y": 817
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "preparing"
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 45,
+      "y": 553
+    },
+    {
+      "type": "assert_state",
+      "expect": {
+        "totalStake": 3
+      }
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "result"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "wait",
+      "durationMs": 6200
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 335,
+      "y": 817
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "betting",
+        "round": 2
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 195,
+      "y": 700
+    },
+    {
+      "type": "assert_state",
+      "expect": {
+        "totalStake": 3
+      }
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 195,
+      "y": 700
+    },
+    {
+      "type": "assert_state",
+      "expect": {
+        "totalStake": 3
+      }
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 120,
+      "y": 553
+    },
+    {
+      "type": "assert_state",
+      "expect": {
+        "totalStake": 4
+      }
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 195,
+      "y": 700
+    },
+    {
+      "type": "assert_state",
+      "expect": {
+        "totalStake": 3
+      }
+    },
+    {
+      "type": "screenshot",
+      "label": "upgrade-quick-repeat"
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F12"
+    },
+    {
+      "type": "assert_state",
+      "expect": {
+        "credits": 0,
+        "totalStake": 0
+      }
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 195,
+      "y": 700
+    },
+    {
+      "type": "assert_state",
+      "expect": {
+        "credits": 0,
+        "totalStake": 0
+      }
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "upgrade-quick-insufficient"
+    }
+  ]
+}
