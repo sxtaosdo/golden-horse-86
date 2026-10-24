@@ -27,3 +27,7 @@ RaceChoreography使用独立演出种子，按实际归一化进度计算有界�
 构建operation horse-upgrade-visual-web-20261024-r10，[状态](upgrade-visual-build-status.json)passed/builderFinished=true/runnerExitCode36，非debug；packageHash `5a65fb9da328b716afd33e8a13e7df411fd847d7d966d9411c83bf1f3bfe9da1`。[同包Smoke](upgrade-visual-build-smoke-result.json)51步中50执行、1可选runtime_snapshot跳过，gameTestReady=false、四类诊断0；产物截图在evidence/upgrade-visual/build-upgrade-visual-*。正式产物无Preview桥，不用Smoke证明自动排序/帧数。
 
 构建sourceRevision为此前HEAD eed503e，来自本次工作树；[35项冻结源码哈希](upgrade-visual-source.json)记录阶段一实际字节，构建及三尺寸实跑期间未改Runtime。reviewer `/root/horse_build_review`执行显式父规则OCR资源/代码审查，无确定缺陷；有效权限隔离未核验。阶段一完成，后续功能按计划推进，声音听感仍未验。
+
+## F0 不可变结算明细
+
+RaceResult新增bets/odds/net，冻结完整名次、明细数组/各条和结果本体；结算时复制标量，下一场cells不能污染旧记录。RaceReceipt.test验证总押7/返80/净73、不可修改及跨场变更不污染，strict通过。reviewer `/root/horse_build_review`经显式父OCR审查无确定缺陷，未运行Creator或写入；cwd/Git根产品仓，权限隔离未核验。本切片不新增UI，真实消费随F1/F4整合验证。

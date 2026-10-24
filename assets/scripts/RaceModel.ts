@@ -16,10 +16,12 @@ export interface RaceOptions {
   presentationSeed?: number;
 }
 export interface RaceResult {
-  first: number; second: number; order: number[];
-  pair: string; payout: number; stake: number;
-  round:number;eventId:RaceEventId;
+  readonly first: number; readonly second: number; readonly order: readonly number[];
+  readonly pair: string; readonly payout: number; readonly stake: number;
+  readonly round:number;readonly eventId:RaceEventId;
+  readonly bets:readonly BetReceipt[];readonly odds:number;readonly net:number;
 }
+export interface BetReceipt {readonly key:string;readonly stake:number;readonly odds:number;}
 export interface BetCell {
   first: number; second: number; key: string; odds: number; stake: number;
 }
@@ -200,7 +202,7 @@ export class RaceModel {
     }
   }
   private resolve(): void {
-    const order = this.pendingOrder.slice();
+    const order = Object.freeze(this.pendingOrder.slice());
     const first = order[0], second = order[1];
     const pair = this.pairMode === 'unordered'
       ? RaceModel.normalizedPair(first,second) : `${first}-${second}`;
@@ -208,7 +210,8 @@ export class RaceModel {
     const stake = this.totalStake;
     const payout = winCell ? winCell.stake * winCell.odds : 0;
     this.credits += payout;
-    const result = { first,second,order,pair,payout,stake,round:this.round,eventId:this.selectedEventId };
+    const bets=Object.freeze(this.cells.filter(c=>c.stake>0).map(c=>Object.freeze({key:c.key,stake:c.stake,odds:c.odds})));
+    const result:RaceResult=Object.freeze({ first,second,order,pair,payout,stake,round:this.round,eventId:this.selectedEventId,bets,odds:winCell?.odds??0,net:payout-stake });
     this.lastResult = result;
     this.history.unshift(result);
     if (this.history.length > 20) this.history.length=20;
