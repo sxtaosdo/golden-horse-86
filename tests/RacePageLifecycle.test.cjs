@@ -11,13 +11,13 @@ function load(file,dependencies){
 const framework=load('extensions/shidai3/assets/runtime/stateMachine.ts',{});
 const pages=load('assets/scripts/presentation/RacePages.ts',{});
 let finishLoad,failLoad;const audioLoads=[];
-const cc={_decorator:{ccclass:()=>Type=>Type,property:()=>()=>{}},Component:class {isValid=true;},view:{off(){}},resources:{load(url,type,callback){audioLoads.push(callback);}},input:{off(){}},Input:{EventType:{KEY_DOWN:1,KEY_UP:2}}};
+const cc={_decorator:{ccclass:()=>Type=>Type,property:()=>()=>{}},Component:class {isValid=true;},view:{off(){}},resources:{load(url,type,callback){audioLoads.push(callback);}},input:{off(){}},Input:{EventType:{KEY_DOWN:1,KEY_UP:2}},Game:{EVENT_HIDE:'hide',EVENT_SHOW:'show'},game:{off(){}}};
 const component=load('assets/scripts/GoldenHorseGame.ts',{
  cc,'cc/env':{PREVIEW:false},'db://shidai3/runtime/stateMachine':framework,
  '../tests/GoldenHorseTestBridge':{},'./RaceModel':require('../.test/RaceModel.js'),
  './RaceTrackView':{},'./TrackVisual':require('../.test/TrackVisual.js'),'./presentation/RacePages':pages,
  './presentation/RaceVisualAssets':{RaceVisualAssets:class {load(){return new Promise((resolve,reject)=>{finishLoad=resolve;failLoad=reject;});}dispose(){}}},'./presentation/HorseSpriteView':{},'./presentation/MobileLayout':{},
- './presentation/PreRacePresentation':require('../.test/presentation/PreRacePresentation.js'),'./presentation/PreRaceAudio':{},'./presentation/RaceGroundEffects':{},'./presentation/BetHold':require('../.test/presentation/BetHold.js'),
+ './presentation/PreRacePresentation':require('../.test/presentation/PreRacePresentation.js'),'./presentation/PreRaceAudio':{},'./presentation/RaceGroundEffects':{},'./presentation/BetHold':require('../.test/presentation/BetHold.js'),'./presentation/GameAudio':{},'./session/RaceArchive':require('../.test/session/RaceArchive.js'),'./session/PlayerSettings':require('../.test/session/PlayerSettings.js'),
  './presentation/equipment/EquipmentScene':{},'./presentation/equipment/RaceScreen':{}
 });
 (async()=>{

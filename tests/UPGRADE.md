@@ -49,3 +49,16 @@ RepeatBets/BetHold/实际GoldenHorseGame接线QuickInput测试、全部npm test�
 RaceModel导出全部规则状态、已抽顺序/完成时刻、演出种子及历史；恢复经强校验，phase=result直接载入不可变结果，不调用resolve。RaceSnapshot.test逐步覆盖四阶段及完整赛程、恢复0次RNG/相同进度/反复结果不再付、坏账与数组阶段拒绝。RaceArchive.test覆盖单键写、失败保留原键、双实例独占、释放/重试、坏档备份、临时模式及晚到锁回调；设置范围校验。strict和遗留网页重生成Smoke通过；Creator导入session与Model，编译errors[]。
 
 reviewer `/root/horse_build_review`经显式父OCR发现阶段数组误收、晚到锁回调覆盖临时两P2，已修复、补定向并复审关闭。cwd/Git根产品仓，权限隔离未核验。此切片仅提供核心API，未接入应用读写/隐藏恢复；实际持久化、面板和音源生命周期由F3验收，不以mock锁测试代替浏览器验证。
+
+
+## F3 应用存档、暂停与恢复
+
+真实组件接入原子存档与WebLocks，major action即存、时间每0.5秒存；返回前台/重新打开均手动继续，模型/镜头/设备/扬尘与12个音源全部冻结。损坏档保留，显式备份重置；无锁能力提示临时模式，写失败暂停。已有JSON null原档按损坏处理，reviewer发现后修复并关闭。完整npm test/strict及SessionLifecycle、PreRaceRecovery覆盖四阶段、返80一次、无新RNG/提示重播、原生pending clip取消、坏档/失败/锁。
+
+Creator保存重开rev-46f25a2f。upgrade-session-pause-result.json原生47步通过，四阶段各暂停1秒，时间/设备/积分/镜头成对相同；360/430面板共28步通过，诊断均0。IP HTTP Preview无WebLocks，仅证明临时模式与暂停，不冒充持久化证据。
+
+首次正式构建06dbfaff…虽工具Smoke标passed，截图Loading且实际i.stop TypeError，认定无效；保留attempt1报告。定位Cocos Babel将Map.values展开编译为concat(iterator)，改Array.from；BuiltAudio.test直接载入真实构建System.register模块，旧包复现、新包12音源stop/dispose通过。
+
+最终operation horse-upgrade-session-web-20261024-r11-v2，packageHash cd73536d47ff1bd9c504732ff4543a88bd3a211942692cfbc624a2751a0328a3，passed/builderFinished、exit36。正式同包Smoke45步（44执行、1可选无桥snapshot跳过），四类诊断0；原生四阶段reload后面板不推进，重复结算恢复仍499分，下一场499/押0。源码冻结记录upgrade-session-source.json，截图/可见像素验证upgrade-session-build-observations.json。
+
+另用同包localhost浏览器实测双窗口：A499/押1，B等待；关闭A，B重试恢复同场499/押1。截图与观察见upgrade-session-browser.json，未读取/修改隐藏存储。reviewer /root/horse_build_review 经父OCR显式规则审查并确认编译修复，实际cwd/Git根产品仓，权限隔离未核验。听感未验；原生正返分与后续设置等在最终功能阶段继续同包验证。

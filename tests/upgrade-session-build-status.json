@@ -1,0 +1,18 @@
+{
+  "state": "passed",
+  "platform": "web-mobile",
+  "operationId": "horse-upgrade-session-web-20261024-r11-v2",
+  "startedAt": "2026-10-24T08:33:03.279Z",
+  "finishedAt": "2026-10-24T08:33:36.611Z",
+  "outputDir": "D:\\code\\shidai3\\P4000\\golden-horse-86\\build\\web-mobile",
+  "logPath": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\build.log",
+  "configPath": "D:\\code\\shidai3\\P4000\\golden-horse-86\\tests\\build-web-mobile.json",
+  "runnerExitCode": 36,
+  "builderFinished": true,
+  "artifactIdentity": {
+    "sourceRevision": "2e93166da2ab65c6ffb82abc4044efb539493776",
+    "buildConfigHash": "c52b04686c48d9f866e5e0cc978baecbcea218d6d2ab706d724c8df2476d499b",
+    "packageHash": "cd73536d47ff1bd9c504732ff4543a88bd3a211942692cfbc624a2751a0328a3",
+    "creatorVersion": "3.8.8"
+  }
+}

@@ -22,7 +22,7 @@ export class RaceArchive {
  }
  read():unknown|null{
   if(this.state!=='persistent'||!this.storage)return null;
-  try{const raw=this.storage.getItem(ARCHIVE_KEY);return raw===null?null:JSON.parse(raw) as unknown;}catch(error){this.lastError='无法读取本地存档';throw error;}
+  try{const raw=this.storage.getItem(ARCHIVE_KEY);if(raw===null)return null;const value:unknown=JSON.parse(raw);if(value===null)throw Error('存档为空值');return value;}catch(error){this.lastError='无法读取本地存档';throw error;}
  }
  save(snapshot:unknown):boolean{
   if(this.state==='temporary')return true;if(this.state!=='persistent'||!this.storage||this.disposed)return false;

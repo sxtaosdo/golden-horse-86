@@ -1,0 +1,87 @@
+{
+  "viewport": {
+    "width": 430,
+    "height": 932
+  },
+  "steps": [
+    {
+      "type": "wait",
+      "durationMs": 1500
+    },
+    {
+      "type": "ui",
+      "action": "click",
+      "target": "#view-select:visible, body:not(:has(#view-select:visible))"
+    },
+    {
+      "type": "ui",
+      "action": "click",
+      "target": "li[data-device=WebpageFullScreen]:visible, body:not(:has(li[data-device=WebpageFullScreen]:visible))"
+    },
+    {
+      "type": "wait_ready"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "revision": "upgrade-session-v1",
+        "horseFrames": 144,
+        "equipment": {
+          "typeCount": 4
+        },
+        "preRaceFrames": 66,
+        "preAudio": {
+          "loaded": 5
+        }
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 267,
+      "y": 902
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "paused": true,
+        "dialog": "history"
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "wait",
+      "durationMs": 800
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "upgrade-session-modal-430"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 215,
+      "y": 523
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "paused": false
+      },
+      "timeoutMs": 5000
+    }
+  ]
+}

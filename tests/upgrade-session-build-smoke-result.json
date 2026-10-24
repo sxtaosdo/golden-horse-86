@@ -1,0 +1,598 @@
+{
+  "schemaVersion": "cocos-tool-result-v1",
+  "operationId": "horse-upgrade-session-build-smoke-20261024-r11-v2",
+  "projectId": "9d8a0041f7873b81",
+  "tool": "build_smoke",
+  "status": "PASSED",
+  "data": {
+    "schemaVersion": "build-smoke-v1",
+    "ok": true,
+    "target": "web-mobile-build",
+    "outputDir": "D:\\code\\shidai3\\P4000\\golden-horse-86\\build\\web-mobile",
+    "indexHash": "69a91229fead4d189dcaf438690cf33f1c3580b5075ca3b6d165096ed1c9b66f",
+    "packageHash": "cd73536d47ff1bd9c504732ff4543a88bd3a211942692cfbc624a2751a0328a3",
+    "startedAt": "2026-10-24T08:37:39.425Z",
+    "finishedAt": "2026-10-24T08:39:14.107Z",
+    "playtest": {
+      "ok": true,
+      "previewUrl": "http://127.0.0.1:7331/",
+      "finalUrl": "http://127.0.0.1:7331/",
+      "gameTestReady": false,
+      "steps": [
+        {
+          "index": 0,
+          "step": {
+            "type": "wait",
+            "durationMs": 10000
+          },
+          "ok": true,
+          "elapsedMs": 10011
+        },
+        {
+          "index": 1,
+          "step": {
+            "type": "screenshot",
+            "label": "build-session-initial"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-session-initial-1792831070147.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T08:37:50.147Z"
+          },
+          "elapsedMs": 69
+        },
+        {
+          "index": 2,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 45,
+            "y": 550
+          },
+          "ok": true,
+          "elapsedMs": 36
+        },
+        {
+          "index": 3,
+          "step": {
+            "type": "wait",
+            "durationMs": 150
+          },
+          "ok": true,
+          "elapsedMs": 154
+        },
+        {
+          "index": 4,
+          "step": {
+            "type": "screenshot",
+            "label": "build-session-bet"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-session-bet-1792831070410.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T08:37:50.411Z"
+          },
+          "elapsedMs": 74
+        },
+        {
+          "index": 5,
+          "step": {
+            "type": "reload",
+            "bridgeRequired": false
+          },
+          "ok": true,
+          "elapsedMs": 5064
+        },
+        {
+          "index": 6,
+          "step": {
+            "type": "wait",
+            "durationMs": 3000
+          },
+          "ok": true,
+          "elapsedMs": 3014
+        },
+        {
+          "index": 7,
+          "step": {
+            "type": "screenshot",
+            "label": "build-session-restore-betting"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-session-restore-betting-1792831078566.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T08:37:58.567Z"
+          },
+          "elapsedMs": 78
+        },
+        {
+          "index": 8,
+          "step": {
+            "type": "wait",
+            "durationMs": 1000
+          },
+          "ok": true,
+          "elapsedMs": 1010
+        },
+        {
+          "index": 9,
+          "step": {
+            "type": "screenshot",
+            "label": "build-session-restore-betting-hold"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-session-restore-betting-hold-1792831079643.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T08:37:59.643Z"
+          },
+          "elapsedMs": 66
+        },
+        {
+          "index": 10,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 195,
+            "y": 474
+          },
+          "ok": true,
+          "elapsedMs": 31
+        },
+        {
+          "index": 11,
+          "step": {
+            "type": "wait",
+            "durationMs": 150
+          },
+          "ok": true,
+          "elapsedMs": 153
+        },
+        {
+          "index": 12,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 335,
+            "y": 817
+          },
+          "ok": true,
+          "elapsedMs": 24
+        },
+        {
+          "index": 13,
+          "step": {
+            "type": "wait",
+            "durationMs": 500
+          },
+          "ok": true,
+          "elapsedMs": 506
+        },
+        {
+          "index": 14,
+          "step": {
+            "type": "screenshot",
+            "label": "build-session-preparing"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-session-preparing-1792831080416.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T08:38:00.416Z"
+          },
+          "elapsedMs": 59
+        },
+        {
+          "index": 15,
+          "step": {
+            "type": "reload",
+            "bridgeRequired": false
+          },
+          "ok": true,
+          "elapsedMs": 5104
+        },
+        {
+          "index": 16,
+          "step": {
+            "type": "wait",
+            "durationMs": 3000
+          },
+          "ok": true,
+          "elapsedMs": 3003
+        },
+        {
+          "index": 17,
+          "step": {
+            "type": "screenshot",
+            "label": "build-session-restore-preparing"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-session-restore-preparing-1792831088594.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T08:38:08.595Z"
+          },
+          "elapsedMs": 72
+        },
+        {
+          "index": 18,
+          "step": {
+            "type": "wait",
+            "durationMs": 1000
+          },
+          "ok": true,
+          "elapsedMs": 1006
+        },
+        {
+          "index": 19,
+          "step": {
+            "type": "screenshot",
+            "label": "build-session-restore-preparing-hold"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-session-restore-preparing-hold-1792831089678.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T08:38:09.679Z"
+          },
+          "elapsedMs": 78
+        },
+        {
+          "index": 20,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 195,
+            "y": 474
+          },
+          "ok": true,
+          "elapsedMs": 31
+        },
+        {
+          "index": 21,
+          "step": {
+            "type": "wait",
+            "durationMs": 4800
+          },
+          "ok": true,
+          "elapsedMs": 4813
+        },
+        {
+          "index": 22,
+          "step": {
+            "type": "screenshot",
+            "label": "build-session-racing"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-session-racing-1792831094564.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T08:38:14.565Z"
+          },
+          "elapsedMs": 42
+        },
+        {
+          "index": 23,
+          "step": {
+            "type": "reload",
+            "bridgeRequired": false
+          },
+          "ok": true,
+          "elapsedMs": 5079
+        },
+        {
+          "index": 24,
+          "step": {
+            "type": "wait",
+            "durationMs": 3000
+          },
+          "ok": true,
+          "elapsedMs": 3005
+        },
+        {
+          "index": 25,
+          "step": {
+            "type": "screenshot",
+            "label": "build-session-restore-racing"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-session-restore-racing-1792831102712.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T08:38:22.713Z"
+          },
+          "elapsedMs": 64
+        },
+        {
+          "index": 26,
+          "step": {
+            "type": "wait",
+            "durationMs": 1000
+          },
+          "ok": true,
+          "elapsedMs": 1006
+        },
+        {
+          "index": 27,
+          "step": {
+            "type": "screenshot",
+            "label": "build-session-restore-racing-hold"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-session-restore-racing-hold-1792831103786.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T08:38:23.787Z"
+          },
+          "elapsedMs": 68
+        },
+        {
+          "index": 28,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 195,
+            "y": 474
+          },
+          "ok": true,
+          "elapsedMs": 33
+        },
+        {
+          "index": 29,
+          "step": {
+            "type": "wait",
+            "durationMs": 26000
+          },
+          "ok": true,
+          "elapsedMs": 26004
+        },
+        {
+          "index": 30,
+          "step": {
+            "type": "screenshot",
+            "label": "build-session-result"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-session-result-1792831129872.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T08:38:49.872Z"
+          },
+          "elapsedMs": 48
+        },
+        {
+          "index": 31,
+          "step": {
+            "type": "reload",
+            "bridgeRequired": false
+          },
+          "ok": true,
+          "elapsedMs": 5089
+        },
+        {
+          "index": 32,
+          "step": {
+            "type": "wait",
+            "durationMs": 3000
+          },
+          "ok": true,
+          "elapsedMs": 3011
+        },
+        {
+          "index": 33,
+          "step": {
+            "type": "screenshot",
+            "label": "build-session-restore-result"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-session-restore-result-1792831138020.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T08:38:58.021Z"
+          },
+          "elapsedMs": 49
+        },
+        {
+          "index": 34,
+          "step": {
+            "type": "wait",
+            "durationMs": 1000
+          },
+          "ok": true,
+          "elapsedMs": 1014
+        },
+        {
+          "index": 35,
+          "step": {
+            "type": "screenshot",
+            "label": "build-session-restore-result-hold"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-session-restore-result-hold-1792831139086.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T08:38:59.087Z"
+          },
+          "elapsedMs": 52
+        },
+        {
+          "index": 36,
+          "step": {
+            "type": "reload",
+            "bridgeRequired": false
+          },
+          "ok": true,
+          "elapsedMs": 5057
+        },
+        {
+          "index": 37,
+          "step": {
+            "type": "wait",
+            "durationMs": 3000
+          },
+          "ok": true,
+          "elapsedMs": 3014
+        },
+        {
+          "index": 38,
+          "step": {
+            "type": "screenshot",
+            "label": "build-session-restore-result-again"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-session-restore-result-again-1792831147217.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T08:39:07.218Z"
+          },
+          "elapsedMs": 60
+        },
+        {
+          "index": 39,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 195,
+            "y": 474
+          },
+          "ok": true,
+          "elapsedMs": 36
+        },
+        {
+          "index": 40,
+          "step": {
+            "type": "wait",
+            "durationMs": 6200
+          },
+          "ok": true,
+          "elapsedMs": 6204
+        },
+        {
+          "index": 41,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 335,
+            "y": 817
+          },
+          "ok": true,
+          "elapsedMs": 31
+        },
+        {
+          "index": 42,
+          "step": {
+            "type": "wait",
+            "durationMs": 200
+          },
+          "ok": true,
+          "elapsedMs": 203
+        },
+        {
+          "index": 43,
+          "step": {
+            "type": "screenshot",
+            "label": "build-session-next-round"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-session-next-round-1792831153752.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T08:39:13.753Z"
+          },
+          "elapsedMs": 61
+        },
+        {
+          "index": 44,
+          "step": {
+            "type": "runtime_snapshot",
+            "required": false
+          },
+          "ok": true,
+          "skipped": true,
+          "elapsedMs": 2
+        }
+      ],
+      "consoleErrors": [],
+      "diagnostics": {
+        "consoleErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "pageErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "requestFailures": {
+          "count": 0,
+          "samples": []
+        },
+        "httpErrors": {
+          "count": 0,
+          "samples": []
+        }
+      },
+      "reportPath": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\playtests\\playtest-1792831153756.json",
+      "message": "Playtest passed (45 step(s))",
+      "session": {
+        "mode": "isolated",
+        "reusedBrowser": false,
+        "reusedPage": false,
+        "pageReset": "none"
+      },
+      "timing": {
+        "setupMs": 639,
+        "stepsMs": 93688,
+        "totalMs": 94328
+      }
+    }
+  },
+  "evidence": []
+}

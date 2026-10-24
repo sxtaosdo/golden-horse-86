@@ -1,0 +1,34 @@
+{
+  "revision": "rev-46f25a2f",
+  "found": [
+    {
+      "actions": 8,
+      "labels": 8,
+      "panel": {
+        "uuid": "8bOcT3VtFM7abbbCoH1Cnc",
+        "type": "Node"
+      },
+      "archiveStatus": {
+        "uuid": "55AjkleehDz6VHbZ38SFxS",
+        "type": "Label"
+      }
+    },
+    {
+      "name": "UtilityPanel",
+      "active": false,
+      "components": [
+        "cc.UITransform",
+        "cc.Sprite",
+        "cc.BlockInputEvents"
+      ]
+    },
+    {
+      "name": "UtilityCard",
+      "active": true,
+      "components": [
+        "cc.UITransform",
+        "cc.Sprite"
+      ]
+    }
+  ]
+}

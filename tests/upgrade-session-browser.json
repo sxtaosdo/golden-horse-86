@@ -1,0 +1,15 @@
+{
+  "url": "http://127.0.0.1:8572/",
+  "packageHash": "cd73536d47ff1bd9c504732ff4543a88bd3a211942692cfbc624a2751a0328a3",
+  "observations": [
+    "窗口A押1分后余额499、押分1",
+    "同源窗口B显示已有游戏窗口打开，只提供重试或临时游玩",
+    "关闭A后B重试成功，显示继续第1场，本场已结算且返分已计入，余额499、押分1"
+  ],
+  "evidence": [
+    "browser-first-writer.png",
+    "browser-second-busy.png",
+    "browser-takeover-resume.png"
+  ],
+  "method": "原生浏览器截图与点击，未读取或修改隐藏游戏状态/存储"
+}

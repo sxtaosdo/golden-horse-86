@@ -1,0 +1,98 @@
+{
+  "steps": 47,
+  "diagnostics": {
+    "consoleErrors": {
+      "count": 0,
+      "samples": []
+    },
+    "pageErrors": {
+      "count": 0,
+      "samples": []
+    },
+    "requestFailures": {
+      "count": 0,
+      "samples": []
+    },
+    "httpErrors": {
+      "count": 0,
+      "samples": []
+    }
+  },
+  "freeze": [
+    {
+      "phase": "betting",
+      "uiTimer": "押分 30 秒",
+      "raceElapsed": 0,
+      "preparationRemaining": 0,
+      "frozenMs": 1000,
+      "looping": false
+    },
+    {
+      "phase": "preparing",
+      "uiTimer": "起跑准备 3 秒",
+      "raceElapsed": 0,
+      "preparationRemaining": 2.2743000000007454,
+      "frozenMs": 1000,
+      "looping": false
+    },
+    {
+      "phase": "racing",
+      "uiTimer": "比赛中 · 押分锁定",
+      "raceElapsed": 2.9200000000000004,
+      "preparationRemaining": 0,
+      "frozenMs": 1000,
+      "looping": false
+    },
+    {
+      "phase": "result",
+      "uiTimer": "本场已结算",
+      "raceElapsed": 26.4746000000014,
+      "preparationRemaining": 0,
+      "frozenMs": 1000,
+      "looping": false
+    }
+  ],
+  "finish": {
+    "finishCount": 6,
+    "visibleOrder": [
+      3,
+      4,
+      5,
+      2,
+      6,
+      1
+    ],
+    "backgroundMismatches": 0,
+    "settlementJump": 4.22309148447987,
+    "resultDrift": 4.1992384258824025,
+    "worldChanges": 0,
+    "maxCameraStep": 5.388486554250221,
+    "clippedFinishers": 0
+  },
+  "result": {
+    "first": 3,
+    "second": 4,
+    "order": [
+      3,
+      4,
+      5,
+      2,
+      6,
+      1
+    ],
+    "pair": "3-4",
+    "payout": 0,
+    "stake": 1,
+    "round": 1,
+    "eventId": "station",
+    "bets": [
+      {
+        "key": "1-6",
+        "stake": 1,
+        "odds": 10
+      }
+    ],
+    "odds": 40,
+    "net": -1
+  }
+}

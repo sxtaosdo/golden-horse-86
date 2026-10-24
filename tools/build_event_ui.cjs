@@ -5,6 +5,17 @@ const rgba=hex=>({r:parseInt(hex.slice(1,3),16),g:parseInt(hex.slice(3,5),16),b:
 const node=(name,w,h,x=0,y=0,children=[])=>({name,size:{width:w,height:h},position:{x,y},children});
 function text(name,string,w,h,x,y,size){labels.push([name,size]);return {...node(name,w,h,x,y),type:'label',label:{string,fontSize:size,color:rgba('#ffe192')}};}
 function box(name,w,h,x,y,color,children=[]){colors.push([name,color]);return {...node(name,w,h,x,y,children),type:'sprite',sprite:{spriteFrameUuid:white,sizeMode:'CUSTOM'}};}
+if(process.argv[2]==='session'){
+ const snapshot=call('scene_get_tree',{}),has=(nodes,name)=>nodes.some(n=>n.name===name||has(n.children,name));if(has(snapshot.roots,'UtilityPanel'))throw Error('Session panel already exists');
+ const actions=Array.from({length:8},(_,i)=>box('UtilityAction'+i,294,94,i%2?160:-160,-100-Math.floor(i/2)*110,'#315054',[text('UtilityActionText'+i,'继续',282,86,0,0,25)]));
+ call('ui_build_tree',{parent:{name:'Root'},expectedRevision:snapshot.revision,verify:true,save:true,tree:box('UtilityPanel',750,2400,0,0,'#071317',[box('UtilityCard',680,1000,0,0,'#183537',[text('UtilityTitle','比赛已暂停',620,70,0,430,32),text('UtilityBody','点击继续比赛',620,400,0,175,26),...actions])])});
+ const ref=name=>({$type:'NodeReference',semanticKey:'name:'+name}),label=name=>({$type:'ComponentReference',node:'name:'+name,type:'cc.Label'}),ops=[];
+ for(const [name,color] of colors)ops.push({op:'setProperty',target:'name:'+name,component:'cc.Sprite',property:'color',value:{$type:'Color',...rgba(color),...(name==='UtilityPanel'?{a:235}:{})}});
+ for(const [name,size] of labels)ops.push({op:'upsertComponent',target:'name:'+name,type:'cc.Label',properties:{horizontalAlign:1,verticalAlign:1,fontFamily:'Arial',lineHeight:size+5,overflow:2}});
+ ops.push({op:'upsertComponent',target:'name:UtilityPanel',type:'cc.BlockInputEvents',properties:{}},{op:'setProperty',target:'name:UtilityPanel',component:'cc.Node',property:'active',value:false});
+ ops.push({op:'upsertComponent',target:'GoldenHorseGame',type:'GoldenHorseGame',properties:{utilityPanel:ref('UtilityPanel'),utilityTitle:label('UtilityTitle'),utilityBody:label('UtilityBody'),utilityActions:actions.map(n=>ref(n.name)),utilityActionLabels:actions.map(n=>label(n.name.replace('UtilityAction','UtilityActionText'))),archiveStatus:label('Legend')}});
+ const out=call('scene_apply_patch',{expectedRevision:call('scene_get_tree',{}).revision,operations:ops,verify:true,save:true});fs.writeFileSync(path.join(temp,'session-ui-result.json'),JSON.stringify(out,null,2));console.log('Saved session panel',out.after?.revision);process.exit(0);
+}
 if(process.argv[2]==='emphasis'){
  const sprite=name=>({$type:'ComponentReference',node:'name:'+name,type:'cc.Sprite'});
  const out=call('scene_apply_patch',{expectedRevision:call('scene_get_tree',{}).revision,operations:[{op:'upsertComponent',target:'GoldenHorseGame',type:'GoldenHorseGame',properties:{betBorders:Array.from({length:15},(_,i)=>sprite('Bet'+i+'Border'))}},{op:'upsertComponent',target:'name:Legend',type:'cc.Label',properties:{string:'黄色赔率 · 红色押分'}}],verify:true,save:true});console.log('Saved bet emphasis',out.after?.revision);process.exit(0);

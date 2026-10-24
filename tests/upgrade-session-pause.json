@@ -1,0 +1,271 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "steps": [
+    {
+      "type": "wait",
+      "durationMs": 1500
+    },
+    {
+      "type": "ui",
+      "action": "click",
+      "target": "#view-select:visible, body:not(:has(#view-select:visible))"
+    },
+    {
+      "type": "ui",
+      "action": "click",
+      "target": "li[data-device=WebpageFullScreen]:visible, body:not(:has(li[data-device=WebpageFullScreen]:visible))"
+    },
+    {
+      "type": "wait_ready"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "revision": "upgrade-session-v1",
+        "horseFrames": 144,
+        "equipment": {
+          "typeCount": 4
+        },
+        "preRaceFrames": 66,
+        "preAudio": {
+          "loaded": 5
+        }
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 45,
+      "y": 553
+    },
+    {
+      "type": "assert_state",
+      "expect": {
+        "totalStake": 1
+      }
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 242,
+      "y": 817
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "paused": true,
+        "dialog": "history"
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "wait",
+      "durationMs": 1000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "upgrade-session-betting"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 195,
+      "y": 474
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "paused": false,
+        "dialog": "none"
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 335,
+      "y": 817
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "preparing"
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "wait",
+      "durationMs": 650
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 242,
+      "y": 817
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "paused": true,
+        "dialog": "history"
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "wait",
+      "durationMs": 1000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "upgrade-session-preparing"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 195,
+      "y": 474
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "paused": false,
+        "dialog": "none"
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "racing"
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "wait",
+      "durationMs": 2800
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 242,
+      "y": 817
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "paused": true,
+        "dialog": "history"
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "wait",
+      "durationMs": 1000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "upgrade-session-racing"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 195,
+      "y": 474
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "paused": false,
+        "dialog": "none"
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "result"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 242,
+      "y": 817
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "paused": true,
+        "dialog": "history"
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "wait",
+      "durationMs": 1000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "upgrade-session-result"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 195,
+      "y": 474
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "paused": false,
+        "dialog": "none"
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    }
+  ]
+}

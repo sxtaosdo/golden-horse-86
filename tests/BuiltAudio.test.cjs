@@ -1,0 +1,12 @@
+// Verify the actual Creator/Babel output, not a TypeScript-only substitute.
+const fs=require('fs'),vm=require('vm'),path=require('path'),assert=require('node:assert/strict');
+const dir='build/web-mobile/assets/main',file=fs.readdirSync(dir).find(n=>/^index\..*\.js$/.test(n));assert.ok(file,'Build the actual Web Mobile package first');
+const registrations=new Map,loaded=new Map,sources=[];
+class AudioSource{constructor(){sources.push(this);}play(){this.pending=true;}stop(){this.pending=false;this.stopped=(this.stopped??0)+1;}destroy(){this.destroyed=true;}}
+const cc={cclegacy:{_RF:{push(){},pop(){}}},AudioClip:class{},AudioSource,resources:{load:(url,T,cb)=>cb(null,{url})}};
+const context=vm.createContext({System:{register:(name,deps,declare)=>{if(typeof name==='string')registrations.set(name,{deps,declare});else{assert.equal(name.length,0);deps(()=>{},{id:'container'}).execute();}}},console,Promise,Map,Set,Symbol,Math,Array,Error,Object,Uint8Array,Number,String,Date});
+for(const chunk of fs.readdirSync('build/web-mobile/src/chunks').filter(n=>/^bundle.*\.js$/.test(n)))vm.runInContext(fs.readFileSync(path.join('build/web-mobile/src/chunks',chunk),'utf8'),context);vm.runInContext(fs.readFileSync(path.join(dir,file),'utf8'),context);
+function resolve(name){if(name==='cc')return cc;if(loaded.has(name))return loaded.get(name);const r=registrations.get(name);assert.ok(r,'Missing production module '+name);const out={};loaded.set(name,out);const declaration=r.declare((key,value)=>{if(typeof key==='object')Object.assign(out,key);else out[key]=value;},{id:name});r.deps.forEach((dep,i)=>declaration.setters[i](resolve(dep.startsWith('./')?'chunks:///_virtual/'+dep.slice(2):dep)));declaration.execute();return out;}
+(async()=>{
+ const {PreRaceAudio}=resolve('chunks:///_virtual/PreRaceAudio.ts'),{GameAudio}=resolve('chunks:///_virtual/GameAudio.ts'),host={addComponent:T=>new T},pre=new PreRaceAudio(host),ordinary=new GameAudio(host);await pre.load();pre.unlock();pre.update({phase:'betting',eventId:'station',preparationRemaining:0},['hoof']);ordinary.setClip('bet',{});ordinary.play('bet');assert.equal(sources.length,12);assert.ok(sources.some(s=>s.pending));pre.stop();ordinary.stop();assert.ok(sources.every(s=>!s.pending&&s.clip===null));pre.dispose();ordinary.dispose();assert.ok(sources.every(s=>s.destroyed));console.log('BuiltAudio: actual Creator Web Mobile modules stop and dispose all 12 owned sources, including Map-backed effects.');
+})().catch(e=>{console.error(e);process.exitCode=1;});

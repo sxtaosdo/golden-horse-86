@@ -149,7 +149,7 @@ class RaceSnapshotCodec {
         if (!object(value) || value.version !== 1 || value.pairMode !== rules.pairMode || value.bettingSeconds !== rules.bettingSeconds || value.raceSeconds !== rules.raceSeconds)
             throw Error('存档版本或比赛配置不兼容');
         const v = value;
-        if (!['betting', 'preparing', 'racing', 'result'].includes(String(v.phase)) || !integer(v.round, 1) || !integer(v.credits) || !number(v.countdown, 0, rules.bettingSeconds) || !number(v.preparationRemaining, 0, rules.preparationSeconds) || !number(v.raceElapsed, 0, rules.raceSeconds + 8) || !number(v.resultElapsed, 0, 315360000) || !event(v.eventId) || !integer(v.presentationSeed, 0, 0xffffffff) || !integer(v.visualSeed, 0, 0xffffffff) || typeof v.message !== 'string' || v.message.length > 200)
+        if (typeof v.phase !== 'string' || !['betting', 'preparing', 'racing', 'result'].includes(v.phase) || !integer(v.round, 1) || !integer(v.credits) || !number(v.countdown, 0, rules.bettingSeconds) || !number(v.preparationRemaining, 0, rules.preparationSeconds) || !number(v.raceElapsed, 0, rules.raceSeconds + 8) || !number(v.resultElapsed, 0, 315360000) || !event(v.eventId) || !integer(v.presentationSeed, 0, 0xffffffff) || !integer(v.visualSeed, 0, 0xffffffff) || typeof v.message !== 'string' || v.message.length > 200)
             throw Error('存档比赛状态损坏');
         if (!Array.isArray(v.cells) || v.cells.length !== rules.cells.length)
             throw Error('存档押分表损坏');

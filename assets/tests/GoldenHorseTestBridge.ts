@@ -18,7 +18,7 @@ export class GoldenHorseTestBridge {
   private previousCamera:{x:number;y:number}|null=null;
   private maxCameraStep=0;
   private clippedFinishers=0;
-  constructor(private readonly model:RaceModel,private readonly observe:()=>Record<string,unknown>){
+  constructor(private readonly model:RaceModel,private readonly observe:()=>Record<string,unknown>,private readonly canAct:()=>boolean=()=>true){
     (window as Window & {__COCOS_GAME_TEST__?:GoldenHorseTestBridge}).__COCOS_GAME_TEST__=this;
   }
   isReady():boolean{return this.observe().ready===true;}
@@ -72,9 +72,9 @@ export class GoldenHorseTestBridge {
     this.previousPositions=positions;this.previousPhase=this.model.phase;
   }
   testBet(key:string,amount:number):boolean{
-    return this.isReady()&&this.model.placeBet(key,amount);
+    return this.isReady()&&this.canAct()&&this.model.placeBet(key,amount);
   }
-  testStart():boolean{return this.isReady()&&this.model.startRace();}
+  testStart():boolean{return this.isReady()&&this.canAct()&&this.model.startRace();}
   testStartRecording():boolean{
     const canvas=document.querySelector('canvas');
     if(!canvas || this.recorder?.state==='recording')return false;

@@ -1,0 +1,10 @@
+{
+  "accepted": false,
+  "packageHash": "06dbfaffbc65d84c6ec9e1b25863efe224d72d93725d1024cde68b7dcb18a392",
+  "smokeToolStatus": "PASSED",
+  "productOutcome": "failed after reload; loading screen shows TypeError: i.stop is not a function",
+  "observedGeneratedExpression": "[this.loop].concat(this.effects.values())",
+  "expectedSourceIntent": "iterate the loop and every owned effect source",
+  "regression": "node tests/BuiltAudio.test.cjs reproduces TypeError in actual Creator output",
+  "fix": "[this.loop].concat(Array.from(this.effects.values())) for stop and dispose"
+}

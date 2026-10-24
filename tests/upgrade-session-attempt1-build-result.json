@@ -1,0 +1,12 @@
+{
+  "status": {
+    "state": "running",
+    "platform": "web-mobile",
+    "operationId": "horse-upgrade-session-web-20261024-r11",
+    "startedAt": "2026-10-24T08:20:30.131Z",
+    "outputDir": "D:\\code\\shidai3\\P4000\\golden-horse-86\\build\\web-mobile",
+    "logPath": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\build.log",
+    "configPath": "D:\\code\\shidai3\\P4000\\golden-horse-86\\tests\\build-web-mobile.json"
+  },
+  "message": "Started web-mobile build (pid 35808)"
+}

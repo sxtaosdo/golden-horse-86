@@ -1,0 +1,34 @@
+{
+  "packageHash": "cd73536d47ff1bd9c504732ff4543a88bd3a211942692cfbc624a2751a0328a3",
+  "manualObservation": {
+    "betting": "23 seconds remaining, balance499/stake1",
+    "preparing": "3 seconds remaining, balance499/stake1",
+    "racing": "2.4 seconds elapsed, balance499/stake1",
+    "result": "settled, balance499/stake1; original result3/5 payout0",
+    "nextRound": "balance499/stake0 and30seconds; waiting scene"
+  },
+  "pixelPairs": [
+    {
+      "phase": "betting",
+      "bodyPixelsStableForMs": 1000,
+      "bodyHash": "SHA256=a42eaffd807eb68b2e61ec9a87c9023baa58a3694e856a5b23ed9be066f5f15c"
+    },
+    {
+      "phase": "preparing",
+      "bodyPixelsStableForMs": 1000,
+      "bodyHash": "SHA256=6244326e27ce670bb7faa68a288d9366923214a29d5f5b80176d24d149d2ac69"
+    },
+    {
+      "phase": "racing",
+      "bodyPixelsStableForMs": 1000,
+      "bodyHash": "SHA256=74788252215a7e6740dd2b9d358f7275086f41f745c8499cdd13e2d560d112cb"
+    },
+    {
+      "phase": "result",
+      "bodyPixelsStableForMs": 1000,
+      "bodyHash": "SHA256=7c21b049633f22497b6b521dc642b590e0234500f7c48501bc67ac6c60ba86d0"
+    }
+  ],
+  "repeatedResultBodyIdentical": true,
+  "limitations": "Formal build has no Preview bridge; positive-payout/no-redraw guarantees are additionally covered by actual component unit tests. This native race paid0."
+}

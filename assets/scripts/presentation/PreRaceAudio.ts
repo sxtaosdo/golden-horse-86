@@ -1,5 +1,6 @@
 import { AudioClip, AudioSource, Node, resources } from 'cc';
 import { PreRaceCue, PreRaceState } from './PreRacePresentation';
+import { DEFAULT_SETTINGS, PlayerSettings } from '../session/PlayerSettings';
 
 /** Optional atmosphere audio. A failed extra clip cannot close the gameplay loading gate. */
 export class PreRaceAudio {
@@ -13,15 +14,17 @@ export class PreRaceAudio {
   resources.load('audio/'+name+'-r09',AudioClip,(error,clip)=>{if(!this.disposed){if(error)this.warnings.push(name+': '+error.message);else{this.clips.set(name,clip);const source=this.effects.get(name as PreRaceCue);if(source)source.clip=clip;}}resolve();});
  })));}
  unlock():void{this.unlocked=true;}
- update(state:PreRaceState,cues:readonly PreRaceCue[]):void{
+ update(state:PreRaceState,cues:readonly PreRaceCue[],settings:Readonly<PlayerSettings>=DEFAULT_SETTINGS):void{
   if(this.disposed||!this.unlocked)return;
+  if(settings.muted||settings.master===0){this.stop();return;}
   const active=state.phase==='betting'||state.phase==='preparing',clip=this.clips.get('ambience');
-  if(active&&clip){
-   this.loop.volume=(state.eventId==='station'?.055:state.eventId==='regional'?.075:.095)*(state.phase==='preparing'&&state.preparationRemaining<=1?.25:1);
+  if(active&&clip&&settings.ambience>0){
+   this.loop.volume=(state.eventId==='station'?.055:state.eventId==='regional'?.075:.095)*(state.phase==='preparing'&&state.preparationRemaining<=1?.25:1)*settings.master*settings.ambience;
    if(!this.playing){this.loop.clip=clip;this.loop.play();this.playing=true;this.starts++;}
-  }else if(this.playing){this.loop.stop();this.playing=false;}
-  for(const cue of cues){const source=this.effects.get(cue);if(this.clips.has(cue)&&source){source.volume=cue==='hoof'?.16:.32;source.play();this.played[cue]=(this.played[cue]??0)+1;}}
+  }else if(this.playing){this.loop.stop();this.loop.clip=null;this.playing=false;}
+  for(const cue of cues){const source=this.effects.get(cue),effect=this.clips.get(cue);if(effect&&source&&settings.effects>0){source.volume=(cue==='hoof'?.16:.32)*settings.master*settings.effects;source.clip=effect;source.play();this.played[cue]=(this.played[cue]??0)+1;}}
  }
+ stop():void{for(const source of [this.loop].concat(Array.from(this.effects.values()))){source.stop();source.clip=null;}this.playing=false;}
  get observation():Record<string,unknown>{return {loaded:this.clips.size,unlocked:this.unlocked,looping:this.playing,loopVolume:this.loop.volume,loopStarts:this.starts,played:{...this.played},warnings:[...this.warnings]};}
- dispose():void{if(this.disposed)return;this.disposed=true;for(const source of [this.loop,...this.effects.values()]){source.stop();source.clip=null;source.destroy();}this.playing=false;this.clips.clear();}
+ dispose():void{if(this.disposed)return;this.disposed=true;for(const source of [this.loop].concat(Array.from(this.effects.values()))){source.stop();source.clip=null;source.destroy();}this.playing=false;this.clips.clear();}
 }
