@@ -95,3 +95,23 @@ Creator编译errors[]；upgrade-milestones-390-result.json17步PASSED、诊断0�
 finishers只推导progress>=1的马，按实际完成时刻排序；号码与HUD实际过线才强调，结算仍六马+0.65原时点。完整结算取receipt押/返/净/order。FinishEmphasis实际组件验证冠亚仍racing/余额未返，之后返80一次及restore不再付；RaceSnapshot/TurnArtwork/strict和网页Smoke通过。
 
 Creator保存重开rev-140fc6ca。第一次Preview引擎bare cc加载失败，经官方preview_reload恢复，不计通过；upgrade-finish-390-result.json最终32步PASSED、四类诊断0，冠亚两窄窗口均原生观察，押15返20净+5。六马2/5/1/6/4/3与结果一致，clippedFinishers0/worldChanges0，冠亚及完整结算截图已目视。reviewer /root/horse_build_review 父OCR无确定缺陷，权限隔离未核验；最终构建待V6。
+
+
+## V6 环境微动与最终三尺寸整合
+
+两张built-in image_gen透明RGBA原图及完整提示词归档r11。六份副本SHA相同，透明像素1374694/752983；四帧旗面与四帧观众上半身，固定旗杆/底座/栏杆与脚另作静态裁切。EnvironmentArtCatalog严格校验11裁切/脚点/分档；演员2/4/6，设备仍4/8/12。离屏clock不推进，暂停dt0，减少动态可见演员首帧。Environment.test验证源像素/透明/独立帧/裁切/固定分件/时钟/销毁；完整npm test及strict通过，Creator编译errors[]、6个新meta均由Creator生成。
+
+upgrade-final-{360,390,430}-result.json分别70/67/92共229步PASSED、四类诊断0，覆盖驿站/地区/冠军、手动/自动、设置与历史暂停、15组合正返分、真实冠亚与完整明细、下一场及减少动态/帮助/里程碑。六组暂停配对的模型/镜头/设备/环境完全一致；三局6马顺序各自匹配结果，裁切0/世界切换0。汇总upgrade-final-preview-summary.json，已目视三尺寸近景/起点七栏/旗面连接/观众分件及全明细。environment.mp4为430x932 H264无声2.35秒实际Canvas采集，原WebM保留，无合成或变速。
+
+reviewer /root/horse_build_review 显式父OCR代码/资源审查无确定缺陷；有效权限隔离未核验。最终正式构建与正返分反复恢复验证见下一节，未用Preview替代。
+
+
+## 最终正式同包验收与本地交付
+
+operation horse-upgrade-final-web-20261024-r11-v1，build_get_status为passed/builderFinished=true/runnerExit36，非debug。packageHash `cb869c4d71f0f1cdc4391c5d0f97d64b5089a87177e2fc93be2e7c9f2570edb9`；config hash c52b0468…，sourceRevision fa5d881 为之前HEAD，实际V6工作树40项SHA冻结见upgrade-final-source.json，构建及正式验收期间全部匹配。Companion在构建后短暂不可发现，经官方daemon start冷启动恢复，未改工具源码/权限/配置，也未重建替换产物。
+
+upgrade-final-build-smoke-result.json相同hash，79步全部执行、0跳过、gameTestReady=false、四类诊断0。实际原生触摸15组合各1，余额485；设置恢复总90%/静音开/减少动态开。四阶段刷新均显示手动继续，每对间隔800ms全图RGBA SHA相同。最终冠1亚5、押15返8净-7、余额493；两次结果恢复仍493/押15，下一场493/押0，无重复返分。历史15组合明细、帮助、首次完赛菜单与下场近景已目视；22张正式原图及SHA、四对RGBA对比和可见观察见upgrade-final-build-observations.json。
+
+BuiltAudio.test直接加载该产物的System.register编译模块，12个源stop/dispose通过。完整npm test日志upgrade-final-test.log，strict --skipLibCheck通过；覆盖路径未变化后不重复全测。reviewer /root/horse_build_review 完成显式父OCR代码/资源及最终证据只读复核，无确定缺陷，实际cwd/Git根产品仓，有效权限隔离未核验。正式包不带Preview桥，未用它自动证明冲线排序。音效听感未验。
+
+本轮计划全部落地并在独立产品仓本地提交，远端仍未配置；非发布，不宣称完成原版1:1复刻。

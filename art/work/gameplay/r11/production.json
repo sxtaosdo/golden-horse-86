@@ -1,0 +1,19 @@
+{
+  "status": "generated; pending runtime validation",
+  "tool": "built-in image_gen",
+  "transparent_background": true,
+  "assets": [
+    {
+      "id": "flag",
+      "filename": "flag-r11.png",
+      "generated": "C:/Users/33272/.codex/generated_images/01a16943-ca46-7a21-9fd6-fb8ef775f3b4/exec-07c572c0-d6ea-4be3-b387-df4f8e016261.png",
+      "prompt": "Use case: stylized-concept. Production sprite sheet for a retro horse racing Cocos game. One asset only: a small racecourse pennant flag on a slender dark green metal pole, cream finial, red and warm gold cloth. Crisp hand pixel art, black/green outlines, limited earthy palette, subtle overhead left light, orthographic 3/4 view matching old arcade racecourse props. Four animation frames in a perfectly regular 2 columns by 2 rows sheet on genuinely transparent alpha, no background or ground rectangle, no text or numbers. Each cell contains the SAME complete fixed pole and base at exactly identical position and scale, only the cloth changes in four modest flutter poses that form a seamless loop. Each cell 768x512 on a 1536x1024 canvas; leave 70px clear transparent margin around every cell, no crossing cell borders. Pole about 320px tall, narrow cloth flies to the right about 220px. Ground foot at local (350,445) in EVERY cell. Static base and pole remain perfectly registered across all four frames; cloth small gentle waves, no jumping/camera/perspective changes. Deliver a single four-frame flag PNG sheet with actual transparent alpha."
+    },
+    {
+      "id": "crowd",
+      "filename": "crowd-r11.png",
+      "generated": "C:/Users/33272/.codex/generated_images/01a16943-ca46-7a21-9fd6-fb8ef775f3b4/exec-ed3befae-27ef-40be-9414-5d4f1c205541.png",
+      "prompt": "Use case: stylized-concept. Production animation sprite sheet for a retro horse racing game, crisp detailed hand pixel art matching warm earthy arcade racing props. One asset: same small group of FOUR cheering spectators seen in orthographic slightly elevated 3/4 front view, elegant old-fashioned race spectators in navy suit, tan cap, cream dress and red hat, behind a short dark green waist-high spectator rail. Four loop animation frames, exactly regular 2 columns by 2 rows, canvas1536x1024, each cell768x512. Transparent background alpha throughout, no painted background, no ground slab, no captions/numbers. Identical people, exact same positions, size, body volume and perspective in all four cells, only hands/head move modestly as they clap and wave; feet and rail absolutely fixed, no horizontal jumping. Every cell contents within local x100..668,y80..450 with 60px transparent gutters; rail foot baseline y450 and group centered x384 in each cell. Soft overhead left light, dark forest green/black outline and limited palette, readable silhouettes. Modest quiet cheering loop, frame0 neutral,1 raised hands,2 clap,3 return. Deliver a single transparent four-frame crowd PNG sheet."
+    }
+  ]
+}

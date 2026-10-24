@@ -1,0 +1,141 @@
+{
+  "packageHash": "cb869c4d71f0f1cdc4391c5d0f97d64b5089a87177e2fc93be2e7c9f2570edb9",
+  "method": "Native touch/reload screenshots; no Preview bridge or hidden storage/state reads",
+  "steps": 79,
+  "executed": 79,
+  "skipped": 0,
+  "gameTestReady": false,
+  "visible": [
+    "初始500，15组合各押1后余额485/押15",
+    "设置恢复保留总音量90%、静音开、减少动态开",
+    "四阶段刷新后等待手动继续；每阶段800ms全图RGBA相同",
+    "本场冠1亚5，押15返8净-7，余额493",
+    "两次结果刷新恢复均余额493/押15，未重复支付",
+    "历史明细15组合完整；下一场493/押0",
+    "帮助与累计首次完赛正确；减少动态下一场近景生效"
+  ],
+  "pausePairs": [
+    {
+      "phase": "betting",
+      "first": "build-final-resume-betting.png",
+      "hold": "build-final-resume-betting-hold.png",
+      "rgbaHash": "SHA256=6159b3dd1b1bd09df0b0e32962c1c9afae69abb0937435963f6d0f0353db0b1d",
+      "equal": true
+    },
+    {
+      "phase": "preparing",
+      "first": "build-final-resume-preparing.png",
+      "hold": "build-final-resume-preparing-hold.png",
+      "rgbaHash": "SHA256=2556ec312c6421a0ef0e2133faaca966ec07af5ad47d21e45f78ee7007fc10dc",
+      "equal": true
+    },
+    {
+      "phase": "racing",
+      "first": "build-final-resume-racing.png",
+      "hold": "build-final-resume-racing-hold.png",
+      "rgbaHash": "SHA256=058405a3cad6ff0b7704696961860fa4f7809cb2a4dcb437100ad6ebef88a1aa",
+      "equal": true
+    },
+    {
+      "phase": "result",
+      "first": "build-final-resume-result.png",
+      "hold": "build-final-resume-result-hold.png",
+      "rgbaHash": "SHA256=d2a1ed59bd1bc41817d937aa23ce648b85f0f150c859768ab538f3a50c199046",
+      "equal": true
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "tests/evidence/upgrade-final/build-final-initial.png",
+      "sha256": "daa8ed4856ec2158a8bb2a0b7634b6f2a8a14004c4fa4aa0757e4f281169ce98"
+    },
+    {
+      "path": "tests/evidence/upgrade-final/build-final-all-bets.png",
+      "sha256": "7129f6119e4f8bd26ebc1dbc6ead3a277b89af9b0844a44da4e87f68dae1db2c"
+    },
+    {
+      "path": "tests/evidence/upgrade-final/build-final-settings-set.png",
+      "sha256": "092a645a91934b2365af1ecb014abe67dc10672499264961d433d7734f0ca2f2"
+    },
+    {
+      "path": "tests/evidence/upgrade-final/build-final-resume-betting.png",
+      "sha256": "b0f6ea5b5723d6d8a30c01e2d2de86fb2c13c9913797d36dd83f2654f585a414"
+    },
+    {
+      "path": "tests/evidence/upgrade-final/build-final-resume-betting-hold.png",
+      "sha256": "b0f6ea5b5723d6d8a30c01e2d2de86fb2c13c9913797d36dd83f2654f585a414"
+    },
+    {
+      "path": "tests/evidence/upgrade-final/build-final-settings-restored.png",
+      "sha256": "0cba5ffd4cc2efb2bf2bfa969f9fca1fe0bbf8e76707b5923a65666e63c23458"
+    },
+    {
+      "path": "tests/evidence/upgrade-final/build-final-preparing.png",
+      "sha256": "35938f6058b7fdd34ff0f2628c4a172a9c63a19c79effb881365e7165c860d9f"
+    },
+    {
+      "path": "tests/evidence/upgrade-final/build-final-resume-preparing.png",
+      "sha256": "3bff5b6228943ebcd491cba1b70aa7e25928d24311652eeda6c63bbd948957cf"
+    },
+    {
+      "path": "tests/evidence/upgrade-final/build-final-resume-preparing-hold.png",
+      "sha256": "3bff5b6228943ebcd491cba1b70aa7e25928d24311652eeda6c63bbd948957cf"
+    },
+    {
+      "path": "tests/evidence/upgrade-final/build-final-racing.png",
+      "sha256": "79dfbdbca733557d985494ca55eeefe9cac436d02969789f61e68dc2f9ece7b7"
+    },
+    {
+      "path": "tests/evidence/upgrade-final/build-final-resume-racing.png",
+      "sha256": "5bdf38c0d9bbf0bc0f7508b4d9f451d7c35edc8743ef0717fd0d4c17f4f4f8bb"
+    },
+    {
+      "path": "tests/evidence/upgrade-final/build-final-resume-racing-hold.png",
+      "sha256": "5bdf38c0d9bbf0bc0f7508b4d9f451d7c35edc8743ef0717fd0d4c17f4f4f8bb"
+    },
+    {
+      "path": "tests/evidence/upgrade-final/build-final-result-positive.png",
+      "sha256": "22e87352224a55d641bd61c19d2ab277ab728533a2758b64d81b8b6bfed64a9f"
+    },
+    {
+      "path": "tests/evidence/upgrade-final/build-final-resume-result.png",
+      "sha256": "b9a8d5e5d8d9cf4079c3beac04d35ff6328624655da6a5cb79fcaf0dd2fedefd"
+    },
+    {
+      "path": "tests/evidence/upgrade-final/build-final-resume-result-hold.png",
+      "sha256": "b9a8d5e5d8d9cf4079c3beac04d35ff6328624655da6a5cb79fcaf0dd2fedefd"
+    },
+    {
+      "path": "tests/evidence/upgrade-final/build-final-history-list.png",
+      "sha256": "89511c81d563ccef84e6b580d952dadb02cab783627ccfcfd7625def2232b833"
+    },
+    {
+      "path": "tests/evidence/upgrade-final/build-final-history-detail.png",
+      "sha256": "9a868271c901590b368682d6eac2c47c43b8f98954e083a76941a8a51b37dd0e"
+    },
+    {
+      "path": "tests/evidence/upgrade-final/build-final-resume-result-again.png",
+      "sha256": "b9a8d5e5d8d9cf4079c3beac04d35ff6328624655da6a5cb79fcaf0dd2fedefd"
+    },
+    {
+      "path": "tests/evidence/upgrade-final/build-final-next-quiet.png",
+      "sha256": "7fb33cd23d527bc814ef6e5b4a22b2ca31d18b0442de252bc212e5badeca9adb"
+    },
+    {
+      "path": "tests/evidence/upgrade-final/build-final-settings-next.png",
+      "sha256": "c2d3a7b481dbb26acc5714ae9c988475f7edf37a020c03e42a3bb39eea12ec56"
+    },
+    {
+      "path": "tests/evidence/upgrade-final/build-final-help.png",
+      "sha256": "8edca6f49046652614183b59eb38fa83bc72748db4283876edd6f52a3c7c256b"
+    },
+    {
+      "path": "tests/evidence/upgrade-final/build-final-milestones.png",
+      "sha256": "0ca384ac577643ce85a1bdc952ef3907f17eedbf5c2d00bfe83918fb0e163aa1"
+    }
+  ],
+  "limitations": [
+    "未用正式包证明Preview专用自动冲线指标",
+    "未完成音效听感试听"
+  ]
+}

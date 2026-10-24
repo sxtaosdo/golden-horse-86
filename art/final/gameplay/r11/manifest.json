@@ -1,0 +1,83 @@
+{
+  "source": "built-in image_gen, raw RGBA pixels retained",
+  "assets": [
+    {
+      "id": "flag",
+      "file": "flag-r11.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "464ed41162cd0184ca90ef4ce970d06532c458f69dba203866d75307fd51727b",
+      "alphaZero": 1374694,
+      "maxAlpha": 254,
+      "frameBounds": [
+        {
+          "x": 244,
+          "y": 31,
+          "width": 404,
+          "height": 433,
+          "count": 35018
+        },
+        {
+          "x": 1012,
+          "y": 31,
+          "width": 405,
+          "height": 433,
+          "count": 33702
+        },
+        {
+          "x": 244,
+          "y": 543,
+          "width": 404,
+          "height": 433,
+          "count": 35950
+        },
+        {
+          "x": 1012,
+          "y": 543,
+          "width": 407,
+          "height": 433,
+          "count": 35334
+        }
+      ]
+    },
+    {
+      "id": "crowd",
+      "file": "crowd-r11.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "5543ab5c41841211162bbb51eb912a138395080be98529c87d11d858efa94dd8",
+      "alphaZero": 752983,
+      "maxAlpha": 254,
+      "frameBounds": [
+        {
+          "x": 86,
+          "y": 88,
+          "width": 615,
+          "height": 372,
+          "count": 165878
+        },
+        {
+          "x": 848,
+          "y": 74,
+          "width": 634,
+          "height": 385,
+          "count": 171746
+        },
+        {
+          "x": 86,
+          "y": 589,
+          "width": 615,
+          "height": 374,
+          "count": 162006
+        },
+        {
+          "x": 849,
+          "y": 590,
+          "width": 616,
+          "height": 373,
+          "count": 166235
+        }
+      ]
+    }
+  ]
+}

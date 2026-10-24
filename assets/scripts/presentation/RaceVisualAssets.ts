@@ -4,6 +4,7 @@ import { EquipmentCatalog } from './equipment/EquipmentCatalog';
 import { EquipmentMotionCatalog } from './equipment/EquipmentMotionCatalog';
 import { PreRaceArtCatalog } from './PreRaceArtCatalog';
 import { TurnArtCatalog } from './TurnArtCatalog';
+import { EnvironmentArtCatalog } from './EnvironmentArtCatalog';
 export interface FrameSpec {x:number;y:number;width:number;height:number;nose:number;}
 export interface HorseSheet {horse:number;view:string;name:string;scale:number;frames:FrameSpec[];}
 export interface PropSpec {name:string;x:number;y:number;width:number;height:number;}
@@ -14,14 +15,16 @@ export class RaceVisualAssets {
  motionCatalog!:EquipmentMotionCatalog;readonly motionFrames=new Map<string,SpriteFrame[]>();
  preRaceCatalog!:PreRaceArtCatalog;readonly preRaceFrames=new Map<string,SpriteFrame[]>();
  turnCatalog!:TurnArtCatalog;readonly turnFrames=new Map<string,SpriteFrame[]>();
+ environmentCatalog!:EnvironmentArtCatalog;readonly environmentFrames=new Map<string,SpriteFrame[]>();
  private owned:SpriteFrame[]=[];private disposed=false;
  async load():Promise<void>{
   const json=await new Promise<JsonAsset>((resolve,reject)=>resources.load('race/manifest',JsonAsset,(e,a)=>e?reject(e):resolve(a)));if(this.disposed)return;
   const data:unknown=json.json;if(!this.validManifest(data))throw Error('Invalid race artwork manifest');this.manifest=data;
-  const [events,equipment,motion,preRace,turn]=await Promise.all([this.json('race/events'),this.json('race/equipment-catalog'),this.json('race/equipment-motion'),this.json('race/pre-race-art'),this.json('race/turn-art')]);if(this.disposed)return;
+  const [events,equipment,motion,preRace,turn,environment]=await Promise.all([this.json('race/events'),this.json('race/equipment-catalog'),this.json('race/equipment-motion'),this.json('race/pre-race-art'),this.json('race/turn-art'),this.json('race/environment-art')]);if(this.disposed)return;
   this.catalog=RaceEventCatalog.parse(events);this.equipmentCatalog=EquipmentCatalog.parse(equipment);this.motionCatalog=EquipmentMotionCatalog.parse(motion);
   this.preRaceCatalog=PreRaceArtCatalog.parse(preRace);
-  this.turnCatalog=TurnArtCatalog.parse(turn);
+  this.turnCatalog=TurnArtCatalog.parse(turn);this.environmentCatalog=EnvironmentArtCatalog.parse(environment);
+  await Promise.all(this.environmentCatalog.groups.map(async g=>{const texture=await this.texture('race/environment/'+g.resource+'/texture');if(this.disposed)return;if(texture.width!==g.sourceWidth||texture.height!==g.sourceHeight)throw Error('Environment texture dimensions mismatch');for(const part of g.parts)this.environmentFrames.set(g.id+':'+part.id,part.frames.map(f=>this.frame(texture,f.rect)));}));
   await Promise.all(this.turnCatalog.horses.map(async part=>{
    const texture=await this.texture('race/turn/'+part.resource+'/texture');if(this.disposed)return;
    if(texture.width!==part.sourceWidth||texture.height!==part.sourceHeight)throw Error('Turn texture dimensions mismatch: '+part.resource);

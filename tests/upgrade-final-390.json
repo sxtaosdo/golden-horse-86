@@ -1,0 +1,389 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "steps": [
+    {
+      "type": "wait",
+      "durationMs": 1500
+    },
+    {
+      "type": "ui",
+      "action": "click",
+      "target": "#view-select:visible, body:not(:has(#view-select:visible))"
+    },
+    {
+      "type": "ui",
+      "action": "click",
+      "target": "li[data-device=WebpageFullScreen]:visible, body:not(:has(li[data-device=WebpageFullScreen]:visible))"
+    },
+    {
+      "type": "wait_ready"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "revision": "upgrade-final-v1",
+        "equipment": {
+          "typeCount": 4
+        },
+        "environment": {
+          "count": 2
+        }
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 195,
+      "y": 100
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 315,
+      "y": 651
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 195,
+      "y": 430
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "eventId": "regional",
+        "equipment": {
+          "typeCount": 8
+        },
+        "environment": {
+          "count": 4
+        }
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "screenshot",
+      "label": "upgrade-final-390-initial"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 270,
+      "y": 700
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "dialog": "settings",
+        "paused": true
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "wait",
+      "durationMs": 800
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "upgrade-final-390-settings"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 333,
+      "y": 198
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 45,
+      "y": 553
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 120,
+      "y": 553
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 195,
+      "y": 553
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 270,
+      "y": 553
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 345,
+      "y": 553
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 45,
+      "y": 602
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 120,
+      "y": 602
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 195,
+      "y": 602
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 270,
+      "y": 602
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 45,
+      "y": 651
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 120,
+      "y": 651
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 195,
+      "y": 651
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 45,
+      "y": 700
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 120,
+      "y": 700
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 45,
+      "y": 749
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "totalStake": 15
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "preparing"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "racing"
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "wait",
+      "durationMs": 2800
+    },
+    {
+      "type": "screenshot",
+      "label": "upgrade-final-390-straight"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 244,
+      "y": 817
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "dialog": "history",
+        "paused": true
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "wait",
+      "durationMs": 800
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 333,
+      "y": 198
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "section": "right-bend"
+      },
+      "timeoutMs": 12000
+    },
+    {
+      "type": "wait",
+      "durationMs": 1000
+    },
+    {
+      "type": "screenshot",
+      "label": "upgrade-final-390-bend"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "finishersCount": 1,
+        "phase": "racing"
+      },
+      "timeoutMs": 20000
+    },
+    {
+      "type": "screenshot",
+      "label": "upgrade-final-390-first"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "result"
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "upgrade-final-390-result"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 244,
+      "y": 817
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "dialog": "history"
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 112,
+      "y": 474
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "historyDetail": 0
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "screenshot",
+      "label": "upgrade-final-390-detail"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 333,
+      "y": 198
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 341,
+      "y": 817
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "betting",
+        "round": 2
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "upgrade-final-390-next"
+    }
+  ]
+}

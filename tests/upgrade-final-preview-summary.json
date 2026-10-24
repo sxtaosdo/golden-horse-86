@@ -1,0 +1,164 @@
+[
+  {
+    "width": 360,
+    "steps": 70,
+    "event": "station",
+    "equipment": 4,
+    "environment": 2,
+    "order": [
+      5,
+      4,
+      1,
+      6,
+      3,
+      2
+    ],
+    "stake": 15,
+    "payout": 100,
+    "net": 85,
+    "metrics": {
+      "finishCount": 6,
+      "visibleOrder": [
+        5,
+        4,
+        1,
+        6,
+        3,
+        2
+      ],
+      "backgroundMismatches": 0,
+      "settlementJump": 3.872076753082322,
+      "resultDrift": 3.9334205499876944,
+      "worldChanges": 0,
+      "maxCameraStep": 6.53426022973178,
+      "clippedFinishers": 0
+    },
+    "pausePairs": 2,
+    "diagnostics": {
+      "consoleErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "pageErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "requestFailures": {
+        "count": 0,
+        "samples": []
+      },
+      "httpErrors": {
+        "count": 0,
+        "samples": []
+      }
+    }
+  },
+  {
+    "width": 390,
+    "steps": 67,
+    "event": "regional",
+    "equipment": 8,
+    "environment": 4,
+    "order": [
+      6,
+      3,
+      4,
+      1,
+      2,
+      5
+    ],
+    "stake": 15,
+    "payout": 80,
+    "net": 65,
+    "metrics": {
+      "finishCount": 6,
+      "visibleOrder": [
+        6,
+        3,
+        4,
+        1,
+        2,
+        5
+      ],
+      "backgroundMismatches": 0,
+      "settlementJump": 3.149751365327838,
+      "resultDrift": 4.499900381736705,
+      "worldChanges": 0,
+      "maxCameraStep": 10.246801707575742,
+      "clippedFinishers": 0
+    },
+    "pausePairs": 2,
+    "diagnostics": {
+      "consoleErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "pageErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "requestFailures": {
+        "count": 0,
+        "samples": []
+      },
+      "httpErrors": {
+        "count": 0,
+        "samples": []
+      }
+    }
+  },
+  {
+    "width": 430,
+    "steps": 92,
+    "event": "championship",
+    "equipment": 12,
+    "environment": 6,
+    "order": [
+      3,
+      2,
+      5,
+      6,
+      4,
+      1
+    ],
+    "stake": 15,
+    "payout": 12,
+    "net": -3,
+    "metrics": {
+      "finishCount": 6,
+      "visibleOrder": [
+        3,
+        2,
+        5,
+        6,
+        4,
+        1
+      ],
+      "backgroundMismatches": 0,
+      "settlementJump": 4.010293775683708,
+      "resultDrift": 5.5042905544061425,
+      "worldChanges": 0,
+      "maxCameraStep": 7.641918255724249,
+      "clippedFinishers": 0
+    },
+    "pausePairs": 2,
+    "diagnostics": {
+      "consoleErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "pageErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "requestFailures": {
+        "count": 0,
+        "samples": []
+      },
+      "httpErrors": {
+        "count": 0,
+        "samples": []
+      }
+    }
+  }
+]
