@@ -28,3 +28,7 @@ r03把前门画成朝向观众的宽正面，同时把侧墙沿屏幕向右延�
 v02为1774×887、32位RGBA，角落alpha=0；新图原样保存。两张图均经主会话实际查看；v01未采用，v02只作为待评审侧视候选，不自动晋级运行资产。
 
 OCR Delegation Mode显式加载父仓共享规则：total_files=23，reviewed_files=10（8个文本/JSON/CSV与2张人工查看的PNG），skipped_files=13（范围外原有5个meta/服务配置与8张图片），工作区coverage_rate=43.48%，本轮范围覆盖100%；CSV及二进制另由宿主检查。逐项清单与规则保存在本机临时目录horse-gate-r04-review。来源、链接、PNG头、CSV与差异检查通过；没有把图像检查当作Creator验收。本轮主会话直接处理，子代理未调用。
+
+## 后续接入
+
+2026-10-24：Owner随后要求把起跑闸箱放入二/三级赛事；r06基于本轮侧视方向另做透空栏架与动态门扇，已放入冠军赛。此处原图继续作为过程参考，未直接覆盖为运行图；当前选择与验证见`art/final/gameplay/r06/README.md`和`tests/DYNAMIC_EQUIPMENT.md`。

@@ -1,0 +1,16 @@
+{
+  "generator": "image_gen.imagegen",
+  "date": "2026-10-24",
+  "records": [
+    {
+      "id": "starting-gate",
+      "source": "C:\\Users\\33272\\.codex\\generated_images\\01a16943-ca46-7a21-9fd6-fb8ef775f3b4\\exec-b52437f8-c623-4c0d-817c-ec0e27a7698f.png",
+      "file": "starting-gate.png"
+    },
+    {
+      "id": "starting-doors-r06",
+      "source": "C:\\Users\\33272\\.codex\\generated_images\\01a16943-ca46-7a21-9fd6-fb8ef775f3b4\\exec-2356ba47-ee80-43ac-af1a-4f7ab6640b4c.png",
+      "file": "starting-doors-r06.png"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "tool": "image_gen.imagegen",
+  "transparent_background": true,
+  "specs": [
+    {
+      "id": "starting-gate",
+      "ref": "D:/code/shidai3/P4000/golden-horse-86/art/work/gameplay/r04/generated/starting-stall-side-v02.png",
+      "prompt": "Use case: precise-object-edit. This is an approved STRICT SIDE ELEVATION of ONE horse racing starting stall. Horse travel is screen RIGHT. Make a reusable FIXED STALL FRAME from this reference: preserve long edges EXACTLY HORIZONTAL, posts EXACTLY VERTICAL, fixed rear and front upright posts, wide feet and forest-green/brass pixel-art style. Remove the eight opaque grey wall pads and replace them with an OPEN see-through barred side fence (two long horizontal rails and thin vertical spars). Remove the movable front door on the far RIGHT; leave a clear hinge mounting edge on the tall right post, because a separate animated leaf will attach there. One stall only, no horses, no people, no numbers, no wording. No three-quarter perspective, no visible front facade, no sloped long bars, no ground, no cast shadow. Preserve transparent alpha in all gaps and outside the fixed frame. Whole isolated asset visible with small clear margins. This fixed frame stays unchanged across door animation."
+    },
+    {
+      "id": "starting-doors-r06",
+      "ref": "D:/code/shidai3/P4000/golden-horse-86/art/work/gameplay/r04/generated/starting-stall-side-v02.png",
+      "prompt": "Use case: stylized-concept. Asset: FOUR-FRAME sprite sheet of the MOVABLE FRONT DOOR LEAF only for the strict-side horse starting stall reference. Exactly four equal cells in one horizontal row, on a transparent wide canvas. Race direction is screen RIGHT. Each cell shows ONE identical upright forest-green and brass open-barred door leaf rotating around a VERTICAL hinge on the LEFT. This is horizontal yaw, never a 2D rotation in the image plane. Keep hinge vertical, bottom and top at identical height in every cell. Order left to right: CLOSED seen nearly EDGE-ON as a narrow upright strip; ONE THIRD OPEN with foreshortened visible barred face extending a little to the RIGHT; TWO THIRDS OPEN showing a wider barred face; FULLY OPEN seen as the full side face of the door extending to the RIGHT from the hinge, aligned along horse travel. Door has transparent gaps between bars, not a solid slab. All four hinges bottom-left aligned within their respective cells, same physical size, same pixel scale. No stall frame, no ground, no other posts, no horse, no person, no labels, no arrows, no glow. Crisp pixel art palette matching the reference. Draw exactly four states, ample transparent gaps so each is a separate frame. Avoid turning the whole frame diagonally: vertical hinge remains vertical."
+    }
+  ]
+}

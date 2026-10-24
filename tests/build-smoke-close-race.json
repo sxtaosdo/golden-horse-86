@@ -1,0 +1,244 @@
+{
+  "operationId": "horse-close-build-smoke-20261024-v2",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "steps": [
+    {
+      "type": "wait",
+      "durationMs": 10000
+    },
+    {
+      "type": "pointer",
+      "action": "click",
+      "x": 300,
+      "y": 100
+    },
+    {
+      "type": "wait",
+      "durationMs": 100
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 314,
+      "y": 643
+    },
+    {
+      "type": "screenshot",
+      "label": "build-close-picker"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 195,
+      "y": 497
+    },
+    {
+      "type": "wait",
+      "durationMs": 150
+    },
+    {
+      "type": "screenshot",
+      "label": "build-close-betting"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 45,
+      "y": 550
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 338,
+      "y": 817
+    },
+    {
+      "type": "wait",
+      "durationMs": 700
+    },
+    {
+      "type": "screenshot",
+      "label": "build-close-preparing"
+    },
+    {
+      "type": "wait",
+      "durationMs": 3500
+    },
+    {
+      "type": "screenshot",
+      "label": "build-close-live"
+    },
+    {
+      "type": "wait",
+      "durationMs": 26000
+    },
+    {
+      "type": "screenshot",
+      "label": "build-close-result"
+    },
+    {
+      "type": "wait",
+      "durationMs": 5500
+    },
+    {
+      "type": "screenshot",
+      "label": "build-close-runout"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 338,
+      "y": 817
+    },
+    {
+      "type": "wait",
+      "durationMs": 500
+    },
+    {
+      "type": "screenshot",
+      "label": "build-close-next-round"
+    },
+    {
+      "type": "runtime_snapshot",
+      "required": false
+    }
+  ]
+}

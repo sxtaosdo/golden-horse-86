@@ -83,6 +83,8 @@ export class RaceModel {
     return `${Math.min(a,b)}-${Math.max(a,b)}`;
   }
   get totalStake(): number { return this.cells.reduce((s,c) => s+c.stake,0); }
+  /** Current course leader; never reads the pre-drawn finishing order. Ties use horse number. */
+  get leaderIndex():number{return this.progress.reduce((best,p,i)=>p>this.progress[best]?i:best,0);}
   get eventId():RaceEventId{return this.selectedEventId;}
   get eventTiers():readonly RaceEventTier[]{return this.events?.tiers??[];}
   get eventName():string{return this.eventTiers.find(t=>t.id===this.selectedEventId)?.name??'';}

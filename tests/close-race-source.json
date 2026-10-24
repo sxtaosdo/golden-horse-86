@@ -1,0 +1,110 @@
+{
+  "note": "Current close-view build from local working-tree bytes, before documentation/version commit; no runtime source changes after build start. Earlier wide-view evidence is historical.",
+  "buildPackageHash": "fd6f9e1619f65ec5ee883c6d436c88489a7752f3d8bd881b60bafd3d16ec8cfc",
+  "files": [
+    {
+      "path": "assets/GoldenHorseGame.scene",
+      "sha256": "fe60c3bcefaf9d8fa4615589db08cb0dc6212f2b19041313d6deb04459bce73a"
+    },
+    {
+      "path": "assets/resources/race/equipment-catalog.json",
+      "sha256": "775a786ffba2610ba98db8d959fa5a6933b0e82e1cae36cd226969fc4e593588"
+    },
+    {
+      "path": "assets/resources/race/equipment-motion.json",
+      "sha256": "daba3ad736da83ec07f24e23f532446f016151021abaffde8ce8f10e0cad45db"
+    },
+    {
+      "path": "assets/resources/race/equipment/camera-heads-r06.png",
+      "sha256": "61624b0bf4f517407e4db82812440529fe8a26a81b101f2a163d097a4a318b77"
+    },
+    {
+      "path": "assets/resources/race/equipment/camera-stand-r06.png",
+      "sha256": "68dd79c2207c7064e26d084babd1f096283b89b2b91f138af1f75e8baf513db6"
+    },
+    {
+      "path": "assets/resources/race/equipment/starting-doors-r06.png",
+      "sha256": "22a0149a66f8b3060a32f7eb4bec0ea22ae91342b403875355bd394710d41758"
+    },
+    {
+      "path": "assets/resources/race/equipment/starting-gate.png",
+      "sha256": "b6a137f900527b454026e562a5816977ff1b441217fa872d182e028d44503725"
+    },
+    {
+      "path": "assets/resources/race/equipment/warning-lamps-r06.png",
+      "sha256": "3088553751523e96f96d47a56a461d66db7886f0b18f1b8dd1dd7419af810fc8"
+    },
+    {
+      "path": "assets/resources/race/events.json",
+      "sha256": "073a58f1a89be7a3435dc2d124430d67c91bdec3762284e1ac85693d574ec7c4"
+    },
+    {
+      "path": "assets/scripts/GoldenHorseGame.ts",
+      "sha256": "3c63c484eb34b09fab96a5cb4bfa29f2aaea1d5974d16684cfca9db818619b8d"
+    },
+    {
+      "path": "assets/scripts/RaceModel.ts",
+      "sha256": "a934187284cbc0ec56bcfe3eb5564162c73da45ceab9b9cc5d50521d0a06d68a"
+    },
+    {
+      "path": "assets/scripts/RaceTrackView.ts",
+      "sha256": "b07748361c64db9557509836a8c9d4db5227b0b9d957f32a897a521eb19b468c"
+    },
+    {
+      "path": "assets/scripts/TrackVisual.ts",
+      "sha256": "ac99f0091f1d5eb5fbb6f4e541e009f1afe18159f1217aa49bd9f1bff96ad22e"
+    },
+    {
+      "path": "assets/scripts/events/RaceEventCatalog.ts",
+      "sha256": "e15466488daf2decfaf489b1421ff1ea28fcac1608a398b1bfcde9b763098662"
+    },
+    {
+      "path": "assets/scripts/presentation/HorseSpriteView.ts",
+      "sha256": "90011ea5fd98749f5e41b44e85331fbebe606e15ffcf83de776ba965414ece97"
+    },
+    {
+      "path": "assets/scripts/presentation/MobileLayout.ts",
+      "sha256": "97c9dca4e0d17500f04e8fbdb25a0e05309bdf7023491f78665fac1e8fca1a54"
+    },
+    {
+      "path": "assets/scripts/presentation/RacePages.ts",
+      "sha256": "1da6e367b360cc1e52b2d3f3aa1bc497ba0f680cac09930a6e5ade4a38011f05"
+    },
+    {
+      "path": "assets/scripts/presentation/RaceVisualAssets.ts",
+      "sha256": "b11b627dcaf6e958009b032915b1b4bee00df8ec27237dcc3c3bba8cf7f16eb1"
+    },
+    {
+      "path": "assets/scripts/presentation/equipment/EquipmentAnimation.ts",
+      "sha256": "258bf0ceb332df05caaad2c210dc30ec482b464858b1058e8494dba737022af0"
+    },
+    {
+      "path": "assets/scripts/presentation/equipment/EquipmentCatalog.ts",
+      "sha256": "f5d7de06c39d97493cf4deab4e29d87d7be9d48320f31a9d71c1befe44e095d4"
+    },
+    {
+      "path": "assets/scripts/presentation/equipment/EquipmentMotionCatalog.ts",
+      "sha256": "bea22ed629e0be012f8ba3dad76a20aea2f12e33491e1641f5c462800c628885"
+    },
+    {
+      "path": "assets/scripts/presentation/equipment/EquipmentScene.ts",
+      "sha256": "bdd831a4c046640788af04986109592e1a610b04a46c6c1404dfbeae6cd6970d"
+    },
+    {
+      "path": "assets/scripts/presentation/equipment/RaceBroadcast.ts",
+      "sha256": "207708fb925a11e58ee8748e2efd8883348a4ae0c9062142f750754b642851b4"
+    },
+    {
+      "path": "assets/scripts/presentation/equipment/RaceLayers.ts",
+      "sha256": "e7d753d3300a62fc3cc06b80cdbd389995b51adee444f208b0bccc7b670a9bcd"
+    },
+    {
+      "path": "assets/scripts/presentation/equipment/RaceScreen.ts",
+      "sha256": "23269030566963f32115e2037b01f8bac2e5ceeddd176bf072f591a43bc88d8e"
+    },
+    {
+      "path": "assets/tests/GoldenHorseTestBridge.ts",
+      "sha256": "027a0fdac3ee2f947f77dbdbabf74e7e4c73f89bdefc646764d6ab3b20a17983"
+    }
+  ]
+}

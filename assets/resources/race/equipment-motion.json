@@ -1,0 +1,327 @@
+{
+  "version": 1,
+  "camera": {
+    "referenceWidth": 70,
+    "turnDegreesPerSecond": 180,
+    "mount": {
+      "x": 0,
+      "y": 60
+    },
+    "base": {
+      "resource": "camera-stand-r06",
+      "sourceWidth": 1230,
+      "sourceHeight": 1278,
+      "frames": [
+        {
+          "rect": {
+            "x": 354,
+            "y": 138,
+            "width": 523,
+            "height": 1010
+          },
+          "width": 32,
+          "anchor": {
+            "x": 0.5,
+            "y": 0
+          },
+          "flipX": false
+        }
+      ]
+    },
+    "head": {
+      "resource": "camera-heads-r06",
+      "sourceWidth": 1774,
+      "sourceHeight": 887,
+      "frames": [
+        {
+          "rect": {
+            "x": 21,
+            "y": 169,
+            "width": 461,
+            "height": 190
+          },
+          "width": 70,
+          "anchor": {
+            "x": 0.3036876355748373,
+            "y": 0.05263157894736842
+          },
+          "flipX": false
+        },
+        {
+          "rect": {
+            "x": 1378,
+            "y": 141,
+            "width": 365,
+            "height": 250
+          },
+          "width": 55.42299349240781,
+          "anchor": {
+            "x": 0.5863013698630137,
+            "y": 0.048
+          },
+          "flipX": true
+        },
+        {
+          "rect": {
+            "x": 1025,
+            "y": 147,
+            "width": 228,
+            "height": 244
+          },
+          "width": 34.62039045553146,
+          "anchor": {
+            "x": 0.49122807017543857,
+            "y": 0.04918032786885246
+          },
+          "flipX": false
+        },
+        {
+          "rect": {
+            "x": 1378,
+            "y": 141,
+            "width": 365,
+            "height": 250
+          },
+          "width": 55.42299349240781,
+          "anchor": {
+            "x": 0.5863013698630137,
+            "y": 0.048
+          },
+          "flipX": false
+        },
+        {
+          "rect": {
+            "x": 34,
+            "y": 558,
+            "width": 451,
+            "height": 186
+          },
+          "width": 68.48156182212581,
+          "anchor": {
+            "x": 0.7028824833702882,
+            "y": 0.04838709677419355
+          },
+          "flipX": false
+        },
+        {
+          "rect": {
+            "x": 532,
+            "y": 512,
+            "width": 385,
+            "height": 259
+          },
+          "width": 58.45986984815618,
+          "anchor": {
+            "x": 0.625974025974026,
+            "y": 0.12355212355212356
+          },
+          "flipX": false
+        },
+        {
+          "rect": {
+            "x": 1017,
+            "y": 519,
+            "width": 229,
+            "height": 256
+          },
+          "width": 34.77223427331887,
+          "anchor": {
+            "x": 0.5021834061135371,
+            "y": 0.04296875
+          },
+          "flipX": false
+        },
+        {
+          "rect": {
+            "x": 1373,
+            "y": 505,
+            "width": 374,
+            "height": 266
+          },
+          "width": 56.78958785249458,
+          "anchor": {
+            "x": 0.39572192513368987,
+            "y": 0.09022556390977443
+          },
+          "flipX": false
+        }
+      ]
+    },
+    "directions": [
+      "E",
+      "NE",
+      "N",
+      "NW",
+      "W",
+      "SW",
+      "S",
+      "SE"
+    ],
+    "selectionNote": "NE uses the NW source frame mirrored at runtime; the generated top-row second cell faces southeast and is not selected."
+  },
+  "warning": {
+    "referenceWidth": 40,
+    "blinkSeconds": 0.5,
+    "mount": {
+      "x": 0,
+      "y": 69.42148760330579
+    },
+    "base": {
+      "resource": "warning",
+      "sourceWidth": 1024,
+      "sourceHeight": 1536,
+      "frames": [
+        {
+          "rect": {
+            "x": 328,
+            "y": 704,
+            "width": 363,
+            "height": 630
+          },
+          "width": 40,
+          "anchor": {
+            "x": 0.5,
+            "y": 0
+          },
+          "flipX": false
+        }
+      ]
+    },
+    "head": {
+      "resource": "warning-lamps-r06",
+      "sourceWidth": 1774,
+      "sourceHeight": 887,
+      "frames": [
+        {
+          "rect": {
+            "x": 121,
+            "y": 78,
+            "width": 645,
+            "height": 756
+          },
+          "width": 40,
+          "anchor": {
+            "x": 0.5,
+            "y": 0
+          },
+          "flipX": false
+        },
+        {
+          "rect": {
+            "x": 1008,
+            "y": 78,
+            "width": 645,
+            "height": 756
+          },
+          "width": 40,
+          "anchor": {
+            "x": 0.5,
+            "y": 0
+          },
+          "flipX": false
+        }
+      ]
+    },
+    "states": [
+      "off",
+      "on"
+    ]
+  },
+  "gate": {
+    "referenceWidth": 190,
+    "openingSeconds": 0.3,
+    "mount": {
+      "x": 87.5,
+      "y": 13
+    },
+    "base": {
+      "resource": "starting-gate",
+      "sourceWidth": 1774,
+      "sourceHeight": 887,
+      "frames": [
+        {
+          "rect": {
+            "x": 70,
+            "y": 86,
+            "width": 1624,
+            "height": 713
+          },
+          "width": 190,
+          "anchor": {
+            "x": 0.5,
+            "y": 0
+          },
+          "flipX": false
+        }
+      ]
+    },
+    "head": {
+      "resource": "starting-doors-r06",
+      "sourceWidth": 2172,
+      "sourceHeight": 724,
+      "frames": [
+        {
+          "rect": {
+            "x": 203,
+            "y": 211,
+            "width": 25,
+            "height": 329
+          },
+          "width": 3.8,
+          "anchor": {
+            "x": 0,
+            "y": 0
+          },
+          "flipX": false,
+          "height": 50
+        },
+        {
+          "rect": {
+            "x": 1608,
+            "y": 221,
+            "width": 489,
+            "height": 320
+          },
+          "width": 25,
+          "anchor": {
+            "x": 0,
+            "y": 0
+          },
+          "flipX": false,
+          "height": 50
+        },
+        {
+          "rect": {
+            "x": 1608,
+            "y": 221,
+            "width": 489,
+            "height": 320
+          },
+          "width": 50,
+          "anchor": {
+            "x": 0,
+            "y": 0
+          },
+          "flipX": false,
+          "height": 50
+        },
+        {
+          "rect": {
+            "x": 1608,
+            "y": 221,
+            "width": 489,
+            "height": 320
+          },
+          "width": 75,
+          "anchor": {
+            "x": 0,
+            "y": 0
+          },
+          "flipX": false,
+          "height": 50
+        }
+      ]
+    },
+    "selectionNote": "Generated intermediate cells have sloped rails; not used. Runtime samples the strict-side open leaf at three horizontal yaw foreshortenings, height and hinge fixed. Closed edge uses the first cell."
+  }
+}

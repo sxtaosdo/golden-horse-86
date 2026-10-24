@@ -173,7 +173,8 @@
           "y": 1000,
           "width": 180
         }
-      ]
+      ],
+      "mode": "static"
     },
     {
       "id": "distance",
@@ -190,28 +191,29 @@
         {
           "x": 930,
           "y": 650,
-          "width": 42,
+          "width": 25,
           "label": "1"
         },
         {
           "x": 1260,
           "y": 650,
-          "width": 42,
+          "width": 25,
           "label": "2"
         },
         {
           "x": 1590,
           "y": 650,
-          "width": 42,
+          "width": 25,
           "label": "3"
         },
         {
           "x": 1920,
           "y": 650,
-          "width": 42,
+          "width": 25,
           "label": "4"
         }
-      ]
+      ],
+      "mode": "static"
     },
     {
       "id": "finish-post",
@@ -230,7 +232,8 @@
           "y": 655,
           "width": 24
         }
-      ]
+      ],
+      "mode": "static"
     },
     {
       "id": "toolbox",
@@ -249,7 +252,8 @@
           "y": 635,
           "width": 80
         }
-      ]
+      ],
+      "mode": "static"
     },
     {
       "id": "camera",
@@ -264,11 +268,12 @@
       "front": false,
       "positions": [
         {
-          "x": 315,
-          "y": 655,
+          "x": 330,
+          "y": 625,
           "width": 70
         }
-      ]
+      ],
+      "mode": "tracking"
     },
     {
       "id": "mirror",
@@ -287,7 +292,8 @@
           "y": 655,
           "width": 25
         }
-      ]
+      ],
+      "mode": "static"
     },
     {
       "id": "speaker",
@@ -311,7 +317,8 @@
           "y": 650,
           "width": 55
         }
-      ]
+      ],
+      "mode": "static"
     },
     {
       "id": "warning",
@@ -330,7 +337,8 @@
           "y": 70,
           "width": 40
         }
-      ]
+      ],
+      "mode": "signal"
     },
     {
       "id": "screen",
@@ -355,7 +363,8 @@
         "y": 164,
         "width": 1272,
         "height": 556
-      }
+      },
+      "mode": "live"
     },
     {
       "id": "tractor",
@@ -374,7 +383,8 @@
           "y": 50,
           "width": 185
         }
-      ]
+      ],
+      "mode": "static"
     },
     {
       "id": "ambulance",
@@ -393,7 +403,53 @@
           "y": 600,
           "width": 230
         }
-      ]
+      ],
+      "mode": "static"
+    },
+    {
+      "id": "starting-gate",
+      "sourceWidth": 1774,
+      "sourceHeight": 887,
+      "frame": {
+        "x": 70,
+        "y": 86,
+        "width": 1624,
+        "height": 713
+      },
+      "front": false,
+      "positions": [
+        {
+          "x": 390,
+          "y": 320,
+          "width": 190
+        },
+        {
+          "x": 390,
+          "y": 280,
+          "width": 190
+        },
+        {
+          "x": 390,
+          "y": 240,
+          "width": 190
+        },
+        {
+          "x": 390,
+          "y": 200,
+          "width": 190
+        },
+        {
+          "x": 390,
+          "y": 160,
+          "width": 190
+        },
+        {
+          "x": 390,
+          "y": 120,
+          "width": 190
+        }
+      ],
+      "mode": "gate"
     }
   ]
 }

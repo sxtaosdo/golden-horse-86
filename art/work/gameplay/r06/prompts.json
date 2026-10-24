@@ -1,0 +1,21 @@
+{
+  "tool": "image_gen.imagegen",
+  "transparent_background": true,
+  "specs": [
+    {
+      "id": "camera-stand-r06",
+      "ref": "D:/code/shidai3/P4000/golden-horse-86/art/final/gameplay/r05/camera.png",
+      "prompt": "Use case: precise-object-edit. Asset: fixed pedestal for a 2D racecourse camera, matching this reference sprite. Remove the ENTIRE camera head, lens and moving pan joint above the pedestal. Show ONLY the stationary forest-green and brass pedestal, its wide bolted foot, upright column, side adjustment knob and a flat small circular mounting plate at the very top. The mount must be centered over the column. Strict front orthographic elevation, column vertical, ground foot horizontal. Same crisp pixel art, same warm brass / dark green palette and outline as reference. One isolated pedestal, entire object visible, tightly framed with transparent margins. No floating camera, no camera body, no lens, no scene, no words, no glow. Preserve actual transparent alpha. This fixed base will never rotate; an animated camera head attaches to its TOP center."
+    },
+    {
+      "id": "camera-heads-r06",
+      "ref": "D:/code/shidai3/P4000/golden-horse-86/art/final/gameplay/r05/camera.png",
+      "prompt": "Use case: stylized-concept. Asset: ONE sprite sheet of EIGHT orientation frames for only the MOVING CAMERA HEAD from this forest-green/brass racecourse broadcast camera. Remove every stand, pole and foot. Exactly 4 columns by 2 rows, equal cells in a wide canvas, precisely eight separate heads, no extra heads. Every head is the SAME camera body and wide black lens rotated horizontally around its small underside mounting socket. Directions read in order: top row lens pointing screen RIGHT (east), upper-RIGHT diagonal (northeast), directly AWAY from viewer (north; see green rear panel, lens points behind), upper-LEFT diagonal (northwest); bottom row lens pointing screen LEFT (west), lower-LEFT diagonal TOWARDS viewer (southwest), directly TOWARDS viewer (south; see round black lens face), lower-RIGHT diagonal TOWARDS viewer (southeast). This is horizontal YAW, never tilt the camera body up or down: side views long body horizontal, front/back views foreshortened. All frames consistent scale and lighting; each underside mounting socket placed at the same relative lower-center point of its own cell. Camera head only, small round mounting socket at underside. Crisp readable pixel art matching the reference. Generous transparent gaps between cells, entire silhouettes inside their cells. No floor, no tripod, no pole, no scene, no grid lines, no labels, no arrows, no text, no aura, no shadow outside silhouette. Actually transparent background. Treat the attached image as palette and design reference, not as a layout to preserve."
+    },
+    {
+      "id": "warning-lamps-r06",
+      "ref": "D:/code/shidai3/P4000/golden-horse-86/art/final/gameplay/r05/warning.png",
+      "prompt": "Use case: precise-object-edit. Asset: TWO-FRAME state sprite sheet for only the RED LAMP HEAD of this green/brass racecourse warning lamp. Exactly two equal cells side-by-side. Left: lamp OFF, dark burgundy glass with subdued highlights. Right: lamp ON, saturated luminous red glass with a strong warm red-white central highlight. Keep the brass protective cage, rim and lamp geometry IDENTICAL between the two cells, same size, same pixel placement. Lamp head only from top brass finial down to the horizontal brass base ring immediately below the glass; remove the green control box, entire pole, bolts below the glass and floor foot. Each lamp head upright in strict front orthographic elevation, aligned to the bottom-center mounting point in each cell. Crisp pixel art and palette match reference. Transparent background around both heads; no external halo, no bloom outside the silhouette, no words, no arrows, no labels, no scene. Dynamic state changes should change ONLY glass brightness, not the cage shape."
+    }
+  ]
+}

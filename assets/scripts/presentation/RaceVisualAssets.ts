@@ -1,6 +1,7 @@
 import { JsonAsset, resources, Texture2D, SpriteFrame, Rect } from 'cc';
 import { RaceEventCatalog } from '../events/RaceEventCatalog';
 import { EquipmentCatalog } from './equipment/EquipmentCatalog';
+import { EquipmentMotionCatalog } from './equipment/EquipmentMotionCatalog';
 export interface FrameSpec {x:number;y:number;width:number;height:number;nose:number;}
 export interface HorseSheet {horse:number;view:string;name:string;scale:number;frames:FrameSpec[];}
 export interface PropSpec {name:string;x:number;y:number;width:number;height:number;}
@@ -8,12 +9,18 @@ interface Manifest {version:string;horses:HorseSheet[];props:PropSpec[];}
 export class RaceVisualAssets {
  manifest!:Manifest;readonly frames=new Map<string,SpriteFrame[]>();readonly props=new Map<string,SpriteFrame>();readonly ground=new Map<string,SpriteFrame>();
  catalog!:RaceEventCatalog;equipmentCatalog!:EquipmentCatalog;readonly equipment=new Map<string,SpriteFrame>();
+ motionCatalog!:EquipmentMotionCatalog;readonly motionFrames=new Map<string,SpriteFrame[]>();
  private owned:SpriteFrame[]=[];private disposed=false;
  async load():Promise<void>{
   const json=await new Promise<JsonAsset>((resolve,reject)=>resources.load('race/manifest',JsonAsset,(e,a)=>e?reject(e):resolve(a)));if(this.disposed)return;
   const data:unknown=json.json;if(!this.validManifest(data))throw Error('Invalid race artwork manifest');this.manifest=data;
-  const [events,equipment]=await Promise.all([this.json('race/events'),this.json('race/equipment-catalog')]);if(this.disposed)return;
-  this.catalog=RaceEventCatalog.parse(events);this.equipmentCatalog=EquipmentCatalog.parse(equipment);
+  const [events,equipment,motion]=await Promise.all([this.json('race/events'),this.json('race/equipment-catalog'),this.json('race/equipment-motion')]);if(this.disposed)return;
+  this.catalog=RaceEventCatalog.parse(events);this.equipmentCatalog=EquipmentCatalog.parse(equipment);this.motionCatalog=EquipmentMotionCatalog.parse(motion);
+  await Promise.all(this.motionCatalog.parts.map(async part=>{
+   const texture=await this.texture('race/equipment/'+part.resource+'/texture');if(this.disposed)return;
+   if(texture.width!==part.sourceWidth||texture.height!==part.sourceHeight)throw Error('Equipment motion dimensions mismatch: '+part.resource);
+   this.motionFrames.set(part.resource,part.frames.map(f=>this.frame(texture,f.rect)));
+  }));
   await Promise.all(this.equipmentCatalog.items.map(async item=>{
    const texture=await this.texture('race/equipment/'+item.id+'/texture');if(this.disposed)return;
    if(texture.width!==item.sourceWidth||texture.height!==item.sourceHeight)throw Error('Equipment texture dimensions mismatch: '+item.id);

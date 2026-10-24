@@ -2,16 +2,17 @@ import { Canvas, Color, Graphics, Layers, Node, UITransform, Mask, Label, Sprite
 import { RACE_WORLD_LAYER } from './presentation/equipment/RaceLayers';
 import { bendPoint, coursePoint, courseCamera, CoursePoint, COURSE_FINISH_X } from './TrackVisual';
 import { RaceVisualAssets } from './presentation/RaceVisualAssets';
+import { raceFraming } from './presentation/MobileLayout';
 /** A single persistent orthographic world. Tiles are clipped to the same U-shaped road as the horses. */
 export class RaceTrackView {
  readonly viewport:Node;readonly world:Node;readonly horseLayer:Node;readonly paintBuilds=1;
- private cameraPoint:CoursePoint={x:0,y:0};private width=750;private height=696;private zoom=.78;
+ private cameraPoint:CoursePoint={x:0,y:0};private width=750;private height=696;private zoom=.78;private yBias=75;
  constructor(parent:Node){
   for(let ancestor:Node|null=parent;ancestor;ancestor=ancestor.parent){const camera=ancestor.getComponent(Canvas)?.cameraComponent;if(camera){camera.visibility|=RACE_WORLD_LAYER;break;}}
   this.viewport=this.node(parent,'RaceViewport');this.viewport.addComponent(UITransform).setContentSize(750,696);this.viewport.addComponent(Mask).type=Mask.Type.GRAPHICS_RECT;
   this.world=this.node(this.viewport,'ContinuousRaceWorld');this.world.addComponent(UITransform).setContentSize(5000,1400);this.horseLayer=this.node(this.world,'RaceHorses');this.follow(0);
  }
- resize(width:number,height:number):void{this.width=width;this.height=height;this.zoom=Math.min(width/960,Math.max(0,height-90)/520);this.world.setScale(this.zoom,this.zoom,1);this.viewport.setPosition(0,0);this.viewport.getComponent(UITransform)!.setContentSize(width,height);}
+ resize(width:number,height:number):void{this.width=width;this.height=height;const framing=raceFraming(width,height);this.zoom=framing.zoom;this.yBias=framing.yBias;this.world.setScale(this.zoom,this.zoom,1);this.viewport.setPosition(0,0);this.viewport.getComponent(UITransform)!.setContentSize(width,height);}
  decorate(assets:RaceVisualAssets):void{
   const grass=this.node(this.world,'GrassTiles');this.tiles(grass,assets.ground.get('grass')!,-1900,-650,4800,2304);
   const outer=Array.from({length:97},(_,i)=>bendPoint(5.5,i/96)),inner=Array.from({length:97},(_,i)=>bendPoint(-.5,1-i/96));
@@ -43,7 +44,7 @@ export class RaceTrackView {
  private tiles(parent:Node,frame:SpriteFrame,x:number,y:number,width:number,height:number):void{for(let dx=0;dx<width;dx+=256)for(let dy=0;dy<height;dy+=256)this.sprite(parent,'GroundTile',frame,x+dx+128,y+dy+256,256.5,256.5);}
  private rect(g:Graphics,x:number,y:number,w:number,h:number,color:string):void{g.fillColor=new Color().fromHEX(color);g.rect(x,-y,w,-h);g.fill();}
  private label(name:string,text:string,x:number,y:number,size:number,color:string):void{const n=this.node(this.world,name);n.setPosition(x,-y);n.addComponent(UITransform).setContentSize(180,34);const l=n.addComponent(Label);l.string=text;l.fontFamily='Arial';l.fontSize=size;l.lineHeight=size+2;l.horizontalAlign=Label.HorizontalAlign.CENTER;l.verticalAlign=Label.VerticalAlign.CENTER;l.color=new Color().fromHEX(color);}
- follow(progress:number):void{this.cameraPoint=courseCamera(progress);this.world.setPosition(-this.cameraPoint.x*this.zoom,this.cameraPoint.y*this.zoom-45);}
+ follow(progress:number):void{const p=courseCamera(progress);this.cameraPoint={x:p.x,y:p.y-this.yBias};this.world.setPosition(-this.cameraPoint.x*this.zoom,this.cameraPoint.y*this.zoom-45);}
  project(point:CoursePoint):CoursePoint{return{x:this.width/2+(point.x-this.cameraPoint.x)*this.zoom,y:this.height/2+45+(point.y-this.cameraPoint.y)*this.zoom};}
  get camera():Readonly<CoursePoint>{return this.cameraPoint;}
  get scale():number{return this.zoom;}

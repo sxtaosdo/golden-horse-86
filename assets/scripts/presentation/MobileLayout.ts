@@ -5,3 +5,7 @@ export function mobileLayout(height:number,safe={x:0,y:0,width:750,height}):Mobi
   raceHeight:Math.max(0,safe.height-panelHeight-footerHeight),panelHeight,footerHeight};
 }
 export function betPosition(index:number):{x:number;y:number}{let k=0;for(let a=1;a<=5;a++)for(let b=6;b>a;b--){if(k++===index)return{x:-288+(6-b)*144,y:188-(a-1)*94};}throw Error('bet index');}
+/** Close race framing: leave room for the authored horse/badge height and a narrow verge. */
+export function raceFraming(width:number,height:number):{zoom:number;yBias:number}{
+ return {zoom:Math.min(width/360,Math.max(0,height-90)/390),yBias:75};
+}

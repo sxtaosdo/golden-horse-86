@@ -17,6 +17,7 @@ export class GoldenHorseTestBridge {
   private initialWorld='';
   private previousCamera:{x:number;y:number}|null=null;
   private maxCameraStep=0;
+  private clippedFinishers=0;
   constructor(private readonly model:RaceModel,private readonly observe:()=>Record<string,unknown>){
     (window as Window & {__COCOS_GAME_TEST__?:GoldenHorseTestBridge}).__COCOS_GAME_TEST__=this;
   }
@@ -28,7 +29,7 @@ export class GoldenHorseTestBridge {
       historyLength:this.model.history.length,
       metrics:{finishCount:this.crossings.length,visibleOrder:[...this.crossings],
         backgroundMismatches:this.backgroundMismatches,settlementJump:this.settlementJump,resultDrift:this.resultDrift,
-        worldChanges:this.worldChanges,maxCameraStep:this.maxCameraStep},
+        worldChanges:this.worldChanges,maxCameraStep:this.maxCameraStep,clippedFinishers:this.clippedFinishers},
       progress:[...this.model.progress]};
   }
   /** Observe the rendered nodes after each real engine frame; never drives the simulation. */
@@ -36,7 +37,7 @@ export class GoldenHorseTestBridge {
     if(this.trackedRound!==this.model.round){
       this.trackedRound=this.model.round;this.crossings.length=0;this.backgroundMismatches=0;
       this.settlementJump=0;this.resultDrift=0;this.previousPositions=[];this.previousPhase='betting';
-      this.worldChanges=0;this.initialWorld='';this.previousCamera=null;this.maxCameraStep=0;
+      this.worldChanges=0;this.initialWorld='';this.previousCamera=null;this.maxCameraStep=0;this.clippedFinishers=0;
     }
     const observation=this.observe();
     const positions=observation.horsePositions as Array<{x:number;y:number}>;
@@ -54,7 +55,12 @@ export class GoldenHorseTestBridge {
         const before=this.previousPositions[i];
         if(before&&before.x-Number(observation.horseNoseOffset)>Number(observation.finishWorldX)
           &&nose<=Number(observation.finishWorldX)&&!this.crossings.includes(i+1)
-          &&trackSection(this.model.progress[i])==='finish')this.crossings.push(i+1);
+          &&trackSection(this.model.progress[i])==='finish'){
+          this.crossings.push(i+1);
+          const points=observation.screenHorsePositions as Array<{x:number;y:number}>,r=observation.raceViewport as {width:number;height:number};
+          const zoom=Number(observation.raceScale),height=r.height*750/r.width,point=points[i];
+          if(point.x-100*zoom<0||point.x+100*zoom>750||point.y-150*zoom<90||point.y>height)this.clippedFinishers++;
+        }
       }
       const previous=this.previousPositions[i];
       if(previous&&this.model.phase==='result'){

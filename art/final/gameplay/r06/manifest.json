@@ -1,0 +1,61 @@
+{
+  "revision": "r06",
+  "status": "integrated-preview-verified",
+  "generator": "image_gen.imagegen",
+  "assets": [
+    {
+      "file": "camera-stand-r06.png",
+      "source": "art/work/gameplay/r06/generated/camera-stand-r06.png",
+      "runtime": "assets/resources/race/equipment/camera-stand-r06.png",
+      "width": 1230,
+      "height": 1278,
+      "sha256": "68dd79c2207c7064e26d084babd1f096283b89b2b91f138af1f75e8baf513db6",
+      "kind": "static-base"
+    },
+    {
+      "file": "camera-heads-r06.png",
+      "source": "art/work/gameplay/r06/generated/camera-heads-r06.png",
+      "runtime": "assets/resources/race/equipment/camera-heads-r06.png",
+      "width": 1774,
+      "height": 887,
+      "sha256": "61624b0bf4f517407e4db82812440529fe8a26a81b101f2a163d097a4a318b77",
+      "kind": "directional-frames"
+    },
+    {
+      "file": "warning-lamps-r06.png",
+      "source": "art/work/gameplay/r06/generated/warning-lamps-r06.png",
+      "runtime": "assets/resources/race/equipment/warning-lamps-r06.png",
+      "width": 1774,
+      "height": 887,
+      "sha256": "3088553751523e96f96d47a56a461d66db7886f0b18f1b8dd1dd7419af810fc8",
+      "kind": "state-frames"
+    },
+    {
+      "file": "starting-gate.png",
+      "source": "art/work/gameplay/r06/generated/starting-gate.png",
+      "runtime": "assets/resources/race/equipment/starting-gate.png",
+      "width": 1774,
+      "height": 887,
+      "sha256": "b6a137f900527b454026e562a5816977ff1b441217fa872d182e028d44503725",
+      "kind": "static-frame"
+    },
+    {
+      "file": "starting-doors-r06.png",
+      "source": "art/work/gameplay/r06/generated/starting-doors-r06.png",
+      "runtime": "assets/resources/race/equipment/starting-doors-r06.png",
+      "width": 2172,
+      "height": 724,
+      "sha256": "22a0149a66f8b3060a32f7eb4bec0ea22ae91342b403875355bd394710d41758",
+      "kind": "yaw-projection-frames"
+    }
+  ],
+  "calibration": "assets/resources/race/equipment-motion.json",
+  "notes": [
+    "Original PNG pixels and alpha preserved. Crops and anchors are runtime SpriteFrame metadata.",
+    "8 yaw views; NE is a runtime mirror of the NW cell. The inconsistent generated second cell is not used.",
+    "Warning base reuses a runtime crop below the glass from the r05 original. Only the two new lamp-head states change.",
+    "Generated intermediate cells have sloped rails; not used. Runtime samples the strict-side open leaf at three horizontal yaw foreshortenings, height and hinge fixed. Closed edge uses the first cell."
+  ],
+  "verification": "tests/CLOSE_RACE_VIEW.md",
+  "earlierWideVerification": "tests/DYNAMIC_EQUIPMENT.md"
+}

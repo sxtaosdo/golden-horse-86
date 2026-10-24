@@ -30,5 +30,5 @@ assert.equal(loss.preparationRemaining,0);assert.equal(loss.lastResult,null);
 for(const mutate of [v=>v.tiers[1].minCredits=0,v=>v.tiers[2].equipment.pop(),v=>v.tiers[0].id='oops',v=>v.preparationSeconds=NaN]){
  const bad=JSON.parse(JSON.stringify(raw));mutate(bad);assert.throws(()=>RaceEventCatalog.parse(bad));
 }
-assert.deepEqual(catalog.tiers.map(t=>t.equipment.length),[4,8,11]);
+assert.deepEqual(catalog.tiers.map(t=>t.equipment.length),[4,8,12]);
 console.log('RaceEvents: admission boundaries, locked preparation, auto/manual start, unchanged RNG/payout and next-round downgrade passed.');

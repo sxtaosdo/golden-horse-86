@@ -1,0 +1,3875 @@
+[
+  {
+    "report": "close-race-360-result.json",
+    "steps": 45,
+    "diagnostics": {
+      "consoleErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "pageErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "requestFailures": {
+        "count": 0,
+        "samples": []
+      },
+      "httpErrors": {
+        "count": 0,
+        "samples": []
+      }
+    },
+    "raceScale": 1.5521367521367526,
+    "result": {
+      "first": 4,
+      "second": 2,
+      "order": [
+        4,
+        2,
+        6,
+        5,
+        1,
+        3
+      ],
+      "pair": "2-4",
+      "payout": 0,
+      "stake": 1,
+      "round": 1,
+      "eventId": "regional"
+    },
+    "metrics": {
+      "finishCount": 6,
+      "visibleOrder": [
+        4,
+        2,
+        6,
+        5,
+        1,
+        3
+      ],
+      "backgroundMismatches": 0,
+      "settlementJump": 2.9950522376839954,
+      "resultDrift": 2.955988228135801,
+      "worldChanges": 0,
+      "maxCameraStep": 5.911915139503435,
+      "clippedFinishers": 0
+    },
+    "checks": {
+      "worldRetained": true,
+      "allActualCrossingsVisible": true,
+      "cameraTargetsLiveLeader": true,
+      "actualFramesMatchState": true,
+      "gatePhaseAndReset": true
+    },
+    "screenshots": [
+      "tests/evidence/close-race/close-betting-360.png",
+      "tests/evidence/close-race/close-preparing-360.png",
+      "tests/evidence/close-race/close-open-360.png",
+      "tests/evidence/close-race/close-camera-360.png",
+      "tests/evidence/close-race/close-bend-360.png",
+      "tests/evidence/close-race/close-result-360.png",
+      "tests/evidence/close-race/close-runout-360.png",
+      "tests/evidence/close-race/close-next-360.png"
+    ],
+    "states": [
+      {
+        "step": 5,
+        "phase": "betting",
+        "round": 1,
+        "equipment": {
+          "tier": "station",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox"
+          ],
+          "typeCount": 4,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox"
+          ],
+          "dynamicTypes": [],
+          "cameras": [],
+          "signals": [],
+          "gates": [],
+          "screenMode": "off",
+          "screenVisible": false,
+          "broadcastAllocated": false,
+          "broadcastSamples": 0
+        }
+      },
+      {
+        "step": 15,
+        "phase": "betting",
+        "round": 1,
+        "equipment": {
+          "tier": "station",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox"
+          ],
+          "typeCount": 4,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox"
+          ],
+          "dynamicTypes": [],
+          "cameras": [],
+          "signals": [],
+          "gates": [],
+          "screenMode": "off",
+          "screenVisible": false,
+          "broadcastAllocated": false,
+          "broadcastSamples": 0
+        }
+      },
+      {
+        "step": 20,
+        "phase": "preparing",
+        "round": 1,
+        "equipment": {
+          "tier": "regional",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning"
+          ],
+          "typeCount": 8,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "mirror",
+            "speaker"
+          ],
+          "dynamicTypes": [
+            "camera",
+            "warning"
+          ],
+          "cameras": [
+            {
+              "targetHorse": 1,
+              "renderedFrame": 2,
+              "angle": 75.20323775494268,
+              "desiredAngle": 75.20323775494268,
+              "frame": 2,
+              "pivot": {
+                "x": 330,
+                "y": 565
+              },
+              "basePosition": {
+                "x": 330,
+                "y": 625
+              }
+            }
+          ],
+          "signals": [
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 430,
+                "y": 70
+              }
+            }
+          ],
+          "gates": [],
+          "screenMode": "off",
+          "screenVisible": false,
+          "broadcastAllocated": false,
+          "broadcastSamples": 0
+        }
+      },
+      {
+        "step": 22,
+        "phase": "preparing",
+        "round": 1,
+        "equipment": {
+          "tier": "regional",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning"
+          ],
+          "typeCount": 8,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "mirror",
+            "speaker"
+          ],
+          "dynamicTypes": [
+            "camera",
+            "warning"
+          ],
+          "cameras": [
+            {
+              "targetHorse": 1,
+              "renderedFrame": 2,
+              "angle": 75.20323775494268,
+              "desiredAngle": 75.20323775494268,
+              "frame": 2,
+              "pivot": {
+                "x": 330,
+                "y": 565
+              },
+              "basePosition": {
+                "x": 330,
+                "y": 625
+              }
+            }
+          ],
+          "signals": [
+            {
+              "frame": 1,
+              "renderedFrame": 1,
+              "basePosition": {
+                "x": 430,
+                "y": 70
+              }
+            }
+          ],
+          "gates": [],
+          "screenMode": "off",
+          "screenVisible": false,
+          "broadcastAllocated": false,
+          "broadcastSamples": 0
+        }
+      },
+      {
+        "step": 26,
+        "phase": "racing",
+        "round": 1,
+        "equipment": {
+          "tier": "regional",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning"
+          ],
+          "typeCount": 8,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "mirror",
+            "speaker"
+          ],
+          "dynamicTypes": [
+            "camera",
+            "warning"
+          ],
+          "cameras": [
+            {
+              "targetHorse": 2,
+              "renderedFrame": 1,
+              "angle": 63.20658130394753,
+              "desiredAngle": 63.20658130394747,
+              "frame": 1,
+              "pivot": {
+                "x": 330,
+                "y": 565
+              },
+              "basePosition": {
+                "x": 330,
+                "y": 625
+              }
+            }
+          ],
+          "signals": [
+            {
+              "frame": 1,
+              "renderedFrame": 1,
+              "basePosition": {
+                "x": 430,
+                "y": 70
+              }
+            }
+          ],
+          "gates": [],
+          "screenMode": "off",
+          "screenVisible": false,
+          "broadcastAllocated": false,
+          "broadcastSamples": 0
+        }
+      },
+      {
+        "step": 29,
+        "phase": "racing",
+        "round": 1,
+        "equipment": {
+          "tier": "regional",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning"
+          ],
+          "typeCount": 8,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "mirror",
+            "speaker"
+          ],
+          "dynamicTypes": [
+            "camera",
+            "warning"
+          ],
+          "cameras": [
+            {
+              "targetHorse": 6,
+              "renderedFrame": 1,
+              "angle": 36.63976828378799,
+              "desiredAngle": 45.72487262201571,
+              "frame": 1,
+              "pivot": {
+                "x": 330,
+                "y": 565
+              },
+              "basePosition": {
+                "x": 330,
+                "y": 625
+              }
+            }
+          ],
+          "signals": [
+            {
+              "frame": 1,
+              "renderedFrame": 1,
+              "basePosition": {
+                "x": 430,
+                "y": 70
+              }
+            }
+          ],
+          "gates": [],
+          "screenMode": "off",
+          "screenVisible": false,
+          "broadcastAllocated": false,
+          "broadcastSamples": 0
+        }
+      },
+      {
+        "step": 32,
+        "phase": "racing",
+        "round": 1,
+        "equipment": {
+          "tier": "regional",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning"
+          ],
+          "typeCount": 8,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "mirror",
+            "speaker"
+          ],
+          "dynamicTypes": [
+            "camera",
+            "warning"
+          ],
+          "cameras": [
+            {
+              "targetHorse": 6,
+              "renderedFrame": 0,
+              "angle": 7.26164912261936,
+              "desiredAngle": 7.261649122619303,
+              "frame": 0,
+              "pivot": {
+                "x": 330,
+                "y": 565
+              },
+              "basePosition": {
+                "x": 330,
+                "y": 625
+              }
+            }
+          ],
+          "signals": [
+            {
+              "frame": 1,
+              "renderedFrame": 1,
+              "basePosition": {
+                "x": 430,
+                "y": 70
+              }
+            }
+          ],
+          "gates": [],
+          "screenMode": "off",
+          "screenVisible": false,
+          "broadcastAllocated": false,
+          "broadcastSamples": 0
+        }
+      },
+      {
+        "step": 35,
+        "phase": "result",
+        "round": 1,
+        "equipment": {
+          "tier": "regional",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning"
+          ],
+          "typeCount": 8,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "mirror",
+            "speaker"
+          ],
+          "dynamicTypes": [
+            "camera",
+            "warning"
+          ],
+          "cameras": [
+            {
+              "targetHorse": 4,
+              "renderedFrame": 5,
+              "angle": 220.73729784515217,
+              "desiredAngle": 220.7372978451522,
+              "frame": 5,
+              "pivot": {
+                "x": 330,
+                "y": 565
+              },
+              "basePosition": {
+                "x": 330,
+                "y": 625
+              }
+            }
+          ],
+          "signals": [
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 430,
+                "y": 70
+              }
+            }
+          ],
+          "gates": [],
+          "screenMode": "off",
+          "screenVisible": false,
+          "broadcastAllocated": false,
+          "broadcastSamples": 0
+        }
+      },
+      {
+        "step": 38,
+        "phase": "result",
+        "round": 1,
+        "equipment": {
+          "tier": "regional",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning"
+          ],
+          "typeCount": 8,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "mirror",
+            "speaker"
+          ],
+          "dynamicTypes": [
+            "camera",
+            "warning"
+          ],
+          "cameras": [
+            {
+              "targetHorse": 4,
+              "renderedFrame": 4,
+              "angle": 190.62423289230503,
+              "desiredAngle": 190.62423289230506,
+              "frame": 4,
+              "pivot": {
+                "x": 330,
+                "y": 565
+              },
+              "basePosition": {
+                "x": 330,
+                "y": 625
+              }
+            }
+          ],
+          "signals": [
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 430,
+                "y": 70
+              }
+            }
+          ],
+          "gates": [],
+          "screenMode": "off",
+          "screenVisible": false,
+          "broadcastAllocated": false,
+          "broadcastSamples": 0
+        }
+      },
+      {
+        "step": 43,
+        "phase": "betting",
+        "round": 2,
+        "equipment": {
+          "tier": "station",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox"
+          ],
+          "typeCount": 4,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox"
+          ],
+          "dynamicTypes": [],
+          "cameras": [],
+          "signals": [],
+          "gates": [],
+          "screenMode": "off",
+          "screenVisible": false,
+          "broadcastAllocated": false,
+          "broadcastSamples": 0
+        }
+      }
+    ]
+  },
+  {
+    "report": "close-race-390-result.json",
+    "steps": 90,
+    "diagnostics": {
+      "consoleErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "pageErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "requestFailures": {
+        "count": 0,
+        "samples": []
+      },
+      "httpErrors": {
+        "count": 0,
+        "samples": []
+      }
+    },
+    "raceScale": 2.0833333333333335,
+    "result": {
+      "first": 3,
+      "second": 2,
+      "order": [
+        3,
+        2,
+        5,
+        6,
+        1,
+        4
+      ],
+      "pair": "2-3",
+      "payout": 0,
+      "stake": 1,
+      "round": 1,
+      "eventId": "championship"
+    },
+    "metrics": {
+      "finishCount": 6,
+      "visibleOrder": [
+        3,
+        2,
+        5,
+        6,
+        1,
+        4
+      ],
+      "backgroundMismatches": 0,
+      "settlementJump": 2.981429293027215,
+      "resultDrift": 4.265728389938396,
+      "worldChanges": 0,
+      "maxCameraStep": 10.57734214702532,
+      "clippedFinishers": 0
+    },
+    "checks": {
+      "worldRetained": true,
+      "allActualCrossingsVisible": true,
+      "cameraTargetsLiveLeader": true,
+      "actualFramesMatchState": true,
+      "gatePhaseAndReset": true
+    },
+    "screenshots": [
+      "tests/evidence/close-race/close-closed-390.png",
+      "tests/evidence/close-race/close-preparing-on-390.png",
+      "tests/evidence/close-race/close-preparing-blink-390.png",
+      "tests/evidence/close-race/close-open-390.png",
+      "tests/evidence/close-race/close-camera-turn-390.png",
+      "tests/evidence/close-race/close-bend-390.png",
+      "tests/evidence/close-race/close-result-390.png",
+      "tests/evidence/close-race/close-reset-390.png",
+      "tests/evidence/close-race/close-static-tier-390.png"
+    ],
+    "states": [
+      {
+        "step": 5,
+        "phase": "betting",
+        "round": 1,
+        "equipment": {
+          "tier": "station",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox"
+          ],
+          "typeCount": 4,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox"
+          ],
+          "dynamicTypes": [],
+          "cameras": [],
+          "signals": [],
+          "gates": [],
+          "screenMode": "off",
+          "screenVisible": false,
+          "broadcastAllocated": false,
+          "broadcastSamples": 0
+        }
+      },
+      {
+        "step": 37,
+        "phase": "betting",
+        "round": 1,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance",
+            "starting-gate"
+          ],
+          "typeCount": 12,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "mirror",
+            "speaker",
+            "tractor",
+            "ambulance"
+          ],
+          "dynamicTypes": [
+            "camera",
+            "warning",
+            "screen",
+            "starting-gate"
+          ],
+          "cameras": [
+            {
+              "targetHorse": 1,
+              "renderedFrame": 2,
+              "angle": 75.20323775494268,
+              "desiredAngle": 75.20323775494268,
+              "frame": 2,
+              "pivot": {
+                "x": 330,
+                "y": 565
+              },
+              "basePosition": {
+                "x": 330,
+                "y": 625
+              }
+            }
+          ],
+          "signals": [
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 430,
+                "y": 70
+              }
+            }
+          ],
+          "gates": [
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 320
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 280
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 240
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 200
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 160
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 120
+              }
+            }
+          ],
+          "screenMode": "betting",
+          "screenVisible": false,
+          "broadcastAllocated": true,
+          "broadcastSamples": 0
+        }
+      },
+      {
+        "step": 43,
+        "phase": "preparing",
+        "round": 1,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance",
+            "starting-gate"
+          ],
+          "typeCount": 12,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "mirror",
+            "speaker",
+            "tractor",
+            "ambulance"
+          ],
+          "dynamicTypes": [
+            "camera",
+            "warning",
+            "screen",
+            "starting-gate"
+          ],
+          "cameras": [
+            {
+              "targetHorse": 1,
+              "renderedFrame": 2,
+              "angle": 75.20323775494268,
+              "desiredAngle": 75.20323775494268,
+              "frame": 2,
+              "pivot": {
+                "x": 330,
+                "y": 565
+              },
+              "basePosition": {
+                "x": 330,
+                "y": 625
+              }
+            }
+          ],
+          "signals": [
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 430,
+                "y": 70
+              }
+            }
+          ],
+          "gates": [
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 320
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 280
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 240
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 200
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 160
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 120
+              }
+            }
+          ],
+          "screenMode": "betting",
+          "screenVisible": false,
+          "broadcastAllocated": true,
+          "broadcastSamples": 0
+        }
+      },
+      {
+        "step": 46,
+        "phase": "preparing",
+        "round": 1,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance",
+            "starting-gate"
+          ],
+          "typeCount": 12,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "mirror",
+            "speaker",
+            "tractor",
+            "ambulance"
+          ],
+          "dynamicTypes": [
+            "camera",
+            "warning",
+            "screen",
+            "starting-gate"
+          ],
+          "cameras": [
+            {
+              "targetHorse": 1,
+              "renderedFrame": 2,
+              "angle": 75.20323775494268,
+              "desiredAngle": 75.20323775494268,
+              "frame": 2,
+              "pivot": {
+                "x": 330,
+                "y": 565
+              },
+              "basePosition": {
+                "x": 330,
+                "y": 625
+              }
+            }
+          ],
+          "signals": [
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 430,
+                "y": 70
+              }
+            }
+          ],
+          "gates": [
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 320
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 280
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 240
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 200
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 160
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 120
+              }
+            }
+          ],
+          "screenMode": "preparing",
+          "screenVisible": false,
+          "broadcastAllocated": true,
+          "broadcastSamples": 0
+        }
+      },
+      {
+        "step": 48,
+        "phase": "preparing",
+        "round": 1,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance",
+            "starting-gate"
+          ],
+          "typeCount": 12,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "mirror",
+            "speaker",
+            "tractor",
+            "ambulance"
+          ],
+          "dynamicTypes": [
+            "camera",
+            "warning",
+            "screen",
+            "starting-gate"
+          ],
+          "cameras": [
+            {
+              "targetHorse": 1,
+              "renderedFrame": 2,
+              "angle": 75.20323775494268,
+              "desiredAngle": 75.20323775494268,
+              "frame": 2,
+              "pivot": {
+                "x": 330,
+                "y": 565
+              },
+              "basePosition": {
+                "x": 330,
+                "y": 625
+              }
+            }
+          ],
+          "signals": [
+            {
+              "frame": 1,
+              "renderedFrame": 1,
+              "basePosition": {
+                "x": 430,
+                "y": 70
+              }
+            }
+          ],
+          "gates": [
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 320
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 280
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 240
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 200
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 160
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 120
+              }
+            }
+          ],
+          "screenMode": "preparing",
+          "screenVisible": false,
+          "broadcastAllocated": true,
+          "broadcastSamples": 0
+        }
+      },
+      {
+        "step": 52,
+        "phase": "racing",
+        "round": 1,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance",
+            "starting-gate"
+          ],
+          "typeCount": 12,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "mirror",
+            "speaker",
+            "tractor",
+            "ambulance"
+          ],
+          "dynamicTypes": [
+            "camera",
+            "warning",
+            "screen",
+            "starting-gate"
+          ],
+          "cameras": [
+            {
+              "targetHorse": 2,
+              "renderedFrame": 1,
+              "angle": 65.52014490341963,
+              "desiredAngle": 65.52014490341963,
+              "frame": 1,
+              "pivot": {
+                "x": 330,
+                "y": 565
+              },
+              "basePosition": {
+                "x": 330,
+                "y": 625
+              }
+            }
+          ],
+          "signals": [
+            {
+              "frame": 1,
+              "renderedFrame": 1,
+              "basePosition": {
+                "x": 430,
+                "y": 70
+              }
+            }
+          ],
+          "gates": [
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 320
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 280
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 240
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 200
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 160
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 120
+              }
+            }
+          ],
+          "screenMode": "live",
+          "screenVisible": false,
+          "broadcastAllocated": true,
+          "broadcastSamples": 0
+        }
+      },
+      {
+        "step": 55,
+        "phase": "racing",
+        "round": 1,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance",
+            "starting-gate"
+          ],
+          "typeCount": 12,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "mirror",
+            "speaker",
+            "tractor",
+            "ambulance"
+          ],
+          "dynamicTypes": [
+            "camera",
+            "warning",
+            "screen",
+            "starting-gate"
+          ],
+          "cameras": [
+            {
+              "targetHorse": 2,
+              "renderedFrame": 1,
+              "angle": 53.67461040358836,
+              "desiredAngle": 53.67461040358842,
+              "frame": 1,
+              "pivot": {
+                "x": 330,
+                "y": 565
+              },
+              "basePosition": {
+                "x": 330,
+                "y": 625
+              }
+            }
+          ],
+          "signals": [
+            {
+              "frame": 1,
+              "renderedFrame": 1,
+              "basePosition": {
+                "x": 430,
+                "y": 70
+              }
+            }
+          ],
+          "gates": [
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 320
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 280
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 240
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 200
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 160
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 120
+              }
+            }
+          ],
+          "screenMode": "live",
+          "screenVisible": false,
+          "broadcastAllocated": true,
+          "broadcastSamples": 0
+        }
+      },
+      {
+        "step": 57,
+        "phase": "racing",
+        "round": 1,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance",
+            "starting-gate"
+          ],
+          "typeCount": 12,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "mirror",
+            "speaker",
+            "tractor",
+            "ambulance"
+          ],
+          "dynamicTypes": [
+            "camera",
+            "warning",
+            "screen",
+            "starting-gate"
+          ],
+          "cameras": [
+            {
+              "targetHorse": 1,
+              "renderedFrame": 1,
+              "angle": 42.47098657416478,
+              "desiredAngle": 42.47098657416484,
+              "frame": 1,
+              "pivot": {
+                "x": 330,
+                "y": 565
+              },
+              "basePosition": {
+                "x": 330,
+                "y": 625
+              }
+            }
+          ],
+          "signals": [
+            {
+              "frame": 1,
+              "renderedFrame": 1,
+              "basePosition": {
+                "x": 430,
+                "y": 70
+              }
+            }
+          ],
+          "gates": [
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 320
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 280
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 240
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 200
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 160
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 120
+              }
+            }
+          ],
+          "screenMode": "live",
+          "screenVisible": false,
+          "broadcastAllocated": true,
+          "broadcastSamples": 0
+        }
+      },
+      {
+        "step": 59,
+        "phase": "racing",
+        "round": 1,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance",
+            "starting-gate"
+          ],
+          "typeCount": 12,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "mirror",
+            "speaker",
+            "tractor",
+            "ambulance"
+          ],
+          "dynamicTypes": [
+            "camera",
+            "warning",
+            "screen",
+            "starting-gate"
+          ],
+          "cameras": [
+            {
+              "targetHorse": 1,
+              "renderedFrame": 1,
+              "angle": 36.60713679009979,
+              "desiredAngle": 36.607136790099844,
+              "frame": 1,
+              "pivot": {
+                "x": 330,
+                "y": 565
+              },
+              "basePosition": {
+                "x": 330,
+                "y": 625
+              }
+            }
+          ],
+          "signals": [
+            {
+              "frame": 1,
+              "renderedFrame": 1,
+              "basePosition": {
+                "x": 430,
+                "y": 70
+              }
+            }
+          ],
+          "gates": [
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 320
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 280
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 240
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 200
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 160
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 120
+              }
+            }
+          ],
+          "screenMode": "live",
+          "screenVisible": false,
+          "broadcastAllocated": true,
+          "broadcastSamples": 0
+        }
+      },
+      {
+        "step": 61,
+        "phase": "racing",
+        "round": 1,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance",
+            "starting-gate"
+          ],
+          "typeCount": 12,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "mirror",
+            "speaker",
+            "tractor",
+            "ambulance"
+          ],
+          "dynamicTypes": [
+            "camera",
+            "warning",
+            "screen",
+            "starting-gate"
+          ],
+          "cameras": [
+            {
+              "targetHorse": 1,
+              "renderedFrame": 1,
+              "angle": 32.410312329798955,
+              "desiredAngle": 32.410312329798955,
+              "frame": 1,
+              "pivot": {
+                "x": 330,
+                "y": 565
+              },
+              "basePosition": {
+                "x": 330,
+                "y": 625
+              }
+            }
+          ],
+          "signals": [
+            {
+              "frame": 1,
+              "renderedFrame": 1,
+              "basePosition": {
+                "x": 430,
+                "y": 70
+              }
+            }
+          ],
+          "gates": [
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 320
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 280
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 240
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 200
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 160
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 120
+              }
+            }
+          ],
+          "screenMode": "live",
+          "screenVisible": false,
+          "broadcastAllocated": true,
+          "broadcastSamples": 0
+        }
+      },
+      {
+        "step": 63,
+        "phase": "racing",
+        "round": 1,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance",
+            "starting-gate"
+          ],
+          "typeCount": 12,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "mirror",
+            "speaker",
+            "tractor",
+            "ambulance"
+          ],
+          "dynamicTypes": [
+            "camera",
+            "warning",
+            "screen",
+            "starting-gate"
+          ],
+          "cameras": [
+            {
+              "targetHorse": 6,
+              "renderedFrame": 1,
+              "angle": 43.85292242975072,
+              "desiredAngle": 43.85292242975072,
+              "frame": 1,
+              "pivot": {
+                "x": 330,
+                "y": 565
+              },
+              "basePosition": {
+                "x": 330,
+                "y": 625
+              }
+            }
+          ],
+          "signals": [
+            {
+              "frame": 1,
+              "renderedFrame": 1,
+              "basePosition": {
+                "x": 430,
+                "y": 70
+              }
+            }
+          ],
+          "gates": [
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 320
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 280
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 240
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 200
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 160
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 120
+              }
+            }
+          ],
+          "screenMode": "live",
+          "screenVisible": false,
+          "broadcastAllocated": true,
+          "broadcastSamples": 0
+        }
+      },
+      {
+        "step": 65,
+        "phase": "racing",
+        "round": 1,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance",
+            "starting-gate"
+          ],
+          "typeCount": 12,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "mirror",
+            "speaker",
+            "tractor",
+            "ambulance"
+          ],
+          "dynamicTypes": [
+            "camera",
+            "warning",
+            "screen",
+            "starting-gate"
+          ],
+          "cameras": [
+            {
+              "targetHorse": 6,
+              "renderedFrame": 1,
+              "angle": 39.887495151703206,
+              "desiredAngle": 39.88749515170326,
+              "frame": 1,
+              "pivot": {
+                "x": 330,
+                "y": 565
+              },
+              "basePosition": {
+                "x": 330,
+                "y": 625
+              }
+            }
+          ],
+          "signals": [
+            {
+              "frame": 1,
+              "renderedFrame": 1,
+              "basePosition": {
+                "x": 430,
+                "y": 70
+              }
+            }
+          ],
+          "gates": [
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 320
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 280
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 240
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 200
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 160
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 120
+              }
+            }
+          ],
+          "screenMode": "live",
+          "screenVisible": false,
+          "broadcastAllocated": true,
+          "broadcastSamples": 0
+        }
+      },
+      {
+        "step": 67,
+        "phase": "racing",
+        "round": 1,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance",
+            "starting-gate"
+          ],
+          "typeCount": 12,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "mirror",
+            "speaker",
+            "tractor",
+            "ambulance"
+          ],
+          "dynamicTypes": [
+            "camera",
+            "warning",
+            "screen",
+            "starting-gate"
+          ],
+          "cameras": [
+            {
+              "targetHorse": 6,
+              "renderedFrame": 1,
+              "angle": 36.42811697970194,
+              "desiredAngle": 36.428116979702,
+              "frame": 1,
+              "pivot": {
+                "x": 330,
+                "y": 565
+              },
+              "basePosition": {
+                "x": 330,
+                "y": 625
+              }
+            }
+          ],
+          "signals": [
+            {
+              "frame": 1,
+              "renderedFrame": 1,
+              "basePosition": {
+                "x": 430,
+                "y": 70
+              }
+            }
+          ],
+          "gates": [
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 320
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 280
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 240
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 200
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 160
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 120
+              }
+            }
+          ],
+          "screenMode": "live",
+          "screenVisible": false,
+          "broadcastAllocated": true,
+          "broadcastSamples": 0
+        }
+      },
+      {
+        "step": 69,
+        "phase": "racing",
+        "round": 1,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance",
+            "starting-gate"
+          ],
+          "typeCount": 12,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "mirror",
+            "speaker",
+            "tractor",
+            "ambulance"
+          ],
+          "dynamicTypes": [
+            "camera",
+            "warning",
+            "screen",
+            "starting-gate"
+          ],
+          "cameras": [
+            {
+              "targetHorse": 5,
+              "renderedFrame": 1,
+              "angle": 31.35436661986705,
+              "desiredAngle": 31.354366619866994,
+              "frame": 1,
+              "pivot": {
+                "x": 330,
+                "y": 565
+              },
+              "basePosition": {
+                "x": 330,
+                "y": 625
+              }
+            }
+          ],
+          "signals": [
+            {
+              "frame": 1,
+              "renderedFrame": 1,
+              "basePosition": {
+                "x": 430,
+                "y": 70
+              }
+            }
+          ],
+          "gates": [
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 320
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 280
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 240
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 200
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 160
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 120
+              }
+            }
+          ],
+          "screenMode": "live",
+          "screenVisible": false,
+          "broadcastAllocated": true,
+          "broadcastSamples": 0
+        }
+      },
+      {
+        "step": 73,
+        "phase": "racing",
+        "round": 1,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance",
+            "starting-gate"
+          ],
+          "typeCount": 12,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "mirror",
+            "speaker",
+            "tractor",
+            "ambulance"
+          ],
+          "dynamicTypes": [
+            "camera",
+            "warning",
+            "screen",
+            "starting-gate"
+          ],
+          "cameras": [
+            {
+              "targetHorse": 3,
+              "renderedFrame": 0,
+              "angle": 11.666153719013323,
+              "desiredAngle": 11.666153719013323,
+              "frame": 0,
+              "pivot": {
+                "x": 330,
+                "y": 565
+              },
+              "basePosition": {
+                "x": 330,
+                "y": 625
+              }
+            }
+          ],
+          "signals": [
+            {
+              "frame": 1,
+              "renderedFrame": 1,
+              "basePosition": {
+                "x": 430,
+                "y": 70
+              }
+            }
+          ],
+          "gates": [
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 320
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 280
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 240
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 200
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 160
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 120
+              }
+            }
+          ],
+          "screenMode": "live",
+          "screenVisible": false,
+          "broadcastAllocated": true,
+          "broadcastSamples": 0
+        }
+      },
+      {
+        "step": 76,
+        "phase": "result",
+        "round": 1,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance",
+            "starting-gate"
+          ],
+          "typeCount": 12,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "mirror",
+            "speaker",
+            "tractor",
+            "ambulance"
+          ],
+          "dynamicTypes": [
+            "camera",
+            "warning",
+            "screen",
+            "starting-gate"
+          ],
+          "cameras": [
+            {
+              "targetHorse": 3,
+              "renderedFrame": 5,
+              "angle": 215.24415744991586,
+              "desiredAngle": 215.24415744991586,
+              "frame": 5,
+              "pivot": {
+                "x": 330,
+                "y": 565
+              },
+              "basePosition": {
+                "x": 330,
+                "y": 625
+              }
+            }
+          ],
+          "signals": [
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 430,
+                "y": 70
+              }
+            }
+          ],
+          "gates": [
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 320
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 280
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 240
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 200
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 160
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 120
+              }
+            }
+          ],
+          "screenMode": "result",
+          "screenVisible": true,
+          "broadcastAllocated": true,
+          "broadcastSamples": 85
+        }
+      },
+      {
+        "step": 79,
+        "phase": "result",
+        "round": 1,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance",
+            "starting-gate"
+          ],
+          "typeCount": 12,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "mirror",
+            "speaker",
+            "tractor",
+            "ambulance"
+          ],
+          "dynamicTypes": [
+            "camera",
+            "warning",
+            "screen",
+            "starting-gate"
+          ],
+          "cameras": [
+            {
+              "targetHorse": 3,
+              "renderedFrame": 4,
+              "angle": 189.3904836683613,
+              "desiredAngle": 189.3904836683613,
+              "frame": 4,
+              "pivot": {
+                "x": 330,
+                "y": 565
+              },
+              "basePosition": {
+                "x": 330,
+                "y": 625
+              }
+            }
+          ],
+          "signals": [
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 430,
+                "y": 70
+              }
+            }
+          ],
+          "gates": [
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 320
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 280
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 240
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 200
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 160
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 120
+              }
+            }
+          ],
+          "screenMode": "live",
+          "screenVisible": true,
+          "broadcastAllocated": true,
+          "broadcastSamples": 95
+        }
+      },
+      {
+        "step": 83,
+        "phase": "betting",
+        "round": 2,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance",
+            "starting-gate"
+          ],
+          "typeCount": 12,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "mirror",
+            "speaker",
+            "tractor",
+            "ambulance"
+          ],
+          "dynamicTypes": [
+            "camera",
+            "warning",
+            "screen",
+            "starting-gate"
+          ],
+          "cameras": [
+            {
+              "targetHorse": 1,
+              "renderedFrame": 2,
+              "angle": 75.20323775494268,
+              "desiredAngle": 75.20323775494268,
+              "frame": 2,
+              "pivot": {
+                "x": 330,
+                "y": 565
+              },
+              "basePosition": {
+                "x": 330,
+                "y": 625
+              }
+            }
+          ],
+          "signals": [
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 430,
+                "y": 70
+              }
+            }
+          ],
+          "gates": [
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 320
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 280
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 240
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 200
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 160
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 120
+              }
+            }
+          ],
+          "screenMode": "betting",
+          "screenVisible": false,
+          "broadcastAllocated": true,
+          "broadcastSamples": 96
+        }
+      },
+      {
+        "step": 88,
+        "phase": "betting",
+        "round": 2,
+        "equipment": {
+          "tier": "station",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox"
+          ],
+          "typeCount": 4,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox"
+          ],
+          "dynamicTypes": [],
+          "cameras": [],
+          "signals": [],
+          "gates": [],
+          "screenMode": "off",
+          "screenVisible": false,
+          "broadcastAllocated": false,
+          "broadcastSamples": 0
+        }
+      }
+    ]
+  },
+  {
+    "report": "close-race-430-result.json",
+    "steps": 67,
+    "diagnostics": {
+      "consoleErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "pageErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "requestFailures": {
+        "count": 0,
+        "samples": []
+      },
+      "httpErrors": {
+        "count": 0,
+        "samples": []
+      }
+    },
+    "raceScale": 2.0833333333333335,
+    "result": {
+      "first": 1,
+      "second": 4,
+      "order": [
+        1,
+        4,
+        3,
+        5,
+        2,
+        6
+      ],
+      "pair": "1-4",
+      "payout": 0,
+      "stake": 1,
+      "round": 1,
+      "eventId": "championship"
+    },
+    "metrics": {
+      "finishCount": 6,
+      "visibleOrder": [
+        1,
+        4,
+        3,
+        5,
+        2,
+        6
+      ],
+      "backgroundMismatches": 0,
+      "settlementJump": 2.9998167897063897,
+      "resultDrift": 2.9767607809444336,
+      "worldChanges": 0,
+      "maxCameraStep": 5.965336059405445,
+      "clippedFinishers": 0
+    },
+    "checks": {
+      "worldRetained": true,
+      "allActualCrossingsVisible": true,
+      "cameraTargetsLiveLeader": true,
+      "actualFramesMatchState": true,
+      "gatePhaseAndReset": true
+    },
+    "screenshots": [
+      "tests/evidence/close-race/close-betting-430.png",
+      "tests/evidence/close-race/close-preparing-430.png",
+      "tests/evidence/close-race/close-open-430.png",
+      "tests/evidence/close-race/close-camera-430.png",
+      "tests/evidence/close-race/close-bend-430.png",
+      "tests/evidence/close-race/close-result-430.png",
+      "tests/evidence/close-race/close-runout-430.png",
+      "tests/evidence/close-race/close-next-430.png"
+    ],
+    "states": [
+      {
+        "step": 5,
+        "phase": "betting",
+        "round": 1,
+        "equipment": {
+          "tier": "station",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox"
+          ],
+          "typeCount": 4,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox"
+          ],
+          "dynamicTypes": [],
+          "cameras": [],
+          "signals": [],
+          "gates": [],
+          "screenMode": "off",
+          "screenVisible": false,
+          "broadcastAllocated": false,
+          "broadcastSamples": 0
+        }
+      },
+      {
+        "step": 37,
+        "phase": "betting",
+        "round": 1,
+        "equipment": {
+          "tier": "station",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox"
+          ],
+          "typeCount": 4,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox"
+          ],
+          "dynamicTypes": [],
+          "cameras": [],
+          "signals": [],
+          "gates": [],
+          "screenMode": "off",
+          "screenVisible": false,
+          "broadcastAllocated": false,
+          "broadcastSamples": 0
+        }
+      },
+      {
+        "step": 42,
+        "phase": "preparing",
+        "round": 1,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance",
+            "starting-gate"
+          ],
+          "typeCount": 12,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "mirror",
+            "speaker",
+            "tractor",
+            "ambulance"
+          ],
+          "dynamicTypes": [
+            "camera",
+            "warning",
+            "screen",
+            "starting-gate"
+          ],
+          "cameras": [
+            {
+              "targetHorse": 1,
+              "renderedFrame": 2,
+              "angle": 75.20323775494268,
+              "desiredAngle": 75.20323775494268,
+              "frame": 2,
+              "pivot": {
+                "x": 330,
+                "y": 565
+              },
+              "basePosition": {
+                "x": 330,
+                "y": 625
+              }
+            }
+          ],
+          "signals": [
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 430,
+                "y": 70
+              }
+            }
+          ],
+          "gates": [
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 320
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 280
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 240
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 200
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 160
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 120
+              }
+            }
+          ],
+          "screenMode": "betting",
+          "screenVisible": false,
+          "broadcastAllocated": true,
+          "broadcastSamples": 0
+        }
+      },
+      {
+        "step": 44,
+        "phase": "preparing",
+        "round": 1,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance",
+            "starting-gate"
+          ],
+          "typeCount": 12,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "mirror",
+            "speaker",
+            "tractor",
+            "ambulance"
+          ],
+          "dynamicTypes": [
+            "camera",
+            "warning",
+            "screen",
+            "starting-gate"
+          ],
+          "cameras": [
+            {
+              "targetHorse": 1,
+              "renderedFrame": 2,
+              "angle": 75.20323775494268,
+              "desiredAngle": 75.20323775494268,
+              "frame": 2,
+              "pivot": {
+                "x": 330,
+                "y": 565
+              },
+              "basePosition": {
+                "x": 330,
+                "y": 625
+              }
+            }
+          ],
+          "signals": [
+            {
+              "frame": 1,
+              "renderedFrame": 1,
+              "basePosition": {
+                "x": 430,
+                "y": 70
+              }
+            }
+          ],
+          "gates": [
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 320
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 280
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 240
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 200
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 160
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 120
+              }
+            }
+          ],
+          "screenMode": "preparing",
+          "screenVisible": false,
+          "broadcastAllocated": true,
+          "broadcastSamples": 0
+        }
+      },
+      {
+        "step": 48,
+        "phase": "racing",
+        "round": 1,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance",
+            "starting-gate"
+          ],
+          "typeCount": 12,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "mirror",
+            "speaker",
+            "tractor",
+            "ambulance"
+          ],
+          "dynamicTypes": [
+            "camera",
+            "warning",
+            "screen",
+            "starting-gate"
+          ],
+          "cameras": [
+            {
+              "targetHorse": 2,
+              "renderedFrame": 1,
+              "angle": 65.03928130025366,
+              "desiredAngle": 65.03928130025366,
+              "frame": 1,
+              "pivot": {
+                "x": 330,
+                "y": 565
+              },
+              "basePosition": {
+                "x": 330,
+                "y": 625
+              }
+            }
+          ],
+          "signals": [
+            {
+              "frame": 1,
+              "renderedFrame": 1,
+              "basePosition": {
+                "x": 430,
+                "y": 70
+              }
+            }
+          ],
+          "gates": [
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 320
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 280
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 240
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 200
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 160
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 120
+              }
+            }
+          ],
+          "screenMode": "live",
+          "screenVisible": false,
+          "broadcastAllocated": true,
+          "broadcastSamples": 0
+        }
+      },
+      {
+        "step": 51,
+        "phase": "racing",
+        "round": 1,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance",
+            "starting-gate"
+          ],
+          "typeCount": 12,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "mirror",
+            "speaker",
+            "tractor",
+            "ambulance"
+          ],
+          "dynamicTypes": [
+            "camera",
+            "warning",
+            "screen",
+            "starting-gate"
+          ],
+          "cameras": [
+            {
+              "targetHorse": 1,
+              "renderedFrame": 1,
+              "angle": 30.945862043834495,
+              "desiredAngle": 30.945862043834495,
+              "frame": 1,
+              "pivot": {
+                "x": 330,
+                "y": 565
+              },
+              "basePosition": {
+                "x": 330,
+                "y": 625
+              }
+            }
+          ],
+          "signals": [
+            {
+              "frame": 1,
+              "renderedFrame": 1,
+              "basePosition": {
+                "x": 430,
+                "y": 70
+              }
+            }
+          ],
+          "gates": [
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 320
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 280
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 240
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 200
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 160
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 120
+              }
+            }
+          ],
+          "screenMode": "live",
+          "screenVisible": false,
+          "broadcastAllocated": true,
+          "broadcastSamples": 0
+        }
+      },
+      {
+        "step": 54,
+        "phase": "racing",
+        "round": 1,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance",
+            "starting-gate"
+          ],
+          "typeCount": 12,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "mirror",
+            "speaker",
+            "tractor",
+            "ambulance"
+          ],
+          "dynamicTypes": [
+            "camera",
+            "warning",
+            "screen",
+            "starting-gate"
+          ],
+          "cameras": [
+            {
+              "targetHorse": 6,
+              "renderedFrame": 0,
+              "angle": 7.583973308280292,
+              "desiredAngle": 7.583973308280349,
+              "frame": 0,
+              "pivot": {
+                "x": 330,
+                "y": 565
+              },
+              "basePosition": {
+                "x": 330,
+                "y": 625
+              }
+            }
+          ],
+          "signals": [
+            {
+              "frame": 1,
+              "renderedFrame": 1,
+              "basePosition": {
+                "x": 430,
+                "y": 70
+              }
+            }
+          ],
+          "gates": [
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 320
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 280
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 240
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 200
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 160
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 120
+              }
+            }
+          ],
+          "screenMode": "live",
+          "screenVisible": false,
+          "broadcastAllocated": true,
+          "broadcastSamples": 0
+        }
+      },
+      {
+        "step": 57,
+        "phase": "result",
+        "round": 1,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance",
+            "starting-gate"
+          ],
+          "typeCount": 12,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "mirror",
+            "speaker",
+            "tractor",
+            "ambulance"
+          ],
+          "dynamicTypes": [
+            "camera",
+            "warning",
+            "screen",
+            "starting-gate"
+          ],
+          "cameras": [
+            {
+              "targetHorse": 1,
+              "renderedFrame": 5,
+              "angle": 204.29464729154938,
+              "desiredAngle": 204.29464729154938,
+              "frame": 5,
+              "pivot": {
+                "x": 330,
+                "y": 565
+              },
+              "basePosition": {
+                "x": 330,
+                "y": 625
+              }
+            }
+          ],
+          "signals": [
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 430,
+                "y": 70
+              }
+            }
+          ],
+          "gates": [
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 320
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 280
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 240
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 200
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 160
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 120
+              }
+            }
+          ],
+          "screenMode": "result",
+          "screenVisible": true,
+          "broadcastAllocated": true,
+          "broadcastSamples": 86
+        }
+      },
+      {
+        "step": 60,
+        "phase": "result",
+        "round": 1,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance",
+            "starting-gate"
+          ],
+          "typeCount": 12,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "mirror",
+            "speaker",
+            "tractor",
+            "ambulance"
+          ],
+          "dynamicTypes": [
+            "camera",
+            "warning",
+            "screen",
+            "starting-gate"
+          ],
+          "cameras": [
+            {
+              "targetHorse": 1,
+              "renderedFrame": 4,
+              "angle": 185.67114076313499,
+              "desiredAngle": 185.67114076313504,
+              "frame": 4,
+              "pivot": {
+                "x": 330,
+                "y": 565
+              },
+              "basePosition": {
+                "x": 330,
+                "y": 625
+              }
+            }
+          ],
+          "signals": [
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 430,
+                "y": 70
+              }
+            }
+          ],
+          "gates": [
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 320
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 280
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 240
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 200
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 160
+              }
+            },
+            {
+              "frame": 3,
+              "renderedFrame": 3,
+              "basePosition": {
+                "x": 390,
+                "y": 120
+              }
+            }
+          ],
+          "screenMode": "live",
+          "screenVisible": true,
+          "broadcastAllocated": true,
+          "broadcastSamples": 107
+        }
+      },
+      {
+        "step": 65,
+        "phase": "betting",
+        "round": 2,
+        "equipment": {
+          "tier": "championship",
+          "types": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "camera",
+            "mirror",
+            "speaker",
+            "warning",
+            "screen",
+            "tractor",
+            "ambulance",
+            "starting-gate"
+          ],
+          "typeCount": 12,
+          "staticTypes": [
+            "rail",
+            "distance",
+            "finish-post",
+            "toolbox",
+            "mirror",
+            "speaker",
+            "tractor",
+            "ambulance"
+          ],
+          "dynamicTypes": [
+            "camera",
+            "warning",
+            "screen",
+            "starting-gate"
+          ],
+          "cameras": [
+            {
+              "targetHorse": 1,
+              "renderedFrame": 2,
+              "angle": 75.20323775494268,
+              "desiredAngle": 75.20323775494268,
+              "frame": 2,
+              "pivot": {
+                "x": 330,
+                "y": 565
+              },
+              "basePosition": {
+                "x": 330,
+                "y": 625
+              }
+            }
+          ],
+          "signals": [
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 430,
+                "y": 70
+              }
+            }
+          ],
+          "gates": [
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 320
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 280
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 240
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 200
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 160
+              }
+            },
+            {
+              "frame": 0,
+              "renderedFrame": 0,
+              "basePosition": {
+                "x": 390,
+                "y": 120
+              }
+            }
+          ],
+          "screenMode": "betting",
+          "screenVisible": false,
+          "broadcastAllocated": true,
+          "broadcastSamples": 108
+        }
+      }
+    ]
+  }
+]

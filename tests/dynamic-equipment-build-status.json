@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "cocos-tool-result-v1",
+  "operationId": "a7529efc-5bff-4e19-97a4-8c89ddb714c5",
+  "projectId": "9d8a0041f7873b81",
+  "tool": "build_get_status",
+  "status": "PASSED",
+  "data": {
+    "state": "passed",
+    "platform": "web-mobile",
+    "operationId": "horse-dynamic-web-20261024-r06",
+    "startedAt": "2026-10-24T01:21:32.839Z",
+    "finishedAt": "2026-10-24T01:22:11.104Z",
+    "outputDir": "D:\\code\\shidai3\\P4000\\golden-horse-86\\build\\web-mobile",
+    "logPath": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\build.log",
+    "configPath": "D:\\code\\shidai3\\P4000\\golden-horse-86\\tests\\build-web-mobile.json",
+    "runnerExitCode": 36,
+    "builderFinished": true,
+    "artifactIdentity": {
+      "sourceRevision": "43cf9688d6b4bf4a5c5afcc3233367842570a406",
+      "buildConfigHash": "c52b04686c48d9f866e5e0cc978baecbcea218d6d2ab706d724c8df2476d499b",
+      "packageHash": "7d3c0f37619eef9396d71d67c55ddadce123ccfbb465389201b2298d5e870719",
+      "creatorVersion": "3.8.8"
+    }
+  },
+  "evidence": []
+}

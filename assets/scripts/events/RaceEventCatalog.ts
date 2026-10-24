@@ -1,5 +1,5 @@
 export type RaceEventId='station'|'regional'|'championship';
-export type EquipmentId='rail'|'distance'|'finish-post'|'toolbox'|'camera'|'mirror'|'speaker'|'warning'|'screen'|'tractor'|'ambulance';
+export type EquipmentId='rail'|'distance'|'finish-post'|'toolbox'|'camera'|'mirror'|'speaker'|'warning'|'screen'|'tractor'|'ambulance'|'starting-gate';
 export interface RaceEventTier {readonly id:RaceEventId;readonly name:string;readonly minCredits:number;}
 export interface RaceEventRules {readonly preparationSeconds:number;readonly resultDisplaySeconds:number;readonly tiers:readonly RaceEventTier[];}
 export interface RaceEventSpec extends RaceEventTier {readonly equipment:readonly EquipmentId[];}
@@ -16,8 +16,8 @@ export class RaceEventCatalog {
   const validSeconds=(v:unknown):v is number=>typeof v==='number'&&Number.isFinite(v)&&v>0&&v<=30;
   if(!validSeconds(value.preparationSeconds)||!validSeconds(value.resultDisplaySeconds))throw Error('Invalid event timing');
   const ids:RaceEventId[]=['station','regional','championship'];
-  const equipment:EquipmentId[]=['rail','distance','finish-post','toolbox','camera','mirror','speaker','warning','screen','tractor','ambulance'];
-  const counts=[4,8,11];const tiers:RaceEventSpec[]=[];
+  const equipment:EquipmentId[]=['rail','distance','finish-post','toolbox','camera','mirror','speaker','warning','screen','tractor','ambulance','starting-gate'];
+  const counts=[4,8,12];const tiers:RaceEventSpec[]=[];
   for(let i=0;i<3;i++){
    const t:unknown=value.tiers[i];
    if(!object(t)||t.id!==ids[i]||typeof t.name!=='string'||!t.name.trim()||typeof t.minCredits!=='number'||!Number.isSafeInteger(t.minCredits)||t.minCredits<0||!Array.isArray(t.equipment)||t.equipment.length!==counts[i]||t.equipment.some((id,j)=>id!==equipment[j]))throw Error('Invalid event tier '+ids[i]);
