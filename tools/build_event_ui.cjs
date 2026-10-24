@@ -5,6 +5,12 @@ const rgba=hex=>({r:parseInt(hex.slice(1,3),16),g:parseInt(hex.slice(3,5),16),b:
 const node=(name,w,h,x=0,y=0,children=[])=>({name,size:{width:w,height:h},position:{x,y},children});
 function text(name,string,w,h,x,y,size){labels.push([name,size]);return {...node(name,w,h,x,y),type:'label',label:{string,fontSize:size,color:rgba('#ffe192')}};}
 function box(name,w,h,x,y,color,children=[]){colors.push([name,color]);return {...node(name,w,h,x,y,children),type:'sprite',sprite:{spriteFrameUuid:white,sizeMode:'CUSTOM'}};}
+if(process.argv[2]==='help'){
+ const ref=name=>({$type:'NodeReference',semanticKey:'name:'+name});
+ call('ui_build_tree',{parent:{name:'BetPanel'},expectedRevision:call('scene_get_tree',{}).revision,verify:true,save:true,tree:box('HelpButton',144,94,288,-94,'#203137',[text('HelpButtonText','帮助',138,88,0,0,25)])});
+ const ops=[{op:'setProperty',target:'name:HelpButton',component:'cc.Sprite',property:'color',value:{$type:'Color',...rgba('#203137')}},{op:'upsertComponent',target:'name:HelpButtonText',type:'cc.Label',properties:{horizontalAlign:1,verticalAlign:1,lineHeight:28,overflow:2}},{op:'upsertComponent',target:'GoldenHorseGame',type:'GoldenHorseGame',properties:{menuButtons:[ref('SettingsButton'),ref('HelpButton')]}}];
+ const out=call('scene_apply_patch',{expectedRevision:call('scene_get_tree',{}).revision,operations:ops,verify:true,save:true});console.log('Saved help controls',out.after?.revision);process.exit(0);
+}
 if(process.argv[2]==='settings'){
  const snapshot=call('scene_get_tree',{}),has=(nodes,name)=>nodes.some(n=>n.name===name||has(n.children,name));if(has(snapshot.roots,'SettingsButton'))throw Error('Settings already exists');
  call('ui_build_tree',{parent:{name:'BetPanel'},expectedRevision:snapshot.revision,verify:true,save:true,tree:box('SettingsButton',144,94,144,-94,'#203137',[text('SettingsButtonText','设置',138,88,0,0,25)])});

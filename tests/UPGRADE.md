@@ -74,3 +74,10 @@ Creator新增按钮及专用关闭，保存重开。reviewer /root/horse_build_r
 ## F4 历史明细
 
 默认最近5条、最多20条翻页，返回保留当前页；详情使用冻结receipt两列完整展示15组合押分/当场倍率、赛事、完整名次及账目。History.test实际组件22场覆盖上限、翻页、旧数据隔离及冻结。strict通过；Creator编译errors[]，upgrade-history-390-result.json原生33步通过，15组合全部押1，实际返4/净-11，截图目视完整无裁切、诊断0。初次返回触摸误用左侧坐标，改为实际居中按钮后通过，未改Runtime。reviewer /root/horse_build_review 显式父OCR审查无确定缺陷，权限隔离未核验；正式产物最终整合。
+
+
+## F6 帮助与新旅程
+
+规则说明组合/倍率/档位/沿用/阶段锁与0/1000/3000赛事门槛。仅betting且余额0/押0显示确认新旅程，取消保留原分数，确认500并清历史/上场明细，保留设置。Journey实际回调验证有押/准备/赛中/结果拒绝、取消与清空；QuickInput历史关闭测试迁到新的专用关闭，SessionLifecycle/History及strict通过。遗留网页重新生成Smoke通过。
+
+Creator保存重开rev-5aeb6db5；upgrade-help-390-result.json21步PASSED、诊断0，帮助/确认/取消0/确认500原生截图归档并目视。reviewer /root/horse_build_review 经父OCR无确定缺陷，权限隔离未核验；F7累计字段留后续验证，正式构建最后整合。

@@ -1,0 +1,140 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "steps": [
+    {
+      "type": "wait",
+      "durationMs": 1500
+    },
+    {
+      "type": "ui",
+      "action": "click",
+      "target": "#view-select:visible, body:not(:has(#view-select:visible))"
+    },
+    {
+      "type": "ui",
+      "action": "click",
+      "target": "li[data-device=WebpageFullScreen]:visible, body:not(:has(li[data-device=WebpageFullScreen]:visible))"
+    },
+    {
+      "type": "wait_ready"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "revision": "upgrade-help-v1",
+        "horseFrames": 144,
+        "equipment": {
+          "typeCount": 4
+        },
+        "preRaceFrames": 66,
+        "preAudio": {
+          "loaded": 5
+        }
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 345,
+      "y": 700
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "dialog": "help",
+        "paused": true
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "screenshot",
+      "label": "upgrade-help-rules"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 333,
+      "y": 198
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F12"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "credits": 0,
+        "totalStake": 0
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 335,
+      "y": 817
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "dialog": "restart",
+        "credits": 0
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "screenshot",
+      "label": "upgrade-help-confirm"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 278,
+      "y": 474
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "dialog": "none",
+        "credits": 0
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 335,
+      "y": 817
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 111,
+      "y": 474
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "dialog": "none",
+        "credits": 500,
+        "totalStake": 0,
+        "round": 1,
+        "historyLength": 0
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "screenshot",
+      "label": "upgrade-help-new-journey"
+    }
+  ]
+}

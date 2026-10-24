@@ -366,6 +366,30 @@ class RaceModel {
         this.message = '模拟清分完成（不涉及真实交易）';
         this.changeSerial++;
     }
+    get canRestartJourney() { return this.phase === 'betting' && this.credits === 0 && this.totalStake === 0; }
+    /** Explicitly confirmed by the application; cumulative progress/settings are outside journey data. */
+    restartJourney() {
+        if (!this.canRestartJourney)
+            return false;
+        this.credits = 500;
+        this.round = 1;
+        this.countdown = this.bettingSeconds;
+        this.raceElapsed = 0;
+        this.resultElapsed = 0;
+        this.preparationRemaining = 0;
+        this.progress.fill(0);
+        this.cells.forEach(c => c.stake = 0);
+        this.history = [];
+        this.lastResult = null;
+        this.pendingOrder = [1, 2, 3, 4, 5, 6];
+        this.finishTimes.fill(18);
+        this.visualSeed = 0;
+        this.presentationSeed = Date.now() >>> 0;
+        this.chooseHighestEvent();
+        this.message = '新旅程：500分，请选择号码组合';
+        this.changeSerial++;
+        return true;
+    }
     startRace() {
         if (this.phase === 'result') {
             this.nextRound();
