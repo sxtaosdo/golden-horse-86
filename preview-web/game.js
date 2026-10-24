@@ -138,6 +138,75 @@ function horsePose(index, progress, seconds = 0) {
         pose.y += Math.sin(seconds * 20 + index * 1.4) * 1.2;
     return pose;
 }
+const object = (v) => typeof v === 'object' && v !== null && !Array.isArray(v);
+const integer = (v, min = 0, max = Number.MAX_SAFE_INTEGER) => typeof v === 'number' && Number.isSafeInteger(v) && v >= min && v <= max;
+const number = (v, min = 0, max = Number.MAX_SAFE_INTEGER) => typeof v === 'number' && Number.isFinite(v) && v >= min && v <= max;
+const order = (v) => Array.isArray(v) && v.length === 6 && v.every(x => integer(x, 1, 6)) && new Set(v).size === 6;
+const event = (v) => v === 'station' || v === 'regional' || v === 'championship';
+/** Validates untrusted storage before any balance or phase can enter the model. */
+class RaceSnapshotCodec {
+    static parse(value, rules) {
+        if (!object(value) || value.version !== 1 || value.pairMode !== rules.pairMode || value.bettingSeconds !== rules.bettingSeconds || value.raceSeconds !== rules.raceSeconds)
+            throw Error('存档版本或比赛配置不兼容');
+        const v = value;
+        if (!['betting', 'preparing', 'racing', 'result'].includes(String(v.phase)) || !integer(v.round, 1) || !integer(v.credits) || !number(v.countdown, 0, rules.bettingSeconds) || !number(v.preparationRemaining, 0, rules.preparationSeconds) || !number(v.raceElapsed, 0, rules.raceSeconds + 8) || !number(v.resultElapsed, 0, 315360000) || !event(v.eventId) || !integer(v.presentationSeed, 0, 0xffffffff) || !integer(v.visualSeed, 0, 0xffffffff) || typeof v.message !== 'string' || v.message.length > 200)
+            throw Error('存档比赛状态损坏');
+        if (!Array.isArray(v.cells) || v.cells.length !== rules.cells.length)
+            throw Error('存档押分表损坏');
+        const cells = v.cells.map((c, i) => { if (!object(c) || c.key !== rules.cells[i].key || c.odds !== rules.cells[i].odds || !integer(c.stake))
+            throw Error('存档押分数据损坏'); return { key: rules.cells[i].key, odds: rules.cells[i].odds, stake: c.stake }; });
+        const total = cells.reduce((sum, c) => sum + c.stake, 0);
+        if (!integer(total) || !integer(v.credits + total))
+            throw Error('存档积分越界');
+        if (!order(v.pendingOrder) || !Array.isArray(v.finishTimes) || v.finishTimes.length !== 6 || !v.finishTimes.every(t => number(t, 0, rules.raceSeconds + 2)))
+            throw Error('存档名次损坏');
+        if (!Array.isArray(v.history) || v.history.length > 20)
+            throw Error('存档历史损坏');
+        const history = v.history.map(r => this.receipt(r, rules));
+        for (let i = 0; i < history.length; i++)
+            if (history[i].round > v.round || (i > 0 && history[i].round >= history[i - 1].round))
+                throw Error('存档历史场次不一致');
+        const phase = v.phase;
+        if (phase === 'betting' || phase === 'preparing') {
+            if (v.raceElapsed !== 0 || v.resultElapsed !== 0 || v.lastResultRound !== null)
+                throw Error('存档赛前阶段不一致');
+            const tier = rules.tiers.find(t => t.id === v.eventId);
+            if (rules.tiers.length && (!tier || v.credits + total < tier.minCredits))
+                throw Error('存档赛事资格不一致');
+            if (phase === 'preparing' && (total === 0 || v.preparationRemaining <= 0))
+                throw Error('存档准备状态不一致');
+            if (phase === 'betting' && v.preparationRemaining !== 0)
+                throw Error('存档押分状态不一致');
+        }
+        else {
+            if (total === 0 || v.preparationRemaining !== 0)
+                throw Error('存档比赛押分不一致');
+            v.pendingOrder.forEach((horse, rank) => { if (Math.abs(v.finishTimes[horse - 1] - (rules.raceSeconds - 2 + rank * .35)) > 1e-8)
+                throw Error('存档完成时刻不一致'); });
+            const settledAt = Math.max(...v.finishTimes) + .65;
+            if (phase === 'racing' && (v.lastResultRound !== null || v.resultElapsed !== 0 || v.raceElapsed >= settledAt + .000001))
+                throw Error('存档未结算状态不一致');
+            if (phase === 'result' && (v.lastResultRound !== v.round || history[0]?.round !== v.round || v.raceElapsed < settledAt - 1e-8 || history[0].order.some((h, i) => h !== v.pendingOrder[i]) || history[0].stake !== total || history[0].eventId !== v.eventId))
+                throw Error('存档已结算状态不一致');
+        }
+        const currentRound = v.round;
+        if (phase !== 'result' && history.some(r => r.round >= currentRound))
+            throw Error('存档重复结算标记');
+        if (phase === 'result' && cells.some(c => c.stake !== (history[0].bets.find(b => b.key === c.key)?.stake ?? 0)))
+            throw Error('存档已结算押分明细不一致');
+        return { version: 1, pairMode: rules.pairMode, bettingSeconds: rules.bettingSeconds, raceSeconds: rules.raceSeconds, phase, round: v.round, credits: v.credits, countdown: v.countdown, preparationRemaining: v.preparationRemaining, raceElapsed: v.raceElapsed, resultElapsed: v.resultElapsed, eventId: v.eventId, cells, pendingOrder: [...v.pendingOrder], finishTimes: [...v.finishTimes], presentationSeed: v.presentationSeed, visualSeed: v.visualSeed, history, lastResultRound: phase === 'result' ? v.round : null, message: v.message };
+    }
+    static receipt(value, rules) {
+        if (!object(value) || !order(value.order) || !integer(value.round, 1) || !event(value.eventId) || value.first !== value.order[0] || value.second !== value.order[1] || typeof value.pair !== 'string' || !integer(value.stake, 1) || !integer(value.payout) || !integer(value.odds, 1) || !number(value.net, -Number.MAX_SAFE_INTEGER) || !Number.isSafeInteger(value.net) || !Array.isArray(value.bets) || value.bets.length === 0 || value.bets.length > rules.cells.length)
+            throw Error('存档结算明细损坏');
+        const keys = new Set(), bets = value.bets.map((b) => { if (!object(b) || typeof b.key !== 'string' || !rules.cells.some(c => c.key === b.key) || keys.has(b.key) || !integer(b.stake, 1) || !integer(b.odds, 1))
+            throw Error('存档组合明细损坏'); keys.add(b.key); return Object.freeze({ key: b.key, stake: b.stake, odds: b.odds }); });
+        const pair = rules.pairMode === 'ordered' ? value.first + '-' + value.second : [value.first, value.second].sort((a, b) => Number(a) - Number(b)).join('-'), win = bets.find(b => b.key === pair);
+        if (value.pair !== pair || bets.reduce((s, b) => s + b.stake, 0) !== value.stake || value.payout !== (win ? win.stake * win.odds : 0) || value.net !== value.payout - value.stake || (win && value.odds !== win.odds))
+            throw Error('存档结算账目不一致');
+        return Object.freeze({ first: value.order[0], second: value.order[1], order: Object.freeze([...value.order]), round: value.round, eventId: value.eventId, pair, payout: value.payout, stake: value.stake, odds: value.odds, net: value.net, bets: Object.freeze(bets) });
+    }
+}
 /**
  * Illustrative odds only. These are not advertised as the 1986 machine's odds.
  * All pairs can be overridden through RaceOptions.odds.
@@ -150,6 +219,7 @@ const DEMO_ODDS = {
     '5-6': 200,
 };
 class RaceModel {
+    get changeId() { return this.changeSerial; }
     get choreographySeed() { return this.visualSeed; }
     /** Visual timeline only; winner selection and payout remain unchanged. */
     get courseFraction() { return Math.min(1, RacePace.progress(this.raceElapsed, this.raceSeconds - 2)); }
@@ -169,6 +239,7 @@ class RaceModel {
         this.history = [];
         this.finishTimes = [18, 18, 18, 18, 18, 18];
         this.visualSeed = 0;
+        this.changeSerial = 0;
         this.pendingOrder = [1, 2, 3, 4, 5, 6];
         this.random = random;
         this.presentationSeed = (opts.presentationSeed ?? Date.now()) >>> 0;
@@ -210,6 +281,7 @@ class RaceModel {
         }
         this.selectedEventId = id;
         this.message = '已选择' + this.eventName;
+        this.changeSerial++;
         return true;
     }
     chooseHighestEvent() {
@@ -244,6 +316,7 @@ class RaceModel {
         cell.stake += change;
         this.credits -= change;
         this.message = `已押 ${cell.key} / 本局 ${this.totalStake} 分`;
+        this.changeSerial++;
         return true;
     }
     addTestCredits(amount = 100) {
@@ -251,6 +324,7 @@ class RaceModel {
             return;
         this.credits += amount;
         this.message = `测试投币 +${amount}`;
+        this.changeSerial++;
     }
     clearBets() {
         if (this.phase !== 'betting')
@@ -258,6 +332,7 @@ class RaceModel {
         this.credits += this.totalStake;
         this.cells.forEach(c => c.stake = 0);
         this.message = '本局押分已清空';
+        this.changeSerial++;
     }
     /** Replace as a single transaction. A failed rebet preserves every current cell. */
     repeatLastBets() {
@@ -278,6 +353,7 @@ class RaceModel {
         for (const cell of this.cells)
             cell.stake = amounts.get(cell.key) ?? 0;
         this.message = '已沿用上场 ' + cost + ' 分';
+        this.changeSerial++;
         return true;
     }
     /** Simulation of the old clear-score key: no cash-out functionality. */
@@ -288,6 +364,7 @@ class RaceModel {
         this.credits = 0;
         this.chooseHighestEvent();
         this.message = '模拟清分完成（不涉及真实交易）';
+        this.changeSerial++;
     }
     startRace() {
         if (this.phase === 'result') {
@@ -308,6 +385,7 @@ class RaceModel {
         if (this.preparationRemaining > 0) {
             this.phase = 'preparing';
             this.message = '准备起跑';
+            this.changeSerial++;
         }
         else
             this.startRunning();
@@ -327,6 +405,7 @@ class RaceModel {
         this.raceElapsed = 0;
         this.phase = 'racing';
         this.message = '比赛进行中';
+        this.changeSerial++;
     }
     update(dt) {
         if (!Number.isFinite(dt) || dt <= 0)
@@ -387,6 +466,7 @@ class RaceModel {
         this.phase = 'result';
         this.resultElapsed = 0;
         this.message = `本场 ${pair}  得分 +${payout}   Enter 下一场`;
+        this.changeSerial++;
     }
     nextRound() {
         if (this.phase !== 'result')
@@ -402,6 +482,34 @@ class RaceModel {
         this.chooseHighestEvent();
         this.lastResult = null;
         this.message = '下一场：请选择号码组合';
+        this.changeSerial++;
+    }
+    snapshotRules() { return { pairMode: this.pairMode, bettingSeconds: this.bettingSeconds, raceSeconds: this.raceSeconds, preparationSeconds: this.events?.preparationSeconds ?? 0, cells: this.cells, tiers: this.eventTiers }; }
+    exportSnapshot() {
+        return { version: 1, pairMode: this.pairMode, bettingSeconds: this.bettingSeconds, raceSeconds: this.raceSeconds, phase: this.phase, round: this.round, credits: this.credits, countdown: this.countdown, preparationRemaining: this.preparationRemaining, raceElapsed: this.raceElapsed, resultElapsed: this.resultElapsed, eventId: this.selectedEventId, cells: this.cells.map(c => ({ key: c.key, stake: c.stake, odds: c.odds })), pendingOrder: [...this.pendingOrder], finishTimes: [...this.finishTimes], presentationSeed: this.presentationSeed, visualSeed: this.visualSeed, history: [...this.history], lastResultRound: this.lastResult?.round ?? null, message: this.message };
+    }
+    static restore(value, random = Math.random, opts = {}) {
+        const model = new RaceModel(random, opts), s = RaceSnapshotCodec.parse(value, model.snapshotRules());
+        model.phase = s.phase;
+        model.round = s.round;
+        model.credits = s.credits;
+        model.countdown = s.countdown;
+        model.preparationRemaining = s.preparationRemaining;
+        model.raceElapsed = s.raceElapsed;
+        model.resultElapsed = s.resultElapsed;
+        model.selectedEventId = s.eventId;
+        model.message = s.message;
+        s.cells.forEach((c, i) => model.cells[i].stake = c.stake);
+        model.pendingOrder = [...s.pendingOrder];
+        model.finishTimes.splice(0, 6, ...s.finishTimes);
+        model.presentationSeed = s.presentationSeed;
+        model.visualSeed = s.visualSeed;
+        model.history = [...s.history];
+        model.lastResult = s.phase === 'result' ? model.history[0] : null;
+        if (s.phase === 'racing' || s.phase === 'result')
+            for (let i = 0; i < 6; i++)
+                model.progress[i] = RaceChoreography.progress(i, s.raceElapsed, model.finishTimes[i], model.raceSeconds - 2, s.visualSeed);
+        return model;
     }
 }
 

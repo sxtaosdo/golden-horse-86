@@ -4,6 +4,7 @@
  */
 import { RaceChoreography, RacePace } from './TrackVisual';
 import { RaceEventId, RaceEventRules, RaceEventTier } from './events/RaceEventCatalog';
+import { RaceSnapshot, RaceSnapshotCodec, SnapshotRules } from './session/RaceSnapshot';
 export type Phase = 'betting' | 'preparing' | 'racing' | 'result';
 export type PairMode = 'unordered' | 'ordered';
 export interface RaceOptions {
@@ -58,8 +59,10 @@ export class RaceModel {
   private readonly random: () => number;
   private readonly finishTimes: number[] = [18,18,18,18,18,18];
   private readonly raceSeconds: number;
-  private readonly presentationSeed:number;
+  private presentationSeed:number;
   private visualSeed=0;
+  private changeSerial=0;
+  get changeId():number{return this.changeSerial;}
   get choreographySeed():number{return this.visualSeed;}
   private pendingOrder: number[] = [1,2,3,4,5,6];
   /** Visual timeline only; winner selection and payout remain unchanged. */
@@ -103,7 +106,7 @@ export class RaceModel {
   selectEvent(id:RaceEventId):boolean{
     if(this.phase!=='betting')return false;
     if(!this.canEnterEvent(id)){this.message='参赛积分不足';return false;}
-    this.selectedEventId=id;this.message='已选择'+this.eventName;return true;
+    this.selectedEventId=id;this.message='已选择'+this.eventName;this.changeSerial++;return true;
   }
   private chooseHighestEvent():void{
     const tiers=this.events?.tiers;if(!tiers)return;
@@ -127,18 +130,21 @@ export class RaceModel {
     cell.stake += change;
     this.credits -= change;
     this.message = `已押 ${cell.key} / 本局 ${this.totalStake} 分`;
+    this.changeSerial++;
     return true;
   }
   addTestCredits(amount = 100): void {
     if (this.phase !== 'betting' || !Number.isSafeInteger(amount) || amount <= 0) return;
     this.credits += amount;
     this.message = `测试投币 +${amount}`;
+    this.changeSerial++;
   }
   clearBets(): void {
     if (this.phase !== 'betting') return;
     this.credits += this.totalStake;
     this.cells.forEach(c => c.stake = 0);
     this.message = '本局押分已清空';
+    this.changeSerial++;
   }
   /** Replace as a single transaction. A failed rebet preserves every current cell. */
   repeatLastBets():boolean{
@@ -149,7 +155,7 @@ export class RaceModel {
     if(!Number.isSafeInteger(cost)||cost<=0||available<cost){this.message='积分不足，原押分保留';return false;}
     const amounts=new Map(bets.map(b=>[b.key,b.stake]));
     this.credits=available-cost;for(const cell of this.cells)cell.stake=amounts.get(cell.key)??0;
-    this.message='已沿用上场 '+cost+' 分';return true;
+    this.message='已沿用上场 '+cost+' 分';this.changeSerial++;return true;
   }
   /** Simulation of the old clear-score key: no cash-out functionality. */
   clearCredits(): void {
@@ -158,6 +164,7 @@ export class RaceModel {
     this.credits = 0;
     this.chooseHighestEvent();
     this.message = '模拟清分完成（不涉及真实交易）';
+    this.changeSerial++;
   }
   startRace(): boolean {
     if (this.phase === 'result') { this.nextRound(); return true; }
@@ -165,7 +172,7 @@ export class RaceModel {
     if (!this.totalStake) { this.message = '请先选择号码组合押分'; return false; }
     if(this.events&&!this.canEnterEvent(this.selectedEventId)){this.message='参赛积分不足，请切换赛事';return false;}
     this.preparationRemaining=this.events?.preparationSeconds??0;
-    if(this.preparationRemaining>0){this.phase='preparing';this.message='准备起跑';}
+    if(this.preparationRemaining>0){this.phase='preparing';this.message='准备起跑';this.changeSerial++;}
     else this.startRunning();
     return true;
   }
@@ -183,6 +190,7 @@ export class RaceModel {
     this.raceElapsed = 0;
     this.phase = 'racing';
     this.message = '比赛进行中';
+    this.changeSerial++;
   }
   update(dt: number): void {
     if (!Number.isFinite(dt) || dt <= 0) return;
@@ -229,6 +237,7 @@ export class RaceModel {
     this.phase = 'result';
     this.resultElapsed = 0;
     this.message = `本场 ${pair}  得分 +${payout}   Enter 下一场`;
+    this.changeSerial++;
   }
   nextRound(): void {
     if(this.phase!=='result')return;
@@ -243,5 +252,17 @@ export class RaceModel {
     this.chooseHighestEvent();
     this.lastResult=null;
     this.message = '下一场：请选择号码组合';
+    this.changeSerial++;
+  }
+  private snapshotRules():SnapshotRules{return {pairMode:this.pairMode,bettingSeconds:this.bettingSeconds,raceSeconds:this.raceSeconds,preparationSeconds:this.events?.preparationSeconds??0,cells:this.cells,tiers:this.eventTiers};}
+  exportSnapshot():RaceSnapshot{
+    return {version:1,pairMode:this.pairMode,bettingSeconds:this.bettingSeconds,raceSeconds:this.raceSeconds,phase:this.phase,round:this.round,credits:this.credits,countdown:this.countdown,preparationRemaining:this.preparationRemaining,raceElapsed:this.raceElapsed,resultElapsed:this.resultElapsed,eventId:this.selectedEventId,cells:this.cells.map(c=>({key:c.key,stake:c.stake,odds:c.odds})),pendingOrder:[...this.pendingOrder],finishTimes:[...this.finishTimes],presentationSeed:this.presentationSeed,visualSeed:this.visualSeed,history:[...this.history],lastResultRound:this.lastResult?.round??null,message:this.message};
+  }
+  static restore(value:unknown,random:()=>number=Math.random,opts:RaceOptions={}):RaceModel{
+    const model=new RaceModel(random,opts),s=RaceSnapshotCodec.parse(value,model.snapshotRules());
+    model.phase=s.phase;model.round=s.round;model.credits=s.credits;model.countdown=s.countdown;model.preparationRemaining=s.preparationRemaining;model.raceElapsed=s.raceElapsed;model.resultElapsed=s.resultElapsed;model.selectedEventId=s.eventId;model.message=s.message;
+    s.cells.forEach((c,i)=>model.cells[i].stake=c.stake);model.pendingOrder=[...s.pendingOrder];model.finishTimes.splice(0,6,...s.finishTimes);model.presentationSeed=s.presentationSeed;model.visualSeed=s.visualSeed;model.history=[...s.history];model.lastResult=s.phase==='result'?model.history[0]:null;
+    if(s.phase==='racing'||s.phase==='result')for(let i=0;i<6;i++)model.progress[i]=RaceChoreography.progress(i,s.raceElapsed,model.finishTimes[i],model.raceSeconds-2,s.visualSeed);
+    return model;
   }
 }

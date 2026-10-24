@@ -43,3 +43,9 @@ RepeatBets/BetHold/实际GoldenHorseGame接线QuickInput测试、全部npm test�
 ## V5 信息层级
 
 15个格子用明确Sprite引用显示红色已押边框，红金额、黄倍率；末5秒红色“即将开跑”且不闪烁。Creator保存重开rev-95c103da，RaceHost尺寸/位置不变。QuickInput和strict通过；revision upgrade-emphasis-v1，upgrade-emphasis-{360,390,430}-result.json为9/12/9共30步，全部PASSED、诊断0，390实际等待并观察[4秒提醒](evidence/upgrade-emphasis/upgrade-emphasis-urgent.png)。reviewer `/root/horse_build_review`按父OCR规则核对15个引用/报告，无确定缺陷，权限隔离未核验。正式构建随功能阶段整合。
+
+## F2 存档核心（尚未接入应用）
+
+RaceModel导出全部规则状态、已抽顺序/完成时刻、演出种子及历史；恢复经强校验，phase=result直接载入不可变结果，不调用resolve。RaceSnapshot.test逐步覆盖四阶段及完整赛程、恢复0次RNG/相同进度/反复结果不再付、坏账与数组阶段拒绝。RaceArchive.test覆盖单键写、失败保留原键、双实例独占、释放/重试、坏档备份、临时模式及晚到锁回调；设置范围校验。strict和遗留网页重生成Smoke通过；Creator导入session与Model，编译errors[]。
+
+reviewer `/root/horse_build_review`经显式父OCR发现阶段数组误收、晚到锁回调覆盖临时两P2，已修复、补定向并复审关闭。cwd/Git根产品仓，权限隔离未核验。此切片仅提供核心API，未接入应用读写/隐藏恢复；实际持久化、面板和音源生命周期由F3验收，不以mock锁测试代替浏览器验证。
