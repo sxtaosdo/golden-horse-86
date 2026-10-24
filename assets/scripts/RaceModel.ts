@@ -4,7 +4,7 @@
  */
 import { RaceChoreography, RacePace } from './TrackVisual';
 import { RaceEventId, RaceEventRules, RaceEventTier } from './events/RaceEventCatalog';
-import { RaceSnapshot, RaceSnapshotCodec, SnapshotRules } from './session/RaceSnapshot';
+import { RaceSnapshot, RaceSnapshotCodec, SnapshotRules, MilestoneProgress } from './session/RaceSnapshot';
 export type Phase = 'betting' | 'preparing' | 'racing' | 'result';
 export type PairMode = 'unordered' | 'ordered';
 export interface RaceOptions {
@@ -62,6 +62,10 @@ export class RaceModel {
   private presentationSeed:number;
   private visualSeed=0;
   private changeSerial=0;
+  private completed:MilestoneProgress={completed:0,regional:false,championship:false};
+  private announcement='';
+  get milestones():Readonly<MilestoneProgress>{return Object.freeze({...this.completed});}
+  get milestoneNotice():string{return this.announcement;}
   get changeId():number{return this.changeSerial;}
   get choreographySeed():number{return this.visualSeed;}
   private pendingOrder: number[] = [1,2,3,4,5,6];
@@ -172,7 +176,7 @@ export class RaceModel {
     if(!this.canRestartJourney)return false;
     this.credits=500;this.round=1;this.countdown=this.bettingSeconds;this.raceElapsed=0;this.resultElapsed=0;this.preparationRemaining=0;
     this.progress.fill(0);this.cells.forEach(c=>c.stake=0);this.history=[];this.lastResult=null;this.pendingOrder=[1,2,3,4,5,6];this.finishTimes.fill(18);this.visualSeed=0;this.presentationSeed=Date.now()>>>0;
-    this.chooseHighestEvent();this.message='新旅程：500分，请选择号码组合';this.changeSerial++;return true;
+    this.announcement='';this.chooseHighestEvent();this.message='新旅程：500分，请选择号码组合';this.changeSerial++;return true;
   }
   startRace(): boolean {
     if (this.phase === 'result') { this.nextRound(); return true; }
@@ -239,6 +243,11 @@ export class RaceModel {
     this.credits += payout;
     const bets=Object.freeze(this.cells.filter(c=>c.stake>0).map(c=>Object.freeze({key:c.key,stake:c.stake,odds:c.odds})));
     const result:RaceResult=Object.freeze({ first,second,order,pair,payout,stake,round:this.round,eventId:this.selectedEventId,bets,odds:winCell?.odds??0,net:payout-stake });
+    const unlocked:string[]=[];this.completed.completed++;
+    if(this.completed.completed===1)unlocked.push('首次完赛');if(this.completed.completed===10)unlocked.push('完成10场');
+    if(this.selectedEventId==='regional'&&!this.completed.regional){this.completed.regional=true;unlocked.push('首次地区赛完赛');}
+    if(this.selectedEventId==='championship'&&!this.completed.championship){this.completed.championship=true;unlocked.push('首次冠军赛完赛');}
+    this.announcement=unlocked.join(' · ');
     this.lastResult = result;
     this.history.unshift(result);
     if (this.history.length > 20) this.history.length=20;
@@ -258,18 +267,18 @@ export class RaceModel {
     this.cells.forEach(c => c.stake = 0);
     this.preparationRemaining=0;
     this.chooseHighestEvent();
-    this.lastResult=null;
+    this.lastResult=null;this.announcement='';
     this.message = '下一场：请选择号码组合';
     this.changeSerial++;
   }
   private snapshotRules():SnapshotRules{return {pairMode:this.pairMode,bettingSeconds:this.bettingSeconds,raceSeconds:this.raceSeconds,preparationSeconds:this.events?.preparationSeconds??0,cells:this.cells,tiers:this.eventTiers};}
   exportSnapshot():RaceSnapshot{
-    return {version:1,pairMode:this.pairMode,bettingSeconds:this.bettingSeconds,raceSeconds:this.raceSeconds,phase:this.phase,round:this.round,credits:this.credits,countdown:this.countdown,preparationRemaining:this.preparationRemaining,raceElapsed:this.raceElapsed,resultElapsed:this.resultElapsed,eventId:this.selectedEventId,cells:this.cells.map(c=>({key:c.key,stake:c.stake,odds:c.odds})),pendingOrder:[...this.pendingOrder],finishTimes:[...this.finishTimes],presentationSeed:this.presentationSeed,visualSeed:this.visualSeed,history:[...this.history],lastResultRound:this.lastResult?.round??null,message:this.message};
+    return {version:1,pairMode:this.pairMode,bettingSeconds:this.bettingSeconds,raceSeconds:this.raceSeconds,phase:this.phase,round:this.round,credits:this.credits,countdown:this.countdown,preparationRemaining:this.preparationRemaining,raceElapsed:this.raceElapsed,resultElapsed:this.resultElapsed,eventId:this.selectedEventId,cells:this.cells.map(c=>({key:c.key,stake:c.stake,odds:c.odds})),pendingOrder:[...this.pendingOrder],finishTimes:[...this.finishTimes],presentationSeed:this.presentationSeed,visualSeed:this.visualSeed,history:[...this.history],lastResultRound:this.lastResult?.round??null,message:this.message,milestones:{...this.completed}};
   }
   static restore(value:unknown,random:()=>number=Math.random,opts:RaceOptions={}):RaceModel{
     const model=new RaceModel(random,opts),s=RaceSnapshotCodec.parse(value,model.snapshotRules());
     model.phase=s.phase;model.round=s.round;model.credits=s.credits;model.countdown=s.countdown;model.preparationRemaining=s.preparationRemaining;model.raceElapsed=s.raceElapsed;model.resultElapsed=s.resultElapsed;model.selectedEventId=s.eventId;model.message=s.message;
-    s.cells.forEach((c,i)=>model.cells[i].stake=c.stake);model.pendingOrder=[...s.pendingOrder];model.finishTimes.splice(0,6,...s.finishTimes);model.presentationSeed=s.presentationSeed;model.visualSeed=s.visualSeed;model.history=[...s.history];model.lastResult=s.phase==='result'?model.history[0]:null;
+    s.cells.forEach((c,i)=>model.cells[i].stake=c.stake);model.pendingOrder=[...s.pendingOrder];model.finishTimes.splice(0,6,...s.finishTimes);model.presentationSeed=s.presentationSeed;model.visualSeed=s.visualSeed;model.history=[...s.history];model.lastResult=s.phase==='result'?model.history[0]:null;model.completed={...s.milestones!};
     if(s.phase==='racing'||s.phase==='result')for(let i=0;i<6;i++)model.progress[i]=RaceChoreography.progress(i,s.raceElapsed,model.finishTimes[i],model.raceSeconds-2,s.visualSeed);
     return model;
   }

@@ -5,8 +5,9 @@ export interface RaceSnapshot {
  version:1;pairMode:PairMode;bettingSeconds:number;raceSeconds:number;phase:Phase;round:number;credits:number;
  countdown:number;preparationRemaining:number;raceElapsed:number;resultElapsed:number;eventId:RaceEventId;
  cells:{key:string;stake:number;odds:number}[];pendingOrder:number[];finishTimes:number[];presentationSeed:number;visualSeed:number;
- history:RaceResult[];lastResultRound:number|null;message:string;
+ history:RaceResult[];lastResultRound:number|null;message:string;milestones?:MilestoneProgress;
 }
+export interface MilestoneProgress {completed:number;regional:boolean;championship:boolean;}
 export interface SnapshotRules {pairMode:PairMode;bettingSeconds:number;raceSeconds:number;preparationSeconds:number;cells:readonly {key:string;odds:number}[];tiers:readonly {id:RaceEventId;minCredits:number}[];}
 const object=(v:unknown):v is Record<string,unknown>=>typeof v==='object'&&v!==null&&!Array.isArray(v);
 const integer=(v:unknown,min=0,max=Number.MAX_SAFE_INTEGER):v is number=>typeof v==='number'&&Number.isSafeInteger(v)&&v>=min&&v<=max;
@@ -25,7 +26,7 @@ export class RaceSnapshotCodec {
   const total=cells.reduce((sum,c)=>sum+c.stake,0);if(!integer(total)||!integer(v.credits+total))throw Error('存档积分越界');
   if(!order(v.pendingOrder)||!Array.isArray(v.finishTimes)||v.finishTimes.length!==6||!v.finishTimes.every(t=>number(t,0,rules.raceSeconds+2)))throw Error('存档名次损坏');
   if(!Array.isArray(v.history)||v.history.length>20)throw Error('存档历史损坏');
-  const history=v.history.map(r=>this.receipt(r,rules));
+  const history=v.history.map(r=>this.receipt(r,rules)),milestones=this.milestones(v.milestones,history);
   for(let i=0;i<history.length;i++)if(history[i].round>v.round||(i>0&&history[i].round>=history[i-1].round))throw Error('存档历史场次不一致');
   const phase=v.phase as Phase;
   if(phase==='betting'||phase==='preparing'){
@@ -42,7 +43,14 @@ export class RaceSnapshotCodec {
   }
   const currentRound=v.round;if(phase!=='result'&&history.some(r=>r.round>=currentRound))throw Error('存档重复结算标记');
   if(phase==='result'&&cells.some(c=>c.stake!==(history[0].bets.find(b=>b.key===c.key)?.stake??0)))throw Error('存档已结算押分明细不一致');
-  return {version:1,pairMode:rules.pairMode,bettingSeconds:rules.bettingSeconds,raceSeconds:rules.raceSeconds,phase,round:v.round,credits:v.credits,countdown:v.countdown,preparationRemaining:v.preparationRemaining,raceElapsed:v.raceElapsed,resultElapsed:v.resultElapsed,eventId:v.eventId,cells,pendingOrder:[...v.pendingOrder],finishTimes:[...v.finishTimes] as number[],presentationSeed:v.presentationSeed,visualSeed:v.visualSeed,history,lastResultRound:phase==='result'?v.round:null,message:v.message};
+  return {version:1,pairMode:rules.pairMode,bettingSeconds:rules.bettingSeconds,raceSeconds:rules.raceSeconds,phase,round:v.round,credits:v.credits,countdown:v.countdown,preparationRemaining:v.preparationRemaining,raceElapsed:v.raceElapsed,resultElapsed:v.resultElapsed,eventId:v.eventId,cells,pendingOrder:[...v.pendingOrder],finishTimes:[...v.finishTimes] as number[],presentationSeed:v.presentationSeed,visualSeed:v.visualSeed,history,milestones,lastResultRound:phase==='result'?v.round:null,message:v.message};
+ }
+ private static milestones(value:unknown,history:readonly RaceResult[]):MilestoneProgress{
+  const regional=history.some(r=>r.eventId==='regional'),championship=history.some(r=>r.eventId==='championship');
+  // Old v1 archives have no cumulative ledger; migrate only the results actually retained.
+  if(value===undefined)return {completed:history.length,regional,championship};
+  if(!object(value)||!integer(value.completed,history.length)||typeof value.regional!=='boolean'||typeof value.championship!=='boolean'||(regional&&!value.regional)||(championship&&!value.championship)||((value.regional||value.championship)&&value.completed===0))throw Error('存档累计里程碑损坏');
+  return {completed:value.completed,regional:value.regional,championship:value.championship};
  }
  private static receipt(value:unknown,rules:SnapshotRules):RaceResult{
   if(!object(value)||!order(value.order)||!integer(value.round,1)||!event(value.eventId)||value.first!==value.order[0]||value.second!==value.order[1]||typeof value.pair!=='string'||!integer(value.stake,1)||!integer(value.payout)||!integer(value.odds,1)||!number(value.net,-Number.MAX_SAFE_INTEGER)||!Number.isSafeInteger(value.net)||!Array.isArray(value.bets)||value.bets.length===0||value.bets.length>rules.cells.length)throw Error('存档结算明细损坏');

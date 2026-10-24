@@ -162,7 +162,7 @@ class RaceSnapshotCodec {
             throw Error('存档名次损坏');
         if (!Array.isArray(v.history) || v.history.length > 20)
             throw Error('存档历史损坏');
-        const history = v.history.map(r => this.receipt(r, rules));
+        const history = v.history.map(r => this.receipt(r, rules)), milestones = this.milestones(v.milestones, history);
         for (let i = 0; i < history.length; i++)
             if (history[i].round > v.round || (i > 0 && history[i].round >= history[i - 1].round))
                 throw Error('存档历史场次不一致');
@@ -194,7 +194,16 @@ class RaceSnapshotCodec {
             throw Error('存档重复结算标记');
         if (phase === 'result' && cells.some(c => c.stake !== (history[0].bets.find(b => b.key === c.key)?.stake ?? 0)))
             throw Error('存档已结算押分明细不一致');
-        return { version: 1, pairMode: rules.pairMode, bettingSeconds: rules.bettingSeconds, raceSeconds: rules.raceSeconds, phase, round: v.round, credits: v.credits, countdown: v.countdown, preparationRemaining: v.preparationRemaining, raceElapsed: v.raceElapsed, resultElapsed: v.resultElapsed, eventId: v.eventId, cells, pendingOrder: [...v.pendingOrder], finishTimes: [...v.finishTimes], presentationSeed: v.presentationSeed, visualSeed: v.visualSeed, history, lastResultRound: phase === 'result' ? v.round : null, message: v.message };
+        return { version: 1, pairMode: rules.pairMode, bettingSeconds: rules.bettingSeconds, raceSeconds: rules.raceSeconds, phase, round: v.round, credits: v.credits, countdown: v.countdown, preparationRemaining: v.preparationRemaining, raceElapsed: v.raceElapsed, resultElapsed: v.resultElapsed, eventId: v.eventId, cells, pendingOrder: [...v.pendingOrder], finishTimes: [...v.finishTimes], presentationSeed: v.presentationSeed, visualSeed: v.visualSeed, history, milestones, lastResultRound: phase === 'result' ? v.round : null, message: v.message };
+    }
+    static milestones(value, history) {
+        const regional = history.some(r => r.eventId === 'regional'), championship = history.some(r => r.eventId === 'championship');
+        // Old v1 archives have no cumulative ledger; migrate only the results actually retained.
+        if (value === undefined)
+            return { completed: history.length, regional, championship };
+        if (!object(value) || !integer(value.completed, history.length) || typeof value.regional !== 'boolean' || typeof value.championship !== 'boolean' || (regional && !value.regional) || (championship && !value.championship) || ((value.regional || value.championship) && value.completed === 0))
+            throw Error('存档累计里程碑损坏');
+        return { completed: value.completed, regional: value.regional, championship: value.championship };
     }
     static receipt(value, rules) {
         if (!object(value) || !order(value.order) || !integer(value.round, 1) || !event(value.eventId) || value.first !== value.order[0] || value.second !== value.order[1] || typeof value.pair !== 'string' || !integer(value.stake, 1) || !integer(value.payout) || !integer(value.odds, 1) || !number(value.net, -Number.MAX_SAFE_INTEGER) || !Number.isSafeInteger(value.net) || !Array.isArray(value.bets) || value.bets.length === 0 || value.bets.length > rules.cells.length)
@@ -219,6 +228,8 @@ const DEMO_ODDS = {
     '5-6': 200,
 };
 class RaceModel {
+    get milestones() { return Object.freeze({ ...this.completed }); }
+    get milestoneNotice() { return this.announcement; }
     get changeId() { return this.changeSerial; }
     get choreographySeed() { return this.visualSeed; }
     /** Visual timeline only; winner selection and payout remain unchanged. */
@@ -240,6 +251,8 @@ class RaceModel {
         this.finishTimes = [18, 18, 18, 18, 18, 18];
         this.visualSeed = 0;
         this.changeSerial = 0;
+        this.completed = { completed: 0, regional: false, championship: false };
+        this.announcement = '';
         this.pendingOrder = [1, 2, 3, 4, 5, 6];
         this.random = random;
         this.presentationSeed = (opts.presentationSeed ?? Date.now()) >>> 0;
@@ -385,6 +398,7 @@ class RaceModel {
         this.finishTimes.fill(18);
         this.visualSeed = 0;
         this.presentationSeed = Date.now() >>> 0;
+        this.announcement = '';
         this.chooseHighestEvent();
         this.message = '新旅程：500分，请选择号码组合';
         this.changeSerial++;
@@ -483,6 +497,21 @@ class RaceModel {
         this.credits += payout;
         const bets = Object.freeze(this.cells.filter(c => c.stake > 0).map(c => Object.freeze({ key: c.key, stake: c.stake, odds: c.odds })));
         const result = Object.freeze({ first, second, order, pair, payout, stake, round: this.round, eventId: this.selectedEventId, bets, odds: winCell?.odds ?? 0, net: payout - stake });
+        const unlocked = [];
+        this.completed.completed++;
+        if (this.completed.completed === 1)
+            unlocked.push('首次完赛');
+        if (this.completed.completed === 10)
+            unlocked.push('完成10场');
+        if (this.selectedEventId === 'regional' && !this.completed.regional) {
+            this.completed.regional = true;
+            unlocked.push('首次地区赛完赛');
+        }
+        if (this.selectedEventId === 'championship' && !this.completed.championship) {
+            this.completed.championship = true;
+            unlocked.push('首次冠军赛完赛');
+        }
+        this.announcement = unlocked.join(' · ');
         this.lastResult = result;
         this.history.unshift(result);
         if (this.history.length > 20)
@@ -505,12 +534,13 @@ class RaceModel {
         this.preparationRemaining = 0;
         this.chooseHighestEvent();
         this.lastResult = null;
+        this.announcement = '';
         this.message = '下一场：请选择号码组合';
         this.changeSerial++;
     }
     snapshotRules() { return { pairMode: this.pairMode, bettingSeconds: this.bettingSeconds, raceSeconds: this.raceSeconds, preparationSeconds: this.events?.preparationSeconds ?? 0, cells: this.cells, tiers: this.eventTiers }; }
     exportSnapshot() {
-        return { version: 1, pairMode: this.pairMode, bettingSeconds: this.bettingSeconds, raceSeconds: this.raceSeconds, phase: this.phase, round: this.round, credits: this.credits, countdown: this.countdown, preparationRemaining: this.preparationRemaining, raceElapsed: this.raceElapsed, resultElapsed: this.resultElapsed, eventId: this.selectedEventId, cells: this.cells.map(c => ({ key: c.key, stake: c.stake, odds: c.odds })), pendingOrder: [...this.pendingOrder], finishTimes: [...this.finishTimes], presentationSeed: this.presentationSeed, visualSeed: this.visualSeed, history: [...this.history], lastResultRound: this.lastResult?.round ?? null, message: this.message };
+        return { version: 1, pairMode: this.pairMode, bettingSeconds: this.bettingSeconds, raceSeconds: this.raceSeconds, phase: this.phase, round: this.round, credits: this.credits, countdown: this.countdown, preparationRemaining: this.preparationRemaining, raceElapsed: this.raceElapsed, resultElapsed: this.resultElapsed, eventId: this.selectedEventId, cells: this.cells.map(c => ({ key: c.key, stake: c.stake, odds: c.odds })), pendingOrder: [...this.pendingOrder], finishTimes: [...this.finishTimes], presentationSeed: this.presentationSeed, visualSeed: this.visualSeed, history: [...this.history], lastResultRound: this.lastResult?.round ?? null, message: this.message, milestones: { ...this.completed } };
     }
     static restore(value, random = Math.random, opts = {}) {
         const model = new RaceModel(random, opts), s = RaceSnapshotCodec.parse(value, model.snapshotRules());
@@ -530,6 +560,7 @@ class RaceModel {
         model.visualSeed = s.visualSeed;
         model.history = [...s.history];
         model.lastResult = s.phase === 'result' ? model.history[0] : null;
+        model.completed = { ...s.milestones };
         if (s.phase === 'racing' || s.phase === 'result')
             for (let i = 0; i < 6; i++)
                 model.progress[i] = RaceChoreography.progress(i, s.raceElapsed, model.finishTimes[i], model.raceSeconds - 2, s.visualSeed);

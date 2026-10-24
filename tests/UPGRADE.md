@@ -81,3 +81,10 @@ Creator新增按钮及专用关闭，保存重开。reviewer /root/horse_build_r
 规则说明组合/倍率/档位/沿用/阶段锁与0/1000/3000赛事门槛。仅betting且余额0/押0显示确认新旅程，取消保留原分数，确认500并清历史/上场明细，保留设置。Journey实际回调验证有押/准备/赛中/结果拒绝、取消与清空；QuickInput历史关闭测试迁到新的专用关闭，SessionLifecycle/History及strict通过。遗留网页重新生成Smoke通过。
 
 Creator保存重开rev-5aeb6db5；upgrade-help-390-result.json21步PASSED、诊断0，帮助/确认/取消0/确认500原生截图归档并目视。reviewer /root/horse_build_review 经父OCR无确定缺陷，权限隔离未核验；F7累计字段留后续验证，正式构建最后整合。
+
+
+## F7 累计里程碑
+
+resolve仅记录1/10场及首次地区/冠军，积分规则不变。临时提示不入档，restore静默；新旅程保留累计。旧v1缺字段仅从保留history推导已知下界，不虚构更早成绩。Milestones.test覆盖四目标、无奖金、恢复/迁移静默及重启保留；完整core、strict与网页重生成Smoke通过。
+
+Creator编译errors[]；upgrade-milestones-390-result.json17步PASSED、诊断0，首次完赛提示与累计菜单截图目视正确。reviewer /root/horse_build_review 显式父OCR无确定缺陷，权限隔离未核验。最终正式同包待V4/V6整合；声音听感未验。
