@@ -1,0 +1,506 @@
+{
+  "viewport": {
+    "width": 430,
+    "height": 932
+  },
+  "pageState": "keep",
+  "steps": [
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 215,
+      "y": 80
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 347,
+      "y": 710
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "eventPickerVisible": true
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 215,
+      "y": 549
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "eventId": "championship"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "type": "api",
+      "call": "testStartRecording"
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "idle-turn-430-idle"
+    },
+    {
+      "type": "wait",
+      "durationMs": 600
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "idle-turn-430-idle-motion"
+    },
+    {
+      "type": "wait",
+      "durationMs": 1600
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "idle-turn-430-idle-rest"
+    },
+    {
+      "type": "wait",
+      "durationMs": 8000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "idle-turn-430-idle-repeat"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 267,
+      "y": 902
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "historyVisible": true
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "idle-turn-430-pause"
+    },
+    {
+      "type": "wait",
+      "durationMs": 600
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "idle-turn-430-pause-hold"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 267,
+      "y": 902
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "historyVisible": false
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 50,
+      "y": 612
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "totalStake": 1
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 370,
+      "y": 902
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "preparing"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "idle-turn-430-raised"
+    },
+    {
+      "type": "wait",
+      "durationMs": 1400
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "idle-turn-430-ready"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "racing"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "type": "wait",
+      "durationMs": 250
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "idle-turn-430-open"
+    },
+    {
+      "type": "wait",
+      "durationMs": 8500
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "idle-turn-430-approach"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "section": "right-bend"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "idle-turn-430-join"
+    },
+    {
+      "type": "wait",
+      "durationMs": 150
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "wait",
+      "durationMs": 150
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "idle-turn-430-bend"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "section": "finish"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "idle-turn-430-exit"
+    },
+    {
+      "type": "wait",
+      "durationMs": 150
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "wait",
+      "durationMs": 150
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "idle-turn-430-home"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "result"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "idle-turn-430-result"
+    },
+    {
+      "type": "api",
+      "call": "testStopRecording"
+    },
+    {
+      "type": "api",
+      "call": "testRecordingData"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 132,
+      "y": 827
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "dialog": "more"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 123,
+      "y": 586
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "dialog": "settings"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 307,
+      "y": 713
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "idle-turn-430-settings"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 367,
+      "y": 219
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 370,
+      "y": 902
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "betting",
+        "activeReducedMotion": true
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "wait",
+      "durationMs": 600
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "idle-turn-430-reduced"
+    }
+  ]
+}

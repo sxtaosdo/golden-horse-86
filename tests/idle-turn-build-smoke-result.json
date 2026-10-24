@@ -1,0 +1,786 @@
+{
+  "schemaVersion": "build-smoke-v1",
+  "ok": true,
+  "target": "web-mobile-build",
+  "outputDir": "D:\\code\\shidai3\\P4000\\golden-horse-86\\build\\web-mobile",
+  "indexHash": "f85f30b5a0f76b975e6c8889f23f9471db5521615cc11a7274bfe59ce85e8d1d",
+  "packageHash": "8de0d385fab6f66e6209b11e9681dd400e57c9f00d0ddde877035ba052d6eeca",
+  "startedAt": "2026-10-24T13:06:41.842Z",
+  "finishedAt": "2026-10-24T13:07:50.886Z",
+  "playtest": {
+    "ok": true,
+    "previewUrl": "http://127.0.0.1:7464/",
+    "finalUrl": "http://127.0.0.1:7464/",
+    "gameTestReady": false,
+    "steps": [
+      {
+        "index": 0,
+        "step": {
+          "type": "wait",
+          "durationMs": 10000
+        },
+        "ok": true,
+        "elapsedMs": 10017
+      },
+      {
+        "index": 1,
+        "step": {
+          "type": "screenshot",
+          "label": "build-idle-turn-initial"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "tests/evidence/idle-turn-fix/build-idle-turn-initial.png",
+          "width": 390,
+          "height": 844,
+          "source": "preview",
+          "capturedAt": "2026-10-24T13:06:53.476Z"
+        },
+        "elapsedMs": 73
+      },
+      {
+        "index": 2,
+        "step": {
+          "type": "wait",
+          "durationMs": 600
+        },
+        "ok": true,
+        "elapsedMs": 615
+      },
+      {
+        "index": 3,
+        "step": {
+          "type": "screenshot",
+          "label": "build-idle-turn-idle-motion"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "tests/evidence/idle-turn-fix/build-idle-turn-idle-motion.png",
+          "width": 390,
+          "height": 844,
+          "source": "preview",
+          "capturedAt": "2026-10-24T13:06:54.203Z"
+        },
+        "elapsedMs": 113
+      },
+      {
+        "index": 4,
+        "step": {
+          "type": "wait",
+          "durationMs": 1600
+        },
+        "ok": true,
+        "elapsedMs": 1608
+      },
+      {
+        "index": 5,
+        "step": {
+          "type": "screenshot",
+          "label": "build-idle-turn-idle-rest"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "tests/evidence/idle-turn-fix/build-idle-turn-idle-rest.png",
+          "width": 390,
+          "height": 844,
+          "source": "preview",
+          "capturedAt": "2026-10-24T13:06:55.938Z"
+        },
+        "elapsedMs": 126
+      },
+      {
+        "index": 6,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 242,
+          "y": 817
+        },
+        "ok": true,
+        "elapsedMs": 41
+      },
+      {
+        "index": 7,
+        "step": {
+          "type": "wait",
+          "durationMs": 300
+        },
+        "ok": true,
+        "elapsedMs": 310
+      },
+      {
+        "index": 8,
+        "step": {
+          "type": "screenshot",
+          "label": "build-idle-turn-pause"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "tests/evidence/idle-turn-fix/build-idle-turn-pause.png",
+          "width": 390,
+          "height": 844,
+          "source": "preview",
+          "capturedAt": "2026-10-24T13:06:56.390Z"
+        },
+        "elapsedMs": 101
+      },
+      {
+        "index": 9,
+        "step": {
+          "type": "wait",
+          "durationMs": 800
+        },
+        "ok": true,
+        "elapsedMs": 809
+      },
+      {
+        "index": 10,
+        "step": {
+          "type": "screenshot",
+          "label": "build-idle-turn-pause-hold"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "tests/evidence/idle-turn-fix/build-idle-turn-pause-hold.png",
+          "width": 390,
+          "height": 844,
+          "source": "preview",
+          "capturedAt": "2026-10-24T13:06:57.289Z"
+        },
+        "elapsedMs": 90
+      },
+      {
+        "index": 11,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 242,
+          "y": 817
+        },
+        "ok": true,
+        "elapsedMs": 22
+      },
+      {
+        "index": 12,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 45,
+          "y": 553
+        },
+        "ok": true,
+        "elapsedMs": 18
+      },
+      {
+        "index": 13,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 335,
+          "y": 817
+        },
+        "ok": true,
+        "elapsedMs": 21
+      },
+      {
+        "index": 14,
+        "step": {
+          "type": "wait",
+          "durationMs": 400
+        },
+        "ok": true,
+        "elapsedMs": 407
+      },
+      {
+        "index": 15,
+        "step": {
+          "type": "screenshot",
+          "label": "build-idle-turn-raised"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "tests/evidence/idle-turn-fix/build-idle-turn-raised.png",
+          "width": 390,
+          "height": 844,
+          "source": "preview",
+          "capturedAt": "2026-10-24T13:06:57.861Z"
+        },
+        "elapsedMs": 104
+      },
+      {
+        "index": 16,
+        "step": {
+          "type": "wait",
+          "durationMs": 1400
+        },
+        "ok": true,
+        "elapsedMs": 1423
+      },
+      {
+        "index": 17,
+        "step": {
+          "type": "screenshot",
+          "label": "build-idle-turn-ready"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "tests/evidence/idle-turn-fix/build-idle-turn-ready.png",
+          "width": 390,
+          "height": 844,
+          "source": "preview",
+          "capturedAt": "2026-10-24T13:06:59.429Z"
+        },
+        "elapsedMs": 145
+      },
+      {
+        "index": 18,
+        "step": {
+          "type": "wait",
+          "durationMs": 1400
+        },
+        "ok": true,
+        "elapsedMs": 1414
+      },
+      {
+        "index": 19,
+        "step": {
+          "type": "screenshot",
+          "label": "build-idle-turn-open"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "tests/evidence/idle-turn-fix/build-idle-turn-open.png",
+          "width": 390,
+          "height": 844,
+          "source": "preview",
+          "capturedAt": "2026-10-24T13:07:01.018Z"
+        },
+        "elapsedMs": 175
+      },
+      {
+        "index": 20,
+        "step": {
+          "type": "wait",
+          "durationMs": 8500
+        },
+        "ok": true,
+        "elapsedMs": 8506
+      },
+      {
+        "index": 21,
+        "step": {
+          "type": "screenshot",
+          "label": "build-idle-turn-approach"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "tests/evidence/idle-turn-fix/build-idle-turn-approach.png",
+          "width": 390,
+          "height": 844,
+          "source": "preview",
+          "capturedAt": "2026-10-24T13:07:09.620Z"
+        },
+        "elapsedMs": 96
+      },
+      {
+        "index": 22,
+        "step": {
+          "type": "wait",
+          "durationMs": 1000
+        },
+        "ok": true,
+        "elapsedMs": 1002
+      },
+      {
+        "index": 23,
+        "step": {
+          "type": "screenshot",
+          "label": "build-idle-turn-join"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "tests/evidence/idle-turn-fix/build-idle-turn-join.png",
+          "width": 390,
+          "height": 844,
+          "source": "preview",
+          "capturedAt": "2026-10-24T13:07:10.721Z"
+        },
+        "elapsedMs": 99
+      },
+      {
+        "index": 24,
+        "step": {
+          "type": "wait",
+          "durationMs": 300
+        },
+        "ok": true,
+        "elapsedMs": 306
+      },
+      {
+        "index": 25,
+        "step": {
+          "type": "screenshot",
+          "label": "build-idle-turn-bend"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "tests/evidence/idle-turn-fix/build-idle-turn-bend.png",
+          "width": 390,
+          "height": 844,
+          "source": "preview",
+          "capturedAt": "2026-10-24T13:07:11.142Z"
+        },
+        "elapsedMs": 115
+      },
+      {
+        "index": 26,
+        "step": {
+          "type": "wait",
+          "durationMs": 5400
+        },
+        "ok": true,
+        "elapsedMs": 5405
+      },
+      {
+        "index": 27,
+        "step": {
+          "type": "screenshot",
+          "label": "build-idle-turn-exit"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "tests/evidence/idle-turn-fix/build-idle-turn-exit.png",
+          "width": 390,
+          "height": 844,
+          "source": "preview",
+          "capturedAt": "2026-10-24T13:07:16.645Z"
+        },
+        "elapsedMs": 99
+      },
+      {
+        "index": 28,
+        "step": {
+          "type": "wait",
+          "durationMs": 400
+        },
+        "ok": true,
+        "elapsedMs": 401
+      },
+      {
+        "index": 29,
+        "step": {
+          "type": "screenshot",
+          "label": "build-idle-turn-home"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "tests/evidence/idle-turn-fix/build-idle-turn-home.png",
+          "width": 390,
+          "height": 844,
+          "source": "preview",
+          "capturedAt": "2026-10-24T13:07:17.146Z"
+        },
+        "elapsedMs": 99
+      },
+      {
+        "index": 30,
+        "step": {
+          "type": "wait",
+          "durationMs": 12000
+        },
+        "ok": true,
+        "elapsedMs": 12007
+      },
+      {
+        "index": 31,
+        "step": {
+          "type": "screenshot",
+          "label": "build-idle-turn-result"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "tests/evidence/idle-turn-fix/build-idle-turn-result.png",
+          "width": 390,
+          "height": 844,
+          "source": "preview",
+          "capturedAt": "2026-10-24T13:07:29.217Z"
+        },
+        "elapsedMs": 64
+      },
+      {
+        "index": 32,
+        "step": {
+          "type": "reload",
+          "bridgeRequired": false
+        },
+        "ok": true,
+        "elapsedMs": 5118
+      },
+      {
+        "index": 33,
+        "step": {
+          "type": "wait",
+          "durationMs": 3000
+        },
+        "ok": true,
+        "elapsedMs": 3005
+      },
+      {
+        "index": 34,
+        "step": {
+          "type": "screenshot",
+          "label": "build-idle-turn-resume-result"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "tests/evidence/idle-turn-fix/build-idle-turn-resume-result.png",
+          "width": 390,
+          "height": 844,
+          "source": "preview",
+          "capturedAt": "2026-10-24T13:07:37.416Z"
+        },
+        "elapsedMs": 76
+      },
+      {
+        "index": 35,
+        "step": {
+          "type": "wait",
+          "durationMs": 800
+        },
+        "ok": true,
+        "elapsedMs": 809
+      },
+      {
+        "index": 36,
+        "step": {
+          "type": "screenshot",
+          "label": "build-idle-turn-resume-result-hold"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "tests/evidence/idle-turn-fix/build-idle-turn-resume-result-hold.png",
+          "width": 390,
+          "height": 844,
+          "source": "preview",
+          "capturedAt": "2026-10-24T13:07:38.308Z"
+        },
+        "elapsedMs": 83
+      },
+      {
+        "index": 37,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 195,
+          "y": 474
+        },
+        "ok": true,
+        "elapsedMs": 37
+      },
+      {
+        "index": 38,
+        "step": {
+          "type": "wait",
+          "durationMs": 500
+        },
+        "ok": true,
+        "elapsedMs": 514
+      },
+      {
+        "index": 39,
+        "step": {
+          "type": "screenshot",
+          "label": "build-idle-turn-result-restored"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "tests/evidence/idle-turn-fix/build-idle-turn-result-restored.png",
+          "width": 390,
+          "height": 844,
+          "source": "preview",
+          "capturedAt": "2026-10-24T13:07:38.955Z"
+        },
+        "elapsedMs": 96
+      },
+      {
+        "index": 40,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 120,
+          "y": 749
+        },
+        "ok": true,
+        "elapsedMs": 35
+      },
+      {
+        "index": 41,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 111,
+          "y": 531
+        },
+        "ok": true,
+        "elapsedMs": 38
+      },
+      {
+        "index": 42,
+        "step": {
+          "type": "screenshot",
+          "label": "build-idle-turn-settings"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "tests/evidence/idle-turn-fix/build-idle-turn-settings.png",
+          "width": 390,
+          "height": 844,
+          "source": "preview",
+          "capturedAt": "2026-10-24T13:07:39.175Z"
+        },
+        "elapsedMs": 147
+      },
+      {
+        "index": 43,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 278,
+          "y": 646
+        },
+        "ok": true,
+        "elapsedMs": 30
+      },
+      {
+        "index": 44,
+        "step": {
+          "type": "screenshot",
+          "label": "build-idle-turn-settings-reduced"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "tests/evidence/idle-turn-fix/build-idle-turn-settings-reduced.png",
+          "width": 390,
+          "height": 844,
+          "source": "preview",
+          "capturedAt": "2026-10-24T13:07:39.300Z"
+        },
+        "elapsedMs": 95
+      },
+      {
+        "index": 45,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 333,
+          "y": 198
+        },
+        "ok": true,
+        "elapsedMs": 40
+      },
+      {
+        "index": 46,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 335,
+          "y": 817
+        },
+        "ok": true,
+        "elapsedMs": 35
+      },
+      {
+        "index": 47,
+        "step": {
+          "type": "wait",
+          "durationMs": 400
+        },
+        "ok": true,
+        "elapsedMs": 422
+      },
+      {
+        "index": 48,
+        "step": {
+          "type": "screenshot",
+          "label": "build-idle-turn-reduced"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "tests/evidence/idle-turn-fix/build-idle-turn-reduced.png",
+          "width": 390,
+          "height": 844,
+          "source": "preview",
+          "capturedAt": "2026-10-24T13:07:39.896Z"
+        },
+        "elapsedMs": 99
+      },
+      {
+        "index": 49,
+        "step": {
+          "type": "wait",
+          "durationMs": 800
+        },
+        "ok": true,
+        "elapsedMs": 814
+      },
+      {
+        "index": 50,
+        "step": {
+          "type": "screenshot",
+          "label": "build-idle-turn-reduced-hold"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "tests/evidence/idle-turn-fix/build-idle-turn-reduced-hold.png",
+          "width": 390,
+          "height": 844,
+          "source": "preview",
+          "capturedAt": "2026-10-24T13:07:40.802Z"
+        },
+        "elapsedMs": 92
+      },
+      {
+        "index": 51,
+        "step": {
+          "type": "reload",
+          "bridgeRequired": false
+        },
+        "ok": true,
+        "elapsedMs": 5228
+      },
+      {
+        "index": 52,
+        "step": {
+          "type": "wait",
+          "durationMs": 3000
+        },
+        "ok": true,
+        "elapsedMs": 3009
+      },
+      {
+        "index": 53,
+        "step": {
+          "type": "screenshot",
+          "label": "build-idle-turn-resume-betting"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "tests/evidence/idle-turn-fix/build-idle-turn-resume-betting.png",
+          "width": 390,
+          "height": 844,
+          "source": "preview",
+          "capturedAt": "2026-10-24T13:07:49.159Z"
+        },
+        "elapsedMs": 120
+      },
+      {
+        "index": 54,
+        "step": {
+          "type": "wait",
+          "durationMs": 800
+        },
+        "ok": true,
+        "elapsedMs": 805
+      },
+      {
+        "index": 55,
+        "step": {
+          "type": "screenshot",
+          "label": "build-idle-turn-resume-betting-hold"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "tests/evidence/idle-turn-fix/build-idle-turn-resume-betting-hold.png",
+          "width": 390,
+          "height": 844,
+          "source": "preview",
+          "capturedAt": "2026-10-24T13:07:50.054Z"
+        },
+        "elapsedMs": 90
+      },
+      {
+        "index": 56,
+        "step": {
+          "type": "pointer",
+          "action": "touch_tap",
+          "x": 195,
+          "y": 474
+        },
+        "ok": true,
+        "elapsedMs": 31
+      },
+      {
+        "index": 57,
+        "step": {
+          "type": "screenshot",
+          "label": "build-idle-turn-betting-restored"
+        },
+        "ok": true,
+        "screenshot": {
+          "mimeType": "image/png",
+          "path": "tests/evidence/idle-turn-fix/build-idle-turn-betting-restored.png",
+          "width": 390,
+          "height": 844,
+          "source": "preview",
+          "capturedAt": "2026-10-24T13:07:50.189Z"
+        },
+        "elapsedMs": 104
+      }
+    ],
+    "consoleErrors": [],
+    "diagnostics": {
+      "consoleErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "pageErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "requestFailures": {
+        "count": 0,
+        "samples": []
+      },
+      "httpErrors": {
+        "count": 0,
+        "samples": []
+      }
+    },
+    "reportPath": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\playtests\\playtest-1792847270193.json",
+    "message": "Playtest passed (58 step(s))",
+    "session": {
+      "mode": "isolated",
+      "reusedBrowser": false,
+      "reusedPage": false,
+      "pageReset": "none"
+    },
+    "timing": {
+      "setupMs": 1540,
+      "stepsMs": 66803,
+      "totalMs": 68347
+    }
+  }
+}

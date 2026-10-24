@@ -3,6 +3,10 @@ const {RaceChoreography,RacePace,COURSE_BREAKS,FINAL_STRAIGHT_START}=require('..
 const {RaceModel}=require('../.test/RaceModel.js');
 const leaders=new Set();let changes=0;
 for(let seed=1;seed<=64;seed++){
+ for(const join of [9.6,15.84])for(let step=-30;step<=30;step++){
+  const time=join+step*.01,positions=Array.from({length:6},(_,i)=>RaceChoreography.progress(i,time,24+i*.35,24,seed*3181));
+  assert.ok(Math.max(...positions)-Math.min(...positions)>.006,'visible spread must survive the whole section transition');
+ }
  let previous=Array(6).fill(0),leader=-1;
  for(let t=0;t<28;t+=.02){
   const poses=previous.map((_,i)=>RaceChoreography.progress(i,t,24+i*.35,24,seed*3181));

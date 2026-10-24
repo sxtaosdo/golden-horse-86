@@ -1,5 +1,6 @@
 import { Phase } from '../RaceModel';
 import { RaceEventId } from '../events/RaceEventCatalog';
+import { PreRaceArtCatalog, PreRaceIdleTiming } from './PreRaceArtCatalog';
 
 export interface PreRaceState {readonly round:number;readonly phase:Phase;readonly preparationRemaining:number;readonly raceElapsed:number;readonly eventId:RaceEventId;}
 export interface CameraCue {readonly x:number;readonly y:number;readonly ratio:number;}
@@ -12,7 +13,7 @@ export class PreRacePresentation {
  private seed:number;private round=-1;private shot=-1;private phase:Phase='betting';private elapsed=0;private count=0;
  private frames:number[]=Array(6).fill(0);private pulses:number[]=Array(6).fill(0);private cells:number[]=Array(15).fill(0);
  private events:PreRaceCue[]=[];private camera:CameraCue={...PRE_RACE_SHOTS[0]};private flag=0;
- constructor(seed=Date.now()){this.seed=(seed>>>0)||0x6d2b79f5;}
+ constructor(seed=Date.now(),private readonly idle:PreRaceIdleTiming=PreRaceArtCatalog.DEFAULT_IDLE){this.seed=(seed>>>0)||0x6d2b79f5;}
  update(dt:number,state:PreRaceState,reduced=false):void{
   const step=Number.isFinite(dt)?Math.max(0,Math.min(.1,dt)):0;this.events=[];
   if(state.round!==this.round){
@@ -30,15 +31,22 @@ export class PreRacePresentation {
   const t=waiting?0:preparing?Math.max(0,Math.min(1,(3-state.preparationRemaining)/2)):1,ease=t*t*(3-2*t),shot=PRE_RACE_SHOTS[this.shot];
   this.camera=ease===1?{x:0,y:0,ratio:1}:{x:shot.x*(1-ease),y:shot.y*(1-ease),ratio:shot.ratio+(1-shot.ratio)*ease};
   if(reduced)this.camera={x:0,y:0,ratio:1};
-  this.flag=waiting?Math.floor(this.elapsed*2)%2:preparing?2+Math.floor(this.elapsed*4)%2:state.phase==='racing'&&state.raceElapsed<.12?4:5;
+  const flagTime=this.elapsed%this.idle.starterRepeatSeconds;
+  this.flag=waiting?(flagTime<1?Math.floor(flagTime*2):0):preparing?2+Math.floor(this.elapsed*4)%2:state.phase==='racing'&&state.raceElapsed<.12?4:5;
   for(let i=0;i<6;i++){
    this.pulses[i]=Math.max(0,this.pulses[i]-step);
-   const local=this.elapsed+i*1.17,window=local%8,previous=this.frames[i];
+   const local=this.elapsed+i*1.17,previous=this.frames[i];
    this.frames[i]=preparing?(state.preparationRemaining<=2?8+Math.floor(this.elapsed*2)%2:Math.floor(local*2)%4):
-    waiting?(window<.8?(Math.floor(local/8)%2?6:4)+Math.min(1,Math.floor(window/.4)):Math.floor(local*2)%4):8;
+    waiting?this.idleHorse(local):8;
    if(waiting&&previous===6&&this.frames[i]===7)this.events.push('hoof');
   }
   this.cells=this.cells.map(value=>Math.max(0,value-step));
+ }
+ private idleHorse(local:number):number{
+  const special=local%this.idle.horseSpecialRepeatSeconds,slot=local%this.idle.horseRepeatSeconds;
+  // A special action replaces one ordinary slot; hold the neutral pose between actions.
+  if(special<this.idle.horseRepeatSeconds)return special<.8?(Math.floor(local/this.idle.horseSpecialRepeatSeconds)%2?6:4)+Math.min(1,Math.floor(special/.4)):0;
+  return slot<2?Math.floor(slot*2):0;
  }
  betFeedback(first:number,second:number,cell:number):void{if(this.phase!=='betting')return;this.pulses[first-1]=.35;this.pulses[second-1]=.35;if(cell>=0&&cell<15)this.cells[cell]=.35;}
  clearFeedback():void{this.pulses.fill(0);this.cells.fill(0);}

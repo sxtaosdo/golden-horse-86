@@ -2,7 +2,7 @@ import { RaceEventId } from '../events/RaceEventCatalog';
 export interface EnvironmentFrame {rect:{x:number;y:number;width:number;height:number};anchor:{x:number;y:number};}
 export interface EnvironmentPart {id:string;moving:boolean;frames:EnvironmentFrame[];}
 export interface EnvironmentGroup {id:'flag'|'crowd';resource:string;sourceWidth:number;sourceHeight:number;scale:number;parts:EnvironmentPart[];}
-export interface EnvironmentPlacement {kind:'flag'|'crowd';x:number;y:number;}
+export interface EnvironmentPlacement {kind:'flag'|'crowd';x:number;y:number;idleRepeatSeconds?:number;}
 const obj=(v:unknown):v is Record<string,unknown>=>typeof v==='object'&&v!==null&&!Array.isArray(v);
 const num=(v:unknown,lo:number,hi:number):v is number=>typeof v==='number'&&Number.isFinite(v)&&v>=lo&&v<=hi;
 export class EnvironmentArtCatalog {
@@ -18,6 +18,7 @@ export class EnvironmentArtCatalog {
    }if(animated!==1)throw Error('Missing environment motion');
   }
   for(const [i,id] of (['station','regional','championship'] as const).entries()){const rows=value.tiers[id];if(!Array.isArray(rows)||rows.length!==(i+1)*2||rows.filter(r=>obj(r)&&r.kind==='flag').length!==i+1||rows.filter(r=>obj(r)&&r.kind==='crowd').length!==i+1||rows.some(r=>!obj(r)||!num(r.x,-1900,2900)||!num(r.y,-650,1300)))throw Error('Invalid environment placement');}
+  for(const rows of Object.values(value.tiers))if(Array.isArray(rows))for(const row of rows)if(obj(row)&&row.idleRepeatSeconds!==undefined&&(row.kind!=='crowd'||!num(row.idleRepeatSeconds,2,3600)))throw Error('Invalid environment idle interval');
   return new EnvironmentArtCatalog(value.groups as unknown as EnvironmentGroup[],value.tiers as unknown as Record<RaceEventId,EnvironmentPlacement[]>);
  }
 }

@@ -1,0 +1,33 @@
+{
+  "packageHash": "8de0d385fab6f66e6209b11e9681dd400e57c9f00d0ddde877035ba052d6eeca",
+  "method": "Native touch and screenshots of exact formal artifact; no Preview bridge or hidden-state reads",
+  "gameTestReady": false,
+  "steps": 58,
+  "executed": 58,
+  "skipped": 0,
+  "pausePairs": [
+    {
+      "first": "build-idle-turn-pause.png",
+      "hold": "build-idle-turn-pause-hold.png",
+      "rgbaHash": "8ec1fa88865ec7ba75f18c07180f7e82ae755a942a3393a2081fe2c1ceeded29",
+      "equal": true
+    },
+    {
+      "first": "build-idle-turn-resume-result.png",
+      "hold": "build-idle-turn-resume-result-hold.png",
+      "rgbaHash": "e982a3f5d0649d30a1cb9c04de50b920c40be0ce646880998525ebac44fc429d",
+      "equal": true
+    },
+    {
+      "first": "build-idle-turn-resume-betting.png",
+      "hold": "build-idle-turn-resume-betting-hold.png",
+      "rgbaHash": "9f28d553fc5300dfac28c5fe75ab83f8df2753fcd14c328428a85bc065496d50",
+      "equal": true
+    }
+  ],
+  "observations": [
+    "Original result4—5, odds100 payout0, credits499 stake1",
+    "Result resume waiting pair identical; resumed result499 stake1; next round499 stake0",
+    "Reduced motion toggled in existing settings, applied next round and restored"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "state": "passed",
+  "platform": "web-mobile",
+  "operationId": "horse-idle-turn-web-20261024-r13-v1",
+  "startedAt": "2026-10-24T13:03:32.230Z",
+  "finishedAt": "2026-10-24T13:04:51.161Z",
+  "outputDir": "D:\\code\\shidai3\\P4000\\golden-horse-86\\build\\web-mobile",
+  "logPath": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\build.log",
+  "configPath": "D:\\code\\shidai3\\P4000\\golden-horse-86\\tests\\build-web-mobile.json",
+  "runnerExitCode": 36,
+  "builderFinished": true,
+  "artifactIdentity": {
+    "sourceRevision": "38e8f17d989b9af7127b7afe723d53415c8780f6",
+    "buildConfigHash": "c52b04686c48d9f866e5e0cc978baecbcea218d6d2ab706d724c8df2476d499b",
+    "packageHash": "8de0d385fab6f66e6209b11e9681dd400e57c9f00d0ddde877035ba052d6eeca",
+    "creatorVersion": "3.8.8"
+  }
+}

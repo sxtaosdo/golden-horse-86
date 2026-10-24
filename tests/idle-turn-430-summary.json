@@ -1,0 +1,86 @@
+{
+  "width": 430,
+  "height": 932,
+  "tier": "championship",
+  "steps": 102,
+  "diagnostics": {
+    "consoleErrors": {
+      "count": 0,
+      "samples": []
+    },
+    "pageErrors": {
+      "count": 0,
+      "samples": []
+    },
+    "requestFailures": {
+      "count": 0,
+      "samples": []
+    },
+    "httpErrors": {
+      "count": 0,
+      "samples": []
+    }
+  },
+  "joins": [
+    {
+      "elapsed": 9.608500000000008,
+      "spread": 0.011999586960314057
+    },
+    {
+      "elapsed": 9.624899999998519,
+      "spread": 0.01199645881473188
+    },
+    {
+      "elapsed": 9.8611000000015,
+      "spread": 0.01161714878302983
+    },
+    {
+      "elapsed": 10.042500000000011,
+      "spread": 0.010919439005225684
+    },
+    {
+      "elapsed": 15.896199999995567,
+      "spread": 0.01200182424236429
+    },
+    {
+      "elapsed": 15.914699999995566,
+      "spread": 0.012003219645245422
+    },
+    {
+      "elapsed": 16.179799999997055,
+      "spread": 0.01206563034684327
+    },
+    {
+      "elapsed": 16.347199999995567,
+      "spread": 0.012144795572309075
+    }
+  ],
+  "finish": [
+    5,
+    1,
+    2,
+    3,
+    4,
+    6
+  ],
+  "metrics": {
+    "finishCount": 6,
+    "visibleOrder": [
+      5,
+      1,
+      2,
+      3,
+      4,
+      6
+    ],
+    "backgroundMismatches": 0,
+    "settlementJump": 3.8220843259963964,
+    "resultDrift": 0,
+    "worldChanges": 0,
+    "maxCameraStep": 11.77765553490508,
+    "clippedFinishers": 0
+  },
+  "video": "idle-turn-430.webm",
+  "paused": true,
+  "reduced": true
+}

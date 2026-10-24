@@ -1,8 +1,10 @@
 import { MotionPart } from './equipment/EquipmentMotionCatalog';
+export interface PreRaceIdleTiming {readonly horseRepeatSeconds:number;readonly horseSpecialRepeatSeconds:number;readonly starterRepeatSeconds:number;}
 
 /** Independent pre-race art; the existing 144 running frames keep their contract. */
 export class PreRaceArtCatalog {
- private constructor(readonly horses:readonly MotionPart[],readonly starter:MotionPart){}
+ static readonly DEFAULT_IDLE:PreRaceIdleTiming={horseRepeatSeconds:6,horseSpecialRepeatSeconds:24,starterRepeatSeconds:3};
+ private constructor(readonly horses:readonly MotionPart[],readonly starter:MotionPart,readonly idleTiming:PreRaceIdleTiming){}
  static parse(value:unknown):PreRaceArtCatalog{
   const object=(v:unknown):v is Record<string,unknown>=>typeof v==='object'&&v!==null&&!Array.isArray(v);
   const positive=(v:unknown):v is number=>typeof v==='number'&&Number.isFinite(v)&&v>0;
@@ -20,7 +22,9 @@ export class PreRaceArtCatalog {
   const horses=value.horses.map(h=>part(h,10)),starter=part(value.starter,6);
   horses.forEach((h,i)=>{if(h.resource!=='h0'+(i+1)+'-idle-r09')throw Error('Pre-race horse identity mismatch');});
   if(new Set([...horses,starter].map(p=>p.resource)).size!==7)throw Error('Duplicate pre-race art resource');
-  return new PreRaceArtCatalog(horses,starter);
+  const timing=value.idleTiming??PreRaceArtCatalog.DEFAULT_IDLE;
+  if(!object(timing)||!positive(timing.horseRepeatSeconds)||timing.horseRepeatSeconds<2||!positive(timing.horseSpecialRepeatSeconds)||timing.horseSpecialRepeatSeconds<timing.horseRepeatSeconds||!Number.isInteger(timing.horseSpecialRepeatSeconds/timing.horseRepeatSeconds)||!positive(timing.starterRepeatSeconds)||timing.starterRepeatSeconds<1)throw Error('Invalid pre-race idle timing');
+  return new PreRaceArtCatalog(horses,starter,{horseRepeatSeconds:timing.horseRepeatSeconds,horseSpecialRepeatSeconds:timing.horseSpecialRepeatSeconds,starterRepeatSeconds:timing.starterRepeatSeconds});
  }
  get parts():readonly MotionPart[]{return [...this.horses,this.starter];}
 }

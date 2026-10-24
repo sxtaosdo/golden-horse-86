@@ -161,14 +161,14 @@ export class GoldenHorseGame extends Component implements RacePageContext {
   const mode=await(this.archive?.acquire()??Promise.resolve<ArchiveMode>('temporary'));if(this.disposed)return;this.readArchiveState(mode);
  }
  private readArchiveState(mode:ArchiveMode):void{
-  let model=new RaceModel(Math.random,{events:this.artwork.catalog.rules}),presentation=new PreRacePresentation(),settings:PlayerSettings={...DEFAULT_SETTINGS},activeReduced=false,restored=false;
+  let model=new RaceModel(Math.random,{events:this.artwork.catalog.rules}),presentation=new PreRacePresentation(undefined,this.artwork.preRaceCatalog.idleTiming),settings:PlayerSettings={...DEFAULT_SETTINGS},activeReduced=false,restored=false;
   this.archiveInvalid=false;
   if(mode==='persistent')try{
    const saved=this.archive!.read();
    if(saved!==null){
     if(typeof saved!=='object'||Array.isArray(saved))throw Error('存档格式损坏');const v=saved as Record<string,unknown>;
     if(v.version!==1||typeof v.activeReducedMotion!=='boolean')throw Error('存档版本不兼容');
-    const candidate=RaceModel.restore(v.model,Math.random,{events:this.artwork.catalog.rules}),candidateSettings=readSettings(v.settings),candidatePresentation=new PreRacePresentation();
+    const candidate=RaceModel.restore(v.model,Math.random,{events:this.artwork.catalog.rules}),candidateSettings=readSettings(v.settings),candidatePresentation=new PreRacePresentation(undefined,this.artwork.preRaceCatalog.idleTiming);
     candidatePresentation.restore(v.presentation,candidate,v.activeReducedMotion);model=candidate;settings=candidateSettings;presentation=candidatePresentation;activeReduced=v.activeReducedMotion;restored=true;
    }
   }catch{this.archiveInvalid=true;}
@@ -206,7 +206,7 @@ export class GoldenHorseGame extends Component implements RacePageContext {
    this.gameAudio?.apply(this.settings);this.preAudio?.stop();this.writeCheckpoint();
   }
   else if(this.dialog==='help'){if(index===0)this.openDialog('milestones');else if(index===1&&this.game.canRestartJourney)this.openDialog('restart');}
-  else if(this.dialog==='restart'){if(index===1)this.dialog='none';else if(index===0&&this.game.restartJourney()){this.preRace=new PreRacePresentation();this.visualRound=0;this.dialog='none';this.equipmentNeedsSync=true;this.synchronizeAction();}}
+  else if(this.dialog==='restart'){if(index===1)this.dialog='none';else if(index===0&&this.game.restartJourney()){this.preRace=new PreRacePresentation(undefined,this.artwork.preRaceCatalog.idleTiming);this.visualRound=0;this.dialog='none';this.equipmentNeedsSync=true;this.synchronizeAction();}}
   else if(this.dialog==='busy'){
    if(index===1){this.archive?.useTemporary();this.dialog='none';}
    else if(index===0){this.retrying=true;try{const mode=await this.archive!.acquire();if(this.disposed)return;this.readArchiveState(mode);if(PREVIEW){this.testBridge?.dispose();this.testBridge=new GoldenHorseTestBridge(this.game,()=>this.observe(),()=>this.canOperate());}}finally{this.retrying=false;}}

@@ -36,7 +36,7 @@ export class RaceTrackView {
   for(let x=-1300;x<2100;x+=300){prop('shrub',x,45,92);prop('flowers',x+100,365,98);prop('shrub',x+80,625,90);}
   for(let i=0;i<=16;i++){const q=bendPoint(-1.3,i/16);prop(i%3?'shrub':'flowers',q.x,q.y,85);}
   prop('gate',300,65,210);prop('canopy',1050,585,210);prop('truck',1750,610,200);prop('crates',1270,590,92);prop('tree',1950,610,175);prop('spectators',1300,650,170);prop('scoreboard',200,500,220);
-  const starter=this.node(this.world,'AnimatedStarter');starter.setPosition(535,-350);starter.addComponent(UITransform);this.starter=starter.addComponent(Sprite);this.starter.sizeMode=Sprite.SizeMode.CUSTOM;this.updateStarter(assets,0);
+  const starter=this.node(this.horseLayer,'AnimatedStarter');starter.setPosition(535,-350);starter.addComponent(UITransform);this.starter=starter.addComponent(Sprite);this.starter.sizeMode=Sprite.SizeMode.CUSTOM;this.updateStarter(assets,0);
   this.label('FinishBoard','FINISH',200,430,22,'#ffd56b');
   this.horseLayer.setSiblingIndex(this.world.children.length-1);
  }
@@ -47,7 +47,7 @@ export class RaceTrackView {
  private tiles(parent:Node,frame:SpriteFrame,x:number,y:number,width:number,height:number):void{for(let dx=0;dx<width;dx+=256)for(let dy=0;dy<height;dy+=256)this.sprite(parent,'GroundTile',frame,x+dx+128,y+dy+256,256.5,256.5);}
  private rect(g:Graphics,x:number,y:number,w:number,h:number,color:string):void{g.fillColor=new Color().fromHEX(color);g.rect(x,-y,w,-h);g.fill();}
  private label(name:string,text:string,x:number,y:number,size:number,color:string):void{const n=this.node(this.world,name);n.setPosition(x,-y);n.addComponent(UITransform).setContentSize(180,34);const l=n.addComponent(Label);l.string=text;l.fontFamily='Arial';l.fontSize=size;l.lineHeight=size+2;l.horizontalAlign=Label.HorizontalAlign.CENTER;l.verticalAlign=Label.VerticalAlign.CENTER;l.color=new Color().fromHEX(color);}
- /** Horses and the side walls between their stalls share one ground-depth order. */
+ /** Horses, starter and the side walls between stalls share one ground-depth order. */
  sortDepth():void{[...this.horseLayer.children].sort((a,b)=>b.position.y-a.position.y).forEach((node,index)=>node.setSiblingIndex(index));}
  updateStarter(assets:RaceVisualAssets,index:number):void{
   if(!this.starter||index===this.starterFrame)return;this.starterFrame=index;const part=assets.preRaceCatalog.starter,f=part.frames[index],size=this.starter.node.getComponent(UITransform)!;

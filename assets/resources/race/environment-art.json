@@ -192,7 +192,8 @@
       {
         "kind": "crowd",
         "x": 550,
-        "y": 45
+        "y": 45,
+        "idleRepeatSeconds": 10
       }
     ],
     "regional": [
@@ -204,7 +205,8 @@
       {
         "kind": "crowd",
         "x": 550,
-        "y": 45
+        "y": 45,
+        "idleRepeatSeconds": 10
       },
       {
         "kind": "flag",
@@ -226,7 +228,8 @@
       {
         "kind": "crowd",
         "x": 550,
-        "y": 45
+        "y": 45,
+        "idleRepeatSeconds": 10
       },
       {
         "kind": "flag",

@@ -58,18 +58,28 @@ const clamp = (v) => Math.max(0, Math.min(1, Number.isFinite(v) ? v : 0));
 class RaceChoreography {
     static progress(horse, seconds, finishSeconds, referenceSeconds, seed) {
         const base = RacePace.progress(seconds, finishSeconds, referenceSeconds);
-        const limits = [0, COURSE_BREAKS[1], FINAL_STRAIGHT_START, .94];
-        if (base <= 0 || base >= limits[3])
+        const limits = [0, COURSE_BREAKS[1] / 2, COURSE_BREAKS[1], (COURSE_BREAKS[1] + FINAL_STRAIGHT_START) / 2, FINAL_STRAIGHT_START, .94];
+        if (base <= 0 || base >= .94)
             return base;
         let section = 0;
         while (base >= limits[section + 1])
             section++;
         const local = (base - limits[section]) / (limits[section + 1] - limits[section]);
-        if (local <= 0 || local >= 1)
-            return base;
-        const a = .65 * this.weight(seed, horse, section, 0), b = .35 * this.weight(seed, horse, section, 1);
-        const envelope = Math.sin(Math.PI * local) ** 2, angle = 2 * Math.PI * local;
-        return base + [.012, .006, .006][section] * envelope * (a * Math.cos(angle) + b * Math.sin(angle));
+        const a = this.offset(seed, horse, section), b = this.offset(seed, horse, section + 1), ease = local * local * (3 - 2 * local);
+        return base + a + (b - a) * ease;
+    }
+    static offset(seed, horse, knot) {
+        if (knot === 0 || knot === 5)
+            return 0;
+        // Seeded relative positions keep visible spread at joins without drawing race RNG.
+        const value = this.weight(seed, horse, knot, 0);
+        let rank = 0;
+        for (let i = 0; i < 6; i++) {
+            const other = this.weight(seed, i, knot, 0);
+            if (other < value || (other === value && i < horse))
+                rank++;
+        }
+        return (rank / 2.5 - 1) * (knot === 1 ? .012 : .006);
     }
     static weight(seed, horse, section, axis) {
         let x = (seed ^ Math.imul(horse + 1, 0x9e3779b9) ^ Math.imul(section + 1, 0x85ebca6b) ^ Math.imul(axis + 1, 0xc2b2ae35)) >>> 0;

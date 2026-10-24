@@ -1,0 +1,86 @@
+{
+  "width": 360,
+  "height": 640,
+  "tier": "station",
+  "steps": 78,
+  "diagnostics": {
+    "consoleErrors": {
+      "count": 0,
+      "samples": []
+    },
+    "pageErrors": {
+      "count": 0,
+      "samples": []
+    },
+    "requestFailures": {
+      "count": 0,
+      "samples": []
+    },
+    "httpErrors": {
+      "count": 0,
+      "samples": []
+    }
+  },
+  "joins": [
+    {
+      "elapsed": 9.60789999999852,
+      "spread": 0.011999762134543734
+    },
+    {
+      "elapsed": 9.60789999999852,
+      "spread": 0.011999762134543734
+    },
+    {
+      "elapsed": 9.84139999999852,
+      "spread": 0.011781465208384523
+    },
+    {
+      "elapsed": 10.008199999995542,
+      "spread": 0.011384757302046689
+    },
+    {
+      "elapsed": 15.879699999995575,
+      "spread": 0.011999992220017797
+    },
+    {
+      "elapsed": 15.896199999995575,
+      "spread": 0.01199998560668647
+    },
+    {
+      "elapsed": 16.113199999995572,
+      "spread": 0.012000014351562949
+    },
+    {
+      "elapsed": 16.29650000000004,
+      "spread": 0.01200080709202822
+    }
+  ],
+  "finish": [
+    2,
+    1,
+    3,
+    5,
+    4,
+    6
+  ],
+  "metrics": {
+    "finishCount": 6,
+    "visibleOrder": [
+      2,
+      1,
+      3,
+      5,
+      4,
+      6
+    ],
+    "backgroundMismatches": 0,
+    "settlementJump": 6.928084263149121,
+    "resultDrift": 3.9897986492262687,
+    "worldChanges": 0,
+    "maxCameraStep": 7.320047053744474,
+    "clippedFinishers": 0
+  },
+  "video": "idle-turn-360.webm",
+  "paused": true,
+  "reduced": true
+}
