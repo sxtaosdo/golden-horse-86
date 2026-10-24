@@ -2,6 +2,7 @@ import { JsonAsset, resources, Texture2D, SpriteFrame, Rect } from 'cc';
 import { RaceEventCatalog } from '../events/RaceEventCatalog';
 import { EquipmentCatalog } from './equipment/EquipmentCatalog';
 import { EquipmentMotionCatalog } from './equipment/EquipmentMotionCatalog';
+import { PreRaceArtCatalog } from './PreRaceArtCatalog';
 export interface FrameSpec {x:number;y:number;width:number;height:number;nose:number;}
 export interface HorseSheet {horse:number;view:string;name:string;scale:number;frames:FrameSpec[];}
 export interface PropSpec {name:string;x:number;y:number;width:number;height:number;}
@@ -10,12 +11,19 @@ export class RaceVisualAssets {
  manifest!:Manifest;readonly frames=new Map<string,SpriteFrame[]>();readonly props=new Map<string,SpriteFrame>();readonly ground=new Map<string,SpriteFrame>();
  catalog!:RaceEventCatalog;equipmentCatalog!:EquipmentCatalog;readonly equipment=new Map<string,SpriteFrame>();
  motionCatalog!:EquipmentMotionCatalog;readonly motionFrames=new Map<string,SpriteFrame[]>();
+ preRaceCatalog!:PreRaceArtCatalog;readonly preRaceFrames=new Map<string,SpriteFrame[]>();
  private owned:SpriteFrame[]=[];private disposed=false;
  async load():Promise<void>{
   const json=await new Promise<JsonAsset>((resolve,reject)=>resources.load('race/manifest',JsonAsset,(e,a)=>e?reject(e):resolve(a)));if(this.disposed)return;
   const data:unknown=json.json;if(!this.validManifest(data))throw Error('Invalid race artwork manifest');this.manifest=data;
-  const [events,equipment,motion]=await Promise.all([this.json('race/events'),this.json('race/equipment-catalog'),this.json('race/equipment-motion')]);if(this.disposed)return;
+  const [events,equipment,motion,preRace]=await Promise.all([this.json('race/events'),this.json('race/equipment-catalog'),this.json('race/equipment-motion'),this.json('race/pre-race-art')]);if(this.disposed)return;
   this.catalog=RaceEventCatalog.parse(events);this.equipmentCatalog=EquipmentCatalog.parse(equipment);this.motionCatalog=EquipmentMotionCatalog.parse(motion);
+  this.preRaceCatalog=PreRaceArtCatalog.parse(preRace);
+  await Promise.all(this.preRaceCatalog.parts.map(async part=>{
+   const texture=await this.texture('race/pre-race/'+part.resource+'/texture');if(this.disposed)return;
+   if(texture.width!==part.sourceWidth||texture.height!==part.sourceHeight)throw Error('Pre-race texture dimensions mismatch: '+part.resource);
+   this.preRaceFrames.set(part.resource,part.frames.map(f=>this.frame(texture,f.rect)));
+  }));
   await Promise.all(this.motionCatalog.parts.map(async part=>{
    const texture=await this.texture('race/equipment/'+part.resource+'/texture');if(this.disposed)return;
    if(texture.width!==part.sourceWidth||texture.height!==part.sourceHeight)throw Error('Equipment motion dimensions mismatch: '+part.resource);

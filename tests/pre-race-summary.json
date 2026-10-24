@@ -1,0 +1,7357 @@
+{
+  "verifiedSteps": 792,
+  "fullRaces": 4,
+  "matrix": {
+    "360": [
+      0,
+      1,
+      2
+    ],
+    "390": [
+      0,
+      1,
+      2
+    ],
+    "430": [
+      0,
+      1,
+      2
+    ]
+  },
+  "observedHorseFrames": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "reports": [
+    {
+      "report": "tests/pre-race-390-result.json",
+      "steps": 73,
+      "diagnostics": {
+        "consoleErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "pageErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "requestFailures": {
+          "count": 0,
+          "samples": []
+        },
+        "httpErrors": {
+          "count": 0,
+          "samples": []
+        }
+      },
+      "roundShots": {
+        "1": [
+          2
+        ],
+        "2": [
+          1
+        ]
+      },
+      "results": [
+        {
+          "first": 1,
+          "second": 3,
+          "order": [
+            1,
+            3,
+            6,
+            5,
+            2,
+            4
+          ],
+          "pair": "1-3",
+          "payout": 0,
+          "stake": 1,
+          "round": 1,
+          "eventId": "championship"
+        }
+      ],
+      "timeline": [
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 24,
+            "y": -12,
+            "ratio": 0.78
+          },
+          "shot": 2,
+          "raceScale": 1.6250000000000002,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.055,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 24,
+            "y": -12,
+            "ratio": 0.78
+          },
+          "shot": 2,
+          "raceScale": 1.6250000000000002,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 24,
+            "y": -12,
+            "ratio": 0.78
+          },
+          "shot": 2,
+          "raceScale": 1.6250000000000002,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 5,
+              "highlight": true
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": true
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 2.7511000000014905,
+          "camera": {
+            "x": 22.977396157025694,
+            "y": -11.488698078512847,
+            "ratio": 0.7893738685605979
+          },
+          "shot": 2,
+          "raceScale": 1.644528892834579,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 2.0102000000011175,
+          "camera": {
+            "x": 12.183593632772112,
+            "y": -6.091796816386056,
+            "ratio": 0.8883170583662556
+          },
+          "shot": 2,
+          "raceScale": 1.8506605382630328,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 1.0562000000011171,
+          "camera": {
+            "x": 0.05578689403419723,
+            "y": -0.027893447017098616,
+            "ratio": 0.9994886201380199
+          },
+          "shot": 2,
+          "raceScale": 2.082267958620875,
+          "horseVisuals": [
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 2
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 0.6138000000007444,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 1
+          },
+          "shot": 2,
+          "raceScale": 2.0833333333333335,
+          "horseVisuals": [
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.02375,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 3
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "racing",
+          "remaining": 0,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 1
+          },
+          "shot": 2,
+          "raceScale": 2.0833333333333335,
+          "horseVisuals": [
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": false,
+            "loopVolume": 0.02375,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 3,
+              "latch": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "result",
+          "remaining": 0,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 1
+          },
+          "shot": 2,
+          "raceScale": 2.0833333333333335,
+          "horseVisuals": [
+            {
+              "mode": "running",
+              "frame": 5,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 7,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": false,
+            "loopVolume": 0.02375,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 3,
+              "latch": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "result",
+          "remaining": 0,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 1
+          },
+          "shot": 2,
+          "raceScale": 2.0833333333333335,
+          "horseVisuals": [
+            {
+              "mode": "running",
+              "frame": 6,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 5,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 0,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": false,
+            "loopVolume": 0.02375,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 3,
+              "latch": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 2,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": -32,
+            "y": 0,
+            "ratio": 0.76
+          },
+          "shot": 1,
+          "raceScale": 1.5833333333333335,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 2,
+            "played": {
+              "broadcast": 1,
+              "countdown": 3,
+              "latch": 1
+            },
+            "warnings": []
+          }
+        }
+      ]
+    },
+    {
+      "report": "tests/pre-race-auto-result.json",
+      "steps": 71,
+      "diagnostics": {
+        "consoleErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "pageErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "requestFailures": {
+          "count": 0,
+          "samples": []
+        },
+        "httpErrors": {
+          "count": 0,
+          "samples": []
+        }
+      },
+      "roundShots": {
+        "1": [
+          1
+        ],
+        "2": [
+          2
+        ]
+      },
+      "results": [
+        {
+          "first": 6,
+          "second": 5,
+          "order": [
+            6,
+            5,
+            3,
+            1,
+            4,
+            2
+          ],
+          "pair": "5-6",
+          "payout": 0,
+          "stake": 1,
+          "round": 1,
+          "eventId": "championship"
+        }
+      ],
+      "timeline": [
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": -32,
+            "y": 0,
+            "ratio": 0.76
+          },
+          "shot": 1,
+          "raceScale": 1.5833333333333335,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.055,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": -32,
+            "y": 0,
+            "ratio": 0.76
+          },
+          "shot": 1,
+          "raceScale": 1.5833333333333335,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": -32,
+            "y": 0,
+            "ratio": 0.76
+          },
+          "shot": 1,
+          "raceScale": 1.5833333333333335,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 5,
+              "highlight": true
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": true
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 2.7160999999996274,
+          "camera": {
+            "x": -30.248675885747645,
+            "y": 0,
+            "ratio": 0.7731349308568927
+          },
+          "shot": 1,
+          "raceScale": 1.6106977726185265,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "hoof": 12,
+              "broadcast": 1,
+              "countdown": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 1.9944999999999986,
+          "camera": {
+            "x": -15.868001330999967,
+            "y": 0,
+            "ratio": 0.8809899900175002
+          },
+          "shot": 1,
+          "raceScale": 1.835395812536459,
+          "horseVisuals": [
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "hoof": 12,
+              "broadcast": 1,
+              "countdown": 2
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 1.0730999999996256,
+          "camera": {
+            "x": -0.12512169687073538,
+            "y": 0,
+            "ratio": 0.9990615872734695
+          },
+          "shot": 1,
+          "raceScale": 2.0813783068197282,
+          "horseVisuals": [
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "hoof": 12,
+              "broadcast": 1,
+              "countdown": 2
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 0.6481999999992529,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 1
+          },
+          "shot": 1,
+          "raceScale": 2.0833333333333335,
+          "horseVisuals": [
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.02375,
+            "loopStarts": 1,
+            "played": {
+              "hoof": 12,
+              "broadcast": 1,
+              "countdown": 3
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "racing",
+          "remaining": 0,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 1
+          },
+          "shot": 1,
+          "raceScale": 2.0833333333333335,
+          "horseVisuals": [
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": false,
+            "loopVolume": 0.02375,
+            "loopStarts": 1,
+            "played": {
+              "hoof": 12,
+              "broadcast": 1,
+              "countdown": 3,
+              "latch": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "result",
+          "remaining": 0,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 1
+          },
+          "shot": 1,
+          "raceScale": 2.0833333333333335,
+          "horseVisuals": [
+            {
+              "mode": "running",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 7,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 6,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": false,
+            "loopVolume": 0.02375,
+            "loopStarts": 1,
+            "played": {
+              "hoof": 12,
+              "broadcast": 1,
+              "countdown": 3,
+              "latch": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "result",
+          "remaining": 0,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 1
+          },
+          "shot": 1,
+          "raceScale": 2.0833333333333335,
+          "horseVisuals": [
+            {
+              "mode": "running",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 5,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 7,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": false,
+            "loopVolume": 0.02375,
+            "loopStarts": 1,
+            "played": {
+              "hoof": 12,
+              "broadcast": 1,
+              "countdown": 3,
+              "latch": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 2,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 24,
+            "y": -12,
+            "ratio": 0.78
+          },
+          "shot": 2,
+          "raceScale": 1.6250000000000002,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 2,
+            "played": {
+              "hoof": 12,
+              "broadcast": 1,
+              "countdown": 3,
+              "latch": 1
+            },
+            "warnings": []
+          }
+        }
+      ]
+    },
+    {
+      "report": "tests/pre-race-regional-result.json",
+      "steps": 31,
+      "diagnostics": {
+        "consoleErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "pageErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "requestFailures": {
+          "count": 0,
+          "samples": []
+        },
+        "httpErrors": {
+          "count": 0,
+          "samples": []
+        }
+      },
+      "roundShots": {
+        "1": [
+          0
+        ]
+      },
+      "results": [],
+      "timeline": [
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 0.72
+          },
+          "shot": 0,
+          "raceScale": 1.1175384615384618,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.055,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 0.72
+          },
+          "shot": 0,
+          "raceScale": 1.1175384615384618,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.055,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 3,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 0.72
+          },
+          "shot": 0,
+          "raceScale": 1.1175384615384618,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 5,
+              "highlight": true
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": true
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.075,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 2.3803000000007457,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 0.783987144383756
+          },
+          "shot": 0,
+          "raceScale": 1.2168552600007705,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.075,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "racing",
+          "remaining": 0,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 1
+          },
+          "shot": 0,
+          "raceScale": 1.5521367521367526,
+          "horseVisuals": [
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": false,
+            "loopVolume": 0.01875,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 3,
+              "latch": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "racing",
+          "remaining": 0,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 1
+          },
+          "shot": 0,
+          "raceScale": 1.5521367521367526,
+          "horseVisuals": [
+            {
+              "mode": "running",
+              "frame": 5,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 5,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 5,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 5,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": false,
+            "loopVolume": 0.01875,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 3,
+              "latch": 1
+            },
+            "warnings": []
+          }
+        }
+      ]
+    },
+    {
+      "report": "tests/pre-race-390-case1-result.json",
+      "steps": 60,
+      "diagnostics": {
+        "consoleErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "pageErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "requestFailures": {
+          "count": 0,
+          "samples": []
+        },
+        "httpErrors": {
+          "count": 0,
+          "samples": []
+        }
+      },
+      "roundShots": {
+        "1": [
+          2
+        ]
+      },
+      "results": [],
+      "timeline": [
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 24,
+            "y": -12,
+            "ratio": 0.78
+          },
+          "shot": 2,
+          "raceScale": 1.6250000000000002,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.055,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 24,
+            "y": -12,
+            "ratio": 0.78
+          },
+          "shot": 2,
+          "raceScale": 1.6250000000000002,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 24,
+            "y": -12,
+            "ratio": 0.78
+          },
+          "shot": 2,
+          "raceScale": 1.6250000000000002,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 5,
+              "highlight": true
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": true
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 2.7872000000011177,
+          "camera": {
+            "x": 23.242709286919652,
+            "y": -11.621354643459826,
+            "ratio": 0.7869418315365699
+          },
+          "shot": 2,
+          "raceScale": 1.639462149034521,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 2.0265999999996267,
+          "camera": {
+            "x": 12.478687073417284,
+            "y": -6.239343536708642,
+            "ratio": 0.8856120351603416
+          },
+          "shot": 2,
+          "raceScale": 1.8450250732507119,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 1.1589999999999987,
+          "camera": {
+            "x": 0.43093992599999265,
+            "y": -0.21546996299999632,
+            "ratio": 0.996049717345
+          },
+          "shot": 2,
+          "raceScale": 2.0751035778020834,
+          "horseVisuals": [
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 2
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 0.8038000000007436,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 1
+          },
+          "shot": 2,
+          "raceScale": 2.0833333333333335,
+          "horseVisuals": [
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.02375,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 3
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "racing",
+          "remaining": 0,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 1
+          },
+          "shot": 2,
+          "raceScale": 2.0833333333333335,
+          "horseVisuals": [
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": false,
+            "loopVolume": 0.02375,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 3,
+              "latch": 1
+            },
+            "warnings": []
+          }
+        }
+      ]
+    },
+    {
+      "report": "tests/pre-race-390-case2-result.json",
+      "steps": 60,
+      "diagnostics": {
+        "consoleErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "pageErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "requestFailures": {
+          "count": 0,
+          "samples": []
+        },
+        "httpErrors": {
+          "count": 0,
+          "samples": []
+        }
+      },
+      "roundShots": {
+        "1": [
+          0
+        ]
+      },
+      "results": [],
+      "timeline": [
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 0.72
+          },
+          "shot": 0,
+          "raceScale": 1.5,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.055,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 0.72
+          },
+          "shot": 0,
+          "raceScale": 1.5,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 0.72
+          },
+          "shot": 0,
+          "raceScale": 1.5,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 5,
+              "highlight": true
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": true
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 2.7877999999988825,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 0.728787198010729
+          },
+          "shot": 0,
+          "raceScale": 1.5183066625223522,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 2.0324999999999984,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 0.8531774029687503
+          },
+          "shot": 0,
+          "raceScale": 1.7774529228515634,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 1.1672999999988796,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 0.9944500316752621
+          },
+          "shot": 0,
+          "raceScale": 2.071770899323463,
+          "horseVisuals": [
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 2
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 0.7939000000003699,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 1
+          },
+          "shot": 0,
+          "raceScale": 2.0833333333333335,
+          "horseVisuals": [
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.02375,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 3
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "racing",
+          "remaining": 0,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 1
+          },
+          "shot": 0,
+          "raceScale": 2.0833333333333335,
+          "horseVisuals": [
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": false,
+            "loopVolume": 0.02375,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 3,
+              "latch": 1
+            },
+            "warnings": []
+          }
+        }
+      ]
+    },
+    {
+      "report": "tests/pre-race-390-case3-result.json",
+      "steps": 60,
+      "diagnostics": {
+        "consoleErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "pageErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "requestFailures": {
+          "count": 0,
+          "samples": []
+        },
+        "httpErrors": {
+          "count": 0,
+          "samples": []
+        }
+      },
+      "roundShots": {
+        "1": [
+          1
+        ]
+      },
+      "results": [],
+      "timeline": [
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": -32,
+            "y": 0,
+            "ratio": 0.76
+          },
+          "shot": 1,
+          "raceScale": 1.5833333333333335,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.055,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": -32,
+            "y": 0,
+            "ratio": 0.76
+          },
+          "shot": 1,
+          "raceScale": 1.5833333333333335,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": -32,
+            "y": 0,
+            "ratio": 0.76
+          },
+          "shot": 1,
+          "raceScale": 1.5833333333333335,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 5,
+              "highlight": true
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": true
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 2.789400000000372,
+          "camera": {
+            "x": -31.01026821613136,
+            "y": 0,
+            "ratio": 0.7674229883790148
+          },
+          "shot": 1,
+          "raceScale": 1.598797892456281,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 2.026699999999254,
+          "camera": {
+            "x": -16.640647726678107,
+            "y": 0,
+            "ratio": 0.8751951420499142
+          },
+          "shot": 1,
+          "raceScale": 1.823323212603988,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 1.1598000000007436,
+          "camera": {
+            "x": -0.580219686469249,
+            "y": 0,
+            "ratio": 0.9956483523514806
+          },
+          "shot": 1,
+          "raceScale": 2.0742674007322517,
+          "horseVisuals": [
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 2
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 0.7884999999999983,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 1
+          },
+          "shot": 1,
+          "raceScale": 2.0833333333333335,
+          "horseVisuals": [
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.02375,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 3
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "racing",
+          "remaining": 0,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 1
+          },
+          "shot": 1,
+          "raceScale": 2.0833333333333335,
+          "horseVisuals": [
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": false,
+            "loopVolume": 0.02375,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 3,
+              "latch": 1
+            },
+            "warnings": []
+          }
+        }
+      ]
+    },
+    {
+      "report": "tests/pre-race-360-case1-result.json",
+      "steps": 88,
+      "diagnostics": {
+        "consoleErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "pageErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "requestFailures": {
+          "count": 0,
+          "samples": []
+        },
+        "httpErrors": {
+          "count": 0,
+          "samples": []
+        }
+      },
+      "roundShots": {
+        "1": [
+          2
+        ],
+        "2": [
+          1
+        ]
+      },
+      "results": [
+        {
+          "first": 6,
+          "second": 4,
+          "order": [
+            6,
+            4,
+            2,
+            5,
+            3,
+            1
+          ],
+          "pair": "4-6",
+          "payout": 0,
+          "stake": 1,
+          "round": 1,
+          "eventId": "championship"
+        }
+      ],
+      "timeline": [
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 24,
+            "y": -12,
+            "ratio": 0.78
+          },
+          "shot": 2,
+          "raceScale": 1.210666666666667,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.055,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 24,
+            "y": -12,
+            "ratio": 0.78
+          },
+          "shot": 2,
+          "raceScale": 1.210666666666667,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.055,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 24,
+            "y": -12,
+            "ratio": 0.78
+          },
+          "shot": 2,
+          "raceScale": 1.210666666666667,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 5,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 24,
+            "y": -12,
+            "ratio": 0.78
+          },
+          "shot": 2,
+          "raceScale": 1.210666666666667,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 24,
+            "y": -12,
+            "ratio": 0.78
+          },
+          "shot": 2,
+          "raceScale": 1.210666666666667,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 24,
+            "y": -12,
+            "ratio": 0.78
+          },
+          "shot": 2,
+          "raceScale": 1.210666666666667,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 6,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 24,
+            "y": -12,
+            "ratio": 0.78
+          },
+          "shot": 2,
+          "raceScale": 1.210666666666667,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 7,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "hoof": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 24,
+            "y": -12,
+            "ratio": 0.78
+          },
+          "shot": 2,
+          "raceScale": 1.210666666666667,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 6,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "hoof": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 24,
+            "y": -12,
+            "ratio": 0.78
+          },
+          "shot": 2,
+          "raceScale": 1.210666666666667,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 7,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "hoof": 2
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 24,
+            "y": -12,
+            "ratio": 0.78
+          },
+          "shot": 2,
+          "raceScale": 1.210666666666667,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "hoof": 2
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 24,
+            "y": -12,
+            "ratio": 0.78
+          },
+          "shot": 2,
+          "raceScale": 1.210666666666667,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 7,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "hoof": 3
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 24,
+            "y": -12,
+            "ratio": 0.78
+          },
+          "shot": 2,
+          "raceScale": 1.210666666666667,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "hoof": 3
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 24,
+            "y": -12,
+            "ratio": 0.78
+          },
+          "shot": 2,
+          "raceScale": 1.210666666666667,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 6,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "hoof": 3
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 24,
+            "y": -12,
+            "ratio": 0.78
+          },
+          "shot": 2,
+          "raceScale": 1.210666666666667,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 7,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "hoof": 4
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 24,
+            "y": -12,
+            "ratio": 0.78
+          },
+          "shot": 2,
+          "raceScale": 1.210666666666667,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": true
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": true
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "hoof": 4
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 2.7889000000003725,
+          "camera": {
+            "x": 23.254305981788534,
+            "y": -11.627152990894267,
+            "ratio": 0.7868355285002718
+          },
+          "shot": 2,
+          "raceScale": 1.2212763416722172,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "hoof": 4,
+              "broadcast": 1,
+              "countdown": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 2.022599999999629,
+          "camera": {
+            "x": 12.406730740937324,
+            "y": -6.203365370468662,
+            "ratio": 0.8862716348747413
+          },
+          "shot": 2,
+          "raceScale": 1.3756147768654108,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "hoof": 4,
+              "broadcast": 1,
+              "countdown": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 1.1548000000007461,
+          "camera": {
+            "x": 0.4090778484518358,
+            "y": -0.2045389242259179,
+            "ratio": 0.9962501197225249
+          },
+          "shot": 2,
+          "raceScale": 1.5463164251419708,
+          "horseVisuals": [
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "hoof": 4,
+              "broadcast": 1,
+              "countdown": 2
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 0.7827000000011185,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 1
+          },
+          "shot": 2,
+          "raceScale": 1.5521367521367526,
+          "horseVisuals": [
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.02375,
+            "loopStarts": 1,
+            "played": {
+              "hoof": 4,
+              "broadcast": 1,
+              "countdown": 3
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "racing",
+          "remaining": 0,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 1
+          },
+          "shot": 2,
+          "raceScale": 1.5521367521367526,
+          "horseVisuals": [
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": false,
+            "loopVolume": 0.02375,
+            "loopStarts": 1,
+            "played": {
+              "hoof": 4,
+              "broadcast": 1,
+              "countdown": 3,
+              "latch": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "result",
+          "remaining": 0,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 1
+          },
+          "shot": 2,
+          "raceScale": 1.5521367521367526,
+          "horseVisuals": [
+            {
+              "mode": "running",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 6,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 5,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": false,
+            "loopVolume": 0.02375,
+            "loopStarts": 1,
+            "played": {
+              "hoof": 4,
+              "broadcast": 1,
+              "countdown": 3,
+              "latch": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 2,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": -32,
+            "y": 0,
+            "ratio": 0.76
+          },
+          "shot": 1,
+          "raceScale": 1.179623931623932,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 2,
+            "played": {
+              "hoof": 4,
+              "broadcast": 1,
+              "countdown": 3,
+              "latch": 1
+            },
+            "warnings": []
+          }
+        }
+      ]
+    },
+    {
+      "report": "tests/pre-race-360-case2-result.json",
+      "steps": 57,
+      "diagnostics": {
+        "consoleErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "pageErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "requestFailures": {
+          "count": 0,
+          "samples": []
+        },
+        "httpErrors": {
+          "count": 0,
+          "samples": []
+        }
+      },
+      "roundShots": {
+        "1": [
+          0
+        ]
+      },
+      "results": [],
+      "timeline": [
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 0.72
+          },
+          "shot": 0,
+          "raceScale": 1.1175384615384618,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.055,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 0.72
+          },
+          "shot": 0,
+          "raceScale": 1.1175384615384618,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.055,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 0.72
+          },
+          "shot": 0,
+          "raceScale": 1.1175384615384618,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 5,
+              "highlight": true
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": true
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 2.786799999998883,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 0.7288670313223293
+          },
+          "shot": 0,
+          "raceScale": 1.131301306736197,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 2.026400000000373,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 0.8544572879820018
+          },
+          "shot": 0,
+          "raceScale": 1.3262345598079621,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 1.159199999999255,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 0.9949600662682059
+          },
+          "shot": 0,
+          "raceScale": 1.5443140857633013,
+          "horseVisuals": [
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 2
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 0.7892999999988827,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 1
+          },
+          "shot": 0,
+          "raceScale": 1.5521367521367526,
+          "horseVisuals": [
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.02375,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 3
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "racing",
+          "remaining": 0,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 1
+          },
+          "shot": 0,
+          "raceScale": 1.5521367521367526,
+          "horseVisuals": [
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": false,
+            "loopVolume": 0.02375,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 3,
+              "latch": 1
+            },
+            "warnings": []
+          }
+        }
+      ]
+    },
+    {
+      "report": "tests/pre-race-360-case3-result.json",
+      "steps": 57,
+      "diagnostics": {
+        "consoleErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "pageErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "requestFailures": {
+          "count": 0,
+          "samples": []
+        },
+        "httpErrors": {
+          "count": 0,
+          "samples": []
+        }
+      },
+      "roundShots": {
+        "1": [
+          2
+        ]
+      },
+      "results": [],
+      "timeline": [
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 24,
+            "y": -12,
+            "ratio": 0.78
+          },
+          "shot": 2,
+          "raceScale": 1.210666666666667,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.055,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 24,
+            "y": -12,
+            "ratio": 0.78
+          },
+          "shot": 2,
+          "raceScale": 1.210666666666667,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.055,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 24,
+            "y": -12,
+            "ratio": 0.78
+          },
+          "shot": 2,
+          "raceScale": 1.210666666666667,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 5,
+              "highlight": true
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": true
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 2.7882000000011176,
+          "camera": {
+            "x": 23.24954080219962,
+            "y": -11.62477040109981,
+            "ratio": 0.7868792093131702
+          },
+          "shot": 2,
+          "raceScale": 1.22134414026728,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 2.007900000000373,
+          "camera": {
+            "x": 12.14219704177271,
+            "y": -6.071098520886355,
+            "ratio": 0.8886965271170835
+          },
+          "shot": 2,
+          "raceScale": 1.3793785412347215,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 1.155300000000745,
+          "camera": {
+            "x": 0.4116523837418429,
+            "y": -0.20582619187092144,
+            "ratio": 0.9962265198156998
+          },
+          "shot": 2,
+          "raceScale": 1.5462797948592404,
+          "horseVisuals": [
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 2
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 0.7829000000003723,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 1
+          },
+          "shot": 2,
+          "raceScale": 1.5521367521367526,
+          "horseVisuals": [
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.02375,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 3
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "racing",
+          "remaining": 0,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 1
+          },
+          "shot": 2,
+          "raceScale": 1.5521367521367526,
+          "horseVisuals": [
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": false,
+            "loopVolume": 0.02375,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 3,
+              "latch": 1
+            },
+            "warnings": []
+          }
+        }
+      ]
+    },
+    {
+      "report": "tests/pre-race-360-case4-result.json",
+      "steps": 57,
+      "diagnostics": {
+        "consoleErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "pageErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "requestFailures": {
+          "count": 0,
+          "samples": []
+        },
+        "httpErrors": {
+          "count": 0,
+          "samples": []
+        }
+      },
+      "roundShots": {
+        "1": [
+          1
+        ]
+      },
+      "results": [],
+      "timeline": [
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": -32,
+            "y": 0,
+            "ratio": 0.76
+          },
+          "shot": 1,
+          "raceScale": 1.179623931623932,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.055,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": -32,
+            "y": 0,
+            "ratio": 0.76
+          },
+          "shot": 1,
+          "raceScale": 1.179623931623932,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.055,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": -32,
+            "y": 0,
+            "ratio": 0.76
+          },
+          "shot": 1,
+          "raceScale": 1.179623931623932,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 4,
+              "highlight": true
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": true
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 2.7882999999988822,
+          "camera": {
+            "x": -31.000296524893844,
+            "y": 0,
+            "ratio": 0.7674977760632962
+          },
+          "shot": 1,
+          "raceScale": 1.1912615054110651,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 2.0312999999988812,
+          "camera": {
+            "x": -16.750954685597176,
+            "y": 0,
+            "ratio": 0.8743678398580212
+          },
+          "shot": 1,
+          "raceScale": 1.3571384591300573,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 1.180299999998882,
+          "camera": {
+            "x": -0.7333044909751969,
+            "y": 0,
+            "ratio": 0.994500216317686
+          },
+          "shot": 1,
+          "raceScale": 1.543600335754631,
+          "horseVisuals": [
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 2
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 0.8080999999996271,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 1
+          },
+          "shot": 1,
+          "raceScale": 1.5521367521367526,
+          "horseVisuals": [
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.02375,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 3
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "racing",
+          "remaining": 0,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 1
+          },
+          "shot": 1,
+          "raceScale": 1.5521367521367526,
+          "horseVisuals": [
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": false,
+            "loopVolume": 0.02375,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 3,
+              "latch": 1
+            },
+            "warnings": []
+          }
+        }
+      ]
+    },
+    {
+      "report": "tests/pre-race-430-case1-result.json",
+      "steps": 64,
+      "diagnostics": {
+        "consoleErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "pageErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "requestFailures": {
+          "count": 0,
+          "samples": []
+        },
+        "httpErrors": {
+          "count": 0,
+          "samples": []
+        }
+      },
+      "roundShots": {
+        "1": [
+          0
+        ],
+        "2": [
+          1
+        ]
+      },
+      "results": [
+        {
+          "first": 1,
+          "second": 5,
+          "order": [
+            1,
+            5,
+            2,
+            3,
+            6,
+            4
+          ],
+          "pair": "1-5",
+          "payout": 0,
+          "stake": 1,
+          "round": 1,
+          "eventId": "championship"
+        }
+      ],
+      "timeline": [
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 0.72
+          },
+          "shot": 0,
+          "raceScale": 1.5,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.055,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 0.72
+          },
+          "shot": 0,
+          "raceScale": 1.5,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.055,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 0.72
+          },
+          "shot": 0,
+          "raceScale": 1.5,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 5,
+              "highlight": true
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": true
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 2.78710000000149,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 0.7288430466116509
+          },
+          "shot": 0,
+          "raceScale": 1.5184230137742727,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 2.0256000000014907,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 0.8546251744048071
+          },
+          "shot": 0,
+          "raceScale": 1.7804691133433483,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 1.1622000000011177,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 0.99477385416929
+          },
+          "shot": 0,
+          "raceScale": 2.0724455295193542,
+          "horseVisuals": [
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 2
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 0.8068000000007449,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 1
+          },
+          "shot": 0,
+          "raceScale": 2.0833333333333335,
+          "horseVisuals": [
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.02375,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 3
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "racing",
+          "remaining": 0,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 1
+          },
+          "shot": 0,
+          "raceScale": 2.0833333333333335,
+          "horseVisuals": [
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": false,
+            "loopVolume": 0.02375,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 3,
+              "latch": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "result",
+          "remaining": 0,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 1
+          },
+          "shot": 0,
+          "raceScale": 2.0833333333333335,
+          "horseVisuals": [
+            {
+              "mode": "running",
+              "frame": 6,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 7,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 5,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 0,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": false,
+            "loopVolume": 0.02375,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 3,
+              "latch": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 2,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": -32,
+            "y": 0,
+            "ratio": 0.76
+          },
+          "shot": 1,
+          "raceScale": 1.5833333333333335,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 2,
+            "played": {
+              "broadcast": 1,
+              "countdown": 3,
+              "latch": 1
+            },
+            "warnings": []
+          }
+        }
+      ]
+    },
+    {
+      "report": "tests/pre-race-430-case2-result.json",
+      "steps": 57,
+      "diagnostics": {
+        "consoleErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "pageErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "requestFailures": {
+          "count": 0,
+          "samples": []
+        },
+        "httpErrors": {
+          "count": 0,
+          "samples": []
+        }
+      },
+      "roundShots": {
+        "1": [
+          2
+        ]
+      },
+      "results": [],
+      "timeline": [
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 24,
+            "y": -12,
+            "ratio": 0.78
+          },
+          "shot": 2,
+          "raceScale": 1.6250000000000002,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.055,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 24,
+            "y": -12,
+            "ratio": 0.78
+          },
+          "shot": 2,
+          "raceScale": 1.6250000000000002,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.055,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": 24,
+            "y": -12,
+            "ratio": 0.78
+          },
+          "shot": 2,
+          "raceScale": 1.6250000000000002,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 5,
+              "highlight": true
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": true
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 2.7894999999999994,
+          "camera": {
+            "x": 23.258379345749994,
+            "y": -11.629189672874997,
+            "ratio": 0.7867981893306251
+          },
+          "shot": 2,
+          "raceScale": 1.6391628944388024,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 2.0306999999992534,
+          "camera": {
+            "x": 12.552426393328574,
+            "y": -6.276213196664287,
+            "ratio": 0.8849360913944881
+          },
+          "shot": 2,
+          "raceScale": 1.8436168570718505,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 1.1642999999988803,
+          "camera": {
+            "x": 0.45928965175192094,
+            "y": -0.22964482587596047,
+            "ratio": 0.9957898448589407
+          },
+          "shot": 2,
+          "raceScale": 2.07456217678946,
+          "horseVisuals": [
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 2
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 0.8111999999992531,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 1
+          },
+          "shot": 2,
+          "raceScale": 2.0833333333333335,
+          "horseVisuals": [
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.02375,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 3
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "racing",
+          "remaining": 0,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 1
+          },
+          "shot": 2,
+          "raceScale": 2.0833333333333335,
+          "horseVisuals": [
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": false,
+            "loopVolume": 0.02375,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 3,
+              "latch": 1
+            },
+            "warnings": []
+          }
+        }
+      ]
+    },
+    {
+      "report": "tests/pre-race-430-case3-result.json",
+      "steps": 57,
+      "diagnostics": {
+        "consoleErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "pageErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "requestFailures": {
+          "count": 0,
+          "samples": []
+        },
+        "httpErrors": {
+          "count": 0,
+          "samples": []
+        }
+      },
+      "roundShots": {
+        "1": [
+          1
+        ]
+      },
+      "results": [],
+      "timeline": [
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": -32,
+            "y": 0,
+            "ratio": 0.76
+          },
+          "shot": 1,
+          "raceScale": 1.5833333333333335,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.055,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": -32,
+            "y": 0,
+            "ratio": 0.76
+          },
+          "shot": 1,
+          "raceScale": 1.5833333333333335,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 4,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.055,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "betting",
+          "remaining": 0,
+          "camera": {
+            "x": -32,
+            "y": 0,
+            "ratio": 0.76
+          },
+          "shot": 1,
+          "raceScale": 1.5833333333333335,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 5,
+              "highlight": true
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": true
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {},
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 2.769599999999628,
+          "camera": {
+            "x": -30.823824883708358,
+            "y": 0,
+            "ratio": 0.7688213133721873
+          },
+          "shot": 1,
+          "raceScale": 1.6017110695253902,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 2.0070000000000014,
+          "camera": {
+            "x": -16.167997256000035,
+            "y": 0,
+            "ratio": 0.8787400205799998
+          },
+          "shot": 1,
+          "raceScale": 1.830708376208333,
+          "horseVisuals": [
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 3,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 0,
+              "highlight": false
+            },
+            {
+              "mode": "idle",
+              "frame": 2,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 1
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 1.1410000000000018,
+          "camera": {
+            "x": -0.45471823200000827,
+            "y": 0,
+            "ratio": 0.99658961326
+          },
+          "shot": 1,
+          "raceScale": 2.0762283609583334,
+          "horseVisuals": [
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 8,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.095,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 2
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "preparing",
+          "remaining": 0.7861999999992568,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 1
+          },
+          "shot": 1,
+          "raceScale": 2.0833333333333335,
+          "horseVisuals": [
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            },
+            {
+              "mode": "ready",
+              "frame": 9,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": true,
+            "loopVolume": 0.02375,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 3
+            },
+            "warnings": []
+          }
+        },
+        {
+          "round": 1,
+          "phase": "racing",
+          "remaining": 0,
+          "camera": {
+            "x": 0,
+            "y": 0,
+            "ratio": 1
+          },
+          "shot": 1,
+          "raceScale": 2.0833333333333335,
+          "horseVisuals": [
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            },
+            {
+              "mode": "running",
+              "frame": 1,
+              "highlight": false
+            }
+          ],
+          "audio": {
+            "loaded": 5,
+            "unlocked": true,
+            "looping": false,
+            "loopVolume": 0.02375,
+            "loopStarts": 1,
+            "played": {
+              "broadcast": 1,
+              "countdown": 3,
+              "latch": 1
+            },
+            "warnings": []
+          }
+        }
+      ]
+    }
+  ]
+}

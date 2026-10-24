@@ -1,0 +1,186 @@
+{
+  "note": "Final local working-tree bytes; no Runtime edits after build start. SourceRevision in build report is previous HEAD.",
+  "packageHash": "3a620a711ff7b264c4ca3600ec51af9d421631414b76bb7495efa3d2d0b06985",
+  "files": [
+    {
+      "path": "assets/GoldenHorseGame.scene",
+      "sha256": "fe60c3bcefaf9d8fa4615589db08cb0dc6212f2b19041313d6deb04459bce73a"
+    },
+    {
+      "path": "assets/resources/audio/ambience-r09.wav",
+      "sha256": "d9a421dfab00e6bb6ef4bd3ddb090b7b0ef4d9e2937ac979626617c94d69f2c0"
+    },
+    {
+      "path": "assets/resources/audio/bet.wav",
+      "sha256": "d4ce3befdd470f51a23e8a4faeac18727b918c409756fbb779691807c7219856"
+    },
+    {
+      "path": "assets/resources/audio/broadcast-r09.wav",
+      "sha256": "d2eaf80f16d48b97b3b1d4ce47f15574ac64ec3f912070a5174bebbea73b550b"
+    },
+    {
+      "path": "assets/resources/audio/cancel.wav",
+      "sha256": "6101b34571726c44b9482f0b3b0227ff787e67138d88a88b6cdad686a2f04e2f"
+    },
+    {
+      "path": "assets/resources/audio/countdown-r09.wav",
+      "sha256": "6a744f0cbeb8b1d0764eb75d6b773b320da4a1c2074a2d8ae62e9d16013cf5f7"
+    },
+    {
+      "path": "assets/resources/audio/error.wav",
+      "sha256": "3b2d38505c6cb4c6923e6649186d070478ce63cd8ed56fa595267f0c7db864e5"
+    },
+    {
+      "path": "assets/resources/audio/finish.wav",
+      "sha256": "cec8926d4b7319dcd4a13791c194c15cbcb7d6c3233e33c274ccd89b33c0b6e2"
+    },
+    {
+      "path": "assets/resources/audio/gallop.wav",
+      "sha256": "7d6befade76382873b5b1b8d2b20fca9c3a343acdd87adc05b80271692f14624"
+    },
+    {
+      "path": "assets/resources/audio/hoof-r09.wav",
+      "sha256": "42acfae7f05ffe2ca1d161216d8b6e5fffeaf21de68fc322239bf6ac5a755e29"
+    },
+    {
+      "path": "assets/resources/audio/latch-r09.wav",
+      "sha256": "4dadf8818cf84dcf1093c2f9907e95bc0a4952d709b74ae68d60060b501d7396"
+    },
+    {
+      "path": "assets/resources/audio/start.wav",
+      "sha256": "2774c6924e2946fbe8ccba31fc7d296c4af6c9ea6fd3f0ca7da4c75a69b9a336"
+    },
+    {
+      "path": "assets/resources/audio/win.wav",
+      "sha256": "d730f1237eec1478c757ac25c073b0f090d924e569e644df444b91e66e9b9c0e"
+    },
+    {
+      "path": "assets/resources/race/equipment-catalog.json",
+      "sha256": "775a786ffba2610ba98db8d959fa5a6933b0e82e1cae36cd226969fc4e593588"
+    },
+    {
+      "path": "assets/resources/race/equipment-motion.json",
+      "sha256": "daba3ad736da83ec07f24e23f532446f016151021abaffde8ce8f10e0cad45db"
+    },
+    {
+      "path": "assets/resources/race/events.json",
+      "sha256": "073a58f1a89be7a3435dc2d124430d67c91bdec3762284e1ac85693d574ec7c4"
+    },
+    {
+      "path": "assets/resources/race/manifest.json",
+      "sha256": "47fab57a56d7c967dbd991d38cf13e12bbddc5d032f26feb73c4bc5c25cd2517"
+    },
+    {
+      "path": "assets/resources/race/pre-race-art.json",
+      "sha256": "bee7ed574a61a9b9da476e5435e211114e369e29c4aa293dd46edcef65f905b3"
+    },
+    {
+      "path": "assets/resources/race/pre-race/h01-idle-r09.png",
+      "sha256": "3c7d16f70b7f3c289c5323d597e5b81b529a7f65565dc3757804e7a2de539619"
+    },
+    {
+      "path": "assets/resources/race/pre-race/h02-idle-r09.png",
+      "sha256": "04e06cad148f706ef3ee634496529a096c2a5bad2535f86c8599d005c7eaf99b"
+    },
+    {
+      "path": "assets/resources/race/pre-race/h03-idle-r09.png",
+      "sha256": "35dc6e662641b3472bd29f6503fcebe5203c6a12a5a8a1d73f81ae65397b3964"
+    },
+    {
+      "path": "assets/resources/race/pre-race/h04-idle-r09.png",
+      "sha256": "21652ab1306d8b17ec9e0b26d3ac8438dc158ff4f9c682d646abb90545c74fd0"
+    },
+    {
+      "path": "assets/resources/race/pre-race/h05-idle-r09.png",
+      "sha256": "3a9857b9242e0c8d6bea7eecb619e23c1f54e59bda7f1b783c4631896c624e40"
+    },
+    {
+      "path": "assets/resources/race/pre-race/h06-idle-r09.png",
+      "sha256": "c6fe147c89fd48b09f87bd78e0f3b1feed040076005bbc9c74dee736fa175996"
+    },
+    {
+      "path": "assets/resources/race/pre-race/starter-r09.png",
+      "sha256": "f7a5775bf7f034bb689f8afe5c8e5ac8b3d10637d26e123f8f0ee184d10f96f3"
+    },
+    {
+      "path": "assets/scripts/GoldenHorseGame.ts",
+      "sha256": "27672d48b328bbe1d6362ba8fb8c84cbdd9534e26f6a10ed8d5310c02d02c5dc"
+    },
+    {
+      "path": "assets/scripts/RaceModel.ts",
+      "sha256": "889d08c1a6c851a9f5213744be984c11af8980b3bfe698f2045ebe5732514c66"
+    },
+    {
+      "path": "assets/scripts/RaceTrackView.ts",
+      "sha256": "a1a15f378c06f58cd06f7493d3fef03e015c6b8b7510c595b15628d5449cf5bb"
+    },
+    {
+      "path": "assets/scripts/TrackVisual.ts",
+      "sha256": "48c17125a2781b0bff38ed0ea288300e95caf9cc5bb98f6e5072cc7d0bf31158"
+    },
+    {
+      "path": "assets/scripts/events/RaceEventCatalog.ts",
+      "sha256": "e15466488daf2decfaf489b1421ff1ea28fcac1608a398b1bfcde9b763098662"
+    },
+    {
+      "path": "assets/scripts/presentation/HorseSpriteView.ts",
+      "sha256": "4992148fddff97206d1ccb68d94e01fd7a236f50e6c02ed6011da3de9d698da8"
+    },
+    {
+      "path": "assets/scripts/presentation/MobileLayout.ts",
+      "sha256": "97c9dca4e0d17500f04e8fbdb25a0e05309bdf7023491f78665fac1e8fca1a54"
+    },
+    {
+      "path": "assets/scripts/presentation/PreRaceArtCatalog.ts",
+      "sha256": "fc8a6647cb10d15bec6b1c4873b3cba5926f56fe520a22389f3f36b5a4edb2d6"
+    },
+    {
+      "path": "assets/scripts/presentation/PreRaceAudio.ts",
+      "sha256": "f5da12b55d9dd019c7417ac1a92eabf164fe681b6124a7c66014522e022a78ba"
+    },
+    {
+      "path": "assets/scripts/presentation/PreRacePresentation.ts",
+      "sha256": "bc6bda09414ea3ad96ef5dc87592a7c0a9b8c4640418d46664d60bf2fbe35a62"
+    },
+    {
+      "path": "assets/scripts/presentation/RacePages.ts",
+      "sha256": "1da6e367b360cc1e52b2d3f3aa1bc497ba0f680cac09930a6e5ade4a38011f05"
+    },
+    {
+      "path": "assets/scripts/presentation/RaceVisualAssets.ts",
+      "sha256": "1fd6eb6b67810edb8264b579511e730097d8d109af7e564c0b04cde68c1811c5"
+    },
+    {
+      "path": "assets/scripts/presentation/equipment/EquipmentAnimation.ts",
+      "sha256": "12b72dda3167914c0198b815a36485e569ce67094953ac7ba53ca073224d4c3f"
+    },
+    {
+      "path": "assets/scripts/presentation/equipment/EquipmentCatalog.ts",
+      "sha256": "f5d7de06c39d97493cf4deab4e29d87d7be9d48320f31a9d71c1befe44e095d4"
+    },
+    {
+      "path": "assets/scripts/presentation/equipment/EquipmentMotionCatalog.ts",
+      "sha256": "bea22ed629e0be012f8ba3dad76a20aea2f12e33491e1641f5c462800c628885"
+    },
+    {
+      "path": "assets/scripts/presentation/equipment/EquipmentScene.ts",
+      "sha256": "c2ed5a21d6bc29f7f5a8907e9f2aca85afd015bbdf4fa32c5713aa695deda1f4"
+    },
+    {
+      "path": "assets/scripts/presentation/equipment/RaceBroadcast.ts",
+      "sha256": "207708fb925a11e58ee8748e2efd8883348a4ae0c9062142f750754b642851b4"
+    },
+    {
+      "path": "assets/scripts/presentation/equipment/RaceLayers.ts",
+      "sha256": "e7d753d3300a62fc3cc06b80cdbd389995b51adee444f208b0bccc7b670a9bcd"
+    },
+    {
+      "path": "assets/scripts/presentation/equipment/RaceScreen.ts",
+      "sha256": "d678687625c7d4afc182d50e3acaffc63dd66cd23d542ff7186373efda263929"
+    },
+    {
+      "path": "assets/tests/GoldenHorseTestBridge.ts",
+      "sha256": "027a0fdac3ee2f947f77dbdbabf74e7e4c73f89bdefc646764d6ab3b20a17983"
+    }
+  ]
+}

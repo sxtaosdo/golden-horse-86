@@ -25,7 +25,7 @@ for(const mutate of [v=>v.items.pop(),v=>v.items[1].id=v.items[0].id,v=>v.items[
  const bad=JSON.parse(JSON.stringify(raw));mutate(bad);assert.throws(()=>EquipmentCatalog.parse(bad));
 }
 const result={round:4,first:2,second:6};
-assert.equal(raceScreen('betting',5,'冠军赛',0,null,0,5).text,'冠军赛\n第 5 场 · 等待开跑');
+assert.equal(raceScreen('betting',5,'冠军赛',0,null,0,5).text,'冠军赛\n第 5 场 · 等待开跑\n参赛 1 2 3 4 5 6');
 for(const [seconds,text] of [[3,'3'],[1.9,'2'],[.1,'1']])assert.ok(raceScreen('preparing',5,'冠军赛',seconds,null,0,5).text.endsWith(text));
 assert.equal(raceScreen('racing',4,'冠军赛',0,null,0,5).mode,'live');
 assert.equal(raceScreen('result',4,'冠军赛',0,result,4.999,5).text,'第 4 场\n冠军 2  亚军 6');

@@ -3,16 +3,18 @@ import { RACE_WORLD_LAYER } from './presentation/equipment/RaceLayers';
 import { bendPoint, coursePoint, courseCamera, CoursePoint, COURSE_FINISH_X } from './TrackVisual';
 import { RaceVisualAssets } from './presentation/RaceVisualAssets';
 import { raceFraming } from './presentation/MobileLayout';
+import { CameraCue } from './presentation/PreRacePresentation';
 /** A single persistent orthographic world. Tiles are clipped to the same U-shaped road as the horses. */
 export class RaceTrackView {
  readonly viewport:Node;readonly world:Node;readonly horseLayer:Node;readonly paintBuilds=1;
- private cameraPoint:CoursePoint={x:0,y:0};private width=750;private height=696;private zoom=.78;private yBias=75;
+ private cameraPoint:CoursePoint={x:0,y:0};private width=750;private height=696;private zoom=.78;private baseZoom=.78;private yBias=75;
+ private starter:Sprite|null=null;private starterFrame=-1;
  constructor(parent:Node){
   for(let ancestor:Node|null=parent;ancestor;ancestor=ancestor.parent){const camera=ancestor.getComponent(Canvas)?.cameraComponent;if(camera){camera.visibility|=RACE_WORLD_LAYER;break;}}
   this.viewport=this.node(parent,'RaceViewport');this.viewport.addComponent(UITransform).setContentSize(750,696);this.viewport.addComponent(Mask).type=Mask.Type.GRAPHICS_RECT;
   this.world=this.node(this.viewport,'ContinuousRaceWorld');this.world.addComponent(UITransform).setContentSize(5000,1400);this.horseLayer=this.node(this.world,'RaceHorses');this.follow(0);
  }
- resize(width:number,height:number):void{this.width=width;this.height=height;const framing=raceFraming(width,height);this.zoom=framing.zoom;this.yBias=framing.yBias;this.world.setScale(this.zoom,this.zoom,1);this.viewport.setPosition(0,0);this.viewport.getComponent(UITransform)!.setContentSize(width,height);}
+ resize(width:number,height:number):void{this.width=width;this.height=height;const framing=raceFraming(width,height);this.baseZoom=framing.zoom;this.yBias=framing.yBias;this.viewport.setPosition(0,0);this.viewport.getComponent(UITransform)!.setContentSize(width,height);}
  decorate(assets:RaceVisualAssets):void{
   const grass=this.node(this.world,'GrassTiles');this.tiles(grass,assets.ground.get('grass')!,-1900,-650,4800,2304);
   const outer=Array.from({length:97},(_,i)=>bendPoint(5.5,i/96)),inner=Array.from({length:97},(_,i)=>bendPoint(-.5,1-i/96));
@@ -33,7 +35,8 @@ export class RaceTrackView {
   const prop=(name:string,x:number,y:number,width:number)=>{const frame=assets.props.get(name)!;this.sprite(this.world,name,frame,x,y,width,width*frame.rect.height/frame.rect.width);};
   for(let x=-1300;x<2100;x+=300){prop('shrub',x,45,92);prop('flowers',x+100,365,98);prop('shrub',x+80,625,90);}
   for(let i=0;i<=16;i++){const q=bendPoint(-1.3,i/16);prop(i%3?'shrub':'flowers',q.x,q.y,85);}
-  prop('gate',300,65,210);prop('starter',540,365,100);prop('canopy',1050,585,210);prop('truck',1750,610,200);prop('crates',1270,590,92);prop('tree',1950,610,175);prop('spectators',1300,650,170);prop('scoreboard',200,500,220);
+  prop('gate',300,65,210);prop('canopy',1050,585,210);prop('truck',1750,610,200);prop('crates',1270,590,92);prop('tree',1950,610,175);prop('spectators',1300,650,170);prop('scoreboard',200,500,220);
+  const starter=this.node(this.world,'AnimatedStarter');starter.setPosition(535,-350);starter.addComponent(UITransform);this.starter=starter.addComponent(Sprite);this.starter.sizeMode=Sprite.SizeMode.CUSTOM;this.updateStarter(assets,0);
   this.label('FinishBoard','FINISH',200,430,22,'#ffd56b');
   this.horseLayer.setSiblingIndex(this.world.children.length-1);
  }
@@ -46,7 +49,11 @@ export class RaceTrackView {
  private label(name:string,text:string,x:number,y:number,size:number,color:string):void{const n=this.node(this.world,name);n.setPosition(x,-y);n.addComponent(UITransform).setContentSize(180,34);const l=n.addComponent(Label);l.string=text;l.fontFamily='Arial';l.fontSize=size;l.lineHeight=size+2;l.horizontalAlign=Label.HorizontalAlign.CENTER;l.verticalAlign=Label.VerticalAlign.CENTER;l.color=new Color().fromHEX(color);}
  /** Horses and the side walls between their stalls share one ground-depth order. */
  sortDepth():void{[...this.horseLayer.children].sort((a,b)=>b.position.y-a.position.y).forEach((node,index)=>node.setSiblingIndex(index));}
- follow(progress:number):void{const p=courseCamera(progress);this.cameraPoint={x:p.x,y:p.y-this.yBias};this.world.setPosition(-this.cameraPoint.x*this.zoom,this.cameraPoint.y*this.zoom-45);}
+ updateStarter(assets:RaceVisualAssets,index:number):void{
+  if(!this.starter||index===this.starterFrame)return;this.starterFrame=index;const part=assets.preRaceCatalog.starter,f=part.frames[index],size=this.starter.node.getComponent(UITransform)!;
+  size.setContentSize(f.width,f.height);size.setAnchorPoint(f.anchor.x,f.anchor.y);this.starter.spriteFrame=assets.preRaceFrames.get(part.resource)![index];
+ }
+ follow(progress:number,cue:CameraCue={x:0,y:0,ratio:1}):void{const p=courseCamera(progress);this.zoom=this.baseZoom*cue.ratio;this.cameraPoint={x:p.x+cue.x,y:p.y-this.yBias+cue.y};this.world.setScale(this.zoom,this.zoom,1);this.world.setPosition(-this.cameraPoint.x*this.zoom,this.cameraPoint.y*this.zoom-45);}
  project(point:CoursePoint):CoursePoint{return{x:this.width/2+(point.x-this.cameraPoint.x)*this.zoom,y:this.height/2+45+(point.y-this.cameraPoint.y)*this.zoom};}
  get camera():Readonly<CoursePoint>{return this.cameraPoint;}
  get scale():number{return this.zoom;}

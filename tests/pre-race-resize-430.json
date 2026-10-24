@@ -1,0 +1,31 @@
+{
+  "viewport": {
+    "width": 430,
+    "height": 932
+  },
+  "pageState": "keep",
+  "steps": [
+    {
+      "type": "ui",
+      "action": "click",
+      "target": "#view-select:visible, body:not(:has(#view-select:visible))"
+    },
+    {
+      "type": "ui",
+      "action": "click",
+      "target": "li[data-device=WebpageFullScreen]:visible, body:not(:has(li[data-device=WebpageFullScreen]:visible))"
+    },
+    {
+      "type": "wait",
+      "durationMs": 500
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "pre-race-resize-430"
+    }
+  ]
+}

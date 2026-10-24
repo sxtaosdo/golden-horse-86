@@ -77,7 +77,8 @@ export class EquipmentScene {
  }
  update(dt:number,state:RaceScreenState,focus:EquipmentFocus):void{
   for(const camera of this.cameras){
-   const frame=camera.animation.update(dt,focus.round,camera.origin,focus.point);camera.horse=focus.horse;
+   const scan=(focus.phase==='betting'||focus.phase==='preparing')&&focus.scanPoint;
+   const frame=camera.animation.update(dt,focus.round,camera.origin,scan||focus.point);camera.horse=scan?0:focus.horse;
    if(frame!==camera.frame){camera.frame=frame;this.motionFrame(camera.head,camera.part,frame,camera.scale);}
   }
   const lampFrame=EquipmentAnimation.lampFrame(focus.phase,focus.preparationRemaining,this.assets.motionCatalog.warning.blinkSeconds);

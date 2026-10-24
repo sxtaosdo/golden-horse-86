@@ -1,0 +1,269 @@
+{
+  "cases": [
+    {
+      "width": 390,
+      "attempt": 1,
+      "shot": 2,
+      "report": "tests/pre-race-390-case1-result.json",
+      "steps": 60,
+      "diagnostics": {
+        "consoleErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "pageErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "requestFailures": {
+          "count": 0,
+          "samples": []
+        },
+        "httpErrors": {
+          "count": 0,
+          "samples": []
+        }
+      },
+      "recorded": true
+    },
+    {
+      "width": 390,
+      "attempt": 2,
+      "shot": 0,
+      "report": "tests/pre-race-390-case2-result.json",
+      "steps": 60,
+      "diagnostics": {
+        "consoleErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "pageErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "requestFailures": {
+          "count": 0,
+          "samples": []
+        },
+        "httpErrors": {
+          "count": 0,
+          "samples": []
+        }
+      },
+      "recorded": true
+    },
+    {
+      "width": 390,
+      "attempt": 3,
+      "shot": 1,
+      "report": "tests/pre-race-390-case3-result.json",
+      "steps": 60,
+      "diagnostics": {
+        "consoleErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "pageErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "requestFailures": {
+          "count": 0,
+          "samples": []
+        },
+        "httpErrors": {
+          "count": 0,
+          "samples": []
+        }
+      },
+      "recorded": true
+    },
+    {
+      "width": 360,
+      "attempt": 1,
+      "shot": 2,
+      "report": "tests/pre-race-360-case1-result.json",
+      "steps": 88,
+      "diagnostics": {
+        "consoleErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "pageErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "requestFailures": {
+          "count": 0,
+          "samples": []
+        },
+        "httpErrors": {
+          "count": 0,
+          "samples": []
+        }
+      },
+      "recorded": false
+    },
+    {
+      "width": 360,
+      "attempt": 2,
+      "shot": 0,
+      "report": "tests/pre-race-360-case2-result.json",
+      "steps": 57,
+      "diagnostics": {
+        "consoleErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "pageErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "requestFailures": {
+          "count": 0,
+          "samples": []
+        },
+        "httpErrors": {
+          "count": 0,
+          "samples": []
+        }
+      },
+      "recorded": false
+    },
+    {
+      "width": 360,
+      "attempt": 3,
+      "shot": 2,
+      "report": "tests/pre-race-360-case3-result.json",
+      "steps": 57,
+      "diagnostics": {
+        "consoleErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "pageErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "requestFailures": {
+          "count": 0,
+          "samples": []
+        },
+        "httpErrors": {
+          "count": 0,
+          "samples": []
+        }
+      },
+      "recorded": false
+    },
+    {
+      "width": 360,
+      "attempt": 4,
+      "shot": 1,
+      "report": "tests/pre-race-360-case4-result.json",
+      "steps": 57,
+      "diagnostics": {
+        "consoleErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "pageErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "requestFailures": {
+          "count": 0,
+          "samples": []
+        },
+        "httpErrors": {
+          "count": 0,
+          "samples": []
+        }
+      },
+      "recorded": false
+    },
+    {
+      "width": 430,
+      "attempt": 1,
+      "shot": 0,
+      "report": "tests/pre-race-430-case1-result.json",
+      "steps": 64,
+      "diagnostics": {
+        "consoleErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "pageErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "requestFailures": {
+          "count": 0,
+          "samples": []
+        },
+        "httpErrors": {
+          "count": 0,
+          "samples": []
+        }
+      },
+      "recorded": false
+    },
+    {
+      "width": 430,
+      "attempt": 2,
+      "shot": 2,
+      "report": "tests/pre-race-430-case2-result.json",
+      "steps": 57,
+      "diagnostics": {
+        "consoleErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "pageErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "requestFailures": {
+          "count": 0,
+          "samples": []
+        },
+        "httpErrors": {
+          "count": 0,
+          "samples": []
+        }
+      },
+      "recorded": false
+    },
+    {
+      "width": 430,
+      "attempt": 3,
+      "shot": 1,
+      "report": "tests/pre-race-430-case3-result.json",
+      "steps": 57,
+      "diagnostics": {
+        "consoleErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "pageErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "requestFailures": {
+          "count": 0,
+          "samples": []
+        },
+        "httpErrors": {
+          "count": 0,
+          "samples": []
+        }
+      },
+      "recorded": false
+    }
+  ],
+  "clips": [
+    2,
+    0,
+    1
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "path": "C:\\Users\\33272\\.codex\\generated_images\\01a16943-ca46-7a21-9fd6-fb8ef775f3b4\\exec-e5342729-93b4-437b-9f10-e0e248967e39.png",
+  "source": "D:/code/shidai3/P4000/golden-horse-86/art/work/gameplay/r09/generated/h05-idle-r09.png",
+  "prompt": "Use case: precise-object-edit. Repair ONLY sprite packing in this TEN-frame right-facing yellow horse and blue jockey idle sheet. Preserve every pose, character identity, palette, pixel-art style, anatomy, tack and transparent alpha. Keep exactly FIVE equal columns by TWO equal rows in reading order. Reduce the size of each complete horse-and-rider inside its own cell so every entire silhouette fits with at least 24 pixels of genuinely transparent margin on EACH side of EVERY cell, including all tail tips and muzzles. In the bottom row some adjacent silhouettes touch; separate them completely. Same physical size for all ten sprites, feet at consistent local ground level. Preserve ready crouch in final two cells and lifted forehoof in bottom-row second cell. No backdrop, floor, glow, shadows, labels or grid. Actual transparent canvas. This is a sprite-layout cleanup; do not invent or remove poses."
+}

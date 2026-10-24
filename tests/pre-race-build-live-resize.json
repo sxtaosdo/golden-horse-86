@@ -1,0 +1,66 @@
+{
+  "source": "same-tab production browser viewport resize; DOM dimensions and screenshots only; no Preview bridge",
+  "url": "http://127.0.0.1:8572/",
+  "states": [
+    {
+      "width": 390,
+      "height": 844,
+      "metrics": {
+        "canvas": {
+          "height": 844,
+          "width": 390
+        },
+        "rect": {
+          "bottom": 844,
+          "height": 844,
+          "left": 0,
+          "right": 390,
+          "top": 0,
+          "width": 390,
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "metrics": {
+        "canvas": {
+          "height": 932,
+          "width": 430
+        },
+        "rect": {
+          "bottom": 932,
+          "height": 932,
+          "left": 0,
+          "right": 430,
+          "top": 0,
+          "width": 430,
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "width": 360,
+      "height": 640,
+      "metrics": {
+        "canvas": {
+          "height": 640,
+          "width": 360
+        },
+        "rect": {
+          "bottom": 640,
+          "height": 640,
+          "left": 0,
+          "right": 360,
+          "top": 0,
+          "width": 360,
+          "x": 0,
+          "y": 0
+        }
+      }
+    }
+  ]
+}

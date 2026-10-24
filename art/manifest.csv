@@ -12,3 +12,15 @@ art/reference/race/r07-launch.png,timing-comparison-reference,"Sohu 86 gameplay 
 art/reference/race/r07-exit.png,timing-comparison-reference,"Sohu 86 gameplay sampled 2026-10-24; timestamps in r07-timing.json",false
 art/reference/race/r07-first-race.png,timing-comparison-reference,"Sohu 86 gameplay sampled 2026-10-24; timestamps in r07-timing.json",false
 art/reference/race/r07-second-race.png,timing-comparison-reference,"Sohu 86 gameplay sampled 2026-10-24; timestamps in r07-timing.json",false
+art/final/gameplay/r09/h01-idle-r09.png,pre-race-selected,"built-in image_gen; r09 production.json",true
+art/final/gameplay/r09/h02-idle-r09.png,pre-race-selected,"built-in image_gen; r09 production.json",true
+art/final/gameplay/r09/h03-idle-r09.png,pre-race-selected,"built-in image_gen; r09 production.json",true
+art/final/gameplay/r09/h04-idle-r09.png,pre-race-selected,"built-in image_gen; r09 production.json",true
+art/final/gameplay/r09/h05-idle-r09.png,pre-race-selected,"built-in image_gen; r09 production.json",true
+art/final/gameplay/r09/h06-idle-r09.png,pre-race-selected,"built-in image_gen; r09 production.json",true
+art/final/gameplay/r09/starter-r09.png,pre-race-selected,"built-in image_gen; r09 production.json",true
+art/final/gameplay/r09/ambience-r09.wav,pre-race-selected,"original procedural PCM16; r09 audio-recipe.py",true
+art/final/gameplay/r09/countdown-r09.wav,pre-race-selected,"original procedural PCM16; r09 audio-recipe.py",true
+art/final/gameplay/r09/broadcast-r09.wav,pre-race-selected,"original procedural PCM16; r09 audio-recipe.py",true
+art/final/gameplay/r09/latch-r09.wav,pre-race-selected,"original procedural PCM16; r09 audio-recipe.py",true
+art/final/gameplay/r09/hoof-r09.wav,pre-race-selected,"original procedural PCM16; r09 audio-recipe.py",true

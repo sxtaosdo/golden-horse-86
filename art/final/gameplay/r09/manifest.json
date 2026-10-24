@@ -1,0 +1,138 @@
+{
+  "status": "integrated-local-runtime-verified",
+  "source": "built-in image_gen",
+  "assets": [
+    {
+      "resource": "h01-idle-r09",
+      "source": "art/work/gameplay/r09/generated/h01-idle-r09.png",
+      "file": "h01-idle-r09.png",
+      "runtime": "assets/resources/race/pre-race/h01-idle-r09.png",
+      "width": 1983,
+      "height": 793,
+      "sha256": "3c7d16f70b7f3c289c5323d597e5b81b529a7f65565dc3757804e7a2de539619"
+    },
+    {
+      "resource": "h02-idle-r09",
+      "source": "art/work/gameplay/r09/generated/h02-idle-r09.png",
+      "file": "h02-idle-r09.png",
+      "runtime": "assets/resources/race/pre-race/h02-idle-r09.png",
+      "width": 1983,
+      "height": 793,
+      "sha256": "04e06cad148f706ef3ee634496529a096c2a5bad2535f86c8599d005c7eaf99b"
+    },
+    {
+      "resource": "h03-idle-r09",
+      "source": "art/work/gameplay/r09/generated/h03-idle-r09.png",
+      "file": "h03-idle-r09.png",
+      "runtime": "assets/resources/race/pre-race/h03-idle-r09.png",
+      "width": 1983,
+      "height": 793,
+      "sha256": "35dc6e662641b3472bd29f6503fcebe5203c6a12a5a8a1d73f81ae65397b3964"
+    },
+    {
+      "resource": "h04-idle-r09",
+      "source": "art/work/gameplay/r09/generated/h04-idle-r09.png",
+      "file": "h04-idle-r09.png",
+      "runtime": "assets/resources/race/pre-race/h04-idle-r09.png",
+      "width": 1983,
+      "height": 793,
+      "sha256": "21652ab1306d8b17ec9e0b26d3ac8438dc158ff4f9c682d646abb90545c74fd0"
+    },
+    {
+      "resource": "h05-idle-r09",
+      "source": "art/work/gameplay/r09/generated/h05-idle-r09-repair.png",
+      "file": "h05-idle-r09.png",
+      "runtime": "assets/resources/race/pre-race/h05-idle-r09.png",
+      "width": 1774,
+      "height": 887,
+      "sha256": "3a9857b9242e0c8d6bea7eecb619e23c1f54e59bda7f1b783c4631896c624e40"
+    },
+    {
+      "resource": "h06-idle-r09",
+      "source": "art/work/gameplay/r09/generated/h06-idle-r09.png",
+      "file": "h06-idle-r09.png",
+      "runtime": "assets/resources/race/pre-race/h06-idle-r09.png",
+      "width": 1983,
+      "height": 793,
+      "sha256": "c6fe147c89fd48b09f87bd78e0f3b1feed040076005bbc9c74dee736fa175996"
+    },
+    {
+      "resource": "starter-r09",
+      "source": "art/work/gameplay/r09/generated/starter-r09.png",
+      "file": "starter-r09.png",
+      "runtime": "assets/resources/race/pre-race/starter-r09.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "f7a5775bf7f034bb689f8afe5c8e5ac8b3d10637d26e123f8f0ee184d10f96f3"
+    },
+    {
+      "source": "art/work/gameplay/r09/generated/ambience-r09.wav",
+      "file": "ambience-r09.wav",
+      "runtime": "assets/resources/audio/ambience-r09.wav",
+      "sha256": "d9a421dfab00e6bb6ef4bd3ddb090b7b0ef4d9e2937ac979626617c94d69f2c0",
+      "sourceType": "original procedural PCM16 mono 22050Hz",
+      "durationSeconds": 8.0,
+      "sampleRate": 22050,
+      "peak": 0.104522705078125,
+      "rms": 0.023802198614287694
+    },
+    {
+      "source": "art/work/gameplay/r09/generated/countdown-r09.wav",
+      "file": "countdown-r09.wav",
+      "runtime": "assets/resources/audio/countdown-r09.wav",
+      "sha256": "6a744f0cbeb8b1d0764eb75d6b773b320da4a1c2074a2d8ae62e9d16013cf5f7",
+      "sourceType": "original procedural PCM16 mono 22050Hz",
+      "durationSeconds": 0.12,
+      "sampleRate": 22050,
+      "peak": 0.249176025390625,
+      "rms": 0.10824892788032811
+    },
+    {
+      "source": "art/work/gameplay/r09/generated/broadcast-r09.wav",
+      "file": "broadcast-r09.wav",
+      "runtime": "assets/resources/audio/broadcast-r09.wav",
+      "sha256": "d2eaf80f16d48b97b3b1d4ce47f15574ac64ec3f912070a5174bebbea73b550b",
+      "sourceType": "original procedural PCM16 mono 22050Hz",
+      "durationSeconds": 0.5500226757369614,
+      "sampleRate": 22050,
+      "peak": 0.19586181640625,
+      "rms": 0.06281632143719118
+    },
+    {
+      "source": "art/work/gameplay/r09/generated/latch-r09.wav",
+      "file": "latch-r09.wav",
+      "runtime": "assets/resources/audio/latch-r09.wav",
+      "sha256": "4dadf8818cf84dcf1093c2f9907e95bc0a4952d709b74ae68d60060b501d7396",
+      "sourceType": "original procedural PCM16 mono 22050Hz",
+      "durationSeconds": 0.28,
+      "sampleRate": 22050,
+      "peak": 0.50140380859375,
+      "rms": 0.06840704797771173
+    },
+    {
+      "source": "art/work/gameplay/r09/generated/hoof-r09.wav",
+      "file": "hoof-r09.wav",
+      "runtime": "assets/resources/audio/hoof-r09.wav",
+      "sha256": "42acfae7f05ffe2ca1d161216d8b6e5fffeaf21de68fc322239bf6ac5a755e29",
+      "sourceType": "original procedural PCM16 mono 22050Hz",
+      "durationSeconds": 0.1,
+      "sampleRate": 22050,
+      "peak": 0.307861328125,
+      "rms": 0.0598983955695571
+    }
+  ],
+  "notes": [
+    "66 authored pre-race poses: six independent 10-frame horse sheets and one 6-frame starter sheet.",
+    "h05 first image had adjacent lower-row silhouettes touching; selected built-in edit with restored transparent gutters. Original retained in work.",
+    "All PNG and WAV bytes preserved from the selected sources. Runtime crops/anchors recorded in pre-race-art.json.",
+    "Audio is original procedural, wordless texture rather than recorded voices. Waveform/event checks available; this assistant cannot receive audio for listening verification."
+  ],
+  "verification": {
+    "report": "tests/PRE_RACE.md",
+    "frames": 66,
+    "previewSteps": 792,
+    "fullRaces": 4,
+    "audioListening": "not verified; tool does not support audio input",
+    "published": false
+  }
+}

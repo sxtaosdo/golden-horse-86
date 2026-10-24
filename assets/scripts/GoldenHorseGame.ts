@@ -11,6 +11,8 @@ import { RacePageContext, LoadingPage, BettingPage, RacingPage } from './present
 import { RaceVisualAssets } from './presentation/RaceVisualAssets';
 import { HorseSpriteView } from './presentation/HorseSpriteView';
 import { mobileLayout, betPosition } from './presentation/MobileLayout';
+import { PreRacePresentation } from './presentation/PreRacePresentation';
+import { PreRaceAudio } from './presentation/PreRaceAudio';
 const { ccclass, property } = _decorator;
 @ccclass('GoldenHorseGame')
 export class GoldenHorseGame extends Component implements RacePageContext {
@@ -48,7 +50,8 @@ export class GoldenHorseGame extends Component implements RacePageContext {
  private keys:string[]=[];
  private sounds:Record<string,AudioClip>={};
  private loadErrors:string[]=[];
- private pendingAssets=8;
+ private pendingAssets=9;
+ private readonly preRace=new PreRacePresentation();private preAudio:PreRaceAudio|null=null;
  private pagePending=false;private disposed=false;private pageTask:Promise<void>=Promise.resolve();
  private audio!:AudioSource;private heldF8=false;private lastPhase='betting';private gallopTimer=0;
  private undo=false;private layoutHeight=1334;
@@ -61,7 +64,7 @@ export class GoldenHorseGame extends Component implements RacePageContext {
   for(let a=1;a<=5;a++)for(let b=6;b>a;b--)this.keys.push(a+'-'+b);
   this.betNodes.forEach((node,i)=>{const p=betPosition(i);node.setPosition(p.x,p.y);node.on(Node.EventType.TOUCH_END,()=>this.bet(this.keys[i],this.undo?-1:1),this);node.on(Node.EventType.MOUSE_DOWN,(e:EventMouse)=>{if(e.getButton()===EventMouse.BUTTON_RIGHT)this.bet(this.keys[i],-1);},this);});
   this.buttons[0].on(Node.EventType.TOUCH_END,()=>{if(this.canBet())this.undo=!this.undo;},this);
-  this.buttons[1].on(Node.EventType.TOUCH_END,()=>{if(this.canBet()){this.game.clearBets();this.sound('cancel');}},this);
+  this.buttons[1].on(Node.EventType.TOUCH_END,()=>{if(this.canBet()){this.game.clearBets();this.preRace.clearFeedback();this.sound('cancel');}},this);
   this.buttons[2].on(Node.EventType.TOUCH_END,()=>{this.historyPanel!.active=!this.historyPanel!.active;},this);
   this.buttons[3].on(Node.EventType.TOUCH_END,this.beginRace,this);
   this.eventButton.on(Node.EventType.TOUCH_END,()=>{if(this.canBet())this.eventPanel!.active=true;},this);
@@ -69,7 +72,8 @@ export class GoldenHorseGame extends Component implements RacePageContext {
   this.eventChoices.forEach((node,index)=>node.on(Node.EventType.TOUCH_END,()=>{
    if(this.canBet()){const ok=this.game.selectEvent(this.artwork.catalog.tiers[index].id);this.sound(ok?'bet':'error');if(ok)this.eventPanel!.active=false;}
   },this));this.eventPanel.active=false;
-  this.historyPanel.active=false;this.audio=this.node.addComponent(AudioSource);
+  this.historyPanel.active=false;this.audio=this.node.addComponent(AudioSource);this.preAudio=new PreRaceAudio(this.node);
+  this.uiRoot.on(Node.EventType.TOUCH_START,()=>this.preAudio?.unlock(),this);this.uiRoot.on(Node.EventType.MOUSE_DOWN,()=>this.preAudio?.unlock(),this);
   input.on(Input.EventType.KEY_DOWN,this.keyDown,this);input.on(Input.EventType.KEY_UP,this.keyUp,this);
   view.on('canvas-resize',this.relayout,this);view.on('design-resolution-changed',this.relayout,this);this.relayout();
   this.changePage(LoadingPage);
@@ -100,6 +104,7 @@ export class GoldenHorseGame extends Component implements RacePageContext {
    this.equipment=new EquipmentScene(this.courseView,this.raceHost!,this.artwork);this.equipment.setTier(this.game.eventId);
    if(PREVIEW)this.testBridge=new GoldenHorseTestBridge(this.game,()=>this.observe());
   }).catch((error:unknown)=>{if(!this.disposed)this.loadErrors.push(String(error));}).finally(()=>{if(!this.disposed)this.pendingAssets--;});
+  void (this.preAudio?.load()??Promise.resolve()).catch((error:unknown)=>{if(!this.disposed)this.preAudio?.warnings.push(String(error));}).finally(()=>{if(!this.disposed)this.pendingAssets--;});
   for(const name of ['bet','cancel','start','win','finish','error','gallop'])resources.load('audio/'+name,AudioClip,(error,clip)=>{if(this.disposed||!this.isValid)return;this.pendingAssets--;if(error)this.loadErrors.push(error.message);else this.sounds[name]=clip;});
  }
  private clientRect(node:Node):Record<string,number>{
@@ -108,11 +113,11 @@ export class GoldenHorseGame extends Component implements RacePageContext {
   return{x:r.left+(local.x+v.width/2-ui.width/2)/v.width*r.width,y:r.top+(v.height/2-local.y-ui.height/2)/v.height*r.height,width:ui.width/v.width*r.width,height:ui.height/v.height*r.height};
  }
  private observe():Record<string,unknown>{return{
-  revision:'gate-depth-r08-v1',raceElapsed:this.game.raceElapsed,courseFraction:this.game.courseFraction,strideTimes:this.game.progress.map((_,i)=>this.game.strideTime(i)),leaderHorse:this.game.leaderIndex+1,eventId:this.game.eventId,eventName:this.game.eventName,eligibilityCredits:this.game.eligibilityCredits,preparationRemaining:this.game.preparationRemaining,equipment:this.equipment?.observation,eventPickerVisible:this.eventPanel?.active,eventButton:this.eventButton?this.clientRect(this.eventButton):{},eventChoices:this.eventChoices.map(n=>this.clientRect(n)),eventClose:this.eventClose?this.clientRect(this.eventClose):{},ready:this.canInput(),pendingAssets:this.pendingAssets,loadErrors:[...this.loadErrors],section:trackSection(this.game.courseFraction),
+  revision:'pre-race-r09-v1',preRace:this.preRace.observation,preAudio:this.preAudio?.observation,horseVisuals:this.horses.map(h=>h.observation),raceElapsed:this.game.raceElapsed,courseFraction:this.game.courseFraction,strideTimes:this.game.progress.map((_,i)=>this.game.strideTime(i)),leaderHorse:this.game.leaderIndex+1,eventId:this.game.eventId,eventName:this.game.eventName,eligibilityCredits:this.game.eligibilityCredits,preparationRemaining:this.game.preparationRemaining,equipment:this.equipment?.observation,eventPickerVisible:this.eventPanel?.active,eventButton:this.eventButton?this.clientRect(this.eventButton):{},eventChoices:this.eventChoices.map(n=>this.clientRect(n)),eventClose:this.eventClose?this.clientRect(this.eventClose):{},ready:this.canInput(),pendingAssets:this.pendingAssets,loadErrors:[...this.loadErrors],section:trackSection(this.game.courseFraction),
   uiMode:this.StateMachine.is(RacingPage)?'race':this.StateMachine.is(BettingPage)?'betting':'loading',bettingPageVisible:this.bettingPage?.active,raceViewportVisible:this.courseView.viewport.active,
   designResolution:{width:750,height:1334},visibleHeight:this.layoutHeight,raceViewport:this.clientRect(this.raceHost!),
   touchTargets:this.betNodes.map((node,i)=>({key:this.keys[i],...this.clientRect(node)})),buttons:this.buttons.map(node=>({name:node.name,...this.clientRect(node)})),undoMode:this.undo,
-  horseFrames:this.artwork.frames.size*8,backgrounds:this.artwork.props.size,sounds:Object.keys(this.sounds).length,
+  horseFrames:this.artwork.frames.size*8,preRaceFrames:this.artwork.preRaceCatalog.parts.reduce((sum,p)=>sum+p.frames.length,0),backgrounds:this.artwork.props.size,sounds:Object.keys(this.sounds).length,
   worldId:this.courseView.world.uuid,worldPaintBuilds:this.courseView.paintBuilds,raceScale:this.courseView.scale,camera:{...this.courseView.camera},finishWorldX:COURSE_FINISH_X,horseNoseOffset:HORSE_NOSE_X,finishDirection:-1,
   depthOrder:this.courseView.horseLayer.children.filter(n=>n.active).map(n=>({name:n.name,y:-n.position.y,index:n.getSiblingIndex()})),
   uiCredits:this.textCredits?.string,uiResult:this.resultText?.string,resultPanel:this.resultPanel?.active,startButton:this.startText?.string,
@@ -120,10 +125,13 @@ export class GoldenHorseGame extends Component implements RacePageContext {
  };}
  private canInput():boolean{return !!this.game&&!this.disposed&&!this.pagePending&&this.pendingAssets===0&&!this.loadErrors.length&&!this.StateMachine.is(LoadingPage);}
  private canBet():boolean{return this.canInput()&&this.StateMachine.is(BettingPage)&&this.game.phase==='betting';}
- private bet(key:string,delta:number):void{if(this.canBet())this.sound(this.game.placeBet(key,delta)?delta>0?'bet':'cancel':'error');}
- private beginRace():void{if(!this.canInput())return;const was=this.game.phase;if(!this.game.startRace())this.sound('error');else if(was==='result')this.sound('finish');this.syncPage();}
+ private bet(key:string,delta:number):void{
+  if(!this.canBet())return;this.preAudio?.unlock();const ok=this.game.placeBet(key,delta);this.sound(ok?delta>0?'bet':'cancel':'error');
+  if(ok&&delta>0){const cell=this.game.getCell(key)!;this.preRace.betFeedback(cell.first,cell.second,this.keys.indexOf(cell.key));}
+ }
+ private beginRace():void{if(!this.canInput())return;this.preAudio?.unlock();const was=this.game.phase;if(!this.game.startRace())this.sound('error');else if(was==='result')this.sound('finish');this.syncPage();}
  private keyDown(event:EventKeyboard):void{
-  if(!this.canInput())return;const key=event.keyCode as number;if(key===119)this.heldF8=true;else if(key===120&&this.heldF8)this.game.addTestCredits(100);else if(key===123&&this.heldF8)this.game.clearCredits();else if(key===13||key===32)this.beginRace();else if(key===67&&this.canBet())this.game.clearBets();
+  if(!this.canInput())return;this.preAudio?.unlock();const key=event.keyCode as number;if(key===119)this.heldF8=true;else if(key===120&&this.heldF8)this.game.addTestCredits(100);else if(key===123&&this.heldF8)this.game.clearCredits();else if(key===13||key===32)this.beginRace();else if(key===67&&this.canBet()){this.game.clearBets();this.preRace.clearFeedback();}
  }
  private keyUp(event:EventKeyboard):void{if((event.keyCode as number)===119)this.heldF8=false;}
  private sound(name:string):void{const clip=this.sounds[name];if(clip)this.audio.playOneShot(clip,.5);}
@@ -133,17 +141,18 @@ export class GoldenHorseGame extends Component implements RacePageContext {
   if(!this.game){this.refresh();return;}
   if(this.game.phase==='racing'){this.gallopTimer-=dt;if(this.gallopTimer<=0){this.sound('gallop');this.gallopTimer=1.7;}}else this.gallopTimer=0;
   if(this.lastPhase!==this.game.phase){if(this.game.phase==='racing')this.sound('start');if(this.game.phase==='result')this.sound(this.game.lastResult?.payout?'win':'finish');this.lastPhase=this.game.phase;}
-  this.courseView.follow(this.game.courseFraction);this.horses.forEach((h,i)=>{
-   const stride=this.game.strideTime(i);h.render(horsePose(i,this.game.progress[i],stride),stride,this.game.phase==='racing'||this.game.phase==='result');
+  this.preRace.update(dt,this.game);this.preAudio?.update(this.game,this.preRace.cues);
+  this.courseView.follow(this.game.courseFraction,this.preRace.cameraCue);this.courseView.updateStarter(this.artwork,this.preRace.flagFrame);this.horses.forEach((h,i)=>{
+   const stride=this.game.strideTime(i);h.render(horsePose(i,this.game.progress[i],stride),stride,this.game.phase==='racing'||this.game.phase==='result',this.preRace.horse(i));
   });
   this.equipment?.setTier(this.game.eventId);
   this.courseView.sortDepth();
   const leader=this.game.leaderIndex;
-  this.equipment?.update(dt,raceScreen(this.game.phase,this.game.round,this.game.eventName,this.game.preparationRemaining,this.game.lastResult,this.game.resultElapsed,this.artwork.catalog.rules.resultDisplaySeconds),{round:this.game.round,phase:this.game.phase,preparationRemaining:this.game.preparationRemaining,raceElapsed:this.game.raceElapsed,horse:leader+1,point:coursePoint(leader,this.game.progress[leader])});
-  this.refresh();this.testBridge?.sampleFrame();
+  this.equipment?.update(dt,raceScreen(this.game.phase,this.game.round,this.game.eventName,this.game.preparationRemaining,this.game.lastResult,this.game.resultElapsed,this.artwork.catalog.rules.resultDisplaySeconds),{round:this.game.round,phase:this.game.phase,preparationRemaining:this.game.preparationRemaining,raceElapsed:this.game.raceElapsed,horse:leader+1,point:coursePoint(leader,this.game.progress[leader]),scanPoint:this.preRace.scanPoint});
+  this.refresh();this.betNodes.forEach((node,i)=>{const scale=this.preRace.cellScale(i);node.setScale(scale,scale,1);});this.testBridge?.sampleFrame();
  }
  private refresh():void{
-  if(!this.game||this.pendingAssets||this.loadErrors.length){this.textTimer!.string='素材载入中';this.textMessage!.string=this.loadErrors[0]??'加载 '+(8-this.pendingAssets)+'/8';this.startText!.string='载入中';return;}
+  if(!this.game||this.pendingAssets||this.loadErrors.length){this.textTimer!.string='素材载入中';this.textMessage!.string=this.loadErrors[0]??'加载 '+(9-this.pendingAssets)+'/9';this.startText!.string='载入中';return;}
   this.textCredits!.string='积分 '+this.game.credits+'   押分 '+this.game.totalStake;
   this.textTimer!.string=this.pendingAssets?'素材载入中':this.game.phase==='betting'?'押分 '+Math.ceil(this.game.countdown)+' 秒':this.game.phase==='preparing'?'起跑准备 '+Math.ceil(this.game.preparationRemaining)+' 秒':this.game.phase==='racing'?'比赛中 · 押分锁定':'本场已结算';
   this.textMessage!.string=this.game.eventName+' · 前二组合';
@@ -156,8 +165,8 @@ export class GoldenHorseGame extends Component implements RacePageContext {
   this.keys.forEach((key,i)=>{const c=this.game.getCell(key)!;this.oddsLabels[i].string='×'+c.odds;this.stakeLabels[i].string=c.stake?'押 '+c.stake:'—';this.oddsLabels[i].color=this.game.phase==='betting'?new Color(255,224,92):new Color(193,185,143);});
  }
  onDestroy():void{
-  this.disposed=true;this.equipment?.dispose();this.testBridge?.dispose();void this.pageTask.then(()=>this.StateMachine.releaseAllStates());this.artwork.dispose();
-  for(const node of [...this.betNodes,...this.buttons,...this.eventChoices,this.eventButton,this.eventClose])node?.targetOff(this);
+  this.disposed=true;this.preRace.clearFeedback();for(const node of this.betNodes)if(node.isValid)node.setScale(1,1,1);this.preAudio?.dispose();this.equipment?.dispose();this.testBridge?.dispose();void this.pageTask.then(()=>this.StateMachine.releaseAllStates());this.artwork.dispose();
+  for(const node of [...this.betNodes,...this.buttons,...this.eventChoices,this.eventButton,this.eventClose,this.uiRoot])node?.targetOff(this);
   input.off(Input.EventType.KEY_DOWN,this.keyDown,this);input.off(Input.EventType.KEY_UP,this.keyUp,this);view.off('canvas-resize',this.relayout,this);view.off('design-resolution-changed',this.relayout,this);
  }
 }

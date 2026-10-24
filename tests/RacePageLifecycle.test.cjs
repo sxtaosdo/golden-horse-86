@@ -17,6 +17,7 @@ const component=load('assets/scripts/GoldenHorseGame.ts',{
  '../tests/GoldenHorseTestBridge':{},'./RaceModel':require('../.test/RaceModel.js'),
  './RaceTrackView':{},'./TrackVisual':require('../.test/TrackVisual.js'),'./presentation/RacePages':pages,
  './presentation/RaceVisualAssets':{RaceVisualAssets:class {load(){return new Promise((resolve,reject)=>{finishLoad=resolve;failLoad=reject;});}dispose(){}}},'./presentation/HorseSpriteView':{},'./presentation/MobileLayout':{},
+ './presentation/PreRacePresentation':require('../.test/presentation/PreRacePresentation.js'),'./presentation/PreRaceAudio':{},
  './presentation/equipment/EquipmentScene':{},'./presentation/equipment/RaceScreen':{}
 });
 (async()=>{
@@ -34,7 +35,7 @@ const component=load('assets/scripts/GoldenHorseGame.ts',{
  assert.equal(game.StateMachine.current,null,'all page states must be released');
  const loading=new component.GoldenHorseGame();let decorated=0;loading.courseView={decorate(){decorated++;}};loading.loadResources();
  loading.onDestroy();finishLoad();audioLoads.forEach(callback=>callback(null,{}));await new Promise(resolve=>setImmediate(resolve));
- assert.equal(decorated,0,'late artwork completion must not create nodes after destroy');assert.equal(loading.pendingAssets,8,'late callbacks must not write disposed loading state');
+ assert.equal(decorated,0,'late artwork completion must not create nodes after destroy');assert.equal(loading.pendingAssets,9,'late callbacks must not write disposed loading state');
  const failed=new component.GoldenHorseGame();failed.loadResources();failLoad(Error('Invalid event catalog'));
  audioLoads.slice(-7).forEach(callback=>callback(null,{}));await new Promise(resolve=>setImmediate(resolve));
  assert.equal(failed.game,undefined,'failed resource/config loading must not create a fallback model');assert.equal(failed.testBridge,null);

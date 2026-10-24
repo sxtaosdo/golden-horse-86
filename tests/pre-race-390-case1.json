@@ -1,0 +1,309 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "steps": [
+    {
+      "type": "wait",
+      "durationMs": 1500
+    },
+    {
+      "type": "ui",
+      "action": "click",
+      "target": "#view-select:visible, body:not(:has(#view-select:visible))"
+    },
+    {
+      "type": "ui",
+      "action": "click",
+      "target": "li[data-device=WebpageFullScreen]:visible, body:not(:has(li[data-device=WebpageFullScreen]:visible))"
+    },
+    {
+      "type": "wait_ready"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "revision": "pre-race-r09-v1",
+        "horseFrames": 144,
+        "equipment": {
+          "typeCount": 4
+        },
+        "preRaceFrames": 66,
+        "preAudio": {
+          "loaded": 5
+        }
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 300,
+      "y": 100
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "keyboard",
+      "key": "F8+F9",
+      "action": "press"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 314,
+      "y": 643
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 195,
+      "y": 497
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "eventId": "championship",
+        "equipment": {
+          "typeCount": 12
+        }
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "pre-race-390-case1-wide"
+    },
+    {
+      "type": "api",
+      "call": "testStartRecording"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 45,
+      "y": 550
+    },
+    {
+      "type": "wait",
+      "durationMs": 100
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 338,
+      "y": 817
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "preparing"
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "wait",
+      "durationMs": 200
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "wait",
+      "durationMs": 750
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "wait",
+      "durationMs": 850
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "wait",
+      "durationMs": 350
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "pre-race-390-case1-near"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "racing"
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "wait",
+      "durationMs": 400
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "pre-race-390-case1-open"
+    },
+    {
+      "type": "api",
+      "call": "testStopRecording"
+    },
+    {
+      "type": "api",
+      "call": "testRecordingData"
+    }
+  ]
+}

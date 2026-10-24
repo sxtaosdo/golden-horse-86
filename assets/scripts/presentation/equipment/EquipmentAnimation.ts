@@ -1,7 +1,7 @@
 import { Phase } from '../../RaceModel';
 import { CoursePoint } from '../../TrackVisual';
 
-export interface EquipmentFocus {readonly round:number;readonly phase:Phase;readonly preparationRemaining:number;readonly raceElapsed:number;readonly horse:number;readonly point:Readonly<CoursePoint>;}
+export interface EquipmentFocus {readonly round:number;readonly phase:Phase;readonly preparationRemaining:number;readonly raceElapsed:number;readonly horse:number;readonly point:Readonly<CoursePoint>;readonly scanPoint?:Readonly<CoursePoint>;}
 
 /** Presentation-only yaw. Zero is right; positive angles turn towards screen up. */
 export class EquipmentAnimation {

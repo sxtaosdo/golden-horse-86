@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "cocos-tool-result-v1",
+  "operationId": "horse-pre-race-web-20261024-r09",
+  "projectId": "9d8a0041f7873b81",
+  "tool": "build_start",
+  "status": "PASSED",
+  "data": {
+    "status": {
+      "state": "running",
+      "platform": "web-mobile",
+      "operationId": "horse-pre-race-web-20261024-r09",
+      "startedAt": "2026-10-24T04:43:29.937Z",
+      "outputDir": "D:\\code\\shidai3\\P4000\\golden-horse-86\\build\\web-mobile",
+      "logPath": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\build.log",
+      "configPath": "D:\\code\\shidai3\\P4000\\golden-horse-86\\tests\\build-web-mobile.json"
+    },
+    "message": "Started web-mobile build (pid 26772)"
+  },
+  "evidence": []
+}

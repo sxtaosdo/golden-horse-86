@@ -1,0 +1,621 @@
+{
+  "schemaVersion": "cocos-tool-result-v1",
+  "operationId": "horse-pre-race-build-smoke-20261024-r09",
+  "projectId": "9d8a0041f7873b81",
+  "tool": "build_smoke",
+  "status": "PASSED",
+  "data": {
+    "schemaVersion": "build-smoke-v1",
+    "ok": true,
+    "target": "web-mobile-build",
+    "outputDir": "D:\\code\\shidai3\\P4000\\golden-horse-86\\build\\web-mobile",
+    "indexHash": "f090483129ca5841bd19b5f6746a7fefa38b598531c59de7750327f92ebf31d3",
+    "packageHash": "3a620a711ff7b264c4ca3600ec51af9d421631414b76bb7495efa3d2d0b06985",
+    "startedAt": "2026-10-24T04:47:51.224Z",
+    "finishedAt": "2026-10-24T04:48:39.439Z",
+    "playtest": {
+      "ok": true,
+      "previewUrl": "http://127.0.0.1:6529/",
+      "finalUrl": "http://127.0.0.1:6529/",
+      "gameTestReady": false,
+      "steps": [
+        {
+          "index": 0,
+          "step": {
+            "type": "wait",
+            "durationMs": 10000
+          },
+          "ok": true,
+          "elapsedMs": 10004
+        },
+        {
+          "index": 1,
+          "step": {
+            "type": "pointer",
+            "action": "click",
+            "x": 300,
+            "y": 100
+          },
+          "ok": true,
+          "elapsedMs": 4
+        },
+        {
+          "index": 2,
+          "step": {
+            "type": "wait",
+            "durationMs": 100
+          },
+          "ok": true,
+          "elapsedMs": 104
+        },
+        {
+          "index": 3,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 2
+        },
+        {
+          "index": 4,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 3
+        },
+        {
+          "index": 5,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 2
+        },
+        {
+          "index": 6,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 7,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 8,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 9,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 2
+        },
+        {
+          "index": 10,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 11,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 4
+        },
+        {
+          "index": 12,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 13,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 14,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 15,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 16,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 2
+        },
+        {
+          "index": 17,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 18,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 19,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 2
+        },
+        {
+          "index": 20,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 21,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 22,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 23,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 4
+        },
+        {
+          "index": 24,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 2
+        },
+        {
+          "index": 25,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 26,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 27,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 28,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 2
+        },
+        {
+          "index": 29,
+          "step": {
+            "type": "keyboard",
+            "action": "press",
+            "key": "F8+F9"
+          },
+          "ok": true,
+          "elapsedMs": 1
+        },
+        {
+          "index": 30,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 314,
+            "y": 643
+          },
+          "ok": true,
+          "elapsedMs": 28
+        },
+        {
+          "index": 31,
+          "step": {
+            "type": "screenshot",
+            "label": "build-pre-race-picker"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-pre-race-picker-1792817282210.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T04:48:02.211Z"
+          },
+          "elapsedMs": 101
+        },
+        {
+          "index": 32,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 195,
+            "y": 497
+          },
+          "ok": true,
+          "elapsedMs": 6
+        },
+        {
+          "index": 33,
+          "step": {
+            "type": "wait",
+            "durationMs": 150
+          },
+          "ok": true,
+          "elapsedMs": 152
+        },
+        {
+          "index": 34,
+          "step": {
+            "type": "screenshot",
+            "label": "build-pre-race-betting"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-pre-race-betting-1792817282435.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T04:48:02.436Z"
+          },
+          "elapsedMs": 67
+        },
+        {
+          "index": 35,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 45,
+            "y": 550
+          },
+          "ok": true,
+          "elapsedMs": 27
+        },
+        {
+          "index": 36,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 338,
+            "y": 817
+          },
+          "ok": true,
+          "elapsedMs": 35
+        },
+        {
+          "index": 37,
+          "step": {
+            "type": "wait",
+            "durationMs": 700
+          },
+          "ok": true,
+          "elapsedMs": 702
+        },
+        {
+          "index": 38,
+          "step": {
+            "type": "screenshot",
+            "label": "build-pre-race-preparing"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-pre-race-preparing-1792817283273.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T04:48:03.274Z"
+          },
+          "elapsedMs": 74
+        },
+        {
+          "index": 39,
+          "step": {
+            "type": "wait",
+            "durationMs": 1500
+          },
+          "ok": true,
+          "elapsedMs": 1515
+        },
+        {
+          "index": 40,
+          "step": {
+            "type": "screenshot",
+            "label": "build-pre-race-near-hold"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-pre-race-near-hold-1792817284870.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T04:48:04.871Z"
+          },
+          "elapsedMs": 82
+        },
+        {
+          "index": 41,
+          "step": {
+            "type": "wait",
+            "durationMs": 1800
+          },
+          "ok": true,
+          "elapsedMs": 1809
+        },
+        {
+          "index": 42,
+          "step": {
+            "type": "screenshot",
+            "label": "build-pre-race-live"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-pre-race-live-1792817286752.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T04:48:06.753Z"
+          },
+          "elapsedMs": 73
+        },
+        {
+          "index": 43,
+          "step": {
+            "type": "wait",
+            "durationMs": 26000
+          },
+          "ok": true,
+          "elapsedMs": 26006
+        },
+        {
+          "index": 44,
+          "step": {
+            "type": "screenshot",
+            "label": "build-pre-race-result"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-pre-race-result-1792817312830.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T04:48:32.831Z"
+          },
+          "elapsedMs": 72
+        },
+        {
+          "index": 45,
+          "step": {
+            "type": "wait",
+            "durationMs": 5500
+          },
+          "ok": true,
+          "elapsedMs": 5510
+        },
+        {
+          "index": 46,
+          "step": {
+            "type": "screenshot",
+            "label": "build-pre-race-runout"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-pre-race-runout-1792817318416.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T04:48:38.417Z"
+          },
+          "elapsedMs": 76
+        },
+        {
+          "index": 47,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 338,
+            "y": 817
+          },
+          "ok": true,
+          "elapsedMs": 32
+        },
+        {
+          "index": 48,
+          "step": {
+            "type": "wait",
+            "durationMs": 500
+          },
+          "ok": true,
+          "elapsedMs": 503
+        },
+        {
+          "index": 49,
+          "step": {
+            "type": "screenshot",
+            "label": "build-pre-race-next-round"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-pre-race-next-round-1792817319024.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T04:48:39.025Z"
+          },
+          "elapsedMs": 73
+        },
+        {
+          "index": 50,
+          "step": {
+            "type": "runtime_snapshot",
+            "required": false
+          },
+          "ok": true,
+          "skipped": true,
+          "elapsedMs": 2
+        }
+      ],
+      "consoleErrors": [],
+      "diagnostics": {
+        "consoleErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "pageErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "requestFailures": {
+          "count": 0,
+          "samples": []
+        },
+        "httpErrors": {
+          "count": 0,
+          "samples": []
+        }
+      },
+      "reportPath": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\playtests\\playtest-1792817319028.json",
+      "message": "Playtest passed (51 step(s))",
+      "session": {
+        "mode": "isolated",
+        "reusedBrowser": false,
+        "reusedPage": false,
+        "pageReset": "none"
+      },
+      "timing": {
+        "setupMs": 701,
+        "stepsMs": 47099,
+        "totalMs": 47801
+      }
+    }
+  },
+  "evidence": []
+}
