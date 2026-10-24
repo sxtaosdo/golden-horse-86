@@ -1,0 +1,153 @@
+{
+  "packageHash": "4d07aba332293204dba44bc21cbf11f8668cfbceaa6448dd473550ef74baeb12",
+  "method": "Native touch and screenshots of exact formal artifact; no Preview bridge or hidden-state/storage reads",
+  "steps": 88,
+  "executed": 88,
+  "skipped": 0,
+  "gameTestReady": false,
+  "observations": [
+    "原62号结束数字3—2，倍率12返12，余额497/押15",
+    "四阶段刷新等待手动继续，每对800ms整图RGBA一致",
+    "两次结果恢复均497/押15；下一场497/押0",
+    "历史原610x420小窗，3个押分页完整显示15组合",
+    "More保存每次5分与声音/静音/减少动态，原信息区固定说明保留",
+    "More两次整套沿用均482/押15，未按5分档位把上场押分倍增",
+    "帮助/里程碑可达；已批准的资源和背景保持"
+  ],
+  "pausePairs": [
+    {
+      "phase": "betting",
+      "first": "build-restore-restore-betting.png",
+      "hold": "build-restore-restore-betting-hold.png",
+      "rgbaHash": "SHA256=c250dafaaf0c2ae3b5bdcab2aa9c49f16aaa1cbfd945c47fecfed3b9c992de35",
+      "equal": true
+    },
+    {
+      "phase": "preparing",
+      "first": "build-restore-restore-preparing.png",
+      "hold": "build-restore-restore-preparing-hold.png",
+      "rgbaHash": "SHA256=251b671c91c91e0e532aebff858afcc3aed87a6d9e144019ce3be98d499367de",
+      "equal": true
+    },
+    {
+      "phase": "racing",
+      "first": "build-restore-restore-racing.png",
+      "hold": "build-restore-restore-racing-hold.png",
+      "rgbaHash": "SHA256=2c33efd21d7e97e4ace0f81ef9207e413953ddf2ab2c3050d064494ea3ea3b04",
+      "equal": true
+    },
+    {
+      "phase": "result",
+      "first": "build-restore-restore-result.png",
+      "hold": "build-restore-restore-result-hold.png",
+      "rgbaHash": "SHA256=85090c5e59b4767a15a85686ed383baa0d3d734e7adb56bdf83862a7f37c738e",
+      "equal": true
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "tests/evidence/restore-scope/build-restore-initial.png",
+      "sha256": "d4e191c8b6caeca7451e852d9a1607aee60a65224c7fc83c538733be6e4bf815"
+    },
+    {
+      "path": "tests/evidence/restore-scope/build-restore-bets.png",
+      "sha256": "ff91a23e6830d2cdd7baf05d63399b54b7e82a8156bd7e516e714d7c4e44ce50"
+    },
+    {
+      "path": "tests/evidence/restore-scope/build-restore-settings.png",
+      "sha256": "238f07b7dbf438c529e67ddac4ad1e94e15deba097145f2d7a8246600dd4b3f0"
+    },
+    {
+      "path": "tests/evidence/restore-scope/build-restore-restore-betting.png",
+      "sha256": "6f980b710de6c647558d40871c0701bf1868558fd6f95675625f2022e3a006c3"
+    },
+    {
+      "path": "tests/evidence/restore-scope/build-restore-restore-betting-hold.png",
+      "sha256": "6f980b710de6c647558d40871c0701bf1868558fd6f95675625f2022e3a006c3"
+    },
+    {
+      "path": "tests/evidence/restore-scope/build-restore-settings-restored.png",
+      "sha256": "1b0644795299289730250267befe49ff92f5441b3b692db3385caae6584c87b9"
+    },
+    {
+      "path": "tests/evidence/restore-scope/build-restore-preparing.png",
+      "sha256": "b5c9dd5fde37167fe1d7d1b770558c623273d77302c5b455d2e8068e2e62520a"
+    },
+    {
+      "path": "tests/evidence/restore-scope/build-restore-restore-preparing.png",
+      "sha256": "f8514bc43cbe8179f7d060b5e65bbaee43d97fc8cfc6da3a6f535d7af48159e0"
+    },
+    {
+      "path": "tests/evidence/restore-scope/build-restore-restore-preparing-hold.png",
+      "sha256": "f8514bc43cbe8179f7d060b5e65bbaee43d97fc8cfc6da3a6f535d7af48159e0"
+    },
+    {
+      "path": "tests/evidence/restore-scope/build-restore-racing.png",
+      "sha256": "4d383f19135a032eb99b982983b48d21a086958865f2a8119e715ba54ab5abef"
+    },
+    {
+      "path": "tests/evidence/restore-scope/build-restore-restore-racing.png",
+      "sha256": "59341b842b6015e4ff1db4817273dd5cccb2487371d66853a0a4f16d57b9b5e0"
+    },
+    {
+      "path": "tests/evidence/restore-scope/build-restore-restore-racing-hold.png",
+      "sha256": "59341b842b6015e4ff1db4817273dd5cccb2487371d66853a0a4f16d57b9b5e0"
+    },
+    {
+      "path": "tests/evidence/restore-scope/build-restore-result.png",
+      "sha256": "4eb209cb944e1822a50ab86f61024c793a15c5dcc9265568c7265fbabdb91405"
+    },
+    {
+      "path": "tests/evidence/restore-scope/build-restore-restore-result.png",
+      "sha256": "2a490797aae0bcd03dae8b8e215180e819b6d0e50759b46aa829ed04990bda05"
+    },
+    {
+      "path": "tests/evidence/restore-scope/build-restore-restore-result-hold.png",
+      "sha256": "2a490797aae0bcd03dae8b8e215180e819b6d0e50759b46aa829ed04990bda05"
+    },
+    {
+      "path": "tests/evidence/restore-scope/build-restore-history-small.png",
+      "sha256": "3d72c568f361910c1c0d30952e4c37a76284b19eb95ca6ace75754276e7e80c1"
+    },
+    {
+      "path": "tests/evidence/restore-scope/build-restore-detail-1.png",
+      "sha256": "e62382f91f5a84aca8880b979370a6ed113ca2ccba9900680b2991d0446f8ec7"
+    },
+    {
+      "path": "tests/evidence/restore-scope/build-restore-detail-2.png",
+      "sha256": "59844b405c06e6a37cc34a63d3ce61d9504a52e0820894fb1c739a8fd38d6398"
+    },
+    {
+      "path": "tests/evidence/restore-scope/build-restore-detail-3.png",
+      "sha256": "01e9fc29caf494ffb9ff6ad71e1ccba0e9903593605785abfca037f1a1ab537d"
+    },
+    {
+      "path": "tests/evidence/restore-scope/build-restore-restore-result-again.png",
+      "sha256": "2a490797aae0bcd03dae8b8e215180e819b6d0e50759b46aa829ed04990bda05"
+    },
+    {
+      "path": "tests/evidence/restore-scope/build-restore-next.png",
+      "sha256": "b2c1e43c279d9bd3d1efa363c266673f62a12b40978ab7f56a9dfe6b6a6a1770"
+    },
+    {
+      "path": "tests/evidence/restore-scope/build-restore-rebet.png",
+      "sha256": "07b8b901aee827fa75252d40a683020a6578006d804c7e3686c455897f1f6d78"
+    },
+    {
+      "path": "tests/evidence/restore-scope/build-restore-rebet-again.png",
+      "sha256": "07b8b901aee827fa75252d40a683020a6578006d804c7e3686c455897f1f6d78"
+    },
+    {
+      "path": "tests/evidence/restore-scope/build-restore-help.png",
+      "sha256": "b8acef2f80080fa7af9eb456ec50c297a5ab7ca7a7773be0578319868ce986be"
+    },
+    {
+      "path": "tests/evidence/restore-scope/build-restore-milestones.png",
+      "sha256": "0aed4af4b856c9e50f23f7db3e8b175f47bfb54c01c26921901d0fcb9c7820ae"
+    }
+  ],
+  "limitations": [
+    "右键固定1分/短按起止由实际组件事件回归覆盖，当前原生脚本接口不提供独立右键或按下/抬起观测步骤",
+    "音效听感未验"
+  ]
+}

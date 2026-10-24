@@ -1,0 +1,696 @@
+{
+  "viewport": {
+    "width": 430,
+    "height": 932
+  },
+  "steps": [
+    {
+      "type": "wait",
+      "durationMs": 1500
+    },
+    {
+      "type": "ui",
+      "action": "click",
+      "target": "#view-select:visible, body:not(:has(#view-select:visible))"
+    },
+    {
+      "type": "ui",
+      "action": "click",
+      "target": "li[data-device=WebpageFullScreen]:visible, body:not(:has(li[data-device=WebpageFullScreen]:visible))"
+    },
+    {
+      "type": "wait_ready"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "revision": "restore-scope-v1",
+        "horseFrames": 144,
+        "turnFrames": 96,
+        "environment": {
+          "count": 2
+        }
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "quickButtons": [
+          {
+            "active": false
+          },
+          {
+            "active": true
+          }
+        ]
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 215,
+      "y": 100
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "keyboard",
+      "action": "press",
+      "key": "F8+F9"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 347,
+      "y": 710
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 215,
+      "y": 549
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "eventId": "championship"
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "screenshot",
+      "label": "restore-scope-430-initial"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 50,
+      "y": 612
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "totalStake": 1
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 132,
+      "y": 827
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "dialog": "more"
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 123,
+      "y": 523
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "stakeUnit": 5
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 367,
+      "y": 219
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 50,
+      "y": 612
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "totalStake": 6
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "pointer",
+      "action": "drag",
+      "x": 132,
+      "y": 612,
+      "toX": 132,
+      "toY": 612,
+      "steps": 100
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 163,
+      "y": 902
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "totalStake": 0
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 132,
+      "y": 827
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 123,
+      "y": 523
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "stakeUnit": 10
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 123,
+      "y": 523
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "stakeUnit": 1
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 367,
+      "y": 219
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 50,
+      "y": 612
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 132,
+      "y": 612
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 215,
+      "y": 612
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 298,
+      "y": 612
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 380,
+      "y": 612
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 50,
+      "y": 665
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 132,
+      "y": 665
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 215,
+      "y": 665
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 298,
+      "y": 665
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 50,
+      "y": 719
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 132,
+      "y": 719
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 215,
+      "y": 719
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 50,
+      "y": 773
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 132,
+      "y": 773
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 50,
+      "y": 827
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "totalStake": 15
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 370,
+      "y": 902
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "racing"
+      },
+      "timeoutMs": 6000
+    },
+    {
+      "type": "wait",
+      "durationMs": 2800
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "uiTimer": "比赛中 · 押分锁定"
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "screenshot",
+      "label": "restore-scope-430-straight"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 267,
+      "y": 902
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "dialog": "history",
+        "historyVisible": true
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "wait",
+      "durationMs": 700
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "restore-scope-430-small-history"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 267,
+      "y": 902
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "section": "right-bend"
+      },
+      "timeoutMs": 12000
+    },
+    {
+      "type": "screenshot",
+      "label": "restore-scope-430-bend"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "result"
+      },
+      "timeoutMs": 30000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "restore-scope-430-result"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 267,
+      "y": 902
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 215,
+      "y": 378
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "historyDetail": 0
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "screenshot",
+      "label": "restore-scope-430-detail-1"
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 172,
+      "y": 378
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "historyBetPage": 1
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "screenshot",
+      "label": "restore-scope-430-detail-2"
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 172,
+      "y": 378
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "historyBetPage": 2
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "screenshot",
+      "label": "restore-scope-430-detail-3"
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 258,
+      "y": 378
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "historyDetail": -1
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 267,
+      "y": 902
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 370,
+      "y": 902
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "phase": "betting",
+        "round": 2
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 132,
+      "y": 827
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 307,
+      "y": 523
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "totalStake": 15
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 307,
+      "y": 523
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "totalStake": 15
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "restore-scope-430-repeat"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 307,
+      "y": 586
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "dialog": "help"
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 215,
+      "y": 713
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "dialog": "milestones"
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "screenshot",
+      "label": "restore-scope-430-milestones"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 367,
+      "y": 219
+    }
+  ]
+}

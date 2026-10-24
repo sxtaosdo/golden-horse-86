@@ -1,0 +1,158 @@
+[
+  {
+    "width": 360,
+    "steps": 97,
+    "holdStake": 66,
+    "event": "station",
+    "finishOrder": [
+      2,
+      4,
+      5,
+      1,
+      6,
+      3
+    ],
+    "resultText": "2 — 4",
+    "detailPages": 3,
+    "historyPauseEqual": true,
+    "metrics": {
+      "finishCount": 6,
+      "visibleOrder": [
+        2,
+        4,
+        5,
+        1,
+        6,
+        3
+      ],
+      "backgroundMismatches": 0,
+      "settlementJump": 4.223065338825496,
+      "resultDrift": 4.874834148588621,
+      "worldChanges": 0,
+      "maxCameraStep": 6.733604343867,
+      "clippedFinishers": 0
+    },
+    "diagnostics": {
+      "consoleErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "pageErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "requestFailures": {
+        "count": 0,
+        "samples": []
+      },
+      "httpErrors": {
+        "count": 0,
+        "samples": []
+      }
+    }
+  },
+  {
+    "width": 390,
+    "steps": 100,
+    "holdStake": 66,
+    "event": "regional",
+    "finishOrder": [
+      3,
+      5,
+      2,
+      1,
+      4,
+      6
+    ],
+    "resultText": "3 — 5",
+    "detailPages": 3,
+    "historyPauseEqual": true,
+    "metrics": {
+      "finishCount": 6,
+      "visibleOrder": [
+        3,
+        5,
+        2,
+        1,
+        4,
+        6
+      ],
+      "backgroundMismatches": 0,
+      "settlementJump": 4.198682333582262,
+      "resultDrift": 4.269060258368809,
+      "worldChanges": 0,
+      "maxCameraStep": 8.193359406022864,
+      "clippedFinishers": 0
+    },
+    "diagnostics": {
+      "consoleErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "pageErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "requestFailures": {
+        "count": 0,
+        "samples": []
+      },
+      "httpErrors": {
+        "count": 0,
+        "samples": []
+      }
+    }
+  },
+  {
+    "width": 430,
+    "steps": 120,
+    "holdStake": 66,
+    "event": "championship",
+    "finishOrder": [
+      4,
+      1,
+      2,
+      3,
+      5,
+      6
+    ],
+    "resultText": "4 — 1",
+    "detailPages": 3,
+    "historyPauseEqual": true,
+    "metrics": {
+      "finishCount": 6,
+      "visibleOrder": [
+        4,
+        1,
+        2,
+        3,
+        5,
+        6
+      ],
+      "backgroundMismatches": 0,
+      "settlementJump": 4.355055474645097,
+      "resultDrift": 4.223022880980135,
+      "worldChanges": 0,
+      "maxCameraStep": 7.900352205568424,
+      "clippedFinishers": 0
+    },
+    "diagnostics": {
+      "consoleErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "pageErrors": {
+        "count": 0,
+        "samples": []
+      },
+      "requestFailures": {
+        "count": 0,
+        "samples": []
+      },
+      "httpErrors": {
+        "count": 0,
+        "samples": []
+      }
+    }
+  }
+]

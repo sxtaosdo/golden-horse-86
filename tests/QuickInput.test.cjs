@@ -1,8 +1,11 @@
 const assert=require('node:assert/strict'),{createGame}=require('./helpers/game-fixture.cjs');
 (async()=>{
- const {game:g}=await createGame(),pointer={getID:()=>7,getLocation:()=>({})},start=()=>g.betNodes[0].emit('start',pointer);
- start();assert.equal(g.betHold.cell,0);g.buttons[0].emit('end');assert.equal(g.betHold.cell,-1);assert.equal(g.undo,true);start();assert.equal(g.game.totalStake,0);g.betNodes[0].emit('end',pointer);g.buttons[0].emit('end');
- start();g.buttons[2].emit('end');assert.equal(g.betHold.cell,-1);assert.equal(g.canBet(),false);let before=g.game.totalStake;start();assert.equal(g.game.totalStake,before);g.utilityClose.emit('end');assert.equal(g.canBet(),true);
- start();g.eventButton.emit('end');assert.equal(g.betHold.cell,-1);assert.equal(g.canBet(),false);before=g.game.totalStake;start();assert.equal(g.game.totalStake,before);g.eventClose.emit('end');assert.equal(g.canBet(),true);g.onDestroy();
- console.log('QuickInput: actual component touch bindings cancel repeat on undo/history/event panels and block covered bets passed.');
+ const {game:g}=await createGame(),p={getID:()=>7,getLocation:()=>({})},other={getID:()=>8,getLocation:()=>({})},start=()=>g.betNodes[0].emit('start',p),end=()=>g.betNodes[0].emit('end',p),tick=n=>{for(let i=0;i<n;i++)g.update(.1);};
+ start();assert.equal(g.game.totalStake,0,'press alone is not a bet');g.betNodes[0].emit('end',other);assert.equal(g.betHold.cell,0);end();assert.equal(g.game.totalStake,1);start();g.betNodes[0].emit('cancel',p);end();assert.equal(g.game.totalStake,1);
+ g.betNodes[0].getComponent=()=>({hitTest:()=>false});start();g.betNodes[0].emit('move',p);end();assert.equal(g.game.totalStake,1,'slide out does not commit');g.betNodes[0].getComponent=()=>({hitTest:()=>true});
+ start();tick(3);assert.equal(g.game.totalStake,1);tick(1);assert.equal(g.game.totalStake,2);tick(2);assert.equal(g.game.totalStake,3);end();assert.equal(g.game.totalStake,3,'no release double count');
+ g.quickButtons[1].emit('end');await g.dialogAction(0);g.utilityClose.emit('end');assert.equal(g.settings.chip,5);start();assert.equal(g.game.totalStake,3);end();assert.equal(g.game.totalStake,8);g.betNodes[0].emit('mouse',{getButton:()=>2});assert.equal(g.game.totalStake,7,'right click always removes one');
+ start();g.buttons[0].emit('end');assert.equal(g.betHold.cell,-1);end();assert.equal(g.game.totalStake,7);assert.equal(g.undo,true);start();end();assert.equal(g.game.totalStake,2);g.buttons[0].emit('end');
+ for(const panel of ['history','more','event']){start();if(panel==='history')g.buttons[2].emit('end');else if(panel==='more')g.quickButtons[1].emit('end');else g.eventButton.emit('end');assert.equal(g.betHold.cell,-1);const before=g.game.totalStake;end();assert.equal(g.game.totalStake,before);assert.equal(g.canBet(),false);if(panel==='history')g.buttons[2].emit('end');else if(panel==='more')g.utilityClose.emit('end');else g.eventClose.emit('end');assert.equal(g.canBet(),true);}
+ g.onDestroy();console.log('QuickInput: release-only tap, cancel/slide/pointer ownership, 400ms hold without release double count, fixed-one right click and panel cancellation passed.');
 })().catch(e=>{console.error(e);process.exitCode=1;});

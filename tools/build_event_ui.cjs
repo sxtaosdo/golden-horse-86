@@ -6,7 +6,7 @@ const node=(name,w,h,x=0,y=0,children=[])=>({name,size:{width:w,height:h},positi
 function text(name,string,w,h,x,y,size){labels.push([name,size]);return {...node(name,w,h,x,y),type:'label',label:{string,fontSize:size,color:rgba('#ffe192')}};}
 function box(name,w,h,x,y,color,children=[]){colors.push([name,color]);return {...node(name,w,h,x,y,children),type:'sprite',sprite:{spriteFrameUuid:white,sizeMode:'CUSTOM'}};}
 if(process.argv[2]==='finish'){
- const ops=[{op:'upsertComponent',target:'name:ResultText',type:'cc.Label',properties:{fontSize:42,lineHeight:46}},{op:'upsertComponent',target:'name:ResultOdds',type:'cc.UITransform',properties:{contentSize:{$type:'Size',width:570,height:62}}},{op:'upsertComponent',target:'name:ResultOdds',type:'cc.Label',properties:{fontSize:24,lineHeight:28}},{op:'setProperty',target:'name:ResultOdds',component:'cc.Node',property:'position',value:{$type:'Vec3',x:0,y:-60,z:0}}];
+ const ops=[{op:'upsertComponent',target:'name:ResultText',type:'cc.Label',properties:{fontSize:62,lineHeight:64}},{op:'upsertComponent',target:'name:ResultOdds',type:'cc.UITransform',properties:{contentSize:{$type:'Size',width:570,height:36}}},{op:'upsertComponent',target:'name:ResultOdds',type:'cc.Label',properties:{fontSize:25,lineHeight:27}},{op:'setProperty',target:'name:ResultOdds',component:'cc.Node',property:'position',value:{$type:'Vec3',x:0,y:-64,z:0}}];
  const out=call('scene_apply_patch',{expectedRevision:call('scene_get_tree',{}).revision,operations:ops,verify:true,save:true});console.log('Saved full result',out.after?.revision);process.exit(0);
 }
 if(process.argv[2]==='help'){
@@ -33,7 +33,7 @@ if(process.argv[2]==='session'){
  for(const [name,color] of colors)ops.push({op:'setProperty',target:'name:'+name,component:'cc.Sprite',property:'color',value:{$type:'Color',...rgba(color),...(name==='UtilityPanel'?{a:235}:{})}});
  for(const [name,size] of labels)ops.push({op:'upsertComponent',target:'name:'+name,type:'cc.Label',properties:{horizontalAlign:1,verticalAlign:1,fontFamily:'Arial',lineHeight:size+5,overflow:2}});
  ops.push({op:'upsertComponent',target:'name:UtilityPanel',type:'cc.BlockInputEvents',properties:{}},{op:'setProperty',target:'name:UtilityPanel',component:'cc.Node',property:'active',value:false});
- ops.push({op:'upsertComponent',target:'GoldenHorseGame',type:'GoldenHorseGame',properties:{utilityPanel:ref('UtilityPanel'),utilityTitle:label('UtilityTitle'),utilityBody:label('UtilityBody'),utilityActions:actions.map(n=>ref(n.name)),utilityActionLabels:actions.map(n=>label(n.name.replace('UtilityAction','UtilityActionText'))),archiveStatus:label('Legend')}});
+ ops.push({op:'upsertComponent',target:'GoldenHorseGame',type:'GoldenHorseGame',properties:{utilityPanel:ref('UtilityPanel'),utilityTitle:label('UtilityTitle'),utilityBody:label('UtilityBody'),utilityActions:actions.map(n=>ref(n.name)),utilityActionLabels:actions.map(n=>label(n.name.replace('UtilityAction','UtilityActionText'))),archiveStatus:label('RepeatBetsText')}});
  const out=call('scene_apply_patch',{expectedRevision:call('scene_get_tree',{}).revision,operations:ops,verify:true,save:true});fs.writeFileSync(path.join(temp,'session-ui-result.json'),JSON.stringify(out,null,2));console.log('Saved session panel',out.after?.revision);process.exit(0);
 }
 if(process.argv[2]==='emphasis'){
@@ -42,13 +42,13 @@ if(process.argv[2]==='emphasis'){
 }
 if(process.argv[2]==='quick'){
  const current=call('scene_get_tree',{}),has=(nodes,name)=>nodes.some(n=>n.name===name||has(n.children,name));if(has(current.roots,'StakeUnit'))throw Error('Quick controls already exist');
- const quick=[box('StakeUnit',144,94,288,94,'#203137',[text('StakeUnitText','每次 1 分\n切换档位',138,88,0,0,23)]),box('RepeatBets',144,94,0,-94,'#203137',[text('RepeatBetsText','沿用上场\n整套替换',138,88,0,0,23)])];
+ const quick=[box('StakeUnit',144,94,288,94,'#203137',[text('StakeUnitText','每次 1 分\n切换档位',138,88,0,0,23)]),box('RepeatBets',144,94,-144,-188,'#203137',[text('RepeatBetsText','更多\n本地已保存',138,88,0,0,23)])];
  call('ui_build_tree',{parent:{name:'BetPanel'},expectedRevision:current.revision,verify:true,save:true,tree:node('QuickControls',750,534,0,0,quick)});
  const ref=name=>({$type:'NodeReference',semanticKey:'name:'+name}),label=name=>({$type:'ComponentReference',node:'name:'+name,type:'cc.Label'}),ops=[];
  for(const [name,color] of colors)ops.push({op:'setProperty',target:'name:'+name,component:'cc.Sprite',property:'color',value:{$type:'Color',...rgba(color)}});
  for(const [name,size] of labels)ops.push({op:'upsertComponent',target:'name:'+name,type:'cc.Label',properties:{horizontalAlign:1,verticalAlign:1,fontFamily:'Arial',lineHeight:size+3,overflow:2}});
- for(const [name,x,y] of [['EventButton',230,0],['Credits',145,-164],['Message',145,-207],['Legend',145,-245]])ops.push({op:'setProperty',target:'name:'+name,component:'cc.Node',property:'position',value:{$type:'Vec3',x,y,z:0}});
- for(const [name,height,fontSize] of [['Credits',40,26],['Message',32,21],['Legend',24,20]]){ops.push({op:'upsertComponent',target:'name:'+name,type:'cc.UITransform',properties:{contentSize:{$type:'Size',width:370,height}}});ops.push({op:'upsertComponent',target:'name:'+name,type:'cc.Label',properties:{fontSize,lineHeight:fontSize+2}});}
+ for(const [name,x,y] of [['EventButton',230,16],['Credits',145,-112],['Message',145,-162],['Legend',145,-206]])ops.push({op:'setProperty',target:'name:'+name,component:'cc.Node',property:'position',value:{$type:'Vec3',x,y,z:0}});
+ for(const [name,height,fontSize] of [['Credits',46,27],['Message',40,23],['Legend',32,21]]){ops.push({op:'upsertComponent',target:'name:'+name,type:'cc.UITransform',properties:{contentSize:{$type:'Size',width:370,height}}});ops.push({op:'upsertComponent',target:'name:'+name,type:'cc.Label',properties:{fontSize,lineHeight:fontSize+2}});}
  ops.push({op:'upsertComponent',target:'GoldenHorseGame',type:'GoldenHorseGame',properties:{quickButtons:[ref('StakeUnit'),ref('RepeatBets')],quickLabels:[label('StakeUnitText'),label('RepeatBetsText')],oddsHeader:label('OddsHeader')}});
  const out=call('scene_apply_patch',{expectedRevision:call('scene_get_tree',{}).revision,operations:ops,verify:true,save:true});fs.writeFileSync(path.join(temp,'quick-ui-result.json'),JSON.stringify(out,null,2));console.log('Saved quick bet controls',out.revision);process.exit(0);
 }

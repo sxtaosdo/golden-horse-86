@@ -1,0 +1,43 @@
+
+> golden-horse-86-recreation@0.3.0 test
+> npm run test:core && npm run test:preview
+
+
+> golden-horse-86-recreation@0.3.0 test:core
+> tsc assets/scripts/RaceModel.ts assets/scripts/TrackVisual.ts assets/scripts/presentation/MobileLayout.ts assets/scripts/presentation/PreRacePresentation.ts assets/scripts/presentation/PreRaceArtCatalog.ts assets/scripts/presentation/TurnArtCatalog.ts assets/scripts/presentation/EnvironmentArtCatalog.ts assets/scripts/presentation/BetHold.ts assets/scripts/session/RaceArchive.ts assets/scripts/session/PlayerSettings.ts assets/scripts/presentation/equipment/EquipmentCatalog.ts assets/scripts/presentation/equipment/RaceScreen.ts assets/scripts/presentation/equipment/EquipmentAnimation.ts assets/scripts/presentation/equipment/EquipmentMotionCatalog.ts --outDir .test --target ES2020 --module commonjs --strict --skipLibCheck && node tests/RaceModel.test.cjs && node tests/RaceReceipt.test.cjs && node tests/RaceSnapshot.test.cjs && node tests/RaceArchive.test.cjs && node tests/RepeatBets.test.cjs && node tests/BetHold.test.cjs && node tests/QuickInput.test.cjs && node tests/RaceEvents.test.cjs && node tests/EquipmentAssets.test.cjs && node tests/EquipmentMotion.test.cjs && node tests/GateOcclusion.test.cjs && node tests/PreRace.test.cjs && node tests/PreRaceRecovery.test.cjs && node tests/TrackVisual.test.cjs && node tests/RacePresentation.test.cjs && node tests/RacePace.test.cjs && node tests/RaceChoreography.test.cjs && node tests/RaceGroundEffects.test.cjs && node tests/TurnArtwork.test.cjs && node tests/RacePageLifecycle.test.cjs && node tests/SessionLifecycle.test.cjs && node tests/Settings.test.cjs && node tests/History.test.cjs && node tests/Journey.test.cjs && node tests/Milestones.test.cjs && node tests/FinishEmphasis.test.cjs && node tests/RestoreScope.test.cjs && node tests/Environment.test.cjs && node tests/MobileArtwork.test.cjs
+
+RaceModel: 20+ assertions passed; default=15 pairs; optional=30 ordered; settlement works.
+RaceReceipt: immutable full bets/odds/order, settlement net, history survives new bets and future odds changes passed.
+RaceSnapshot: four phases roundtrip, deterministic progress, zero restore draws, repeated result pays once, immutable receipts and corrupt ledger rejection passed.
+RaceArchive: one atomic value, failed-write preservation, exclusive writer, release/retry, unreadable backup, temporary mode and settings validation passed.
+RepeatBets: whole-receipt replacement, refund-before-check, idempotence, insufficient funds preserve original bets and phase locks passed.
+BetHold: 400ms delay, 120ms repeat, pointer ownership, cancellation, negative units and bounded long-frame behavior passed.
+QuickInput: release-only tap, cancel/slide/pointer ownership, 400ms hold without release double count, fixed-one right click and panel cancellation passed.
+RaceEvents: admission boundaries, locked preparation, auto/manual start, unchanged RNG/payout and next-round downgrade passed.
+EquipmentAssets: 12 equipment types, static/dynamic modes, alpha, placement/crop integrity and screen state boundaries passed.
+EquipmentMotion: calibrated parts, eight bearings, bounded yaw, real leader, local lamp states and synchronized gate timing passed.
+GateOcclusion: actual per-lane interleaving, seven shared boundaries, six synchronized doors, depth changes and deferred tier/dispose cleanup passed.
+PreRace: 3 stable nonrepeating shots, 2-second close/1-second hold, cue/feedback edges, independent RNG, 66 calibrated poses, source hashes and optional audio lifecycle passed.
+PreRaceRecovery: stable shot, cosmetic RNG/clock/poses, no phase cue replay and reduced camera passed.
+TrackVisual: 600+ trajectory samples, smooth transitions, one bend, and race completion passed.
+RacePresentation: continuous world/camera, join speeds, six world-space crossings, live run-out and next-round reset passed.
+RacePace: launch/bend/home acceleration, C1 joins, frame-rate invariant crossings, cadence and unchanged rank/payout passed.
+RaceChoreography: 64 seeds, six leaders, C1 boundaries, bounded monotonic progress, original RNG/rank/payout and finish times passed.
+RaceGroundEffects: hoof-triggered bounded 48-node dust, zero-dt freeze, expiry, round/reduced-motion reset and disposal passed.
+TurnArtwork: 96 distinct source-preserved frames, validated crops/foot pivots, nine opaque directions and mirrored phase mapping passed.
+RacePageLifecycle: repeated transition and destroy-during-exit passed against pinned framework.
+SessionLifecycle: actual component four-phase save/reopen, all clocks freeze, manual resume, no draw/payout/cue replay, canceled late audio, write failure, busy/temporary and bad archive recovery passed.
+Settings: real menu callbacks, clamp, pause, mute, immediate persistence, next-round motion and reopen passed.
+History: restored small-window callbacks, 20 limit, 5/page, paged complete immutable receipts, return/page navigation and pause passed.
+Journey: real help/restart, confirmation/cancel, zero-only guard, no in-flight refund, settings retained and previous receipt cleared passed.
+Milestones: 1/10/regional/champ completion once, no bonus, silent restore/migration, retained on restart and actual display callbacks passed.
+FinishEmphasis: model crossing data, original HUD/result presentation, no early payout, receipt restore and same settlement passed.
+RestoreScope: baseline result/layout/history shell, unchanged track, separate status/More, touch-sized history controls and original fixed copy passed.
+Environment: original alpha/hashes, eight distinct motion frames, strict crops, fixed feet/rail/poles, tier counts, pause/offscreen/reduced freeze and dispose passed.
+MobileArtwork: 144 distinct frames, enlarged track framing, complete start/bend and six visible finishers passed.
+
+> golden-horse-86-recreation@0.3.0 test:preview
+> node tools/build_preview.cjs && node tests/preview_smoke.test.cjs
+
+built: preview-web/game.js using RaceModel.ts + TrackVisual.ts
+Preview smoke test: UI, controls, single-bend course, and result passed.

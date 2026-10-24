@@ -1,0 +1,14 @@
+{
+  "baseline": "c44592f",
+  "revision": "rev-5cdcf865",
+  "restored": [
+    "ResultText",
+    "ResultOdds",
+    "Credits",
+    "Message",
+    "Legend (approved red wording)",
+    "EventButton"
+  ],
+  "history": "Original 610x420 RaceHost window, paged receipt data",
+  "entry": "Existing empty cell, More; original layout retained"
+}

@@ -1,0 +1,1138 @@
+{
+  "schemaVersion": "cocos-tool-result-v1",
+  "operationId": "horse-restore-scope-smoke-20261024-r12-v1",
+  "projectId": "9d8a0041f7873b81",
+  "tool": "build_smoke",
+  "status": "PASSED",
+  "data": {
+    "schemaVersion": "build-smoke-v1",
+    "ok": true,
+    "target": "web-mobile-build",
+    "outputDir": "D:\\code\\shidai3\\P4000\\golden-horse-86\\build\\web-mobile",
+    "indexHash": "ac8f42f129411a015ddbeafaf4a180198b1c0cb09c908f20c8735e00b9f38c4d",
+    "packageHash": "4d07aba332293204dba44bc21cbf11f8668cfbceaa6448dd473550ef74baeb12",
+    "startedAt": "2026-10-24T11:48:58.836Z",
+    "finishedAt": "2026-10-24T11:50:27.872Z",
+    "playtest": {
+      "ok": true,
+      "previewUrl": "http://127.0.0.1:2779/",
+      "finalUrl": "http://127.0.0.1:2779/",
+      "gameTestReady": false,
+      "steps": [
+        {
+          "index": 0,
+          "step": {
+            "type": "wait",
+            "durationMs": 10000
+          },
+          "ok": true,
+          "elapsedMs": 10012
+        },
+        {
+          "index": 1,
+          "step": {
+            "type": "screenshot",
+            "label": "build-restore-initial"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-restore-initial-1792842549979.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T11:49:09.981Z"
+          },
+          "elapsedMs": 84
+        },
+        {
+          "index": 2,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 45,
+            "y": 553
+          },
+          "ok": true,
+          "elapsedMs": 27
+        },
+        {
+          "index": 3,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 120,
+            "y": 553
+          },
+          "ok": true,
+          "elapsedMs": 17
+        },
+        {
+          "index": 4,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 195,
+            "y": 553
+          },
+          "ok": true,
+          "elapsedMs": 15
+        },
+        {
+          "index": 5,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 270,
+            "y": 553
+          },
+          "ok": true,
+          "elapsedMs": 19
+        },
+        {
+          "index": 6,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 345,
+            "y": 553
+          },
+          "ok": true,
+          "elapsedMs": 18
+        },
+        {
+          "index": 7,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 45,
+            "y": 602
+          },
+          "ok": true,
+          "elapsedMs": 16
+        },
+        {
+          "index": 8,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 120,
+            "y": 602
+          },
+          "ok": true,
+          "elapsedMs": 18
+        },
+        {
+          "index": 9,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 195,
+            "y": 602
+          },
+          "ok": true,
+          "elapsedMs": 19
+        },
+        {
+          "index": 10,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 270,
+            "y": 602
+          },
+          "ok": true,
+          "elapsedMs": 17
+        },
+        {
+          "index": 11,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 45,
+            "y": 651
+          },
+          "ok": true,
+          "elapsedMs": 17
+        },
+        {
+          "index": 12,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 120,
+            "y": 651
+          },
+          "ok": true,
+          "elapsedMs": 18
+        },
+        {
+          "index": 13,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 195,
+            "y": 651
+          },
+          "ok": true,
+          "elapsedMs": 18
+        },
+        {
+          "index": 14,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 45,
+            "y": 700
+          },
+          "ok": true,
+          "elapsedMs": 19
+        },
+        {
+          "index": 15,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 120,
+            "y": 700
+          },
+          "ok": true,
+          "elapsedMs": 17
+        },
+        {
+          "index": 16,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 45,
+            "y": 749
+          },
+          "ok": true,
+          "elapsedMs": 17
+        },
+        {
+          "index": 17,
+          "step": {
+            "type": "screenshot",
+            "label": "build-restore-bets"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-restore-bets-1792842550318.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T11:49:10.319Z"
+          },
+          "elapsedMs": 66
+        },
+        {
+          "index": 18,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 120,
+            "y": 749
+          },
+          "ok": true,
+          "elapsedMs": 25
+        },
+        {
+          "index": 19,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 111,
+            "y": 474
+          },
+          "ok": true,
+          "elapsedMs": 40
+        },
+        {
+          "index": 20,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 111,
+            "y": 531
+          },
+          "ok": true,
+          "elapsedMs": 29
+        },
+        {
+          "index": 21,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 111,
+            "y": 474
+          },
+          "ok": true,
+          "elapsedMs": 47
+        },
+        {
+          "index": 22,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 111,
+            "y": 645
+          },
+          "ok": true,
+          "elapsedMs": 3
+        },
+        {
+          "index": 23,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 278,
+            "y": 645
+          },
+          "ok": true,
+          "elapsedMs": 23
+        },
+        {
+          "index": 24,
+          "step": {
+            "type": "screenshot",
+            "label": "build-restore-settings"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-restore-settings-1792842550555.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T11:49:10.556Z"
+          },
+          "elapsedMs": 70
+        },
+        {
+          "index": 25,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 333,
+            "y": 198
+          },
+          "ok": true,
+          "elapsedMs": 19
+        },
+        {
+          "index": 26,
+          "step": {
+            "type": "reload",
+            "bridgeRequired": false
+          },
+          "ok": true,
+          "elapsedMs": 5117
+        },
+        {
+          "index": 27,
+          "step": {
+            "type": "wait",
+            "durationMs": 3000
+          },
+          "ok": true,
+          "elapsedMs": 3002
+        },
+        {
+          "index": 28,
+          "step": {
+            "type": "screenshot",
+            "label": "build-restore-restore-betting"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-restore-restore-betting-1792842558761.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T11:49:18.763Z"
+          },
+          "elapsedMs": 69
+        },
+        {
+          "index": 29,
+          "step": {
+            "type": "wait",
+            "durationMs": 800
+          },
+          "ok": true,
+          "elapsedMs": 807
+        },
+        {
+          "index": 30,
+          "step": {
+            "type": "screenshot",
+            "label": "build-restore-restore-betting-hold"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-restore-restore-betting-hold-1792842559635.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T11:49:19.636Z"
+          },
+          "elapsedMs": 66
+        },
+        {
+          "index": 31,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 195,
+            "y": 474
+          },
+          "ok": true,
+          "elapsedMs": 24
+        },
+        {
+          "index": 32,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 120,
+            "y": 749
+          },
+          "ok": true,
+          "elapsedMs": 18
+        },
+        {
+          "index": 33,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 111,
+            "y": 531
+          },
+          "ok": true,
+          "elapsedMs": 20
+        },
+        {
+          "index": 34,
+          "step": {
+            "type": "screenshot",
+            "label": "build-restore-settings-restored"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-restore-settings-restored-1792842559769.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T11:49:19.770Z"
+          },
+          "elapsedMs": 72
+        },
+        {
+          "index": 35,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 333,
+            "y": 198
+          },
+          "ok": true,
+          "elapsedMs": 13
+        },
+        {
+          "index": 36,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 335,
+            "y": 817
+          },
+          "ok": true,
+          "elapsedMs": 18
+        },
+        {
+          "index": 37,
+          "step": {
+            "type": "wait",
+            "durationMs": 700
+          },
+          "ok": true,
+          "elapsedMs": 711
+        },
+        {
+          "index": 38,
+          "step": {
+            "type": "screenshot",
+            "label": "build-restore-preparing"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-restore-preparing-1792842560580.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T11:49:20.581Z"
+          },
+          "elapsedMs": 69
+        },
+        {
+          "index": 39,
+          "step": {
+            "type": "reload",
+            "bridgeRequired": false
+          },
+          "ok": true,
+          "elapsedMs": 5099
+        },
+        {
+          "index": 40,
+          "step": {
+            "type": "wait",
+            "durationMs": 3000
+          },
+          "ok": true,
+          "elapsedMs": 3001
+        },
+        {
+          "index": 41,
+          "step": {
+            "type": "screenshot",
+            "label": "build-restore-restore-preparing"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-restore-restore-preparing-1792842568761.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T11:49:28.762Z"
+          },
+          "elapsedMs": 81
+        },
+        {
+          "index": 42,
+          "step": {
+            "type": "wait",
+            "durationMs": 800
+          },
+          "ok": true,
+          "elapsedMs": 809
+        },
+        {
+          "index": 43,
+          "step": {
+            "type": "screenshot",
+            "label": "build-restore-restore-preparing-hold"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-restore-restore-preparing-hold-1792842569651.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T11:49:29.653Z"
+          },
+          "elapsedMs": 82
+        },
+        {
+          "index": 44,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 195,
+            "y": 474
+          },
+          "ok": true,
+          "elapsedMs": 25
+        },
+        {
+          "index": 45,
+          "step": {
+            "type": "wait",
+            "durationMs": 2700
+          },
+          "ok": true,
+          "elapsedMs": 2706
+        },
+        {
+          "index": 46,
+          "step": {
+            "type": "screenshot",
+            "label": "build-restore-racing"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-restore-racing-1792842572461.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T11:49:32.462Z"
+          },
+          "elapsedMs": 79
+        },
+        {
+          "index": 47,
+          "step": {
+            "type": "reload",
+            "bridgeRequired": false
+          },
+          "ok": true,
+          "elapsedMs": 5071
+        },
+        {
+          "index": 48,
+          "step": {
+            "type": "wait",
+            "durationMs": 3000
+          },
+          "ok": true,
+          "elapsedMs": 3000
+        },
+        {
+          "index": 49,
+          "step": {
+            "type": "screenshot",
+            "label": "build-restore-restore-racing"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-restore-restore-racing-1792842580621.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T11:49:40.622Z"
+          },
+          "elapsedMs": 88
+        },
+        {
+          "index": 50,
+          "step": {
+            "type": "wait",
+            "durationMs": 800
+          },
+          "ok": true,
+          "elapsedMs": 801
+        },
+        {
+          "index": 51,
+          "step": {
+            "type": "screenshot",
+            "label": "build-restore-restore-racing-hold"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-restore-restore-racing-hold-1792842581496.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T11:49:41.497Z"
+          },
+          "elapsedMs": 74
+        },
+        {
+          "index": 52,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 195,
+            "y": 474
+          },
+          "ok": true,
+          "elapsedMs": 27
+        },
+        {
+          "index": 53,
+          "step": {
+            "type": "wait",
+            "durationMs": 27000
+          },
+          "ok": true,
+          "elapsedMs": 27008
+        },
+        {
+          "index": 54,
+          "step": {
+            "type": "screenshot",
+            "label": "build-restore-result"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-restore-result-1792842608617.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T11:50:08.618Z"
+          },
+          "elapsedMs": 86
+        },
+        {
+          "index": 55,
+          "step": {
+            "type": "reload",
+            "bridgeRequired": false
+          },
+          "ok": true,
+          "elapsedMs": 5104
+        },
+        {
+          "index": 56,
+          "step": {
+            "type": "wait",
+            "durationMs": 3000
+          },
+          "ok": true,
+          "elapsedMs": 3016
+        },
+        {
+          "index": 57,
+          "step": {
+            "type": "screenshot",
+            "label": "build-restore-restore-result"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-restore-restore-result-1792842616813.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T11:50:16.814Z"
+          },
+          "elapsedMs": 76
+        },
+        {
+          "index": 58,
+          "step": {
+            "type": "wait",
+            "durationMs": 800
+          },
+          "ok": true,
+          "elapsedMs": 802
+        },
+        {
+          "index": 59,
+          "step": {
+            "type": "screenshot",
+            "label": "build-restore-restore-result-hold"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-restore-restore-result-hold-1792842617689.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T11:50:17.690Z"
+          },
+          "elapsedMs": 74
+        },
+        {
+          "index": 60,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 195,
+            "y": 474
+          },
+          "ok": true,
+          "elapsedMs": 28
+        },
+        {
+          "index": 61,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 242,
+            "y": 817
+          },
+          "ok": true,
+          "elapsedMs": 35
+        },
+        {
+          "index": 62,
+          "step": {
+            "type": "screenshot",
+            "label": "build-restore-history-small"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-restore-history-small-1792842617827.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T11:50:17.828Z"
+          },
+          "elapsedMs": 75
+        },
+        {
+          "index": 63,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 195,
+            "y": 342
+          },
+          "ok": true,
+          "elapsedMs": 30
+        },
+        {
+          "index": 64,
+          "step": {
+            "type": "screenshot",
+            "label": "build-restore-detail-1"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-restore-detail-1-1792842617930.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T11:50:17.931Z"
+          },
+          "elapsedMs": 73
+        },
+        {
+          "index": 65,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 156,
+            "y": 342
+          },
+          "ok": true,
+          "elapsedMs": 33
+        },
+        {
+          "index": 66,
+          "step": {
+            "type": "screenshot",
+            "label": "build-restore-detail-2"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-restore-detail-2-1792842618040.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T11:50:18.041Z"
+          },
+          "elapsedMs": 77
+        },
+        {
+          "index": 67,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 156,
+            "y": 342
+          },
+          "ok": true,
+          "elapsedMs": 31
+        },
+        {
+          "index": 68,
+          "step": {
+            "type": "screenshot",
+            "label": "build-restore-detail-3"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-restore-detail-3-1792842618147.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T11:50:18.148Z"
+          },
+          "elapsedMs": 76
+        },
+        {
+          "index": 69,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 234,
+            "y": 342
+          },
+          "ok": true,
+          "elapsedMs": 31
+        },
+        {
+          "index": 70,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 242,
+            "y": 817
+          },
+          "ok": true,
+          "elapsedMs": 39
+        },
+        {
+          "index": 71,
+          "step": {
+            "type": "reload",
+            "bridgeRequired": false
+          },
+          "ok": true,
+          "elapsedMs": 5095
+        },
+        {
+          "index": 72,
+          "step": {
+            "type": "wait",
+            "durationMs": 3000
+          },
+          "ok": true,
+          "elapsedMs": 3010
+        },
+        {
+          "index": 73,
+          "step": {
+            "type": "screenshot",
+            "label": "build-restore-restore-result-again"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-restore-restore-result-again-1792842626412.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T11:50:26.414Z"
+          },
+          "elapsedMs": 91
+        },
+        {
+          "index": 74,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 195,
+            "y": 474
+          },
+          "ok": true,
+          "elapsedMs": 41
+        },
+        {
+          "index": 75,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 335,
+            "y": 817
+          },
+          "ok": true,
+          "elapsedMs": 36
+        },
+        {
+          "index": 76,
+          "step": {
+            "type": "wait",
+            "durationMs": 200
+          },
+          "ok": true,
+          "elapsedMs": 201
+        },
+        {
+          "index": 77,
+          "step": {
+            "type": "screenshot",
+            "label": "build-restore-next"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-restore-next-1792842626768.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T11:50:26.769Z"
+          },
+          "elapsedMs": 77
+        },
+        {
+          "index": 78,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 120,
+            "y": 749
+          },
+          "ok": true,
+          "elapsedMs": 42
+        },
+        {
+          "index": 79,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 278,
+            "y": 474
+          },
+          "ok": true,
+          "elapsedMs": 38
+        },
+        {
+          "index": 80,
+          "step": {
+            "type": "screenshot",
+            "label": "build-restore-rebet"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-restore-rebet-1792842626922.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T11:50:26.923Z"
+          },
+          "elapsedMs": 74
+        },
+        {
+          "index": 81,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 278,
+            "y": 474
+          },
+          "ok": true,
+          "elapsedMs": 29
+        },
+        {
+          "index": 82,
+          "step": {
+            "type": "screenshot",
+            "label": "build-restore-rebet-again"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-restore-rebet-again-1792842627027.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T11:50:27.028Z"
+          },
+          "elapsedMs": 76
+        },
+        {
+          "index": 83,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 278,
+            "y": 531
+          },
+          "ok": true,
+          "elapsedMs": 29
+        },
+        {
+          "index": 84,
+          "step": {
+            "type": "screenshot",
+            "label": "build-restore-help"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-restore-help-1792842627157.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T11:50:27.158Z"
+          },
+          "elapsedMs": 101
+        },
+        {
+          "index": 85,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 195,
+            "y": 646
+          },
+          "ok": true,
+          "elapsedMs": 25
+        },
+        {
+          "index": 86,
+          "step": {
+            "type": "screenshot",
+            "label": "build-restore-milestones"
+          },
+          "ok": true,
+          "screenshot": {
+            "mimeType": "image/png",
+            "path": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\screenshots\\build-restore-milestones-1792842627268.png",
+            "width": 390,
+            "height": 844,
+            "source": "preview",
+            "capturedAt": "2026-10-24T11:50:27.270Z"
+          },
+          "elapsedMs": 87
+        },
+        {
+          "index": 87,
+          "step": {
+            "type": "pointer",
+            "action": "touch_tap",
+            "x": 333,
+            "y": 198
+          },
+          "ok": true,
+          "elapsedMs": 38
+        }
+      ],
+      "consoleErrors": [],
+      "diagnostics": {
+        "consoleErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "pageErrors": {
+          "count": 0,
+          "samples": []
+        },
+        "requestFailures": {
+          "count": 0,
+          "samples": []
+        },
+        "httpErrors": {
+          "count": 0,
+          "samples": []
+        }
+      },
+      "reportPath": "D:\\code\\shidai3\\P4000\\golden-horse-86\\temp\\creator-ai-bridge\\playtests\\playtest-1792842627310.json",
+      "message": "Playtest passed (88 step(s))",
+      "session": {
+        "mode": "isolated",
+        "reusedBrowser": false,
+        "reusedPage": false,
+        "pageReset": "none"
+      },
+      "timing": {
+        "setupMs": 1042,
+        "stepsMs": 87423,
+        "totalMs": 88467
+      }
+    }
+  },
+  "evidence": []
+}
