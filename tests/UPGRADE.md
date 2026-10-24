@@ -39,3 +39,7 @@ RaceResult新增bets/odds/net，冻结完整名次、明细数组/各条和结�
 RepeatBets/BetHold/实际GoldenHorseGame接线QuickInput测试、全部npm test与strict通过。reviewer `/root/horse_build_review`经显式父OCR发现双指切撤销/面板不取消旧hold的P2，已修复并复审关闭；有效权限隔离未核验。QuickInput使用实际onLoad回调复现原路径，不模拟时间推进。Creator新增两控件及引用，移动右侧文字腾出位置，保存重开revision rev-6efc838e确认，RaceHost不动；scene/meta均由Creator生成。
 
 真实Preview revision upgrade-quick-v1，[390](upgrade-quick-390-result.json)、[360](upgrade-quick-360-result.json)、[430](upgrade-quick-430-result.json)55/30/30共115步通过，原生drag100步在三个尺寸均实际长按连押12分，再验证5/10档、撤销、切回1档。390完整局后沿用3分、重复仍3、新加后替换回3、清分后不足拒绝；四类诊断0。修复后的[19步面板回归](upgrade-quick-panels-result.json)确认历史下不能押、赛事选择仍能关闭并恢复押分。各初始probe另存，不混作整局证据。[三尺寸控件与已押](evidence/upgrade-quick/upgrade-quick-390-stakes.png)、[沿用](evidence/upgrade-quick/upgrade-quick-repeat.png)、[不足](evidence/upgrade-quick/upgrade-quick-insufficient.png)归档。正式功能阶段构建仍待存档/恢复/设置等整合，不复用阶段一产物证明本UI。
+
+## V5 信息层级
+
+15个格子用明确Sprite引用显示红色已押边框，红金额、黄倍率；末5秒红色“即将开跑”且不闪烁。Creator保存重开rev-95c103da，RaceHost尺寸/位置不变。QuickInput和strict通过；revision upgrade-emphasis-v1，upgrade-emphasis-{360,390,430}-result.json为9/12/9共30步，全部PASSED、诊断0，390实际等待并观察[4秒提醒](evidence/upgrade-emphasis/upgrade-emphasis-urgent.png)。reviewer `/root/horse_build_review`按父OCR规则核对15个引用/报告，无确定缺陷，权限隔离未核验。正式构建随功能阶段整合。

@@ -5,6 +5,10 @@ const rgba=hex=>({r:parseInt(hex.slice(1,3),16),g:parseInt(hex.slice(3,5),16),b:
 const node=(name,w,h,x=0,y=0,children=[])=>({name,size:{width:w,height:h},position:{x,y},children});
 function text(name,string,w,h,x,y,size){labels.push([name,size]);return {...node(name,w,h,x,y),type:'label',label:{string,fontSize:size,color:rgba('#ffe192')}};}
 function box(name,w,h,x,y,color,children=[]){colors.push([name,color]);return {...node(name,w,h,x,y,children),type:'sprite',sprite:{spriteFrameUuid:white,sizeMode:'CUSTOM'}};}
+if(process.argv[2]==='emphasis'){
+ const sprite=name=>({$type:'ComponentReference',node:'name:'+name,type:'cc.Sprite'});
+ const out=call('scene_apply_patch',{expectedRevision:call('scene_get_tree',{}).revision,operations:[{op:'upsertComponent',target:'GoldenHorseGame',type:'GoldenHorseGame',properties:{betBorders:Array.from({length:15},(_,i)=>sprite('Bet'+i+'Border'))}},{op:'upsertComponent',target:'name:Legend',type:'cc.Label',properties:{string:'黄色赔率 · 红色押分'}}],verify:true,save:true});console.log('Saved bet emphasis',out.after?.revision);process.exit(0);
+}
 if(process.argv[2]==='quick'){
  const current=call('scene_get_tree',{}),has=(nodes,name)=>nodes.some(n=>n.name===name||has(n.children,name));if(has(current.roots,'StakeUnit'))throw Error('Quick controls already exist');
  const quick=[box('StakeUnit',144,94,288,94,'#203137',[text('StakeUnitText','每次 1 分\n切换档位',138,88,0,0,23)]),box('RepeatBets',144,94,0,-94,'#203137',[text('RepeatBetsText','沿用上场\n整套替换',138,88,0,0,23)])];
