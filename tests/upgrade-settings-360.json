@@ -1,0 +1,80 @@
+{
+  "viewport": {
+    "width": 360,
+    "height": 640
+  },
+  "steps": [
+    {
+      "type": "wait",
+      "durationMs": 1500
+    },
+    {
+      "type": "ui",
+      "action": "click",
+      "target": "#view-select:visible, body:not(:has(#view-select:visible))"
+    },
+    {
+      "type": "ui",
+      "action": "click",
+      "target": "li[data-device=WebpageFullScreen]:visible, body:not(:has(li[data-device=WebpageFullScreen]:visible))"
+    },
+    {
+      "type": "wait_ready"
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "revision": "upgrade-settings-v1",
+        "horseFrames": 144,
+        "equipment": {
+          "typeCount": 4
+        },
+        "preRaceFrames": 66,
+        "preAudio": {
+          "loaded": 5
+        }
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 249,
+      "y": 507
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "dialog": "settings",
+        "paused": true
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "type": "get_state",
+      "required": true
+    },
+    {
+      "type": "screenshot",
+      "label": "upgrade-settings-360"
+    },
+    {
+      "type": "pointer",
+      "action": "touch_tap",
+      "x": 307,
+      "y": 114
+    },
+    {
+      "type": "wait_for_state",
+      "expect": {
+        "dialog": "none",
+        "paused": false
+      },
+      "timeoutMs": 5000
+    }
+  ]
+}

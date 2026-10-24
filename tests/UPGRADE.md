@@ -62,3 +62,10 @@ Creator保存重开rev-46f25a2f。upgrade-session-pause-result.json原生47步�
 最终operation horse-upgrade-session-web-20261024-r11-v2，packageHash cd73536d47ff1bd9c504732ff4543a88bd3a211942692cfbc624a2751a0328a3，passed/builderFinished、exit36。正式同包Smoke45步（44执行、1可选无桥snapshot跳过），四类诊断0；原生四阶段reload后面板不推进，重复结算恢复仍499分，下一场499/押0。源码冻结记录upgrade-session-source.json，截图/可见像素验证upgrade-session-build-observations.json。
 
 另用同包localhost浏览器实测双窗口：A499/押1，B等待；关闭A，B重试恢复同场499/押1。截图与观察见upgrade-session-browser.json，未读取/修改隐藏存储。reviewer /root/horse_build_review 经父OCR显式规则审查并确认编译修复，实际cwd/Git根产品仓，权限隔离未核验。听感未验；原生正返分与后续设置等在最终功能阶段继续同包验证。
+
+
+## F5 声音与动态设置
+
+三音量默认100%、每档10%，静音即时；减少动态下场应用，跟赛保留、镜头开合/格子及号码弹跳/扬尘关闭。设置面板暂停全部时钟，保存每次操作。Settings.test实际组件验证音量边界、保存/恢复及下场时机；QuickInput/SessionLifecycle与strict --skipLibCheck通过。直接不跳引擎声明检查时报Creator引擎d.ts既有缺失，未修改引擎。
+
+Creator新增按钮及专用关闭，保存重开。reviewer /root/horse_build_review 依显式父OCR发现关闭100x70的小屏P2，经Creator改100x94；upgrade-settings三尺寸43步PASSED、诊断0，关闭高度45.12/48.88/53.893，360截图目视布局完整。正式构建及环境微动关闭留最终整合；听感未验。角色权限隔离未核验。

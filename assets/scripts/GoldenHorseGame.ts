@@ -19,7 +19,7 @@ import { GameAudio } from './presentation/GameAudio';
 import { ArchiveMode, RaceArchive, StoragePort } from './session/RaceArchive';
 import { DEFAULT_SETTINGS, PlayerSettings, readSettings } from './session/PlayerSettings';
 const { ccclass, property } = _decorator;
-type SessionDialog='none'|'resume'|'busy'|'corrupt'|'save-error'|'history';
+type SessionDialog='none'|'resume'|'busy'|'corrupt'|'save-error'|'history'|'settings';
 @ccclass('GoldenHorseGame')
 export class GoldenHorseGame extends Component implements RacePageContext {
  @property(Node) uiRoot:Node|null=null;
@@ -58,6 +58,8 @@ export class GoldenHorseGame extends Component implements RacePageContext {
  @property([Node]) utilityActions:Node[]=[];
  @property([Label]) utilityActionLabels:Label[]=[];
  @property(Label) archiveStatus:Label|null=null;
+ @property(Node) utilityClose:Node|null=null;
+ @property([Node]) menuButtons:Node[]=[];
  private game!:RaceModel;
  private equipment:EquipmentScene|null=null;
  private readonly artwork=new RaceVisualAssets();
@@ -83,6 +85,7 @@ export class GoldenHorseGame extends Component implements RacePageContext {
   if(!this.eventButton||!this.eventPanel||!this.eventClose||!this.eventText||this.eventChoices.length!==3||this.eventChoiceLabels.length!==3||![...this.eventChoices,...this.eventChoiceLabels].every(Boolean))throw Error('Event scene bindings incomplete');
   if(this.quickButtons.length!==2||this.quickLabels.length!==2||this.betBorders.length!==15||!this.oddsHeader||![...this.quickButtons,...this.quickLabels,...this.betBorders].every(Boolean))throw Error('Quick bet scene bindings incomplete');
   if(!this.utilityPanel||!this.utilityTitle||!this.utilityBody||!this.archiveStatus||this.utilityActions.length!==8||this.utilityActionLabels.length!==8||![...this.utilityActions,...this.utilityActionLabels].every(Boolean))throw Error('Session scene bindings incomplete');
+  if(!this.utilityClose||this.menuButtons.length!==1||!this.menuButtons.every(Boolean))throw Error('Settings scene bindings incomplete');
   view.setDesignResolutionSize(750,1334,ResolutionPolicy.FIXED_WIDTH);profiler.hideStats();
   this.courseView=new RaceTrackView(this.raceHost);this.courseView.viewport.setSiblingIndex(0);
   for(let a=1;a<=5;a++)for(let b=6;b>a;b--)this.keys.push(a+'-'+b);
@@ -107,6 +110,8 @@ export class GoldenHorseGame extends Component implements RacePageContext {
   this.historyPanel.active=false;this.utilityPanel.active=false;this.gameAudio=new GameAudio(this.node);this.preAudio=new PreRaceAudio(this.node);
   this.archive=new RaceArchive(this.storagePort(),typeof navigator==='undefined'?undefined:navigator.locks);
   this.utilityActions.forEach((node,i)=>node.on(Node.EventType.TOUCH_END,()=>{void this.dialogAction(i);},this));
+  this.menuButtons[0].on(Node.EventType.TOUCH_END,()=>{if(this.canOperate())this.openDialog('settings');},this);
+  this.utilityClose.on(Node.EventType.TOUCH_END,()=>{if(this.canInput()&&!this.background&&['history','settings'].includes(this.dialog))this.dialog='none';},this);
   this.uiRoot.on(Node.EventType.TOUCH_START,()=>this.preAudio?.unlock(),this);this.uiRoot.on(Node.EventType.MOUSE_DOWN,()=>this.preAudio?.unlock(),this);
   input.on(Input.EventType.KEY_DOWN,this.keyDown,this);input.on(Input.EventType.KEY_UP,this.keyUp,this);
   view.on('canvas-resize',this.relayout,this);view.on('design-resolution-changed',this.relayout,this);this.relayout();
@@ -181,10 +186,15 @@ export class GoldenHorseGame extends Component implements RacePageContext {
  private readonly onHidden=():void=>{this.background=true;this.betHold.cancel();this.queuedCues=[];this.gameAudio?.stop();this.preAudio?.stop();this.writeCheckpoint();};
  private readonly onShown=():void=>{if(!this.background||this.disposed)return;this.background=false;if(this.game&&!['busy','corrupt','save-error'].includes(this.dialog))this.openDialog('resume');};
  private async dialogAction(index:number):Promise<void>{
-  if(!this.canInput()||this.retrying)return;this.preAudio?.unlock();
+  if(!this.canInput()||this.background||this.retrying)return;this.preAudio?.unlock();
   if(this.dialog==='resume'||this.dialog==='save-error'){
    if(index===0){if(this.writeCheckpoint()){this.lastPhase=this.game.phase;this.dialog='none';}}else if(index===1&&this.dialog==='save-error'){this.archive?.useTemporary();this.dialog='none';this.lastPhase=this.game.phase;}
   }else if(this.dialog==='history'){if(index===0)this.dialog='none';}
+  else if(this.dialog==='settings'){
+   if(index<6){const key=(['master','effects','ambience'] as const)[Math.floor(index/2)];this.settings[key]=Math.max(0,Math.min(1,Math.round((this.settings[key]+(index%2?.1:-.1))*10)/10));}
+   else if(index===6)this.settings.muted=!this.settings.muted;else if(index===7)this.settings.reducedMotion=!this.settings.reducedMotion;
+   this.gameAudio?.apply(this.settings);this.preAudio?.stop();this.writeCheckpoint();
+  }
   else if(this.dialog==='busy'){
    if(index===1){this.archive?.useTemporary();this.dialog='none';}
    else if(index===0){this.retrying=true;try{const mode=await this.archive!.acquire();if(this.disposed)return;this.readArchiveState(mode);if(PREVIEW){this.testBridge?.dispose();this.testBridge=new GoldenHorseTestBridge(this.game,()=>this.observe(),()=>this.canOperate());}}finally{this.retrying=false;}}
@@ -195,13 +205,14 @@ export class GoldenHorseGame extends Component implements RacePageContext {
   this.refreshDialog();
  }
  private refreshDialog():void{
-  if(!this.utilityPanel)return;this.utilityPanel.active=this.dialog!=='none';if(this.dialog==='none'||!this.game)return;
+  if(!this.utilityPanel)return;this.utilityPanel.active=this.dialog!=='none';if(this.utilityClose)this.utilityClose.active=['history','settings'].includes(this.dialog);if(this.dialog==='none'||!this.game)return;
   let title='',body='',actions:string[]=[];
   if(this.dialog==='resume'){title='继续第 '+this.game.round+' 场';body=(this.game.phase==='betting'?'押分还剩 '+Math.ceil(this.game.countdown)+' 秒':this.game.phase==='preparing'?'起跑准备还剩 '+Math.ceil(this.game.preparationRemaining)+' 秒':this.game.phase==='racing'?'比赛已进行 '+this.game.raceElapsed.toFixed(1)+' 秒':'本场已结算，返分已计入余额')+'\n\n余额 '+this.game.credits+' 分 · 本场押分 '+this.game.totalStake+' 分\n\n离开期间未推进比赛，点击继续后恢复。';actions=['继续比赛'];}
   else if(this.dialog==='busy'){title='已有游戏窗口打开';body='同一份存档只允许一个窗口运行。\n\n请返回原窗口，或关闭原窗口后重试。\n也可以临时游玩，临时进度不会写入存档。';actions=['重试','临时游玩'];}
   else if(this.dialog==='corrupt'){title='无法读取原存档';body='存档损坏或与当前比赛配置不兼容，原数据尚未覆盖。\n\n“备份并重置”会保留原档副本，重新以500分开始。\n也可选择不写入存档的临时模式。'+(this.archive?.lastError?'\n\n'+this.archive.lastError:'');actions=['备份并重置','临时游玩'];}
   else if(this.dialog==='save-error'){title='当前进度尚未保存';body='已暂停比赛，避免继续产生未保存的结果。\n\n请重试保存，或明确选择临时模式。\n临时模式关闭页面后会丢失本次进度。';actions=['重试并继续','临时游玩'];}
   else if(this.dialog==='history'){title='最近五场';body=this.game.history.length?this.game.history.slice(0,5).map(r=>'第'+r.round+'场  '+r.first+' — '+r.second+'  ×'+r.odds+'\n押'+r.stake+'  返'+r.payout+'  净'+(r.net>=0?'+':'')+r.net).join('\n\n'):'暂无比赛记录';actions=['关闭'];}
+  else if(this.dialog==='settings'){title='声音与动态';body='总音量 '+Math.round(this.settings.master*100)+'%\n音效 '+Math.round(this.settings.effects*100)+'% · 环境 '+Math.round(this.settings.ambience*100)+'%\n\n静音：'+(this.settings.muted?'开':'关')+'\n减少动态：'+(this.settings.reducedMotion?'开':'关')+'（下场起生效）\n\n开启后保留跟赛，关闭镜头开合、弹跳、扬尘与环境微动。';actions=['总音量 −','总音量 +','音效 −','音效 +','环境 −','环境 +','静音 '+(this.settings.muted?'开':'关'),'减少动态 '+(this.settings.reducedMotion?'开':'关')];}
   this.utilityTitle!.string=title;this.utilityBody!.string=body;this.utilityActions.forEach((n,i)=>{n.active=Boolean(actions[i]);n.setPosition(actions.length===1?0:i%2?160:-160,-100-Math.floor(i/2)*110);this.utilityActionLabels[i].string=actions[i]??'';});
  }
  private clientRect(node:Node):Record<string,number>{
@@ -210,7 +221,7 @@ export class GoldenHorseGame extends Component implements RacePageContext {
   return{x:r.left+(local.x+v.width/2-ui.width/2)/v.width*r.width,y:r.top+(v.height/2-local.y-ui.height/2)/v.height*r.height,width:ui.width/v.width*r.width,height:ui.height/v.height*r.height};
  }
  private observe():Record<string,unknown>{return{
-  revision:'upgrade-session-v1',paused:this.paused,dialog:this.dialog,background:this.background,archiveMode:this.archive?.mode,activeReducedMotion:this.activeReducedMotion,settings:{...this.settings},gameAudio:this.gameAudio?.observation,utilityActions:this.utilityActions.map(n=>({...this.clientRect(n),active:this.utilityPanel?.active===true&&n.active})),stakeUnit:this.stakeUnit,betHold:this.betHold.observation,quickButtons:this.quickButtons.map(n=>this.clientRect(n)),choreographySeed:this.game.choreographySeed,groundEffects:this.groundEffects?.observation,preRace:this.preRace.observation,preAudio:this.preAudio?.observation,horseVisuals:this.horses.map(h=>h.observation),raceElapsed:this.game.raceElapsed,courseFraction:this.game.courseFraction,strideTimes:this.game.progress.map((_,i)=>this.game.strideTime(i)),leaderHorse:this.game.leaderIndex+1,eventId:this.game.eventId,eventName:this.game.eventName,eligibilityCredits:this.game.eligibilityCredits,preparationRemaining:this.game.preparationRemaining,equipment:this.equipment?.observation,eventPickerVisible:this.eventPanel?.active,eventButton:this.eventButton?this.clientRect(this.eventButton):{},eventChoices:this.eventChoices.map(n=>this.clientRect(n)),eventClose:this.eventClose?this.clientRect(this.eventClose):{},ready:this.canInput(),pendingAssets:this.pendingAssets,loadErrors:[...this.loadErrors],section:trackSection(this.game.courseFraction),
+  revision:'upgrade-settings-v1',menuButtons:this.menuButtons.map(n=>this.clientRect(n)),utilityClose:this.utilityClose?this.clientRect(this.utilityClose):{},utilityTitle:this.utilityTitle?.string,utilityBody:this.utilityBody?.string,paused:this.paused,dialog:this.dialog,background:this.background,archiveMode:this.archive?.mode,activeReducedMotion:this.activeReducedMotion,settings:{...this.settings},gameAudio:this.gameAudio?.observation,utilityActions:this.utilityActions.map(n=>({...this.clientRect(n),active:this.utilityPanel?.active===true&&n.active})),stakeUnit:this.stakeUnit,betHold:this.betHold.observation,quickButtons:this.quickButtons.map(n=>this.clientRect(n)),choreographySeed:this.game.choreographySeed,groundEffects:this.groundEffects?.observation,preRace:this.preRace.observation,preAudio:this.preAudio?.observation,horseVisuals:this.horses.map(h=>h.observation),raceElapsed:this.game.raceElapsed,courseFraction:this.game.courseFraction,strideTimes:this.game.progress.map((_,i)=>this.game.strideTime(i)),leaderHorse:this.game.leaderIndex+1,eventId:this.game.eventId,eventName:this.game.eventName,eligibilityCredits:this.game.eligibilityCredits,preparationRemaining:this.game.preparationRemaining,equipment:this.equipment?.observation,eventPickerVisible:this.eventPanel?.active,eventButton:this.eventButton?this.clientRect(this.eventButton):{},eventChoices:this.eventChoices.map(n=>this.clientRect(n)),eventClose:this.eventClose?this.clientRect(this.eventClose):{},ready:this.canInput(),pendingAssets:this.pendingAssets,loadErrors:[...this.loadErrors],section:trackSection(this.game.courseFraction),
   uiMode:this.StateMachine.is(RacingPage)?'race':this.StateMachine.is(BettingPage)?'betting':'loading',bettingPageVisible:this.bettingPage?.active,raceViewportVisible:this.courseView.viewport.active,
   designResolution:{width:750,height:1334},visibleHeight:this.layoutHeight,raceViewport:this.clientRect(this.raceHost!),
   touchTargets:this.betNodes.map((node,i)=>({key:this.keys[i],...this.clientRect(node)})),buttons:this.buttons.map(node=>({name:node.name,...this.clientRect(node)})),undoMode:this.undo,
@@ -252,7 +263,7 @@ export class GoldenHorseGame extends Component implements RacePageContext {
    this.preAudio?.update(this.game,[...this.queuedCues,...this.preRace.cues],this.settings);this.queuedCues=[];
   }
   this.courseView.follow(this.game.courseFraction,this.preRace.cameraCue);this.courseView.updateStarter(this.artwork,this.preRace.flagFrame);this.horses.forEach((h,i)=>{
-   const stride=this.game.strideTime(i);h.render(horsePose(i,this.game.progress[i],stride),stride,this.game.phase==='racing'||this.game.phase==='result',this.preRace.horse(i));
+   const stride=this.game.strideTime(i);h.render(horsePose(i,this.game.progress[i],stride),stride,this.game.phase==='racing'||this.game.phase==='result',{...this.preRace.horse(i),reducedMotion:this.activeReducedMotion});
   });
   this.equipment?.setTier(this.game.eventId);
   if(advance&&!this.paused)this.groundEffects?.update(dt,this.game.round,this.game.phase,this.game.progress,this.game.progress.map((_,i)=>this.game.strideTime(i)),this.activeReducedMotion);this.courseView.sortDepth();
@@ -279,7 +290,7 @@ export class GoldenHorseGame extends Component implements RacePageContext {
  }
  onDestroy():void{
   this.writeCheckpoint(true);this.disposed=true;this.betHold.cancel();this.preRace.clearFeedback();for(const node of this.betNodes)if(node.isValid)node.setScale(1,1,1);this.gameAudio?.dispose();this.preAudio?.dispose();this.archive?.dispose();this.groundEffects?.dispose();this.equipment?.dispose();this.testBridge?.dispose();void this.pageTask.then(()=>this.StateMachine.releaseAllStates());this.artwork.dispose();
-  for(const node of [...this.betNodes,...this.buttons,...this.eventChoices,...this.quickButtons,...this.utilityActions,this.eventButton,this.eventClose,this.uiRoot])node?.targetOff(this);
+  for(const node of [...this.betNodes,...this.buttons,...this.eventChoices,...this.quickButtons,...this.utilityActions,...this.menuButtons,this.utilityClose,this.eventButton,this.eventClose,this.uiRoot])node?.targetOff(this);
   input.off(Input.EventType.KEY_DOWN,this.keyDown,this);input.off(Input.EventType.KEY_UP,this.keyUp,this);view.off('canvas-resize',this.relayout,this);view.off('design-resolution-changed',this.relayout,this);
   engineGame.off(Game.EVENT_HIDE,this.onHidden,this);engineGame.off(Game.EVENT_SHOW,this.onShown,this);if(typeof window!=='undefined'){window.removeEventListener('pagehide',this.onHidden);window.removeEventListener('pageshow',this.onShown);}
  }

@@ -11,11 +11,11 @@ export class HorseSpriteView {
   const n=new Node('ReadableNumber');n.layer=RACE_WORLD_LAYER;n.parent=this.node;n.addComponent(UITransform).setContentSize(40,30);n.setPosition(0,124);
   this.badge=n.addComponent(Label);this.badge.string=String(horse);this.badge.fontSize=23;this.badge.lineHeight=26;this.badge.isBold=true;this.badge.color=new Color(255,231,105);this.badge.horizontalAlign=Label.HorizontalAlign.CENTER;
  }
- render(pose:HorsePose,time:number,running:boolean,idle?:{frame:number;highlight:number}):void{
+ render(pose:HorsePose,time:number,running:boolean,idle?:{frame:number;highlight:number;reducedMotion?:boolean}):void{
   this.node.setPosition(pose.x,-pose.y);this.node.setScale(HORSE_SCALE,HORSE_SCALE,1);
   const shadowAngle=Math.round(pose.angle*16)/16;
   if(shadowAngle!==this.shadowAngle){this.shadowAngle=shadowAngle;const width=54-24*Math.sin(pose.angle);this.shadow.clear();for(const [ratio,alpha] of [[1,12],[.8,18],[.6,24]]){this.shadow.fillColor=new Color(29,35,23,alpha);this.shadow.ellipse(-8,0,width*ratio,7*ratio);this.shadow.fill();}}
-  const highlight=idle?.highlight??0;this.badge.color=highlight>0?new Color(255,255,240):new Color(255,231,105);this.badge.node.setScale(1+.08*highlight,1+.08*highlight,1);
+  const highlight=idle?.highlight??0,pulse=idle?.reducedMotion?0:highlight;this.badge.color=highlight>0?new Color(255,255,240):new Color(255,231,105);this.badge.node.setScale(1+.08*pulse,1+.08*pulse,1);
   if(!running&&idle){
    const part=this.assets.preRaceCatalog.horses[this.horse-1],f=part.frames[idle.frame],sprite=this.sprites[0],size=sprite.node.getComponent(UITransform)!;
    this.direction=0;this.mode=idle.frame>=8?'ready':'idle';this.displayedFrame=idle.frame;sprite.spriteFrame=this.assets.preRaceFrames.get(part.resource)![idle.frame];sprite.color=new Color(255,255,255,255);
